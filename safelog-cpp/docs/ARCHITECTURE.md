@@ -6,7 +6,7 @@
 Qt/QML or CLI app
         |
         v
-capture + workflow + reporting     (independent feature libraries)
+capture + workflow + ai + reporting     (independent feature libraries)
         |          |          |
         +----------+----------+
                    v
@@ -20,6 +20,8 @@ capture + workflow + reporting     (independent feature libraries)
 - UI code calls feature services and never writes the database directly.
 - Storage implements `IRepository` and may be replaced without changing feature code.
 - Only `apps/*` constructs concrete objects and connects modules.
+- AI providers implement `IAiSafetyAnalyzer`; feature code does not depend on a model vendor.
+- Every AI output is stored with model/prompt metadata and a human review decision.
 
 ## Stable shared contract
 

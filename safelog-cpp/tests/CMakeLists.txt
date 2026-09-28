@@ -1,5 +1,5 @@
 add_executable(safelog_smoke_tests smoke_tests.cpp)
 target_link_libraries(safelog_smoke_tests PRIVATE
-  safelog_storage safelog_capture safelog_workflow safelog_reporting
+  safelog_storage safelog_capture safelog_workflow safelog_ai safelog_reporting
 )
 add_test(NAME safelog_smoke_tests COMMAND safelog_smoke_tests)

@@ -11,6 +11,7 @@ option(SAFELOG_BUILD_QT "Build the Qt 6 mobile shell" OFF)
 add_subdirectory(src/storage)
 add_subdirectory(src/capture)
 add_subdirectory(src/workflow)
+add_subdirectory(src/ai)
 add_subdirectory(src/reporting)
 add_subdirectory(apps/demo)
 

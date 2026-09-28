@@ -10,7 +10,7 @@ qt_add_qml_module(safelog_mobile
 target_include_directories(safelog_mobile PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(safelog_mobile PRIVATE
   Qt6::Quick Qt6::QuickControls2
-  safelog_storage safelog_capture safelog_workflow safelog_reporting
+  safelog_storage safelog_capture safelog_workflow safelog_ai safelog_reporting
 )
 
 set_target_properties(safelog_mobile PROPERTIES

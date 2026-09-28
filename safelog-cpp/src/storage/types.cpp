@@ -14,5 +14,13 @@ std::string to_string(PhotoKind v) {
   switch (v) { case PhotoKind::Before: return "before"; case PhotoKind::After: return "after"; }
   return "unknown";
 }
+std::string to_string(AiAnalysisType v) {
+  switch (v) { case AiAnalysisType::BeforeHazard: return "before_hazard"; case AiAnalysisType::AfterComparison: return "after_comparison"; case AiAnalysisType::ReportSummary: return "report_summary"; }
+  return "unknown";
+}
+std::string to_string(AiReviewDecision v) {
+  switch (v) { case AiReviewDecision::Pending: return "pending"; case AiReviewDecision::Accepted: return "accepted"; case AiReviewDecision::Edited: return "edited"; case AiReviewDecision::Rejected: return "rejected"; }
+  return "unknown";
+}
 
 } // namespace safelog

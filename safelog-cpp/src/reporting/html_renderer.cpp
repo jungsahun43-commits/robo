@@ -42,12 +42,19 @@ std::string HtmlRenderer::render(const ReportData& r) const {
       << "<tr><th>장소</th><td>" << escape(b.finding.location) << "</td></tr>"
       << "<tr><th>발견 내용</th><td>" << escape(b.finding.description) << "</td></tr>"
       << "<tr><th>조치 의견</th><td>" << escape(b.finding.actionOpinion) << "</td></tr>"
+      << "<tr><th>AI 위험 분류</th><td>" << escape(b.finding.hazardCategory.value_or("검토 전")) << "</td></tr>"
+      << "<tr><th>위험 등급</th><td>" << (b.finding.riskLevel ? std::to_string(*b.finding.riskLevel) : "-") << " / 5</td></tr>"
       << "<tr><th>상태</th><td>" << to_string(b.finding.status) << "</td></tr></table><div class=\"photos\">";
     for (const auto& p : b.photos)
       h << "<figure><img src=\"" << escape(p.storagePath) << "\"><figcaption>" << to_string(p.kind) << " / " << date(p.capturedAt) << "</figcaption></figure>";
     h << "</div><h3>처리 이력</h3><ul>";
     for (const auto& log : b.actionLogs)
       h << "<li>" << date(log.createdAt) << " · " << escape(log.action) << " · " << escape(log.note) << "</li>";
+    h << "</ul><h3>AI 분석 이력</h3><ul>";
+    for (const auto& analysis : b.aiAnalyses)
+      h << "<li>" << to_string(analysis.type) << " · " << escape(analysis.modelName)
+        << " · 신뢰도 " << static_cast<int>(analysis.confidence * 100) << "% · 검토 "
+        << to_string(analysis.decision) << "</li>";
     h << "</ul></section>";
   }
   h << "</body></html>";

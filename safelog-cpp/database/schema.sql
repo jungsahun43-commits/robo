@@ -48,7 +48,23 @@ CREATE TABLE IF NOT EXISTS action_logs (
   created_at TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS ai_analyses (
+  id TEXT PRIMARY KEY,
+  subject_id TEXT NOT NULL,
+  analysis_type TEXT NOT NULL CHECK (analysis_type IN ('before_hazard', 'after_comparison', 'report_summary')),
+  model_name TEXT NOT NULL,
+  prompt_version TEXT NOT NULL,
+  risk_level INTEGER CHECK (risk_level IS NULL OR risk_level BETWEEN 1 AND 5),
+  category TEXT NOT NULL DEFAULT '',
+  confidence REAL NOT NULL CHECK (confidence BETWEEN 0.0 AND 1.0),
+  result_json TEXT NOT NULL,
+  decision TEXT NOT NULL CHECK (decision IN ('pending', 'accepted', 'edited', 'rejected')),
+  reviewed_by TEXT REFERENCES profiles(id),
+  created_at TEXT NOT NULL
+);
+
 CREATE INDEX IF NOT EXISTS idx_findings_inspection ON findings(inspection_id);
 CREATE INDEX IF NOT EXISTS idx_findings_assignee_status ON findings(assignee_id, status);
 CREATE INDEX IF NOT EXISTS idx_photos_finding ON photos(finding_id);
 CREATE INDEX IF NOT EXISTS idx_logs_finding ON action_logs(finding_id, created_at);
+CREATE INDEX IF NOT EXISTS idx_ai_subject_type ON ai_analyses(subject_id, analysis_type);

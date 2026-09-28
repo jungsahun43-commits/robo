@@ -1,6 +1,6 @@
 # SafeLog C++ prototype
 
-SafeLog is a contract-first C++20 project for recording workplace safety findings, tracking corrective action, and generating an inspection report. It is structured for four people to build independent modules and connect them at the end.
+SafeLog AI is a contract-first C++20 project for AI-assisted workplace safety inspection. A multimodal analyzer suggests hazards and corrective action from a before photo, compares before/after photos, and drafts a report summary. A human reviews every AI result and makes the final decision.
 
 ## Current vertical slice
 
@@ -8,10 +8,12 @@ The included CLI demo executes the complete scenario:
 
 1. Create an inspection.
 2. Register a finding with a before photo.
-3. Assign a corrective-action owner.
-4. Start and submit corrective action with an after photo.
-5. Let the original inspector verify it.
-6. Generate an HTML report containing the audit trail.
+3. Run mock AI hazard analysis and record the inspector's review.
+4. Assign a corrective-action owner.
+5. Start and submit corrective action with an after photo.
+6. Run mock AI before/after comparison and record human review.
+7. Let the original inspector verify it.
+8. Generate an AI summary and an HTML report containing AI and human audit trails.
 
 The Qt shell is optional because Qt is a large separate installation. Enable it after installing Qt 6.5 or newer with Quick and Quick Controls 2.
 
@@ -35,12 +37,12 @@ cmake --build build-qt
 
 | Member | Library | Primary result |
 |---|---|---|
-| A | `src/capture` | inspection and before-photo registration |
-| B | `src/storage`, `database` | SQLite, files, ids, persistence |
-| C | `src/workflow` | assignment and validated state transitions |
-| D | `src/reporting` | report validation, preview, PDF/export |
+| A | capture UI | photo input and human review of AI hazard suggestions |
+| B | storage | SQLite, photos, AI analysis and review persistence |
+| C | `src/ai` | real multimodal model adapter and evaluation |
+| D | workflow/report UI | corrective action, AI comparison, final report |
 
-See `docs/TEAM_PIPELINE.md` before creating branches. The three headers under `include/safelog/contracts` are the shared API and should be frozen first.
+Use `docs/AI_FIRST_TEAM_PROMPTS_KO.md` for the current assignment. `MockAiSafetyAnalyzer` keeps all teams unblocked before a real model server is available.
 
 ## Project boundaries
 

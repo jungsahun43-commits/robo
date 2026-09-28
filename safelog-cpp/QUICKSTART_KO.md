@@ -1,6 +1,6 @@
 # SafeLog 팀 개발 시작 방법
 
-이 문서는 팀장 1명과 팀원 3명이 프로젝트를 나눠 개발하고 마지막에 합치는 실제 절차입니다.
+이 문서는 기본 실행 방법을 설명한다. 최신 AI 중심 역할과 프롬프트는 `docs/AI_FIRST_TEAM_PROMPTS_KO.md`를 사용한다.
 
 ## 1. 팀장이 한 번만 할 일
 
@@ -10,10 +10,10 @@
 4. 아래 브랜치를 만든다.
 
 ```text
-feature/capture
-feature/storage
-feature/workflow
-feature/reporting
+feature/capture-ai-ui
+feature/storage-ai
+feature/ai-engine
+feature/workflow-report
 ```
 
 5. 공통 계약 파일 세 개는 첫 회의 이후 함부로 수정하지 않는다.

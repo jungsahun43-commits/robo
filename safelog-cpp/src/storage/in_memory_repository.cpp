@@ -8,6 +8,7 @@ void InMemoryRepository::saveInspection(const Inspection& v) { std::scoped_lock 
 void InMemoryRepository::saveFinding(const Finding& v) { std::scoped_lock l(mutex_); findings_[v.id] = v; }
 void InMemoryRepository::savePhoto(const Photo& v) { std::scoped_lock l(mutex_); photos_[v.id] = v; }
 void InMemoryRepository::saveActionLog(const ActionLog& v) { std::scoped_lock l(mutex_); logs_[v.id] = v; }
+void InMemoryRepository::saveAiAnalysis(const AiAnalysis& v) { std::scoped_lock l(mutex_); analyses_[v.id] = v; }
 
 template <typename T>
 std::optional<T> copyById(const std::unordered_map<Id, T>& values, const Id& id) {
@@ -19,6 +20,7 @@ std::optional<Site> InMemoryRepository::findSite(const Id& id) const { std::scop
 std::optional<Profile> InMemoryRepository::findProfile(const Id& id) const { std::scoped_lock l(mutex_); return copyById(profiles_, id); }
 std::optional<Inspection> InMemoryRepository::findInspection(const Id& id) const { std::scoped_lock l(mutex_); return copyById(inspections_, id); }
 std::optional<Finding> InMemoryRepository::findFinding(const Id& id) const { std::scoped_lock l(mutex_); return copyById(findings_, id); }
+std::optional<AiAnalysis> InMemoryRepository::findAiAnalysis(const Id& id) const { std::scoped_lock l(mutex_); return copyById(analyses_, id); }
 
 std::vector<Photo> InMemoryRepository::photosForFinding(const Id& findingId) const {
   std::scoped_lock l(mutex_); std::vector<Photo> out;
@@ -42,6 +44,12 @@ std::vector<Finding> InMemoryRepository::findingsAssignedTo(const Id& assigneeId
   std::scoped_lock l(mutex_); std::vector<Finding> out;
   for (const auto& [_, value] : findings_)
     if (value.assigneeId && *value.assigneeId == assigneeId) out.push_back(value);
+  return out;
+}
+
+std::vector<AiAnalysis> InMemoryRepository::analysesForSubject(const Id& subjectId) const {
+  std::scoped_lock l(mutex_); std::vector<AiAnalysis> out;
+  for (const auto& [_, value] : analyses_) if (value.subjectId == subjectId) out.push_back(value);
   return out;
 }
 

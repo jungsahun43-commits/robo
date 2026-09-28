@@ -11,7 +11,8 @@ ReportData ReportService::build(const Id& inspectionId) const {
   if (!site || !inspector) throw NotFoundError("Report relation is missing");
   std::vector<FindingBundle> bundles;
   for (const auto& finding : repository_.findingsForInspection(inspectionId)) {
-    bundles.push_back({finding, repository_.photosForFinding(finding.id), repository_.logsForFinding(finding.id)});
+    bundles.push_back({finding, repository_.photosForFinding(finding.id),
+      repository_.logsForFinding(finding.id), repository_.analysesForSubject(finding.id)});
   }
   if (bundles.empty()) throw ValidationError("Report needs at least one finding");
   return {*site, *inspection, *inspector, std::move(bundles)};

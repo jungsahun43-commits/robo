@@ -1,0 +1,2 @@
+case_id,image_path,expected_category,expected_risk_level,predicted_category,predicted_risk_level,confidence,latency_ms,human_decision,notes
+demo-001,fixtures/blocked_walkway.jpg,통로 적치물,4,,,,,,

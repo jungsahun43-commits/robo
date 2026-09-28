@@ -24,14 +24,14 @@ FindingBundle CaptureService::addFinding(const NewFindingInput& input) {
   const auto now = clock_.now();
   Finding finding{ids_.next("finding"), input.inspectionId, input.location,
                   input.description, input.actionOpinion, std::nullopt,
-                  std::nullopt, FindingStatus::Open, now};
+                  std::nullopt, FindingStatus::Open, now, std::nullopt, std::nullopt};
   repository_.saveFinding(finding);
   const auto storedPath = photos_.importPhoto(input.beforePhotoLocalPath, finding.id, PhotoKind::Before);
   Photo photo{ids_.next("photo"), finding.id, PhotoKind::Before, storedPath, now};
   repository_.savePhoto(photo);
   ActionLog log{ids_.next("log"), finding.id, input.actorId, "finding_created", "", now};
   repository_.saveActionLog(log);
-  return {finding, {photo}, {log}};
+  return {finding, {photo}, {log}, {}};
 }
 
 } // namespace safelog::capture
