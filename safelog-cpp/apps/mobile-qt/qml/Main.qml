@@ -1,63 +1,71 @@
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Layouts
-
+import "auth"
+import "home"
+import "capture"
+import "common"
+import "workflow"
+import "reporting"
 ApplicationWindow {
-    width: 390
-    height: 760
-    visible: true
-    title: "SafeLog"
-    color: "#f4f7f6"
-
+    id: window
+    width: 390; height: 760; visible: true
+    title: "SafeLog AI"; color: "#f4f7f6"
+    property string navigationError: ""
+    function goHome() {
+        captureController.reset(); workflowController.reset(); reportingController.reset()
+        navigationError = ""; stack.clear(); stack.push(authController.session.userId ? homePage : loginPage)
+    }
+    function goBack() {
+        if (stack.depth <= 2) { goHome(); return }
+        aiController.reset(); stack.pop()
+    }
+    function showReport(inspectionId) {
+        stack.push(reportPage, { inspectionId: inspectionId })
+        reportingController.generate(inspectionId)
+    }
+    function navigate(menu) {
+        const role = authController.session.role
+        const allowed = role === "Inspector" ? ["점검 등록", "AI 검토", "최종 확인", "완료 보고서"] :
+                        role === "Manager" ? ["담당자 지정", "전체 진행 상황", "검토 상태", "보고서"] :
+                        role === "Assignee" ? ["배정된 작업", "조치 제출", "진행 중 작업"] : []
+        if (allowed.indexOf(menu) < 0) { navigationError = "권한 없는 메뉴 접근입니다."; return }
+        if (menu === "점검 등록") { captureController.reset(); stack.push(capturePage) }
+        else if (menu === "AI 검토" && captureController.draft.findingId) stack.push(reviewPage)
+        else stack.push(tasksPage, { menuTitle: menu })
+    }
     header: ToolBar {
-        contentHeight: 62
-        background: Rectangle { color: "#126b58" }
-        Label {
-            anchors.centerIn: parent
-            text: "세이프로그"
-            color: "white"
-            font.pixelSize: 21
-            font.bold: true
+        Row {
+            spacing: 12
+            ToolButton { text: "‹ 뒤로"; visible: stack.depth > 1; onClicked: window.goBack() }
+            ToolButton { text: "홈"; visible: !!authController.session.userId; onClicked: window.goHome() }
+            Label { text: "SafeLog AI"; padding: 14; font.bold: true }
+            ToolButton { text: "로그아웃"; visible: !!authController.session.userId; onClicked: authController.logout() }
         }
     }
-
-    ColumnLayout {
-        anchors.fill: parent
-        anchors.margins: 20
-        spacing: 16
-
-        Label { text: "현장 안전점검"; font.pixelSize: 26; font.bold: true; color: "#17212b" }
-        Label {
-            Layout.fillWidth: true
-            wrapMode: Text.WordWrap
-            text: "사진 등록부터 조치 확인, 보고서 생성까지 한 흐름으로 관리합니다."
-            color: "#526069"
-        }
-        Frame {
-            Layout.fillWidth: true
-            ColumnLayout {
-                anchors.fill: parent
-                Label { text: "세이프 금속 가공공장"; font.bold: true; font.pixelSize: 18 }
-                Label { text: appController.statusMessage; color: "#126b58" }
-            }
-        }
-        Button {
-            Layout.fillWidth: true
-            text: "통합 시나리오 실행"
-            onClicked: appController.runDemoScenario()
-        }
-        Label { text: "개발 메뉴"; font.bold: true; font.pixelSize: 18 }
-        Repeater {
-            model: ["A · 새 점검/사진 등록", "B · 로컬 저장소 상태", "C · 담당 업무/조치 확인", "D · 보고서 미리보기"]
-            delegate: Button { required property string modelData; Layout.fillWidth: true; text: modelData }
-        }
-        Item { Layout.fillHeight: true }
-        Label {
-            Layout.fillWidth: true
-            horizontalAlignment: Text.AlignHCenter
-            text: "학술제 프로토타입 · 법적 적합성은 별도 검토 필요"
-            color: "#7b878d"
-            font.pixelSize: 11
+    footer: ErrorPanel { text: window.navigationError }
+    StackView { id: stack; anchors.fill: parent; initialItem: loginPage }
+    Connections {
+        target: authController
+        function onSessionChanged() { stack.clear(); stack.push(authController.session.userId ? homePage : loginPage) }
+    }
+    Connections { target: captureController; function onSaved() { stack.replace(savedPage) } }
+    Connections { target: workflowController; function onActionSubmitted() { stack.replace(comparisonPage) } }
+    Component { id: loginPage; LoginPage {} }
+    Component { id: homePage; HomePage { onNavigate: menu => window.navigate(menu) } }
+    Component { id: capturePage; FindingCapturePage { onCaptured: stack.replace(reviewPage) } }
+    Component { id: reviewPage; AiHazardReviewPage {} }
+    Component { id: savedPage; FindingSavedPage { onHomeRequested: window.goHome() } }
+    Component {
+        id: tasksPage
+        AssignedTasksPage {
+            onActionRequested: stack.push(actionPage)
+            onReviewRequested: stack.push(comparisonPage)
+            onReportRequested: inspectionId => window.showReport(inspectionId)
+            onHazardRequested: findingId => { if (captureController.resumeFinding(findingId)) stack.push(reviewPage) }
         }
     }
+    Component { id: actionPage; ActionSubmitPage {} }
+    Component { id: comparisonPage; AiComparisonReviewPage { onReportRequested: inspectionId => window.showReport(inspectionId) } }
+    Component { id: reportPage; ReportPreviewPage {} }
+    Component { id: placeholderPage; PlaceholderPage {} }
 }

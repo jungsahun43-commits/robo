@@ -1,5 +1,6 @@
 #include "safelog/reporting/report_service.hpp"
 #include "safelog/contracts/errors.hpp"
+#include <algorithm>
 
 namespace safelog::reporting {
 
@@ -15,7 +16,17 @@ ReportData ReportService::build(const Id& inspectionId) const {
       repository_.logsForFinding(finding.id), repository_.analysesForSubject(finding.id)});
   }
   if (bundles.empty()) throw ValidationError("Report needs at least one finding");
-  return {*site, *inspection, *inspector, std::move(bundles)};
+  std::vector<Profile> participants{*inspector};
+  for (auto& bundle : bundles) {
+    std::sort(bundle.actionLogs.begin(), bundle.actionLogs.end(), [](const auto& a, const auto& b) { return a.createdAt < b.createdAt; });
+    std::sort(bundle.aiAnalyses.begin(), bundle.aiAnalyses.end(), [](const auto& a, const auto& b) { return a.createdAt < b.createdAt; });
+    std::sort(bundle.photos.begin(), bundle.photos.end(), [](const auto& a, const auto& b) { return a.capturedAt < b.capturedAt; });
+    if (bundle.finding.assigneeId) {
+      const auto assignee = repository_.findProfile(*bundle.finding.assigneeId);
+      if (assignee) participants.push_back(*assignee);
+    }
+  }
+  return {*site, *inspection, *inspector, std::move(bundles), std::move(participants)};
 }
 
 } // namespace safelog::reporting

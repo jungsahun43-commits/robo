@@ -12,6 +12,7 @@ public:
   Finding beginWork(const Id& findingId, const Id& assigneeId);
   Finding submitAction(const Id& findingId, const Id& assigneeId,
                        const std::string& note, const std::string& afterPhotoLocalPath);
+  Finding requestChanges(const Id& findingId, const Id& inspectorId, const std::string& note);
   Finding verify(const Id& findingId, const Id& inspectorId, const std::string& note = "");
 
 private:

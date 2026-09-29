@@ -1,46 +1,56 @@
 #include "app_controller.hpp"
-
-#include <QDir>
-#include <QFile>
+#include "safelog/ai/mock_ai_analyzer.hpp"
 #include <QStandardPaths>
-
+#include <QUuid>
+#include <algorithm>
 namespace safelog::qtapp {
-
-AppController::AppController(QObject* parent)
+AppController::AppController(QObject* parent, std::shared_ptr<ai::IAiSafetyAnalyzer> analyzer)
   : QObject(parent),
-    photoStore_((QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/photos").toStdString()),
-    capture_(repository_, clock_, ids_, photoStore_),
-    workflow_(repository_, clock_, ids_, photoStore_) {
+    // Memory IDs restart each process; isolate photo directories to avoid overwriting earlier files.
+    photoStore_((QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/photos/" +
+      QUuid::createUuid().toString(QUuid::WithoutBraces)).toStdString()),
+    // Integration seam: inject role-3's IAiSafetyAnalyzer implementation here when available.
+    analyzer_(analyzer ? std::move(analyzer) : std::make_shared<ai::MockAiSafetyAnalyzer>()),
+    capture_(repository_, clock_, ids_, photoStore_), workflow_(repository_, clock_, ids_, photoStore_),
+    reviews_(repository_, clock_, ids_, *analyzer_), auth_(repository_), ai_(analyzer_),
+    captureController_(repository_, clock_, ids_, capture_, reviews_, auth_, ai_), reports_(repository_),
+    workflowController_(repository_, clock_, ids_, workflow_, reviews_, auth_, ai_, inspectionIds_),
+    reportingController_(repository_, reports_, auth_, sharing_) {
+  connect(&captureController_, &CaptureController::changed, this, [this] {
+    const auto id = captureController_.draft().value("inspectionId").toString().toStdString();
+    if (!id.empty() && std::find(inspectionIds_.begin(), inspectionIds_.end(), id) == inspectionIds_.end())
+      inspectionIds_.push_back(id);
+    workflowController_.refresh();
+    emit dashboardChanged();
+  });
+  connect(&auth_, &AuthController::sessionChanged, this, &AppController::dashboardChanged);
+  connect(&workflowController_, &WorkflowController::changed, this, &AppController::dashboardChanged);
   repository_.saveSite({"site-1", "세이프 금속 가공공장", "서울시 가상구 산업로 10"});
   repository_.saveProfile({"inspector-1", "김안전", UserRole::Inspector});
-  repository_.saveProfile({"assignee-1", "이조치", UserRole::Assignee});
   repository_.saveProfile({"manager-1", "박관리", UserRole::Manager});
+  repository_.saveProfile({"assignee-1", "이조치", UserRole::Assignee});
 }
-
-void AppController::setStatus(QString message) {
-  if (statusMessage_ == message) return;
-  statusMessage_ = std::move(message);
-  emit statusMessageChanged();
-}
-
-void AppController::runDemoScenario() {
-  try {
-    const QString root = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-    QDir().mkpath(root);
-    const QString photoPath = root + "/sample.jpg";
-    QFile sample(photoPath);
-    if (sample.open(QIODevice::WriteOnly)) sample.write("replace-with-camera-image");
-    const auto inspection = capture_.startInspection("site-1", "inspector-1");
-    const auto finding = capture_.addFinding({inspection.id, "inspector-1", "2층 가공라인 통로",
-      "통로 자재 적치", "자재를 지정 구역으로 이동", photoPath.toStdString()}).finding;
-    workflow_.assign(finding.id, "manager-1", "assignee-1");
-    workflow_.beginWork(finding.id, "assignee-1");
-    workflow_.submitAction(finding.id, "assignee-1", "통로 정리 완료", photoPath.toStdString());
-    workflow_.verify(finding.id, "inspector-1");
-    setStatus(QStringLiteral("전체 흐름 완료: 보고서 생성 가능"));
-  } catch (const std::exception& error) {
-    setStatus(QString::fromUtf8(error.what()));
+QVariantList AppController::dashboard() const {
+  int open = 0, progress = 0, pending = 0, complete = 0;
+  const auto user = auth_.session().value("userId").toString().toStdString();
+  const auto role = auth_.session().value("role").toString();
+  if (user.empty()) return {0, 0, 0, 0};
+  for (const auto& id : inspectionIds_) {
+    const auto inspection = repository_.findInspection(id);
+    if (!inspection || (role == "Inspector" && inspection->inspectorId != user)) continue;
+    const auto findings = repository_.findingsForInspection(id);
+    bool allVerified = !findings.empty();
+    bool visible = false;
+    for (const auto& f : findings) {
+      if (role == "Assignee" && f.assigneeId != user) continue;
+      visible = true;
+      open += f.status == FindingStatus::Open;
+      progress += f.status == FindingStatus::InProgress;
+      pending += f.status == FindingStatus::PendingReview;
+      allVerified = allVerified && f.status == FindingStatus::Verified;
+    }
+    complete += visible && allVerified;
   }
+  return {open, progress, pending, complete};
 }
-
-} // namespace safelog::qtapp
+}

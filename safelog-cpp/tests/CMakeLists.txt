@@ -3,3 +3,19 @@ target_link_libraries(safelog_smoke_tests PRIVATE
   safelog_storage safelog_capture safelog_workflow safelog_ai safelog_reporting
 )
 add_test(NAME safelog_smoke_tests COMMAND safelog_smoke_tests)
+
+# Portable application rules are tested even when SAFELOG_BUILD_QT is OFF.
+find_package(Threads REQUIRED)
+add_executable(safelog_mobile_support_tests mobile_support_tests.cpp)
+target_include_directories(safelog_mobile_support_tests PRIVATE ${PROJECT_SOURCE_DIR}/apps/mobile-qt)
+target_link_libraries(safelog_mobile_support_tests PRIVATE
+  safelog_storage safelog_capture safelog_ai Threads::Threads
+)
+add_test(NAME safelog_mobile_support_tests COMMAND safelog_mobile_support_tests)
+
+add_executable(safelog_workflow_report_tests workflow_report_tests.cpp)
+target_include_directories(safelog_workflow_report_tests PRIVATE ${PROJECT_SOURCE_DIR}/apps/mobile-qt)
+target_link_libraries(safelog_workflow_report_tests PRIVATE
+  safelog_storage safelog_capture safelog_workflow safelog_ai safelog_reporting
+)
+add_test(NAME safelog_workflow_report_tests COMMAND safelog_workflow_report_tests)

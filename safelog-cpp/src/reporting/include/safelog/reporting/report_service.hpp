@@ -9,6 +9,7 @@ struct ReportData {
   Inspection inspection;
   Profile inspector;
   std::vector<FindingBundle> findings;
+  std::vector<Profile> participants;
 };
 
 class ReportService {
