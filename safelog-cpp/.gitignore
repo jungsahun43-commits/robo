@@ -1,0 +1,29 @@
+# Build outputs
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.exe
+*.obj
+*.o
+
+# Generated demo and runtime data
+safelog-demo-data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.key
+
+# IDE and operating system files
+.idea/
+.vs/
+.vscode/
+*.user
+.DS_Store
+Thumbs.db
