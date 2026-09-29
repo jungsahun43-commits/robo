@@ -23,6 +23,7 @@ git fetch origin
 
 ```bash
 git switch --track origin/feature/ai-engine
+git merge origin/main
 ```
 
 ## 2. 작업 전 읽을 문서
