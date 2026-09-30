@@ -1,4 +1,5 @@
 #include "ai_controller.hpp"
+#include "adapters/ai/http_ai_safety_analyzer.hpp"
 #include <QtConcurrent/QtConcurrentRun>
 #include <QFutureWatcher>
 #include <QJsonDocument>
@@ -25,6 +26,7 @@ AiController::AiController(std::shared_ptr<ai::IAiSafetyAnalyzer> analyzer, QObj
   timeout_.setInterval(qMax(1, timeoutMs));
   connect(&timeout_, &QTimer::timeout, this, [this] {
     requests_.invalidate();
+    analyzer_->cancel();
     changeState("Timeout", "AI 응답 시간이 초과되었습니다.");
     if (comparison_) emit comparisonFailed(state_, error_);
     else emit analysisFailed(state_, error_);
@@ -37,7 +39,7 @@ void AiController::changeState(QString state, QString error) {
   if (wasLoading != loading()) emit loadingChanged();
 }
 void AiController::reset() {
-  requests_.invalidate(); timeout_.stop(); result_.clear(); hazard_ = {}; assessment_ = {};
+  requests_.invalidate(); analyzer_->cancel(); timeout_.stop(); result_.clear(); hazard_ = {}; assessment_ = {};
   changeState("Idle");
 }
 void AiController::manualFallback() { reset(); changeState("ManualFallback"); }
@@ -89,7 +91,9 @@ void AiController::run(bool comparison, QString before, QString after, QString m
       if (comparison) {
         reply.comparison = provider->compareBeforeAfter(before, after, memo);
         validate(reply.comparison.confidence, reply.comparison.rawJson);
-        if ((reply.comparison.assessment.empty() || reply.comparison.modelName.empty())) throw AiRequestError("InvalidJson", "AI 비교 설명이 없습니다.");
+        if (reply.comparison.assessment.empty() || reply.comparison.modelName.empty() ||
+            reply.comparison.promptVersion.empty())
+          throw AiRequestError("InvalidJson", "AI 비교 응답의 필수 정보가 없습니다.");
       } else {
         reply.hazard = provider->analyzeHazard(before, memo);
         validate(reply.hazard.confidence, reply.hazard.rawJson);
@@ -97,6 +101,9 @@ void AiController::run(bool comparison, QString before, QString after, QString m
         if (!validHazard(h))
           throw AiRequestError("InvalidJson", "AI 위험 분석 필수 필드가 올바르지 않습니다.");
       }
+    } catch (const AiProviderError& e) {
+      reply.state = QString::fromStdString(aiProviderState(e.code));
+      reply.error = QString::fromUtf8(e.what());
     } catch (const AiRequestError& e) { reply.state = e.state; reply.error = QString::fromUtf8(e.what());
     } catch (const std::exception& e) { reply.state = "Failure"; reply.error = QString::fromUtf8(e.what());
     } catch (...) { reply.state = "Failure"; reply.error = "AI 분석 중 알 수 없는 오류가 발생했습니다."; }

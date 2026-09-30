@@ -36,9 +36,10 @@ inline AiAnalysis storeComparison(IRepository& repository, IClock& clock, IIdGen
   if (!canViewFinding(repository, *finding, actorId)) throw ValidationError("PermissionDenied: comparison actor cannot view finding");
   if (finding->status != FindingStatus::PendingReview) throw TransitionError("Comparison needs pending review");
   if (!std::isfinite(result.confidence) || result.confidence < 0 || result.confidence > 1 ||
-      result.assessment.empty() || result.modelName.empty()) throw ValidationError("Invalid comparison result");
+      result.assessment.empty() || result.modelName.empty() || result.promptVersion.empty())
+    throw ValidationError("Invalid comparison result");
   AiAnalysis analysis{ids.next("ai"), findingId, AiAnalysisType::AfterComparison, result.modelName,
-    "comparison-v1", std::nullopt, result.likelyResolved ? "likely_resolved" : "remaining_risk",
+    result.promptVersion, std::nullopt, result.likelyResolved ? "likely_resolved" : "remaining_risk",
     result.confidence, result.rawJson, AiReviewDecision::Pending, std::nullopt, clock.now()};
   repository.saveAiAnalysis(analysis);
   // The mock's raw JSON is intentionally minimal; retain its typed assessment without changing contracts.

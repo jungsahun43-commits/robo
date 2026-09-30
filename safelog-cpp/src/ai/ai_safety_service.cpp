@@ -2,6 +2,7 @@
 #include "safelog/contracts/errors.hpp"
 
 #include <algorithm>
+#include <cmath>
 #include <sstream>
 
 namespace safelog::ai {
@@ -28,10 +29,12 @@ AiAnalysis AiSafetyService::analyzeFinding(const Id& findingId) {
   const auto* before = findPhoto(photos, PhotoKind::Before);
   if (!before) throw ValidationError("Before photo is required for AI analysis");
   const auto result = analyzer_.analyzeHazard(before->storagePath, finding->description);
-  if (result.riskLevel < 1 || result.riskLevel > 5 || result.confidence < 0.0 || result.confidence > 1.0)
+  if (result.riskLevel < 1 || result.riskLevel > 5 || !std::isfinite(result.confidence) ||
+      result.confidence < 0.0 || result.confidence > 1.0 ||
+      result.modelName.empty() || result.promptVersion.empty())
     throw ValidationError("AI analyzer returned values outside the contract");
   AiAnalysis analysis{ids_.next("ai"), findingId, AiAnalysisType::BeforeHazard,
-    result.modelName, "hazard-v1", result.riskLevel, result.category, result.confidence,
+    result.modelName, result.promptVersion, result.riskLevel, result.category, result.confidence,
     result.rawJson, AiReviewDecision::Pending, std::nullopt, clock_.now()};
   repository_.saveAiAnalysis(analysis);
   return analysis;
@@ -79,8 +82,11 @@ AiAnalysis AiSafetyService::compareAction(const Id& findingId) {
   if (!before || !after) throw ValidationError("Both before and after photos are required");
   const auto result = analyzer_.compareBeforeAfter(before->storagePath, after->storagePath,
                                                    latestActionNote(repository_.logsForFinding(findingId)));
+  if (result.modelName.empty() || result.promptVersion.empty() || result.assessment.empty() ||
+      !std::isfinite(result.confidence) || result.confidence < 0.0 || result.confidence > 1.0)
+    throw ValidationError("AI comparison returned values outside the contract");
   AiAnalysis analysis{ids_.next("ai"), findingId, AiAnalysisType::AfterComparison,
-    result.modelName, "comparison-v1", std::nullopt,
+    result.modelName, result.promptVersion, std::nullopt,
     result.likelyResolved ? "likely_resolved" : "remaining_risk", result.confidence,
     result.rawJson, AiReviewDecision::Pending, std::nullopt, clock_.now()};
   repository_.saveAiAnalysis(analysis);
@@ -97,8 +103,10 @@ AiAnalysis AiSafetyService::summarizeInspection(const Id& inspectionId) {
   }
   if (context.str().empty()) throw ValidationError("Inspection has no findings to summarize");
   const auto result = analyzer_.summarize(context.str());
+  if (result.modelName.empty() || result.promptVersion.empty() || result.summary.empty())
+    throw ValidationError("AI summary returned values outside the contract");
   AiAnalysis analysis{ids_.next("ai"), inspectionId, AiAnalysisType::ReportSummary,
-    result.modelName, "summary-v1", std::nullopt, "inspection_summary", 1.0,
+    result.modelName, result.promptVersion, std::nullopt, "inspection_summary", 1.0,
     result.rawJson, AiReviewDecision::Pending, std::nullopt, clock_.now()};
   repository_.saveAiAnalysis(analysis);
   return analysis;

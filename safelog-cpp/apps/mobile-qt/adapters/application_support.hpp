@@ -54,7 +54,8 @@ inline bool canReviewFinding(const IRepository& repository, const Id& findingId,
 inline bool validHazard(const ai::HazardSuggestion& result) {
   return result.riskLevel >= 1 && result.riskLevel <= 5 && std::isfinite(result.confidence) &&
     result.confidence >= 0 && result.confidence <= 1 && !result.category.empty() &&
-    !result.suggestedDescription.empty() && !result.suggestedAction.empty() && !result.modelName.empty();
+    !result.suggestedDescription.empty() && !result.suggestedAction.empty() && !result.modelName.empty() &&
+    !result.promptVersion.empty();
 }
 
 inline AiReviewDecision hazardDecision(const ai::HazardSuggestion& suggestion,

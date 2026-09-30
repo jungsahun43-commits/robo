@@ -18,7 +18,7 @@ CaptureController::CaptureController(IRepository& r, IClock& c, IIdGenerator& i,
     try {
       const auto& h = ai_.hazard();
       AiAnalysis analysis{ids_.next("ai"), findingId_, AiAnalysisType::BeforeHazard,
-        h.modelName, "hazard-v1", h.riskLevel, h.category, h.confidence, h.rawJson,
+        h.modelName, h.promptVersion, h.riskLevel, h.category, h.confidence, h.rawJson,
         AiReviewDecision::Pending, std::nullopt, clock_.now()};
       // Preserve the provider's original JSON, and the typed suggestions separately in the UI.
       repository_.saveAiAnalysis(analysis);

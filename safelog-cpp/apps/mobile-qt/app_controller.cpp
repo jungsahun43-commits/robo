@@ -1,16 +1,33 @@
 #include "app_controller.hpp"
+#include "adapters/ai/http_ai_safety_analyzer.hpp"
 #include "safelog/ai/mock_ai_analyzer.hpp"
+#include <QProcessEnvironment>
 #include <QStandardPaths>
 #include <QUuid>
 #include <algorithm>
 namespace safelog::qtapp {
+namespace {
+std::shared_ptr<ai::IAiSafetyAnalyzer> makeDefaultAnalyzer() {
+  const QProcessEnvironment environment = QProcessEnvironment::systemEnvironment();
+  const QString baseUrl = environment.value("SAFELOG_AI_BASE_URL").trimmed();
+  if (baseUrl.isEmpty()) return std::make_shared<ai::MockAiSafetyAnalyzer>();
+
+  bool timeoutOk = false;
+  const int configuredTimeout = environment.value("SAFELOG_AI_TIMEOUT_MS").toInt(&timeoutOk);
+  HttpAiSafetyAnalyzerConfig config;
+  config.baseUrl = baseUrl.toStdString();
+  if (timeoutOk && configuredTimeout > 0) config.timeoutMs = configuredTimeout;
+  return std::make_shared<HttpAiSafetyAnalyzer>(std::move(config), makeQtJsonHttpClient());
+}
+}
+
 AppController::AppController(QObject* parent, std::shared_ptr<ai::IAiSafetyAnalyzer> analyzer)
   : QObject(parent),
     // Memory IDs restart each process; isolate photo directories to avoid overwriting earlier files.
     photoStore_((QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/photos/" +
       QUuid::createUuid().toString(QUuid::WithoutBraces)).toStdString()),
     // Integration seam: inject role-3's IAiSafetyAnalyzer implementation here when available.
-    analyzer_(analyzer ? std::move(analyzer) : std::make_shared<ai::MockAiSafetyAnalyzer>()),
+    analyzer_(analyzer ? std::move(analyzer) : makeDefaultAnalyzer()),
     capture_(repository_, clock_, ids_, photoStore_), workflow_(repository_, clock_, ids_, photoStore_),
     reviews_(repository_, clock_, ids_, *analyzer_), auth_(repository_), ai_(analyzer_),
     captureController_(repository_, clock_, ids_, capture_, reviews_, auth_, ai_), reports_(repository_),
