@@ -1,0 +1,3 @@
+# Ultralytics may create these when commands are run from the repository root.
+/runs/
+/weights/

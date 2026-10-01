@@ -27,3 +27,16 @@ safelog-demo-data/
 *.user
 .DS_Store
 Thumbs.db
+
+# Local AI training artifacts and downloaded datasets
+ai-training/.venv/
+ai-training/.config/
+ai-training/Ultralytics/
+ai-training/*.pt
+ai-training/data/
+ai-training/runs/
+ai-training/models/*.pt
+ai-training/models/*.onnx
+ai-training/artifacts/
+ai-training/**/__pycache__/
+ai-training/**/*.pyc

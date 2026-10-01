@@ -1,0 +1,11 @@
+# Versions used for the 2026-10-01 local training run. Install torch via setup_windows.ps1.
+ultralytics==8.4.166
+fastapi==0.142.1
+uvicorn==0.54.0
+onnx==1.23.1
+onnxslim==0.1.97
+onnxruntime-gpu==1.30.0
+pillow==12.3.0
+numpy==2.5.2
+python-multipart>=0.0.20,<1
+pi-heif==1.4.0

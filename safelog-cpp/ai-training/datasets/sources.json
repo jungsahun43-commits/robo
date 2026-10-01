@@ -1,0 +1,42 @@
+{
+  "construction-ppe": {
+    "title": "Construction-PPE: Personal Protective Equipment Detection Dataset",
+    "version": "1.0.0",
+    "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/construction-ppe.zip",
+    "homepage": "https://docs.ultralytics.com/datasets/detect/construction-ppe/",
+    "license": "AGPL-3.0",
+    "citation": "Dalvi, Singh, Bhingarde, Chalke. Construction-PPE Dataset (2025).",
+    "layout": "yolo",
+    "expected_classes": [
+      "helmet", "gloves", "vest", "boots", "goggles", "none", "Person",
+      "no_helmet", "no_goggle", "no_gloves", "no_boots"
+    ]
+  },
+  "sh17": {
+    "title": "SH17 Dataset for Human Safety and PPE Detection",
+    "version": "1",
+    "url": "https://www.kaggle.com/api/v1/datasets/download/mugheesahmad/sh17-dataset-for-ppe-detection?datasetVersionNumber=1",
+    "homepage": "https://github.com/ahmadmughees/SH17dataset",
+    "license": "CC BY-NC-SA 4.0",
+    "citation": "Ahmad and Rahimi. SH17 Dataset (2024). DOI: 10.1016/j.jnlssr.2024.09.002",
+    "layout": "inspect"
+  },
+  "chvg": {
+    "title": "CHVG Dataset",
+    "version": "2022-04-21",
+    "url": "https://ndownloader.figshare.com/files/34858290",
+    "homepage": "https://figshare.com/articles/dataset/chvg_dataset/19625166",
+    "license": "CC BY 4.0",
+    "citation": "Ferdous and Ahsan. PPE detector, PeerJ Computer Science 8:e999 (2022).",
+    "layout": "inspect"
+  },
+  "indoor-fire-smoke": {
+    "title": "Indoor Fire Smoke Dataset",
+    "version": "v1",
+    "url": "https://zenodo.org/records/15826133/files/Indoor%20Fire%20Smoke.zip?download=1",
+    "homepage": "https://zenodo.org/records/15826133",
+    "license": "CC BY 4.0",
+    "citation": "Putra, Arya Krisna. Indoor Fire Smoke Dataset. DOI: 10.5281/zenodo.15826133",
+    "layout": "inspect"
+  }
+}
