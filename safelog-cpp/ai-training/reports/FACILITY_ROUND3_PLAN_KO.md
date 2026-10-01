@@ -4,7 +4,7 @@
 
 - 출처: [공식 synth-dacl 자료](https://doi.org/10.60776/9D6E4M), CC BY-NC 4.0.
 - synthcavity 두 원본 ZIP의 발행처 MD5를 검사한 뒤 사용한다.
-- 입력 사진은 render_noise, 공동 정답은 gt_cavity와 gt_render_cavities의 합집합이다.
+- 입력 사진은 render와 render_noise 두 렌더 변형, 공동 정답은 gt_cavity와 gt_render_cavities의 합집합이다. 같은 장면의 변형을 독립적인 현장 사진으로 계산하지 않는다.
 - 합성 사진은 학습 전용이다. 실제 dacl 학습/검증/시험 사진의 원본 픽셀과 같은 자료를 제외하고 내부 중복을 제거한다.
 - 합성 사진의 공동 존재 여부만 학습한다. 물기 등 주석이 없는 여섯 항목은 음성으로 간주하지 않고 손실에서 제외한다.
 - 1차 모델에서 시작해 전체 사진 512px, 배치 12, 최대 16 epoch, patience 5로 학습한다.
