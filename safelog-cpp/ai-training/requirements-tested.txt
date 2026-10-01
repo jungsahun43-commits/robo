@@ -7,5 +7,7 @@ onnxslim==0.1.97
 onnxruntime-gpu==1.30.0
 pillow==12.3.0
 numpy==2.5.2
+opencv-python==5.0.0.93
+PyYAML==6.0.3
 python-multipart>=0.0.20,<1
 pi-heif==1.4.0

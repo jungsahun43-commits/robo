@@ -1,0 +1,69 @@
+{
+  "source": "dacl10k",
+  "images": 7910,
+  "split_counts": {
+    "train": 6225,
+    "val": 710,
+    "test": 975
+  },
+  "names": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "max_side": 1280,
+  "label_type": "derived bounding regions from semantic masks/polygons; not official segmentation benchmark",
+  "class_mapping": {
+    "Crack": "concrete_crack",
+    "ACrack": "concrete_crack",
+    "Spalling": "concrete_spalling",
+    "Rust": "rust_stain",
+    "ExposedRebars": "exposed_rebar",
+    "Wetspot": "wet_surface",
+    "Efflorescence": "efflorescence",
+    "Cavity": "surface_cavity"
+  },
+  "minimum_mask_area_original_pixels": null,
+  "split_method": "official validation -> held-out test; SHA256 filename modulo 10 internal validation",
+  "cross_split_exact_file_and_decoded_pixel_duplicates": 0,
+  "limitation": "Source scene/bridge identifiers unavailable; exact-image checks do not establish scene independence.",
+  "counts_by_split": {
+    "train": {
+      "wet_surface": 1276,
+      "efflorescence": 3060,
+      "rust_stain": 11573,
+      "concrete_crack": 3147,
+      "exposed_rebar": 1590,
+      "concrete_spalling": 7743,
+      "surface_cavity": 7471
+    },
+    "val": {
+      "concrete_crack": 383,
+      "concrete_spalling": 741,
+      "wet_surface": 167,
+      "surface_cavity": 648,
+      "efflorescence": 390,
+      "rust_stain": 1263,
+      "exposed_rebar": 157
+    },
+    "test": {
+      "wet_surface": 218,
+      "concrete_spalling": 1400,
+      "rust_stain": 1883,
+      "concrete_crack": 520,
+      "efflorescence": 515,
+      "surface_cavity": 1152,
+      "exposed_rebar": 246
+    }
+  },
+  "rejected_regions": 0,
+  "exif_orientation_corrected_images": 11,
+  "identical_boxes_removed": 8,
+  "api_label_aliases": {
+    "concrete_crack": "surface_crack"
+  }
+}

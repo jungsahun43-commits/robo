@@ -11,7 +11,8 @@ $env:SAFELOG_AI_TIMEOUT_MS="25000"
 ```
 
 현재 학습 모델 서버는 API 키 없이 실행한다. `safelog-cpp/ai-training`에서 모델 ZIP을
-풀고 `./start_ai_server.ps1 -AllModels`를 실행한다. 설치·학습·모델 전달 절차는
+풀고 시설 위주라면 `./start_ai_server.ps1 -FacilitiesOnly`를 실행한다.
+PPE도 포함하려면 `-Facilities`, 모든 보조 모델을 포함하려면 `-AllModels`를 쓴다. 설치·학습·모델 전달 절차는
 [AI 서버 안내](../../ai-training/README_KO.md)에 있다.
 
 같은 PC의 Windows 앱은 `http://127.0.0.1:8080`, 휴대폰은 같은 Wi-Fi에 연결한
@@ -49,7 +50,10 @@ $env:SAFELOG_AI_TIMEOUT_MS="25000"
 
 실제 서버 응답에는 탐지 클래스·모델·좌표·신뢰도를 담은 `detections`와
 `requiresHumanReview`도 포함된다. C++ 어댑터는 전체 JSON을 `rawJson`에 보관한다.
-현재 학습 대상은 보호구·사람·신체 부품과 화재·연기다. 통로 장애물과 노출 전선은
+시설 모델은 균열·박리·녹 얼룩·철근 노출·젖은 표면·백화·표면 공동·금속 부식을 추가한다.
+[시설 연결 안내](../../ai-training/FACILITY_HANDOFF_KO.md)와
+[시설 시험 성능](../../ai-training/reports/FACILITY_TRAINING_RESULTS_KO.md)을 확인한다.
+통로 장애물과 노출 전선은
 전용 데이터로 추가 학습하기 전까지 탐지 대상으로 발표하지 않는다.
 
 ### `POST /v1/compare-action`

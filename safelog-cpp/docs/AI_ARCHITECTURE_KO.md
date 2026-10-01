@@ -34,7 +34,18 @@ compareBeforeAfter(beforeImagePath, afterImagePath, actionNote)
 summarize(inspectionContext)
 ```
 
-현재 `MockAiSafetyAnalyzer`가 있어 모델 서버 없이 전체 흐름을 개발할 수 있다. 실제 모델 연결 담당자는 같은 인터페이스를 구현하는 `HttpAiSafetyAnalyzer`를 만든다.
+현재 `MockAiSafetyAnalyzer`로 모델 서버 없이 전체 흐름을 개발할 수 있다.
+실제 연결은 같은 인터페이스를 구현한 `HttpAiSafetyAnalyzer`를 사용하며,
+앱 시작 시 `SAFELOG_AI_BASE_URL`이 설정되어 있으면 HTTP 어댑터를 주입한다.
+
+학습 모델 서버는 `ai-training`에 있다. `start_ai_server.ps1 -FacilitiesOnly`는
+표면 손상·금속 부식 모델과 화재·연기 모델을 실행한다. 시설 제안 8종은
+표면 균열·박리·녹 얼룩·철근 노출·젖은 표면·백화·표면 공동·금속 부식이다.
+위험 등급·개선 문구는 점검 우선순위 규칙이고, 보고서 요약은 현재 규칙 템플릿이다.
+사진 기반 구조 안전 진단이나 별도로 학습한 보고서 LLM으로 발표하지 않는다.
+
+모델별 실제 시험 성능과 고정 신뢰도 기준의 오탐·미탐은
+`ai-training/reports/FACILITY_TRAINING_RESULTS_KO.md`와 기존 `TRAINING_RESULTS_KO.md`를 확인한다.
 
 ## 시연 구성
 

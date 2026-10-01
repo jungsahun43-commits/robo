@@ -1,0 +1,445 @@
+{
+  "environment": {
+    "torch": "2.12.0+cu126",
+    "torchvision": "0.27.0+cu126",
+    "ultralytics": "8.4.166",
+    "opencv-python": "5.0.0.93",
+    "pyyaml": "6.0.3"
+  },
+  "experiments": [
+    {
+      "name": "facility-dacl",
+      "source": {
+        "title": "dacl10k v2 development phase",
+        "homepage": "https://github.com/phiyodr/dacl10k-toolkit",
+        "license": "CC BY-NC 4.0",
+        "citation": "Flotzinger, Rosch and Braml (2023), dacl10k: Benchmark for Semantic Bridge Damage Segmentation, arXiv:2309.00460",
+        "url": "https://dacl10k.s3.eu-central-1.amazonaws.com/dacl10k-challenge/dacl10k_v2_devphase.zip",
+        "sha256": "dcbcd5fb82699076a2c7f3a72492a9ef798870e0ca1f0c9399360f273ea95260",
+        "scope": "Bridge concrete surface defect regions; wet spots are not proof of a pipe leak."
+      },
+      "preparation": {
+        "source": "dacl10k",
+        "images": 7910,
+        "split_counts": {
+          "train": 6225,
+          "val": 710,
+          "test": 975
+        },
+        "names": [
+          "concrete_crack",
+          "concrete_spalling",
+          "rust_stain",
+          "exposed_rebar",
+          "wet_surface",
+          "efflorescence",
+          "surface_cavity"
+        ],
+        "max_side": 1280,
+        "label_type": "derived bounding regions from semantic masks/polygons; not official segmentation benchmark",
+        "class_mapping": {
+          "Crack": "concrete_crack",
+          "ACrack": "concrete_crack",
+          "Spalling": "concrete_spalling",
+          "Rust": "rust_stain",
+          "ExposedRebars": "exposed_rebar",
+          "Wetspot": "wet_surface",
+          "Efflorescence": "efflorescence",
+          "Cavity": "surface_cavity"
+        },
+        "minimum_mask_area_original_pixels": null,
+        "split_method": "official validation -> held-out test; SHA256 filename modulo 10 internal validation",
+        "cross_split_exact_file_and_decoded_pixel_duplicates": 0,
+        "limitation": "Source scene/bridge identifiers unavailable; exact-image checks do not establish scene independence.",
+        "counts_by_split": {
+          "train": {
+            "wet_surface": 1276,
+            "efflorescence": 3060,
+            "rust_stain": 11573,
+            "concrete_crack": 3147,
+            "exposed_rebar": 1590,
+            "concrete_spalling": 7743,
+            "surface_cavity": 7471
+          },
+          "val": {
+            "concrete_crack": 383,
+            "concrete_spalling": 741,
+            "wet_surface": 167,
+            "surface_cavity": 648,
+            "efflorescence": 390,
+            "rust_stain": 1263,
+            "exposed_rebar": 157
+          },
+          "test": {
+            "wet_surface": 218,
+            "concrete_spalling": 1400,
+            "rust_stain": 1883,
+            "concrete_crack": 520,
+            "efflorescence": 515,
+            "surface_cavity": 1152,
+            "exposed_rebar": 246
+          }
+        },
+        "rejected_regions": 0,
+        "exif_orientation_corrected_images": 11,
+        "identical_boxes_removed": 8,
+        "api_label_aliases": {
+          "concrete_crack": "surface_crack"
+        }
+      },
+      "training": {
+        "base_model": "yolo11s.pt",
+        "epochs_completed": 95,
+        "requested_epochs": 100,
+        "best_validation_epoch": 65,
+        "best_validation_map50_95": 0.11032,
+        "imgsz": 960,
+        "batch": 8,
+        "seed": 42
+      },
+      "test": {
+        "split": "test",
+        "imgsz": 960,
+        "precision": 0.3305476646227932,
+        "recall": 0.30165764090061875,
+        "map50": 0.24153821715207155,
+        "map50_95": 0.11534782581100847,
+        "per_class": {
+          "concrete_crack": {
+            "precision": 0.3712667310831632,
+            "recall": 0.34807692307692306,
+            "map50": 0.26170530963237715,
+            "map50_95": 0.13107949895993024
+          },
+          "concrete_spalling": {
+            "precision": 0.33434159844108047,
+            "recall": 0.24571428571428572,
+            "map50": 0.21932266508671577,
+            "map50_95": 0.11818562584865537
+          },
+          "rust_stain": {
+            "precision": 0.39761731787041393,
+            "recall": 0.4588620578016641,
+            "map50": 0.37868948753037057,
+            "map50_95": 0.17772471171846144
+          },
+          "exposed_rebar": {
+            "precision": 0.5712372692801061,
+            "recall": 0.4796747967479675,
+            "map50": 0.4570825106915617,
+            "map50_95": 0.2255096119068703
+          },
+          "wet_surface": {
+            "precision": 0.19535366260700407,
+            "recall": 0.21100917431192662,
+            "map50": 0.1116988183128951,
+            "map50_95": 0.04708853167087794
+          },
+          "efflorescence": {
+            "precision": 0.2548486107562307,
+            "recall": 0.22330097087378642,
+            "map50": 0.1677952862036634,
+            "map50_95": 0.07276727407020343
+          },
+          "surface_cavity": {
+            "precision": 0.18916846232155393,
+            "recall": 0.1449652777777778,
+            "map50": 0.09447344260691734,
+            "map50_95": 0.035079526502060907
+          }
+        }
+      },
+      "fixed_threshold_test": {
+        "name": "facility-dacl",
+        "split": "test",
+        "confidence_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "imgsz": 960,
+        "max_det": 300,
+        "images": 975,
+        "per_class": {
+          "concrete_crack": {
+            "tp": 128,
+            "fp": 133,
+            "fn": 392,
+            "ground_truth_regions": 520,
+            "precision": 0.4904214559386973,
+            "recall": 0.24615384615384617,
+            "false_discovery_fraction": 0.5095785440613028,
+            "miss_fraction": 0.7538461538461538
+          },
+          "concrete_spalling": {
+            "tp": 285,
+            "fp": 282,
+            "fn": 1115,
+            "ground_truth_regions": 1400,
+            "precision": 0.5026455026455027,
+            "recall": 0.20357142857142857,
+            "false_discovery_fraction": 0.4973544973544973,
+            "miss_fraction": 0.7964285714285715
+          },
+          "rust_stain": {
+            "tp": 679,
+            "fp": 558,
+            "fn": 1204,
+            "ground_truth_regions": 1883,
+            "precision": 0.5489086499595797,
+            "recall": 0.36059479553903345,
+            "false_discovery_fraction": 0.45109135004042034,
+            "miss_fraction": 0.6394052044609666
+          },
+          "exposed_rebar": {
+            "tp": 58,
+            "fp": 34,
+            "fn": 188,
+            "ground_truth_regions": 246,
+            "precision": 0.6304347826086957,
+            "recall": 0.23577235772357724,
+            "false_discovery_fraction": 0.3695652173913043,
+            "miss_fraction": 0.7642276422764227
+          },
+          "wet_surface": {
+            "tp": 28,
+            "fp": 78,
+            "fn": 190,
+            "ground_truth_regions": 218,
+            "precision": 0.2641509433962264,
+            "recall": 0.12844036697247707,
+            "false_discovery_fraction": 0.7358490566037736,
+            "miss_fraction": 0.8715596330275229
+          },
+          "efflorescence": {
+            "tp": 86,
+            "fp": 146,
+            "fn": 429,
+            "ground_truth_regions": 515,
+            "precision": 0.3706896551724138,
+            "recall": 0.1669902912621359,
+            "false_discovery_fraction": 0.6293103448275862,
+            "miss_fraction": 0.8330097087378641
+          },
+          "surface_cavity": {
+            "tp": 67,
+            "fp": 155,
+            "fn": 1085,
+            "ground_truth_regions": 1152,
+            "precision": 0.30180180180180183,
+            "recall": 0.058159722222222224,
+            "false_discovery_fraction": 0.6981981981981982,
+            "miss_fraction": 0.9418402777777778
+          }
+        },
+        "micro": {
+          "tp": 1331,
+          "fp": 1386,
+          "fn": 4603,
+          "ground_truth_regions": 5934,
+          "precision": 0.4898785425101215,
+          "recall": 0.22430064037748568,
+          "false_discovery_fraction": 0.5101214574898785,
+          "miss_fraction": 0.7756993596225144
+        },
+        "limitations": "Derived region boxes; 1-precision is false discovery, not FPR. Test scenes may overlap source training scenes."
+      },
+      "image_class_presence_test": {
+        "concrete_crack": {
+          "tp": 145,
+          "fp": 26,
+          "fn": 141,
+          "tn": 663,
+          "positive_images": 286,
+          "negative_images": 689,
+          "false_positive_rate": 0.03773584905660377,
+          "miss_fraction": 0.493006993006993,
+          "definition": "class presence only; a wrongly localized box can count as a positive photo"
+        },
+        "concrete_spalling": {
+          "tp": 255,
+          "fp": 51,
+          "fn": 222,
+          "tn": 447,
+          "positive_images": 477,
+          "negative_images": 498,
+          "false_positive_rate": 0.10240963855421686,
+          "miss_fraction": 0.46540880503144655,
+          "definition": "class presence only; a wrongly localized box can count as a positive photo"
+        },
+        "rust_stain": {
+          "tp": 352,
+          "fp": 51,
+          "fn": 113,
+          "tn": 459,
+          "positive_images": 465,
+          "negative_images": 510,
+          "false_positive_rate": 0.1,
+          "miss_fraction": 0.24301075268817204,
+          "definition": "class presence only; a wrongly localized box can count as a positive photo"
+        },
+        "exposed_rebar": {
+          "tp": 46,
+          "fp": 10,
+          "fn": 58,
+          "tn": 861,
+          "positive_images": 104,
+          "negative_images": 871,
+          "false_positive_rate": 0.011481056257175661,
+          "miss_fraction": 0.5576923076923077,
+          "definition": "class presence only; a wrongly localized box can count as a positive photo"
+        },
+        "wet_surface": {
+          "tp": 47,
+          "fp": 33,
+          "fn": 97,
+          "tn": 798,
+          "positive_images": 144,
+          "negative_images": 831,
+          "false_positive_rate": 0.039711191335740074,
+          "miss_fraction": 0.6736111111111112,
+          "definition": "class presence only; a wrongly localized box can count as a positive photo"
+        },
+        "efflorescence": {
+          "tp": 101,
+          "fp": 22,
+          "fn": 105,
+          "tn": 747,
+          "positive_images": 206,
+          "negative_images": 769,
+          "false_positive_rate": 0.02860858257477243,
+          "miss_fraction": 0.5097087378640777,
+          "definition": "class presence only; a wrongly localized box can count as a positive photo"
+        },
+        "surface_cavity": {
+          "tp": 61,
+          "fp": 32,
+          "fn": 106,
+          "tn": 776,
+          "positive_images": 167,
+          "negative_images": 808,
+          "false_positive_rate": 0.039603960396039604,
+          "miss_fraction": 0.6347305389221557,
+          "definition": "class presence only; a wrongly localized box can count as a positive photo"
+        }
+      }
+    },
+    {
+      "name": "facility-corrosion",
+      "source": {
+        "title": "Corrosion in Industrial Complexes in Ostrava, v2",
+        "homepage": "https://zenodo.org/records/11235637",
+        "license": "CC BY 4.0",
+        "citation": "Fric, M. (2024). Corrosion in Industrial Complexes in Ostrava. DOI:10.5281/zenodo.11235637",
+        "url": "https://zenodo.org/records/11235637/files/corrosion-in-industrial-complexes-in-ostrava.zip?download=1",
+        "md5": "e30f1f62eb85018c2faee44909e69a06",
+        "sha256": "874a60cd8e9e92476c2314bd6acfcac7dc0f64eb797ea220a091a96681de50c5",
+        "sha256_origin": "Locally computed after verifying the author's published MD5",
+        "scope": "105 industrial metal corrosion photos with masks; not corrosion-depth or structural-strength measurement."
+      },
+      "preparation": {
+        "source": "ostrava-corrosion",
+        "images": 105,
+        "split_counts": {
+          "train": 75,
+          "val": 15,
+          "test": 15
+        },
+        "names": [
+          "metal_corrosion"
+        ],
+        "max_side": 1280,
+        "label_type": "derived bounding regions from semantic masks/polygons; not official segmentation benchmark",
+        "class_mapping": {
+          "mask>0 connected component": "metal_corrosion"
+        },
+        "minimum_mask_area_original_pixels": 64,
+        "split_method": "official train/validation/test preserved",
+        "cross_split_exact_file_and_decoded_pixel_duplicates": 0,
+        "limitation": "Source scene/bridge identifiers unavailable; exact-image checks do not establish scene independence.",
+        "counts_by_split": {
+          "train": {
+            "metal_corrosion": 482
+          },
+          "val": {
+            "metal_corrosion": 87
+          },
+          "test": {
+            "metal_corrosion": 138
+          }
+        },
+        "rejected_regions": 138,
+        "identical_boxes_removed": 0,
+        "api_label_aliases": {}
+      },
+      "training": {
+        "base_model": "yolo11s.pt",
+        "epochs_completed": 120,
+        "requested_epochs": 120,
+        "best_validation_epoch": 91,
+        "best_validation_map50_95": 0.14035,
+        "imgsz": 960,
+        "batch": 8,
+        "seed": 42
+      },
+      "test": {
+        "split": "test",
+        "imgsz": 960,
+        "precision": 0.6190033488985124,
+        "recall": 0.36231884057971014,
+        "map50": 0.37892841128318144,
+        "map50_95": 0.19792817300677273,
+        "per_class": {
+          "metal_corrosion": {
+            "precision": 0.6190033488985124,
+            "recall": 0.36231884057971014,
+            "map50": 0.37892841128318144,
+            "map50_95": 0.19792817300677273
+          }
+        }
+      },
+      "fixed_threshold_test": {
+        "name": "facility-corrosion",
+        "split": "test",
+        "confidence_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "imgsz": 960,
+        "max_det": 300,
+        "images": 15,
+        "per_class": {
+          "metal_corrosion": {
+            "tp": 53,
+            "fp": 47,
+            "fn": 85,
+            "ground_truth_regions": 138,
+            "precision": 0.53,
+            "recall": 0.38405797101449274,
+            "false_discovery_fraction": 0.47,
+            "miss_fraction": 0.6159420289855073
+          }
+        },
+        "micro": {
+          "tp": 53,
+          "fp": 47,
+          "fn": 85,
+          "ground_truth_regions": 138,
+          "precision": 0.53,
+          "recall": 0.38405797101449274,
+          "false_discovery_fraction": 0.47,
+          "miss_fraction": 0.6159420289855073
+        },
+        "limitations": "Derived region boxes; 1-precision is false discovery, not FPR. Test scenes may overlap source training scenes."
+      },
+      "image_class_presence_test": {
+        "metal_corrosion": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0,
+          "positive_images": 15,
+          "negative_images": 0,
+          "false_positive_rate": null,
+          "miss_fraction": 0.06666666666666667,
+          "definition": "class presence only; a wrongly localized box can count as a positive photo"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "dacl10k": {
+    "title": "dacl10k v2 development phase",
+    "homepage": "https://github.com/phiyodr/dacl10k-toolkit",
+    "license": "CC BY-NC 4.0",
+    "citation": "Flotzinger, Rosch and Braml (2023), dacl10k: Benchmark for Semantic Bridge Damage Segmentation, arXiv:2309.00460",
+    "url": "https://dacl10k.s3.eu-central-1.amazonaws.com/dacl10k-challenge/dacl10k_v2_devphase.zip",
+    "sha256": "dcbcd5fb82699076a2c7f3a72492a9ef798870e0ca1f0c9399360f273ea95260",
+    "scope": "Bridge concrete surface defect regions; wet spots are not proof of a pipe leak."
+  },
+  "ostrava-corrosion": {
+    "title": "Corrosion in Industrial Complexes in Ostrava, v2",
+    "homepage": "https://zenodo.org/records/11235637",
+    "license": "CC BY 4.0",
+    "citation": "Fric, M. (2024). Corrosion in Industrial Complexes in Ostrava. DOI:10.5281/zenodo.11235637",
+    "url": "https://zenodo.org/records/11235637/files/corrosion-in-industrial-complexes-in-ostrava.zip?download=1",
+    "md5": "e30f1f62eb85018c2faee44909e69a06",
+    "sha256": "874a60cd8e9e92476c2314bd6acfcac7dc0f64eb797ea220a091a96681de50c5",
+    "sha256_origin": "Locally computed after verifying the author's published MD5",
+    "scope": "105 industrial metal corrosion photos with masks; not corrosion-depth or structural-strength measurement."
+  }
+}

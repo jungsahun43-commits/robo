@@ -21,7 +21,7 @@ from ultralytics import YOLO
 import numpy as np
 from PIL import Image, ImageOps, UnidentifiedImageError
 
-from .policy import Detection, analyze_detections, likely_resolved
+from .policy import Detection, analyze_detections, canonical_label, likely_resolved
 
 MODEL_ENVIRONMENTS = (
     ("SAFELOG_MODEL_PATH", "runs/ppe-baseline/weights/best.pt"),
@@ -30,6 +30,7 @@ MODEL_ENVIRONMENTS = (
 )
 _configured_paths = [value for key, default in MODEL_ENVIRONMENTS if (value := os.environ.get(key, default))]
 _configured_paths += [value for value in os.environ.get("SAFELOG_AUX_MODEL_PATHS", "").split(os.pathsep) if value]
+_configured_paths += [value for value in os.environ.get("SAFELOG_FACILITY_MODEL_PATHS", "").split(os.pathsep) if value]
 MODEL_PATHS = list(dict.fromkeys((Path(value) if Path(value).is_absolute() else ROOT / value).resolve() for value in _configured_paths))
 
 
@@ -43,6 +44,11 @@ MODEL_NAME = os.environ.get(
 )
 CONFIDENCE = float(os.environ.get("SAFELOG_MODEL_CONFIDENCE", "0.25"))
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
+
+
+def inference_size(path: Path) -> int:
+    # Facility training/evaluation uses 960; keep the original PPE/fire inference at 640.
+    return 960 if model_id(path) in {"facility-dacl", "facility-corrosion"} else 640
 
 app = FastAPI(title="SafeLog trained AI", version="1.0.0")
 _models: list[YOLO] | None = None
@@ -72,7 +78,7 @@ def models() -> list[YOLO]:
     with _model_lock:
         if _models is None:
             missing = [path for path in MODEL_PATHS if not path.exists()]
-            if missing:
+            if missing or not MODEL_PATHS:
                 raise HTTPException(503, "학습 모델이 준비되지 않았습니다.")
             _models = [YOLO(str(path)) for path in MODEL_PATHS]
         return _models
@@ -105,10 +111,10 @@ def detect(value: str) -> list[Detection]:
     detections: list[Detection] = []
     with _model_lock:
         for model_path, detector in zip(MODEL_PATHS, models()):
-            result = detector.predict(pixels, conf=CONFIDENCE, verbose=False)[0]
+            result = detector.predict(pixels, conf=CONFIDENCE, imgsz=inference_size(model_path), max_det=300, verbose=False)[0]
             names = result.names
             detections.extend(
-                Detection(str(names[int(class_id)]), float(confidence), model_id(model_path), tuple(map(float, box)))
+                Detection(canonical_label(str(names[int(class_id)])), float(confidence), model_id(model_path), tuple(map(float, box)))
                 for class_id, confidence, box in zip(result.boxes.cls.tolist(), result.boxes.conf.tolist(), result.boxes.xyxy.tolist())
             )
     return detections
@@ -117,10 +123,12 @@ def detect(value: str) -> list[Detection]:
 @app.get("/health")
 def health() -> dict[str, object]:
     return {
-        "status": "ok" if all(path.exists() for path in MODEL_PATHS) else "unavailable",
+        "status": "ok" if MODEL_PATHS and all(path.exists() for path in MODEL_PATHS) else "unavailable",
         "model": MODEL_NAME,
         "models": [str(path) for path in MODEL_PATHS],
-        "modelExists": all(path.exists() for path in MODEL_PATHS),
+        "modelExists": bool(MODEL_PATHS) and all(path.exists() for path in MODEL_PATHS),
+        "confidenceThreshold": CONFIDENCE,
+        "inferenceSizes": {model_id(path): inference_size(path) for path in MODEL_PATHS},
     }
 
 
@@ -158,6 +166,7 @@ def compare_action(request: ComparisonRequest) -> dict[str, object]:
         "confidence": confidence,
         "modelName": MODEL_NAME,
         "promptVersion": request.promptVersion,
+        "requiresHumanReview": True,
     }
 
 

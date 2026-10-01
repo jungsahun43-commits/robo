@@ -14,6 +14,7 @@
       }
     ],
     "evaluation_split": "test",
+    "inference_imgsz": 640,
     "metrics": {
       "precision": 0.6806310929476281,
       "recall": 0.5355915445896883,
@@ -36,6 +37,7 @@
       }
     ],
     "evaluation_split": "test",
+    "inference_imgsz": 640,
     "metrics": {
       "precision": 0.8766558621532627,
       "recall": 0.8035541077213082,
@@ -58,6 +60,7 @@
       }
     ],
     "evaluation_split": "test",
+    "inference_imgsz": 640,
     "metrics": {
       "precision": 0.8936757402758354,
       "recall": 0.8719237169204945,
@@ -80,6 +83,7 @@
       }
     ],
     "evaluation_split": "val",
+    "inference_imgsz": 640,
     "metrics": {
       "precision": 0.735426215953407,
       "recall": 0.5826670112457805,
@@ -102,11 +106,58 @@
       }
     ],
     "evaluation_split": "test",
+    "inference_imgsz": 640,
     "metrics": {
       "precision": 0.6268510101592702,
       "recall": 0.5689072052910045,
       "map50": 0.5687903420756865,
       "map50_95": 0.2797166719192176
+    }
+  },
+  {
+    "name": "facility-dacl",
+    "files": [
+      {
+        "path": "models/facility-dacl.pt",
+        "bytes": 19222426,
+        "sha256": "b53ad5521f528f47c7beaf33251d3f6aa171bc2ae57cd4133dac5422d364f9d5"
+      },
+      {
+        "path": "models/facility-dacl.onnx",
+        "bytes": 38104186,
+        "sha256": "e7a946d7ecbe56df243dfae6efb776be812749770b6ec4753b06b6dce95926f6"
+      }
+    ],
+    "evaluation_split": "test",
+    "inference_imgsz": 960,
+    "metrics": {
+      "precision": 0.3305476646227932,
+      "recall": 0.30165764090061875,
+      "map50": 0.24153821715207155,
+      "map50_95": 0.11534782581100847
+    }
+  },
+  {
+    "name": "facility-corrosion",
+    "files": [
+      {
+        "path": "models/facility-corrosion.pt",
+        "bytes": 19254938,
+        "sha256": "34deb6ced77613fd024127e2757ede949570d9fbe07761fd64013a86463ec2c3"
+      },
+      {
+        "path": "models/facility-corrosion.onnx",
+        "bytes": 38094734,
+        "sha256": "c173b4feb4f799cbd05b0c6443c0df5cb14d10a38dfa487da12b71b4682806f5"
+      }
+    ],
+    "evaluation_split": "test",
+    "inference_imgsz": 960,
+    "metrics": {
+      "precision": 0.6190033488985124,
+      "recall": 0.36231884057971014,
+      "map50": 0.37892841128318144,
+      "map50_95": 0.19792817300677273
     }
   }
 ]

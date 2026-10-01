@@ -20,7 +20,21 @@ RISK = {
     "smoke": (5, "연기", "발생원을 확인하지 말고 우선 대피한 뒤 관리자에게 신고하세요."),
     "blocked_aisle": (4, "통로 장애물", "통로의 자재와 장애물을 지정 보관구역으로 이동하세요."),
     "exposed_cable": (4, "노출 전선", "전원을 차단하고 자격을 갖춘 담당자가 절연·정리하도록 하세요."),
+    "surface_crack": (3, "표면 균열 의심", "표면의 균열 위치와 폭·변화를 현장에서 확인하고 시설 담당자에게 점검을 요청하세요."),
+    "concrete_spalling": (4, "콘크리트 박리 의심", "박리 부위 아래의 접근을 제한하고 탈락 가능성을 시설 담당자가 확인하도록 하세요."),
+    "rust_stain": (3, "녹물·녹 얼룩 의심", "녹 얼룩의 발생원과 주변 철근 노출 여부를 시설 담당자가 확인하도록 하세요."),
+    "exposed_rebar": (4, "철근 노출 의심", "노출 부위 접근을 제한하고 철근 상태와 보수 필요성을 시설 담당자가 확인하도록 하세요."),
+    "wet_surface": (2, "젖은 표면 의심", "표면의 물기와 미끄럼 위험을 확인하고 유입 원인을 점검하세요. 사진만으로 배관 누수를 확정하지 마세요."),
+    "efflorescence": (2, "백화 의심", "표면 백화와 수분 유입 경로를 현장에서 확인하고 경과를 기록하세요."),
+    "surface_cavity": (3, "표면 공동·파임 의심", "표면 결손의 크기와 주변 손상을 시설 담당자가 확인하도록 하세요."),
+    "metal_corrosion": (3, "금속 부식 의심", "부식 위치를 기록하고 시설 담당자가 두께·단면 손실과 보수 필요성을 확인하도록 하세요."),
 }
+# Historical training key combines Crack and Alligator Crack; it is not a material classifier.
+RISK["concrete_crack"] = RISK["surface_crack"]
+
+
+def canonical_label(label: str) -> str:
+    return "surface_crack" if label == "concrete_crack" else label
 
 
 def analyze_detections(detections: list[Detection]) -> dict[str, object]:
@@ -44,7 +58,7 @@ def analyze_detections(detections: list[Detection]) -> dict[str, object]:
         "category": category,
         "risk_level": risk_level,
         "hazards": unique_categories,
-        "description": "사진에서 " + ", ".join(unique_categories) + " 위험이 탐지되었습니다.",
+        "description": "사진에서 " + ", ".join(unique_categories) + " 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다.",
         "action": " ".join(dict.fromkeys(RISK[item.label][2] for item in hazards)),
         "confidence": primary.confidence,
     }

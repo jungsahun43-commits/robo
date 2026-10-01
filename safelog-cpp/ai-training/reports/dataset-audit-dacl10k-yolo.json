@@ -1,0 +1,56 @@
+{
+  "yaml": "data\\dacl10k-yolo\\data.yaml",
+  "classes": {
+    "0": "concrete_crack",
+    "1": "concrete_spalling",
+    "2": "rust_stain",
+    "3": "exposed_rebar",
+    "4": "wet_surface",
+    "5": "efflorescence",
+    "6": "surface_cavity"
+  },
+  "splits": {
+    "train": {
+      "images": 6225,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 3147,
+        "1": 7743,
+        "2": 11573,
+        "3": 1590,
+        "4": 1276,
+        "5": 3060,
+        "6": 7471
+      }
+    },
+    "val": {
+      "images": 710,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 383,
+        "1": 741,
+        "2": 1263,
+        "3": 157,
+        "4": 167,
+        "5": 390,
+        "6": 648
+      }
+    },
+    "test": {
+      "images": 975,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 520,
+        "1": 1400,
+        "2": 1883,
+        "3": 246,
+        "4": 218,
+        "5": 515,
+        "6": 1152
+      }
+    }
+  }
+}

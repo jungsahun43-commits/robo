@@ -17,6 +17,7 @@ def main() -> int:
     parser.add_argument("weights", type=Path)
     parser.add_argument("data", type=Path)
     parser.add_argument("--device", default=None)
+    parser.add_argument("--imgsz", type=int, default=640)
     parser.add_argument("--split", default="test", choices=("train", "val", "test"))
     parser.add_argument("--output", type=Path, default=None)
     args = parser.parse_args()
@@ -29,7 +30,7 @@ def main() -> int:
     options = {
         "data": str(args.data.resolve()), "split": args.split, "plots": True,
         "project": str(root / "runs" / "evaluations"), "name": f"{run_name}-{args.split}",
-        "exist_ok": True, "workers": 0,
+        "exist_ok": True, "workers": 0, "imgsz": args.imgsz,
     }
     if args.device is not None:
         options["device"] = args.device
@@ -38,6 +39,7 @@ def main() -> int:
         "weights": str(args.weights.resolve()),
         "data": str(args.data.resolve()),
         "split": args.split,
+        "imgsz": args.imgsz,
         "precision": float(metrics.box.mp),
         "recall": float(metrics.box.mr),
         "map50": float(metrics.box.map50),

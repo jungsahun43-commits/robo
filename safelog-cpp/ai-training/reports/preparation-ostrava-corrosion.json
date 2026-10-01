@@ -1,0 +1,35 @@
+{
+  "source": "ostrava-corrosion",
+  "images": 105,
+  "split_counts": {
+    "train": 75,
+    "val": 15,
+    "test": 15
+  },
+  "names": [
+    "metal_corrosion"
+  ],
+  "max_side": 1280,
+  "label_type": "derived bounding regions from semantic masks/polygons; not official segmentation benchmark",
+  "class_mapping": {
+    "mask>0 connected component": "metal_corrosion"
+  },
+  "minimum_mask_area_original_pixels": 64,
+  "split_method": "official train/validation/test preserved",
+  "cross_split_exact_file_and_decoded_pixel_duplicates": 0,
+  "limitation": "Source scene/bridge identifiers unavailable; exact-image checks do not establish scene independence.",
+  "counts_by_split": {
+    "train": {
+      "metal_corrosion": 482
+    },
+    "val": {
+      "metal_corrosion": 87
+    },
+    "test": {
+      "metal_corrosion": 138
+    }
+  },
+  "rejected_regions": 138,
+  "identical_boxes_removed": 0,
+  "api_label_aliases": {}
+}

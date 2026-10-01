@@ -1,0 +1,32 @@
+{
+  "yaml": "data\\ostrava-corrosion-yolo\\data.yaml",
+  "classes": {
+    "0": "metal_corrosion"
+  },
+  "splits": {
+    "train": {
+      "images": 75,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 482
+      }
+    },
+    "val": {
+      "images": 15,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 87
+      }
+    },
+    "test": {
+      "images": 15,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 138
+      }
+    }
+  }
+}
