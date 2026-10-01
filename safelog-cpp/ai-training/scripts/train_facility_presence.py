@@ -73,8 +73,14 @@ def main():
     parser.add_argument("--imgsz", type=int, default=384)
     parser.add_argument("--batch", type=int, default=24)
     parser.add_argument("--device", default="cuda")
+    parser.add_argument("--name", default="facility-presence")
+    parser.add_argument("--initial", type=Path)
+    parser.add_argument("--hard-negatives", action="store_true", help="오답 점수가 높은 음성 항목의 손실을 강화")
+    parser.add_argument("--patience", type=int, default=5)
     args = parser.parse_args()
-    output = ROOT / "runs/facility-presence"
+    if Path(args.name).name != args.name:
+        raise SystemExit("Experiment name must be a single directory name")
+    output = ROOT / "runs" / args.name
     if (output / "best.pt").exists():
         raise SystemExit("Existing photo classifier experiment; preserve it before starting another run")
     output.mkdir(parents=True, exist_ok=True)
@@ -87,12 +93,17 @@ def main():
     train_loader = DataLoader(train, batch_size=args.batch, shuffle=True, num_workers=4,
                               pin_memory=device.type == "cuda", persistent_workers=True, generator=generator)
     val_loader = DataLoader(val, batch_size=args.batch, num_workers=4, persistent_workers=True)
-    model = build_model(len(train.classes), pretrained=True).to(device)
+    model = build_model(len(train.classes), pretrained=args.initial is None).to(device)
+    if args.initial:
+        initial = torch.load(args.initial, map_location="cpu", weights_only=True)
+        if initial["classes"] != train.classes:
+            raise ValueError("Initial classifier class order mismatch")
+        model.load_state_dict(initial["state_dict"])
     positives = torch.stack(train.targets).sum(0)
     weights = ((len(train) - positives) / positives.clamp_min(1)).clamp(1, 6).to(device)
     loss_fn = torch.nn.BCEWithLogitsLoss(pos_weight=weights)
-    optimizer = torch.optim.AdamW([{"params": model.features.parameters(), "lr": .00005},
-                                   {"params": model.classifier.parameters(), "lr": .0005}], weight_decay=.0001)
+    optimizer = torch.optim.AdamW([{"params": model.features.parameters(), "lr": .00002 if args.initial else .00005},
+                                   {"params": model.classifier.parameters(), "lr": .0001 if args.initial else .0005}], weight_decay=.0001)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, args.epochs, eta_min=.000005)
     amp = device.type == "cuda"
     scaler = torch.amp.GradScaler("cuda", enabled=amp)
@@ -100,15 +111,23 @@ def main():
     started = time.perf_counter()
     for epoch in range(1, args.epochs + 1):
         for param in model.features.parameters():
-            param.requires_grad = epoch > 1
+            param.requires_grad = epoch > 1 or args.initial is not None
         model.train()
-        if epoch == 1:
+        if epoch == 1 and args.initial is None:
             model.features.eval()  # Frozen features also keep pretrained BatchNorm statistics.
         total = 0.
         for image, target, _ in train_loader:
             optimizer.zero_grad(set_to_none=True)
             with torch.autocast(device_type=device.type, enabled=amp):
-                loss = loss_fn(model(image.to(device)), target.to(device))
+                logits, labels = model(image.to(device)), target.to(device)
+                if args.hard_negatives:
+                    # Use train labels only. No validation/test photos enter the optimizer.
+                    # Hard negatives receive up to 3x weight; positive targets remain 1x.
+                    bce = torch.nn.functional.binary_cross_entropy_with_logits(logits, labels, reduction="none")
+                    emphasis = 1 + 2 * logits.detach().sigmoid() * (1 - labels)
+                    loss = (bce * emphasis).mean()
+                else:
+                    loss = loss_fn(logits, labels)
             scaler.scale(loss).backward()
             scaler.step(optimizer); scaler.update()
             total += loss.item() * len(image)
@@ -128,11 +147,12 @@ def main():
             bad_epochs += 1
         (output / "history.json").write_text(json.dumps(history, indent=2))
         scheduler.step()
-        if bad_epochs >= 5:
+        if bad_epochs >= args.patience:
             break
     (output / "TRAINING.json").write_text(json.dumps({"status": "complete", "train_images": len(train), "val_images": len(val),
         "seed": 42, "requested_epochs": args.epochs, "actual_epochs": len(history), "imgsz": args.imgsz,
         "best_val_macro_average_precision": best, "label_type": "multi-label photo presence, not defect localization",
+        "initial_weights": str(args.initial) if args.initial else None, "hard_negatives": args.hard_negatives,
         "pretrained_weights": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
         "pretrained_documentation": "https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.efficientnet_b0.html",
         "training_positive_photos": dict(zip(train.classes, positives.int().tolist()))}, indent=2))

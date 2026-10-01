@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "train_images": 6225,
+  "val_images": 710,
+  "seed": 42,
+  "requested_epochs": 18,
+  "actual_epochs": 10,
+  "imgsz": 512,
+  "best_val_macro_average_precision": 0.7181241885289161,
+  "label_type": "multi-label photo presence, not defect localization",
+  "initial_weights": "runs\\facility-presence\\best.pt",
+  "hard_negatives": true,
+  "pretrained_weights": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+  "pretrained_documentation": "https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.efficientnet_b0.html",
+  "training_positive_photos": {
+    "concrete_crack": 1748,
+    "concrete_spalling": 2938,
+    "rust_stain": 3084,
+    "exposed_rebar": 693,
+    "wet_surface": 869,
+    "efflorescence": 1364,
+    "surface_cavity": 1082
+  }
+}

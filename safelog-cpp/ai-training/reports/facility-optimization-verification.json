@@ -1,14 +1,18 @@
 {
   "status": "passed",
-  "bundle_sha256": "47663d8cf776666547119621391eaa372f4d8ad2a8f1d517d0298016aec9148b",
-  "bundle_bytes": 373258547,
+  "bundle_sha256": "cdc10c48b870a0aa987eccf4208171e34e0017ed9bcb93f0f7304d348422523a",
+  "bundle_bytes": 373263229,
   "models": 10,
   "model_files_verified": 20,
   "new_onnx_structural_checks": 3,
-  "classifier_cpu_onnx_max_probability_difference": 2.041459083557129e-06,
-  "classifier_dynamic_batch_shape": [
-    2,
-    7
-  ],
+  "classifier_cpu_onnx_parity": {
+    "facility-presence": {
+      "max_probability_difference": 2.041459083557129e-06,
+      "dynamic_batch_shape": [
+        2,
+        7
+      ]
+    }
+  },
   "test_profile_checksums_match": true
 }

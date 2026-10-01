@@ -27,9 +27,9 @@ def photo_rates(target: np.ndarray, prediction: np.ndarray) -> dict:
             "f2": 5 * precision * recall / (4 * precision + recall) if precision or recall else 0.}
 
 
-def presence_scores(split: str, device: str) -> dict:
-    weights = ROOT / "runs/facility-presence/best.pt"
-    target_path = ROOT / f"runs/presence-scores-{split}.json"
+def presence_scores(split: str, device: str, run: str = "facility-presence") -> dict:
+    weights = ROOT / "runs" / run / "best.pt"
+    target_path = ROOT / (f"runs/presence-scores-{split}.json" if run == "facility-presence" else f"runs/presence-scores-{run}-{split}.json")
     signature = sha(weights)
     if target_path.exists():
         old = json.loads(target_path.read_text())
@@ -112,16 +112,16 @@ def test(device: str):
     print(json.dumps(report, indent=2), flush=True)
 
 
-def export():
-    classifier = PresenceClassifier(ROOT / "runs/facility-presence/best.pt", "cpu")
-    target = ROOT / "runs/facility-presence/best.onnx"
+def export(run: str = "facility-presence"):
+    classifier = PresenceClassifier(ROOT / "runs" / run / "best.pt", "cpu")
+    target = ROOT / "runs" / run / "best.onnx"
     torch.onnx.export(classifier.model, torch.zeros(1, 3, classifier.imgsz, classifier.imgsz), str(target),
                       input_names=["images"], output_names=["logits"], opset_version=17, dynamo=False,
                       dynamic_axes={"images": {0: "batch"}, "logits": {0: "batch"}})
     import onnx
     onnx.checker.check_model(onnx.load(target))
     # ONNX logits require sigmoid and the same full-photo resize/normalization as PyTorch.
-    save(ROOT / "runs/facility-presence/EXPORT.json", {"input": "RGB NCHW float32, full-photo resize to 384, /255, ImageNet mean/std",
+    save(ROOT / "runs" / run / "EXPORT.json", {"input": f"RGB NCHW float32, full-photo resize to {classifier.imgsz}, /255, ImageNet mean/std",
          "output": "7 logits; apply sigmoid and validation-selected thresholds; no boxes",
          "classes": classifier.classes, "onnx_sha256": sha(target)})
 

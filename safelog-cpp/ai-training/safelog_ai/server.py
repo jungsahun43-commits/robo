@@ -22,12 +22,17 @@ import numpy as np
 from PIL import Image, ImageOps, UnidentifiedImageError
 
 from .policy import Detection, analyze_detections, canonical_label, likely_resolved
-from .facility_profile import accepted, load_profile, prediction_floor, verify_weights
+from .facility_profile import accepted, load_profile, prediction_floor, verify_weights, photo_entries, photo_model_id
 
 FACILITY_PROFILE = load_profile(Path(os.environ.get("SAFELOG_FACILITY_PROFILE_PATH", str(ROOT / "reports/facility-inference-profile.json"))))
 _presence_value = os.environ.get("SAFELOG_PRESENCE_MODEL_PATH", "")
 PRESENCE_PATH = (Path(_presence_value) if Path(_presence_value).is_absolute() else ROOT / _presence_value) if _presence_value else None
-_presence_model = None
+PRESENCE_PATHS = [Path(v) if Path(v).is_absolute() else ROOT / v for v in os.environ.get("SAFELOG_PRESENCE_MODEL_PATHS", "").split(os.pathsep) if v]
+_presence_models = {}
+
+
+def active_presence_paths() -> list[Path]:
+    return list(dict.fromkeys(([PRESENCE_PATH] if PRESENCE_PATH is not None else []) + PRESENCE_PATHS))
 
 MODEL_ENVIRONMENTS = (
     ("SAFELOG_MODEL_PATH", "runs/ppe-baseline/weights/best.pt"),
@@ -46,7 +51,7 @@ def model_id(path: Path) -> str:
 
 MODEL_NAME = os.environ.get(
     "SAFELOG_MODEL_NAME",
-    "+".join(model_id(path) for path in MODEL_PATHS) + ("+facility-presence" if PRESENCE_PATH is not None else ""),
+    "+".join([model_id(path) for path in MODEL_PATHS] + [photo_model_id(path) for path in active_presence_paths()]),
 )
 CONFIDENCE = float(os.environ.get("SAFELOG_MODEL_CONFIDENCE", "0.25"))
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
@@ -132,22 +137,25 @@ def detect(value: str) -> list[Detection]:
                 for class_id, confidence, box in zip(result.boxes.cls.tolist(), result.boxes.conf.tolist(), result.boxes.xyxy.tolist())
                 if accepted(str(names[int(class_id)]), float(confidence), entry, CONFIDENCE)
             )
-        if PRESENCE_PATH is not None:
-            global _presence_model
-            entry = FACILITY_PROFILE.get("photo_classifier")
-            if not entry or not PRESENCE_PATH.is_file():
+        for presence_path in active_presence_paths():
+            entry = next((entry for entry in photo_entries(FACILITY_PROFILE) if entry["model"] == photo_model_id(presence_path)), None)
+            if not entry or not presence_path.is_file():
                 raise HTTPException(503, "사진 분류 모델과 검증 설정이 준비되지 않았습니다.")
-            if _presence_model is None:
+            if presence_path not in _presence_models:
                 try:
-                    verify_weights(PRESENCE_PATH, entry)
+                    verify_weights(presence_path, entry)
                 except ValueError as error:
                     raise HTTPException(503, "사진 분류 모델과 검증 설정이 일치하지 않습니다.") from error
                 from .presence_classifier import PresenceClassifier
-                _presence_model = PresenceClassifier(PRESENCE_PATH)
+                classifier = PresenceClassifier(presence_path)
+                if classifier.imgsz != entry["imgsz"] or set(classifier.classes) != set(entry["thresholds"]):
+                    raise HTTPException(503, "사진 분류 모델의 입력 크기·항목과 설정이 일치하지 않습니다.")
+                _presence_models[presence_path] = classifier
+            classifier = _presence_models[presence_path]
             # Same full-photo RGB pixels used by validation; no invented localized boxes.
-            scores = _presence_model.predict(Image.fromarray(pixels[:, :, ::-1]))
+            scores = classifier.predict(Image.fromarray(pixels[:, :, ::-1]))
             existing = {d.label for d in detections}
-            for label, confidence in zip(_presence_model.classes, scores):
+            for label, confidence in zip(classifier.classes, scores):
                 threshold = float(entry["thresholds"][label])
                 if threshold < 1 and confidence >= threshold and canonical_label(label) not in existing:
                     detections.append(Detection(canonical_label(label), float(confidence), entry["model"],
@@ -158,16 +166,18 @@ def detect(value: str) -> list[Detection]:
 @app.get("/health")
 def health() -> dict[str, object]:
     return {
-        "status": "ok" if MODEL_PATHS and all(path.exists() for path in MODEL_PATHS) and (PRESENCE_PATH is None or PRESENCE_PATH.is_file()) else "unavailable",
+        "status": "ok" if MODEL_PATHS and all(path.exists() for path in MODEL_PATHS + active_presence_paths()) else "unavailable",
         "model": MODEL_NAME,
         "models": [str(path) for path in MODEL_PATHS],
-        "modelExists": bool(MODEL_PATHS) and all(path.exists() for path in MODEL_PATHS) and (PRESENCE_PATH is None or PRESENCE_PATH.is_file()),
+        "modelExists": bool(MODEL_PATHS) and all(path.exists() for path in MODEL_PATHS + active_presence_paths()),
         "confidenceThreshold": CONFIDENCE,
         "inferenceSizes": {model_id(path): inference_size(path) for path in MODEL_PATHS},
         "facilityProfile": FACILITY_PROFILE.get("version"),
         "facilityThresholds": {model_id(path): entry["thresholds"] for path in MODEL_PATHS
                                if (entry := FACILITY_PROFILE["models"].get(model_id(path)))},
-        "photoClassifier": FACILITY_PROFILE.get("photo_classifier") if PRESENCE_PATH is not None else None,
+        "photoClassifier": FACILITY_PROFILE.get("photo_classifier") if active_presence_paths() else None,
+        "photoClassifiers": [entry for entry in photo_entries(FACILITY_PROFILE)
+                             if entry["model"] in {photo_model_id(path) for path in active_presence_paths()}],
     }
 
 

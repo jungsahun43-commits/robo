@@ -6,6 +6,12 @@
 2. `ai-training/artifacts/safelog-trained-models.zip` 및 `.zip.sha256` 파일.
 3. 현재 보강 성능은 `reports/FACILITY_OPTIMIZATION_KO.md`, 초기 기준 성능은 `reports/FACILITY_TRAINING_RESULTS_KO.md`.
 
+2차 추가 학습은 `reports/FACILITY_FEEDBACK_KO.md`에 기록했다. 시험에서 오탐이 증가해
+후보를 채택하지 않았고 기본 모델은 1차 `facility-validation-v2`다.
+기존 1차 ZIP을 받은 팀원은 최신 브랜치 코드만 업데이트하면 된다. 가중치 교체는 필요 없다.
+이번에 다시 만든 기본 ZIP도 동일한 가중치를 포함하며 2차 비교 결과를 추가했다.
+`facility-inference-profile-round2-candidate.json` 또는 round2-candidate ZIP은 앱에 적용하지 않는다.
+
 학습 데이터 원본과 `.venv`는 전달하지 않아도 된다. 모델 파일은 Git에서 제외되므로
 브랜치 코드만 내려받아서는 시설 모델을 실행할 수 없다.
 
@@ -29,6 +35,8 @@ GPU가 없는 서버 PC는 설치할 때 `./setup_windows.ps1 -CpuOnly`를 사�
 보강 전달본은 여기에 사진 전체 분류 모델 1개를 함께 사용한다.
 보강 설정이 있으면 검증으로 선택된 가중치·해상도·항목별 탐지 기준을 자동 사용한다.
 `/health`의 `facilityProfile`, `facilityThresholds`, `inferenceSizes`로 적용 여부를 확인한다.
+`facilityProfile`이 `facility-validation-v2`인지 확인하고 `photoClassifiers`에서
+`facility-presence`, 입력 크기 384와 항목별 기준을 확인한다.
 초기 기준 모델과 비교하려면 실행 명령에 `-BaselineFacilities`를 추가한다.
 PPE까지 함께 사용하려면 `-Facilities`, 보조 PPE까지 모두 쓰려면 `-AllModels`다.
 같은 PC에서만 시험할 때는 `-LocalOnly`를 추가한다.

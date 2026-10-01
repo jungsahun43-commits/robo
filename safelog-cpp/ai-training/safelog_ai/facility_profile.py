@@ -13,14 +13,31 @@ def load_profile(path: Path) -> dict:
     if profile.get("selection_split") != "val":
         raise ValueError("Facility profiles must be selected on validation, not test.")
     entries = list(profile["models"].values())
-    if profile.get("photo_classifier"):
-        entries.append(profile["photo_classifier"])
+    photos = photo_entries(profile)
+    entries.extend(photos)
+    claimed = set()
+    for entry in photos:
+        for label, threshold in entry["thresholds"].items():
+            if threshold < 1:
+                if label in claimed:
+                    raise ValueError(f"More than one active photo classifier for {label}")
+                claimed.add(label)
     for entry in entries:
         if not 32 <= entry["imgsz"] <= 2048 or entry["imgsz"] % 32:
             raise ValueError("Invalid facility inference size")
         if not entry["thresholds"] or not all(.01 <= float(v) <= 1 for v in entry["thresholds"].values()):
             raise ValueError("Invalid facility thresholds")
     return profile
+
+
+def photo_entries(profile: dict) -> list[dict]:
+    if "photo_classifiers" in profile:
+        return profile["photo_classifiers"]
+    return [profile["photo_classifier"]] if profile.get("photo_classifier") else []
+
+
+def photo_model_id(path: Path) -> str:
+    return path.parent.name if path.stem == "best" else path.stem
 
 
 def verify_weights(path: Path, entry: dict) -> None:

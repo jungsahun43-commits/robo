@@ -1,0 +1,218 @@
+{
+  "split": "test",
+  "images": 975,
+  "profile_sha256": "33a427fef56ca53b4f3b66ea43fee8ac94394c206d0ce09e099cd49be19a3ced",
+  "per_class": {
+    "concrete_crack": {
+      "round1": {
+        "tp": 157,
+        "fp": 31,
+        "fn": 129,
+        "tn": 658,
+        "precision": 0.8351063829787234,
+        "recall": 0.548951048951049,
+        "miss_fraction": 0.45104895104895104,
+        "false_positive_rate": 0.04499274310595065,
+        "f2": 0.5893393393393395
+      },
+      "round2": {
+        "tp": 157,
+        "fp": 32,
+        "fn": 129,
+        "tn": 657,
+        "precision": 0.8306878306878307,
+        "recall": 0.548951048951049,
+        "miss_fraction": 0.45104895104895104,
+        "false_positive_rate": 0.04644412191582003,
+        "f2": 0.5888972243060765
+      },
+      "selected_source": "facility-presence-refined",
+      "threshold": 0.9,
+      "removed_false_positives": 1,
+      "new_false_positives": 2,
+      "recovered_positives": 2,
+      "lost_positives": 2
+    },
+    "concrete_spalling": {
+      "round1": {
+        "tp": 282,
+        "fp": 69,
+        "fn": 195,
+        "tn": 429,
+        "precision": 0.8034188034188035,
+        "recall": 0.5911949685534591,
+        "miss_fraction": 0.4088050314465409,
+        "false_positive_rate": 0.13855421686746988,
+        "f2": 0.6241699867197875
+      },
+      "round2": {
+        "tp": 287,
+        "fp": 76,
+        "fn": 190,
+        "tn": 422,
+        "precision": 0.790633608815427,
+        "recall": 0.6016771488469602,
+        "miss_fraction": 0.3983228511530398,
+        "false_positive_rate": 0.15261044176706828,
+        "f2": 0.6318802289740203
+      },
+      "selected_source": "facility-presence-refined",
+      "threshold": 0.77,
+      "removed_false_positives": 3,
+      "new_false_positives": 10,
+      "recovered_positives": 7,
+      "lost_positives": 2
+    },
+    "rust_stain": {
+      "round1": {
+        "tp": 370,
+        "fp": 62,
+        "fn": 95,
+        "tn": 448,
+        "precision": 0.8564814814814815,
+        "recall": 0.7956989247311828,
+        "miss_fraction": 0.20430107526881724,
+        "false_positive_rate": 0.12156862745098039,
+        "f2": 0.8071553228621292
+      },
+      "round2": {
+        "tp": 366,
+        "fp": 63,
+        "fn": 99,
+        "tn": 447,
+        "precision": 0.8531468531468531,
+        "recall": 0.7870967741935484,
+        "miss_fraction": 0.2129032258064516,
+        "false_positive_rate": 0.12352941176470589,
+        "f2": 0.799475753604194
+      },
+      "selected_source": "facility-presence-refined",
+      "threshold": 0.68,
+      "removed_false_positives": 5,
+      "new_false_positives": 6,
+      "recovered_positives": 2,
+      "lost_positives": 6
+    },
+    "exposed_rebar": {
+      "round1": {
+        "tp": 49,
+        "fp": 13,
+        "fn": 55,
+        "tn": 858,
+        "precision": 0.7903225806451613,
+        "recall": 0.47115384615384615,
+        "miss_fraction": 0.5288461538461539,
+        "false_positive_rate": 0.014925373134328358,
+        "f2": 0.51255230125523
+      },
+      "round2": {
+        "tp": 49,
+        "fp": 13,
+        "fn": 55,
+        "tn": 858,
+        "precision": 0.7903225806451613,
+        "recall": 0.47115384615384615,
+        "miss_fraction": 0.5288461538461539,
+        "false_positive_rate": 0.014925373134328358,
+        "f2": 0.51255230125523
+      },
+      "selected_source": "detector only",
+      "threshold": 1.0,
+      "removed_false_positives": 0,
+      "new_false_positives": 0,
+      "recovered_positives": 0,
+      "lost_positives": 0
+    },
+    "wet_surface": {
+      "round1": {
+        "tp": 44,
+        "fp": 34,
+        "fn": 100,
+        "tn": 797,
+        "precision": 0.5641025641025641,
+        "recall": 0.3055555555555556,
+        "miss_fraction": 0.6944444444444444,
+        "false_positive_rate": 0.04091456077015644,
+        "f2": 0.33639143730886856
+      },
+      "round2": {
+        "tp": 44,
+        "fp": 34,
+        "fn": 100,
+        "tn": 797,
+        "precision": 0.5641025641025641,
+        "recall": 0.3055555555555556,
+        "miss_fraction": 0.6944444444444444,
+        "false_positive_rate": 0.04091456077015644,
+        "f2": 0.33639143730886856
+      },
+      "selected_source": "facility-presence",
+      "threshold": 0.98,
+      "removed_false_positives": 0,
+      "new_false_positives": 0,
+      "recovered_positives": 0,
+      "lost_positives": 0
+    },
+    "efflorescence": {
+      "round1": {
+        "tp": 124,
+        "fp": 43,
+        "fn": 82,
+        "tn": 726,
+        "precision": 0.7425149700598802,
+        "recall": 0.6019417475728155,
+        "miss_fraction": 0.3980582524271845,
+        "false_positive_rate": 0.055916775032509754,
+        "f2": 0.6256306760847629
+      },
+      "round2": {
+        "tp": 124,
+        "fp": 42,
+        "fn": 82,
+        "tn": 727,
+        "precision": 0.7469879518072289,
+        "recall": 0.6019417475728155,
+        "miss_fraction": 0.3980582524271845,
+        "false_positive_rate": 0.054616384915474644,
+        "f2": 0.6262626262626263
+      },
+      "selected_source": "facility-presence-refined",
+      "threshold": 0.74,
+      "removed_false_positives": 7,
+      "new_false_positives": 6,
+      "recovered_positives": 2,
+      "lost_positives": 2
+    },
+    "surface_cavity": {
+      "round1": {
+        "tp": 91,
+        "fp": 57,
+        "fn": 76,
+        "tn": 751,
+        "precision": 0.6148648648648649,
+        "recall": 0.5449101796407185,
+        "miss_fraction": 0.45508982035928147,
+        "false_positive_rate": 0.07054455445544554,
+        "f2": 0.5575980392156862
+      },
+      "round2": {
+        "tp": 91,
+        "fp": 57,
+        "fn": 76,
+        "tn": 751,
+        "precision": 0.6148648648648649,
+        "recall": 0.5449101796407185,
+        "miss_fraction": 0.45508982035928147,
+        "false_positive_rate": 0.07054455445544554,
+        "f2": 0.5575980392156862
+      },
+      "selected_source": "facility-presence",
+      "threshold": 0.86,
+      "removed_false_positives": 0,
+      "new_false_positives": 0,
+      "recovered_positives": 0,
+      "lost_positives": 0
+    }
+  },
+  "limitation": "Same previously observed source holdout; not external field validation. Photo presence only, not location/safety accuracy."
+}

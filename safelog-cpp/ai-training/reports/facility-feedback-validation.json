@@ -1,0 +1,295 @@
+{
+  "split": "val",
+  "per_class": {
+    "concrete_crack": {
+      "round1": {
+        "tp": 107,
+        "fp": 14,
+        "fn": 104,
+        "tn": 485,
+        "precision": 0.8842975206611571,
+        "recall": 0.5071090047393365,
+        "miss_fraction": 0.4928909952606635,
+        "false_positive_rate": 0.028056112224448898,
+        "f2": 0.5544041450777203
+      },
+      "selected": {
+        "source": "facility-presence-refined",
+        "threshold": 0.9,
+        "metrics": {
+          "tp": 109,
+          "fp": 14,
+          "fn": 102,
+          "tn": 485,
+          "precision": 0.8861788617886179,
+          "recall": 0.5165876777251185,
+          "miss_fraction": 0.4834123222748815,
+          "false_positive_rate": 0.028056112224448898,
+          "f2": 0.563598759048604
+        }
+      },
+      "criterion": "minimize validation FNR+FPR with neither increasing; keep old head on model ties"
+    },
+    "concrete_spalling": {
+      "round1": {
+        "tp": 188,
+        "fp": 46,
+        "fn": 136,
+        "tn": 340,
+        "precision": 0.8034188034188035,
+        "recall": 0.5802469135802469,
+        "miss_fraction": 0.41975308641975306,
+        "false_positive_rate": 0.11917098445595854,
+        "f2": 0.6143790849673203
+      },
+      "selected": {
+        "source": "facility-presence-refined",
+        "threshold": 0.77,
+        "metrics": {
+          "tp": 195,
+          "fp": 45,
+          "fn": 129,
+          "tn": 341,
+          "precision": 0.8125,
+          "recall": 0.6018518518518519,
+          "miss_fraction": 0.39814814814814814,
+          "false_positive_rate": 0.11658031088082901,
+          "f2": 0.634765625
+        }
+      },
+      "criterion": "minimize validation FNR+FPR with neither increasing; keep old head on model ties"
+    },
+    "rust_stain": {
+      "round1": {
+        "tp": 281,
+        "fp": 42,
+        "fn": 85,
+        "tn": 302,
+        "precision": 0.8699690402476781,
+        "recall": 0.76775956284153,
+        "miss_fraction": 0.23224043715846998,
+        "false_positive_rate": 0.12209302325581395,
+        "f2": 0.7862339115836599
+      },
+      "selected": {
+        "source": "facility-presence-refined",
+        "threshold": 0.68,
+        "metrics": {
+          "tp": 282,
+          "fp": 41,
+          "fn": 84,
+          "tn": 303,
+          "precision": 0.8730650154798761,
+          "recall": 0.7704918032786885,
+          "miss_fraction": 0.2295081967213115,
+          "false_positive_rate": 0.11918604651162791,
+          "f2": 0.7890318970341355
+        }
+      },
+      "criterion": "minimize validation FNR+FPR with neither increasing; keep old head on model ties"
+    },
+    "exposed_rebar": {
+      "round1": {
+        "tp": 33,
+        "fp": 2,
+        "fn": 47,
+        "tn": 628,
+        "precision": 0.9428571428571428,
+        "recall": 0.4125,
+        "miss_fraction": 0.5875,
+        "false_positive_rate": 0.0031746031746031746,
+        "f2": 0.46478873239436624
+      },
+      "selected": {
+        "source": "facility-presence",
+        "threshold": 1.0,
+        "metrics": {
+          "tp": 33,
+          "fp": 2,
+          "fn": 47,
+          "tn": 628,
+          "precision": 0.9428571428571428,
+          "recall": 0.4125,
+          "miss_fraction": 0.5875,
+          "false_positive_rate": 0.0031746031746031746,
+          "f2": 0.46478873239436624
+        }
+      },
+      "criterion": "minimize validation FNR+FPR with neither increasing; keep old head on model ties"
+    },
+    "wet_surface": {
+      "round1": {
+        "tp": 33,
+        "fp": 18,
+        "fn": 63,
+        "tn": 596,
+        "precision": 0.6470588235294118,
+        "recall": 0.34375,
+        "miss_fraction": 0.65625,
+        "false_positive_rate": 0.029315960912052116,
+        "f2": 0.3793103448275862
+      },
+      "selected": {
+        "source": "facility-presence",
+        "threshold": 0.98,
+        "metrics": {
+          "tp": 33,
+          "fp": 18,
+          "fn": 63,
+          "tn": 596,
+          "precision": 0.6470588235294118,
+          "recall": 0.34375,
+          "miss_fraction": 0.65625,
+          "false_positive_rate": 0.029315960912052116,
+          "f2": 0.3793103448275862
+        }
+      },
+      "criterion": "minimize validation FNR+FPR with neither increasing; keep old head on model ties"
+    },
+    "efflorescence": {
+      "round1": {
+        "tp": 111,
+        "fp": 41,
+        "fn": 48,
+        "tn": 510,
+        "precision": 0.7302631578947368,
+        "recall": 0.6981132075471698,
+        "miss_fraction": 0.30188679245283023,
+        "false_positive_rate": 0.07441016333938294,
+        "f2": 0.7043147208121826
+      },
+      "selected": {
+        "source": "facility-presence-refined",
+        "threshold": 0.74,
+        "metrics": {
+          "tp": 111,
+          "fp": 40,
+          "fn": 48,
+          "tn": 511,
+          "precision": 0.7350993377483444,
+          "recall": 0.6981132075471698,
+          "miss_fraction": 0.30188679245283023,
+          "false_positive_rate": 0.07259528130671507,
+          "f2": 0.7052096569250317
+        }
+      },
+      "criterion": "minimize validation FNR+FPR with neither increasing; keep old head on model ties"
+    },
+    "surface_cavity": {
+      "round1": {
+        "tp": 59,
+        "fp": 30,
+        "fn": 47,
+        "tn": 574,
+        "precision": 0.6629213483146067,
+        "recall": 0.5566037735849056,
+        "miss_fraction": 0.44339622641509435,
+        "false_positive_rate": 0.04966887417218543,
+        "f2": 0.5750487329434697
+      },
+      "selected": {
+        "source": "facility-presence",
+        "threshold": 0.86,
+        "metrics": {
+          "tp": 59,
+          "fp": 30,
+          "fn": 47,
+          "tn": 574,
+          "precision": 0.6629213483146067,
+          "recall": 0.5566037735849056,
+          "miss_fraction": 0.44339622641509435,
+          "false_positive_rate": 0.04966887417218543,
+          "f2": 0.5750487329434697
+        }
+      },
+      "criterion": "minimize validation FNR+FPR with neither increasing; keep old head on model ties"
+    }
+  },
+  "profile": {
+    "version": "facility-validation-v3",
+    "selection_split": "val",
+    "weight_resolution_criterion": "maximum validation region mAP50-95; baseline wins exact ties",
+    "threshold_criterion": "photo F2; FPR <= baseline + 0.02, photo/region precision >= baseline - 0.03",
+    "models": {
+      "facility-dacl-optimized": {
+        "source_run": "facility-dacl",
+        "dataset": "dacl10k",
+        "imgsz": 960,
+        "weights_sha256": "b53ad5521f528f47c7beaf33251d3f6aa171bc2ae57cd4133dac5422d364f9d5",
+        "thresholds": {
+          "concrete_crack": 0.24,
+          "concrete_spalling": 0.24,
+          "rust_stain": 0.24,
+          "exposed_rebar": 0.22,
+          "wet_surface": 0.26,
+          "efflorescence": 0.21,
+          "surface_cavity": 0.24
+        }
+      },
+      "facility-corrosion-optimized": {
+        "source_run": "facility-corrosion",
+        "dataset": "ostrava-corrosion",
+        "imgsz": 960,
+        "weights_sha256": "34deb6ced77613fd024127e2757ede949570d9fbe07761fd64013a86463ec2c3",
+        "thresholds": {
+          "metal_corrosion": 0.25
+        }
+      }
+    },
+    "photo_classifier": {
+      "model": "facility-presence",
+      "architecture": "efficientnet_b0_multilabel_v1",
+      "weights_sha256": "2dfebb3130619b03f6d6a25e95b221cb85c3349d7023e3d216d1d8069fafd6b7",
+      "imgsz": 384,
+      "thresholds": {
+        "concrete_crack": 1.0,
+        "concrete_spalling": 1.0,
+        "rust_stain": 1.0,
+        "exposed_rebar": 1.0,
+        "wet_surface": 0.98,
+        "efflorescence": 1.0,
+        "surface_cavity": 0.86
+      },
+      "evidence_scope": "photo_presence_without_location",
+      "selection_split": "val"
+    },
+    "photo_classifiers": [
+      {
+        "model": "facility-presence",
+        "architecture": "efficientnet_b0_multilabel_v1",
+        "weights_sha256": "2dfebb3130619b03f6d6a25e95b221cb85c3349d7023e3d216d1d8069fafd6b7",
+        "imgsz": 384,
+        "thresholds": {
+          "concrete_crack": 1.0,
+          "concrete_spalling": 1.0,
+          "rust_stain": 1.0,
+          "exposed_rebar": 1.0,
+          "wet_surface": 0.98,
+          "efflorescence": 1.0,
+          "surface_cavity": 0.86
+        },
+        "evidence_scope": "photo_presence_without_location",
+        "selection_split": "val"
+      },
+      {
+        "model": "facility-presence-refined",
+        "architecture": "efficientnet_b0_multilabel_v1",
+        "weights_sha256": "6841bc4ce46560c66b0ef4da6fa6861c51b49b27e7912e0680c9686b1c896fb4",
+        "imgsz": 512,
+        "thresholds": {
+          "concrete_crack": 0.9,
+          "concrete_spalling": 0.77,
+          "rust_stain": 0.68,
+          "exposed_rebar": 1.0,
+          "wet_surface": 1.0,
+          "efflorescence": 0.74,
+          "surface_cavity": 1.0
+        },
+        "evidence_scope": "photo_presence_without_location",
+        "selection_split": "val"
+      }
+    ],
+    "feedback_criterion": "per-label validation Pareto: FNR and FPR cannot increase against round 1; never select on test"
+  },
+  "limitation": "Repeated use of the same internal validation can overfit; no deployment error-rate guarantee."
+}

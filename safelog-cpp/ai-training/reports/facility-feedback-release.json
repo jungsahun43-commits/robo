@@ -1,0 +1,12 @@
+{
+  "status": "kept_round1",
+  "active_version": "facility-validation-v2",
+  "criterion": "whole candidate must not increase aggregate label-photo FP or FN, and must reduce at least one",
+  "label_photo_counts": {
+    "round1_fp": 309,
+    "round2_fp": 317,
+    "round1_fn": 732,
+    "round2_fn": 731
+  },
+  "limitation": "This source holdout was used for release acceptance, so it is not independent model-selection evidence. Require a new external evaluation before field-performance claims."
+}

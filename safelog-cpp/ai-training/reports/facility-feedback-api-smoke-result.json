@@ -5,7 +5,7 @@
   "fixture_selection": "first held-out test image with TP>0; functional API check only, not accuracy",
   "health": {
     "status": "ok",
-    "model": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence",
+    "model": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence+facility-presence-refined",
     "models": [
       "fire-smoke.pt",
       "facility-dacl-optimized.pt",
@@ -18,7 +18,7 @@
       "facility-dacl-optimized": 960,
       "facility-corrosion-optimized": 960
     },
-    "facilityProfile": "facility-validation-v2",
+    "facilityProfile": "facility-validation-v3",
     "facilityThresholds": {
       "facility-dacl-optimized": {
         "concrete_crack": 0.24,
@@ -39,12 +39,12 @@
       "weights_sha256": "2dfebb3130619b03f6d6a25e95b221cb85c3349d7023e3d216d1d8069fafd6b7",
       "imgsz": 384,
       "thresholds": {
-        "concrete_crack": 0.97,
-        "concrete_spalling": 0.88,
-        "rust_stain": 0.75,
+        "concrete_crack": 1.0,
+        "concrete_spalling": 1.0,
+        "rust_stain": 1.0,
         "exposed_rebar": 1.0,
         "wet_surface": 0.98,
-        "efflorescence": 0.93,
+        "efflorescence": 1.0,
         "surface_cavity": 0.86
       },
       "evidence_scope": "photo_presence_without_location",
@@ -57,13 +57,30 @@
         "weights_sha256": "2dfebb3130619b03f6d6a25e95b221cb85c3349d7023e3d216d1d8069fafd6b7",
         "imgsz": 384,
         "thresholds": {
-          "concrete_crack": 0.97,
-          "concrete_spalling": 0.88,
-          "rust_stain": 0.75,
+          "concrete_crack": 1.0,
+          "concrete_spalling": 1.0,
+          "rust_stain": 1.0,
           "exposed_rebar": 1.0,
           "wet_surface": 0.98,
-          "efflorescence": 0.93,
+          "efflorescence": 1.0,
           "surface_cavity": 0.86
+        },
+        "evidence_scope": "photo_presence_without_location",
+        "selection_split": "val"
+      },
+      {
+        "model": "facility-presence-refined",
+        "architecture": "efficientnet_b0_multilabel_v1",
+        "weights_sha256": "6841bc4ce46560c66b0ef4da6fa6861c51b49b27e7912e0680c9686b1c896fb4",
+        "imgsz": 512,
+        "thresholds": {
+          "concrete_crack": 0.9,
+          "concrete_spalling": 0.77,
+          "rust_stain": 0.68,
+          "exposed_rebar": 1.0,
+          "wet_surface": 1.0,
+          "efflorescence": 0.74,
+          "surface_cavity": 1.0
         },
         "evidence_scope": "photo_presence_without_location",
         "selection_split": "val"
@@ -80,7 +97,7 @@
     "suggestedDescription": "사진에서 콘크리트 박리 의심, 녹물·녹 얼룩 의심 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다.",
     "suggestedAction": "박리 부위 아래의 접근을 제한하고 탈락 가능성을 시설 담당자가 확인하도록 하세요. 녹 얼룩의 발생원과 주변 철근 노출 여부를 시설 담당자가 확인하도록 하세요.",
     "confidence": 0.6708363890647888,
-    "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence",
+    "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence+facility-presence-refined",
     "promptVersion": "facility-smoke-v1",
     "detections": [
       {
@@ -190,7 +207,7 @@
     ],
     "assessment": "조치 후 사진에 위험이 남아 있거나 조치 전 위험을 확인하지 못했습니다.",
     "confidence": 0.4233611822128296,
-    "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence",
+    "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence+facility-presence-refined",
     "promptVersion": "facility-smoke-v1",
     "requiresHumanReview": true
   },
@@ -203,215 +220,196 @@
     "promptVersion": "facility-smoke-v1"
   },
   "timing_seconds": {
-    "analysis_first_request_including_load": 1.893,
-    "comparison_two_images": 0.58
+    "analysis_first_request_including_load": 2.4,
+    "comparison_two_images": 0.881
   },
   "photo_classifier_functional_proof": {
     "model": "facility-presence",
-    "fixture": "dacl-dacl10k_v2_validation_0375.jpg",
+    "fixture": "dacl-dacl10k_v2_validation_0204.jpg",
     "fixture_selection": "first additional true-positive photo with score margin >=0.01; functional check only",
     "response": {
       "hazardCategory": "콘크리트 박리 의심",
       "riskLevel": 4,
       "detectedHazards": [
         "콘크리트 박리 의심",
-        "표면 균열 의심",
-        "녹물·녹 얼룩 의심",
+        "표면 공동·파임 의심",
         "금속 부식 의심"
       ],
-      "suggestedDescription": "사진에서 콘크리트 박리 의심, 표면 균열 의심, 녹물·녹 얼룩 의심, 금속 부식 의심 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다. 사진 전체 분류의 추가 의견은 결함 위치를 확정하지 않으므로 사진과 현장을 직접 확인하세요.",
-      "suggestedAction": "박리 부위 아래의 접근을 제한하고 탈락 가능성을 시설 담당자가 확인하도록 하세요. 표면의 균열 위치와 폭·변화를 현장에서 확인하고 시설 담당자에게 점검을 요청하세요. 녹 얼룩의 발생원과 주변 철근 노출 여부를 시설 담당자가 확인하도록 하세요. 부식 위치를 기록하고 시설 담당자가 두께·단면 손실과 보수 필요성을 확인하도록 하세요.",
-      "confidence": 0.39744487404823303,
-      "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence",
+      "suggestedDescription": "사진에서 콘크리트 박리 의심, 표면 공동·파임 의심, 금속 부식 의심 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다. 사진 전체 분류의 추가 의견은 결함 위치를 확정하지 않으므로 사진과 현장을 직접 확인하세요.",
+      "suggestedAction": "박리 부위 아래의 접근을 제한하고 탈락 가능성을 시설 담당자가 확인하도록 하세요. 표면 결손의 크기와 주변 손상을 시설 담당자가 확인하도록 하세요. 부식 위치를 기록하고 시설 담당자가 두께·단면 손실과 보수 필요성을 확인하도록 하세요.",
+      "confidence": 0.9546278715133667,
+      "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence+facility-presence-refined",
       "promptVersion": "presence-smoke-v1",
       "detections": [
         {
-          "label": "rust_stain",
-          "confidence": 0.49346470832824707,
-          "model": "facility-dacl-optimized",
+          "label": "metal_corrosion",
+          "confidence": 0.6343610882759094,
+          "model": "facility-corrosion-optimized",
           "box": [
-            393.5335998535156,
-            214.55020141601562,
-            529.531494140625,
-            251.65611267089844
-          ],
-          "evidence_scope": "region_box"
-        },
-        {
-          "label": "rust_stain",
-          "confidence": 0.40206262469291687,
-          "model": "facility-dacl-optimized",
-          "box": [
-            129.87388610839844,
-            634.7604370117188,
-            257.25274658203125,
-            766.7728881835938
-          ],
-          "evidence_scope": "region_box"
-        },
-        {
-          "label": "concrete_spalling",
-          "confidence": 0.39744487404823303,
-          "model": "facility-dacl-optimized",
-          "box": [
-            106.47415161132812,
-            111.9244155883789,
-            1024.0,
-            459.6733703613281
-          ],
-          "evidence_scope": "region_box"
-        },
-        {
-          "label": "rust_stain",
-          "confidence": 0.3013305366039276,
-          "model": "facility-dacl-optimized",
-          "box": [
-            842.2975463867188,
-            107.44193267822266,
-            905.474853515625,
-            124.56187438964844
-          ],
-          "evidence_scope": "region_box"
-        },
-        {
-          "label": "concrete_spalling",
-          "confidence": 0.29577478766441345,
-          "model": "facility-dacl-optimized",
-          "box": [
-            807.507080078125,
-            43.697208404541016,
-            1014.1896362304688,
-            100.59989166259766
+            354.48583984375,
+            1112.0142822265625,
+            475.048828125,
+            1280.0
           ],
           "evidence_scope": "region_box"
         },
         {
           "label": "metal_corrosion",
-          "confidence": 0.3177673816680908,
+          "confidence": 0.3513301610946655,
           "model": "facility-corrosion-optimized",
           "box": [
-            797.767578125,
-            172.8548126220703,
-            843.8756713867188,
-            204.17857360839844
+            351.482177734375,
+            1111.2269287109375,
+            554.018798828125,
+            1280.0
           ],
           "evidence_scope": "region_box"
         },
         {
-          "label": "surface_crack",
-          "confidence": 0.9814072847366333,
+          "label": "metal_corrosion",
+          "confidence": 0.27321189641952515,
+          "model": "facility-corrosion-optimized",
+          "box": [
+            555.934814453125,
+            1192.5716552734375,
+            594.0693969726562,
+            1279.870361328125
+          ],
+          "evidence_scope": "region_box"
+        },
+        {
+          "label": "surface_cavity",
+          "confidence": 0.9746561050415039,
           "model": "facility-presence",
+          "box": null,
+          "evidence_scope": "photo_presence"
+        },
+        {
+          "label": "concrete_spalling",
+          "confidence": 0.9546278715133667,
+          "model": "facility-presence-refined",
           "box": null,
           "evidence_scope": "photo_presence"
         }
       ],
       "requiresHumanReview": true
     },
-    "seconds": 0.28
+    "seconds": 0.49
   },
   "photo_classifiers_functional_proofs": [
     {
       "model": "facility-presence",
-      "fixture": "dacl-dacl10k_v2_validation_0375.jpg",
+      "fixture": "dacl-dacl10k_v2_validation_0204.jpg",
       "fixture_selection": "first additional true-positive photo with score margin >=0.01; functional check only",
       "response": {
         "hazardCategory": "콘크리트 박리 의심",
         "riskLevel": 4,
         "detectedHazards": [
           "콘크리트 박리 의심",
-          "표면 균열 의심",
-          "녹물·녹 얼룩 의심",
+          "표면 공동·파임 의심",
           "금속 부식 의심"
         ],
-        "suggestedDescription": "사진에서 콘크리트 박리 의심, 표면 균열 의심, 녹물·녹 얼룩 의심, 금속 부식 의심 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다. 사진 전체 분류의 추가 의견은 결함 위치를 확정하지 않으므로 사진과 현장을 직접 확인하세요.",
-        "suggestedAction": "박리 부위 아래의 접근을 제한하고 탈락 가능성을 시설 담당자가 확인하도록 하세요. 표면의 균열 위치와 폭·변화를 현장에서 확인하고 시설 담당자에게 점검을 요청하세요. 녹 얼룩의 발생원과 주변 철근 노출 여부를 시설 담당자가 확인하도록 하세요. 부식 위치를 기록하고 시설 담당자가 두께·단면 손실과 보수 필요성을 확인하도록 하세요.",
-        "confidence": 0.39744487404823303,
-        "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence",
+        "suggestedDescription": "사진에서 콘크리트 박리 의심, 표면 공동·파임 의심, 금속 부식 의심 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다. 사진 전체 분류의 추가 의견은 결함 위치를 확정하지 않으므로 사진과 현장을 직접 확인하세요.",
+        "suggestedAction": "박리 부위 아래의 접근을 제한하고 탈락 가능성을 시설 담당자가 확인하도록 하세요. 표면 결손의 크기와 주변 손상을 시설 담당자가 확인하도록 하세요. 부식 위치를 기록하고 시설 담당자가 두께·단면 손실과 보수 필요성을 확인하도록 하세요.",
+        "confidence": 0.9546278715133667,
+        "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence+facility-presence-refined",
         "promptVersion": "presence-smoke-v1",
         "detections": [
           {
-            "label": "rust_stain",
-            "confidence": 0.49346470832824707,
-            "model": "facility-dacl-optimized",
+            "label": "metal_corrosion",
+            "confidence": 0.6343610882759094,
+            "model": "facility-corrosion-optimized",
             "box": [
-              393.5335998535156,
-              214.55020141601562,
-              529.531494140625,
-              251.65611267089844
-            ],
-            "evidence_scope": "region_box"
-          },
-          {
-            "label": "rust_stain",
-            "confidence": 0.40206262469291687,
-            "model": "facility-dacl-optimized",
-            "box": [
-              129.87388610839844,
-              634.7604370117188,
-              257.25274658203125,
-              766.7728881835938
-            ],
-            "evidence_scope": "region_box"
-          },
-          {
-            "label": "concrete_spalling",
-            "confidence": 0.39744487404823303,
-            "model": "facility-dacl-optimized",
-            "box": [
-              106.47415161132812,
-              111.9244155883789,
-              1024.0,
-              459.6733703613281
-            ],
-            "evidence_scope": "region_box"
-          },
-          {
-            "label": "rust_stain",
-            "confidence": 0.3013305366039276,
-            "model": "facility-dacl-optimized",
-            "box": [
-              842.2975463867188,
-              107.44193267822266,
-              905.474853515625,
-              124.56187438964844
-            ],
-            "evidence_scope": "region_box"
-          },
-          {
-            "label": "concrete_spalling",
-            "confidence": 0.29577478766441345,
-            "model": "facility-dacl-optimized",
-            "box": [
-              807.507080078125,
-              43.697208404541016,
-              1014.1896362304688,
-              100.59989166259766
+              354.48583984375,
+              1112.0142822265625,
+              475.048828125,
+              1280.0
             ],
             "evidence_scope": "region_box"
           },
           {
             "label": "metal_corrosion",
-            "confidence": 0.3177673816680908,
+            "confidence": 0.3513301610946655,
             "model": "facility-corrosion-optimized",
             "box": [
-              797.767578125,
-              172.8548126220703,
-              843.8756713867188,
-              204.17857360839844
+              351.482177734375,
+              1111.2269287109375,
+              554.018798828125,
+              1280.0
             ],
             "evidence_scope": "region_box"
           },
           {
-            "label": "surface_crack",
-            "confidence": 0.9814072847366333,
+            "label": "metal_corrosion",
+            "confidence": 0.27321189641952515,
+            "model": "facility-corrosion-optimized",
+            "box": [
+              555.934814453125,
+              1192.5716552734375,
+              594.0693969726562,
+              1279.870361328125
+            ],
+            "evidence_scope": "region_box"
+          },
+          {
+            "label": "surface_cavity",
+            "confidence": 0.9746561050415039,
             "model": "facility-presence",
+            "box": null,
+            "evidence_scope": "photo_presence"
+          },
+          {
+            "label": "concrete_spalling",
+            "confidence": 0.9546278715133667,
+            "model": "facility-presence-refined",
             "box": null,
             "evidence_scope": "photo_presence"
           }
         ],
         "requiresHumanReview": true
       },
-      "seconds": 0.28
+      "seconds": 0.49
+    },
+    {
+      "model": "facility-presence-refined",
+      "fixture": "dacl-dacl10k_v2_validation_0097.jpg",
+      "fixture_selection": "first additional true-positive photo with score margin >=0.01; functional check only",
+      "response": {
+        "hazardCategory": "표면 균열 의심",
+        "riskLevel": 3,
+        "detectedHazards": [
+          "표면 균열 의심",
+          "금속 부식 의심"
+        ],
+        "suggestedDescription": "사진에서 표면 균열 의심, 금속 부식 의심 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다. 사진 전체 분류의 추가 의견은 결함 위치를 확정하지 않으므로 사진과 현장을 직접 확인하세요.",
+        "suggestedAction": "표면의 균열 위치와 폭·변화를 현장에서 확인하고 시설 담당자에게 점검을 요청하세요. 부식 위치를 기록하고 시설 담당자가 두께·단면 손실과 보수 필요성을 확인하도록 하세요.",
+        "confidence": 0.9262374043464661,
+        "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence+facility-presence-refined",
+        "promptVersion": "presence-smoke-v1",
+        "detections": [
+          {
+            "label": "metal_corrosion",
+            "confidence": 0.35240110754966736,
+            "model": "facility-corrosion-optimized",
+            "box": [
+              48.39175796508789,
+              695.4227905273438,
+              141.19297790527344,
+              748.0840454101562
+            ],
+            "evidence_scope": "region_box"
+          },
+          {
+            "label": "surface_crack",
+            "confidence": 0.9262374043464661,
+            "model": "facility-presence-refined",
+            "box": null,
+            "evidence_scope": "photo_presence"
+          }
+        ],
+        "requiresHumanReview": true
+      },
+      "seconds": 0.444
     }
   ],
   "scope": "PC HTTP endpoints; Android APK/physical phone not tested"

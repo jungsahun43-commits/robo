@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "bundle_sha256": "f60a990ecc36947aa94686d649e87da8289b859f0dda9cd4b88de14679bbe459",
+  "bundle_bytes": 403362393,
+  "models": 11,
+  "model_files_verified": 22,
+  "new_onnx_structural_checks": 4,
+  "classifier_cpu_onnx_parity": {
+    "facility-presence": {
+      "max_probability_difference": 2.041459083557129e-06,
+      "dynamic_batch_shape": [
+        2,
+        7
+      ]
+    },
+    "facility-presence-refined": {
+      "max_probability_difference": 8.344650268554688e-07,
+      "dynamic_batch_shape": [
+        2,
+        7
+      ]
+    }
+  },
+  "test_profile_checksums_match": true
+}

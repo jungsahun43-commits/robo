@@ -264,7 +264,7 @@
       "evidence_scope": "photo_presence_without_location",
       "selection_split": "val"
     },
-    "combined_photo_metrics": {
+    "profile_combined_photo_metrics": {
       "concrete_crack": {
         "detector_only": {
           "tp": 149,

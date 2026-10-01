@@ -50,6 +50,7 @@ def main() -> int:
     code, summary, _ = request("/v1/summarize", {"inspectionContext": "시설 표면 | 점검 제안 | 사람 확인 필요", "promptVersion": "facility-smoke-v1"})
     assert code == 200 and summary["modelName"] == "safelog-summary-template-v1"
     photo_proof = None
+    photo_proofs = []
     if args.optimized and profile.get("photo_classifier"):
         assert health["photoClassifier"] == profile["photo_classifier"]
         import sys
@@ -58,25 +59,34 @@ def main() -> int:
         from scripts.optimize_facility_presence import baseline_presence
         dacl_entry = profile["models"][dacl_id]
         cache = json.loads((ROOT / f"runs/proposals-{dacl_id}-test-{dacl_entry['imgsz']}.json").read_text())
-        classifier = json.loads((ROOT / "runs/presence-scores-test.json").read_text())
-        for i, label in enumerate(classifier["classes"]):
-            cutoff = profile["photo_classifier"]["thresholds"][label]
-            base = baseline_presence(cache, i, dacl_entry["thresholds"][label], classifier["images"])
-            scores = np.array(classifier["probabilities"])[:, i]
-            positives = np.array(classifier["targets"])[:, i] > 0
-            indices = np.where(~base & positives & (scores >= cutoff + .01))[0]
-            if cutoff < 1 and len(indices):
-                fixture2 = classifier["images"][int(indices[0])]
-                data = (ROOT / "data/dacl10k-yolo/images/test" / fixture2).read_bytes()
-                code, added, seconds = request("/v1/analyze-hazard", {"image": "data:image/jpeg;base64," + base64.b64encode(data).decode(),
-                    "promptVersion": "presence-smoke-v1"})
-                assert code == 200 and added["requiresHumanReview"]
-                opinions = [d for d in added["detections"] if d["model"] == "facility-presence"]
-                assert opinions and all(d["box"] is None and d["evidence_scope"] == "photo_presence" for d in opinions)
-                photo_proof = {"fixture": fixture2, "fixture_selection": "first additional true-positive photo with score margin >=0.01; functional check only",
-                               "response": added, "seconds": seconds}
-                break
-        assert photo_proof is not None, "No positive classifier fixture; check whether classifier improves validation/test"
+        from safelog_ai.facility_profile import photo_entries
+        entries = photo_entries(profile)
+        assert health["photoClassifiers"] == entries
+        for entry in entries:
+            score_path = ROOT / ("runs/presence-scores-test.json" if entry["model"] == "facility-presence" else f"runs/presence-scores-{entry['model']}-test.json")
+            classifier = json.loads(score_path.read_text())
+            proof = None
+            for i, label in enumerate(classifier["classes"]):
+                cutoff = entry["thresholds"][label]
+                base = baseline_presence(cache, i, dacl_entry["thresholds"][label], classifier["images"])
+                scores = np.array(classifier["probabilities"])[:, i]
+                positives = np.array(classifier["targets"])[:, i] > 0
+                indices = np.where(~base & positives & (scores >= cutoff + .01))[0]
+                if cutoff < 1 and len(indices):
+                    fixture2 = classifier["images"][int(indices[0])]
+                    data = (ROOT / "data/dacl10k-yolo/images/test" / fixture2).read_bytes()
+                    code, added, seconds = request("/v1/analyze-hazard", {"image": "data:image/jpeg;base64," + base64.b64encode(data).decode(),
+                        "promptVersion": "presence-smoke-v1"})
+                    assert code == 200 and added["requiresHumanReview"]
+                    opinions = [d for d in added["detections"] if d["model"] == entry["model"]]
+                    assert opinions and all(d["box"] is None and d["evidence_scope"] == "photo_presence" for d in opinions)
+                    proof = {"model": entry["model"], "fixture": fixture2,
+                             "fixture_selection": "first additional true-positive photo with score margin >=0.01; functional check only",
+                             "response": added, "seconds": seconds}
+                    break
+            assert proof is not None, f"No positive functional fixture for {entry['model']}"
+            photo_proofs.append(proof)
+        photo_proof = photo_proofs[0] if photo_proofs else None
     # Do not publish absolute workstation paths in this proof.
     health["models"] = [Path(value).name for value in health["models"]]
     result = {"status": "passed", "device": "CPU", "fixture": fixture,
@@ -84,8 +94,9 @@ def main() -> int:
               "health": health, "analysis": analysis, "comparison": comparison, "summary": summary,
               "timing_seconds": {"analysis_first_request_including_load": analysis_seconds, "comparison_two_images": comparison_seconds},
               "photo_classifier_functional_proof": photo_proof,
+              "photo_classifiers_functional_proofs": photo_proofs,
               "scope": "PC HTTP endpoints; Android APK/physical phone not tested"}
-    filename = "facility-optimized-api-smoke-result.json" if args.optimized else "facility-api-smoke-result.json"
+    filename = "facility-feedback-api-smoke-result.json" if args.optimized and "photo_classifiers" in profile else "facility-optimized-api-smoke-result.json" if args.optimized else "facility-api-smoke-result.json"
     (ROOT / "reports" / filename).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0

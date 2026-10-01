@@ -51,7 +51,9 @@ class OptimizationTests(unittest.TestCase):
         data = "data:image/png;base64," + base64.b64encode(output.getvalue()).decode()
         with patch.object(server, "MODEL_PATHS", [path]), patch.object(server, "models", return_value=[detector]), \
              patch.object(server, "FACILITY_PROFILE", {"models": {}, "photo_classifier": entry}), \
-             patch.object(server, "PRESENCE_PATH", Path(__file__)), patch.object(server, "_presence_model", classifier):
+             patch.object(server, "PRESENCE_PATH", Path("models/facility-presence.pt")), \
+             patch.object(server, "_presence_models", {Path("models/facility-presence.pt"): classifier}), \
+             patch.object(Path, "is_file", return_value=True):
             detections = server.detect(data)
         self.assertEqual([d.label for d in detections], ["surface_crack", "wet_surface"])
         self.assertIsNone(detections[1].box)

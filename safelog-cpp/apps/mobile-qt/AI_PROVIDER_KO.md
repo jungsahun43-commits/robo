@@ -22,6 +22,11 @@ API 요청·응답 형식은 유지된다. `/health`에서 `facilityProfile`, �
 사진 전체 분류 의견은 `detections[].box=null`, `evidence_scope=photo_presence`다.
 의심 항목과 추가 점검 의견으로 표시하고 위치 사각형을 그리지 않는다.
 
+2차 피드백 후보는 시험 오탐 증가로 채택하지 않았다. 현재 기본 프로필은
+`facility-validation-v2`이며 가중치 교체 없이 최신 서버 코드를 사용할 수 있다.
+`/health.photoClassifiers`는 활성 사진 분류 모델과 항목별 기준을 배열로 제공한다.
+[2차 피드백 결과](../../ai-training/reports/FACILITY_FEEDBACK_KO.md)를 참고한다.
+
 같은 PC의 Windows 앱은 `http://127.0.0.1:8080`, 휴대폰은 같은 Wi-Fi에 연결한
 서버 PC의 실제 IP를 사용한다. Android에서 서버 주소를 전달하는 앱 설정은 역할 4와
 연결해야 한다. 향후 클라우드 모델을 추가할 경우 비밀 키는 서버에만 보관한다.
