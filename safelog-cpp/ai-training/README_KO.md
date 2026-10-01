@@ -4,6 +4,17 @@
 C++ 앱용 로컬 API 서버를 재현하기 위한 코드다. 원본 데이터와 학습 결과는 Git에
 올리지 않는다.
 
+## 시설 성능 보강 전달본
+
+보강 모델 ZIP과 최신 코드를 함께 사용하면 `./start_ai_server.ps1 -FacilitiesOnly`가
+검증으로 선택한 시설 모델·입력 해상도·항목별 탐지 기준을 자동 적용한다.
+설정은 `reports/facility-inference-profile.json`, 성능과 한계는 `reports/FACILITY_OPTIMIZATION_KO.md`다.
+가중치 SHA256이 설정과 일치하지 않으면 분석 API가 503을 반환한다.
+초기 시설 기준 모델과 비교하려면 `-BaselineFacilities`를 추가한다.
+이 보강은 기존 데이터로 수행한 실험이며 새로운 시설 현장 데이터가 추가된 것은 아니다.
+사진 전체 분류 모델은 검출이 놓친 항목을 추가 의견으로 제안하며 위치 박스를 만들지 않는다.
+`box=null`, `evidence_scope=photo_presence`를 구분해 표시한다. 분류 보강이 박스 검출 AP를 높인 것은 아니다.
+
 ## 1. 설치
 
 Windows에 Python 3.11 또는 3.12를 설치하고 PowerShell에서 실행한다.

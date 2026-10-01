@@ -9,6 +9,7 @@ class Detection:
     confidence: float
     model: str = ""
     box: tuple[float, float, float, float] | None = None
+    evidence_scope: str = "region_box"
 
 
 RISK = {
@@ -54,11 +55,14 @@ def analyze_detections(detections: list[Detection]) -> dict[str, object]:
     primary = hazards[0]
     risk_level, category, _ = RISK[primary.label]
     unique_categories = list(dict.fromkeys(RISK[item.label][1] for item in hazards))
+    description = "사진에서 " + ", ".join(unique_categories) + " 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다."
+    if any(item.evidence_scope == "photo_presence" for item in hazards):
+        description += " 사진 전체 분류의 추가 의견은 결함 위치를 확정하지 않으므로 사진과 현장을 직접 확인하세요."
     return {
         "category": category,
         "risk_level": risk_level,
         "hazards": unique_categories,
-        "description": "사진에서 " + ", ".join(unique_categories) + " 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다.",
+        "description": description,
         "action": " ".join(dict.fromkeys(RISK[item.label][2] for item in hazards)),
         "confidence": primary.confidence,
     }

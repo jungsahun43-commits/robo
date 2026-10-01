@@ -15,6 +15,13 @@ $env:SAFELOG_AI_TIMEOUT_MS="25000"
 PPE도 포함하려면 `-Facilities`, 모든 보조 모델을 포함하려면 `-AllModels`를 쓴다. 설치·학습·모델 전달 절차는
 [AI 서버 안내](../../ai-training/README_KO.md)에 있다.
 
+시설 보강 전달본에서는 동일한 명령이 검증 설정을 읽어 optimized 모델을 사용한다.
+모델 ZIP의 `reports/facility-inference-profile.json`도 함께 풀어야 한다.
+API 요청·응답 형식은 유지된다. `/health`에서 `facilityProfile`, 항목별 `facilityThresholds`,
+`inferenceSizes`를 확인한다. 초기 기준 모델 비교는 `-BaselineFacilities`로 실행한다.
+사진 전체 분류 의견은 `detections[].box=null`, `evidence_scope=photo_presence`다.
+의심 항목과 추가 점검 의견으로 표시하고 위치 사각형을 그리지 않는다.
+
 같은 PC의 Windows 앱은 `http://127.0.0.1:8080`, 휴대폰은 같은 Wi-Fi에 연결한
 서버 PC의 실제 IP를 사용한다. Android에서 서버 주소를 전달하는 앱 설정은 역할 4와
 연결해야 한다. 향후 클라우드 모델을 추가할 경우 비밀 키는 서버에만 보관한다.

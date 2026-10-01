@@ -1,0 +1,293 @@
+{
+  "status": "passed",
+  "device": "CPU",
+  "fixture": "dacl-dacl10k_v2_validation_0008.jpg",
+  "fixture_selection": "first held-out test image with TP>0; functional API check only, not accuracy",
+  "health": {
+    "status": "ok",
+    "model": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence",
+    "models": [
+      "fire-smoke.pt",
+      "facility-dacl-optimized.pt",
+      "facility-corrosion-optimized.pt"
+    ],
+    "modelExists": true,
+    "confidenceThreshold": 0.25,
+    "inferenceSizes": {
+      "fire-smoke": 640,
+      "facility-dacl-optimized": 960,
+      "facility-corrosion-optimized": 960
+    },
+    "facilityProfile": "facility-validation-v2",
+    "facilityThresholds": {
+      "facility-dacl-optimized": {
+        "concrete_crack": 0.24,
+        "concrete_spalling": 0.24,
+        "rust_stain": 0.24,
+        "exposed_rebar": 0.22,
+        "wet_surface": 0.26,
+        "efflorescence": 0.21,
+        "surface_cavity": 0.24
+      },
+      "facility-corrosion-optimized": {
+        "metal_corrosion": 0.25
+      }
+    },
+    "photoClassifier": {
+      "model": "facility-presence",
+      "architecture": "efficientnet_b0_multilabel_v1",
+      "weights_sha256": "2dfebb3130619b03f6d6a25e95b221cb85c3349d7023e3d216d1d8069fafd6b7",
+      "imgsz": 384,
+      "thresholds": {
+        "concrete_crack": 0.97,
+        "concrete_spalling": 0.88,
+        "rust_stain": 0.75,
+        "exposed_rebar": 1.0,
+        "wet_surface": 0.98,
+        "efflorescence": 0.93,
+        "surface_cavity": 0.86
+      },
+      "evidence_scope": "photo_presence_without_location",
+      "selection_split": "val"
+    }
+  },
+  "analysis": {
+    "hazardCategory": "콘크리트 박리 의심",
+    "riskLevel": 4,
+    "detectedHazards": [
+      "콘크리트 박리 의심",
+      "녹물·녹 얼룩 의심"
+    ],
+    "suggestedDescription": "사진에서 콘크리트 박리 의심, 녹물·녹 얼룩 의심 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다.",
+    "suggestedAction": "박리 부위 아래의 접근을 제한하고 탈락 가능성을 시설 담당자가 확인하도록 하세요. 녹 얼룩의 발생원과 주변 철근 노출 여부를 시설 담당자가 확인하도록 하세요.",
+    "confidence": 0.6708363890647888,
+    "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence",
+    "promptVersion": "facility-smoke-v1",
+    "detections": [
+      {
+        "label": "concrete_spalling",
+        "confidence": 0.6708363890647888,
+        "model": "facility-dacl-optimized",
+        "box": [
+          835.331787109375,
+          251.8177947998047,
+          920.7445678710938,
+          324.2720642089844
+        ],
+        "evidence_scope": "region_box"
+      },
+      {
+        "label": "concrete_spalling",
+        "confidence": 0.4777345657348633,
+        "model": "facility-dacl-optimized",
+        "box": [
+          447.955322265625,
+          663.0337524414062,
+          485.841552734375,
+          677.6930541992188
+        ],
+        "evidence_scope": "region_box"
+      },
+      {
+        "label": "rust_stain",
+        "confidence": 0.46677252650260925,
+        "model": "facility-dacl-optimized",
+        "box": [
+          1193.7880859375,
+          448.1878967285156,
+          1220.7877197265625,
+          498.9449768066406
+        ],
+        "evidence_scope": "region_box"
+      },
+      {
+        "label": "concrete_spalling",
+        "confidence": 0.4526699185371399,
+        "model": "facility-dacl-optimized",
+        "box": [
+          774.9092407226562,
+          587.7504272460938,
+          849.6953735351562,
+          617.045654296875
+        ],
+        "evidence_scope": "region_box"
+      },
+      {
+        "label": "concrete_spalling",
+        "confidence": 0.44957801699638367,
+        "model": "facility-dacl-optimized",
+        "box": [
+          580.6473999023438,
+          791.3958129882812,
+          687.0767211914062,
+          819.83984375
+        ],
+        "evidence_scope": "region_box"
+      },
+      {
+        "label": "concrete_spalling",
+        "confidence": 0.4233611822128296,
+        "model": "facility-dacl-optimized",
+        "box": [
+          776.4252319335938,
+          591.190673828125,
+          837.2826538085938,
+          608.8026733398438
+        ],
+        "evidence_scope": "region_box"
+      },
+      {
+        "label": "rust_stain",
+        "confidence": 0.2623301148414612,
+        "model": "facility-dacl-optimized",
+        "box": [
+          617.5706787109375,
+          796.5756225585938,
+          645.3408813476562,
+          808.828369140625
+        ],
+        "evidence_scope": "region_box"
+      },
+      {
+        "label": "rust_stain",
+        "confidence": 0.2610188126564026,
+        "model": "facility-dacl-optimized",
+        "box": [
+          778.243408203125,
+          593.1240234375,
+          832.881103515625,
+          606.3981323242188
+        ],
+        "evidence_scope": "region_box"
+      }
+    ],
+    "requiresHumanReview": true
+  },
+  "comparison": {
+    "likelyResolved": false,
+    "remainingRisks": [
+      "콘크리트 박리 의심",
+      "녹물·녹 얼룩 의심"
+    ],
+    "assessment": "조치 후 사진에 위험이 남아 있거나 조치 전 위험을 확인하지 못했습니다.",
+    "confidence": 0.4233611822128296,
+    "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence",
+    "promptVersion": "facility-smoke-v1",
+    "requiresHumanReview": true
+  },
+  "summary": {
+    "summary": "총 1건의 점검 기록을 검토했습니다. 각 조치 결과는 점검자가 최종 확인해야 합니다.",
+    "keyRisks": [
+      "시설 표면 | 점검 제안 | 사람 확인 필요"
+    ],
+    "modelName": "safelog-summary-template-v1",
+    "promptVersion": "facility-smoke-v1"
+  },
+  "timing_seconds": {
+    "analysis_first_request_including_load": 1.845,
+    "comparison_two_images": 0.541
+  },
+  "photo_classifier_functional_proof": {
+    "fixture": "dacl-dacl10k_v2_validation_0375.jpg",
+    "fixture_selection": "first additional true-positive photo with score margin >=0.01; functional check only",
+    "response": {
+      "hazardCategory": "콘크리트 박리 의심",
+      "riskLevel": 4,
+      "detectedHazards": [
+        "콘크리트 박리 의심",
+        "표면 균열 의심",
+        "녹물·녹 얼룩 의심",
+        "금속 부식 의심"
+      ],
+      "suggestedDescription": "사진에서 콘크리트 박리 의심, 표면 균열 의심, 녹물·녹 얼룩 의심, 금속 부식 의심 항목이 탐지되었습니다. 점검자의 현장 확인이 필요합니다. 사진 전체 분류의 추가 의견은 결함 위치를 확정하지 않으므로 사진과 현장을 직접 확인하세요.",
+      "suggestedAction": "박리 부위 아래의 접근을 제한하고 탈락 가능성을 시설 담당자가 확인하도록 하세요. 표면의 균열 위치와 폭·변화를 현장에서 확인하고 시설 담당자에게 점검을 요청하세요. 녹 얼룩의 발생원과 주변 철근 노출 여부를 시설 담당자가 확인하도록 하세요. 부식 위치를 기록하고 시설 담당자가 두께·단면 손실과 보수 필요성을 확인하도록 하세요.",
+      "confidence": 0.39744487404823303,
+      "modelName": "fire-smoke+facility-dacl-optimized+facility-corrosion-optimized+facility-presence",
+      "promptVersion": "presence-smoke-v1",
+      "detections": [
+        {
+          "label": "rust_stain",
+          "confidence": 0.49346470832824707,
+          "model": "facility-dacl-optimized",
+          "box": [
+            393.5335998535156,
+            214.55020141601562,
+            529.531494140625,
+            251.65611267089844
+          ],
+          "evidence_scope": "region_box"
+        },
+        {
+          "label": "rust_stain",
+          "confidence": 0.40206262469291687,
+          "model": "facility-dacl-optimized",
+          "box": [
+            129.87388610839844,
+            634.7604370117188,
+            257.25274658203125,
+            766.7728881835938
+          ],
+          "evidence_scope": "region_box"
+        },
+        {
+          "label": "concrete_spalling",
+          "confidence": 0.39744487404823303,
+          "model": "facility-dacl-optimized",
+          "box": [
+            106.47415161132812,
+            111.9244155883789,
+            1024.0,
+            459.6733703613281
+          ],
+          "evidence_scope": "region_box"
+        },
+        {
+          "label": "rust_stain",
+          "confidence": 0.3013305366039276,
+          "model": "facility-dacl-optimized",
+          "box": [
+            842.2975463867188,
+            107.44193267822266,
+            905.474853515625,
+            124.56187438964844
+          ],
+          "evidence_scope": "region_box"
+        },
+        {
+          "label": "concrete_spalling",
+          "confidence": 0.29577478766441345,
+          "model": "facility-dacl-optimized",
+          "box": [
+            807.507080078125,
+            43.697208404541016,
+            1014.1896362304688,
+            100.59989166259766
+          ],
+          "evidence_scope": "region_box"
+        },
+        {
+          "label": "metal_corrosion",
+          "confidence": 0.3177673816680908,
+          "model": "facility-corrosion-optimized",
+          "box": [
+            797.767578125,
+            172.8548126220703,
+            843.8756713867188,
+            204.17857360839844
+          ],
+          "evidence_scope": "region_box"
+        },
+        {
+          "label": "surface_crack",
+          "confidence": 0.9814072847366333,
+          "model": "facility-presence",
+          "box": null,
+          "evidence_scope": "photo_presence"
+        }
+      ],
+      "requiresHumanReview": true
+    },
+    "seconds": 0.266
+  },
+  "scope": "PC HTTP endpoints; Android APK/physical phone not tested"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "bundle_sha256": "47663d8cf776666547119621391eaa372f4d8ad2a8f1d517d0298016aec9148b",
+  "bundle_bytes": 373258547,
+  "models": 10,
+  "model_files_verified": 20,
+  "new_onnx_structural_checks": 3,
+  "classifier_cpu_onnx_max_probability_difference": 2.041459083557129e-06,
+  "classifier_dynamic_batch_shape": [
+    2,
+    7
+  ],
+  "test_profile_checksums_match": true
+}

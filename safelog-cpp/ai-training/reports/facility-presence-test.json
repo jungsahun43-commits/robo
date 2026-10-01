@@ -1,0 +1,274 @@
+{
+  "profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+  "split": "test",
+  "images": 975,
+  "per_class": {
+    "concrete_crack": {
+      "detector_only": {
+        "tp": 149,
+        "fp": 27,
+        "fn": 137,
+        "tn": 662,
+        "precision": 0.8465909090909091,
+        "recall": 0.5209790209790209,
+        "miss_fraction": 0.47902097902097907,
+        "false_positive_rate": 0.03918722786647315,
+        "f2": 0.5643939393939393
+      },
+      "combined": {
+        "tp": 157,
+        "fp": 31,
+        "fn": 129,
+        "tn": 658,
+        "precision": 0.8351063829787234,
+        "recall": 0.548951048951049,
+        "miss_fraction": 0.45104895104895104,
+        "false_positive_rate": 0.04499274310595065,
+        "f2": 0.5893393393393395
+      },
+      "classifier_only": {
+        "tp": 73,
+        "fp": 5,
+        "fn": 213,
+        "tn": 684,
+        "precision": 0.9358974358974359,
+        "recall": 0.25524475524475526,
+        "miss_fraction": 0.7447552447552448,
+        "false_positive_rate": 0.00725689404934688,
+        "f2": 0.2986906710310966
+      },
+      "additional_positive_photos": 8,
+      "additional_negative_photos": 4,
+      "threshold": 0.97
+    },
+    "concrete_spalling": {
+      "detector_only": {
+        "tp": 263,
+        "fp": 56,
+        "fn": 214,
+        "tn": 442,
+        "precision": 0.8244514106583072,
+        "recall": 0.5513626834381551,
+        "miss_fraction": 0.4486373165618449,
+        "false_positive_rate": 0.11244979919678715,
+        "f2": 0.5904804669959586
+      },
+      "combined": {
+        "tp": 282,
+        "fp": 69,
+        "fn": 195,
+        "tn": 429,
+        "precision": 0.8034188034188035,
+        "recall": 0.5911949685534591,
+        "miss_fraction": 0.4088050314465409,
+        "false_positive_rate": 0.13855421686746988,
+        "f2": 0.6241699867197875
+      },
+      "classifier_only": {
+        "tp": 144,
+        "fp": 18,
+        "fn": 333,
+        "tn": 480,
+        "precision": 0.8888888888888888,
+        "recall": 0.3018867924528302,
+        "miss_fraction": 0.6981132075471699,
+        "false_positive_rate": 0.03614457831325301,
+        "f2": 0.3478260869565218
+      },
+      "additional_positive_photos": 19,
+      "additional_negative_photos": 13,
+      "threshold": 0.88
+    },
+    "rust_stain": {
+      "detector_only": {
+        "tp": 354,
+        "fp": 52,
+        "fn": 111,
+        "tn": 458,
+        "precision": 0.8719211822660099,
+        "recall": 0.7612903225806451,
+        "miss_fraction": 0.2387096774193549,
+        "false_positive_rate": 0.10196078431372549,
+        "f2": 0.7811120917917035
+      },
+      "combined": {
+        "tp": 370,
+        "fp": 62,
+        "fn": 95,
+        "tn": 448,
+        "precision": 0.8564814814814815,
+        "recall": 0.7956989247311828,
+        "miss_fraction": 0.20430107526881724,
+        "false_positive_rate": 0.12156862745098039,
+        "f2": 0.8071553228621292
+      },
+      "classifier_only": {
+        "tp": 271,
+        "fp": 20,
+        "fn": 194,
+        "tn": 490,
+        "precision": 0.9312714776632303,
+        "recall": 0.5827956989247312,
+        "miss_fraction": 0.41720430107526885,
+        "false_positive_rate": 0.0392156862745098,
+        "f2": 0.6299395629939563
+      },
+      "additional_positive_photos": 16,
+      "additional_negative_photos": 10,
+      "threshold": 0.75
+    },
+    "exposed_rebar": {
+      "detector_only": {
+        "tp": 49,
+        "fp": 13,
+        "fn": 55,
+        "tn": 858,
+        "precision": 0.7903225806451613,
+        "recall": 0.47115384615384615,
+        "miss_fraction": 0.5288461538461539,
+        "false_positive_rate": 0.014925373134328358,
+        "f2": 0.51255230125523
+      },
+      "combined": {
+        "tp": 49,
+        "fp": 13,
+        "fn": 55,
+        "tn": 858,
+        "precision": 0.7903225806451613,
+        "recall": 0.47115384615384615,
+        "miss_fraction": 0.5288461538461539,
+        "false_positive_rate": 0.014925373134328358,
+        "f2": 0.51255230125523
+      },
+      "classifier_only": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 104,
+        "tn": 871,
+        "precision": 0.0,
+        "recall": 0.0,
+        "miss_fraction": 1.0,
+        "false_positive_rate": 0.0,
+        "f2": 0.0
+      },
+      "additional_positive_photos": 0,
+      "additional_negative_photos": 0,
+      "threshold": 1.0
+    },
+    "wet_surface": {
+      "detector_only": {
+        "tp": 44,
+        "fp": 31,
+        "fn": 100,
+        "tn": 800,
+        "precision": 0.5866666666666667,
+        "recall": 0.3055555555555556,
+        "miss_fraction": 0.6944444444444444,
+        "false_positive_rate": 0.03730445246690734,
+        "f2": 0.337941628264209
+      },
+      "combined": {
+        "tp": 44,
+        "fp": 34,
+        "fn": 100,
+        "tn": 797,
+        "precision": 0.5641025641025641,
+        "recall": 0.3055555555555556,
+        "miss_fraction": 0.6944444444444444,
+        "false_positive_rate": 0.04091456077015644,
+        "f2": 0.33639143730886856
+      },
+      "classifier_only": {
+        "tp": 13,
+        "fp": 6,
+        "fn": 131,
+        "tn": 825,
+        "precision": 0.6842105263157895,
+        "recall": 0.09027777777777778,
+        "miss_fraction": 0.9097222222222222,
+        "false_positive_rate": 0.007220216606498195,
+        "f2": 0.1092436974789916
+      },
+      "additional_positive_photos": 0,
+      "additional_negative_photos": 3,
+      "threshold": 0.98
+    },
+    "efflorescence": {
+      "detector_only": {
+        "tp": 110,
+        "fp": 30,
+        "fn": 96,
+        "tn": 739,
+        "precision": 0.7857142857142857,
+        "recall": 0.5339805825242718,
+        "miss_fraction": 0.46601941747572817,
+        "false_positive_rate": 0.03901170351105332,
+        "f2": 0.5705394190871369
+      },
+      "combined": {
+        "tp": 124,
+        "fp": 43,
+        "fn": 82,
+        "tn": 726,
+        "precision": 0.7425149700598802,
+        "recall": 0.6019417475728155,
+        "miss_fraction": 0.3980582524271845,
+        "false_positive_rate": 0.055916775032509754,
+        "f2": 0.6256306760847629
+      },
+      "classifier_only": {
+        "tp": 74,
+        "fp": 19,
+        "fn": 132,
+        "tn": 750,
+        "precision": 0.7956989247311828,
+        "recall": 0.3592233009708738,
+        "miss_fraction": 0.6407766990291262,
+        "false_positive_rate": 0.0247074122236671,
+        "f2": 0.4034896401308615
+      },
+      "additional_positive_photos": 14,
+      "additional_negative_photos": 13,
+      "threshold": 0.93
+    },
+    "surface_cavity": {
+      "detector_only": {
+        "tp": 69,
+        "fp": 33,
+        "fn": 98,
+        "tn": 775,
+        "precision": 0.6764705882352942,
+        "recall": 0.41317365269461076,
+        "miss_fraction": 0.5868263473053892,
+        "false_positive_rate": 0.04084158415841584,
+        "f2": 0.44805194805194803
+      },
+      "combined": {
+        "tp": 91,
+        "fp": 57,
+        "fn": 76,
+        "tn": 751,
+        "precision": 0.6148648648648649,
+        "recall": 0.5449101796407185,
+        "miss_fraction": 0.45508982035928147,
+        "false_positive_rate": 0.07054455445544554,
+        "f2": 0.5575980392156862
+      },
+      "classifier_only": {
+        "tp": 65,
+        "fp": 34,
+        "fn": 102,
+        "tn": 774,
+        "precision": 0.6565656565656566,
+        "recall": 0.38922155688622756,
+        "miss_fraction": 0.6107784431137724,
+        "false_positive_rate": 0.04207920792079208,
+        "f2": 0.4237288135593221
+      },
+      "additional_positive_photos": 22,
+      "additional_negative_photos": 24,
+      "threshold": 0.86
+    }
+  },
+  "limitation": "Class presence only, no defect localization. Existing source holdout, not external field safety validation."
+}

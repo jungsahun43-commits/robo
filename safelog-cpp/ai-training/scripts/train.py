@@ -25,6 +25,7 @@ def main() -> int:
     parser.add_argument("--patience", type=int, default=25)
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--resume", action="store_true", help="같은 이름의 last.pt에서 이어 학습")
+    parser.add_argument("--facility-refine", action="store_true", help="기존 시설 best.pt를 약한 증강과 낮은 학습률로 미세 조정")
     args = parser.parse_args()
 
     if not args.data.exists():
@@ -51,10 +52,17 @@ def main() -> int:
     )
     if args.device is not None:
         options["device"] = args.device
+    if args.facility_refine:
+        if args.resume:
+            raise SystemExit("미세 조정은 새 실험 이름에서 시작하세요. --resume과 함께 쓸 수 없습니다.")
+        options.update(optimizer="AdamW", lr0=0.0001, lrf=0.1, cos_lr=True,
+                       warmup_epochs=1.0, mosaic=0.0, close_mosaic=0,
+                       scale=0.15, translate=0.05, hsv_h=0.01, hsv_s=0.2, hsv_v=0.2)
     model.train(resume=True, **options) if args.resume else model.train(**options)
     (root / "runs" / args.name / "TRAINING.json").write_text(
         json.dumps({"status": "complete", "model": args.model, "data": str(args.data.resolve()),
-                    "requested_epochs": args.epochs, "seed": 42, "imgsz": args.imgsz}, indent=2), encoding="utf-8"
+                    "requested_epochs": args.epochs, "seed": 42, "imgsz": args.imgsz,
+                    "facility_refine": args.facility_refine}, indent=2), encoding="utf-8"
     )
     return 0
 

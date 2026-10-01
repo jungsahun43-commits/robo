@@ -18,6 +18,7 @@ def main() -> int:
     parser.add_argument("data", type=Path)
     parser.add_argument("--device", default=None)
     parser.add_argument("--imgsz", type=int, default=640)
+    parser.add_argument("--batch", type=int, default=8)
     parser.add_argument("--split", default="test", choices=("train", "val", "test"))
     parser.add_argument("--output", type=Path, default=None)
     args = parser.parse_args()
@@ -31,6 +32,7 @@ def main() -> int:
         "data": str(args.data.resolve()), "split": args.split, "plots": True,
         "project": str(root / "runs" / "evaluations"), "name": f"{run_name}-{args.split}",
         "exist_ok": True, "workers": 0, "imgsz": args.imgsz,
+        "batch": args.batch,
     }
     if args.device is not None:
         options["device"] = args.device

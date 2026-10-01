@@ -4,7 +4,7 @@
 
 1. GitHub `feature/ai-engine`의 최신 커밋.
 2. `ai-training/artifacts/safelog-trained-models.zip` 및 `.zip.sha256` 파일.
-3. 성능 설명은 `reports/FACILITY_TRAINING_RESULTS_KO.md`.
+3. 현재 보강 성능은 `reports/FACILITY_OPTIMIZATION_KO.md`, 초기 기준 성능은 `reports/FACILITY_TRAINING_RESULTS_KO.md`.
 
 학습 데이터 원본과 `.venv`는 전달하지 않아도 된다. 모델 파일은 Git에서 제외되므로
 브랜치 코드만 내려받아서는 시설 모델을 실행할 수 없다.
@@ -13,6 +13,10 @@
 
 ZIP을 `safelog-cpp/ai-training` 안에 풀어 `models/facility-dacl.pt`,
 `models/facility-corrosion.pt`, `models/fire-smoke.pt`가 생기는지 확인한다.
+보강 전달본에는 `models/facility-dacl-optimized.pt`, `models/facility-corrosion-optimized.pt`,
+`reports/facility-inference-profile.json`도 있어야 한다. 가중치와 설정을 함께 전달한다.
+사진 전체 분류 보강은 `models/facility-presence.pt`다. 위치를 확정하지 않은 추가 의견이며
+`detections[].box=null`, `evidence_scope=photo_presence`로 전달된다. null 박스에는 사각형을 그리지 않는다.
 
 ```powershell
 cd safelog-cpp/ai-training
@@ -22,6 +26,10 @@ cd safelog-cpp/ai-training
 
 GPU가 없는 서버 PC는 설치할 때 `./setup_windows.ps1 -CpuOnly`를 사용한다.
 시설 위주 기본 시연 조합은 시설 모델 2개 + 화재·연기 모델이다.
+보강 전달본은 여기에 사진 전체 분류 모델 1개를 함께 사용한다.
+보강 설정이 있으면 검증으로 선택된 가중치·해상도·항목별 탐지 기준을 자동 사용한다.
+`/health`의 `facilityProfile`, `facilityThresholds`, `inferenceSizes`로 적용 여부를 확인한다.
+초기 기준 모델과 비교하려면 실행 명령에 `-BaselineFacilities`를 추가한다.
 PPE까지 함께 사용하려면 `-Facilities`, 보조 PPE까지 모두 쓰려면 `-AllModels`다.
 같은 PC에서만 시험할 때는 `-LocalOnly`를 추가한다.
 

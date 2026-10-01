@@ -1,0 +1,576 @@
+{
+  "profile": {
+    "version": "facility-validation-v2",
+    "selection_split": "val",
+    "weight_resolution_criterion": "maximum validation region mAP50-95; baseline wins exact ties",
+    "threshold_criterion": "photo F2; FPR <= baseline + 0.02, photo/region precision >= baseline - 0.03",
+    "models": {
+      "facility-dacl-optimized": {
+        "source_run": "facility-dacl",
+        "dataset": "dacl10k",
+        "imgsz": 960,
+        "weights_sha256": "b53ad5521f528f47c7beaf33251d3f6aa171bc2ae57cd4133dac5422d364f9d5",
+        "thresholds": {
+          "concrete_crack": 0.24,
+          "concrete_spalling": 0.24,
+          "rust_stain": 0.24,
+          "exposed_rebar": 0.22,
+          "wet_surface": 0.26,
+          "efflorescence": 0.21,
+          "surface_cavity": 0.24
+        }
+      },
+      "facility-corrosion-optimized": {
+        "source_run": "facility-corrosion",
+        "dataset": "ostrava-corrosion",
+        "imgsz": 960,
+        "weights_sha256": "34deb6ced77613fd024127e2757ede949570d9fbe07761fd64013a86463ec2c3",
+        "thresholds": {
+          "metal_corrosion": 0.25
+        }
+      }
+    }
+  },
+  "experiments": [
+    {
+      "model": "facility-dacl-optimized",
+      "candidates": [
+        {
+          "run": "facility-dacl",
+          "imgsz": 960,
+          "map50": 0.22263901065610922,
+          "map50_95": 0.11016947830094102
+        },
+        {
+          "run": "facility-dacl",
+          "imgsz": 1280,
+          "map50": 0.20305267600590496,
+          "map50_95": 0.0937809220921252
+        },
+        {
+          "run": "facility-dacl-refined",
+          "imgsz": 960,
+          "map50": 0.21990071411924908,
+          "map50_95": 0.10622560830897855
+        },
+        {
+          "run": "facility-dacl-refined",
+          "imgsz": 1280,
+          "map50": 0.20264459770853724,
+          "map50_95": 0.09345877826681724
+        }
+      ],
+      "selected": {
+        "run": "facility-dacl",
+        "imgsz": 960,
+        "map50": 0.22263901065610922,
+        "map50_95": 0.11016947830094102
+      },
+      "validation": {
+        "concrete_crack": {
+          "baseline": {
+            "threshold": 0.25,
+            "photo": {
+              "tp": 98,
+              "fp": 10,
+              "fn": 113,
+              "tn": 489,
+              "precision": 0.9074074074074074,
+              "recall": 0.46445497630331756,
+              "miss_fraction": 0.5355450236966824,
+              "false_positive_rate": 0.02004008016032064,
+              "f2": 0.5147058823529412
+            },
+            "region": {
+              "tp": 84,
+              "fp": 79,
+              "fn": 299,
+              "ground_truth_regions": 383,
+              "precision": 0.5153374233128835,
+              "recall": 0.2193211488250653,
+              "false_discovery_fraction": 0.48466257668711654,
+              "miss_fraction": 0.7806788511749347
+            }
+          },
+          "optimized": {
+            "threshold": 0.24,
+            "photo": {
+              "tp": 102,
+              "fp": 13,
+              "fn": 109,
+              "tn": 486,
+              "precision": 0.8869565217391304,
+              "recall": 0.4834123222748815,
+              "miss_fraction": 0.5165876777251185,
+              "false_positive_rate": 0.026052104208416832,
+              "f2": 0.5318039624608968
+            },
+            "region": {
+              "tp": 87,
+              "fp": 90,
+              "fn": 296,
+              "ground_truth_regions": 383,
+              "precision": 0.4915254237288136,
+              "recall": 0.22715404699738903,
+              "false_discovery_fraction": 0.5084745762711864,
+              "miss_fraction": 0.7728459530026109
+            }
+          },
+          "calibration": {
+            "limits": {
+              "photo_fpr_max": 0.04004008016032064,
+              "photo_precision_min": 0.8774074074074074,
+              "region_precision_min": 0.48533742331288343
+            },
+            "eligible_thresholds": 57,
+            "reason": "max validation photo F2 under alarm/precision limits"
+          }
+        },
+        "concrete_spalling": {
+          "baseline": {
+            "threshold": 0.25,
+            "photo": {
+              "tp": 171,
+              "fp": 37,
+              "fn": 153,
+              "tn": 349,
+              "precision": 0.8221153846153846,
+              "recall": 0.5277777777777778,
+              "miss_fraction": 0.4722222222222222,
+              "false_positive_rate": 0.09585492227979274,
+              "f2": 0.5684840425531916
+            },
+            "region": {
+              "tp": 169,
+              "fp": 171,
+              "fn": 572,
+              "ground_truth_regions": 741,
+              "precision": 0.4970588235294118,
+              "recall": 0.22807017543859648,
+              "false_discovery_fraction": 0.5029411764705882,
+              "miss_fraction": 0.7719298245614035
+            }
+          },
+          "optimized": {
+            "threshold": 0.24,
+            "photo": {
+              "tp": 175,
+              "fp": 40,
+              "fn": 149,
+              "tn": 346,
+              "precision": 0.813953488372093,
+              "recall": 0.5401234567901234,
+              "miss_fraction": 0.4598765432098766,
+              "false_positive_rate": 0.10362694300518134,
+              "f2": 0.5790866975512905
+            },
+            "region": {
+              "tp": 171,
+              "fp": 187,
+              "fn": 570,
+              "ground_truth_regions": 741,
+              "precision": 0.4776536312849162,
+              "recall": 0.23076923076923078,
+              "false_discovery_fraction": 0.5223463687150838,
+              "miss_fraction": 0.7692307692307692
+            }
+          },
+          "calibration": {
+            "limits": {
+              "photo_fpr_max": 0.11585492227979274,
+              "photo_precision_min": 0.7921153846153846,
+              "region_precision_min": 0.46705882352941175
+            },
+            "eligible_thresholds": 57,
+            "reason": "max validation photo F2 under alarm/precision limits"
+          }
+        },
+        "rust_stain": {
+          "baseline": {
+            "threshold": 0.25,
+            "photo": {
+              "tp": 257,
+              "fp": 35,
+              "fn": 109,
+              "tn": 309,
+              "precision": 0.8801369863013698,
+              "recall": 0.7021857923497268,
+              "miss_fraction": 0.2978142076502732,
+              "false_positive_rate": 0.10174418604651163,
+              "f2": 0.7317767653758543
+            },
+            "region": {
+              "tp": 424,
+              "fp": 356,
+              "fn": 839,
+              "ground_truth_regions": 1263,
+              "precision": 0.5435897435897435,
+              "recall": 0.33570863024544734,
+              "false_discovery_fraction": 0.45641025641025645,
+              "miss_fraction": 0.6642913697545527
+            }
+          },
+          "optimized": {
+            "threshold": 0.24,
+            "photo": {
+              "tp": 263,
+              "fp": 38,
+              "fn": 103,
+              "tn": 306,
+              "precision": 0.8737541528239202,
+              "recall": 0.7185792349726776,
+              "miss_fraction": 0.2814207650273224,
+              "false_positive_rate": 0.11046511627906977,
+              "f2": 0.7450424929178471
+            },
+            "region": {
+              "tp": 432,
+              "fp": 386,
+              "fn": 831,
+              "ground_truth_regions": 1263,
+              "precision": 0.5281173594132029,
+              "recall": 0.342042755344418,
+              "false_discovery_fraction": 0.4718826405867971,
+              "miss_fraction": 0.6579572446555819
+            }
+          },
+          "calibration": {
+            "limits": {
+              "photo_fpr_max": 0.12174418604651163,
+              "photo_precision_min": 0.8501369863013698,
+              "region_precision_min": 0.5135897435897435
+            },
+            "eligible_thresholds": 57,
+            "reason": "max validation photo F2 under alarm/precision limits"
+          }
+        },
+        "exposed_rebar": {
+          "baseline": {
+            "threshold": 0.25,
+            "photo": {
+              "tp": 29,
+              "fp": 2,
+              "fn": 51,
+              "tn": 628,
+              "precision": 0.9354838709677419,
+              "recall": 0.3625,
+              "miss_fraction": 0.6375,
+              "false_positive_rate": 0.0031746031746031746,
+              "f2": 0.41310541310541304
+            },
+            "region": {
+              "tp": 24,
+              "fp": 22,
+              "fn": 133,
+              "ground_truth_regions": 157,
+              "precision": 0.5217391304347826,
+              "recall": 0.15286624203821655,
+              "false_discovery_fraction": 0.4782608695652174,
+              "miss_fraction": 0.8471337579617835
+            }
+          },
+          "optimized": {
+            "threshold": 0.22,
+            "photo": {
+              "tp": 33,
+              "fp": 2,
+              "fn": 47,
+              "tn": 628,
+              "precision": 0.9428571428571428,
+              "recall": 0.4125,
+              "miss_fraction": 0.5875,
+              "false_positive_rate": 0.0031746031746031746,
+              "f2": 0.46478873239436624
+            },
+            "region": {
+              "tp": 29,
+              "fp": 25,
+              "fn": 128,
+              "ground_truth_regions": 157,
+              "precision": 0.5370370370370371,
+              "recall": 0.18471337579617833,
+              "false_discovery_fraction": 0.4629629629629629,
+              "miss_fraction": 0.8152866242038217
+            }
+          },
+          "calibration": {
+            "limits": {
+              "photo_fpr_max": 0.023174603174603174,
+              "photo_precision_min": 0.9054838709677419,
+              "region_precision_min": 0.49173913043478257
+            },
+            "eligible_thresholds": 40,
+            "reason": "max validation photo F2 under alarm/precision limits"
+          }
+        },
+        "wet_surface": {
+          "baseline": {
+            "threshold": 0.25,
+            "photo": {
+              "tp": 30,
+              "fp": 16,
+              "fn": 66,
+              "tn": 598,
+              "precision": 0.6521739130434783,
+              "recall": 0.3125,
+              "miss_fraction": 0.6875,
+              "false_positive_rate": 0.026058631921824105,
+              "f2": 0.3488372093023256
+            },
+            "region": {
+              "tp": 19,
+              "fp": 43,
+              "fn": 148,
+              "ground_truth_regions": 167,
+              "precision": 0.3064516129032258,
+              "recall": 0.11377245508982035,
+              "false_discovery_fraction": 0.6935483870967742,
+              "miss_fraction": 0.8862275449101796
+            }
+          },
+          "optimized": {
+            "threshold": 0.26,
+            "photo": {
+              "tp": 30,
+              "fp": 15,
+              "fn": 66,
+              "tn": 599,
+              "precision": 0.6666666666666666,
+              "recall": 0.3125,
+              "miss_fraction": 0.6875,
+              "false_positive_rate": 0.024429967426710098,
+              "f2": 0.34965034965034963
+            },
+            "region": {
+              "tp": 19,
+              "fp": 41,
+              "fn": 148,
+              "ground_truth_regions": 167,
+              "precision": 0.31666666666666665,
+              "recall": 0.11377245508982035,
+              "false_discovery_fraction": 0.6833333333333333,
+              "miss_fraction": 0.8862275449101796
+            }
+          },
+          "calibration": {
+            "limits": {
+              "photo_fpr_max": 0.046058631921824106,
+              "photo_precision_min": 0.6221739130434782,
+              "region_precision_min": 0.27645161290322584
+            },
+            "eligible_thresholds": 40,
+            "reason": "max validation photo F2 under alarm/precision limits"
+          }
+        },
+        "efflorescence": {
+          "baseline": {
+            "threshold": 0.25,
+            "photo": {
+              "tp": 93,
+              "fp": 28,
+              "fn": 66,
+              "tn": 523,
+              "precision": 0.768595041322314,
+              "recall": 0.5849056603773585,
+              "miss_fraction": 0.41509433962264153,
+              "false_positive_rate": 0.050816696914700546,
+              "f2": 0.6142668428005283
+            },
+            "region": {
+              "tp": 80,
+              "fp": 124,
+              "fn": 310,
+              "ground_truth_regions": 390,
+              "precision": 0.39215686274509803,
+              "recall": 0.20512820512820512,
+              "false_discovery_fraction": 0.607843137254902,
+              "miss_fraction": 0.7948717948717949
+            }
+          },
+          "optimized": {
+            "threshold": 0.21,
+            "photo": {
+              "tp": 100,
+              "fp": 32,
+              "fn": 59,
+              "tn": 519,
+              "precision": 0.7575757575757576,
+              "recall": 0.6289308176100629,
+              "miss_fraction": 0.37106918238993714,
+              "false_positive_rate": 0.05807622504537205,
+              "f2": 0.6510416666666667
+            },
+            "region": {
+              "tp": 90,
+              "fp": 157,
+              "fn": 300,
+              "ground_truth_regions": 390,
+              "precision": 0.3643724696356275,
+              "recall": 0.23076923076923078,
+              "false_discovery_fraction": 0.6356275303643725,
+              "miss_fraction": 0.7692307692307692
+            }
+          },
+          "calibration": {
+            "limits": {
+              "photo_fpr_max": 0.07081669691470055,
+              "photo_precision_min": 0.738595041322314,
+              "region_precision_min": 0.36215686274509806
+            },
+            "eligible_thresholds": 60,
+            "reason": "max validation photo F2 under alarm/precision limits"
+          }
+        },
+        "surface_cavity": {
+          "baseline": {
+            "threshold": 0.25,
+            "photo": {
+              "tp": 37,
+              "fp": 17,
+              "fn": 69,
+              "tn": 587,
+              "precision": 0.6851851851851852,
+              "recall": 0.3490566037735849,
+              "miss_fraction": 0.6509433962264151,
+              "false_positive_rate": 0.028145695364238412,
+              "f2": 0.38702928870292885
+            },
+            "region": {
+              "tp": 50,
+              "fp": 116,
+              "fn": 598,
+              "ground_truth_regions": 648,
+              "precision": 0.30120481927710846,
+              "recall": 0.07716049382716049,
+              "false_discovery_fraction": 0.6987951807228916,
+              "miss_fraction": 0.9228395061728395
+            }
+          },
+          "optimized": {
+            "threshold": 0.24,
+            "photo": {
+              "tp": 40,
+              "fp": 19,
+              "fn": 66,
+              "tn": 585,
+              "precision": 0.6779661016949152,
+              "recall": 0.37735849056603776,
+              "miss_fraction": 0.6226415094339622,
+              "false_positive_rate": 0.03145695364238411,
+              "f2": 0.41407867494824024
+            },
+            "region": {
+              "tp": 54,
+              "fp": 139,
+              "fn": 594,
+              "ground_truth_regions": 648,
+              "precision": 0.27979274611398963,
+              "recall": 0.08333333333333333,
+              "false_discovery_fraction": 0.7202072538860104,
+              "miss_fraction": 0.9166666666666666
+            }
+          },
+          "calibration": {
+            "limits": {
+              "photo_fpr_max": 0.04814569536423841,
+              "photo_precision_min": 0.6551851851851852,
+              "region_precision_min": 0.2712048192771085
+            },
+            "eligible_thresholds": 37,
+            "reason": "max validation photo F2 under alarm/precision limits"
+          }
+        }
+      }
+    },
+    {
+      "model": "facility-corrosion-optimized",
+      "candidates": [
+        {
+          "run": "facility-corrosion",
+          "imgsz": 960,
+          "map50": 0.2999436754207345,
+          "map50_95": 0.1403736372371827
+        },
+        {
+          "run": "facility-corrosion",
+          "imgsz": 1280,
+          "map50": 0.18807478153014628,
+          "map50_95": 0.09087210727369337
+        },
+        {
+          "run": "facility-corrosion-refined",
+          "imgsz": 960,
+          "map50": 0.285013102938204,
+          "map50_95": 0.13574849504118242
+        },
+        {
+          "run": "facility-corrosion-refined",
+          "imgsz": 1280,
+          "map50": 0.1899587027566143,
+          "map50_95": 0.0914330253132021
+        }
+      ],
+      "selected": {
+        "run": "facility-corrosion",
+        "imgsz": 960,
+        "map50": 0.2999436754207345,
+        "map50_95": 0.1403736372371827
+      },
+      "validation": {
+        "metal_corrosion": {
+          "baseline": {
+            "threshold": 0.25,
+            "photo": {
+              "tp": 13,
+              "fp": 0,
+              "fn": 2,
+              "tn": 0,
+              "precision": 1.0,
+              "recall": 0.8666666666666667,
+              "miss_fraction": 0.1333333333333333,
+              "false_positive_rate": null,
+              "f2": 0.8904109589041096
+            },
+            "region": {
+              "tp": 20,
+              "fp": 14,
+              "fn": 67,
+              "ground_truth_regions": 87,
+              "precision": 0.5882352941176471,
+              "recall": 0.22988505747126436,
+              "false_discovery_fraction": 0.4117647058823529,
+              "miss_fraction": 0.7701149425287357
+            }
+          },
+          "optimized": {
+            "threshold": 0.25,
+            "photo": {
+              "tp": 13,
+              "fp": 0,
+              "fn": 2,
+              "tn": 0,
+              "precision": 1.0,
+              "recall": 0.8666666666666667,
+              "miss_fraction": 0.1333333333333333,
+              "false_positive_rate": null,
+              "f2": 0.8904109589041096
+            },
+            "region": {
+              "tp": 20,
+              "fp": 14,
+              "fn": 67,
+              "ground_truth_regions": 87,
+              "precision": 0.5882352941176471,
+              "recall": 0.22988505747126436,
+              "false_discovery_fraction": 0.4117647058823529,
+              "miss_fraction": 0.7701149425287357
+            }
+          },
+          "calibration": {
+            "reason": "no negative validation photos; keep 0.25"
+          }
+        }
+      }
+    }
+  ]
+}
