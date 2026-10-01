@@ -1,0 +1,13 @@
+{
+  "title": "synth-dacl: Synthetic Extensions for dacl10k Dataset — synthcavity",
+  "homepage": "https://doi.org/10.60776/9D6E4M",
+  "metadata_url": "https://open-data.unibw.de/api/datasets/:persistentId/?persistentId=doi:10.60776/9D6E4M",
+  "paper": "https://arxiv.org/abs/2506.14255",
+  "license": "CC BY-NC 4.0",
+  "citation": "Flotzinger, Deuser and Jaziri (2025), synth-dacl: Synthetic Extensions for dacl10k Dataset, DOI:10.60776/9D6E4M",
+  "scope": "Procedurally rendered concrete cavities; supplemental TRAIN data, never evidence of real-site performance. Only the Cavity target is supervised; all other SafeLog labels remain unknown.",
+  "files": [
+    {"name": "synthcavity_1.zip", "url": "https://open-data.unibw.de/api/access/datafile/6816", "bytes": 3064223298, "md5": "74c5ef64da4eb15ab1d9d315ec5fb032"},
+    {"name": "synthcavity_2.zip", "url": "https://open-data.unibw.de/api/access/datafile/6817", "bytes": 4621400855, "md5": "db960c01425c0e518a066430dabc0c35"}
+  ]
+}
