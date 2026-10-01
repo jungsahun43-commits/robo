@@ -1,0 +1,13 @@
+{
+  "status": "kept_round1",
+  "active_version": "facility-validation-v2",
+  "candidate_sha256": "2317ac8016a99c0348237e1dc089de54b849d9fc6324c450dfd74bde141dae3f",
+  "criterion": "Every label's FP and FN must not increase; at least one must decrease",
+  "reason": "Per-label test acceptance failed",
+  "label_photo_counts": {
+    "round1_fp": 309,
+    "round1_fn": 732,
+    "round3_fp": 312,
+    "round3_fn": 729
+  }
+}

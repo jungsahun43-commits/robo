@@ -1,0 +1,89 @@
+{
+  "split": "val",
+  "images": 710,
+  "profile_sha256": "2317ac8016a99c0348237e1dc089de54b849d9fc6324c450dfd74bde141dae3f",
+  "per_class": {
+    "wet_surface": {
+      "round1": {
+        "tp": 33,
+        "fp": 18,
+        "fn": 63,
+        "tn": 596,
+        "precision": 0.6470588235294118,
+        "recall": 0.34375,
+        "miss_fraction": 0.65625,
+        "false_positive_rate": 0.029315960912052116,
+        "f2": 0.3793103448275862
+      },
+      "eligible": false,
+      "candidate_under_fpr_cap": {
+        "threshold": 0.97,
+        "metrics": {
+          "tp": 33,
+          "fp": 18,
+          "fn": 63,
+          "tn": 596,
+          "precision": 0.6470588235294118,
+          "recall": 0.34375,
+          "miss_fraction": 0.65625,
+          "false_positive_rate": 0.029315960912052116,
+          "f2": 0.3793103448275862
+        }
+      },
+      "threshold": 0.98,
+      "selected": {
+        "tp": 33,
+        "fp": 18,
+        "fn": 63,
+        "tn": 596,
+        "precision": 0.6470588235294118,
+        "recall": 0.34375,
+        "miss_fraction": 0.65625,
+        "false_positive_rate": 0.029315960912052116,
+        "f2": 0.3793103448275862
+      }
+    },
+    "surface_cavity": {
+      "round1": {
+        "tp": 59,
+        "fp": 30,
+        "fn": 47,
+        "tn": 574,
+        "precision": 0.6629213483146067,
+        "recall": 0.5566037735849056,
+        "miss_fraction": 0.44339622641509435,
+        "false_positive_rate": 0.04966887417218543,
+        "f2": 0.5750487329434697
+      },
+      "eligible": true,
+      "candidate_under_fpr_cap": {
+        "threshold": 0.86,
+        "metrics": {
+          "tp": 62,
+          "fp": 24,
+          "fn": 44,
+          "tn": 580,
+          "precision": 0.7209302325581395,
+          "recall": 0.5849056603773585,
+          "miss_fraction": 0.41509433962264153,
+          "false_positive_rate": 0.039735099337748346,
+          "f2": 0.607843137254902
+        }
+      },
+      "threshold": 0.86,
+      "selected": {
+        "tp": 62,
+        "fp": 24,
+        "fn": 44,
+        "tn": 580,
+        "precision": 0.7209302325581395,
+        "recall": 0.5849056603773585,
+        "miss_fraction": 0.41509433962264153,
+        "false_positive_rate": 0.039735099337748346,
+        "f2": 0.607843137254902
+      }
+    }
+  },
+  "eligible_heads": 1,
+  "criterion": "FPR does not increase and FNR falls by at least 2 percentage points; wet/cavity heads only"
+}

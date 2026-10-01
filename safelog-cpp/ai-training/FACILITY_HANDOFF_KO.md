@@ -12,6 +12,11 @@
 이번에 다시 만든 기본 ZIP도 동일한 가중치를 포함하며 2차 비교 결과를 추가했다.
 `facility-inference-profile-round2-candidate.json` 또는 round2-candidate ZIP은 앱에 적용하지 않는다.
 
+3차 합성 공동 보강도 시험에서 오탐이 증가해 채택하지 않았다.
+`reports/FACILITY_ROUND3_KO.md`에 결과와 재현 절차를 남겼다. 기본 모델과 ZIP 가중치는 동일하다.
+역할 4가 다음 현장 피드백을 연결할 때는 `FIELD_FEEDBACK_KO.md`의 항목별 정답과
+현장/촬영 회차/전후 묶음을 함께 전달한다. 이 문서가 앱 DB/API 변경 구현을 의미하지는 않는다.
+
 학습 데이터 원본과 `.venv`는 전달하지 않아도 된다. 모델 파일은 Git에서 제외되므로
 브랜치 코드만 내려받아서는 시설 모델을 실행할 수 없다.
 

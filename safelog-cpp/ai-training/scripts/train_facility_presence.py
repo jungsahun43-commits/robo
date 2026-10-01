@@ -43,6 +43,40 @@ class Photos(Dataset):
         return data, self.targets[i], self.paths[i].name
 
 
+class SupplementalPhotos(Dataset):
+    """Keep publisher-unannotated labels out of the gradient (unknown != negative)."""
+    def __init__(self, original: Photos, manifest: Path, weight: float):
+        self.original = original
+        self.manifest = json.loads(manifest.read_text(encoding="utf-8"))
+        if self.manifest["split"] != "train" or self.manifest["classes"] != original.classes:
+            raise ValueError("Supplemental data must use train-only labels in the same order")
+        self.items = self.manifest["items"]
+        self.weight = weight
+
+    def __len__(self): return len(self.original) + len(self.items)
+
+    def __getitem__(self, i):
+        if i < len(self.original):
+            image, target, name = self.original[i]
+            return image, target, name, torch.ones_like(target), 1.
+        item = self.items[i - len(self.original)]
+        target = torch.tensor(item["targets"], dtype=torch.float32)
+        known = (target >= 0).float()
+        if not known.any(): raise ValueError("Supplemental sample has no known targets")
+        with Image.open(ROOT / item["image"]) as handle:
+            image = self.original.transform(handle.convert("RGB"))
+        return image, target.clamp_min(0), item["image"], known, self.weight
+
+
+def partial_label_loss(logits, labels, known, sample_weights, positive_weights):
+    """Per-photo average of known labels only; synthetic targets never supervise others."""
+    bce = torch.nn.functional.binary_cross_entropy_with_logits(logits, labels, reduction="none")
+    original = known.bool().all(dim=1, keepdim=True)
+    pos = torch.where(original, positive_weights.unsqueeze(0), 1.)
+    bce = bce * torch.where(labels > 0, pos, 1.)
+    return ((bce * known).sum(1) / known.sum(1).clamp_min(1) * sample_weights).mean()
+
+
 def average_precision(target: np.ndarray, scores: np.ndarray) -> float | None:
     """Non-interpolated binary AP, grouped at tied score boundaries."""
     positives = target.sum()
@@ -77,7 +111,11 @@ def main():
     parser.add_argument("--initial", type=Path)
     parser.add_argument("--hard-negatives", action="store_true", help="오답 점수가 높은 음성 항목의 손실을 강화")
     parser.add_argument("--patience", type=int, default=5)
+    parser.add_argument("--extra-manifest", type=Path, help="Train-only supplemental data; unknown targets use -1")
+    parser.add_argument("--extra-weight", type=float, default=.2)
     args = parser.parse_args()
+    if not 0 < args.extra_weight <= 1 or (args.extra_manifest and args.hard_negatives):
+        raise SystemExit("Use supplemental BCE with weight in (0,1], separately from hard-negatives")
     if Path(args.name).name != args.name:
         raise SystemExit("Experiment name must be a single directory name")
     output = ROOT / "runs" / args.name
@@ -90,7 +128,8 @@ def main():
     device = torch.device(args.device)
     train, val = Photos("train", args.imgsz, True), Photos("val", args.imgsz)
     generator = torch.Generator().manual_seed(42)
-    train_loader = DataLoader(train, batch_size=args.batch, shuffle=True, num_workers=4,
+    training_data = SupplementalPhotos(train, args.extra_manifest, args.extra_weight) if args.extra_manifest else train
+    train_loader = DataLoader(training_data, batch_size=args.batch, shuffle=True, num_workers=4,
                               pin_memory=device.type == "cuda", persistent_workers=True, generator=generator)
     val_loader = DataLoader(val, batch_size=args.batch, num_workers=4, persistent_workers=True)
     model = build_model(len(train.classes), pretrained=args.initial is None).to(device)
@@ -116,11 +155,14 @@ def main():
         if epoch == 1 and args.initial is None:
             model.features.eval()  # Frozen features also keep pretrained BatchNorm statistics.
         total = 0.
-        for image, target, _ in train_loader:
+        for batch in train_loader:
+            image, target, _ = batch[:3]
             optimizer.zero_grad(set_to_none=True)
             with torch.autocast(device_type=device.type, enabled=amp):
                 logits, labels = model(image.to(device)), target.to(device)
-                if args.hard_negatives:
+                if args.extra_manifest:
+                    loss = partial_label_loss(logits, labels, batch[3].to(device), batch[4].to(device), weights)
+                elif args.hard_negatives:
                     # Use train labels only. No validation/test photos enter the optimizer.
                     # Hard negatives receive up to 3x weight; positive targets remain 1x.
                     bce = torch.nn.functional.binary_cross_entropy_with_logits(logits, labels, reduction="none")
@@ -135,7 +177,7 @@ def main():
         per_class = {name: average_precision(target[:, i], probability[:, i]) for i, name in enumerate(train.classes)}
         metric = float(np.mean([v for v in per_class.values() if v is not None]))
         row = {"epoch": epoch, "elapsed_minutes": (time.perf_counter() - started) / 60,
-               "train_loss": total / len(train), "val_macro_average_precision": metric, "per_class": per_class}
+               "train_loss": total / len(training_data), "val_macro_average_precision": metric, "per_class": per_class}
         history.append(row)
         print(json.dumps(row), flush=True)
         if metric > best:
@@ -153,6 +195,9 @@ def main():
         "seed": 42, "requested_epochs": args.epochs, "actual_epochs": len(history), "imgsz": args.imgsz,
         "best_val_macro_average_precision": best, "label_type": "multi-label photo presence, not defect localization",
         "initial_weights": str(args.initial) if args.initial else None, "hard_negatives": args.hard_negatives,
+        "supplemental_images": len(training_data) - len(train),
+        "supplemental_manifest": str(args.extra_manifest) if args.extra_manifest else None,
+        "supplemental_weight": args.extra_weight if args.extra_manifest else None,
         "pretrained_weights": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
         "pretrained_documentation": "https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.efficientnet_b0.html",
         "training_positive_photos": dict(zip(train.classes, positives.int().tolist()))}, indent=2))

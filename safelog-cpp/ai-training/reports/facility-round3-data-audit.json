@@ -1,0 +1,31 @@
+{
+  "status": "prepared",
+  "split": "train",
+  "source": "https://doi.org/10.60776/9D6E4M",
+  "license": "CC BY-NC 4.0",
+  "rendered_rgb_candidates": 5000,
+  "supplemental_images": 5000,
+  "positive_cavity_photos": 5000,
+  "negative_cavity_photos": 0,
+  "duplicate_pixels_removed": 0,
+  "procedural_scenes": 2500,
+  "overlap_with_dacl_train_val_test": 0,
+  "verified_files": [
+    {
+      "name": "synthcavity_1.zip",
+      "url": "https://open-data.unibw.de/api/access/datafile/6816",
+      "bytes": 3064223298,
+      "md5": "74c5ef64da4eb15ab1d9d315ec5fb032",
+      "sha256": "d9c9432f6f66a199e5f7c4776ec678baed217f2bd8818447a68dccd8015150a5"
+    },
+    {
+      "name": "synthcavity_2.zip",
+      "url": "https://open-data.unibw.de/api/access/datafile/6817",
+      "bytes": 4621400855,
+      "md5": "db960c01425c0e518a066430dabc0c35",
+      "sha256": "d6ef42eb4be6aced05a174f3c4045bf5757e2ca2a0b5e791ce26dd6b21ea5a62"
+    }
+  ],
+  "label_policy": "Only cavity presence from gt_cavity OR gt_render_cavities; six unannotated classes remain -1 (unknown).",
+  "scope": "Procedural supplemental TRAIN photos, not real field photos or independent validation."
+}

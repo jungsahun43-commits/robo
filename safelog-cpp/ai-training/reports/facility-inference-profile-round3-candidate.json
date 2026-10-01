@@ -1,0 +1,87 @@
+{
+  "version": "facility-validation-v4",
+  "selection_split": "val",
+  "weight_resolution_criterion": "maximum validation region mAP50-95; baseline wins exact ties",
+  "threshold_criterion": "photo F2; FPR <= baseline + 0.02, photo/region precision >= baseline - 0.03",
+  "models": {
+    "facility-dacl-optimized": {
+      "source_run": "facility-dacl",
+      "dataset": "dacl10k",
+      "imgsz": 960,
+      "weights_sha256": "b53ad5521f528f47c7beaf33251d3f6aa171bc2ae57cd4133dac5422d364f9d5",
+      "thresholds": {
+        "concrete_crack": 0.24,
+        "concrete_spalling": 0.24,
+        "rust_stain": 0.24,
+        "exposed_rebar": 0.22,
+        "wet_surface": 0.26,
+        "efflorescence": 0.21,
+        "surface_cavity": 0.24
+      }
+    },
+    "facility-corrosion-optimized": {
+      "source_run": "facility-corrosion",
+      "dataset": "ostrava-corrosion",
+      "imgsz": 960,
+      "weights_sha256": "34deb6ced77613fd024127e2757ede949570d9fbe07761fd64013a86463ec2c3",
+      "thresholds": {
+        "metal_corrosion": 0.25
+      }
+    }
+  },
+  "photo_classifier": {
+    "model": "facility-presence",
+    "architecture": "efficientnet_b0_multilabel_v1",
+    "weights_sha256": "2dfebb3130619b03f6d6a25e95b221cb85c3349d7023e3d216d1d8069fafd6b7",
+    "imgsz": 384,
+    "thresholds": {
+      "concrete_crack": 0.97,
+      "concrete_spalling": 0.88,
+      "rust_stain": 0.75,
+      "exposed_rebar": 1.0,
+      "wet_surface": 0.98,
+      "efflorescence": 0.93,
+      "surface_cavity": 1.0
+    },
+    "evidence_scope": "photo_presence_without_location",
+    "selection_split": "val"
+  },
+  "feedback_round": 3,
+  "evaluation_report": "facility-round3-test.json",
+  "photo_classifiers": [
+    {
+      "model": "facility-presence",
+      "architecture": "efficientnet_b0_multilabel_v1",
+      "weights_sha256": "2dfebb3130619b03f6d6a25e95b221cb85c3349d7023e3d216d1d8069fafd6b7",
+      "imgsz": 384,
+      "thresholds": {
+        "concrete_crack": 0.97,
+        "concrete_spalling": 0.88,
+        "rust_stain": 0.75,
+        "exposed_rebar": 1.0,
+        "wet_surface": 0.98,
+        "efflorescence": 0.93,
+        "surface_cavity": 1.0
+      },
+      "evidence_scope": "photo_presence_without_location",
+      "selection_split": "val"
+    },
+    {
+      "model": "facility-presence-synthetic",
+      "architecture": "efficientnet_b0_multilabel_v1",
+      "weights_sha256": "a353ebcf19d7b7214cd91cea2930e25ef109dab999142fc9ef26ba26c3efd15d",
+      "imgsz": 512,
+      "thresholds": {
+        "concrete_crack": 1.0,
+        "concrete_spalling": 1.0,
+        "rust_stain": 1.0,
+        "exposed_rebar": 1.0,
+        "wet_surface": 1.0,
+        "efflorescence": 1.0,
+        "surface_cavity": 0.86
+      },
+      "evidence_scope": "photo_presence_without_location",
+      "selection_split": "val"
+    }
+  ]
+}

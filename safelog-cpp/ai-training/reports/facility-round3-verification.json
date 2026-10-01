@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "scope": "unadopted round3 classifier ONNX/PyTorch CPU parity; not accuracy or Android verification",
+  "classifier": "facility-presence-synthetic",
+  "max_probability_difference": 1.7449259757995605e-05,
+  "dynamic_batch_shape": [
+    2,
+    7
+  ],
+  "weights_sha256": "a353ebcf19d7b7214cd91cea2930e25ef109dab999142fc9ef26ba26c3efd15d",
+  "onnx_sha256": "c910563ac32c3055764b0ba5d323b724f993532b1cd02a026c65ccd956f06247",
+  "test_candidate_checksum_matches": true,
+  "default_profile_unchanged": true
+}
