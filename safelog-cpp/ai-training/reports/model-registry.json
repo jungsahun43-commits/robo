@@ -1,0 +1,112 @@
+[
+  {
+    "name": "ppe-baseline",
+    "files": [
+      {
+        "path": "models/ppe-baseline.pt",
+        "bytes": 5480154,
+        "sha256": "cde1aecfa3a01197f3bf149d79c946943dd07333b40e0e23140ab370de0560d1"
+      },
+      {
+        "path": "models/ppe-baseline.onnx",
+        "bytes": 10964167,
+        "sha256": "1736243720d27cd0dca580f6ce9060bf76c6bbedd4c2186b63a3d34bf0ea2503"
+      }
+    ],
+    "evaluation_split": "test",
+    "metrics": {
+      "precision": 0.6806310929476281,
+      "recall": 0.5355915445896883,
+      "map50": 0.5346726027906953,
+      "map50_95": 0.2630893233957342
+    }
+  },
+  {
+    "name": "fire-smoke",
+    "files": [
+      {
+        "path": "models/fire-smoke.pt",
+        "bytes": 5455386,
+        "sha256": "dbba22fcc39c6359abd87dc1a9d6923bba6c8262117951110b6b395ce0b0cd14"
+      },
+      {
+        "path": "models/fire-smoke.onnx",
+        "bytes": 10872341,
+        "sha256": "0fdf4d7f29ef08f19468411544b17cdcb0d76080de3782c2811a5c400fbe5bbc"
+      }
+    ],
+    "evaluation_split": "test",
+    "metrics": {
+      "precision": 0.8766558621532627,
+      "recall": 0.8035541077213082,
+      "map50": 0.8784872395909726,
+      "map50_95": 0.5498695799233635
+    }
+  },
+  {
+    "name": "chvg-ppe",
+    "files": [
+      {
+        "path": "models/chvg-ppe.pt",
+        "bytes": 5481626,
+        "sha256": "06a5ae37b4433aedd914a2032f596996c50cd5b32de7c099e7865ec048ad993f"
+      },
+      {
+        "path": "models/chvg-ppe.onnx",
+        "bytes": 11561251,
+        "sha256": "447a459e02764b231c75dd217d10c922462e4b67f349469aa26f5f4cf39d11bf"
+      }
+    ],
+    "evaluation_split": "test",
+    "metrics": {
+      "precision": 0.8936757402758354,
+      "recall": 0.8719237169204945,
+      "map50": 0.9160265136027554,
+      "map50_95": 0.5880498255178612
+    }
+  },
+  {
+    "name": "sh17-ppe",
+    "files": [
+      {
+        "path": "models/sh17-ppe.pt",
+        "bytes": 19180058,
+        "sha256": "438d0443e284a6f4ef699dc7b8d7b297d72d0a4f8c8236b4f3874446cb26a2c7"
+      },
+      {
+        "path": "models/sh17-ppe.onnx",
+        "bytes": 38013814,
+        "sha256": "e9211a9a141764289ad10a7ae42a7b246091b674bfc41169e755651f1c980d59"
+      }
+    ],
+    "evaluation_split": "val",
+    "metrics": {
+      "precision": 0.735426215953407,
+      "recall": 0.5826670112457805,
+      "map50": 0.637398009171022,
+      "map50_95": 0.4112840000307237
+    }
+  },
+  {
+    "name": "ppe-sh17-transfer",
+    "files": [
+      {
+        "path": "models/ppe-sh17-transfer.pt",
+        "bytes": 19188122,
+        "sha256": "a1018b8ee1147dfa74c5d84e09575ffe67aa2fe39792b1a42a1e9b66e7b13604"
+      },
+      {
+        "path": "models/ppe-sh17-transfer.onnx",
+        "bytes": 38004443,
+        "sha256": "cfe03fb89220046c45d5a45a4993a09c31eda2c87ea2ff0d8b9d3df4ef78d327"
+      }
+    ],
+    "evaluation_split": "test",
+    "metrics": {
+      "precision": 0.6268510101592702,
+      "recall": 0.5689072052910045,
+      "map50": 0.5687903420756865,
+      "map50_95": 0.2797166719192176
+    }
+  }
+]

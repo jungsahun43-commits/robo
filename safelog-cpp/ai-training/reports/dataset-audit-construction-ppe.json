@@ -1,0 +1,72 @@
+{
+  "yaml": "data\\construction-ppe\\data.yaml",
+  "classes": {
+    "0": "helmet",
+    "1": "gloves",
+    "2": "vest",
+    "3": "boots",
+    "4": "goggles",
+    "5": "none",
+    "6": "Person",
+    "7": "no_helmet",
+    "8": "no_goggle",
+    "9": "no_gloves",
+    "10": "no_boots"
+  },
+  "splits": {
+    "train": {
+      "images": 1132,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 1341,
+        "1": 1146,
+        "2": 1269,
+        "3": 1235,
+        "4": 419,
+        "5": 651,
+        "6": 1770,
+        "7": 400,
+        "8": 337,
+        "9": 442,
+        "10": 88
+      }
+    },
+    "val": {
+      "images": 143,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 201,
+        "1": 136,
+        "2": 171,
+        "3": 151,
+        "4": 47,
+        "5": 81,
+        "6": 239,
+        "7": 45,
+        "8": 41,
+        "9": 56,
+        "10": 4
+      }
+    },
+    "test": {
+      "images": 141,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 192,
+        "1": 163,
+        "2": 178,
+        "3": 211,
+        "4": 52,
+        "5": 65,
+        "6": 236,
+        "7": 40,
+        "8": 33,
+        "9": 58,
+        "10": 23
+      }
+    }
+  }
+}

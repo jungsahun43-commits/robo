@@ -1,0 +1,36 @@
+{
+  "yaml": "data\\indoor-fire-smoke\\data.yaml",
+  "classes": {
+    "0": "fire",
+    "1": "smoke"
+  },
+  "splits": {
+    "train": {
+      "images": 3500,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 2504,
+        "1": 2342
+      }
+    },
+    "val": {
+      "images": 750,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 547,
+        "1": 496
+      }
+    },
+    "test": {
+      "images": 750,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 541,
+        "1": 505
+      }
+    }
+  }
+}

@@ -9,11 +9,12 @@ function Train-Evaluate-Export {
     param(
         [string]$Data,
         [string]$Name,
-        [int]$Epochs = 100
+        [int]$Epochs = 100,
+        [string]$BaseModel = "yolo11n.pt"
     )
     $ResumeArgs = @()
     if (Test-Path "runs/$Name/weights/last.pt") { $ResumeArgs = @("--resume") }
-    & $Python scripts/train.py --data $Data --epochs $Epochs --batch 16 --device 0 --name $Name @ResumeArgs
+    & $Python scripts/train.py --data $Data --model $BaseModel --epochs $Epochs --batch 16 --device 0 --name $Name @ResumeArgs
     if ($LASTEXITCODE -ne 0) { throw "$Name 학습 실패" }
 
     $Weights = "runs/$Name/weights/best.pt"
@@ -40,6 +41,20 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "sh17-ppe 평가 실패" }
     & $Python scripts/export_onnx.py runs/sh17-ppe/weights/best.pt
     if ($LASTEXITCODE -ne 0) { throw "sh17-ppe ONNX 변환 실패" }
+    $ResumeArgs = @()
+    if (Test-Path "runs/ppe-sh17-transfer/weights/last.pt") { $ResumeArgs = @("--resume") }
+    & $Python scripts/train.py --data data/construction-ppe/data.yaml --model runs/sh17-ppe/weights/best.pt --epochs 100 --batch 16 --device 0 --name ppe-sh17-transfer @ResumeArgs
+    if ($LASTEXITCODE -ne 0) { throw "PPE 전이 학습 실패" }
+    foreach ($PpeRun in @("ppe-baseline", "ppe-sh17-transfer")) {
+        & $Python scripts/evaluate.py "runs/$PpeRun/weights/best.pt" data/construction-ppe/data.yaml --device cpu --split val --output "runs/selection/$PpeRun-val.json"
+        if ($LASTEXITCODE -ne 0) { throw "$PpeRun 모델 선택 평가 실패" }
+    }
+    & $Python scripts/select_ppe_model.py
+    if ($LASTEXITCODE -ne 0) { throw "PPE 모델 선택 실패" }
+    & $Python scripts/evaluate.py runs/ppe-sh17-transfer/weights/best.pt data/construction-ppe/data.yaml --device cpu --split test
+    if ($LASTEXITCODE -ne 0) { throw "PPE 전이 모델 test 평가 실패" }
+    & $Python scripts/export_onnx.py runs/ppe-sh17-transfer/weights/best.pt
+    if ($LASTEXITCODE -ne 0) { throw "PPE 전이 모델 ONNX 변환 실패" }
     & $Python scripts/summarize_results.py
     if ($LASTEXITCODE -ne 0) { throw "결과 비교표 생성 실패" }
     & $Python scripts/build_training_report.py

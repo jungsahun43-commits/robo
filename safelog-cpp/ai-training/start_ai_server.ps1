@@ -13,7 +13,13 @@ function Get-ModelPath([string]$Name) {
     return Join-Path $PSScriptRoot "runs/$Name/weights/best.pt"
 }
 
-$env:SAFELOG_MODEL_PATH = Get-ModelPath "ppe-baseline"
+$PrimaryPpe = "ppe-baseline"
+$SelectionPath = Join-Path $PSScriptRoot "reports/selected-models.json"
+if (Test-Path $SelectionPath) {
+    $Selection = Get-Content -LiteralPath $SelectionPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    $PrimaryPpe = $Selection.primary_ppe
+}
+$env:SAFELOG_MODEL_PATH = Get-ModelPath $PrimaryPpe
 $env:SAFELOG_FIRE_MODEL_PATH = Get-ModelPath "fire-smoke"
 $env:SAFELOG_AUX_MODEL_PATH = ""
 $env:SAFELOG_AUX_MODEL_PATHS = ""

@@ -10,7 +10,13 @@ $env:SAFELOG_AI_BASE_URL="http://192.168.0.10:8080"
 $env:SAFELOG_AI_TIMEOUT_MS="25000"
 ```
 
-API 키는 Android 앱에 넣지 않는다. 노트북의 프록시 서버가 클라우드 모델 키를 보관한다.
+현재 학습 모델 서버는 API 키 없이 실행한다. `safelog-cpp/ai-training`에서 모델 ZIP을
+풀고 `./start_ai_server.ps1 -AllModels`를 실행한다. 설치·학습·모델 전달 절차는
+[AI 서버 안내](../../ai-training/README_KO.md)에 있다.
+
+같은 PC의 Windows 앱은 `http://127.0.0.1:8080`, 휴대폰은 같은 Wi-Fi에 연결한
+서버 PC의 실제 IP를 사용한다. Android에서 서버 주소를 전달하는 앱 설정은 역할 4와
+연결해야 한다. 향후 클라우드 모델을 추가할 경우 비밀 키는 서버에만 보관한다.
 
 ## 엔드포인트
 
@@ -21,7 +27,7 @@ API 키는 Android 앱에 넣지 않는다. 노트북의 프록시 서버가 클
 ```json
 {
   "image": "data:image/jpeg;base64,...",
-  "userMemo": "통로에 자재가 적치되어 있음",
+  "userMemo": "작업자의 안전모 착용 상태 점검",
   "promptVersion": "safelog-hazard-v1"
 }
 ```
@@ -30,16 +36,21 @@ API 키는 Android 앱에 넣지 않는다. 노트북의 프록시 서버가 클
 
 ```json
 {
-  "hazardCategory": "통로 적치물",
+  "hazardCategory": "안전모 미착용",
   "riskLevel": 4,
-  "detectedHazards": ["걸림", "넘어짐"],
-  "suggestedDescription": "통로에 자재가 적치되어 넘어질 위험이 있습니다.",
-  "suggestedAction": "자재를 지정 구역으로 이동하세요.",
+  "detectedHazards": ["안전모 미착용"],
+  "suggestedDescription": "사진에서 안전모 미착용 위험이 탐지되었습니다.",
+  "suggestedAction": "작업을 중지하고 규격에 맞는 안전모를 착용하세요.",
   "confidence": 0.87,
   "modelName": "사용한 모델명",
   "promptVersion": "safelog-hazard-v1"
 }
 ```
+
+실제 서버 응답에는 탐지 클래스·모델·좌표·신뢰도를 담은 `detections`와
+`requiresHumanReview`도 포함된다. C++ 어댑터는 전체 JSON을 `rawJson`에 보관한다.
+현재 학습 대상은 보호구·사람·신체 부품과 화재·연기다. 통로 장애물과 노출 전선은
+전용 데이터로 추가 학습하기 전까지 탐지 대상으로 발표하지 않는다.
 
 ### `POST /v1/compare-action`
 
@@ -53,6 +64,9 @@ API 키는 Android 앱에 넣지 않는다. 노트북의 프록시 서버가 클
 요청 필드: `inspectionContext`, `promptVersion`.
 
 응답 필드: `summary`, `keyRisks`, `modelName`, `promptVersion`.
+
+이 엔드포인트는 현재 규칙 템플릿이다. `modelName`은
+`safelog-summary-template-v1`이며 별도로 학습한 언어 모델이 아니다.
 
 ## 검증과 실패 상태
 

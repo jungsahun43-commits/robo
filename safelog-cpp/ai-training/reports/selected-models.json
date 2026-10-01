@@ -1,0 +1,14 @@
+{
+  "primary_ppe": "ppe-sh17-transfer",
+  "fire": "fire-smoke",
+  "auxiliary": [
+    "chvg-ppe",
+    "sh17-ppe"
+  ],
+  "selection_split": "val",
+  "criterion": "mean AP50 of four explicit missing-PPE classes",
+  "scores": {
+    "ppe-baseline": 0.2276686028444468,
+    "ppe-sh17-transfer": 0.32871275623301843
+  }
+}

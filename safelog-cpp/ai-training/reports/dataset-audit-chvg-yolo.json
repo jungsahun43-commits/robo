@@ -1,0 +1,60 @@
+{
+  "yaml": "data\\chvg-yolo\\data.yaml",
+  "classes": {
+    "0": "person",
+    "1": "head",
+    "2": "helmet_white",
+    "3": "helmet_yellow",
+    "4": "helmet_blue",
+    "5": "helmet_red",
+    "6": "vest",
+    "7": "safety_glass"
+  },
+  "splits": {
+    "train": {
+      "images": 1381,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 3781,
+        "1": 592,
+        "2": 1072,
+        "3": 978,
+        "4": 417,
+        "5": 414,
+        "6": 1754,
+        "7": 413
+      }
+    },
+    "val": {
+      "images": 163,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 468,
+        "1": 79,
+        "2": 105,
+        "3": 129,
+        "4": 61,
+        "5": 44,
+        "6": 190,
+        "7": 58
+      }
+    },
+    "test": {
+      "images": 155,
+      "missing_labels": 0,
+      "invalid_annotations": 0,
+      "instances": {
+        "0": 425,
+        "1": 59,
+        "2": 115,
+        "3": 93,
+        "4": 65,
+        "5": 38,
+        "6": 193,
+        "7": 61
+      }
+    }
+  }
+}

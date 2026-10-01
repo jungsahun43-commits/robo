@@ -18,6 +18,7 @@ def main() -> int:
     parser.add_argument("data", type=Path)
     parser.add_argument("--device", default=None)
     parser.add_argument("--split", default="test", choices=("train", "val", "test"))
+    parser.add_argument("--output", type=Path, default=None)
     args = parser.parse_args()
     if not args.weights.exists() or not args.data.exists():
         raise SystemExit("모델 가중치와 데이터 YAML 경로를 확인하세요.")
@@ -52,7 +53,7 @@ def main() -> int:
             )
         },
     }
-    output = root / "runs" / f"evaluation-{run_name}.json"
+    output = args.output or root / "runs" / f"evaluation-{run_name}.json"
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))

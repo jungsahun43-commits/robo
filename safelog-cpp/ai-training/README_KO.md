@@ -48,12 +48,18 @@ python scripts/train.py --data data/construction-ppe/data.yaml --epochs 100 --ba
 python scripts/train.py --data data/indoor-fire-smoke/data.yaml --epochs 100 --batch 16 --device 0 --name fire-smoke
 python scripts/train.py --data data/chvg-yolo/data.yaml --epochs 100 --batch 16 --device 0 --name chvg-ppe
 python scripts/train.py --data data/sh17-1280/data.yaml --model yolo11s.pt --epochs 100 --batch 16 --device 0 --name sh17-ppe --cache disk
+python scripts/train.py --data data/construction-ppe/data.yaml --model runs/sh17-ppe/weights/best.pt --epochs 100 --batch 16 --device 0 --name ppe-sh17-transfer
 ```
 
 라벨 뜻이 다른 데이터셋을 억지로 한 파일로 합치지 않는다. Construction-PPE는 미착용
 판단, 화재·연기는 화재 위험 판단, CHVG와 SH17은 PPE 부품 탐지와 외부 검증에 쓴다.
 각 학습 결과는 `runs/<이름>/weights/best.pt`에 저장된다. 조기 종료가 작동하므로 실제
 학습 횟수는 100회보다 적을 수 있다.
+
+추가 PPE 전이 실험은 SH17 학습 결과로 Construction-PPE를 다시 학습한다. 원본 PPE
+모델과 전이 모델은 검증 분할의 네 미착용 클래스 평균 AP50으로 선택하며, 독립 test
+분할은 모델 선택에 쓰지 않는다. `reports/selected-models.json`에 선택 근거를 저장하고
+서버 실행 스크립트가 선택된 모델을 사용한다.
 
 SH17은 8,099장의 고해상도 이미지와 75,994개 객체를 포함해 저장 공간과 시간이 많이
 필요하다. 공식 분할은 train 6,479장과 val 1,620장이며 별도 test가 없다. 따라서 SH17
@@ -100,6 +106,13 @@ SH17은 클래스 의미가 다르므로 부품 탐지 근거를 추가하는 �
 한 번에 네 모델을 시작하려면 `./start_ai_server.ps1 -AllModels`를 실행한다. 기본
 `./start_ai_server.ps1`은 PPE+화재 모델을 사용한다. 모델 ZIP을 `ai-training/`에 풀면
 `models/`의 학습된 파일을 우선 사용한다. 원본 데이터셋 없이도 서버를 실행할 수 있다.
+
+PPE 후보는 `ppe-baseline`과 SH17 가중치에서 전이 학습한 `ppe-sh17-transfer`다.
+`reports/selected-models.json`이 있으면 서버 실행 스크립트가 선택된 후보를 사용한다.
+선택 기준은 Construction-PPE val에서 미착용 네 클래스의 AP50 평균이며 test 지표는
+선택에 사용하지 않는다. 두 후보와 모든 클래스의 평가 결과는
+`reports/TRAINING_RESULTS_KO.md`에 기록된다. `no_boots`의 val 정답이 4개뿐이므로
+선택 점수만으로 현장 성능을 확정하지 않는다.
 
 Windows 앱을 같은 PC에서 실행할 때는 `SAFELOG_AI_BASE_URL=http://127.0.0.1:8080`을
 설정한다. Android 휴대폰에서는 같은 Wi-Fi에 연결한 서버 PC의 실제 IP를 사용한다.

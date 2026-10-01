@@ -1,0 +1,60 @@
+{
+  "test_scope": "CPU HTTP smoke test; one fire test image and identical before/after images; not Android APK verification",
+  "result": {
+    "health": {
+      "status": "ok",
+      "model": "ppe-sh17-transfer+fire-smoke+chvg-ppe+sh17-ppe",
+      "models": [
+        "ppe-sh17-transfer.pt",
+        "fire-smoke.pt",
+        "chvg-ppe.pt",
+        "sh17-ppe.pt"
+      ],
+      "modelExists": true
+    },
+    "analysis": {
+      "hazardCategory": "화재",
+      "riskLevel": 5,
+      "detectedHazards": [
+        "화재"
+      ],
+      "suggestedDescription": "사진에서 화재 위험이 탐지되었습니다.",
+      "suggestedAction": "즉시 작업을 중지하고 비상 절차에 따라 대피·신고하세요.",
+      "confidence": 0.8492029905319214,
+      "modelName": "ppe-sh17-transfer+fire-smoke+chvg-ppe+sh17-ppe",
+      "promptVersion": "smoke-hazard-v1",
+      "detections": [
+        {
+          "label": "fire",
+          "confidence": 0.8492029905319214,
+          "model": "fire-smoke",
+          "box": [
+            242.5633544921875,
+            57.87646484375,
+            444.738037109375,
+            604.894775390625
+          ]
+        }
+      ],
+      "requiresHumanReview": true
+    },
+    "comparison": {
+      "likelyResolved": false,
+      "remainingRisks": [
+        "화재"
+      ],
+      "assessment": "조치 후 사진에 위험이 남아 있거나 조치 전 위험을 확인하지 못했습니다.",
+      "confidence": 0.8492029905319214,
+      "modelName": "ppe-sh17-transfer+fire-smoke+chvg-ppe+sh17-ppe",
+      "promptVersion": "smoke-compare-v1"
+    },
+    "summary": {
+      "summary": "총 1건의 점검 기록을 검토했습니다. 각 조치 결과는 점검자가 최종 확인해야 합니다.",
+      "keyRisks": [
+        "출입구 | 연결 시험 | 확인 대기 | Open"
+      ],
+      "modelName": "safelog-summary-template-v1",
+      "promptVersion": "smoke-summary-v1"
+    }
+  }
+}
