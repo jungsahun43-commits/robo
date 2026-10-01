@@ -1,0 +1,114 @@
+{
+  "status": "prepared",
+  "source": "https://data.mendeley.com/datasets/z5z6gtt5t4/1",
+  "license": "CC BY 4.0",
+  "verified_files": [
+    {
+      "name": "Damage Classification.zip",
+      "sha256": "d3d68e5535970fa36643a2673095d9bf116ecd25da6f610ebb0746ebf698449c",
+      "bytes": 227308749
+    },
+    {
+      "name": "Damage Detection.zip",
+      "sha256": "2423567183c584568efd45a2f4521c5d5f3f65106f2d2ff1311ed99b7adba1a9",
+      "bytes": 104772985
+    },
+    {
+      "name": "Damage Segmentaion.zip",
+      "sha256": "d87849a70d7a2e280e49d3687d89a5850902804554a35d779c941ea71ffcff1a",
+      "bytes": 115355010
+    }
+  ],
+  "downloaded_rgb_files": 5000,
+  "ambiguous_classification_files_excluded": 1000,
+  "identical_segmentation_copies_not_counted_twice": 1500,
+  "usable_before_dedup": 2500,
+  "duplicate_pixels_removed": 0,
+  "unique_labeled_patches": 2500,
+  "overlap_with_dacl_removed": 0,
+  "group_count": 2417,
+  "largest_group_files": 2,
+  "split_counts": {
+    "train": 2009,
+    "test": 491
+  },
+  "per_split_labels": {
+    "train": {
+      "concrete_crack": {
+        "positive": 1153,
+        "negative": 856,
+        "unknown": 0
+      },
+      "concrete_spalling": {
+        "positive": 300,
+        "negative": 1709,
+        "unknown": 0
+      },
+      "rust_stain": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 2009
+      },
+      "exposed_rebar": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 2009
+      },
+      "wet_surface": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 2009
+      },
+      "efflorescence": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 2009
+      },
+      "surface_cavity": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 2009
+      }
+    },
+    "test": {
+      "concrete_crack": {
+        "positive": 290,
+        "negative": 201,
+        "unknown": 0
+      },
+      "concrete_spalling": {
+        "positive": 66,
+        "negative": 425,
+        "unknown": 0
+      },
+      "rust_stain": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 491
+      },
+      "exposed_rebar": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 491
+      },
+      "wet_surface": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 491
+      },
+      "efflorescence": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 491
+      },
+      "surface_cavity": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 491
+      }
+    }
+  },
+  "group_policy": "Same patch ID/extension, exact pixels or dHash Hamming <=6; connected components, SHA256(seed42:minPixelHash) bucket 0/1 of 10 reserved test",
+  "label_policy": "Downloaded masks: 0 crack/red RGB; 1 spalling/blue RGB (opposite the paper's illustrative Fig.5 palette); intact Non-Crack negatives for these two only; other five targets -1",
+  "limitation": "Single dam patches; raw scene/campaign IDs unavailable. Similarity grouping cannot prove scene independence. Reserved patch test is not an independent site test."
+}

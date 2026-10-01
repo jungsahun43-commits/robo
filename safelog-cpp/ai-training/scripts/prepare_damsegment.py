@@ -5,12 +5,14 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import sys
 
 import numpy as np
 from PIL import Image
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 SOURCE = ROOT / "data/damsegment/source"
 
 
