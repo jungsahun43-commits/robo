@@ -1,0 +1,38 @@
+{
+  "title": "DamSegment",
+  "homepage": "https://data.mendeley.com/datasets/z5z6gtt5t4/1",
+  "doi": "10.17632/z5z6gtt5t4.1",
+  "version": 1,
+  "published": "2025-11-26T12:08:13.142Z",
+  "license": "CC BY 4.0",
+  "license_url": "http://creativecommons.org/licenses/by/4.0",
+  "citation": "Gharehbaghi, Bennett, Lequesne, Zhao and Li (2025), DamSegment, Mendeley Data V1, DOI:10.17632/z5z6gtt5t4.1",
+  "metadata_files_url": "https://data.mendeley.com/public-api/datasets/z5z6gtt5t4/files?folder_id=root&version=1",
+  "files": [
+    {
+      "name": "Damage Classification.zip",
+      "local_archive": "damsegment-Damage-Classification.zip",
+      "bytes": 227308749,
+      "sha256": "d3d68e5535970fa36643a2673095d9bf116ecd25da6f610ebb0746ebf698449c",
+      "sha256_origin": "Publisher public file API",
+      "url": "https://data.mendeley.com/public-files/datasets/z5z6gtt5t4/files/d6a1d14d-5227-45c9-b2c9-7b1fd0177091/file_downloaded"
+    },
+    {
+      "name": "Damage Detection.zip",
+      "local_archive": "damsegment-Damage-Detection.zip",
+      "bytes": 104772985,
+      "sha256": "2423567183c584568efd45a2f4521c5d5f3f65106f2d2ff1311ed99b7adba1a9",
+      "sha256_origin": "Publisher public file API",
+      "url": "https://data.mendeley.com/public-files/datasets/z5z6gtt5t4/files/9e49a029-483a-41a0-bcc4-0fde513fa1d3/file_downloaded"
+    },
+    {
+      "name": "Damage Segmentaion.zip",
+      "local_archive": "damsegment-Damage-Segmentaion.zip",
+      "bytes": 115355010,
+      "sha256": "d87849a70d7a2e280e49d3687d89a5850902804554a35d779c941ea71ffcff1a",
+      "sha256_origin": "Publisher public file API",
+      "url": "https://data.mendeley.com/public-files/datasets/z5z6gtt5t4/files/bd928c77-1194-4ee3-ac1a-f6ba3036e193/file_downloaded"
+    }
+  ],
+  "scope": "Real concrete dam cracks/spalling. Unannotated labels remain unknown. Multiple task archives can repeat images; counts must be deduplicated."
+}
