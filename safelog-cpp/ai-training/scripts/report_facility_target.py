@@ -6,8 +6,8 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from scripts.train_facility_target import read,save,sha,TARGETS
 
 RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility-presence-target-highres',
-      'facility-presence-target-codebrim','facility-presence-target-spatial')
-NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습')
+      'facility-presence-target-codebrim','facility-presence-target-spatial','facility-presence-target-s2ds')
+NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 
@@ -17,7 +17,7 @@ def main():
     for name,title in zip(RUNS,NAMES):
         run=ROOT/'runs'/name
         if not (run/'TRAINING.json').exists():
-            entries.append({'run':name,'title':title,'status':'prepared' if name.endswith('spatial') else 'not_started'});continue
+            entries.append({'run':name,'title':title,'status':'prepared' if name.endswith(('spatial','s2ds')) else 'not_started'});continue
         training=read(run/'TRAINING.json');history=read(run/'history.json') if (run/'history.json').exists() else []
         selection=read(run/'TARGET-SELECTION.json') if (run/'TARGET-SELECTION.json').exists() else None
         validation=read(run/'VALIDATION.json') if (run/'VALIDATION.json').exists() else None
@@ -33,6 +33,16 @@ def main():
                         'test_executed':bool(test),'target_passed_test':test['target_passed'] if test else None,
                         'weights_sha256':selection['weights_sha256'] if selection else training.get('weights_sha256'),
                         'validation_domains':training.get('validation_domains',['dacl','damsegment'])})
+    ensemble_name='facility-presence-target-ensemble'
+    ensemble_path=ROOT/'reports'/f'{ensemble_name}-target-validation.json'
+    if ensemble_path.exists():
+        selection=read(ensemble_path);test_path=ROOT/'reports'/f'{ensemble_name}-target-test.json'
+        test=read(test_path) if test_path.exists() else None
+        entries.append({'run':ensemble_name,'title':'두 모델 확률 평균','status':'validation_only','epochs':0,'imgsz':640,
+                        'best_epoch':'해당 없음','frozen_validation':True,'grid':1,'worst_error':selection['worst_error'],
+                        'target_passed_validation':selection['target_passed'],'operating_points':selection['per_class'],
+                        'test_executed':bool(test),'target_passed_test':test['target_passed'] if test else None,
+                        'members':selection['members'],'validation_domains':list(selection['validation_counts'])})
     profile=read(ROOT/'reports/facility-inference-profile.json')
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
             'experiments':entries,'app_profile':profile['version'],'app_profile_sha256':sha(ROOT/'reports/facility-inference-profile.json'),
@@ -47,11 +57,13 @@ def main():
            '| 시도 | 상태 | 실제 epoch | 입력 | 검증 자료 | 최대 검증 오류 | 목표 |',
            '|---|---|---:|---:|---|---:|---|']
     for e in entries:
-        state={'prepared':'준비됨','not_started':'시작 전','running':'학습 중','complete':'학습 완료'}[e['status']]
+        state={'prepared':'준비됨','not_started':'시작 전','running':'학습 중','complete':'학습 완료','validation_only':'결합 검증 완료'}[e['status']]
         error=f"{e['worst_error']*100:.2f}%" if e.get('worst_error') is not None else '-'
         lines.append(f"| {e['title']} | {state} | {e.get('epochs','-')} | {e.get('imgsz','-')} | {', '.join(DOMAINS[d] for d in e.get('validation_domains',[])) or '-'} | {error} | {'검증 통과' if e.get('target_passed_validation') else '미달/미확인'} |")
     lines+=['','학습 중 수치는 지금까지의 가장 좋은 체크포인트이며 최종 결과가 아니다.',
-            '검증 자료가 둘인 시도와 셋인 시도의 최대값은 같은 평가 범위가 아니므로 숫자만으로 직접 비교하지 않는다.','']
+            '검증 자료가 둘인 시도와 셋인 시도의 최대값은 같은 평가 범위가 아니므로 숫자만으로 직접 비교하지 않는다.',
+            '두 모델 확률 평균은 추가 학습이 아니며 온라인 앱에 적용된 결과도 아니다.',
+            '', '전체 사진 검증의 학습 경과(최종 확대/결합 설정과 구분):', '', '![학습 경과](facility-five-percent-curve.png)', '']
     for e in entries:
         if not e.get('operating_points'):continue
         lines += [f"## {e['title']} 상세 검증",'',
@@ -67,8 +79,11 @@ def main():
             'CODEBRIM 부모 ID의 분리 교차 및 기존 자료와 정확한 픽셀 겹침은0. 같은 시설/장면 독립성을 증명한 수치는 아니다.',
             '상세 증강12,041개와 위치 지도는 위 학습 부모에서 만든 파생 자료이다. 새 독립 사진 수에 더하지 않는다.',
             'CODEBRIM에 정답이 없는 물기/공동, 위치가 없는 양성 픽셀은 미확인으로 제외한다. 원래 정답은 바꾸지 않았다.','',
+            'S2DS: 학술용 저자 원본743패치(train563/val87/test93), CRC 및 색상 수 확인. 중복·유사·부분 겹침 의심을 학습 전에 제외한다. 실제 사용량은 [선별 감사](facility-target-s2ds-screened-data-audit.json)에 기록한다.',
+            'S2DS의 저자 TRAIN만 추가하고 원본 장면ID가 없다는 한계를 유지한다. S2DS val/test는 학습과 모델/임계값 선택에 쓰지 않는다. 해당 자료나 독립 현장에 대한5%성능 주장이 아니다.','',
             f"기본 앱 프로필: `{profile['version']}`. 실험 프로필로 자동 교체하지 않았다.",
             '현장의 모든 시설, 나머지 다섯 항목, 정밀 위치와 구조 안전에 대한 5% 성능 주장은 하지 않는다.',
+            'CODEBRIM 모델의 임계값만 바꿔 5%를 맞출 수 있는지: [미탐·오탐 교환 진단](facility-target-codebrim-threshold-tradeoff.json). 이 고정 모델의 검증 점수에 한정된 진단이다.',
             '조건·후속 방법·엄격한 시험 차단은 [계획](FACILITY_FIVE_PERCENT_PLAN_KO.md), 원자료 사용 조건은 [CODEBRIM](https://zenodo.org/records/2620293)을 확인한다.','']
     (ROOT/'reports/FACILITY_FIVE_PERCENT_RESULTS_KO.md').write_text('\n'.join(lines),encoding='utf-8')
     print('Actual facility target status consolidated; release_target_achieved=',result['release_target_achieved'])

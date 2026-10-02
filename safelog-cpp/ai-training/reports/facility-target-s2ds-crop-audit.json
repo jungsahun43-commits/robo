@@ -1,0 +1,33 @@
+{
+  "source_manifest_sha256": "667b7fc7f444913d505810ab6e0fa0e95bcb60f326ebd96667316794a28c2b16",
+  "heldout_photos": 3839,
+  "heldout_with_features": 3620,
+  "local_overlaps": [
+    {
+      "training_image": "data/s2ds/source/train/199.png",
+      "heldout_image": "data/dacl10k-yolo/images/test/dacl-dacl10k_v2_validation_0015.jpg",
+      "inliers": 12,
+      "group_id": "s2ds-near-group:199"
+    },
+    {
+      "training_image": "data/s2ds/source/train/295.png",
+      "heldout_image": "data/dacl10k-yolo/images/val/dacl-dacl10k_v2_train_6038.jpg",
+      "inliers": 12,
+      "group_id": "s2ds-near-group:295"
+    },
+    {
+      "training_image": "data/s2ds/source/train/516.png",
+      "heldout_image": "data/codebrim-training/images/codebrim-test-07143.jpg",
+      "inliers": 22,
+      "group_id": "s2ds-near-group:516"
+    }
+  ],
+  "excluded_group_ids": [
+    "s2ds-near-group:199",
+    "s2ds-near-group:295",
+    "s2ds-near-group:516"
+  ],
+  "low_feature_queries_unverifiable": [],
+  "method": "ORB600, longest side768, 10 scales; FLANN-LSH6/20/1 top20 retrieval; Hamming ratio.7; RANSAC3px >=12 inliers, >=.5 match fraction, convex hull area>=100px",
+  "limitation": "Heuristic overlap screen, not proof of scene/crop independence. Unverifiable low-feature queries are excluded before supplemental training."
+}

@@ -1,0 +1,43 @@
+{
+  "plot_sha256": "28c2d6710a34631f191e5766bd1f9674519e2ee1251a268bbd9bc98d45ff2a0d",
+  "script_sha256": "2592d8f1040fdd36b4b616b2e1ff50217f317262c0be4082531fb9e955a737cd",
+  "histories": [
+    {
+      "run": "facility-presence-target-v2s",
+      "history_sha256": "fb330cd6d9c9890fddc16438811eb662a4f499383df318d39fe10921553d1819",
+      "status": "complete",
+      "actual_epochs": 14
+    },
+    {
+      "run": "facility-presence-target-detail",
+      "history_sha256": "c64bb3f043da5725ab6705d3f4bd004ed0e5db601cbf40d320becbddecb17c32",
+      "status": "complete",
+      "actual_epochs": 16
+    },
+    {
+      "run": "facility-presence-target-highres",
+      "history_sha256": "f70bfb81d448e7f3b9a10594ac1a7d370f5b7bba7f8218873ab00a90eacea4cf",
+      "status": "complete",
+      "actual_epochs": 8
+    },
+    {
+      "run": "facility-presence-target-codebrim",
+      "history_sha256": "24a81f184444da0339c82c1d250e62b0b99a51adc6a5e28294fa16b20cbfa1e3",
+      "status": "complete",
+      "actual_epochs": 13
+    },
+    {
+      "run": "facility-presence-target-spatial",
+      "history_sha256": "4ab34f44fa8e15a972f53c7ab5666ff6f906a9850d71103b7c598f819415f5da",
+      "status": "complete",
+      "actual_epochs": 12
+    },
+    {
+      "run": "facility-presence-target-s2ds",
+      "history_sha256": "f5766eef9ae87d1aa2ae6ff385ea9380344484fa8791cd92491169ae9e25b478",
+      "status": "running",
+      "actual_epochs": 1
+    }
+  ],
+  "metric": "Full-photo validation worst FNR/FPR, not aggregate wrong-photo fraction or field error"
+}

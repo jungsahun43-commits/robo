@@ -1,0 +1,12 @@
+{
+  "source": "https://github.com/ben-z-original/s2ds",
+  "author_linked_file_id": "1PQ50QKfy2vnDOHSmw5bpBFi33hZsSXuM",
+  "bytes": 1241309613,
+  "sha256": "8b7abe777c181662eeeadbdf39cd662f8c50ccced61d7957b468b13c0df2da64",
+  "zip_entries": 1491,
+  "archive_crc_checked": true,
+  "author_published_checksum": null,
+  "license": "Academic use only, no dataset redistribution; see author README, not repository GPL code license",
+  "used_for_training_at_download": false,
+  "next_gate": "Verify labels, parent groups and overlap with all existing validation/test data before training"
+}

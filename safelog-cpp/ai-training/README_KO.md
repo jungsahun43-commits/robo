@@ -16,11 +16,28 @@ C++ 앱용 로컬 API 서버를 재현하기 위한 코드다. 원본 데이터�
 - 4GB ZIP 위치 호환 처리·CRC 확인: [extraction](reports/facility-target-codebrim-extraction.json)
 - 더 큰 사진 모델/상세 증강/해상도 보강 결과: `reports/facility-presence-target-*-target-validation.json`
 - 위치 감독 준비: [spatial data](reports/facility-target-spatial-data-audit.json). 추가한 조각은 새 독립 현장 사진이 아니다.
+- S2DS 추가: [사용 자료·제외 이유](reports/facility-target-s2ds-screened-data-audit.json). 저자 TRAIN만 사용하며 원본 장면 ID가 없어 독립 현장 성능으로 주장하지 않는다.
 
 이 실험들은 `runs/facility-presence-target-*`에 분리한다. 기본 서버 프로필은 기존 채택 버전
 `facility-validation-v2`이며, 새 실험 가중치를 기본 모델에 덮어쓰지 않는다.
 CODEBRIM은 교육·비상업 연구 전용 조건이다. 팀원도 [원문 조건](https://zenodo.org/records/2620293/files/license.md?download=1)을 확인한다.
 원본과 변환 데이터는 저장소/모델 ZIP에 포함하지 않는다.
+
+S2DS 파이프라인(코어 자료와 `facility-presence-target-spatial` 학습이 먼저 준비되어 있어야 한다):
+
+```powershell
+python scripts/download_s2ds.py
+python scripts/extract_s2ds.py
+python scripts/prepare_s2ds.py
+python scripts/audit_s2ds_crops.py
+python scripts/train_facility_spatial.py --name facility-presence-target-s2ds --seed 48 --initial runs/facility-presence-target-spatial/best.pt --supplement-spatial data/s2ds-spatial-training/crop-screened-train.json --backbone-lr .00004 --head-lr .00025
+python scripts/evaluate_facility_target.py select --name facility-presence-target-s2ds
+python scripts/report_facility_target.py
+python scripts/plot_facility_target.py
+```
+
+기존 압축 해제 폴더와 학습 체크포인트는 보존한다. 이미 끝낸 단계는 반복할 필요 없다.
+S2DS 정답 색상은 저자의 RGB 변환표를 따른다. 출처·동결 snapshot SHA·[이용 조건](https://github.com/ben-z-original/s2ds)은 `datasets/s2ds_source.json`에 기록한다.
 
 ## 시설 성능 보강 전달본
 

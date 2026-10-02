@@ -82,7 +82,9 @@ def select():
               'worst_error': max(p['worst_error'] for p in points.values()),
               'target_passed': all(p['target_passed'] for p in points.values()),
               'limitation': 'Repeatedly selected source validation; offline candidate, not active API or field accuracy'}
-    save(ROOT / 'runs' / NAME / 'TARGET-SELECTION.json', result)
+    output=ROOT / 'runs' / NAME
+    output.mkdir(parents=True,exist_ok=True)
+    save(output / 'TARGET-SELECTION.json', result)
     save(ROOT / 'reports' / f'{NAME}-target-validation.json', result)
     print(__import__('json').dumps(result, indent=2))
 

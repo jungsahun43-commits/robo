@@ -1,0 +1,33 @@
+{
+  "run": "facility-presence-target-codebrim",
+  "split": "val",
+  "domains": {
+    "dacl": {
+      "wrong_photos_either_target": 285,
+      "photos": 710,
+      "wrong_photo_fraction": 0.4014084507042254,
+      "wrong_label_photo_pairs": 324,
+      "pairs": 1420,
+      "wrong_pair_fraction": 0.22816901408450704
+    },
+    "damsegment": {
+      "wrong_photos_either_target": 33,
+      "photos": 424,
+      "wrong_photo_fraction": 0.07783018867924528,
+      "wrong_label_photo_pairs": 35,
+      "pairs": 848,
+      "wrong_pair_fraction": 0.041273584905660375
+    },
+    "codebrim": {
+      "wrong_photos_either_target": 124,
+      "photos": 611,
+      "wrong_photo_fraction": 0.20294599018003273,
+      "wrong_label_photo_pairs": 135,
+      "pairs": 1222,
+      "wrong_pair_fraction": 0.1104746317512275
+    }
+  },
+  "aggregate_wrong_photo_fraction": 0.2532951289398281,
+  "aggregate_wrong_pair_fraction": 0.14154727793696276,
+  "limitation": "Uses frozen minimax thresholds, correlated source validation photos; different from per-class FNR/FPR or independent field error"
+}

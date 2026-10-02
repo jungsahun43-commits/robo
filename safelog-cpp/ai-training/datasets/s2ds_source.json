@@ -1,0 +1,10 @@
+{
+  "dataset": "S2DS 2022 author-linked snapshot",
+  "source": "https://github.com/ben-z-original/s2ds",
+  "author_linked_file_id": "1PQ50QKfy2vnDOHSmw5bpBFi33hZsSXuM",
+  "bytes": 1241309613,
+  "sha256": "8b7abe777c181662eeeadbdf39cd662f8c50ccced61d7957b468b13c0df2da64",
+  "checksum_origin": "Locally computed first author-linked download snapshot; publisher checksum not disclosed",
+  "license": "Academic use only, no raw/derived dataset redistribution; publisher terms differ from repository code GPL",
+  "citation": "Christian Benz and Volker Rodehorst, Image-Based Detection of Structural Defects Using Hierarchical Multi-scale Attention, DAGM GCPR 2022"
+}

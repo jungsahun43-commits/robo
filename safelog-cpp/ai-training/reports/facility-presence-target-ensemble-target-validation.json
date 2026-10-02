@@ -1,0 +1,200 @@
+{
+  "run": "facility-presence-target-ensemble",
+  "selection_split": "val",
+  "members": [
+    {
+      "run": "facility-presence-target-codebrim",
+      "weights_sha256": "62ccf473dc6288881a89dfc179cc1f8238580ce7d489d05d909dd166da01120c",
+      "training_sha256": "02c60f3f98fb442ff6b2b26cde6190423d0ca593db7e7974840bce2c9be53769",
+      "classes": [
+        "concrete_crack",
+        "concrete_spalling",
+        "rust_stain",
+        "exposed_rebar",
+        "wet_surface",
+        "efflorescence",
+        "surface_cavity"
+      ],
+      "split_sha256": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+      "additional_validation": {
+        "path": "data/codebrim-training/val.json",
+        "sha256": "d17182c6070cfd73404de341f0662352441b1be5d983c85dfe5b0c86affed56e"
+      }
+    },
+    {
+      "run": "facility-presence-target-spatial",
+      "weights_sha256": "99e5e0dab93aacedc1d4148fea88ac36baf01a1bb700bb6500dd4a918effa485",
+      "training_sha256": "b10e34884fd8a54454ed09670ea1e206d381d2b8c971cfa7cec20090b7a8bea6",
+      "classes": [
+        "concrete_crack",
+        "concrete_spalling",
+        "rust_stain",
+        "exposed_rebar",
+        "wet_surface",
+        "efflorescence",
+        "surface_cavity"
+      ],
+      "split_sha256": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+      "additional_validation": {
+        "path": "data/codebrim-training/val.json",
+        "sha256": "d17182c6070cfd73404de341f0662352441b1be5d983c85dfe5b0c86affed56e"
+      }
+    }
+  ],
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "rule": "Equal mean of two full-photo probabilities; no fitted weights or view selection",
+  "validation_counts": {
+    "dacl": 710,
+    "damsegment": 424,
+    "codebrim": 611
+  },
+  "validation_score_sha256": {
+    "dacl": [
+      "1a9ddbb339d0536946e642bdd77f98dbce200636e1c2bd480ebe5b1aa0f765ca",
+      "16e5861e38df7885e9fee0505f1e436eaef877b672891107fb0260c8a407ac68",
+      "2e6771de820e86cf7263805459933e86b60d2f543d0881da480fe19c2ebef889",
+      "25b17fc155d14ad33e89a4ebae8beb6fbda6050a8469916d418445e4bd6dd0d2"
+    ],
+    "damsegment": [
+      "1bd530e07bfeb2b785e92e6706c6904cb0226ad104833dcca8b163a364eaf24f",
+      "a414cc9dfeaed7e465cee3f0e1c9866b0fc18c3fc5c16329cbe977d3fedcce45",
+      "64568077fef7e3a26f6ef9913db815d6afe9f4b96395ed0944f625c35cb13eaf",
+      "215fd4cc7a476cb7171471266e75e432c8ddfdfb22da17760c51d132aa7956c5"
+    ],
+    "codebrim": [
+      "a91ea787880c184ba3ec5b75c7527d984e9a45f9aaba13ef0d2bc0afb95c539b",
+      "94e5bd5ab8e1d5300a43d14542996e8319a412186b43e60de813c52d041fd0de",
+      "c58d98485b379fb0c687ff24b7ecc253fa77377c34923e4f6fc2241bd1bbd66d",
+      "3ee8586a17cb70545d597a0eabbe8a4fb96c32d001168731a9feaee9ee0f7d32"
+    ]
+  },
+  "per_class": {
+    "concrete_crack": {
+      "threshold": 0.44953835755586624,
+      "domains": {
+        "dacl": {
+          "tp": 175,
+          "fp": 84,
+          "fn": 36,
+          "tn": 415,
+          "fnr": 0.17061611374407584,
+          "fpr": 0.1683366733466934,
+          "fnr_ci95": [
+            0.12586099681657004,
+            0.22715028525627762
+          ],
+          "fpr_ci95": [
+            0.13806880088953555,
+            0.20367203174528958
+          ],
+          "photo_error_fraction": 0.16901408450704225
+        },
+        "damsegment": {
+          "tp": 241,
+          "fp": 1,
+          "fn": 7,
+          "tn": 175,
+          "fnr": 0.028225806451612902,
+          "fpr": 0.005681818181818182,
+          "fnr_ci95": [
+            0.013738493353193399,
+            0.05710551662133932
+          ],
+          "fpr_ci95": [
+            0.0010036855324105573,
+            0.03147747236632618
+          ],
+          "photo_error_fraction": 0.018867924528301886
+        },
+        "codebrim": {
+          "tp": 139,
+          "fp": 28,
+          "fn": 10,
+          "tn": 434,
+          "fnr": 0.06711409395973154,
+          "fpr": 0.06060606060606061,
+          "fnr_ci95": [
+            0.03686034060709469,
+            0.11912782519982631
+          ],
+          "fpr_ci95": [
+            0.04226095020611863,
+            0.08619790137868107
+          ],
+          "photo_error_fraction": 0.062193126022913256
+        }
+      },
+      "worst_error": 0.17061611374407584,
+      "target_passed": false
+    },
+    "concrete_spalling": {
+      "threshold": 0.4772641025483608,
+      "domains": {
+        "dacl": {
+          "tp": 248,
+          "fp": 91,
+          "fn": 76,
+          "tn": 295,
+          "fnr": 0.2345679012345679,
+          "fpr": 0.23575129533678757,
+          "fnr_ci95": [
+            0.1917053920734575,
+            0.2836507736210353
+          ],
+          "fpr_ci95": [
+            0.1961392636965688,
+            0.2805710876931512
+          ],
+          "photo_error_fraction": 0.2352112676056338
+        },
+        "damsegment": {
+          "tp": 50,
+          "fp": 14,
+          "fn": 8,
+          "tn": 352,
+          "fnr": 0.13793103448275862,
+          "fpr": 0.03825136612021858,
+          "fnr_ci95": [
+            0.07158487019718122,
+            0.24925909433837945
+          ],
+          "fpr_ci95": [
+            0.022920024962912632,
+            0.06317486262007044
+          ],
+          "photo_error_fraction": 0.05188679245283019
+        },
+        "codebrim": {
+          "tp": 126,
+          "fp": 68,
+          "fn": 14,
+          "tn": 403,
+          "fnr": 0.1,
+          "fpr": 0.14437367303609341,
+          "fnr_ci95": [
+            0.06050605724462705,
+            0.16085890305090336
+          ],
+          "fpr_ci95": [
+            0.11550746425038738,
+            0.17899390293857148
+          ],
+          "photo_error_fraction": 0.1342062193126023
+        }
+      },
+      "worst_error": 0.23575129533678757,
+      "target_passed": false
+    }
+  },
+  "worst_error": 0.23575129533678757,
+  "target_passed": false,
+  "limitation": "Repeatedly selected source validation; offline candidate, not active API or field accuracy"
+}

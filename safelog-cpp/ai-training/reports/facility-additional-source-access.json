@@ -1,0 +1,12 @@
+{
+  "candidate": "SDNET2018",
+  "source": "https://digitalcommons.usu.edu/all_datasets/48/",
+  "license": "CC BY 4.0 per official dataset page",
+  "scope": "Only binary crack labels; no labels for remaining six facility categories",
+  "publisher_reported_patches": ">56000 (approximate, not downloaded)",
+  "publisher_reported_original_photos": 230,
+  "access_status": "403 human-verification page on official supplemental downloads",
+  "downloaded_images": 0,
+  "used_for_training": false,
+  "limitation": "Do not count as trained data; no source file checksum was verified"
+}

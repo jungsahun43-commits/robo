@@ -1,0 +1,8 @@
+{
+  "header_corrections_bytes": {
+    "0": 1491
+  },
+  "crc_checked_files": 1488,
+  "archive_modified": false,
+  "policy": "Unique matching filename/compression local header at offset or +/-4GiB; reconstructed overlap bounds; standard ZipExtFile CRC and size checks; all paths confined"
+}
