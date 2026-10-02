@@ -1,0 +1,89 @@
+{
+  "split": "val",
+  "images": 710,
+  "profile_sha256": "2586c87cb704137291034ee412fc0dbdccdb6036e56c90e7e7d8449611a04299",
+  "per_class": {
+    "concrete_crack": {
+      "round1": {
+        "tp": 107,
+        "fp": 14,
+        "fn": 104,
+        "tn": 485,
+        "precision": 0.8842975206611571,
+        "recall": 0.5071090047393365,
+        "miss_fraction": 0.4928909952606635,
+        "false_positive_rate": 0.028056112224448898,
+        "f2": 0.5544041450777203
+      },
+      "eligible": false,
+      "candidate_under_fpr_cap": {
+        "threshold": 0.97,
+        "metrics": {
+          "tp": 108,
+          "fp": 14,
+          "fn": 103,
+          "tn": 485,
+          "precision": 0.8852459016393442,
+          "recall": 0.5118483412322274,
+          "miss_fraction": 0.48815165876777256,
+          "false_positive_rate": 0.028056112224448898,
+          "f2": 0.5590062111801242
+        }
+      },
+      "threshold": 0.97,
+      "selected": {
+        "tp": 107,
+        "fp": 14,
+        "fn": 104,
+        "tn": 485,
+        "precision": 0.8842975206611571,
+        "recall": 0.5071090047393365,
+        "miss_fraction": 0.4928909952606635,
+        "false_positive_rate": 0.028056112224448898,
+        "f2": 0.5544041450777203
+      }
+    },
+    "concrete_spalling": {
+      "round1": {
+        "tp": 188,
+        "fp": 46,
+        "fn": 136,
+        "tn": 340,
+        "precision": 0.8034188034188035,
+        "recall": 0.5802469135802469,
+        "miss_fraction": 0.41975308641975306,
+        "false_positive_rate": 0.11917098445595854,
+        "f2": 0.6143790849673203
+      },
+      "eligible": false,
+      "candidate_under_fpr_cap": {
+        "threshold": 0.88,
+        "metrics": {
+          "tp": 187,
+          "fp": 46,
+          "fn": 137,
+          "tn": 340,
+          "precision": 0.8025751072961373,
+          "recall": 0.5771604938271605,
+          "miss_fraction": 0.4228395061728395,
+          "false_positive_rate": 0.11917098445595854,
+          "f2": 0.6115107913669064
+        }
+      },
+      "threshold": 0.88,
+      "selected": {
+        "tp": 188,
+        "fp": 46,
+        "fn": 136,
+        "tn": 340,
+        "precision": 0.8034188034188035,
+        "recall": 0.5802469135802469,
+        "miss_fraction": 0.41975308641975306,
+        "false_positive_rate": 0.11917098445595854,
+        "f2": 0.6143790849673203
+      }
+    }
+  },
+  "eligible_heads": 0,
+  "criterion": "FPR does not increase and FNR falls by at least 2 percentage points; crack/spalling heads only"
+}

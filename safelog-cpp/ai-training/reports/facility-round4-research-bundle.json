@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "bundle": "safelog-facility-round4-research.zip",
+  "sha256": "55c1699b4dca5e397ebefad3b3eb849149fba5fdfc7b55c273a33c908f59d73b",
+  "bytes": 30028604,
+  "scope": "Unreleased research model and reports only; app default paths untouched"
+}

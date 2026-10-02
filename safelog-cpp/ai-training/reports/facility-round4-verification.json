@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "supplemental_train_images": 2009,
+  "reserved_patch_test_images": 491,
+  "split_group_and_pixel_overlap": 0,
+  "unknown_labels_preserved": true,
+  "model_sha256": "287b6d763891c648b25db5485374a918a569477b6c2de8cee44d5d0c361fec41",
+  "onnx_sha256": "6562c3150466cbaaaeceb028926a61da04c750b850b84ad571c6bb7522313f49",
+  "changed_weight_tensors": 360,
+  "classifier_cpu_onnx_parity": {
+    "max_probability_difference": 1.3738870620727539e-05,
+    "dynamic_batch_shape": [
+      2,
+      7
+    ]
+  }
+}

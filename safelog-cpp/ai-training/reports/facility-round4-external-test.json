@@ -1,0 +1,100 @@
+{
+  "split": "reserved_damsegment_patches",
+  "images": 491,
+  "profile_sha256": "2586c87cb704137291034ee412fc0dbdccdb6036e56c90e7e7d8449611a04299",
+  "manifest_sha256": "b7459e670fc4d7eda10aebb38b8dc35015a6e402ae07f86b226fd991af9671ab",
+  "per_class": {
+    "concrete_crack": {
+      "round1": {
+        "tp": 138,
+        "fp": 11,
+        "fn": 152,
+        "tn": 190,
+        "precision": 0.9261744966442953,
+        "recall": 0.47586206896551725,
+        "miss_fraction": 0.5241379310344827,
+        "false_positive_rate": 0.05472636815920398,
+        "f2": 0.5271199388846448
+      },
+      "round4": {
+        "tp": 138,
+        "fp": 11,
+        "fn": 152,
+        "tn": 190,
+        "precision": 0.9261744966442953,
+        "recall": 0.47586206896551725,
+        "miss_fraction": 0.5241379310344827,
+        "false_positive_rate": 0.05472636815920398,
+        "f2": 0.5271199388846448
+      },
+      "classifier_ranking_ap": {
+        "facility-presence": 0.8990540353853758,
+        "facility-presence-damsegment": 0.995548996478813
+      },
+      "unreleased_new_model_diagnostic": {
+        "threshold_from_dacl_validation": 0.97,
+        "metrics": {
+          "tp": 227,
+          "fp": 11,
+          "fn": 63,
+          "tn": 190,
+          "precision": 0.9537815126050421,
+          "recall": 0.7827586206896552,
+          "miss_fraction": 0.21724137931034482,
+          "false_positive_rate": 0.05472636815920398,
+          "f2": 0.8118741058655221
+        },
+        "scope": "Diagnostic only; this head was not necessarily eligible or deployed"
+      }
+    },
+    "concrete_spalling": {
+      "round1": {
+        "tp": 12,
+        "fp": 13,
+        "fn": 54,
+        "tn": 412,
+        "precision": 0.48,
+        "recall": 0.18181818181818182,
+        "miss_fraction": 0.8181818181818181,
+        "false_positive_rate": 0.03058823529411765,
+        "f2": 0.20761245674740486
+      },
+      "round4": {
+        "tp": 12,
+        "fp": 13,
+        "fn": 54,
+        "tn": 412,
+        "precision": 0.48,
+        "recall": 0.18181818181818182,
+        "miss_fraction": 0.8181818181818181,
+        "false_positive_rate": 0.03058823529411765,
+        "f2": 0.20761245674740486
+      },
+      "classifier_ranking_ap": {
+        "facility-presence": 0.569130619238935,
+        "facility-presence-damsegment": 0.6703426881723307
+      },
+      "unreleased_new_model_diagnostic": {
+        "threshold_from_dacl_validation": 0.88,
+        "metrics": {
+          "tp": 11,
+          "fp": 13,
+          "fn": 55,
+          "tn": 412,
+          "precision": 0.4583333333333333,
+          "recall": 0.16666666666666666,
+          "miss_fraction": 0.8333333333333334,
+          "false_positive_rate": 0.03058823529411765,
+          "f2": 0.1909722222222222
+        },
+        "scope": "Diagnostic only; this head was not necessarily eligible or deployed"
+      }
+    }
+  },
+  "classifier_weights_sha256": {
+    "facility-presence": "2dfebb3130619b03f6d6a25e95b221cb85c3349d7023e3d216d1d8069fafd6b7",
+    "facility-presence-damsegment": "287b6d763891c648b25db5485374a918a569477b6c2de8cee44d5d0c361fec41"
+  },
+  "limitation": "Single dam patches; raw scene/campaign IDs unavailable. Similarity grouping cannot prove scene independence. Reserved patch test is not an independent site test.",
+  "threshold_selection": "DACL validation only; no DamSegment test calibration"
+}

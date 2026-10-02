@@ -1,0 +1,9 @@
+{
+  "status": "kept_round1",
+  "active_version": "facility-validation-v2",
+  "candidate_sha256": "2586c87cb704137291034ee412fc0dbdccdb6036e56c90e7e7d8449611a04299",
+  "criterion": "Validation FPR nonincrease and FNR reduction >=2pp per selected head; DACL FP/FN nonincrease and some improvement; reserved-patch FP/FN nonincrease",
+  "validation_eligible_heads": 0,
+  "reason": "No new classifier head qualified on validation",
+  "reserved_patch_test_checked": true
+}

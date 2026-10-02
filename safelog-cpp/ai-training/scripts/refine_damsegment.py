@@ -175,10 +175,14 @@ def external(device):
     else:
         from ultralytics import YOLO
         model = YOLO(str(weights))
-        results = model.predict([str(ROOT / item["image"]) for item in manifest["items"]],
-                    imgsz=detector_entry["imgsz"], conf=.05, batch=16,
-                    device="0" if device == "cuda" else device, stream=True, verbose=False)
-        detector = [{"classes": r.boxes.cls.cpu().int().tolist(), "confidence": r.boxes.conf.cpu().tolist()} for r in results]
+        detector = []
+        # Ultralytics treats an in-memory path list as one batch even with batch=.
+        # Bound the list itself; never warm up on all held-out photos at once.
+        for start in range(0, len(manifest["items"]), 8):
+            results = model.predict([str(ROOT / item["image"]) for item in manifest["items"][start:start + 8]],
+                        imgsz=detector_entry["imgsz"], conf=.05, batch=8,
+                        device="0" if device == "cuda" else device, stream=True, verbose=False)
+            detector.extend({"classes": r.boxes.cls.cpu().int().tolist(), "confidence": r.boxes.conf.cpu().tolist()} for r in results)
         save(detector_path, {"signature": signature, "images": detector})
     if len(detector) != len(manifest["items"]): raise ValueError("Incomplete external detector results")
     result = {}
@@ -200,9 +204,20 @@ def external(device):
                          "round4": photo_rates(target[known, i].astype(bool), current[known]),
                          "classifier_ranking_ap": {name: average_precision(target[known, i], np.array(cache["probabilities"])[known, i])
                                                    for name, cache in all_scores.items()}}
+        # A separately labelled diagnostic operating point, frozen on validation.
+        # It never enables a head that failed the predeclared release criterion.
+        diagnostic = validation["per_class"][label]["candidate_under_fpr_cap"]
+        if diagnostic:
+            cutoff = diagnostic["threshold"]
+            hypothetical = base | (np.array(all_scores[RUN]["probabilities"])[:, i] >= cutoff)
+            result[label]["unreleased_new_model_diagnostic"] = {
+                "threshold_from_dacl_validation": cutoff,
+                "metrics": photo_rates(target[known, i].astype(bool), hypothetical[known]),
+                "scope": "Diagnostic only; this head was not necessarily eligible or deployed"}
     if sha(CANDIDATE) != frozen: raise ValueError("External test changed candidate")
     save(PREFIX / "facility-round4-external-test.json", {"split": "reserved_damsegment_patches",
          "images": len(manifest["items"]), "profile_sha256": frozen, "manifest_sha256": sha(manifest_path), "per_class": result,
+         "classifier_weights_sha256": {name: item["weights_sha256"] for name, item in all_scores.items()},
          "limitation": manifest["audit"]["limitation"], "threshold_selection": "DACL validation only; no DamSegment test calibration"})
     print(json.dumps(result, indent=2), flush=True)
 
@@ -215,14 +230,18 @@ def release():
     if sha(active) != sha(OLD) and sha(active) != sha(CANDIDATE):
         raise ValueError("Default profile changed independently; release aborted")
     decision = {"status": "kept_round1", "active_version": "facility-validation-v2", "candidate_sha256": sha(CANDIDATE),
-                "criterion": "Every label's FP and FN must not increase; at least one must decrease",
+                "criterion": "Validation FPR nonincrease and FNR reduction >=2pp per selected head; DACL FP/FN nonincrease and some improvement; reserved-patch FP/FN nonincrease",
+                "validation_eligible_heads": validation["eligible_heads"],
                 "reason": "No new classifier head qualified on validation"}
+    extra = read(PREFIX / "facility-round4-external-test.json")
+    if extra["profile_sha256"] != sha(CANDIDATE): raise ValueError("External report/profile mismatch")
+    if extra["classifier_weights_sha256"][RUN] != sha(ROOT / "runs" / RUN / "best.pt"):
+        raise ValueError("External report and trained model differ")
+    decision["reserved_patch_test_checked"] = True
     if validation["eligible_heads"]:
         report = read(PREFIX / "facility-round4-test.json")
         if report["profile_sha256"] != sha(CANDIDATE): raise ValueError("Candidate profile and test report differ")
         items = list(report["per_class"].values())
-        extra = read(PREFIX / "facility-round4-external-test.json")
-        if extra["profile_sha256"] != sha(CANDIDATE): raise ValueError("External report/profile mismatch")
         external_safe = all(item["round4"][key] <= item["round1"][key]
                             for item in extra["per_class"].values() for key in ("fp", "fn"))
         adopt = acceptable(items) and external_safe

@@ -1,0 +1,137 @@
+[
+  {
+    "epoch": 1,
+    "elapsed_minutes": 1.5631024050000026,
+    "train_loss": 0.4367475287190081,
+    "val_macro_average_precision": 0.71028609258876,
+    "per_class": {
+      "concrete_crack": 0.733670516830756,
+      "concrete_spalling": 0.789021281661674,
+      "rust_stain": 0.8996540147456469,
+      "exposed_rebar": 0.69019850033018,
+      "wet_surface": 0.44715849746609043,
+      "efflorescence": 0.7256384438931476,
+      "surface_cavity": 0.686661393193825
+    }
+  },
+  {
+    "epoch": 2,
+    "elapsed_minutes": 2.471575348333378,
+    "train_loss": 0.40496256774839867,
+    "val_macro_average_precision": 0.7121395452276816,
+    "per_class": {
+      "concrete_crack": 0.7398107302890339,
+      "concrete_spalling": 0.7895082727354783,
+      "rust_stain": 0.9016949112250794,
+      "exposed_rebar": 0.6848192917630191,
+      "wet_surface": 0.4504921284781503,
+      "efflorescence": 0.7294005313053884,
+      "surface_cavity": 0.6892509507976228
+    }
+  },
+  {
+    "epoch": 3,
+    "elapsed_minutes": 3.3814431533333846,
+    "train_loss": 0.3872445035550345,
+    "val_macro_average_precision": 0.7124285399116594,
+    "per_class": {
+      "concrete_crack": 0.7472757724524185,
+      "concrete_spalling": 0.7891655502994147,
+      "rust_stain": 0.9020419644570081,
+      "exposed_rebar": 0.6921948676100653,
+      "wet_surface": 0.4449679962905513,
+      "efflorescence": 0.7381456832483634,
+      "surface_cavity": 0.6732079450237952
+    }
+  },
+  {
+    "epoch": 4,
+    "elapsed_minutes": 4.28545894166673,
+    "train_loss": 0.3691550986016958,
+    "val_macro_average_precision": 0.7167932983160326,
+    "per_class": {
+      "concrete_crack": 0.7526304161163893,
+      "concrete_spalling": 0.7881496958630654,
+      "rust_stain": 0.9035883822492917,
+      "exposed_rebar": 0.702638603301084,
+      "wet_surface": 0.45723314374754154,
+      "efflorescence": 0.7399069220033921,
+      "surface_cavity": 0.6734059249314642
+    }
+  },
+  {
+    "epoch": 5,
+    "elapsed_minutes": 5.201611858333248,
+    "train_loss": 0.34713844698817053,
+    "val_macro_average_precision": 0.7088088841639163,
+    "per_class": {
+      "concrete_crack": 0.7529433996940835,
+      "concrete_spalling": 0.7858028651925272,
+      "rust_stain": 0.9013364929482408,
+      "exposed_rebar": 0.6866610836087906,
+      "wet_surface": 0.43416399522690996,
+      "efflorescence": 0.7382270049824591,
+      "surface_cavity": 0.6625273474944026
+    }
+  },
+  {
+    "epoch": 6,
+    "elapsed_minutes": 6.112728591666625,
+    "train_loss": 0.3332498880435623,
+    "val_macro_average_precision": 0.7096598966491721,
+    "per_class": {
+      "concrete_crack": 0.7484386354349382,
+      "concrete_spalling": 0.7885183559792639,
+      "rust_stain": 0.9002631921745741,
+      "exposed_rebar": 0.685587081631444,
+      "wet_surface": 0.4290298036507259,
+      "efflorescence": 0.7460230830854256,
+      "surface_cavity": 0.6697591245878334
+    }
+  },
+  {
+    "epoch": 7,
+    "elapsed_minutes": 7.02060209166666,
+    "train_loss": 0.3193535352332327,
+    "val_macro_average_precision": 0.7100357113754884,
+    "per_class": {
+      "concrete_crack": 0.7532552193125062,
+      "concrete_spalling": 0.7954240362264368,
+      "rust_stain": 0.9041413808030656,
+      "exposed_rebar": 0.6908837780287281,
+      "wet_surface": 0.4441549378544646,
+      "efflorescence": 0.7489280711154336,
+      "surface_cavity": 0.6334625562877831
+    }
+  },
+  {
+    "epoch": 8,
+    "elapsed_minutes": 7.9227925550000995,
+    "train_loss": 0.30841862220514926,
+    "val_macro_average_precision": 0.7093505382222507,
+    "per_class": {
+      "concrete_crack": 0.7464047931139008,
+      "concrete_spalling": 0.7988180397524167,
+      "rust_stain": 0.9015019165386439,
+      "exposed_rebar": 0.6913758009676134,
+      "wet_surface": 0.42312285175898506,
+      "efflorescence": 0.7503612950108667,
+      "surface_cavity": 0.6538690704133288
+    }
+  },
+  {
+    "epoch": 9,
+    "elapsed_minutes": 8.83888981333342,
+    "train_loss": 0.29697399679893444,
+    "val_macro_average_precision": 0.7073140585225547,
+    "per_class": {
+      "concrete_crack": 0.7526894444435921,
+      "concrete_spalling": 0.7935560366977537,
+      "rust_stain": 0.9035464228525425,
+      "exposed_rebar": 0.6947813928085481,
+      "wet_surface": 0.4426656703045641,
+      "efflorescence": 0.7400958922781434,
+      "surface_cavity": 0.6238635502727381
+    }
+  }
+]
