@@ -21,6 +21,7 @@ C++ 앱용 로컬 API 서버를 재현하기 위한 코드다. 원본 데이터�
 - 확인 대기 진단: [자동 판단 비율·조건부 오류](reports/facility-presence-target-spatial-review-diagnostic_KO.md). 검증 자료에서 불확실한 사진을 보류하는 비교이며, 기존 전체 사진의 미탐·오탐 기준을 통과한 결과도 앱에 적용된 결과도 아니다.
 - 세부 태그 보강: [원본19종 보조 학습](reports/FACILITY_AUXILIARY_PLAN_KO.md). DACL TRAIN 전체 사진만 원래 태그로 함께 학습한다. 앱 추론은 기존7항목을 유지한다.
 - 이번 추가24epoch 결과: [이전 후보와 비교·한계·적용 상태](reports/FACILITY_CONTINUED_TRAINING_RESULTS_KO.md). 최대 검증 오류는 낮아졌지만 일부 자료·항목은 나빠졌고5% 목표는 미달이다.
+- 오류 검수와 작은 손상 비교: [실행 방법](FACILITY_REVIEW_AND_SMALL_REGION_KO.md), [같은 조건의 비교 계획](reports/FACILITY_EFFICIENT_DEVELOPMENT_PLAN_KO.md), [추가12epoch 실측 결과](reports/FACILITY_SMALL_REGION_RESULTS_KO.md). 보강군 최대 검증 오류23.15%는 대조군22.28%보다 높아 채택을 보류했다. 검수 의견은 자동 정답 변경으로 쓰지 않는다.
 
 이 실험들은 `runs/facility-presence-target-*`에 분리한다. 기본 서버 프로필은 기존 채택 버전
 `facility-validation-v2`이며, 새 실험 가중치를 기본 모델에 덮어쓰지 않는다.

@@ -1,0 +1,45 @@
+{
+  "scope": "Technical contract only: zero tensor on CPU, not an accuracy measurement or field deployment",
+  "checks": [
+    {
+      "run": "facility-presence-target-roi-control",
+      "weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+      "strict_checkpoint_reload": "passed",
+      "cpu_photo_logits_shape": [
+        1,
+        7
+      ],
+      "private_coarse_maps_shape": [
+        1,
+        7,
+        80,
+        80
+      ],
+      "finite_outputs": true
+    },
+    {
+      "run": "facility-presence-target-small-region",
+      "weights_sha256": "d5e5f8a0c462fe2d2249c0f7ad76bac14ed546f4a98f7543770a56e09e2f5edb",
+      "strict_checkpoint_reload": "passed",
+      "cpu_photo_logits_shape": [
+        1,
+        7
+      ],
+      "private_coarse_maps_shape": [
+        1,
+        7,
+        80,
+        80
+      ],
+      "finite_outputs": true
+    }
+  ],
+  "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+  "app_profile_unchanged": true,
+  "prepared_manifest_sha256": "d3f4bbc4c2f416f1555584175b2097cd32f18b64bb6effa2699971e6ce1e15cf",
+  "original_full_rows_equal": true,
+  "candidate_image_mask_paths_with_backslash": 0,
+  "windows_path_guard_sha256": "7fe013b3cba853facf52de435406474c9086a0eb17f9f5a741a045a8943f0324",
+  "paired_training_script_recorded_sha256": "22f7e3f36a5c4f538f674bf260af07c4de47dc946307cc1a0f6094bd126d93f2",
+  "post_training_hardening": "Reject Windows backslash traversal; actual prepared paths already POSIX. Compact stdout logging. No weights, data or prediction changes."
+}

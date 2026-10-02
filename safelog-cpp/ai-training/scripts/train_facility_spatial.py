@@ -20,11 +20,12 @@ from scripts.facility_error_target import operating_point
 from scripts.train_facility_presence import average_precision
 from scripts.facility_hard_sampling import hard_multipliers
 from safelog_ai.auxiliary_classifier import AuxiliaryClassifier,AUX_CLASSES,ARCH as AUX_ARCH
+from scripts.facility_spatial_manifest import validate_replacement
 
 SPATIAL_DOMAINS={**DOMAINS,'s2ds':3}
 
 class SpatialPhotos(Dataset):
-    def __init__(self,items,auxiliary=None):self.items=items;self.auxiliary=auxiliary;self.transform=image_transform(640);self.jitter=ColorJitter(.1,.1,.1,.01)
+    def __init__(self,items,auxiliary=None,full_count=None):self.items=items;self.auxiliary=auxiliary;self.full_count=full_count;self.transform=image_transform(640);self.jitter=ColorJitter(.1,.1,.1,.01)
     def __len__(self):return len(self.items)
     def __getitem__(self,i):
         item=self.items[i]
@@ -36,6 +37,7 @@ class SpatialPhotos(Dataset):
         if self.auxiliary is not None:
             aux=torch.tensor(self.auxiliary.get(item['image'],[-1]*len(AUX_CLASSES)),dtype=torch.float32)
             result+=aux.clamp_min(0),(aux>=0).float()
+        if self.full_count is not None:result+=(int(i>=self.full_count),)
         return result
 
 
@@ -55,6 +57,7 @@ def main():
     parser.add_argument('--name',default='facility-presence-target-spatial');parser.add_argument('--seed',type=int,default=47)
     parser.add_argument('--epochs',type=int,default=18);parser.add_argument('--patience',type=int,default=5)
     parser.add_argument('--initial',type=Path);parser.add_argument('--supplement-spatial',type=Path)
+    parser.add_argument('--spatial-manifest',type=Path,help='Audited TRAIN small-region crop replacement; core full rows and splits unchanged')
     parser.add_argument('--backbone-lr',type=float,default=.00008);parser.add_argument('--head-lr',type=float,default=.0005)
     parser.add_argument('--hard-mining-strength',type=float,default=0.,help='Bounded TRAIN-only residual sampling from frozen initializer (0 disables)')
     parser.add_argument('--auxiliary-manifest',type=Path)
@@ -69,7 +72,12 @@ def main():
     if (output/'best.pt').exists():raise ValueError('Preserve existing experiment')
     output.mkdir(parents=True,exist_ok=True)
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed);torch.set_num_threads(4)
-    manifest=read(ROOT/'data/facility-spatial-training/train.json');classes=manifest['classes'];items=manifest['items'];full_count=manifest['full_count']
+    core_path=ROOT/'data/facility-spatial-training/train.json';manifest_path=core_path
+    manifest=read(core_path)
+    if args.spatial_manifest:
+        manifest_path=args.spatial_manifest.resolve()
+        manifest=validate_replacement(manifest,read(manifest_path),sha(core_path))
+    classes=manifest['classes'];items=manifest['items'];full_count=manifest['full_count']
     if manifest['split']!='train':raise ValueError('Spatial supervision must be training only')
     split=split_supplemental();save(output/'SPLIT.json',split)
     original,_=dacl_items('train',640)
@@ -155,7 +163,7 @@ def main():
     weights=torch.stack(weights).to('cuda')
     pixel_weights=torch.tensor([min(20.,max(1.,pixel_counts[c]['negative']/max(1,pixel_counts[c]['positive']))) for c in classes],device='cuda')
     sampler=WeightedRandomSampler(sampling,full_count,replacement=True,generator=torch.Generator().manual_seed(seed))
-    loader=DataLoader(SpatialPhotos(items,auxiliary),batch_size=8,sampler=sampler,num_workers=4,persistent_workers=True,pin_memory=True)
+    loader=DataLoader(SpatialPhotos(items,auxiliary,full_count),batch_size=8,sampler=sampler,num_workers=4,persistent_workers=True,pin_memory=True)
     val,_=dacl_items('val',640)
     loaders={name:DataLoader(FacilityPhotos(records,640),batch_size=16,num_workers=4,persistent_workers=True)
              for name,records in {'dacl':val,'damsegment':split['val'],'codebrim':code_val['items']}.items()}
@@ -169,7 +177,9 @@ def main():
     training={'status':'running','architecture':architecture,'classes':classes,'imgsz':640,'seed':seed,'requested_epochs':epochs,'patience':patience,
               'train_dacl':len(original),'train_damsegment':len(split['train']),'train_codebrim':len(code_train['items']),
               'val_dacl':len(val),'val_damsegment':len(split['val']),'validation_domains':list(loaders),'draws_per_epoch':full_count,
-              'spatial_manifest_sha256':sha(ROOT/'data/facility-spatial-training/train.json'),'training_script_sha256':sha(Path(__file__)),
+              'spatial_manifest_sha256':sha(manifest_path),'spatial_manifest_path':manifest_path.relative_to(ROOT).as_posix(),
+              'core_spatial_manifest_sha256':sha(core_path),'spatial_manifest_audit':manifest['audit'],
+              'training_script_sha256':sha(Path(__file__)),
               'model_source_sha256':sha(ROOT/'safelog_ai/spatial_classifier.py'),'split_sha256':sha(output/'SPLIT.json'),
               'pretrained_backbone_sha256':sha(ROOT/'.config/torch/hub/checkpoints/lraspp_mobilenet_v3_large-d234d4ea.pth') if args.initial is None else None,
               'additional_validation':{'path':'data/codebrim-training/val.json','sha256':sha(ROOT/'data/codebrim-training/val.json')},
@@ -178,6 +188,12 @@ def main():
               'loss':'Masked weighted focal photo presence + masked focal 8x8-cell source segmentation + .5 positive-class Dice',
               'domain_proportions':list(proportions),'backbone_lr':args.backbone_lr,'head_lr':args.head_lr,
               'selection':'Minimax per-class FNR/FPR in all three validation domains; no pixel accuracy or test used for selection'}
+    training['expected_sampling']={d:{'full':float(sampling[(domains==k)&(torch.arange(len(items))<full_count)].sum()/sampling.sum()),
+                                     'crop':float(sampling[(domains==k)&(torch.arange(len(items))>=full_count)].sum()/sampling.sum())}
+                                   for d,k in domain_map.items()}
+    training['expected_label_sampling']={label:{'positive':float(sampling[labels[:,k]==1].sum()/sampling.sum()),
+                                               'negative':float(sampling[labels[:,k]==0].sum()/sampling.sum()),
+                                               'unknown':float(sampling[labels[:,k]<0].sum()/sampling.sum())} for k,label in enumerate(classes)}
     if args.initial:training.update(initial=str(args.initial.resolve()),initial_weights_sha256=sha(args.initial))
     if hard_audit:training['hard_training_sampling']=hard_audit
     if auxiliary is not None:
@@ -195,9 +211,10 @@ def main():
         for p in backbone:p.requires_grad=not freeze
         model.train()
         if freeze:model.backbone.eval()
-        total=0.;draws=torch.zeros(len(domain_map),dtype=torch.long)
+        total=0.;draws=torch.zeros(len(domain_map),dtype=torch.long);row_types=torch.zeros(2,dtype=torch.long)
         for batch in loader:
             image,label,known,domain,mask,pixel_known=batch[:6]
+            row_types+=torch.bincount(batch[-1],minlength=2)
             draws+=torch.bincount(domain,minlength=len(domain_map));optimizer.zero_grad(set_to_none=True)
             with torch.autocast(device_type='cuda'):
                 if auxiliary is None:scores,maps=model.forward_details(image.to('cuda'))
@@ -212,6 +229,7 @@ def main():
         worst=max(p['worst_error'] for p in points.values());sum_errors=sum(r[k] for p in points.values() for r in p['domains'].values() for k in ('fnr','fpr'))
         row={'epoch':epoch,'elapsed_minutes':(time.perf_counter()-start)/60,'train_loss':total/full_count,'worst_target_error':worst,'sum_target_errors':sum_errors,
              'target_passed':all(p['target_passed'] for p in points.values()),'operating_points':points,'sampled_domain_counts':{d:int(draws[k]) for d,k in domain_map.items()},
+             'sampled_row_type_counts':{'full':int(row_types[0]),'crop':int(row_types[1])},
              'ranking_ap':{d:{label:average_precision(t[:,k],p[:,k]) for k,label in enumerate(classes) if (t[:,k]>=0).all()} for d,(t,p) in predictions.items()}}
         history.append(row);print(__import__('json').dumps({k:row[k] for k in ('epoch','elapsed_minutes','train_loss','worst_target_error','target_passed')}),flush=True)
         key=(worst,sum_errors)
@@ -226,7 +244,9 @@ def main():
         save(output/'history.json',history);scheduler.step()
         if bad>=patience:break
     training.update(status='complete',actual_epochs=len(history),best_worst_target_error=best[0],weights_sha256=sha(output/'best.pt'))
-    save(output/'TRAINING.json',training);print(__import__('json').dumps(training,indent=2))
+    save(output/'TRAINING.json',training)
+    # Detailed source-annotation audits stay in the ignored run metadata.
+    print(__import__('json').dumps({k:training[k] for k in ('status','actual_epochs','best_worst_target_error','weights_sha256')},indent=2))
 
 
 if __name__=='__main__':main()

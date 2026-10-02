@@ -1,0 +1,119 @@
+{
+  "split": "train",
+  "image_size": 640,
+  "grid_size": 80,
+  "full_photo_or_patch_rows": 14248,
+  "augmentation_rows": 12041,
+  "domains": {
+    "dacl": 16811,
+    "damsegment": 3040,
+    "codebrim": 6438
+  },
+  "per_label_pixel_cells": {
+    "concrete_crack": {
+      "positive": 3923669,
+      "negative": 150169131
+    },
+    "concrete_spalling": {
+      "positive": 6261438,
+      "negative": 151652162
+    },
+    "rust_stain": {
+      "positive": 2643553,
+      "negative": 137919647
+    },
+    "exposed_rebar": {
+      "positive": 350882,
+      "negative": 140653918
+    },
+    "wet_surface": {
+      "positive": 3079894,
+      "negative": 104465706
+    },
+    "efflorescence": {
+      "positive": 2533457,
+      "negative": 142695343
+    },
+    "surface_cavity": {
+      "positive": 1041178,
+      "negative": 106491622
+    }
+  },
+  "photo_pixel_presence_conflicts_masked_unknown": 0,
+  "split_sha256_source": "95611122b9c23bf865fe16a18cda3736be977016c53b8f42ad22014bb02cd074",
+  "policy": "Original full rows, order, row count and negative detail rows preserved; at most one positive detail row per TRAIN parent replaced. Validation/test untouched. No additional independent photos.",
+  "scope": "TRAIN augmentation only; not a new independent dataset, measured localization accuracy or deployment decision",
+  "status": "prepared",
+  "recipe": "small_source_region_context_v1",
+  "source_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+  "replaced_rows": 1694,
+  "unchanged_full_count": 14248,
+  "total_rows": 26289,
+  "new_independent_photos": 0,
+  "replacement_domains": {
+    "dacl": 1584,
+    "damsegment": 110
+  },
+  "replacement_target_classes": {
+    "concrete_spalling": 873,
+    "concrete_crack": 821
+  },
+  "skipped_orientation_parent_rows": 0,
+  "orientation_geometry_parent_rows_checked": 10,
+  "orientation_geometry_parent_rows_verified": 10,
+  "orientation_geometry_policy": "EXIF-corrected sources allowed only when annotation dimensions, original decoded source RGB hash and prepared parent thumbnail dimensions match original preparation. Failed checks preserve original rows; no annotation/image repair.",
+  "source_annotation_count": 7171,
+  "source_annotation_set_sha256": "9100ec31dd94d9b9033fed0fb9a6cfedbfa4f893e9d4878299a9a69fdc18abe7",
+  "geometry": {
+    "maximum_source_positive_fraction": 0.01,
+    "area_space": "Publisher polygons rasterized in unchanged processed-parent coordinates; aligned native Dam RGB masks. Fraction is an approximate annotated image area, not physical damage size.",
+    "minimum_context_short_side_fraction": 0.2,
+    "maximum_context_short_side_fraction": 0.3333333333333333,
+    "bbox_context_factor": 2.0,
+    "minimum_positive_source_pixels": 16,
+    "center": "Actual positive closest to largest connected-component centroid; deterministic ties",
+    "selection": "Smallest source area class first, first existing target-positive detail row; at most one replacement per parent; strictly smaller crop area"
+  },
+  "per_label_photo_rows": {
+    "concrete_crack": {
+      "-1": 4,
+      "0": 18367,
+      "1": 7918
+    },
+    "concrete_spalling": {
+      "-1": 7,
+      "0": 18013,
+      "1": 8269
+    },
+    "rust_stain": {
+      "-1": 3063,
+      "0": 16720,
+      "1": 6506
+    },
+    "exposed_rebar": {
+      "-1": 3042,
+      "0": 20773,
+      "1": 2474
+    },
+    "wet_surface": {
+      "-1": 9485,
+      "0": 15105,
+      "1": 1699
+    },
+    "efflorescence": {
+      "-1": 3054,
+      "0": 20230,
+      "1": 3005
+    },
+    "surface_cavity": {
+      "-1": 9487,
+      "0": 14865,
+      "1": 1937
+    }
+  },
+  "replacement_photo_pixel_presence_conflicts_masked_unknown": 0,
+  "source_unknown_policy": "Crop labels recomputed from TRAIN publisher masks; 1..15 source pixels unknown. Parent-unknown remains unknown, parent-absent never positive. Dam only crack/spalling known; CODEBRIM has no generated ROI. No auxiliary tag propagation.",
+  "preparation_script_sha256": "ea1f94e570d29d7c1a0379370c2c38c386ba773a7203a2a43a67a45227cd091b",
+  "label_change_replacement_rows": 416,
+  "derived_manifest_sha256": "d3f4bbc4c2f416f1555584175b2097cd32f18b64bb6effa2699971e6ce1e15cf"
+}

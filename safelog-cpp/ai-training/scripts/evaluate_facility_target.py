@@ -63,7 +63,7 @@ def cached(weights, items, grid, output, device):
     return probability
 
 
-def select(name, device):
+def select(name, device, grids=(1, 2, 3)):
     run = ROOT / "runs" / name
     training, split = read(run / "TRAINING.json"), read(run / "SPLIT.json")
     if training["status"] != "complete": raise ValueError("Complete training before freezing selection")
@@ -79,7 +79,7 @@ def select(name, device):
         if data["split"] != "val" or data["classes"] != classes: raise ValueError("Additional validation mismatch")
         items["codebrim"] = data["items"]
     attempts = []
-    for grid in (1, 2, 3):
+    for grid in grids:
         predictions = {domain: cached(weights, records, grid, run / f"target-validation-{domain}-grid{grid}.json", device)
                        for domain, records in items.items()}
         points = {label: operating_point({domain: (np.array([item["targets"][classes.index(label)] for item in records], dtype=bool),
@@ -90,7 +90,7 @@ def select(name, device):
         attempts.append(result)
         print(json.dumps(result, indent=2), flush=True)
     chosen = min(attempts, key=lambda row: (row["worst_error"], sum(p["worst_error"] for p in row["per_class"].values()), row["views"]))
-    result = {"run": name, "weights_sha256": sha(weights), "selection_split": "val", "classes": classes,
+    result = {"run": name, "weights_sha256": sha(weights), "selection_split": "val", "classes": classes, "configured_grids": list(grids),
               "validation_counts": {k: len(v) for k,v in items.items()}, "attempts": attempts, "selected": chosen,
               "criterion": "Per target class FNR AND FPR strictly below .05 in EVERY recorded validation domain; no test selection",
               "limitation": "All recorded domains are source validation domains; dam scene IDs unavailable; no independent field guarantee"}
@@ -131,9 +131,13 @@ def test(name, device):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("stage", choices=("select", "test")); p.add_argument("--name", default="facility-presence-target-v2s")
+    p.add_argument("--grids", default="1,2,3", help="Preselected validation views; use 1 for the fixed full-photo crop comparison")
     p.add_argument("--device", default="cuda"); args=p.parse_args()
     torch.set_num_threads(4)
-    (select if args.stage == "select" else test)(args.name, args.device)
+    grids=tuple(int(value) for value in args.grids.split(','))
+    if not grids or len(set(grids))!=len(grids) or any(grid not in (1,2,3) for grid in grids):raise ValueError('Invalid configured grids')
+    if args.stage=='select':select(args.name,args.device,grids)
+    else:test(args.name,args.device)
 
 
 if __name__ == "__main__": main()

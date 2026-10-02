@@ -1,0 +1,178 @@
+{
+  "scope": "Local TRAIN review tool only; no original gold edits or automatic learning",
+  "original_full_train_count": 14248,
+  "selected_photos": 140,
+  "sampling": [
+    {
+      "domain": "codebrim",
+      "task": "concrete_crack",
+      "outcome": "FN",
+      "available": 62,
+      "sampled": 12
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_crack",
+      "outcome": "FP",
+      "available": 256,
+      "sampled": 12
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_crack",
+      "outcome": "TN",
+      "available": 3974,
+      "sampled": 3
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_crack",
+      "outcome": "TP",
+      "available": 2146,
+      "sampled": 3
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_spalling",
+      "outcome": "FN",
+      "available": 43,
+      "sampled": 12
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_spalling",
+      "outcome": "FP",
+      "available": 227,
+      "sampled": 12
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_spalling",
+      "outcome": "TN",
+      "available": 4603,
+      "sampled": 3
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_spalling",
+      "outcome": "TP",
+      "available": 1565,
+      "sampled": 3
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_crack",
+      "outcome": "FN",
+      "available": 15,
+      "sampled": 12
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_crack",
+      "outcome": "FP",
+      "available": 341,
+      "sampled": 12
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_crack",
+      "outcome": "TN",
+      "available": 4136,
+      "sampled": 3
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_crack",
+      "outcome": "TP",
+      "available": 1733,
+      "sampled": 3
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_spalling",
+      "outcome": "FN",
+      "available": 286,
+      "sampled": 12
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_spalling",
+      "outcome": "FP",
+      "available": 463,
+      "sampled": 12
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_spalling",
+      "outcome": "TN",
+      "available": 2824,
+      "sampled": 3
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_spalling",
+      "outcome": "TP",
+      "available": 2652,
+      "sampled": 3
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_crack",
+      "outcome": "FN",
+      "available": 3,
+      "sampled": 3
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_crack",
+      "outcome": "FP",
+      "available": 4,
+      "sampled": 4
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_crack",
+      "outcome": "TN",
+      "available": 676,
+      "sampled": 3
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_crack",
+      "outcome": "TP",
+      "available": 902,
+      "sampled": 3
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_spalling",
+      "outcome": "FP",
+      "available": 2,
+      "sampled": 2
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_spalling",
+      "outcome": "TN",
+      "available": 1341,
+      "sampled": 3
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_spalling",
+      "outcome": "TP",
+      "available": 242,
+      "sampled": 3
+    }
+  ],
+  "weights_sha256": "71ea5d75011e4662954c18e7cb0af88d6558266eef3c6fde7a5f00003c503323",
+  "cache_sha256": "083afd48530e97a49936f0100aecfe10b95b4fae9fdc9e17d77e404fd2a21c0d",
+  "local_html_sha256": "d99d0f8843106d008a9b99d88cdb340dfa14c58501503a2eff309bd7a86a82a3",
+  "local_package_sha256": "007879f2618c1a6cd6476f90a8d31ce012e3d1518a01e16cb35699fbd24b913d",
+  "browser_photo_annotation_display_verified": true,
+  "browser_export_saved_json_verified": true,
+  "export_rows": 140,
+  "user_proposals_automatically_applied": false,
+  "source_context": "DACL/CODEBRIM bridge photos and DamSegment dam photos train common visual concrete damage; industrial workplace generalization not measured",
+  "limitation": "Selected TRAIN examples are already used in learning; review cohorts are not field accuracy. Source-image and detailed-annotation paths/content stay in ignored local files"
+}

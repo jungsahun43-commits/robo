@@ -27,6 +27,7 @@ def fractions(record):
 
 def main():
     parser = argparse.ArgumentParser(); parser.add_argument("--name", default="facility-presence-target-v2s")
+    parser.add_argument("--aggregate-only", action="store_true", help="Keep individual source filenames in the ignored run; publish counts only")
     args = parser.parse_args(); run = ROOT / "runs" / args.name
     prediction, validation = read(run / "validation-dacl.json"), read(run / "VALIDATION.json")
     if prediction["split"] != "val": raise ValueError("Only validation errors can inform next training")
@@ -53,6 +54,12 @@ def main():
                          "lowest_confidence_false_negatives": [items[i]['image'] for i in sorted(np.flatnonzero(positive & ~found), key=lambda i: score[i,k])[:10]]}
     result = {"run": args.name, "split": "val", "weights_sha256": prediction["weights_sha256"],
               "scope": "DACL validation only, 640x640 rasterized publisher polygons for approximate size analysis; gold labels unchanged", "per_class": results}
+    save(run / "ERROR-SIZE-AUDIT.json", result)
+    if args.aggregate_only:
+        result["per_class"] = {label: {key: value for key, value in row.items()
+                                      if key not in ("highest_confidence_false_positives", "lowest_confidence_false_negatives")}
+                               for label, row in results.items()}
+        result["individual_examples_published"] = False
     save(ROOT / "reports" / f"{args.name}-error-size-audit.json", result)
     print(__import__('json').dumps(result, indent=2))
 

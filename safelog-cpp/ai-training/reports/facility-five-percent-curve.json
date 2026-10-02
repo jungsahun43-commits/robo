@@ -1,6 +1,6 @@
 {
-  "plot_sha256": "ce838eeaba3aa21be8c45f137ed14b767c0246be44fe570d633908a170d21a7e",
-  "script_sha256": "362495e8e323d421dc591df4477ee704e78fbe37e763efae72e7af29d838d829",
+  "plot_sha256": "6157861039b6b3e3b7ec8fb0a37dc47935dc149645d9e4f5245fb96cfde18e24",
+  "script_sha256": "a5999535bc64e77c35e421f96e0370346bc443374f0652e03295922b84d02ca4",
   "histories": [
     {
       "run": "facility-presence-target-v2s",
@@ -49,6 +49,18 @@
       "history_sha256": "d5003cc2bd5fa823a800f312510cc77b6ae9b906f9cb0af023d26f9545a6149c",
       "status": "complete",
       "actual_epochs": 18
+    },
+    {
+      "run": "facility-presence-target-roi-control",
+      "history_sha256": "dea16aa67612b0306eb57272710956a4f923be89ac2e21bd73d0c68106575bbb",
+      "status": "complete",
+      "actual_epochs": 6
+    },
+    {
+      "run": "facility-presence-target-small-region",
+      "history_sha256": "927e3bc99f83ff7b30517dc087946a34976b3b1553ab5cf3657413d5da616402",
+      "status": "complete",
+      "actual_epochs": 6
     }
   ],
   "metric": "Full-photo validation worst FNR/FPR, not aggregate wrong-photo fraction or field error"
