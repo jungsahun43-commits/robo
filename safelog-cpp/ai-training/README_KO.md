@@ -18,6 +18,7 @@ C++ 앱용 로컬 API 서버를 재현하기 위한 코드다. 원본 데이터�
 - 위치 감독 준비: [spatial data](reports/facility-target-spatial-data-audit.json). 추가한 조각은 새 독립 현장 사진이 아니다.
 - S2DS 추가: [사용 자료·제외 이유](reports/facility-target-s2ds-screened-data-audit.json). 저자 TRAIN만 사용하며 원본 장면 ID가 없어 독립 현장 성능으로 주장하지 않는다.
 - 추가 반복 학습: [어려운 TRAIN 사례 보강 계획·실행 명령](reports/FACILITY_HARD_TRAINING_PLAN_KO.md). 기존 최고 모델이 어려워하는 학습 사진의 추출 비중을 제한해서 높이며, 같은 세 자료의 검증 기준을 유지한다.
+- 확인 대기 진단: [자동 판단 비율·조건부 오류](reports/facility-presence-target-spatial-review-diagnostic_KO.md). 검증 자료에서 불확실한 사진을 보류하는 비교이며, 기존 전체 사진의 미탐·오탐 기준을 통과한 결과도 앱에 적용된 결과도 아니다.
 
 이 실험들은 `runs/facility-presence-target-*`에 분리한다. 기본 서버 프로필은 기존 채택 버전
 `facility-validation-v2`이며, 새 실험 가중치를 기본 모델에 덮어쓰지 않는다.

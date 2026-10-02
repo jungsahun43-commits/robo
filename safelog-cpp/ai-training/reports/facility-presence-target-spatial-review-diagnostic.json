@@ -1,0 +1,437 @@
+{
+  "run": "facility-presence-target-spatial",
+  "stage": "validation_diagnostic_only",
+  "weights_sha256": "99e5e0dab93aacedc1d4148fea88ac36baf01a1bb700bb6500dd4a918effa485",
+  "sources": {
+    "dacl": {
+      "targets_sha256": "2e6771de820e86cf7263805459933e86b60d2f543d0881da480fe19c2ebef889",
+      "scores_sha256": "25b17fc155d14ad33e89a4ebae8beb6fbda6050a8469916d418445e4bd6dd0d2"
+    },
+    "damsegment": {
+      "targets_sha256": "64568077fef7e3a26f6ef9913db815d6afe9f4b96395ed0944f625c35cb13eaf",
+      "scores_sha256": "215fd4cc7a476cb7171471266e75e432c8ddfdfb22da17760c51d132aa7956c5"
+    },
+    "codebrim": {
+      "targets_sha256": "c58d98485b379fb0c687ff24b7ecc253fa77377c34923e4f6fc2241bd1bbd66d",
+      "scores_sha256": "3ee8586a17cb70545d597a0eabbe8a4fb96c32d001168731a9feaee9ee0f7d32"
+    }
+  },
+  "policies": {
+    "observed_only": {
+      "concrete_crack": {
+        "negative": {
+          "supported": true,
+          "cutoff": 0.3508513271808625,
+          "domains": {
+            "dacl": {
+              "accepted": 308,
+              "errors": 15,
+              "known_photos": 710,
+              "coverage": 0.43380281690140843,
+              "conditional_error": 0.048701298701298704,
+              "ci95": [
+                0.029732688123321752,
+                0.07878867061029245
+              ]
+            },
+            "damsegment": {
+              "accepted": 174,
+              "errors": 4,
+              "known_photos": 424,
+              "coverage": 0.41037735849056606,
+              "conditional_error": 0.022988505747126436,
+              "ci95": [
+                0.008975250976013212,
+                0.05760910398383388
+              ]
+            },
+            "codebrim": {
+              "accepted": 381,
+              "errors": 6,
+              "known_photos": 611,
+              "coverage": 0.6235679214402619,
+              "conditional_error": 0.015748031496062992,
+              "ci95": [
+                0.007236932150048619,
+                0.0339266651121554
+              ]
+            }
+          }
+        },
+        "positive": {
+          "supported": true,
+          "cutoff": 0.9053999781608582,
+          "domains": {
+            "dacl": {
+              "accepted": 68,
+              "errors": 3,
+              "known_photos": 710,
+              "coverage": 0.09577464788732394,
+              "conditional_error": 0.04411764705882353,
+              "ci95": [
+                0.01511661970804156,
+                0.12187195182496394
+              ]
+            },
+            "damsegment": {
+              "accepted": 145,
+              "errors": 0,
+              "known_photos": 424,
+              "coverage": 0.3419811320754717,
+              "conditional_error": 0.0,
+              "ci95": [
+                1.734723475976807e-18,
+                0.02580906456528246
+              ]
+            },
+            "codebrim": {
+              "accepted": 101,
+              "errors": 5,
+              "known_photos": 611,
+              "coverage": 0.16530278232405893,
+              "conditional_error": 0.04950495049504951,
+              "ci95": [
+                0.02132850988800644,
+                0.11069425072968567
+              ]
+            }
+          }
+        },
+        "summary": {
+          "dacl": {
+            "known_photos": 710,
+            "accepted": 376,
+            "review_required": 334,
+            "coverage": 0.5295774647887324,
+            "conditional_error": 0.047872340425531915,
+            "accepted_errors": 18,
+            "all_photos_target_replaced": false
+          },
+          "damsegment": {
+            "known_photos": 424,
+            "accepted": 319,
+            "review_required": 105,
+            "coverage": 0.7523584905660378,
+            "conditional_error": 0.012539184952978056,
+            "accepted_errors": 4,
+            "all_photos_target_replaced": false
+          },
+          "codebrim": {
+            "known_photos": 611,
+            "accepted": 482,
+            "review_required": 129,
+            "coverage": 0.7888707037643208,
+            "conditional_error": 0.022821576763485476,
+            "accepted_errors": 11,
+            "all_photos_target_replaced": false
+          }
+        }
+      },
+      "concrete_spalling": {
+        "negative": {
+          "supported": true,
+          "cutoff": 0.13249926269054416,
+          "domains": {
+            "dacl": {
+              "accepted": 71,
+              "errors": 3,
+              "known_photos": 710,
+              "coverage": 0.1,
+              "conditional_error": 0.04225352112676056,
+              "ci95": [
+                0.014473260620475319,
+                0.11702416040484681
+              ]
+            },
+            "damsegment": {
+              "accepted": 287,
+              "errors": 5,
+              "known_photos": 424,
+              "coverage": 0.6768867924528302,
+              "conditional_error": 0.017421602787456445,
+              "ci95": [
+                0.007463844197205298,
+                0.040127234725375285
+              ]
+            },
+            "codebrim": {
+              "accepted": 217,
+              "errors": 1,
+              "known_photos": 611,
+              "coverage": 0.35515548281505727,
+              "conditional_error": 0.004608294930875576,
+              "ci95": [
+                0.0008139409183967536,
+                0.025636974828527965
+              ]
+            }
+          }
+        },
+        "positive": {
+          "supported": true,
+          "cutoff": 0.9228014945983887,
+          "domains": {
+            "dacl": {
+              "accepted": 16,
+              "errors": 0,
+              "known_photos": 710,
+              "coverage": 0.022535211267605635,
+              "conditional_error": 0.0,
+              "ci95": [
+                0.0,
+                0.1936076805344365
+              ]
+            },
+            "damsegment": {
+              "accepted": 34,
+              "errors": 0,
+              "known_photos": 424,
+              "coverage": 0.08018867924528301,
+              "conditional_error": 0.0,
+              "ci95": [
+                0.0,
+                0.10151455415332376
+              ]
+            },
+            "codebrim": {
+              "accepted": 62,
+              "errors": 2,
+              "known_photos": 611,
+              "coverage": 0.10147299509001637,
+              "conditional_error": 0.03225806451612903,
+              "ci95": [
+                0.008891371499816635,
+                0.11020469594985441
+              ]
+            }
+          }
+        },
+        "summary": {
+          "dacl": {
+            "known_photos": 710,
+            "accepted": 87,
+            "review_required": 623,
+            "coverage": 0.12253521126760564,
+            "conditional_error": 0.034482758620689655,
+            "accepted_errors": 3,
+            "all_photos_target_replaced": false
+          },
+          "damsegment": {
+            "known_photos": 424,
+            "accepted": 321,
+            "review_required": 103,
+            "coverage": 0.7570754716981132,
+            "conditional_error": 0.01557632398753894,
+            "accepted_errors": 5,
+            "all_photos_target_replaced": false
+          },
+          "codebrim": {
+            "known_photos": 611,
+            "accepted": 279,
+            "review_required": 332,
+            "coverage": 0.45662847790507366,
+            "conditional_error": 0.010752688172043012,
+            "accepted_errors": 3,
+            "all_photos_target_replaced": false
+          }
+        }
+      }
+    },
+    "wilson_upper": {
+      "concrete_crack": {
+        "negative": {
+          "supported": true,
+          "cutoff": 0.23450961709022525,
+          "domains": {
+            "dacl": {
+              "accepted": 207,
+              "errors": 4,
+              "known_photos": 710,
+              "coverage": 0.2915492957746479,
+              "conditional_error": 0.01932367149758454,
+              "ci95": [
+                0.007539626042567513,
+                0.04862323152314709
+              ]
+            },
+            "damsegment": {
+              "accepted": 168,
+              "errors": 2,
+              "known_photos": 424,
+              "coverage": 0.39622641509433965,
+              "conditional_error": 0.011904761904761904,
+              "ci95": [
+                0.0032708093814397647,
+                0.042361128769621906
+              ]
+            },
+            "codebrim": {
+              "accepted": 319,
+              "errors": 3,
+              "known_photos": 611,
+              "coverage": 0.5220949263502455,
+              "conditional_error": 0.009404388714733543,
+              "ci95": [
+                0.003203395144589132,
+                0.027280480305125226
+              ]
+            }
+          }
+        },
+        "positive": {
+          "supported": false,
+          "cutoff": 1.0000000000000002,
+          "domains": {
+            "dacl": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 710,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            },
+            "damsegment": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 424,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            },
+            "codebrim": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 611,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            }
+          }
+        },
+        "summary": {
+          "dacl": {
+            "known_photos": 710,
+            "accepted": 207,
+            "review_required": 503,
+            "coverage": 0.2915492957746479,
+            "conditional_error": 0.01932367149758454,
+            "accepted_errors": 4,
+            "all_photos_target_replaced": false
+          },
+          "damsegment": {
+            "known_photos": 424,
+            "accepted": 168,
+            "review_required": 256,
+            "coverage": 0.39622641509433965,
+            "conditional_error": 0.011904761904761904,
+            "accepted_errors": 2,
+            "all_photos_target_replaced": false
+          },
+          "codebrim": {
+            "known_photos": 611,
+            "accepted": 319,
+            "review_required": 292,
+            "coverage": 0.5220949263502455,
+            "conditional_error": 0.009404388714733543,
+            "accepted_errors": 3,
+            "all_photos_target_replaced": false
+          }
+        }
+      },
+      "concrete_spalling": {
+        "negative": {
+          "supported": false,
+          "cutoff": 0.0,
+          "domains": {
+            "dacl": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 710,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            },
+            "damsegment": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 424,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            },
+            "codebrim": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 611,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            }
+          }
+        },
+        "positive": {
+          "supported": false,
+          "cutoff": 1.0000000000000002,
+          "domains": {
+            "dacl": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 710,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            },
+            "damsegment": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 424,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            },
+            "codebrim": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 611,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            }
+          }
+        },
+        "summary": {
+          "dacl": {
+            "known_photos": 710,
+            "accepted": 0,
+            "review_required": 710,
+            "coverage": 0.0,
+            "conditional_error": null,
+            "accepted_errors": 0,
+            "all_photos_target_replaced": false
+          },
+          "damsegment": {
+            "known_photos": 424,
+            "accepted": 0,
+            "review_required": 424,
+            "coverage": 0.0,
+            "conditional_error": null,
+            "accepted_errors": 0,
+            "all_photos_target_replaced": false
+          },
+          "codebrim": {
+            "known_photos": 611,
+            "accepted": 0,
+            "review_required": 611,
+            "coverage": 0.0,
+            "conditional_error": null,
+            "accepted_errors": 0,
+            "all_photos_target_replaced": false
+          }
+        }
+      }
+    }
+  },
+  "deployed": false,
+  "criterion": "Common per-label low/high cutoffs across all three domains. Conditional mistake rate per predicted tail, each <5%; upper rule uses nominal two-sided 95% Wilson upper bound; >=10 accepted/tail/domain.",
+  "limitation": "Cutoffs selected on validation; intervals ignore repeated selection and related patches. No independent test/field guarantee. Abstained cases are unjudged, never counted correct. Conditional error is NOT full-coverage FNR/FPR."
+}
