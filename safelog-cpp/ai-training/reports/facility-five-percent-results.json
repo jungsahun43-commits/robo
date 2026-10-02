@@ -834,14 +834,131 @@
       "run": "facility-presence-target-auxiliary",
       "title": "\uc6d0\ubcf819\uc885 \ubcf4\uc870 \ud559\uc2b5",
       "status": "running",
-      "epochs": 0,
+      "epochs": 9,
       "imgsz": 640,
-      "best_epoch": null,
+      "best_epoch": 8,
       "frozen_validation": false,
-      "grid": null,
-      "worst_error": null,
+      "grid": 1,
+      "worst_error": 0.22845691382765532,
       "target_passed_validation": false,
-      "operating_points": null,
+      "operating_points": {
+        "concrete_crack": {
+          "threshold": 0.4135148525238037,
+          "domains": {
+            "dacl": {
+              "tp": 166,
+              "fp": 114,
+              "fn": 45,
+              "tn": 385,
+              "fnr": 0.2132701421800948,
+              "fpr": 0.22845691382765532,
+              "fnr_ci95": [
+                0.1633845331406176,
+                0.27340946060624977
+              ],
+              "fpr_ci95": [
+                0.19377711108487253,
+                0.2672856249998332
+              ],
+              "photo_error_fraction": 0.223943661971831
+            },
+            "damsegment": {
+              "tp": 245,
+              "fp": 1,
+              "fn": 3,
+              "tn": 175,
+              "fnr": 0.012096774193548387,
+              "fpr": 0.005681818181818182,
+              "fnr_ci95": [
+                0.004122365520547381,
+                0.03495562770097791
+              ],
+              "fpr_ci95": [
+                0.0010036855324105573,
+                0.03147747236632618
+              ],
+              "photo_error_fraction": 0.009433962264150943
+            },
+            "codebrim": {
+              "tp": 138,
+              "fp": 50,
+              "fn": 11,
+              "tn": 412,
+              "fnr": 0.0738255033557047,
+              "fpr": 0.10822510822510822,
+              "fnr_ci95": [
+                0.04172033311633155,
+                0.12735328748428063
+              ],
+              "fpr_ci95": [
+                0.08306026872733871,
+                0.13985131815368956
+              ],
+              "photo_error_fraction": 0.09983633387888707
+            }
+          },
+          "worst_error": 0.22845691382765532,
+          "target_passed": false
+        },
+        "concrete_spalling": {
+          "threshold": 0.49356189370155334,
+          "domains": {
+            "dacl": {
+              "tp": 251,
+              "fp": 87,
+              "fn": 73,
+              "tn": 299,
+              "fnr": 0.22530864197530864,
+              "fpr": 0.22538860103626943,
+              "fnr_ci95": [
+                0.18318887535613515,
+                0.2738657612346772
+              ],
+              "fpr_ci95": [
+                0.1865289735180465,
+                0.2696602151810742
+              ],
+              "photo_error_fraction": 0.22535211267605634
+            },
+            "damsegment": {
+              "tp": 46,
+              "fp": 8,
+              "fn": 12,
+              "tn": 358,
+              "fnr": 0.20689655172413793,
+              "fpr": 0.02185792349726776,
+              "fnr_ci95": [
+                0.12251483969490558,
+                0.3276921792148341
+              ],
+              "fpr_ci95": [
+                0.01111646133459836,
+                0.042532090896301264
+              ],
+              "photo_error_fraction": 0.04716981132075472
+            },
+            "codebrim": {
+              "tp": 120,
+              "fp": 37,
+              "fn": 20,
+              "tn": 434,
+              "fnr": 0.14285714285714285,
+              "fpr": 0.07855626326963906,
+              "fnr_ci95": [
+                0.09441991250112675,
+                0.21037023061988253
+              ],
+              "fpr_ci95": [
+                0.057527665332015185,
+                0.10640380563519873
+              ],
+              "photo_error_fraction": 0.09328968903436989
+            }
+          },
+          "worst_error": 0.22538860103626943,
+          "target_passed": false
+        }
+      },
       "test_executed": false,
       "target_passed_test": null,
       "weights_sha256": null,
@@ -1031,9 +1148,17 @@
   ],
   "app_profile": "facility-validation-v2",
   "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
-  "total_actual_training_epochs": 76,
+  "total_actual_training_epochs": 85,
   "best_three_domain_validation_run": "facility-presence-target-spatial",
   "best_three_domain_validation_worst_error": 0.23148148148148148,
+  "best_three_domain_scope": "Completed validation view/cutoff selection only; running rows reported separately",
+  "running_best_full_photo_validation": [
+    {
+      "run": "facility-presence-target-auxiliary",
+      "epochs": 9,
+      "best_full_photo_worst_error": 0.22845691382765532
+    }
+  ],
   "conditional_extra_once_started": false,
   "release_target_achieved": false,
   "scope": "Photo presence only; other five facility labels, exact defect location, structural safety and unseen facility error are not claimed below5%",

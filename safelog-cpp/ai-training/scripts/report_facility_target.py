@@ -47,10 +47,14 @@ def main():
     comparable=[e for e in entries if e.get('frozen_validation') and e.get('validation_domains')==['dacl','damsegment','codebrim'] and e.get('worst_error') is not None]
     best=min(comparable,key=lambda e:e['worst_error']) if comparable else None
     total_epochs=sum(e.get('epochs',0) for e in entries)
+    running=[{'run':e['run'],'epochs':e['epochs'],'best_full_photo_worst_error':e['worst_error']}
+             for e in entries if e.get('status')=='running' and e.get('worst_error') is not None]
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
             'experiments':entries,'app_profile':profile['version'],'app_profile_sha256':sha(ROOT/'reports/facility-inference-profile.json'),
             'total_actual_training_epochs':total_epochs,'best_three_domain_validation_run':best['run'] if best else None,
             'best_three_domain_validation_worst_error':best['worst_error'] if best else None,
+            'best_three_domain_scope':'Completed validation view/cutoff selection only; running rows reported separately',
+            'running_best_full_photo_validation':running,
             'conditional_extra_once_started':False,
             'release_target_achieved':any(e.get('target_passed_test') is True for e in entries),
             'scope':'Photo presence only; other five facility labels, exact defect location, structural safety and unseen facility error are not claimed below5%',
@@ -59,7 +63,8 @@ def main():
     lines=['# 시설 항목별 5% 목표 진행·결과','',
            '**5% 미만 목표 미달.**' if not result['release_target_achieved'] else '**기록된 보류 자료의 목표 통과 모델이 있음. 현장 보장은 아님.**','',
            f'기록된 실제 학습은 총{total_epochs}epoch이다. 모델 확률 평균 검증은 학습 횟수에 더하지 않는다.',
-           f"동일한 세 검증 자료에서 가장 좋은 후보: `{best['run']}`, 최대 미탐·오탐 {best['worst_error']*100:.2f}%." if best else '동일한 세 검증 자료의 선택 고정 결과가 아직 없다.',
+           f"동일한 세 검증 자료에서 뷰·임계값 선택 고정이 끝난 가장 좋은 후보: `{best['run']}`, 최대 미탐·오탐 {best['worst_error']*100:.2f}%." if best else '동일한 세 검증 자료의 선택 고정 결과가 아직 없다.',
+           *[f"진행 중 `{r['run']}`: 실제{r['epochs']}epoch, 지금까지 전체 사진의 최대 미탐·오탐 최저{r['best_full_photo_worst_error']*100:.2f}%. 학습 및 최종 확대 선택이 아직 끝나지 않았다." for r in running],
            '검증 미달 후보를 반복 시험하여 설정을 고르지 않았다. 목표를 통과했을 때 수행할 별도 추가1epoch 조건도 아직 발동하지 않았다.',
            '현재 결과는 추가 반복으로5%달성을 보장하지 않는다. 정답 기준의 전문가 검수와 다른 모델 구조를 포함한 후속 연구가 필요하다.','',
            '균열·박락 각각에 대해 미탐률 FN/(TP+FN), 오탐률 FP/(FP+TN)이 모두 0.05 미만이어야 통과한다.',

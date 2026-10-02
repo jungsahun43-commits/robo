@@ -5,6 +5,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 from safelog_ai.auxiliary_classifier import ARCH,AUX_CLASSES
+from safelog_ai.spatial_classifier import ARCH as BASE_ARCH
 from safelog_ai.presence_classifier import build_model
 from scripts.prepare_facility_auxiliary import original_targets
 from scripts.train_facility_target import masked_focal
@@ -12,6 +13,16 @@ from scripts.train_facility_spatial import SpatialPhotos
 
 
 class AuxiliaryTests(unittest.TestCase):
+    def test_base_initializer_keeps_same_seven_predictions_before_finetuning(self):
+        torch.set_num_threads(2)
+        base=build_model(7,architecture=BASE_ARCH).eval();aux=build_model(7,architecture=ARCH).eval()
+        mismatch=aux.load_state_dict(base.state_dict(),strict=False)
+        self.assertEqual(set(mismatch.missing_keys),{'auxiliary_head.weight','auxiliary_head.bias'})
+        self.assertEqual(mismatch.unexpected_keys,[])
+        image=torch.randn(1,3,128,128)
+        with torch.inference_mode():original=base(image);extended=aux(image)
+        self.assertTrue(torch.equal(original,extended))
+
     def test_parent_tags_do_not_transfer_to_detail_crop(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);image=root/'crop.png';mask=root/'mask.npz'
