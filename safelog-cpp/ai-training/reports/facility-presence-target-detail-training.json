@@ -1,0 +1,53 @@
+{
+  "status": "complete",
+  "architecture": "efficientnet_v2_s_multilabel_v1",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "imgsz": 384,
+  "train_dacl": 6225,
+  "train_damsegment": 1585,
+  "val_dacl": 710,
+  "val_damsegment": 424,
+  "reserved_dam_test": 491,
+  "requested_epochs": 18,
+  "seed": 44,
+  "gamma": 1.0,
+  "positive_weights": [
+    [
+      2.197601556777954,
+      1.1843128204345703,
+      1.7615107297897339,
+      6.0,
+      6.0,
+      4.808475971221924,
+      6.0
+    ],
+    [
+      0.3695520758628845,
+      4.173471927642822,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224
+    ]
+  ],
+  "initial": "runs\\facility-presence-target-v2s\\best.pt",
+  "split_sha256": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+  "selection": "minimax FNR/FPR on both validation domains, test never selected",
+  "domain_balance": true,
+  "detail_crops": 12041,
+  "detail_manifest_sha256": "6f22582b287d2c220e3dc0104c7d9294febe0426820a5d9ec8b1c1acbc2756e6",
+  "target_emphasis": 3.0,
+  "draws_per_epoch": 7810,
+  "actual_epochs": 16,
+  "best_worst_target_error": 0.25862068965517243,
+  "weights_sha256": "6efe4e1fcb4c12dccec8ffeeb46c568d99627ce3b3770b3201306bf68d64de02"
+}

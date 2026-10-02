@@ -2,12 +2,24 @@
 import numpy as np
 
 
+def wilson_interval(errors, total):
+    """Two-sided 95% binomial interval; independent-photo assumption is required."""
+    if not total: return None
+    z = 1.959963984540054
+    p = errors / total
+    denominator = 1 + z*z/total
+    center = (p + z*z/(2*total)) / denominator
+    radius = z * np.sqrt(p*(1-p)/total + z*z/(4*total*total)) / denominator
+    return [float(max(0., center-radius)), float(min(1., center+radius))]
+
+
 def rates(target, prediction):
     target, prediction = np.asarray(target, bool), np.asarray(prediction, bool)
     tp, fp, fn, tn = (int(x.sum()) for x in (target & prediction, ~target & prediction, target & ~prediction, ~target & ~prediction))
     return {"tp": tp, "fp": fp, "fn": fn, "tn": tn,
             "fnr": fn / (tp + fn) if tp + fn else None,
             "fpr": fp / (fp + tn) if fp + tn else None,
+            "fnr_ci95": wilson_interval(fn, tp+fn), "fpr_ci95": wilson_interval(fp, fp+tn),
             "photo_error_fraction": (fp + fn) / len(target) if len(target) else None}
 
 

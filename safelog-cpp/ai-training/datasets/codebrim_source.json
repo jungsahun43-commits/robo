@@ -1,0 +1,13 @@
+{
+  "homepage": "https://zenodo.org/records/2620293",
+  "metadata_url": "https://zenodo.org/api/records/2620293",
+  "license_url": "https://zenodo.org/records/2620293/files/license.md?download=1",
+  "license": "CODEBRIM custom noncommercial educational/research agreement; data-free trained models under the same terms",
+  "citation": "Mundt, Majumder, Murali, Panetsos and Ramesh (2019). Meta-learning Convolutional Neural Architectures for Multi-target Concrete Defect Classification with the COncrete DEfect BRidge IMage Dataset. CVPR 2019.",
+  "archive": "CODEBRIM_classification_dataset.zip",
+  "bytes": 7911716093,
+  "md5": "c1612d9674e2e628e72e7f5817c40130",
+  "url": "https://zenodo.org/api/records/2620293/files/CODEBRIM_classification_dataset.zip/content",
+  "checksum_origin": "Author Zenodo metadata, checked before training; choose unbalanced archive, not augmented balanced duplicate crops",
+  "scope": "Five labeled concrete defects and background on cropped bridge photos; no known wet-surface or cavity negatives"
+}

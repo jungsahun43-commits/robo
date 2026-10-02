@@ -1,0 +1,75 @@
+{
+  "epoch": 10,
+  "elapsed_minutes": 11.04812786166658,
+  "train_loss": 0.1462425471086737,
+  "worst_target_error": 0.25862068965517243,
+  "sum_target_errors": 1.2862897925716352,
+  "target_passed": false,
+  "operating_points": {
+    "concrete_crack": {
+      "threshold": 0.20294052362442017,
+      "domains": {
+        "dacl": {
+          "tp": 161,
+          "fp": 120,
+          "fn": 50,
+          "tn": 379,
+          "fnr": 0.23696682464454977,
+          "fpr": 0.24048096192384769,
+          "photo_error_fraction": 0.23943661971830985
+        },
+        "damsegment": {
+          "tp": 246,
+          "fp": 4,
+          "fn": 2,
+          "tn": 172,
+          "fnr": 0.008064516129032258,
+          "fpr": 0.022727272727272728,
+          "photo_error_fraction": 0.014150943396226415
+        }
+      },
+      "worst_error": 0.24048096192384769,
+      "target_passed": false
+    },
+    "concrete_spalling": {
+      "threshold": 0.594326913356781,
+      "domains": {
+        "dacl": {
+          "tp": 245,
+          "fp": 99,
+          "fn": 79,
+          "tn": 287,
+          "fnr": 0.24382716049382716,
+          "fpr": 0.25647668393782386,
+          "photo_error_fraction": 0.2507042253521127
+        },
+        "damsegment": {
+          "tp": 43,
+          "fp": 7,
+          "fn": 15,
+          "tn": 359,
+          "fnr": 0.25862068965517243,
+          "fpr": 0.01912568306010929,
+          "photo_error_fraction": 0.05188679245283019
+        }
+      },
+      "worst_error": 0.25862068965517243,
+      "target_passed": false
+    }
+  },
+  "ranking_ap": {
+    "dacl": {
+      "concrete_crack": 0.7644621648158588,
+      "concrete_spalling": 0.7861200244253437,
+      "rust_stain": 0.8828122163269831,
+      "exposed_rebar": 0.7680038091572587,
+      "wet_surface": 0.4364296156711608,
+      "efflorescence": 0.7699067662667733,
+      "surface_cavity": 0.5443942297988279
+    },
+    "damsegment": {
+      "concrete_crack": 0.999621044794574,
+      "concrete_spalling": 0.7998215590359854
+    }
+  }
+}

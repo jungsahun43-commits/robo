@@ -57,20 +57,32 @@ def main():
     folder = ROOT / "data/codebrim/source/classification_dataset"
     classes = read(ROOT / "data/damsegment-training/train.json")["classes"]
     annotations = {}
+    ambiguous = set()
     for category in ("background", "defects"):
         for node in ET.parse(folder / "metadata" / f"{category}.xml").getroot():
+            if node.tag == "Counts": continue  # Author summary, not an image annotation.
+            if node.tag != "Defect": raise ValueError("Unexpected XML record")
             key = (category, node.attrib["name"])
             if key in annotations: raise ValueError("Duplicate XML annotation")
+            if all(child.text == "0" for child in node):
+                # Background is also zero: no asserted category, not a normal label.
+                if {child.tag for child in node} != {"Background", *MAPPING}:
+                    raise ValueError("Unexpected XML tags in unlabelled record")
+                ambiguous.add(key); annotations[key] = None
+                continue
             annotations[key] = labels(node, classes)
-    tasks = []
+    tasks, used_annotations = [], set()
     for split in ("train", "val", "test"):
         for category in ("background", "defects"):
             for path in sorted((folder / split / category).glob("*.png")):
                 key = (category, path.name)
                 if key not in annotations: raise ValueError("Photo without author annotation")
+                used_annotations.add(key)
+                if key in ambiguous: continue
                 tasks.append((path, split, annotations[key]))
     expected = {"train": 6481, "val": 616, "test": 632}
-    if dict(Counter(t[1] for t in tasks)) != expected: raise ValueError("Publisher photo counts changed")
+    raw_counts = {s: sum(len(list((folder / s / c).glob("*.png"))) for c in ("background", "defects")) for s in expected}
+    if raw_counts != expected: raise ValueError("Publisher photo counts changed")
     items = []
     with ThreadPoolExecutor(max_workers=4) as pool:
         for i, item in enumerate(pool.map(candidate, tasks), 1):
@@ -106,6 +118,9 @@ def main():
         if i % 1000 == 0: print(f"CODEBRIM training conversion {i}/{len(kept)}", flush=True)
     audit = {"status": "prepared", "source": "https://zenodo.org/records/2620293", "source_md5": md5,
              "source_sha256": sha(archive), "author_counts": expected, "usable_patches": len(kept),
+             "metadata_annotations_without_archive_photo": [list(key) for key in sorted(set(annotations)-used_annotations)],
+             "ambiguous_allzero_annotations_excluded": [list(key) for key in sorted(ambiguous & used_annotations)],
+             "ambiguous_allzero_count": len(ambiguous & used_annotations),
              "parent_photos": len({i["parent_id"] for i in kept}), "publisher_cross_split_parent_groups": 0,
              "excluded_parent_groups": len(excluded_groups), "exclusion_reasons": dict(reasons),
              "split_counts": dict(Counter(i["split"] for i in kept)), "mapping": MAPPING,
@@ -113,7 +128,7 @@ def main():
                                                "negative": sum(i["targets"][j] == 0 for i in kept if i["split"] == s),
                                                "unknown": sum(i["targets"][j] == -1 for i in kept if i["split"] == s)}
                                       for j, name in enumerate(classes)} for s in expected},
-             "label_policy": "Five XML defect labels known; wet_surface and surface_cavity always unknown, including background",
+             "label_policy": "Five XML defect labels known; wet_surface and surface_cavity always unknown, including background; all-six-zero records are excluded as unasserted categories before any training or prediction",
              "license": "CODEBRIM custom noncommercial research/educational terms; no raw or modified data redistribution; data-free models shared under same terms",
              "license_sha256": sha(ROOT / "data/codebrim/license.md"),
              "group_policy": "Official train/val/test, each original image ID belongs to exactly one split; exclude entire parent group if exact-pixel cross-split/existing-data overlap",

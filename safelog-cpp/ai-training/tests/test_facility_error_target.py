@@ -1,11 +1,17 @@
 import unittest
 import numpy as np
 import torch
-from scripts.facility_error_target import rates, under_target, operating_point
+from scripts.facility_error_target import rates, under_target, operating_point, wilson_interval
 from scripts.train_facility_target import masked_focal
 
 
 class ErrorTargetTests(unittest.TestCase):
+    def test_zero_observed_misses_is_not_proof_of_subfive_population_error(self):
+        self.assertIsNone(wilson_interval(0, 0))
+        interval = wilson_interval(0, 58)
+        self.assertGreater(interval[1], .05)
+        self.assertLess(wilson_interval(0, 100)[1], .05)
+        self.assertAlmostEqual(wilson_interval(10, 100)[0], .055229, places=5)
     def test_exactly_five_percent_is_not_below_the_target(self):
         self.assertFalse(under_target([{"fnr": .05, "fpr": 0.}]))
         self.assertTrue(under_target([{"fnr": .0499, "fpr": .0499}]))

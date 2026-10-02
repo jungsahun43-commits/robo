@@ -41,8 +41,19 @@ def part(url, path, start, end):
 
 
 def main():
-    metadata = json.loads((ROOT / "data/codebrim/metadata.json").read_text(encoding="utf-8"))
+    pinned = json.loads((ROOT / "datasets/codebrim_source.json").read_text(encoding="utf-8"))
+    folder = ROOT / "data/codebrim"
+    folder.mkdir(parents=True, exist_ok=True)
+    for name, url in (("metadata.json", pinned["metadata_url"]), ("license.md", pinned["license_url"])):
+        path = folder / name
+        if not path.exists():
+            request = urllib.request.Request(url, headers={"User-Agent": "SafeLog-Academic-Research/1.0"})
+            with urllib.request.urlopen(request, timeout=45) as response: value = response.read()
+            path.write_bytes(value)
+    metadata = json.loads((folder / "metadata.json").read_text(encoding="utf-8"))
     source = next(f for f in metadata["files"] if f["key"] == "CODEBRIM_classification_dataset.zip")
+    if source["size"] != pinned["bytes"] or source["checksum"] != "md5:" + pinned["md5"]:
+        raise ValueError("Publisher archive differs from the pinned author source")
     total, url = source["size"], source["links"]["self"]
     target = ROOT / "data/facility-archives/codebrim.zip"
     parts = target.parent / "codebrim-parts"
@@ -58,6 +69,7 @@ def main():
         ranges = [[start, min(total - 1, start + width - 1)] for start in range(prefix, total, width)]
         plan = {"url": url, "total": total, "prefix": prefix, "ranges": ranges}
         manifest.write_text(json.dumps(plan, indent=2), encoding="utf-8")
+    if not target.exists(): target.touch()
     if target.stat().st_size not in (plan["prefix"], total): raise ValueError("Prefix changed during resume")
     if target.stat().st_size != total:
         futures = []
