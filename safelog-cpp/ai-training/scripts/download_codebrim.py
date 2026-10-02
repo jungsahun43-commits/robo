@@ -8,7 +8,7 @@ import shutil
 import time
 import urllib.request
 
-from download_dataset import safe_extract
+from extract_codebrim import extract
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -99,8 +99,10 @@ def main():
     destination = ROOT / "data/codebrim/source"
     marker = destination / "EXTRACTED.json"
     if not marker.exists():
-        safe_extract(target, destination)
-        marker.write_text(json.dumps({"md5": digest, "sha256": digest_sha}), encoding="utf-8")
+        audit = extract(target, destination)
+        audit.update(md5=digest, sha256=digest_sha)
+        marker.write_text(json.dumps(audit, indent=2), encoding="utf-8")
+        (ROOT / "reports/facility-target-codebrim-extraction.json").write_text(json.dumps(audit, indent=2), encoding="utf-8")
     print("CODEBRIM verified and extracted", flush=True)
 
 

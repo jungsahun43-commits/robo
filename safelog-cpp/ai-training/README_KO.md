@@ -4,6 +4,23 @@
 C++ 앱용 로컬 API 서버를 재현하기 위한 코드다. 원본 데이터와 학습 결과는 Git에
 올리지 않는다.
 
+## 항목별 5% 미만 목표 실험
+
+현재 **균열·박락 각각의 미탐률과 오탐률 모두 5% 미만 목표는 미달**이다.
+시험 정답은 반복 학습/임계값 선택에 쓰지 않는다. 검증 결과가 목표를 통과한 경우에만 설정을 고정해 시험한다.
+공개 자료의 검증 점수는 새로운 산업체 현장의 성능 보장이 아니다.
+
+- 조건과 분리: [FACILITY_FIVE_PERCENT_PLAN_KO.md](reports/FACILITY_FIVE_PERCENT_PLAN_KO.md)
+- 새 실제 자료 감사: [CODEBRIM](reports/facility-target-codebrim-data-audit.json)
+- 4GB ZIP 위치 호환 처리·CRC 확인: [extraction](reports/facility-target-codebrim-extraction.json)
+- 더 큰 사진 모델/상세 증강/해상도 보강 결과: `reports/facility-presence-target-*-target-validation.json`
+- 위치 감독 준비: [spatial data](reports/facility-target-spatial-data-audit.json). 추가한 조각은 새 독립 현장 사진이 아니다.
+
+이 실험들은 `runs/facility-presence-target-*`에 분리한다. 기본 서버 프로필은 기존 채택 버전
+`facility-validation-v2`이며, 새 실험 가중치를 기본 모델에 덮어쓰지 않는다.
+CODEBRIM은 교육·비상업 연구 전용 조건이다. 팀원도 [원문 조건](https://zenodo.org/records/2620293/files/license.md?download=1)을 확인한다.
+원본과 변환 데이터는 저장소/모델 ZIP에 포함하지 않는다.
+
 ## 시설 성능 보강 전달본
 
 보강 모델 ZIP과 최신 코드를 함께 사용하면 `./start_ai_server.ps1 -FacilitiesOnly`가

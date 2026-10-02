@@ -1,0 +1,46 @@
+{
+  "split": "train",
+  "image_size": 640,
+  "grid_size": 80,
+  "full_photo_or_patch_rows": 14248,
+  "augmentation_rows": 12041,
+  "domains": {
+    "dacl": 16811,
+    "damsegment": 3040,
+    "codebrim": 6438
+  },
+  "per_label_pixel_cells": {
+    "concrete_crack": {
+      "positive": 3851077,
+      "negative": 150248123
+    },
+    "concrete_spalling": {
+      "positive": 6118869,
+      "negative": 151807531
+    },
+    "rust_stain": {
+      "positive": 2628965,
+      "negative": 137934235
+    },
+    "exposed_rebar": {
+      "positive": 351029,
+      "negative": 140653771
+    },
+    "wet_surface": {
+      "positive": 3056826,
+      "negative": 104495174
+    },
+    "efflorescence": {
+      "positive": 2528801,
+      "negative": 142699999
+    },
+    "surface_cavity": {
+      "positive": 1047436,
+      "negative": 106485364
+    }
+  },
+  "photo_pixel_presence_conflicts_masked_unknown": 0,
+  "split_sha256_source": "95611122b9c23bf865fe16a18cda3736be977016c53b8f42ad22014bb02cd074",
+  "policy": "Only DACL train/new Dam train/CODEBRIM train and their TRAIN detail children; source polygons/masks, negatives from asserted absent classes; CODEBRIM positives have no invented pixel regions; 8x8 any-positive cells; photo labels unchanged",
+  "scope": "Spatial loss supervision, not full-resolution segmentation evaluation or field localization accuracy"
+}

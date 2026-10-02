@@ -1,0 +1,379 @@
+{
+  "status": "prepared",
+  "source": "https://zenodo.org/records/2620293",
+  "source_md5": "c1612d9674e2e628e72e7f5817c40130",
+  "source_sha256": "3a9c740f92e0be9fdb03eaeab35c125621410aafbbf2347b9bd7ee9461028edb",
+  "author_counts": {
+    "train": 6481,
+    "val": 616,
+    "test": 632
+  },
+  "usable_patches": 7677,
+  "metadata_annotations_without_archive_photo": [
+    [
+      "background",
+      "image_0001587_crop_0000001.png"
+    ],
+    [
+      "background",
+      "image_0001587_crop_0000002.png"
+    ],
+    [
+      "background",
+      "image_0001587_crop_0000003.png"
+    ],
+    [
+      "background",
+      "image_0001587_crop_0000004.png"
+    ],
+    [
+      "background",
+      "image_0001587_crop_0000005.png"
+    ]
+  ],
+  "ambiguous_allzero_annotations_excluded": [
+    [
+      "defects",
+      "image_0000300_crop_0000001.png"
+    ],
+    [
+      "defects",
+      "image_0000300_crop_0000002.png"
+    ],
+    [
+      "defects",
+      "image_0000987_crop_0000045.png"
+    ],
+    [
+      "defects",
+      "image_0001051_crop_0000011.png"
+    ],
+    [
+      "defects",
+      "image_0001063_crop_0000014.png"
+    ],
+    [
+      "defects",
+      "image_0001093_crop_0000003.png"
+    ],
+    [
+      "defects",
+      "image_0001124_crop_0000004.png"
+    ],
+    [
+      "defects",
+      "image_0001126_crop_0000002.png"
+    ],
+    [
+      "defects",
+      "image_0001132_crop_0000005.png"
+    ],
+    [
+      "defects",
+      "image_0001138_crop_0000005.png"
+    ],
+    [
+      "defects",
+      "image_0001148_crop_0000005.png"
+    ],
+    [
+      "defects",
+      "image_0001152_crop_0000001.png"
+    ],
+    [
+      "defects",
+      "image_0001153_crop_0000005.png"
+    ],
+    [
+      "defects",
+      "image_0001153_crop_0000007.png"
+    ],
+    [
+      "defects",
+      "image_0001153_crop_0000008.png"
+    ],
+    [
+      "defects",
+      "image_0001159_crop_0000006.png"
+    ],
+    [
+      "defects",
+      "image_0001161_crop_0000001.png"
+    ],
+    [
+      "defects",
+      "image_0001172_crop_0000002.png"
+    ],
+    [
+      "defects",
+      "image_0001176_crop_0000007.png"
+    ],
+    [
+      "defects",
+      "image_0001195_crop_0000012.png"
+    ],
+    [
+      "defects",
+      "image_0001224_crop_0000003.png"
+    ],
+    [
+      "defects",
+      "image_0001226_crop_0000011.png"
+    ],
+    [
+      "defects",
+      "image_0001226_crop_0000013.png"
+    ],
+    [
+      "defects",
+      "image_0001244_crop_0000001.png"
+    ],
+    [
+      "defects",
+      "image_0001266_crop_0000018.png"
+    ],
+    [
+      "defects",
+      "image_0001283_crop_0000001.png"
+    ],
+    [
+      "defects",
+      "image_0001289_crop_0000017.png"
+    ],
+    [
+      "defects",
+      "image_0001292_crop_0000003.png"
+    ],
+    [
+      "defects",
+      "image_0001354_crop_0000002.png"
+    ],
+    [
+      "defects",
+      "image_0001354_crop_0000003.png"
+    ],
+    [
+      "defects",
+      "image_0001384_crop_0000002.png"
+    ],
+    [
+      "defects",
+      "image_0001396_crop_0000004.png"
+    ],
+    [
+      "defects",
+      "image_0001396_crop_0000005.png"
+    ],
+    [
+      "defects",
+      "image_0001403_crop_0000006.png"
+    ],
+    [
+      "defects",
+      "image_0001415_crop_0000006.png"
+    ],
+    [
+      "defects",
+      "image_0001424_crop_0000006.png"
+    ],
+    [
+      "defects",
+      "image_0001470_crop_0000007.png"
+    ],
+    [
+      "defects",
+      "image_0001470_crop_0000008.png"
+    ],
+    [
+      "defects",
+      "image_0001491_crop_0000003.png"
+    ],
+    [
+      "defects",
+      "image_0001506_crop_0000015.png"
+    ],
+    [
+      "defects",
+      "image_0001514_crop_0000007.png"
+    ],
+    [
+      "defects",
+      "image_0001530_crop_0000009.png"
+    ],
+    [
+      "defects",
+      "image_0001533_crop_0000003.png"
+    ],
+    [
+      "defects",
+      "image_0001533_crop_0000004.png"
+    ],
+    [
+      "defects",
+      "image_0001536_crop_0000004.png"
+    ],
+    [
+      "defects",
+      "image_0001555_crop_0000014.png"
+    ],
+    [
+      "defects",
+      "image_0001566_crop_0000020.png"
+    ],
+    [
+      "defects",
+      "image_0001566_crop_0000021.png"
+    ],
+    [
+      "defects",
+      "image_0001566_crop_0000023.png"
+    ],
+    [
+      "defects",
+      "image_0001581_crop_0000012.png"
+    ],
+    [
+      "defects",
+      "image_0001594_crop_0000002.png"
+    ],
+    [
+      "defects",
+      "image_0001594_crop_0000005.png"
+    ]
+  ],
+  "ambiguous_allzero_count": 52,
+  "parent_photos": 1522,
+  "publisher_cross_split_parent_groups": 0,
+  "excluded_parent_groups": 0,
+  "exclusion_reasons": {},
+  "split_counts": {
+    "train": 6438,
+    "val": 611,
+    "test": 628
+  },
+  "mapping": {
+    "Crack": "concrete_crack",
+    "Spallation": "concrete_spalling",
+    "CorrosionStain": "rust_stain",
+    "ExposedBars": "exposed_rebar",
+    "Efflorescence": "efflorescence"
+  },
+  "per_split_labels": {
+    "train": {
+      "concrete_crack": {
+        "positive": 2208,
+        "negative": 4230,
+        "unknown": 0
+      },
+      "concrete_spalling": {
+        "positive": 1608,
+        "negative": 4830,
+        "unknown": 0
+      },
+      "rust_stain": {
+        "positive": 1263,
+        "negative": 5175,
+        "unknown": 0
+      },
+      "exposed_rebar": {
+        "positive": 1215,
+        "negative": 5223,
+        "unknown": 0
+      },
+      "wet_surface": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 6438
+      },
+      "efflorescence": {
+        "positive": 543,
+        "negative": 5895,
+        "unknown": 0
+      },
+      "surface_cavity": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 6438
+      }
+    },
+    "val": {
+      "concrete_crack": {
+        "positive": 149,
+        "negative": 462,
+        "unknown": 0
+      },
+      "concrete_spalling": {
+        "positive": 140,
+        "negative": 471,
+        "unknown": 0
+      },
+      "rust_stain": {
+        "positive": 146,
+        "negative": 465,
+        "unknown": 0
+      },
+      "exposed_rebar": {
+        "positive": 142,
+        "negative": 469,
+        "unknown": 0
+      },
+      "wet_surface": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 611
+      },
+      "efflorescence": {
+        "positive": 141,
+        "negative": 470,
+        "unknown": 0
+      },
+      "surface_cavity": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 611
+      }
+    },
+    "test": {
+      "concrete_crack": {
+        "positive": 150,
+        "negative": 478,
+        "unknown": 0
+      },
+      "concrete_spalling": {
+        "positive": 150,
+        "negative": 478,
+        "unknown": 0
+      },
+      "rust_stain": {
+        "positive": 150,
+        "negative": 478,
+        "unknown": 0
+      },
+      "exposed_rebar": {
+        "positive": 150,
+        "negative": 478,
+        "unknown": 0
+      },
+      "wet_surface": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 628
+      },
+      "efflorescence": {
+        "positive": 149,
+        "negative": 479,
+        "unknown": 0
+      },
+      "surface_cavity": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 628
+      }
+    }
+  },
+  "label_policy": "Five XML defect labels known; wet_surface and surface_cavity always unknown, including background; all-six-zero records are excluded as unasserted categories before any training or prediction",
+  "license": "CODEBRIM custom noncommercial research/educational terms; no raw or modified data redistribution; data-free models shared under same terms",
+  "license_sha256": "f9d79f5d3dddab9b4c3cff0ddc426cf26c739a9f922c00ec66acb35c67ed5aba",
+  "group_policy": "Official train/val/test, each original image ID belongs to exactly one split; exclude entire parent group if exact-pixel cross-split/existing-data overlap",
+  "limitation": "Cropped bridge photos; parent-photo independence does not establish independent bridges/sites or smartphone field performance"
+}

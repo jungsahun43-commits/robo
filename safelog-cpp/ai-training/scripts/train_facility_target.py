@@ -104,6 +104,9 @@ def main():
     parser.add_argument("--supplement", type=Path, help="Verified CODEBRIM training manifest; official validation/test remain reserved")
     parser.add_argument("--target-emphasis", type=float, default=1.)
     args = parser.parse_args()
+    for name in ("initial", "details", "supplement"):
+        path = getattr(args, name)
+        if path is not None: setattr(args, name, path.resolve())
     if Path(args.name).name != args.name or args.gamma < 0 or not 0 < args.detail_exposure < 1 or args.target_emphasis <= 0:
         raise ValueError("Invalid run options")
     if args.domain_proportions and not args.domain_balance: raise ValueError("Domain fractions require domain balancing")
@@ -211,6 +214,12 @@ def main():
                     additional_validation={"path": supplemental_validation.relative_to(ROOT).as_posix(), "sha256": sha(supplemental_validation)} if additional else None,
                     additional_test={"path": supplemental_test.relative_to(ROOT).as_posix(), "sha256": sha(supplemental_test)} if additional else None,
                     validation_domains=list(loaders))
+    training.update(initial_weights_sha256=sha(args.initial) if args.initial else None,
+                    training_script_sha256=sha(Path(__file__)),
+                    model_source_sha256=sha(ROOT / "safelog_ai/presence_classifier.py"),
+                    expected_domain_sampling_mass={name: float(sample_weights[domains == index].sum()/sample_weights.sum())
+                                                   for name,index in DOMAINS.items() if index in active_domains},
+                    expected_detail_sampling_mass=float(sample_weights[full_count:].sum()/sample_weights.sum()))
     training["selection"] = "minimax FNR/FPR in every recorded validation domain; test never selected"
     save(output / "TRAINING.json", training)
     for epoch in range(1, args.epochs + 1):
@@ -219,7 +228,9 @@ def main():
         model.train()
         if freeze: model.features.eval()
         total = 0.
+        domain_draw_counts = torch.zeros(len(active_domains), dtype=torch.long)
         for image, labels, known, domain in loader:
+            domain_draw_counts += torch.bincount(domain, minlength=len(active_domains))
             optimizer.zero_grad(set_to_none=True)
             with torch.autocast(device_type="cuda"):
                 balance = positive_weights[domain] if args.domain_balance else positive_weights
@@ -236,6 +247,7 @@ def main():
         row = {"epoch": epoch, "elapsed_minutes": (time.perf_counter() - started) / 60,
                "train_loss": total / full_count, "worst_target_error": worst, "sum_target_errors": sum_errors,
                "target_passed": all(point["target_passed"] for point in points.values()), "operating_points": points, "ranking_ap": per_ap}
+        row["sampled_domain_counts"] = {name: int(domain_draw_counts[index]) for name,index in DOMAINS.items() if index in active_domains}
         history.append(row)
         print(json.dumps({k: row[k] for k in ("epoch", "elapsed_minutes", "train_loss", "worst_target_error", "target_passed")}), flush=True)
         key = (worst, sum_errors)

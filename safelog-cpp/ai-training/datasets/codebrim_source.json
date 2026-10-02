@@ -9,5 +9,7 @@
   "md5": "c1612d9674e2e628e72e7f5817c40130",
   "url": "https://zenodo.org/api/records/2620293/files/CODEBRIM_classification_dataset.zip/content",
   "checksum_origin": "Author Zenodo metadata, checked before training; choose unbalanced archive, not augmented balanced duplicate crops",
-  "scope": "Five labeled concrete defects and background on cropped bridge photos; no known wet-surface or cavity negatives"
+  "scope": "Five labeled concrete defects and background on cropped bridge photos; no known wet-surface or cavity negatives",
+  "sha256": "3a9c740f92e0be9fdb03eaeab35c125621410aafbbf2347b9bd7ee9461028edb",
+  "sha256_origin": "Locally computed after validating author MD5 and all extracted files CRC"
 }

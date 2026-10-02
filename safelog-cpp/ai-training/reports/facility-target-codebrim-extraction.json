@@ -1,0 +1,11 @@
+{
+  "header_corrections_bytes": {
+    "-4294967296": 4615,
+    "0": 3216
+  },
+  "crc_checked_files": 7810,
+  "archive_modified": false,
+  "policy": "Unique matching filename/compression local header at offset or +/-4GiB; reconstructed overlap bounds; standard ZipExtFile CRC and size checks; all paths confined",
+  "md5": "c1612d9674e2e628e72e7f5817c40130",
+  "sha256": "3a9c740f92e0be9fdb03eaeab35c125621410aafbbf2347b9bd7ee9461028edb"
+}
