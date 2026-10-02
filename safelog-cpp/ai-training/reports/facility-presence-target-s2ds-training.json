@@ -1,0 +1,420 @@
+{
+  "status": "complete",
+  "architecture": "lraspp_mobilenet_facility_multitask_v1",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "imgsz": 640,
+  "seed": 48,
+  "requested_epochs": 18,
+  "patience": 5,
+  "train_dacl": 6225,
+  "train_damsegment": 1585,
+  "train_codebrim": 6438,
+  "val_dacl": 710,
+  "val_damsegment": 424,
+  "validation_domains": [
+    "dacl",
+    "damsegment",
+    "codebrim"
+  ],
+  "draws_per_epoch": 14777,
+  "spatial_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+  "training_script_sha256": "97f23a4b3ec64b24e9a8d39fba8fa3fe99024c56ec30026b1460107093cbea7d",
+  "model_source_sha256": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+  "split_sha256": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+  "pretrained_backbone_sha256": null,
+  "additional_validation": {
+    "path": "data/codebrim-training/val.json",
+    "sha256": "d17182c6070cfd73404de341f0662352441b1be5d983c85dfe5b0c86affed56e"
+  },
+  "additional_test": {
+    "path": "data/codebrim-training/test.json",
+    "sha256": "fa9a2bb648afb0e4164028c564e903d45c8bcf88d769c75aa97c99cdb51e4df5"
+  },
+  "initial": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\facility-presence-target-spatial\\best.pt",
+  "loss": "Masked weighted focal photo presence + masked focal 8x8-cell source segmentation + .5 positive-class Dice",
+  "domain_proportions": [
+    0.6,
+    0.1,
+    0.2,
+    0.1
+  ],
+  "backbone_lr": 4e-05,
+  "head_lr": 0.00025,
+  "selection": "Minimax per-class FNR/FPR in all three validation domains; no pixel accuracy or test used for selection",
+  "initial_weights_sha256": "99e5e0dab93aacedc1d4148fea88ac36baf01a1bb700bb6500dd4a918effa485",
+  "train_s2ds": 529,
+  "supplement_spatial_path": "data/s2ds-spatial-training/crop-screened-train.json",
+  "supplement_spatial_sha256": "f5bf4ca3f5cdb95e7954b5eca1be6d3c96977acc9731f8b38edc16f47fec30d6",
+  "supplement_audit": {
+    "status": "prepared",
+    "source": "https://github.com/ben-z-original/s2ds",
+    "archive_sha256": "8b7abe777c181662eeeadbdf39cd662f8c50ccced61d7957b468b13c0df2da64",
+    "publisher_counts": {
+      "train": 563,
+      "val": 87,
+      "test": 93
+    },
+    "usable_train_patches": 529,
+    "known_labels": [
+      "concrete_crack",
+      "concrete_spalling",
+      "rust_stain",
+      "efflorescence"
+    ],
+    "unknown_labels": [
+      "exposed_rebar",
+      "wet_surface",
+      "surface_cavity"
+    ],
+    "exact_existing_overlap": 0,
+    "existing_near_groups_excluded": 21,
+    "cross_split_near_groups_excluded": 6,
+    "excluded_members": [
+      {
+        "image": "data/s2ds/source/train/011.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/314.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/052.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/071.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/074.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/174.png",
+        "split": "train",
+        "existing_near_overlap": false,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/test/689.png",
+        "split": "test",
+        "existing_near_overlap": false,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/181.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/234.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/268.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/349.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/357.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/418.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/427.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/491.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/519.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/530.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/val/591.png",
+        "split": "val",
+        "existing_near_overlap": true,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/184.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/220.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/317.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/324.png",
+        "split": "train",
+        "existing_near_overlap": false,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/val/631.png",
+        "split": "val",
+        "existing_near_overlap": false,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/333.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/372.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/402.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/412.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/429.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/444.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/456.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/472.png",
+        "split": "train",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/train/480.png",
+        "split": "train",
+        "existing_near_overlap": false,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/test/742.png",
+        "split": "test",
+        "existing_near_overlap": false,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/539.png",
+        "split": "train",
+        "existing_near_overlap": false,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/test/686.png",
+        "split": "test",
+        "existing_near_overlap": false,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/train/555.png",
+        "split": "train",
+        "existing_near_overlap": false,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/test/710.png",
+        "split": "test",
+        "existing_near_overlap": false,
+        "cross_split_near_group": true
+      },
+      {
+        "image": "data/s2ds/source/val/576.png",
+        "split": "val",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/val/586.png",
+        "split": "val",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/val/614.png",
+        "split": "val",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/val/620.png",
+        "split": "val",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/val/647.png",
+        "split": "val",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      },
+      {
+        "image": "data/s2ds/source/test/683.png",
+        "split": "test",
+        "existing_near_overlap": true,
+        "cross_split_near_group": false
+      }
+    ],
+    "existing_fingerprint_photos": 18087,
+    "fingerprint_cache_sha256": "151809a6d909d294db7add710650b667ec41d2a9e6a9e568d1d45286d2d7a2a6",
+    "per_label_pixel_cells": {
+      "concrete_crack": {
+        "positive": 22815,
+        "negative": 3362785
+      },
+      "concrete_spalling": {
+        "positive": 258999,
+        "negative": 3126601
+      },
+      "rust_stain": {
+        "positive": 72304,
+        "negative": 3313296
+      },
+      "exposed_rebar": {
+        "positive": 0,
+        "negative": 0
+      },
+      "wet_surface": {
+        "positive": 0,
+        "negative": 0
+      },
+      "efflorescence": {
+        "positive": 34168,
+        "negative": 3351432
+      },
+      "surface_cavity": {
+        "positive": 0,
+        "negative": 0
+      }
+    },
+    "per_label_train_counts": {
+      "concrete_crack": {
+        "positive": 170,
+        "negative": 359,
+        "unknown": 0
+      },
+      "concrete_spalling": {
+        "positive": 147,
+        "negative": 382,
+        "unknown": 0
+      },
+      "rust_stain": {
+        "positive": 201,
+        "negative": 328,
+        "unknown": 0
+      },
+      "exposed_rebar": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 529
+      },
+      "wet_surface": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 529
+      },
+      "efflorescence": {
+        "positive": 85,
+        "negative": 444,
+        "unknown": 0
+      },
+      "surface_cavity": {
+        "positive": 0,
+        "negative": 0,
+        "unknown": 529
+      }
+    },
+    "palette_policy": "Publisher RGB channel threshold200: white crack, red spalling, yellow corrosion, cyan efflorescence; green vegetation, blue control point and black background have no positive mapped defect; remaining three categories unknown",
+    "license": "Academic use only; do not distribute raw/derived dataset; record publisher terms and citations with models",
+    "limitation": "Publisher patches lack original scene/parent IDs. Exact and whole-image dHash<=6 checks do not prove crop or site independence. Only author TRAIN is supplemental; its val/test remain outside optimizer and model selection.",
+    "local_feature_overlap_groups_excluded": 3,
+    "low_feature_training_queries_excluded": 0,
+    "crop_audit_sha256": "630befa1043d6721446b6e83029f28e494fc79db8c4592a2dadf66efb1ae4a92"
+  },
+  "supplement_scope": "Author TRAIN only; original scene IDs unavailable, heuristic crop screen does not prove field independence; S2DS val/test never selected",
+  "actual_epochs": 7,
+  "best_worst_target_error": 0.23316062176165803,
+  "weights_sha256": "77b8b70af4562f13a58b19f802225903532353b5e4c8d19a06fad2c0b7580409"
+}

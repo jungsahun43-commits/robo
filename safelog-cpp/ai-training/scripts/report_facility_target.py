@@ -44,14 +44,24 @@ def main():
                         'test_executed':bool(test),'target_passed_test':test['target_passed'] if test else None,
                         'members':selection['members'],'validation_domains':list(selection['validation_counts'])})
     profile=read(ROOT/'reports/facility-inference-profile.json')
+    comparable=[e for e in entries if e.get('frozen_validation') and e.get('validation_domains')==['dacl','damsegment','codebrim'] and e.get('worst_error') is not None]
+    best=min(comparable,key=lambda e:e['worst_error']) if comparable else None
+    total_epochs=sum(e.get('epochs',0) for e in entries)
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
             'experiments':entries,'app_profile':profile['version'],'app_profile_sha256':sha(ROOT/'reports/facility-inference-profile.json'),
+            'total_actual_training_epochs':total_epochs,'best_three_domain_validation_run':best['run'] if best else None,
+            'best_three_domain_validation_worst_error':best['worst_error'] if best else None,
+            'conditional_extra_once_started':False,
             'release_target_achieved':any(e.get('target_passed_test') is True for e in entries),
             'scope':'Photo presence only; other five facility labels, exact defect location, structural safety and unseen facility error are not claimed below5%',
             'limitation':'Repeatedly selected source validation, not independent field performance; dam scene IDs unavailable; confidence intervals assume fixed predictions and independent examples'}
     save(ROOT/'reports/facility-five-percent-results.json',result)
     lines=['# 시설 항목별 5% 목표 진행·결과','',
            '**5% 미만 목표 미달.**' if not result['release_target_achieved'] else '**기록된 보류 자료의 목표 통과 모델이 있음. 현장 보장은 아님.**','',
+           f'기록된 실제 학습은 총{total_epochs}epoch이다. 모델 확률 평균 검증은 학습 횟수에 더하지 않는다.',
+           f"동일한 세 검증 자료에서 가장 좋은 후보: `{best['run']}`, 최대 미탐·오탐 {best['worst_error']*100:.2f}%." if best else '동일한 세 검증 자료의 선택 고정 결과가 아직 없다.',
+           '검증 미달 후보를 반복 시험하여 설정을 고르지 않았다. 목표를 통과했을 때 수행할 별도 추가1epoch 조건도 아직 발동하지 않았다.',
+           '현재 결과는 추가 반복으로5%달성을 보장하지 않는다. 정답 기준의 전문가 검수와 다른 모델 구조를 포함한 후속 연구가 필요하다.','',
            '균열·박락 각각에 대해 미탐률 FN/(TP+FN), 오탐률 FP/(FP+TN)이 모두 0.05 미만이어야 통과한다.',
            '아래 최대 오류는 이 두 항목의 자료별 미탐/오탐 중 가장 큰 비율이며 전체 오답 사진 비율이나 정확도는 아니다.','',
            '| 시도 | 상태 | 실제 epoch | 입력 | 검증 자료 | 최대 검증 오류 | 목표 |',
