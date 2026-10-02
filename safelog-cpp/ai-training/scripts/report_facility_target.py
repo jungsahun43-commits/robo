@@ -6,8 +6,8 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from scripts.train_facility_target import read,save,sha,TARGETS
 
 RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility-presence-target-highres',
-      'facility-presence-target-codebrim','facility-presence-target-spatial','facility-presence-target-s2ds')
-NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가')
+      'facility-presence-target-codebrim','facility-presence-target-spatial','facility-presence-target-s2ds','facility-presence-target-hard')
+NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 

@@ -16,7 +16,8 @@ EXPERIMENTS=[('facility-presence-target-v2s','Larger photo model',0),
              ('facility-presence-target-highres','640px photo model',0),
              ('facility-presence-target-codebrim','More real concrete data',1),
              ('facility-presence-target-spatial','Photo + position training',1),
-             ('facility-presence-target-s2ds','Extra S2DS position labels',1)]
+             ('facility-presence-target-s2ds','Extra S2DS position labels',1),
+             ('facility-presence-target-hard','Bounded hard TRAIN sampling',1)]
 
 
 def main():

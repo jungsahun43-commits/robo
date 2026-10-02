@@ -18,6 +18,7 @@ from safelog_ai.presence_classifier import image_transform,MEAN,STD
 from scripts.train_facility_target import read,save,sha,split_supplemental,dacl_items,FacilityPhotos,predict,masked_focal,DOMAINS,TARGETS
 from scripts.facility_error_target import operating_point
 from scripts.train_facility_presence import average_precision
+from scripts.facility_hard_sampling import hard_multipliers
 
 SPATIAL_DOMAINS={**DOMAINS,'s2ds':3}
 
@@ -33,15 +34,29 @@ class SpatialPhotos(Dataset):
         return self.transform(self.jitter(image)),targets.clamp_min(0),(targets>=0).float(),SPATIAL_DOMAINS[item['domain']],torch.from_numpy(mask).float(),torch.from_numpy(pixel_known).float()
 
 
+class MiningPhotos(Dataset):
+    """Deterministic scoring of verified TRAIN records, with no pixel loading."""
+    def __init__(self,items):self.items=items;self.transform=image_transform(640)
+    def __len__(self):return len(self.items)
+    def __getitem__(self,i):
+        item=self.items[i]
+        with Image.open(ROOT/item['image']) as image:inputs=self.transform(image.convert('RGB'))
+        targets=torch.tensor(item['targets'],dtype=torch.float32)
+        return inputs,targets.clamp_min(0),(targets>=0).float()
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--name',default='facility-presence-target-spatial');parser.add_argument('--seed',type=int,default=47)
     parser.add_argument('--epochs',type=int,default=18);parser.add_argument('--patience',type=int,default=5)
     parser.add_argument('--initial',type=Path);parser.add_argument('--supplement-spatial',type=Path)
     parser.add_argument('--backbone-lr',type=float,default=.00008);parser.add_argument('--head-lr',type=float,default=.0005)
+    parser.add_argument('--hard-mining-strength',type=float,default=0.,help='Bounded TRAIN-only residual sampling from frozen initializer (0 disables)')
     args=parser.parse_args()
     name,seed,epochs,patience=args.name,args.seed,args.epochs,args.patience
     if Path(name).name!=name or min(epochs,patience)<1:raise ValueError('Invalid spatial run options')
+    if not np.isfinite(args.hard_mining_strength) or not 0<=args.hard_mining_strength<=4 or (args.hard_mining_strength and not args.initial):
+        raise ValueError('Hard mining needs an initializer and finite strength in [0,4]')
     output=ROOT/'runs'/name
     if (output/'best.pt').exists():raise ValueError('Preserve existing experiment')
     output.mkdir(parents=True,exist_ok=True)
@@ -76,11 +91,33 @@ def main():
         for c in classes:
             for k in ('positive','negative'):pixel_counts[c][k]+=supplemental['audit']['per_label_pixel_cells'][c][k]
     labels=torch.tensor([i['targets'] for i in items]);domains=torch.tensor([domain_map[i['domain']] for i in items])
+    model=SpatialClassifier(len(classes),pretrained=args.initial is None).to('cuda')
+    if args.initial:
+        checkpoint=torch.load(args.initial,map_location='cpu',weights_only=True)
+        if checkpoint['architecture']!=ARCH or checkpoint['classes']!=classes or checkpoint['split_sha256']!=sha(output/'SPLIT.json'):
+            raise ValueError('Spatial initializer architecture/classes/split mismatch')
+        model.load_state_dict(checkpoint['state_dict'])
+    hard_audit=None
+    if args.hard_mining_strength:
+        print('Scoring verified TRAIN records only for bounded hard-example sampling',flush=True)
+        mining_loader=DataLoader(MiningPhotos(items),batch_size=16,num_workers=4,pin_memory=True)
+        mining_targets,mining_scores=predict(model,mining_loader,'cuda')
+        if not np.array_equal(mining_targets,labels.numpy()):raise ValueError('Training mining item order/labels changed')
+        multiplier=hard_multipliers(mining_targets,mining_scores,[classes.index(c) for c in TARGETS],args.hard_mining_strength)
+        save(output/'TRAIN-MINING.json',{'split':'train','initial_weights_sha256':sha(args.initial),
+             'images':[i['image'] for i in items],'targets':mining_targets.tolist(),'probabilities':mining_scores.tolist(),
+             'multipliers':multiplier.tolist(),'strength':args.hard_mining_strength})
+        hard_audit={'strength':args.hard_mining_strength,'records':len(items),'min_multiplier':float(multiplier.min()),
+                    'max_multiplier':float(multiplier.max()),'mean_multiplier':float(multiplier.mean()),
+                    'cache_sha256':sha(output/'TRAIN-MINING.json'),'helper_sha256':sha(ROOT/'scripts/facility_hard_sampling.py'),
+                    'policy':'Only verified TRAIN full photos and TRAIN-parent crops; no validation/test scores. Frozen initializer residual, max 1+strength; fixed domain mass retained.'}
+        print(__import__('json').dumps(hard_audit),flush=True)
     sampling=torch.ones(len(items),dtype=torch.float64)
     for label in TARGETS:
         k=classes.index(label);ratio=min(3.,max(1.,len(items)/(2*max(1,int((labels[:,k]==1).sum())))))
         sampling=torch.maximum(sampling,torch.where(labels[:,k]==1,ratio,1.).double())
     sampling[full_count:]*=full_count/(len(items)-full_count)*.25/.75
+    if hard_audit:sampling*=multiplier
     weights=[]
     for d,exposure in enumerate(proportions):
         sampling[domains==d]*=exposure/sampling[domains==d].sum()
@@ -93,12 +130,6 @@ def main():
     val,_=dacl_items('val',640)
     loaders={name:DataLoader(FacilityPhotos(records,640),batch_size=16,num_workers=4,persistent_workers=True)
              for name,records in {'dacl':val,'damsegment':split['val'],'codebrim':code_val['items']}.items()}
-    model=SpatialClassifier(len(classes),pretrained=args.initial is None).to('cuda')
-    if args.initial:
-        checkpoint=torch.load(args.initial,map_location='cpu',weights_only=True)
-        if checkpoint['architecture']!=ARCH or checkpoint['classes']!=classes or checkpoint['split_sha256']!=sha(output/'SPLIT.json'):
-            raise ValueError('Spatial initializer architecture/classes/split mismatch')
-        model.load_state_dict(checkpoint['state_dict'])
     backbone=list(model.backbone.parameters());backbone_ids={id(p) for p in backbone}
     head=[p for p in model.parameters() if id(p) not in backbone_ids]
     if min(args.backbone_lr,args.head_lr)<=0:raise ValueError('Learning rates must be positive')
@@ -119,6 +150,7 @@ def main():
               'domain_proportions':list(proportions),'backbone_lr':args.backbone_lr,'head_lr':args.head_lr,
               'selection':'Minimax per-class FNR/FPR in all three validation domains; no pixel accuracy or test used for selection'}
     if args.initial:training.update(initial=str(args.initial.resolve()),initial_weights_sha256=sha(args.initial))
+    if hard_audit:training['hard_training_sampling']=hard_audit
     if supplemental:training.update(train_s2ds=len(supplemental['items']),supplement_spatial_path=args.supplement_spatial.relative_to(ROOT).as_posix(),
                                     supplement_spatial_sha256=sha(args.supplement_spatial),supplement_audit=supplemental['audit'],
                                     supplement_scope='Author TRAIN only; original scene IDs unavailable, heuristic crop screen does not prove field independence; S2DS val/test never selected')
