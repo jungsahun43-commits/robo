@@ -38,6 +38,26 @@ def choose_tail(domains,anchor,positive,conservative):
     return {'supported':True,'cutoff':cutoff,'domains':metrics}
 
 
+def joint_metrics(targets,scores,cutoffs):
+    targets,scores=np.asarray(targets),np.asarray(scores)
+    if targets.ndim!=2 or targets.shape!=scores.shape or len(cutoffs)!=targets.shape[1]:
+        raise ValueError('Joint target/score/cutoff mismatch')
+    masks=[];predictions=[]
+    for k,(low,high) in enumerate(cutoffs):
+        if low>high:raise ValueError('Overlapping judgment cutoffs')
+        # Reuse checks even when a direction is unsupported and accepts nothing.
+        tail_metrics(targets[:,k],scores[:,k],high,True)
+        masks.append(((scores[:,k]<low)|(scores[:,k]>=high))&(targets[:,k]>=0))
+        predictions.append(scores[:,k]>=high)
+    accepted=np.stack(masks,axis=1).all(1)
+    wrong=(np.stack(predictions,axis=1)!=targets).any(1)&accepted
+    total,errors=int(accepted.sum()),int(wrong.sum())
+    return {'photos':len(targets),'fully_known_photos':int((targets>=0).all(1).sum()),'accepted':total,
+            'review_required':len(targets)-total,'coverage':total/len(targets) if len(targets) else 0.,
+            'accepted_wrong_photos':errors,'conditional_photo_error':errors/total if total else None,
+            'ci95':wilson_interval(errors,total)}
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--name',default='facility-presence-target-spatial')
     args=parser.parse_args();run=ROOT/'runs'/args.name
@@ -70,8 +90,13 @@ def main():
                             'accepted_errors':errors,'all_photos_target_replaced':False}
             result[label]={'negative':neg,'positive':pos,'summary':summary}
         policies[rule]=result
+    joint={}
+    indices=[classes.index(label) for label in TARGETS]
+    for rule,result in policies.items():
+        cutoffs=[(result[label]['negative']['cutoff'],result[label]['positive']['cutoff']) for label in TARGETS]
+        joint[rule]={d:joint_metrics(t[:,indices],p[:,indices],cutoffs) for d,(t,p) in domains.items()}
     output={'run':args.name,'stage':'validation_diagnostic_only','weights_sha256':selection['weights_sha256'],
-            'sources':sources,'policies':policies,'deployed':False,
+            'sources':sources,'policies':policies,'joint_photo_diagnostics':joint,'deployed':False,
             'criterion':'Common per-label low/high cutoffs across all three domains. Conditional mistake rate per predicted tail, each <5%; upper rule uses nominal two-sided 95% Wilson upper bound; >=10 accepted/tail/domain.',
             'limitation':'Cutoffs selected on validation; intervals ignore repeated selection and related patches. No independent test/field guarantee. Abstained cases are unjudged, never counted correct. Conditional error is NOT full-coverage FNR/FPR.'}
     save(ROOT/'reports'/f'{args.name}-review-diagnostic.json',output)
@@ -81,15 +106,21 @@ def main():
            '아래 오류는 자동으로 판단한 사진만의 조건부 오답률로, 기존 미탐률·오탐률과 분모가 다르다.',
            '낮은 확률과 높은 확률에 별도 공통 기준을 정하고 그 사이를 확인 대기로 둔다. 각 자료·각 판단 방향에서 지원되는 기준이 없으면 그 방향을 전부 보류한다.',
            '검증 자료로 기준을 고른 결과다. Wilson 상한도 선택 편향과 같은 장면의 상관을 해결하지 않으므로 현장 보장으로 쓸 수 없다.','']
-    for rule,title in (('observed_only','검증 관측 오류만5% 미만'),('wilson_upper','명목95% 상한도5% 미만')):
+    for rule,title in (('observed_only','검증 관측 오류만5% 미만으로 제한'),('wilson_upper','명목95% 상한까지5% 미만으로 요구')):
         lines += [f'## {title}','','| 항목 | 자료 | 자동 판단/전체 | 자동 비율 | 확인 대기 | 자동 판단 중 오류 |','|---|---|---:|---:|---:|---:|']
         for label,policy in policies[rule].items():
             for domain,m in policy['summary'].items():
                 error=f"{m['conditional_error']*100:.2f}% ({m['accepted_errors']}건)" if m['conditional_error'] is not None else '판단 없음'
                 lines.append(f"| {label} | {domain} | {m['accepted']}/{m['known_photos']} | {m['coverage']*100:.1f}% | {m['review_required']} | {error} |")
-        lines+=['','판단 방향별 미지원 여부·분자·분모·구간·확률 기준은 대응 JSON에 모두 기록한다.','']
+        lines+=['','균열·박락 **둘 다** 자동 판단한 사진(둘 중 하나라도 틀리면 사진 오답):','',
+                '| 자료 | 자동 사진/전체 | 자동 비율 | 확인 대기 | 자동 사진 중 오류 |','|---|---:|---:|---:|---:|']
+        for domain,m in joint[rule].items():
+            error=f"{m['conditional_photo_error']*100:.2f}% ({m['accepted_wrong_photos']}건)" if m['conditional_photo_error'] is not None else '판단 없음'
+            lines.append(f"| {domain} | {m['accepted']}/{m['photos']} | {m['coverage']*100:.1f}% | {m['review_required']} | {error} |")
+        lines+=['','각 판단 방향의5% 조건이 두 항목을 합친 사진 오답5%를 보장하지 않는다. 결합 오류는 위에 별도로 계산한다.',
+                '판단 방향별 미지원 여부·분자·분모·구간·확률 기준은 대응 JSON에 모두 기록한다.','']
     (ROOT/'reports'/f'{args.name}-review-diagnostic_KO.md').write_text('\n'.join(lines),encoding='utf-8')
-    print(__import__('json').dumps({r:{c:p['summary'] for c,p in v.items()} for r,v in policies.items()},indent=2))
+    print(__import__('json').dumps(joint,indent=2))
 
 
 if __name__=='__main__':main()

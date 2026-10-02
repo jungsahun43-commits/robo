@@ -431,6 +431,81 @@
       }
     }
   },
+  "joint_photo_diagnostics": {
+    "observed_only": {
+      "dacl": {
+        "photos": 710,
+        "fully_known_photos": 710,
+        "accepted": 72,
+        "review_required": 638,
+        "coverage": 0.10140845070422536,
+        "accepted_wrong_photos": 3,
+        "conditional_photo_error": 0.041666666666666664,
+        "ci95": [
+          0.014270807466925182,
+          0.11549276741316111
+        ]
+      },
+      "damsegment": {
+        "photos": 424,
+        "fully_known_photos": 424,
+        "accepted": 257,
+        "review_required": 167,
+        "coverage": 0.6061320754716981,
+        "accepted_wrong_photos": 8,
+        "conditional_photo_error": 0.0311284046692607,
+        "ci95": [
+          0.015855994046279496,
+          0.06021112699498646
+        ]
+      },
+      "codebrim": {
+        "photos": 611,
+        "fully_known_photos": 611,
+        "accepted": 252,
+        "review_required": 359,
+        "coverage": 0.41243862520458263,
+        "accepted_wrong_photos": 6,
+        "conditional_photo_error": 0.023809523809523808,
+        "ci95": [
+          0.01095675985436672,
+          0.05096228522032767
+        ]
+      }
+    },
+    "wilson_upper": {
+      "dacl": {
+        "photos": 710,
+        "fully_known_photos": 710,
+        "accepted": 0,
+        "review_required": 710,
+        "coverage": 0.0,
+        "accepted_wrong_photos": 0,
+        "conditional_photo_error": null,
+        "ci95": null
+      },
+      "damsegment": {
+        "photos": 424,
+        "fully_known_photos": 424,
+        "accepted": 0,
+        "review_required": 424,
+        "coverage": 0.0,
+        "accepted_wrong_photos": 0,
+        "conditional_photo_error": null,
+        "ci95": null
+      },
+      "codebrim": {
+        "photos": 611,
+        "fully_known_photos": 611,
+        "accepted": 0,
+        "review_required": 611,
+        "coverage": 0.0,
+        "accepted_wrong_photos": 0,
+        "conditional_photo_error": null,
+        "ci95": null
+      }
+    }
+  },
   "deployed": false,
   "criterion": "Common per-label low/high cutoffs across all three domains. Conditional mistake rate per predicted tail, each <5%; upper rule uses nominal two-sided 95% Wilson upper bound; >=10 accepted/tail/domain.",
   "limitation": "Cutoffs selected on validation; intervals ignore repeated selection and related patches. No independent test/field guarantee. Abstained cases are unjudged, never counted correct. Conditional error is NOT full-coverage FNR/FPR."

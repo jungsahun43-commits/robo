@@ -1,0 +1,65 @@
+{
+  "status": "complete",
+  "architecture": "lraspp_mobilenet_facility_multitask_v1",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "imgsz": 640,
+  "seed": 49,
+  "requested_epochs": 18,
+  "patience": 5,
+  "train_dacl": 6225,
+  "train_damsegment": 1585,
+  "train_codebrim": 6438,
+  "val_dacl": 710,
+  "val_damsegment": 424,
+  "validation_domains": [
+    "dacl",
+    "damsegment",
+    "codebrim"
+  ],
+  "draws_per_epoch": 14248,
+  "spatial_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+  "training_script_sha256": "6faa183b5b05a727b83b23fe3eabba7ffe84b65e0722df8add5fc3d1adc2ab30",
+  "model_source_sha256": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+  "split_sha256": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+  "pretrained_backbone_sha256": null,
+  "additional_validation": {
+    "path": "data/codebrim-training/val.json",
+    "sha256": "d17182c6070cfd73404de341f0662352441b1be5d983c85dfe5b0c86affed56e"
+  },
+  "additional_test": {
+    "path": "data/codebrim-training/test.json",
+    "sha256": "fa9a2bb648afb0e4164028c564e903d45c8bcf88d769c75aa97c99cdb51e4df5"
+  },
+  "initial": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\facility-presence-target-spatial\\best.pt",
+  "loss": "Masked weighted focal photo presence + masked focal 8x8-cell source segmentation + .5 positive-class Dice",
+  "domain_proportions": [
+    0.7,
+    0.1,
+    0.2
+  ],
+  "backbone_lr": 4e-05,
+  "head_lr": 0.00025,
+  "selection": "Minimax per-class FNR/FPR in all three validation domains; no pixel accuracy or test used for selection",
+  "initial_weights_sha256": "99e5e0dab93aacedc1d4148fea88ac36baf01a1bb700bb6500dd4a918effa485",
+  "hard_training_sampling": {
+    "strength": 2.0,
+    "records": 26289,
+    "min_multiplier": 1.00002141582911,
+    "max_multiplier": 2.9768764895133657,
+    "mean_multiplier": 1.2946618604194515,
+    "cache_sha256": "7bfbd9b6ceb4d7f89c9dfc6b43851e19a8d042883e24161abc36f588aeefbc1a",
+    "helper_sha256": "1696e19e8c359b3fd0de26ce7d0f93ecc504cdfa1eb31936d8032d249251a2b1",
+    "policy": "Only verified TRAIN full photos and TRAIN-parent crops; no validation/test scores. Frozen initializer residual, max 1+strength; fixed domain mass retained."
+  },
+  "actual_epochs": 6,
+  "best_worst_target_error": 0.23834196891191708,
+  "weights_sha256": "885381fcfc43969a7926a2634edcae1f20ae13ff8b1e411a03aa455788f4fbc4"
+}

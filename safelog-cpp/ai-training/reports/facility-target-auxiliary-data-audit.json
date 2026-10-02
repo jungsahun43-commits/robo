@@ -1,0 +1,28 @@
+{
+  "status": "prepared",
+  "full_train_photos": 6225,
+  "positive_counts": {
+    "ACrack": 299,
+    "Bearing": 646,
+    "Cavity": 1082,
+    "Crack": 1539,
+    "Drainage": 902,
+    "EJoint": 358,
+    "Efflorescence": 1364,
+    "ExposedRebars": 693,
+    "Graffiti": 715,
+    "Hollowareas": 984,
+    "JTape": 684,
+    "PEquipment": 1187,
+    "Restformwork": 644,
+    "Rockpocket": 282,
+    "Rust": 3084,
+    "Spalling": 2938,
+    "WConccor": 241,
+    "Weathering": 2416,
+    "Wetspot": 869
+  },
+  "records_sha256": "75f95e6035e58930defc0bec94c03aab952c66919d48e9c9a385bd7ea72e6fe3",
+  "script_sha256": "1d3aecbc8b66c87684b445cd4dc0b097c6859d08f444733432e5062ca3564886",
+  "policy": "Original TRAIN full-photo tags unchanged; non-DACL and detail crops have UNKNOWN auxiliary targets, never parent-level negatives"
+}

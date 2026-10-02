@@ -693,6 +693,165 @@
       ]
     },
     {
+      "run": "facility-presence-target-hard",
+      "title": "\uc5b4\ub824\uc6b4 TRAIN \uc0ac\ub840 \ubcf4\uac15",
+      "status": "complete",
+      "epochs": 6,
+      "imgsz": 640,
+      "best_epoch": 1,
+      "frozen_validation": true,
+      "grid": 1,
+      "worst_error": 0.23834196891191708,
+      "target_passed_validation": false,
+      "operating_points": {
+        "concrete_crack": {
+          "threshold": 0.4138858914375305,
+          "domains": {
+            "dacl": {
+              "tp": 167,
+              "fp": 103,
+              "fn": 44,
+              "tn": 396,
+              "fnr": 0.20853080568720378,
+              "fpr": 0.20641282565130262,
+              "fnr_ci95": [
+                0.15916905788752075,
+                0.2683157456733443
+              ],
+              "fpr_ci95": [
+                0.17320951234833104,
+                0.2441018591380852
+              ],
+              "photo_error_fraction": 0.20704225352112676
+            },
+            "damsegment": {
+              "tp": 244,
+              "fp": 0,
+              "fn": 4,
+              "tn": 176,
+              "fnr": 0.016129032258064516,
+              "fpr": 0.0,
+              "fnr_ci95": [
+                0.0062896810596302505,
+                0.04072981635014691
+              ],
+              "fpr_ci95": [
+                0.0,
+                0.021360251667687728
+              ],
+              "photo_error_fraction": 0.009433962264150943
+            },
+            "codebrim": {
+              "tp": 133,
+              "fp": 51,
+              "fn": 16,
+              "tn": 411,
+              "fnr": 0.10738255033557047,
+              "fpr": 0.11038961038961038,
+              "fnr_ci95": [
+                0.06718577586801208,
+                0.1673151187010558
+              ],
+              "fpr_ci95": [
+                0.08496439789760232,
+                0.1422404951332545
+              ],
+              "photo_error_fraction": 0.10965630114566285
+            }
+          },
+          "worst_error": 0.20853080568720378,
+          "target_passed": false
+        },
+        "concrete_spalling": {
+          "threshold": 0.45428934693336487,
+          "domains": {
+            "dacl": {
+              "tp": 247,
+              "fp": 92,
+              "fn": 77,
+              "tn": 294,
+              "fnr": 0.23765432098765432,
+              "fpr": 0.23834196891191708,
+              "fnr_ci95": [
+                0.19455094411708326,
+                0.28690573127863644
+              ],
+              "fpr_ci95": [
+                0.19854725877084703,
+                0.2832933832915227
+              ],
+              "photo_error_fraction": 0.2380281690140845
+            },
+            "damsegment": {
+              "tp": 47,
+              "fp": 14,
+              "fn": 11,
+              "tn": 352,
+              "fnr": 0.1896551724137931,
+              "fpr": 0.03825136612021858,
+              "fnr_ci95": [
+                0.10934251661120264,
+                0.3085237387049922
+              ],
+              "fpr_ci95": [
+                0.022920024962912632,
+                0.06317486262007044
+              ],
+              "photo_error_fraction": 0.0589622641509434
+            },
+            "codebrim": {
+              "tp": 122,
+              "fp": 58,
+              "fn": 18,
+              "tn": 413,
+              "fnr": 0.12857142857142856,
+              "fpr": 0.12314225053078556,
+              "fnr_ci95": [
+                0.08289789018597554,
+                0.1940838586598741
+              ],
+              "fpr_ci95": [
+                0.09647844987926937,
+                0.1559035959478363
+              ],
+              "photo_error_fraction": 0.12438625204582651
+            }
+          },
+          "worst_error": 0.23834196891191708,
+          "target_passed": false
+        }
+      },
+      "test_executed": false,
+      "target_passed_test": null,
+      "weights_sha256": "885381fcfc43969a7926a2634edcae1f20ae13ff8b1e411a03aa455788f4fbc4",
+      "validation_domains": [
+        "dacl",
+        "damsegment",
+        "codebrim"
+      ]
+    },
+    {
+      "run": "facility-presence-target-auxiliary",
+      "title": "\uc6d0\ubcf819\uc885 \ubcf4\uc870 \ud559\uc2b5",
+      "status": "running",
+      "epochs": 0,
+      "imgsz": 640,
+      "best_epoch": null,
+      "frozen_validation": false,
+      "grid": null,
+      "worst_error": null,
+      "target_passed_validation": false,
+      "operating_points": null,
+      "test_executed": false,
+      "target_passed_test": null,
+      "weights_sha256": null,
+      "validation_domains": [
+        "dacl",
+        "damsegment",
+        "codebrim"
+      ]
+    },
+    {
       "run": "facility-presence-target-ensemble",
       "title": "\ub450 \ubaa8\ub378 \ud655\ub960 \ud3c9\uade0",
       "status": "validation_only",
@@ -872,7 +1031,7 @@
   ],
   "app_profile": "facility-validation-v2",
   "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
-  "total_actual_training_epochs": 70,
+  "total_actual_training_epochs": 76,
   "best_three_domain_validation_run": "facility-presence-target-spatial",
   "best_three_domain_validation_worst_error": 0.23148148148148148,
   "conditional_extra_once_started": false,

@@ -6,8 +6,8 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from scripts.train_facility_target import read,save,sha,TARGETS
 
 RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility-presence-target-highres',
-      'facility-presence-target-codebrim','facility-presence-target-spatial','facility-presence-target-s2ds','facility-presence-target-hard')
-NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강')
+      'facility-presence-target-codebrim','facility-presence-target-spatial','facility-presence-target-s2ds','facility-presence-target-hard','facility-presence-target-auxiliary')
+NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강','원본19종 보조 학습')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 
@@ -91,6 +91,10 @@ def main():
             'CODEBRIM에 정답이 없는 물기/공동, 위치가 없는 양성 픽셀은 미확인으로 제외한다. 원래 정답은 바꾸지 않았다.','',
             'S2DS: 학술용 저자 원본743패치(train563/val87/test93), CRC 및 색상 수 확인. 중복·유사·부분 겹침 의심을 학습 전에 제외한다. 실제 사용량은 [선별 감사](facility-target-s2ds-screened-data-audit.json)에 기록한다.',
             'S2DS의 저자 TRAIN만 추가하고 원본 장면ID가 없다는 한계를 유지한다. S2DS val/test는 학습과 모델/임계값 선택에 쓰지 않는다. 해당 자료나 독립 현장에 대한5%성능 주장이 아니다.','',
+            '추가 반복 학습은 [어려운 TRAIN 사례 보강 계획](FACILITY_HARD_TRAINING_PLAN_KO.md)을 따른다. 기존 최고 모델로 학습 사진만 평가하고, 알려진 균열·박락 정답과 차이가 큰 사진의 추출 비중을 최대3배 높였다. 검증·시험 사진은 비중 계산에 넣지 않았다.',
+            '출처별 전체 추출 비중은 이전 공간 모델과 동일하게 유지한다. 새 실험의 실제 epoch와 평가값은 위 표에 반영한다. 이전 최고 후보보다 좋아지지 않았다면 최신 실행이라는 이유로 채택하지 않는다.','',
+            '후속 시도는 [원본19종 보조 학습](FACILITY_AUXILIARY_PLAN_KO.md)이다. DACL TRAIN 전체 사진6,225개에만 원래 세부 태그를 부여하고 부분 조각과 다른 출처에는 보조 정답을 미확인으로 둔다. 태그를 원래 균열·박락 정답으로 합치거나 수정하지 않고 기존7항목의 추론 계약을 유지한다.','',
+            '보류하는 방법의 별도 진단: [자동 판단 비율·조건부 오류](facility-presence-target-spatial-review-diagnostic_KO.md). 자동으로 판단한 일부 사진만의 오답률이며 기존 전체 사진의 미탐·오탐 기준을 통과했다는 뜻이 아니다. 두 항목을 모두 자동 판단한 사진 비율과 보류 수까지 기록한다. 앱 적용·독립 시험 전이다.','',
             f"기본 앱 프로필: `{profile['version']}`. 실험 프로필로 자동 교체하지 않았다.",
             '현장의 모든 시설, 나머지 다섯 항목, 정밀 위치와 구조 안전에 대한 5% 성능 주장은 하지 않는다.',
             'CODEBRIM 모델의 임계값만 바꿔 5%를 맞출 수 있는지: [미탐·오탐 교환 진단](facility-target-codebrim-threshold-tradeoff.json). 이 고정 모델의 검증 점수에 한정된 진단이다.',

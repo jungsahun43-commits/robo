@@ -1,6 +1,6 @@
 {
-  "plot_sha256": "2a07f95d975f0cb872c0da5ad38302e3eba878b4dbe7209df6fcf1ce16ec9022",
-  "script_sha256": "2592d8f1040fdd36b4b616b2e1ff50217f317262c0be4082531fb9e955a737cd",
+  "plot_sha256": "7caf6ccc6664303c85e817b9757d21011fb5f391903c0920f3dc59bcaa2b71df",
+  "script_sha256": "362495e8e323d421dc591df4477ee704e78fbe37e763efae72e7af29d838d829",
   "histories": [
     {
       "run": "facility-presence-target-v2s",
@@ -37,6 +37,12 @@
       "history_sha256": "03def72f1d8ab6dd6b3a4db75dc03809982e18d2523c61f10588d376cfebdd74",
       "status": "complete",
       "actual_epochs": 7
+    },
+    {
+      "run": "facility-presence-target-hard",
+      "history_sha256": "aabc102631b2acce1decbbe1796154bdf78031379a66f00787b1d01b437eb044",
+      "status": "complete",
+      "actual_epochs": 6
     }
   ],
   "metric": "Full-photo validation worst FNR/FPR, not aggregate wrong-photo fraction or field error"
