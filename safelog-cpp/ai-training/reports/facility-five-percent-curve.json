@@ -1,5 +1,5 @@
 {
-  "plot_sha256": "70a6d81cf11cd4ea0a218d22a30d4ffea945ef0eb8d1b2f4e0748c0f13b0bda8",
+  "plot_sha256": "ce838eeaba3aa21be8c45f137ed14b767c0246be44fe570d633908a170d21a7e",
   "script_sha256": "362495e8e323d421dc591df4477ee704e78fbe37e763efae72e7af29d838d829",
   "histories": [
     {
@@ -46,9 +46,9 @@
     },
     {
       "run": "facility-presence-target-auxiliary",
-      "history_sha256": "83f777548fbd08f5d439700718893d83781fc962a0d2f93bb03af95c7824ab6a",
-      "status": "running",
-      "actual_epochs": 9
+      "history_sha256": "d5003cc2bd5fa823a800f312510cc77b6ae9b906f9cb0af023d26f9545a6149c",
+      "status": "complete",
+      "actual_epochs": 18
     }
   ],
   "metric": "Full-photo validation worst FNR/FPR, not aggregate wrong-photo fraction or field error"

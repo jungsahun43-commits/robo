@@ -96,6 +96,9 @@ def main():
         cutoffs=[(result[label]['negative']['cutoff'],result[label]['positive']['cutoff']) for label in TARGETS]
         joint[rule]={d:joint_metrics(t[:,indices],p[:,indices],cutoffs) for d,(t,p) in domains.items()}
     output={'run':args.name,'stage':'validation_diagnostic_only','weights_sha256':selection['weights_sha256'],
+            'positive_support':{label:{d:{'positive_photos':int((t[:,classes.index(label)]==1).sum()),
+                     'zero_error_ci95':wilson_interval(0,int((t[:,classes.index(label)]==1).sum()))}
+                     for d,(t,p) in domains.items()} for label in TARGETS},
             'sources':sources,'policies':policies,'joint_photo_diagnostics':joint,'deployed':False,
             'criterion':'Common per-label low/high cutoffs across all three domains. Conditional mistake rate per predicted tail, each <5%; upper rule uses nominal two-sided 95% Wilson upper bound; >=10 accepted/tail/domain.',
             'limitation':'Cutoffs selected on validation; intervals ignore repeated selection and related patches. No independent test/field guarantee. Abstained cases are unjudged, never counted correct. Conditional error is NOT full-coverage FNR/FPR.'}
@@ -106,6 +109,9 @@ def main():
            '아래 오류는 자동으로 판단한 사진만의 조건부 오답률로, 기존 미탐률·오탐률과 분모가 다르다.',
            '낮은 확률과 높은 확률에 별도 공통 기준을 정하고 그 사이를 확인 대기로 둔다. 각 자료·각 판단 방향에서 지원되는 기준이 없으면 그 방향을 전부 보류한다.',
            '검증 자료로 기준을 고른 결과다. Wilson 상한도 선택 편향과 같은 장면의 상관을 해결하지 않으므로 현장 보장으로 쓸 수 없다.','']
+    support=output['positive_support']['concrete_spalling']['damsegment']
+    lines += [f"자료 수 한계: Dam 박락 양성은{support['positive_photos']}장이다. 이 양성을 모두 틀리지 않고 판단해도 명목95% 상한은{support['zero_error_ci95'][1]*100:.2f}%이다.",
+              '따라서 세 자료의 모든 판단 방향에서95% 상한5%를 요구하는 진단은 완벽한 모델만으로도 해결되지 않는다. 추가 독립 양성 자료가 필요하다. 이것은 기존 관측 미탐·오탐5% 목표와 별도 조건이다.','']
     for rule,title in (('observed_only','검증 관측 오류만5% 미만으로 제한'),('wilson_upper','명목95% 상한까지5% 미만으로 요구')):
         lines += [f'## {title}','','| 항목 | 자료 | 자동 판단/전체 | 자동 비율 | 확인 대기 | 자동 판단 중 오류 |','|---|---|---:|---:|---:|---:|']
         for label,policy in policies[rule].items():

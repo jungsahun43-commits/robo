@@ -1,5 +1,5 @@
 {
-  "status": "running",
+  "status": "complete",
   "architecture": "lraspp_mobilenet_facility_auxiliary_v1",
   "classes": [
     "concrete_crack",
@@ -102,5 +102,8 @@
     "script_sha256": "1d3aecbc8b66c87684b445cd4dc0b097c6859d08f444733432e5062ca3564886",
     "policy": "Original TRAIN full-photo tags unchanged; non-DACL and detail crops have UNKNOWN auxiliary targets, never parent-level negatives"
   },
-  "auxiliary_scope": "Original DACL TRAIN full-photo tags only; all other source/crop auxiliary labels unknown; inference still seven facility logits"
+  "auxiliary_scope": "Original DACL TRAIN full-photo tags only; all other source/crop auxiliary labels unknown; inference still seven facility logits",
+  "actual_epochs": 18,
+  "best_worst_target_error": 0.22413793103448276,
+  "weights_sha256": "71ea5d75011e4662954c18e7cb0af88d6558266eef3c6fde7a5f00003c503323"
 }

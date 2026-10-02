@@ -1,7 +1,7 @@
 {
-  "run": "facility-presence-target-spatial",
+  "run": "facility-presence-target-auxiliary",
   "stage": "validation_diagnostic_only",
-  "weights_sha256": "99e5e0dab93aacedc1d4148fea88ac36baf01a1bb700bb6500dd4a918effa485",
+  "weights_sha256": "71ea5d75011e4662954c18e7cb0af88d6558266eef3c6fde7a5f00003c503323",
   "positive_support": {
     "concrete_crack": {
       "dacl": {
@@ -52,16 +52,16 @@
   },
   "sources": {
     "dacl": {
-      "targets_sha256": "2e6771de820e86cf7263805459933e86b60d2f543d0881da480fe19c2ebef889",
-      "scores_sha256": "25b17fc155d14ad33e89a4ebae8beb6fbda6050a8469916d418445e4bd6dd0d2"
+      "targets_sha256": "c172d5625b599d411f19fcf4a39bf18f77733f35922300b090f4d1be038f7654",
+      "scores_sha256": "97626f66c77e3d0e6a305fc64e09792a431fc1412189bd901290def29db83ab4"
     },
     "damsegment": {
-      "targets_sha256": "64568077fef7e3a26f6ef9913db815d6afe9f4b96395ed0944f625c35cb13eaf",
-      "scores_sha256": "215fd4cc7a476cb7171471266e75e432c8ddfdfb22da17760c51d132aa7956c5"
+      "targets_sha256": "8300123fa51f109d61e5cbbca218266a5593c08fd686893ad83f34b2dc046f86",
+      "scores_sha256": "349fe731de1a69aa4c740b6afb1ee1a454a797e023d0e3e1cd07970ed7bcfc1e"
     },
     "codebrim": {
-      "targets_sha256": "c58d98485b379fb0c687ff24b7ecc253fa77377c34923e4f6fc2241bd1bbd66d",
-      "scores_sha256": "3ee8586a17cb70545d597a0eabbe8a4fb96c32d001168731a9feaee9ee0f7d32"
+      "targets_sha256": "fa98089b7b8efec8dc88b04362b5ca08453130ea66406b48697a02080e95091f",
+      "scores_sha256": "e3de3e69f4600ef3a3a1aa6f595a6a83f19103b735d26ab0d329591e8ba7bfcf"
     }
   },
   "policies": {
@@ -69,78 +69,78 @@
       "concrete_crack": {
         "negative": {
           "supported": true,
-          "cutoff": 0.3508513271808625,
+          "cutoff": 0.1578972935676575,
           "domains": {
             "dacl": {
-              "accepted": 308,
-              "errors": 15,
+              "accepted": 278,
+              "errors": 13,
               "known_photos": 710,
-              "coverage": 0.43380281690140843,
-              "conditional_error": 0.048701298701298704,
+              "coverage": 0.39154929577464787,
+              "conditional_error": 0.046762589928057555,
               "ci95": [
-                0.029732688123321752,
-                0.07878867061029245
+                0.027529036762430924,
+                0.07835126539595055
               ]
             },
             "damsegment": {
-              "accepted": 174,
-              "errors": 4,
+              "accepted": 165,
+              "errors": 1,
               "known_photos": 424,
-              "coverage": 0.41037735849056606,
-              "conditional_error": 0.022988505747126436,
+              "coverage": 0.3891509433962264,
+              "conditional_error": 0.006060606060606061,
               "ci95": [
-                0.008975250976013212,
-                0.05760910398383388
+                0.001070648118628812,
+                0.03352665316918832
               ]
             },
             "codebrim": {
-              "accepted": 381,
-              "errors": 6,
+              "accepted": 324,
+              "errors": 1,
               "known_photos": 611,
-              "coverage": 0.6235679214402619,
-              "conditional_error": 0.015748031496062992,
+              "coverage": 0.530278232405892,
+              "conditional_error": 0.0030864197530864196,
               "ci95": [
-                0.007236932150048619,
-                0.0339266651121554
+                0.0005450367982221867,
+                0.017272901304258584
               ]
             }
           }
         },
         "positive": {
           "supported": true,
-          "cutoff": 0.9053999781608582,
+          "cutoff": 0.897873044013977,
           "domains": {
             "dacl": {
-              "accepted": 68,
+              "accepted": 82,
               "errors": 3,
               "known_photos": 710,
-              "coverage": 0.09577464788732394,
-              "conditional_error": 0.04411764705882353,
+              "coverage": 0.11549295774647887,
+              "conditional_error": 0.036585365853658534,
               "ci95": [
-                0.01511661970804156,
-                0.12187195182496394
+                0.012519573081569195,
+                0.10212734643608476
               ]
             },
             "damsegment": {
-              "accepted": 145,
+              "accepted": 210,
               "errors": 0,
               "known_photos": 424,
-              "coverage": 0.3419811320754717,
+              "coverage": 0.49528301886792453,
               "conditional_error": 0.0,
               "ci95": [
-                1.734723475976807e-18,
-                0.02580906456528246
+                0.0,
+                0.017964050759283236
               ]
             },
             "codebrim": {
-              "accepted": 101,
+              "accepted": 105,
               "errors": 5,
               "known_photos": 611,
-              "coverage": 0.16530278232405893,
-              "conditional_error": 0.04950495049504951,
+              "coverage": 0.1718494271685761,
+              "conditional_error": 0.047619047619047616,
               "ci95": [
-                0.02132850988800644,
-                0.11069425072968567
+                0.020509165674361972,
+                0.10666166583292791
               ]
             }
           }
@@ -148,29 +148,29 @@
         "summary": {
           "dacl": {
             "known_photos": 710,
-            "accepted": 376,
-            "review_required": 334,
-            "coverage": 0.5295774647887324,
-            "conditional_error": 0.047872340425531915,
-            "accepted_errors": 18,
+            "accepted": 360,
+            "review_required": 350,
+            "coverage": 0.5070422535211268,
+            "conditional_error": 0.044444444444444446,
+            "accepted_errors": 16,
             "all_photos_target_replaced": false
           },
           "damsegment": {
             "known_photos": 424,
-            "accepted": 319,
-            "review_required": 105,
-            "coverage": 0.7523584905660378,
-            "conditional_error": 0.012539184952978056,
-            "accepted_errors": 4,
+            "accepted": 375,
+            "review_required": 49,
+            "coverage": 0.8844339622641509,
+            "conditional_error": 0.0026666666666666666,
+            "accepted_errors": 1,
             "all_photos_target_replaced": false
           },
           "codebrim": {
             "known_photos": 611,
-            "accepted": 482,
-            "review_required": 129,
-            "coverage": 0.7888707037643208,
-            "conditional_error": 0.022821576763485476,
-            "accepted_errors": 11,
+            "accepted": 429,
+            "review_required": 182,
+            "coverage": 0.7021276595744681,
+            "conditional_error": 0.013986013986013986,
+            "accepted_errors": 6,
             "all_photos_target_replaced": false
           }
         }
@@ -178,150 +178,39 @@
       "concrete_spalling": {
         "negative": {
           "supported": true,
-          "cutoff": 0.13249926269054416,
+          "cutoff": 0.12538889050483706,
           "domains": {
             "dacl": {
-              "accepted": 71,
-              "errors": 3,
+              "accepted": 106,
+              "errors": 5,
               "known_photos": 710,
-              "coverage": 0.1,
-              "conditional_error": 0.04225352112676056,
+              "coverage": 0.14929577464788732,
+              "conditional_error": 0.04716981132075472,
               "ci95": [
-                0.014473260620475319,
-                0.11702416040484681
+                0.020314072962303892,
+                0.10569899140612377
               ]
             },
             "damsegment": {
-              "accepted": 287,
-              "errors": 5,
+              "accepted": 335,
+              "errors": 8,
               "known_photos": 424,
-              "coverage": 0.6768867924528302,
-              "conditional_error": 0.017421602787456445,
+              "coverage": 0.7900943396226415,
+              "conditional_error": 0.023880597014925373,
               "ci95": [
-                0.007463844197205298,
-                0.040127234725375285
+                0.0121492827875858,
+                0.046407479686966346
               ]
             },
             "codebrim": {
-              "accepted": 217,
+              "accepted": 234,
               "errors": 1,
               "known_photos": 611,
-              "coverage": 0.35515548281505727,
-              "conditional_error": 0.004608294930875576,
+              "coverage": 0.3829787234042553,
+              "conditional_error": 0.004273504273504274,
               "ci95": [
-                0.0008139409183967536,
-                0.025636974828527965
-              ]
-            }
-          }
-        },
-        "positive": {
-          "supported": true,
-          "cutoff": 0.9228014945983887,
-          "domains": {
-            "dacl": {
-              "accepted": 16,
-              "errors": 0,
-              "known_photos": 710,
-              "coverage": 0.022535211267605635,
-              "conditional_error": 0.0,
-              "ci95": [
-                0.0,
-                0.1936076805344365
-              ]
-            },
-            "damsegment": {
-              "accepted": 34,
-              "errors": 0,
-              "known_photos": 424,
-              "coverage": 0.08018867924528301,
-              "conditional_error": 0.0,
-              "ci95": [
-                0.0,
-                0.10151455415332376
-              ]
-            },
-            "codebrim": {
-              "accepted": 62,
-              "errors": 2,
-              "known_photos": 611,
-              "coverage": 0.10147299509001637,
-              "conditional_error": 0.03225806451612903,
-              "ci95": [
-                0.008891371499816635,
-                0.11020469594985441
-              ]
-            }
-          }
-        },
-        "summary": {
-          "dacl": {
-            "known_photos": 710,
-            "accepted": 87,
-            "review_required": 623,
-            "coverage": 0.12253521126760564,
-            "conditional_error": 0.034482758620689655,
-            "accepted_errors": 3,
-            "all_photos_target_replaced": false
-          },
-          "damsegment": {
-            "known_photos": 424,
-            "accepted": 321,
-            "review_required": 103,
-            "coverage": 0.7570754716981132,
-            "conditional_error": 0.01557632398753894,
-            "accepted_errors": 5,
-            "all_photos_target_replaced": false
-          },
-          "codebrim": {
-            "known_photos": 611,
-            "accepted": 279,
-            "review_required": 332,
-            "coverage": 0.45662847790507366,
-            "conditional_error": 0.010752688172043012,
-            "accepted_errors": 3,
-            "all_photos_target_replaced": false
-          }
-        }
-      }
-    },
-    "wilson_upper": {
-      "concrete_crack": {
-        "negative": {
-          "supported": true,
-          "cutoff": 0.23450961709022525,
-          "domains": {
-            "dacl": {
-              "accepted": 207,
-              "errors": 4,
-              "known_photos": 710,
-              "coverage": 0.2915492957746479,
-              "conditional_error": 0.01932367149758454,
-              "ci95": [
-                0.007539626042567513,
-                0.04862323152314709
-              ]
-            },
-            "damsegment": {
-              "accepted": 168,
-              "errors": 2,
-              "known_photos": 424,
-              "coverage": 0.39622641509433965,
-              "conditional_error": 0.011904761904761904,
-              "ci95": [
-                0.0032708093814397647,
-                0.042361128769621906
-              ]
-            },
-            "codebrim": {
-              "accepted": 319,
-              "errors": 3,
-              "known_photos": 611,
-              "coverage": 0.5220949263502455,
-              "conditional_error": 0.009404388714733543,
-              "ci95": [
-                0.003203395144589132,
-                0.027280480305125226
+                0.0007547771842678769,
+                0.023805528027692383
               ]
             }
           }
@@ -359,29 +248,131 @@
         "summary": {
           "dacl": {
             "known_photos": 710,
-            "accepted": 207,
-            "review_required": 503,
-            "coverage": 0.2915492957746479,
-            "conditional_error": 0.01932367149758454,
-            "accepted_errors": 4,
+            "accepted": 106,
+            "review_required": 604,
+            "coverage": 0.14929577464788732,
+            "conditional_error": 0.04716981132075472,
+            "accepted_errors": 5,
             "all_photos_target_replaced": false
           },
           "damsegment": {
             "known_photos": 424,
-            "accepted": 168,
-            "review_required": 256,
-            "coverage": 0.39622641509433965,
-            "conditional_error": 0.011904761904761904,
-            "accepted_errors": 2,
+            "accepted": 335,
+            "review_required": 89,
+            "coverage": 0.7900943396226415,
+            "conditional_error": 0.023880597014925373,
+            "accepted_errors": 8,
             "all_photos_target_replaced": false
           },
           "codebrim": {
             "known_photos": 611,
-            "accepted": 319,
-            "review_required": 292,
-            "coverage": 0.5220949263502455,
-            "conditional_error": 0.009404388714733543,
-            "accepted_errors": 3,
+            "accepted": 234,
+            "review_required": 377,
+            "coverage": 0.3829787234042553,
+            "conditional_error": 0.004273504273504274,
+            "accepted_errors": 1,
+            "all_photos_target_replaced": false
+          }
+        }
+      }
+    },
+    "wilson_upper": {
+      "concrete_crack": {
+        "negative": {
+          "supported": true,
+          "cutoff": 0.12365932017564775,
+          "domains": {
+            "dacl": {
+              "accepted": 232,
+              "errors": 5,
+              "known_photos": 710,
+              "coverage": 0.3267605633802817,
+              "conditional_error": 0.021551724137931036,
+              "ci95": [
+                0.00923990708986426,
+                0.049449768974332446
+              ]
+            },
+            "damsegment": {
+              "accepted": 157,
+              "errors": 0,
+              "known_photos": 424,
+              "coverage": 0.37028301886792453,
+              "conditional_error": 0.0,
+              "ci95": [
+                0.0,
+                0.023883511433308864
+              ]
+            },
+            "codebrim": {
+              "accepted": 285,
+              "errors": 1,
+              "known_photos": 611,
+              "coverage": 0.4664484451718494,
+              "conditional_error": 0.0035087719298245615,
+              "ci95": [
+                0.0006196531561142565,
+                0.0196041015795948
+              ]
+            }
+          }
+        },
+        "positive": {
+          "supported": false,
+          "cutoff": 1.0000000000000002,
+          "domains": {
+            "dacl": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 710,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            },
+            "damsegment": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 424,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            },
+            "codebrim": {
+              "accepted": 0,
+              "errors": 0,
+              "known_photos": 611,
+              "coverage": 0.0,
+              "conditional_error": null,
+              "ci95": null
+            }
+          }
+        },
+        "summary": {
+          "dacl": {
+            "known_photos": 710,
+            "accepted": 232,
+            "review_required": 478,
+            "coverage": 0.3267605633802817,
+            "conditional_error": 0.021551724137931036,
+            "accepted_errors": 5,
+            "all_photos_target_replaced": false
+          },
+          "damsegment": {
+            "known_photos": 424,
+            "accepted": 157,
+            "review_required": 267,
+            "coverage": 0.37028301886792453,
+            "conditional_error": 0.0,
+            "accepted_errors": 0,
+            "all_photos_target_replaced": false
+          },
+          "codebrim": {
+            "known_photos": 611,
+            "accepted": 285,
+            "review_required": 326,
+            "coverage": 0.4664484451718494,
+            "conditional_error": 0.0035087719298245615,
+            "accepted_errors": 1,
             "all_photos_target_replaced": false
           }
         }
@@ -484,40 +475,40 @@
       "dacl": {
         "photos": 710,
         "fully_known_photos": 710,
-        "accepted": 72,
-        "review_required": 638,
-        "coverage": 0.10140845070422536,
-        "accepted_wrong_photos": 3,
-        "conditional_photo_error": 0.041666666666666664,
+        "accepted": 76,
+        "review_required": 634,
+        "coverage": 0.10704225352112676,
+        "accepted_wrong_photos": 4,
+        "conditional_photo_error": 0.05263157894736842,
         "ci95": [
-          0.014270807466925182,
-          0.11549276741316111
+          0.020655429299384284,
+          0.12765672575889647
         ]
       },
       "damsegment": {
         "photos": 424,
         "fully_known_photos": 424,
-        "accepted": 257,
-        "review_required": 167,
-        "coverage": 0.6061320754716981,
-        "accepted_wrong_photos": 8,
-        "conditional_photo_error": 0.0311284046692607,
+        "accepted": 303,
+        "review_required": 121,
+        "coverage": 0.714622641509434,
+        "accepted_wrong_photos": 9,
+        "conditional_photo_error": 0.0297029702970297,
         "ci95": [
-          0.015855994046279496,
-          0.06021112699498646
+          0.015704029394411498,
+          0.05547754725640673
         ]
       },
       "codebrim": {
         "photos": 611,
         "fully_known_photos": 611,
-        "accepted": 252,
-        "review_required": 359,
-        "coverage": 0.41243862520458263,
-        "accepted_wrong_photos": 6,
-        "conditional_photo_error": 0.023809523809523808,
+        "accepted": 195,
+        "review_required": 416,
+        "coverage": 0.3191489361702128,
+        "accepted_wrong_photos": 0,
+        "conditional_photo_error": 0.0,
         "ci95": [
-          0.01095675985436672,
-          0.05096228522032767
+          0.0,
+          0.019319204573721077
         ]
       }
     },

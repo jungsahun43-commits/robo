@@ -1,0 +1,8 @@
+{
+  "run": "facility-presence-target-auxiliary",
+  "weights_sha256": "71ea5d75011e4662954c18e7cb0af88d6558266eef3c6fde7a5f00003c503323",
+  "scope": "Technical checkpoint load and seven finite probabilities on a synthetic blank input; no accuracy test",
+  "public_outputs": 7,
+  "passed": true,
+  "app_profile_unchanged": true
+}
