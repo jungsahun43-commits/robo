@@ -92,6 +92,7 @@ def main():
               'val_dacl':len(val),'val_damsegment':len(split['val']),'validation_domains':list(loaders),'draws_per_epoch':full_count,
               'spatial_manifest_sha256':sha(ROOT/'data/facility-spatial-training/train.json'),'training_script_sha256':sha(Path(__file__)),
               'model_source_sha256':sha(ROOT/'safelog_ai/spatial_classifier.py'),'split_sha256':sha(output/'SPLIT.json'),
+              'pretrained_backbone_sha256':sha(ROOT/'.config/torch/hub/checkpoints/lraspp_mobilenet_v3_large-d234d4ea.pth') if args.initial is None else None,
               'additional_validation':{'path':'data/codebrim-training/val.json','sha256':sha(ROOT/'data/codebrim-training/val.json')},
               'additional_test':{'path':'data/codebrim-training/test.json','sha256':sha(ROOT/'data/codebrim-training/test.json')},
               'initial':'Official LRASPP COCO/VOC pretrained backbone/semantic features; new seven facility heads, no source facility validation training',

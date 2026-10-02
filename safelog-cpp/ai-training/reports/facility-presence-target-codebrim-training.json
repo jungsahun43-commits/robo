@@ -1,0 +1,92 @@
+{
+  "status": "complete",
+  "architecture": "efficientnet_v2_s_multilabel_v1",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "imgsz": 640,
+  "train_dacl": 6225,
+  "train_damsegment": 1585,
+  "val_dacl": 710,
+  "val_damsegment": 424,
+  "reserved_dam_test": 491,
+  "requested_epochs": 18,
+  "seed": 46,
+  "gamma": 1.0,
+  "positive_weights": [
+    [
+      2.258023500442505,
+      1.0440680980682373,
+      1.506913661956787,
+      6.0,
+      6.0,
+      4.389140605926514,
+      5.489816188812256
+    ],
+    [
+      0.41150352358818054,
+      4.243687629699707,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224
+    ],
+    [
+      1.384360909461975,
+      2.4061999320983887,
+      3.7183494567871094,
+      3.6503729820251465,
+      0.20000000298023224,
+      6.0,
+      0.20000000298023224
+    ]
+  ],
+  "initial": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\facility-presence-target-v2s\\best.pt",
+  "split_sha256": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+  "selection": "minimax FNR/FPR in every recorded validation domain; test never selected",
+  "domain_balance": true,
+  "detail_crops": 12041,
+  "detail_manifest_sha256": "6f22582b287d2c220e3dc0104c7d9294febe0426820a5d9ec8b1c1acbc2756e6",
+  "target_emphasis": 2.0,
+  "draws_per_epoch": 14248,
+  "detail_exposure": 0.25,
+  "domain_proportions": [
+    0.7,
+    0.1,
+    0.2
+  ],
+  "train_codebrim": 6438,
+  "supplement_sha256": "5cce98c85f49d8e9f355c940306d21c9620e0b9fcbf0066965b4b6442ae49d5d",
+  "additional_validation": {
+    "path": "data/codebrim-training/val.json",
+    "sha256": "d17182c6070cfd73404de341f0662352441b1be5d983c85dfe5b0c86affed56e"
+  },
+  "additional_test": {
+    "path": "data/codebrim-training/test.json",
+    "sha256": "fa9a2bb648afb0e4164028c564e903d45c8bcf88d769c75aa97c99cdb51e4df5"
+  },
+  "validation_domains": [
+    "dacl",
+    "damsegment",
+    "codebrim"
+  ],
+  "initial_weights_sha256": "21cc98966206cf385a0362336060b322675b5e079f02c5d0441c0d62d38f7ff8",
+  "training_script_sha256": "5c80a49ed0d63bbe328df1593d93104930e1aaa39ebe8c036c04054900f769d4",
+  "model_source_sha256": "7affe79148a67a99fb797873dc531e93eea6b3844a8412af13c93e1abce4ce6c",
+  "expected_domain_sampling_mass": {
+    "dacl": 0.7000000000000001,
+    "damsegment": 0.10000000000000005,
+    "codebrim": 0.20000000000000004
+  },
+  "expected_detail_sampling_mass": 0.2953185470387328,
+  "actual_epochs": 13,
+  "best_worst_target_error": 0.24611398963730569,
+  "weights_sha256": "62ccf473dc6288881a89dfc179cc1f8238580ce7d489d05d909dd166da01120c"
+}

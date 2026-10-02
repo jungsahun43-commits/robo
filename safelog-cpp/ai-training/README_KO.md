@@ -11,6 +11,7 @@ C++ 앱용 로컬 API 서버를 재현하기 위한 코드다. 원본 데이터�
 공개 자료의 검증 점수는 새로운 산업체 현장의 성능 보장이 아니다.
 
 - 조건과 분리: [FACILITY_FIVE_PERCENT_PLAN_KO.md](reports/FACILITY_FIVE_PERCENT_PLAN_KO.md)
+- 실제 학습 회수와 항목별 오류: [통합 결과](reports/FACILITY_FIVE_PERCENT_RESULTS_KO.md). `python scripts/report_facility_target.py`로 현재 기록을 다시 모은다.
 - 새 실제 자료 감사: [CODEBRIM](reports/facility-target-codebrim-data-audit.json)
 - 4GB ZIP 위치 호환 처리·CRC 확인: [extraction](reports/facility-target-codebrim-extraction.json)
 - 더 큰 사진 모델/상세 증강/해상도 보강 결과: `reports/facility-presence-target-*-target-validation.json`

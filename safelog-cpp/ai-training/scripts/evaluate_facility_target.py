@@ -93,7 +93,7 @@ def select(name, device):
     result = {"run": name, "weights_sha256": sha(weights), "selection_split": "val", "classes": classes,
               "validation_counts": {k: len(v) for k,v in items.items()}, "attempts": attempts, "selected": chosen,
               "criterion": "Per target class FNR AND FPR strictly below .05 in EVERY recorded validation domain; no test selection",
-              "limitation": "Both are source validation domains; dam scene IDs unavailable; no independent field guarantee"}
+              "limitation": "All recorded domains are source validation domains; dam scene IDs unavailable; no independent field guarantee"}
     save(run / "TARGET-SELECTION.json", result)
     save(ROOT / "reports" / f"{name}-target-validation.json", result)
 

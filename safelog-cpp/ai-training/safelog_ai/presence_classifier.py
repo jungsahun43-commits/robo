@@ -13,6 +13,9 @@ STD = [.229, .224, .225]
 
 
 def build_model(classes: int, pretrained: bool = False, architecture: str = "efficientnet_b0_multilabel_v1"):
+    if architecture == "lraspp_mobilenet_facility_multitask_v1":
+        from .spatial_classifier import SpatialClassifier
+        return SpatialClassifier(classes, pretrained)
     if architecture == "efficientnet_b0_multilabel_v1":
         model = efficientnet_b0(weights=EfficientNet_B0_Weights.DEFAULT if pretrained else None)
     elif architecture == "efficientnet_v2_s_multilabel_v1":

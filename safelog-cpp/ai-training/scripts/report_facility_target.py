@@ -1,0 +1,77 @@
+"""Consolidate actual experiment status; never substitute validation for test."""
+from pathlib import Path
+import sys
+
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+from scripts.train_facility_target import read,save,sha,TARGETS
+
+RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility-presence-target-highres',
+      'facility-presence-target-codebrim','facility-presence-target-spatial')
+NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습')
+DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
+LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
+
+
+def main():
+    entries=[]
+    for name,title in zip(RUNS,NAMES):
+        run=ROOT/'runs'/name
+        if not (run/'TRAINING.json').exists():
+            entries.append({'run':name,'title':title,'status':'prepared' if name.endswith('spatial') else 'not_started'});continue
+        training=read(run/'TRAINING.json');history=read(run/'history.json') if (run/'history.json').exists() else []
+        selection=read(run/'TARGET-SELECTION.json') if (run/'TARGET-SELECTION.json').exists() else None
+        validation=read(run/'VALIDATION.json') if (run/'VALIDATION.json').exists() else None
+        point=selection['selected'] if selection else validation
+        test_path=ROOT/'reports'/f'{name}-target-test.json'
+        test=read(test_path) if test_path.exists() else None
+        if selection and selection['weights_sha256']!=sha(run/'best.pt'):raise ValueError('Selection weight hash changed')
+        entries.append({'run':name,'title':title,'status':training['status'],'epochs':len(history),'imgsz':training['imgsz'],
+                        'best_epoch':validation['epoch'] if validation else None,'frozen_validation':bool(selection),
+                        'grid':point.get('grid',1) if point else None,'worst_error':point.get('worst_error',point.get('worst_target_error')) if point else None,
+                        'target_passed_validation':point['target_passed'] if point else False,
+                        'operating_points':point.get('per_class',point.get('operating_points')) if point else None,
+                        'test_executed':bool(test),'target_passed_test':test['target_passed'] if test else None,
+                        'weights_sha256':selection['weights_sha256'] if selection else training.get('weights_sha256'),
+                        'validation_domains':training.get('validation_domains',['dacl','damsegment'])})
+    profile=read(ROOT/'reports/facility-inference-profile.json')
+    result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
+            'experiments':entries,'app_profile':profile['version'],'app_profile_sha256':sha(ROOT/'reports/facility-inference-profile.json'),
+            'release_target_achieved':any(e.get('target_passed_test') is True for e in entries),
+            'scope':'Photo presence only; other five facility labels, exact defect location, structural safety and unseen facility error are not claimed below5%',
+            'limitation':'Repeatedly selected source validation, not independent field performance; dam scene IDs unavailable; confidence intervals assume fixed predictions and independent examples'}
+    save(ROOT/'reports/facility-five-percent-results.json',result)
+    lines=['# 시설 항목별 5% 목표 진행·결과','',
+           '**5% 미만 목표 미달.**' if not result['release_target_achieved'] else '**기록된 보류 자료의 목표 통과 모델이 있음. 현장 보장은 아님.**','',
+           '균열·박락 각각에 대해 미탐률 FN/(TP+FN), 오탐률 FP/(FP+TN)이 모두 0.05 미만이어야 통과한다.',
+           '아래 최대 오류는 이 두 항목의 자료별 미탐/오탐 중 가장 큰 비율이며 전체 오답 사진 비율이나 정확도는 아니다.','',
+           '| 시도 | 상태 | 실제 epoch | 입력 | 검증 자료 | 최대 검증 오류 | 목표 |',
+           '|---|---|---:|---:|---|---:|---|']
+    for e in entries:
+        state={'prepared':'준비됨','not_started':'시작 전','running':'학습 중','complete':'학습 완료'}[e['status']]
+        error=f"{e['worst_error']*100:.2f}%" if e.get('worst_error') is not None else '-'
+        lines.append(f"| {e['title']} | {state} | {e.get('epochs','-')} | {e.get('imgsz','-')} | {', '.join(DOMAINS[d] for d in e.get('validation_domains',[])) or '-'} | {error} | {'검증 통과' if e.get('target_passed_validation') else '미달/미확인'} |")
+    lines+=['','학습 중 수치는 지금까지의 가장 좋은 체크포인트이며 최종 결과가 아니다.',
+            '검증 자료가 둘인 시도와 셋인 시도의 최대값은 같은 평가 범위가 아니므로 숫자만으로 직접 비교하지 않는다.','']
+    for e in entries:
+        if not e.get('operating_points'):continue
+        lines += [f"## {e['title']} 상세 검증",'',
+                  f"선택 epoch {e['best_epoch']}, 확대 grid {e['grid']}. {'뷰·임계값 선택 고정 완료.' if e['frozen_validation'] else '전체 사진으로 진행 중인 체크포인트 평가.'}",'',
+                  '| 자료 | 항목 | 미탐/양성 | 미탐률 | 오탐/음성 | 오탐률 |','|---|---|---:|---:|---:|---:|']
+        for label,point in e['operating_points'].items():
+            for domain,m in point['domains'].items():
+                lines.append(f"| {DOMAINS[domain]} | {LABELS[label]} | {m['fn']}/{m['tp']+m['fn']} | {m['fnr']*100:.2f}% | {m['fp']}/{m['fp']+m['tn']} | {m['fpr']*100:.2f}% |")
+        lines += ['',f"보류 시험: {'실행됨' if e['test_executed'] else '미실행. 검증 목표 미달이면 시험으로 모델을 반복 선택하지 않는다.'}",'']
+    lines+=['## 실제 자료와 적용 상태','',
+            'DACL 학습6,225/검증710/기존 보류975. 원래 Dam 학습2,009개만 새 train1,585/val424로 분리, 기존 보류491 유지.',
+            'CODEBRIM: 공식 MD5 및 7,810파일 CRC 확인. 정답 불명52개 제외 후 train6,438/val611/test628, 고유 부모 사진ID1,522.',
+            'CODEBRIM 부모 ID의 분리 교차 및 기존 자료와 정확한 픽셀 겹침은0. 같은 시설/장면 독립성을 증명한 수치는 아니다.',
+            '상세 증강12,041개와 위치 지도는 위 학습 부모에서 만든 파생 자료이다. 새 독립 사진 수에 더하지 않는다.',
+            'CODEBRIM에 정답이 없는 물기/공동, 위치가 없는 양성 픽셀은 미확인으로 제외한다. 원래 정답은 바꾸지 않았다.','',
+            f"기본 앱 프로필: `{profile['version']}`. 실험 프로필로 자동 교체하지 않았다.",
+            '현장의 모든 시설, 나머지 다섯 항목, 정밀 위치와 구조 안전에 대한 5% 성능 주장은 하지 않는다.',
+            '조건·후속 방법·엄격한 시험 차단은 [계획](FACILITY_FIVE_PERCENT_PLAN_KO.md), 원자료 사용 조건은 [CODEBRIM](https://zenodo.org/records/2620293)을 확인한다.','']
+    (ROOT/'reports/FACILITY_FIVE_PERCENT_RESULTS_KO.md').write_text('\n'.join(lines),encoding='utf-8')
+    print('Actual facility target status consolidated; release_target_achieved=',result['release_target_achieved'])
+
+
+if __name__=='__main__':main()

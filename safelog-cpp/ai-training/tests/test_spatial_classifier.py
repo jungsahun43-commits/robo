@@ -1,7 +1,8 @@
 import unittest
 import torch
 import numpy as np
-from safelog_ai.spatial_classifier import SpatialClassifier,spatial_loss
+from safelog_ai.spatial_classifier import ARCH,spatial_loss
+from safelog_ai.presence_classifier import build_model
 from scripts.prepare_facility_spatial import masks_for
 
 
@@ -22,7 +23,7 @@ class SpatialTests(unittest.TestCase):
         self.assertEqual(unknown.item(),0.)
 
     def test_photo_contract_keeps_seven_logits_and_separate_coarse_maps(self):
-        torch.set_num_threads(2);model=SpatialClassifier().eval()
+        torch.set_num_threads(2);model=build_model(7,architecture=ARCH).eval()
         with torch.inference_mode():photo,maps=model.forward_details(torch.zeros(2,3,128,128))
         self.assertEqual(tuple(photo.shape),(2,7));self.assertEqual(tuple(maps.shape),(2,7,16,16))
         self.assertTrue(torch.isfinite(photo).all())
