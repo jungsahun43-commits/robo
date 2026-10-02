@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "architecture": "efficientnet_v2_s_multilabel_v1",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "imgsz": 384,
+  "train_dacl": 6225,
+  "train_damsegment": 1585,
+  "val_dacl": 710,
+  "val_damsegment": 424,
+  "reserved_dam_test": 491,
+  "requested_epochs": 24,
+  "seed": 43,
+  "gamma": 1.5,
+  "positive_weights": [
+    1.9438371658325195,
+    1.455974817276001,
+    1.0184824466705322,
+    6.0,
+    6.0,
+    3.5637829303741455,
+    4.75323486328125
+  ],
+  "initial": "Official ImageNet V2-S; never trained on these dam patches",
+  "split_sha256": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+  "selection": "minimax FNR/FPR on both validation domains, test never selected",
+  "actual_epochs": 14,
+  "best_worst_target_error": 0.2413793103448276,
+  "weights_sha256": "21cc98966206cf385a0362336060b322675b5e079f02c5d0441c0d62d38f7ff8"
+}

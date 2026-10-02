@@ -1,0 +1,75 @@
+{
+  "epoch": 8,
+  "elapsed_minutes": 8.827580000000065,
+  "train_loss": 0.0745082302765489,
+  "worst_target_error": 0.2413793103448276,
+  "sum_target_errors": 1.2478829180343833,
+  "target_passed": false,
+  "operating_points": {
+    "concrete_crack": {
+      "threshold": 0.2037573903799057,
+      "domains": {
+        "dacl": {
+          "tp": 162,
+          "fp": 115,
+          "fn": 49,
+          "tn": 384,
+          "fnr": 0.23222748815165878,
+          "fpr": 0.23046092184368738,
+          "photo_error_fraction": 0.23098591549295774
+        },
+        "damsegment": {
+          "tp": 247,
+          "fp": 5,
+          "fn": 1,
+          "tn": 171,
+          "fnr": 0.004032258064516129,
+          "fpr": 0.028409090909090908,
+          "photo_error_fraction": 0.014150943396226415
+        }
+      },
+      "worst_error": 0.23222748815165878,
+      "target_passed": false
+    },
+    "concrete_spalling": {
+      "threshold": 0.5641224384307861,
+      "domains": {
+        "dacl": {
+          "tp": 247,
+          "fp": 93,
+          "fn": 77,
+          "tn": 293,
+          "fnr": 0.23765432098765432,
+          "fpr": 0.24093264248704663,
+          "photo_error_fraction": 0.23943661971830985
+        },
+        "damsegment": {
+          "tp": 44,
+          "fp": 12,
+          "fn": 14,
+          "tn": 354,
+          "fnr": 0.2413793103448276,
+          "fpr": 0.03278688524590164,
+          "photo_error_fraction": 0.06132075471698113
+        }
+      },
+      "worst_error": 0.2413793103448276,
+      "target_passed": false
+    }
+  },
+  "ranking_ap": {
+    "dacl": {
+      "concrete_crack": 0.7732997054301096,
+      "concrete_spalling": 0.7817818741541643,
+      "rust_stain": 0.8820832993507266,
+      "exposed_rebar": 0.7674830148936674,
+      "wet_surface": 0.45216217996238706,
+      "efflorescence": 0.7470893844884772,
+      "surface_cavity": 0.5545665463506207
+    },
+    "damsegment": {
+      "concrete_crack": 0.999595997689044,
+      "concrete_spalling": 0.8394334820665855
+    }
+  }
+}

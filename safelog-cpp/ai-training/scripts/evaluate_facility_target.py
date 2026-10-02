@@ -71,6 +71,13 @@ def select(name, device):
     if training["weights_sha256"] != sha(weights): raise ValueError("Trained weights changed")
     dacl, classes = dacl_items("val", training["imgsz"])
     items = {"dacl": dacl, "damsegment": split["val"]}
+    if training.get("additional_validation"):
+        source = training["additional_validation"]
+        path = ROOT / source["path"]
+        if sha(path) != source["sha256"]: raise ValueError("Additional validation manifest changed")
+        data = read(path)
+        if data["split"] != "val" or data["classes"] != classes: raise ValueError("Additional validation mismatch")
+        items["codebrim"] = data["items"]
     attempts = []
     for grid in (1, 2, 3):
         predictions = {domain: cached(weights, records, grid, run / f"target-validation-{domain}-grid{grid}.json", device)
@@ -85,7 +92,7 @@ def select(name, device):
     chosen = min(attempts, key=lambda row: (row["worst_error"], sum(p["worst_error"] for p in row["per_class"].values()), row["views"]))
     result = {"run": name, "weights_sha256": sha(weights), "selection_split": "val", "classes": classes,
               "validation_counts": {k: len(v) for k,v in items.items()}, "attempts": attempts, "selected": chosen,
-              "criterion": "Per target class FNR AND FPR strictly below .05 in BOTH validation domains; no test selection",
+              "criterion": "Per target class FNR AND FPR strictly below .05 in EVERY recorded validation domain; no test selection",
               "limitation": "Both are source validation domains; dam scene IDs unavailable; no independent field guarantee"}
     save(run / "TARGET-SELECTION.json", result)
     save(ROOT / "reports" / f"{name}-target-validation.json", result)
@@ -102,6 +109,12 @@ def test(name, device):
     training = read(run / "TRAINING.json")
     dacl, classes = dacl_items("test", training["imgsz"])
     items = {"dacl": dacl, "damsegment": read(ROOT / "data/damsegment-training/test.json")["items"]}
+    if training.get("additional_test"):
+        source = training["additional_test"]; path = ROOT / source["path"]
+        if sha(path) != source["sha256"]: raise ValueError("Additional test manifest changed")
+        data = read(path)
+        if data["split"] != "test" or data["classes"] != classes: raise ValueError("Additional test mismatch")
+        items["codebrim"] = data["items"]
     result = {}
     for domain, records in items.items():
         probabilities_ = cached(weights, records, selection["selected"]["grid"], run / f"target-test-{domain}.json", device)

@@ -1,0 +1,1052 @@
+[
+  {
+    "epoch": 1,
+    "elapsed_minutes": 1.2476530100000673,
+    "train_loss": 0.27100322425899676,
+    "worst_target_error": 0.4585492227979275,
+    "sum_target_errors": 2.008269189515369,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.46295827627182007,
+        "domains": {
+          "dacl": {
+            "tp": 143,
+            "fp": 161,
+            "fn": 68,
+            "tn": 338,
+            "fnr": 0.3222748815165877,
+            "fpr": 0.3226452905811623,
+            "photo_error_fraction": 0.32253521126760565
+          },
+          "damsegment": {
+            "tp": 247,
+            "fp": 34,
+            "fn": 1,
+            "tn": 142,
+            "fnr": 0.004032258064516129,
+            "fpr": 0.19318181818181818,
+            "photo_error_fraction": 0.08254716981132075
+          }
+        },
+        "worst_error": 0.3226452905811623,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.5166191458702087,
+        "domains": {
+          "dacl": {
+            "tp": 263,
+            "fp": 177,
+            "fn": 61,
+            "tn": 209,
+            "fnr": 0.1882716049382716,
+            "fpr": 0.4585492227979275,
+            "photo_error_fraction": 0.3352112676056338
+          },
+          "damsegment": {
+            "tp": 32,
+            "fp": 26,
+            "fn": 26,
+            "tn": 340,
+            "fnr": 0.4482758620689655,
+            "fpr": 0.07103825136612021,
+            "photo_error_fraction": 0.12264150943396226
+          }
+        },
+        "worst_error": 0.4585492227979275,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.5428971058161619,
+        "concrete_spalling": 0.6925673932517464,
+        "rust_stain": 0.8097214056346025,
+        "exposed_rebar": 0.44468232902775123,
+        "wet_surface": 0.3851402014803464,
+        "efflorescence": 0.5910011871787235,
+        "surface_cavity": 0.45577573165132634
+      },
+      "damsegment": {
+        "concrete_crack": 0.9902497101715995,
+        "concrete_spalling": 0.6021356198680293
+      }
+    }
+  },
+  {
+    "epoch": 2,
+    "elapsed_minutes": 2.3788615199999184,
+    "train_loss": 0.23640275455620163,
+    "worst_target_error": 0.27469135802469136,
+    "sum_target_errors": 1.3650297049978288,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.42249441146850586,
+        "domains": {
+          "dacl": {
+            "tp": 155,
+            "fp": 136,
+            "fn": 56,
+            "tn": 363,
+            "fnr": 0.26540284360189575,
+            "fpr": 0.2725450901803607,
+            "photo_error_fraction": 0.2704225352112676
+          },
+          "damsegment": {
+            "tp": 244,
+            "fp": 7,
+            "fn": 4,
+            "tn": 169,
+            "fnr": 0.016129032258064516,
+            "fpr": 0.03977272727272727,
+            "photo_error_fraction": 0.025943396226415096
+          }
+        },
+        "worst_error": 0.2725450901803607,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.48695990443229675,
+        "domains": {
+          "dacl": {
+            "tp": 235,
+            "fp": 104,
+            "fn": 89,
+            "tn": 282,
+            "fnr": 0.27469135802469136,
+            "fpr": 0.2694300518134715,
+            "photo_error_fraction": 0.271830985915493
+          },
+          "damsegment": {
+            "tp": 48,
+            "fp": 20,
+            "fn": 10,
+            "tn": 346,
+            "fnr": 0.1724137931034483,
+            "fpr": 0.0546448087431694,
+            "photo_error_fraction": 0.07075471698113207
+          }
+        },
+        "worst_error": 0.27469135802469136,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7189619515451978,
+        "concrete_spalling": 0.7467419624574847,
+        "rust_stain": 0.8588840624539509,
+        "exposed_rebar": 0.6948089223403843,
+        "wet_surface": 0.3818299391641774,
+        "efflorescence": 0.7290288509786659,
+        "surface_cavity": 0.557827603084937
+      },
+      "damsegment": {
+        "concrete_crack": 0.999239028685708,
+        "concrete_spalling": 0.8292151036382793
+      }
+    }
+  },
+  {
+    "epoch": 3,
+    "elapsed_minutes": 3.441241403333455,
+    "train_loss": 0.18634056195559484,
+    "worst_target_error": 0.2823834196891192,
+    "sum_target_errors": 1.3700118975227462,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.42637088894844055,
+        "domains": {
+          "dacl": {
+            "tp": 162,
+            "fp": 117,
+            "fn": 49,
+            "tn": 382,
+            "fnr": 0.23222748815165878,
+            "fpr": 0.23446893787575152,
+            "photo_error_fraction": 0.23380281690140844
+          },
+          "damsegment": {
+            "tp": 247,
+            "fp": 12,
+            "fn": 1,
+            "tn": 164,
+            "fnr": 0.004032258064516129,
+            "fpr": 0.06818181818181818,
+            "photo_error_fraction": 0.030660377358490566
+          }
+        },
+        "worst_error": 0.23446893787575152,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.49597418308258057,
+        "domains": {
+          "dacl": {
+            "tp": 233,
+            "fp": 109,
+            "fn": 91,
+            "tn": 277,
+            "fnr": 0.2808641975308642,
+            "fpr": 0.2823834196891192,
+            "photo_error_fraction": 0.28169014084507044
+          },
+          "damsegment": {
+            "tp": 45,
+            "fp": 16,
+            "fn": 13,
+            "tn": 350,
+            "fnr": 0.22413793103448276,
+            "fpr": 0.04371584699453552,
+            "photo_error_fraction": 0.06839622641509434
+          }
+        },
+        "worst_error": 0.2823834196891192,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7490828003710716,
+        "concrete_spalling": 0.738702316775419,
+        "rust_stain": 0.8843379215160247,
+        "exposed_rebar": 0.7283131687231328,
+        "wet_surface": 0.4041330509438387,
+        "efflorescence": 0.739728119614094,
+        "surface_cavity": 0.5629794604481185
+      },
+      "damsegment": {
+        "concrete_crack": 0.998674674864632,
+        "concrete_spalling": 0.8523283360671858
+      }
+    }
+  },
+  {
+    "epoch": 4,
+    "elapsed_minutes": 4.515409356666593,
+    "train_loss": 0.15259455354948662,
+    "worst_target_error": 0.27586206896551724,
+    "sum_target_errors": 1.4530105907867248,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.41537636518478394,
+        "domains": {
+          "dacl": {
+            "tp": 155,
+            "fp": 137,
+            "fn": 56,
+            "tn": 362,
+            "fnr": 0.26540284360189575,
+            "fpr": 0.2745490981963928,
+            "photo_error_fraction": 0.271830985915493
+          },
+          "damsegment": {
+            "tp": 245,
+            "fp": 9,
+            "fn": 3,
+            "tn": 167,
+            "fnr": 0.012096774193548387,
+            "fpr": 0.05113636363636364,
+            "photo_error_fraction": 0.02830188679245283
+          }
+        },
+        "worst_error": 0.2745490981963928,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.5090100169181824,
+        "domains": {
+          "dacl": {
+            "tp": 236,
+            "fp": 103,
+            "fn": 88,
+            "tn": 283,
+            "fnr": 0.2716049382716049,
+            "fpr": 0.266839378238342,
+            "photo_error_fraction": 0.26901408450704223
+          },
+          "damsegment": {
+            "tp": 42,
+            "fp": 13,
+            "fn": 16,
+            "tn": 353,
+            "fnr": 0.27586206896551724,
+            "fpr": 0.03551912568306011,
+            "photo_error_fraction": 0.06839622641509434
+          }
+        },
+        "worst_error": 0.27586206896551724,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7303562173893455,
+        "concrete_spalling": 0.75858168759692,
+        "rust_stain": 0.8775143775293641,
+        "exposed_rebar": 0.7206828806106923,
+        "wet_surface": 0.42864511102676195,
+        "efflorescence": 0.7681627334085019,
+        "surface_cavity": 0.5746634033413897
+      },
+      "damsegment": {
+        "concrete_crack": 0.9988979412440069,
+        "concrete_spalling": 0.8428370806482179
+      }
+    }
+  },
+  {
+    "epoch": 5,
+    "elapsed_minutes": 5.593508578333422,
+    "train_loss": 0.12764274419575128,
+    "worst_target_error": 0.27469135802469136,
+    "sum_target_errors": 1.3328332105694976,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.404093474149704,
+        "domains": {
+          "dacl": {
+            "tp": 159,
+            "fp": 122,
+            "fn": 52,
+            "tn": 377,
+            "fnr": 0.24644549763033174,
+            "fpr": 0.24448897795591182,
+            "photo_error_fraction": 0.24507042253521127
+          },
+          "damsegment": {
+            "tp": 239,
+            "fp": 3,
+            "fn": 9,
+            "tn": 173,
+            "fnr": 0.036290322580645164,
+            "fpr": 0.017045454545454544,
+            "photo_error_fraction": 0.02830188679245283
+          }
+        },
+        "worst_error": 0.24644549763033174,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.5203243494033813,
+        "domains": {
+          "dacl": {
+            "tp": 235,
+            "fp": 103,
+            "fn": 89,
+            "tn": 283,
+            "fnr": 0.27469135802469136,
+            "fpr": 0.266839378238342,
+            "photo_error_fraction": 0.2704225352112676
+          },
+          "damsegment": {
+            "tp": 47,
+            "fp": 21,
+            "fn": 11,
+            "tn": 345,
+            "fnr": 0.1896551724137931,
+            "fpr": 0.05737704918032787,
+            "photo_error_fraction": 0.07547169811320754
+          }
+        },
+        "worst_error": 0.27469135802469136,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7513603035030649,
+        "concrete_spalling": 0.7703382894905653,
+        "rust_stain": 0.8804284293202569,
+        "exposed_rebar": 0.7267686614567662,
+        "wet_surface": 0.44034411500292286,
+        "efflorescence": 0.7870656922773707,
+        "surface_cavity": 0.5597733335316043
+      },
+      "damsegment": {
+        "concrete_crack": 0.997030238646519,
+        "concrete_spalling": 0.8630836735746547
+      }
+    }
+  },
+  {
+    "epoch": 6,
+    "elapsed_minutes": 6.673022676666733,
+    "train_loss": 0.10850452482700348,
+    "worst_target_error": 0.3103448275862069,
+    "sum_target_errors": 1.4000957265027196,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.39602911472320557,
+        "domains": {
+          "dacl": {
+            "tp": 155,
+            "fp": 127,
+            "fn": 56,
+            "tn": 372,
+            "fnr": 0.26540284360189575,
+            "fpr": 0.2545090180360721,
+            "photo_error_fraction": 0.2577464788732394
+          },
+          "damsegment": {
+            "tp": 245,
+            "fp": 4,
+            "fn": 3,
+            "tn": 172,
+            "fnr": 0.012096774193548387,
+            "fpr": 0.022727272727272728,
+            "photo_error_fraction": 0.01650943396226415
+          }
+        },
+        "worst_error": 0.26540284360189575,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.47173449397087097,
+        "domains": {
+          "dacl": {
+            "tp": 249,
+            "fp": 114,
+            "fn": 75,
+            "tn": 272,
+            "fnr": 0.23148148148148148,
+            "fpr": 0.29533678756476683,
+            "photo_error_fraction": 0.2661971830985915
+          },
+          "damsegment": {
+            "tp": 40,
+            "fp": 3,
+            "fn": 18,
+            "tn": 363,
+            "fnr": 0.3103448275862069,
+            "fpr": 0.00819672131147541,
+            "photo_error_fraction": 0.049528301886792456
+          }
+        },
+        "worst_error": 0.3103448275862069,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7474722694339987,
+        "concrete_spalling": 0.7898277977921164,
+        "rust_stain": 0.8761566859398515,
+        "exposed_rebar": 0.7047205257223804,
+        "wet_surface": 0.495680454004458,
+        "efflorescence": 0.7614503161005085,
+        "surface_cavity": 0.5582002068126877
+      },
+      "damsegment": {
+        "concrete_crack": 0.9994449292385041,
+        "concrete_spalling": 0.8475065152538385
+      }
+    }
+  },
+  {
+    "epoch": 7,
+    "elapsed_minutes": 7.752113225000115,
+    "train_loss": 0.0903727274335606,
+    "worst_target_error": 0.25308641975308643,
+    "sum_target_errors": 1.2155538963666963,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.3852410316467285,
+        "domains": {
+          "dacl": {
+            "tp": 161,
+            "fp": 112,
+            "fn": 50,
+            "tn": 387,
+            "fnr": 0.23696682464454977,
+            "fpr": 0.22444889779559118,
+            "photo_error_fraction": 0.22816901408450704
+          },
+          "damsegment": {
+            "tp": 247,
+            "fp": 2,
+            "fn": 1,
+            "tn": 174,
+            "fnr": 0.004032258064516129,
+            "fpr": 0.011363636363636364,
+            "photo_error_fraction": 0.007075471698113208
+          }
+        },
+        "worst_error": 0.23696682464454977,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.46540021896362305,
+        "domains": {
+          "dacl": {
+            "tp": 242,
+            "fp": 96,
+            "fn": 82,
+            "tn": 290,
+            "fnr": 0.25308641975308643,
+            "fpr": 0.24870466321243523,
+            "photo_error_fraction": 0.2507042253521127
+          },
+          "damsegment": {
+            "tp": 46,
+            "fp": 11,
+            "fn": 12,
+            "tn": 355,
+            "fnr": 0.20689655172413793,
+            "fpr": 0.030054644808743168,
+            "photo_error_fraction": 0.054245283018867926
+          }
+        },
+        "worst_error": 0.25308641975308643,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7460551516332826,
+        "concrete_spalling": 0.790192406550961,
+        "rust_stain": 0.8791139990025467,
+        "exposed_rebar": 0.7010802529667358,
+        "wet_surface": 0.47042797817540094,
+        "efflorescence": 0.7879835194435503,
+        "surface_cavity": 0.5650993439192218
+      },
+      "damsegment": {
+        "concrete_crack": 0.9997221061526443,
+        "concrete_spalling": 0.8576005136300454
+      }
+    }
+  },
+  {
+    "epoch": 8,
+    "elapsed_minutes": 8.827580000000065,
+    "train_loss": 0.0745082302765489,
+    "worst_target_error": 0.2413793103448276,
+    "sum_target_errors": 1.2478829180343833,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.2037573903799057,
+        "domains": {
+          "dacl": {
+            "tp": 162,
+            "fp": 115,
+            "fn": 49,
+            "tn": 384,
+            "fnr": 0.23222748815165878,
+            "fpr": 0.23046092184368738,
+            "photo_error_fraction": 0.23098591549295774
+          },
+          "damsegment": {
+            "tp": 247,
+            "fp": 5,
+            "fn": 1,
+            "tn": 171,
+            "fnr": 0.004032258064516129,
+            "fpr": 0.028409090909090908,
+            "photo_error_fraction": 0.014150943396226415
+          }
+        },
+        "worst_error": 0.23222748815165878,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.5641224384307861,
+        "domains": {
+          "dacl": {
+            "tp": 247,
+            "fp": 93,
+            "fn": 77,
+            "tn": 293,
+            "fnr": 0.23765432098765432,
+            "fpr": 0.24093264248704663,
+            "photo_error_fraction": 0.23943661971830985
+          },
+          "damsegment": {
+            "tp": 44,
+            "fp": 12,
+            "fn": 14,
+            "tn": 354,
+            "fnr": 0.2413793103448276,
+            "fpr": 0.03278688524590164,
+            "photo_error_fraction": 0.06132075471698113
+          }
+        },
+        "worst_error": 0.2413793103448276,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7732997054301096,
+        "concrete_spalling": 0.7817818741541643,
+        "rust_stain": 0.8820832993507266,
+        "exposed_rebar": 0.7674830148936674,
+        "wet_surface": 0.45216217996238706,
+        "efflorescence": 0.7470893844884772,
+        "surface_cavity": 0.5545665463506207
+      },
+      "damsegment": {
+        "concrete_crack": 0.999595997689044,
+        "concrete_spalling": 0.8394334820665855
+      }
+    }
+  },
+  {
+    "epoch": 9,
+    "elapsed_minutes": 9.90250317166671,
+    "train_loss": 0.06108483193864361,
+    "worst_target_error": 0.29310344827586204,
+    "sum_target_errors": 1.3348217050325382,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.29822638630867004,
+        "domains": {
+          "dacl": {
+            "tp": 161,
+            "fp": 114,
+            "fn": 50,
+            "tn": 385,
+            "fnr": 0.23696682464454977,
+            "fpr": 0.22845691382765532,
+            "photo_error_fraction": 0.23098591549295774
+          },
+          "damsegment": {
+            "tp": 246,
+            "fp": 3,
+            "fn": 2,
+            "tn": 173,
+            "fnr": 0.008064516129032258,
+            "fpr": 0.017045454545454544,
+            "photo_error_fraction": 0.01179245283018868
+          }
+        },
+        "worst_error": 0.23696682464454977,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.4525529742240906,
+        "domains": {
+          "dacl": {
+            "tp": 239,
+            "fp": 102,
+            "fn": 85,
+            "tn": 284,
+            "fnr": 0.2623456790123457,
+            "fpr": 0.26424870466321243,
+            "photo_error_fraction": 0.2633802816901408
+          },
+          "damsegment": {
+            "tp": 41,
+            "fp": 9,
+            "fn": 17,
+            "tn": 357,
+            "fnr": 0.29310344827586204,
+            "fpr": 0.02459016393442623,
+            "photo_error_fraction": 0.06132075471698113
+          }
+        },
+        "worst_error": 0.29310344827586204,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7575999683363605,
+        "concrete_spalling": 0.7766048573820035,
+        "rust_stain": 0.8861807380386575,
+        "exposed_rebar": 0.7410152238504585,
+        "wet_surface": 0.4514929436661484,
+        "efflorescence": 0.7820446688354094,
+        "surface_cavity": 0.5665406676863243
+      },
+      "damsegment": {
+        "concrete_crack": 0.9994951229343715,
+        "concrete_spalling": 0.8404208734113288
+      }
+    }
+  },
+  {
+    "epoch": 10,
+    "elapsed_minutes": 11.013195393333444,
+    "train_loss": 0.04908012079191841,
+    "worst_target_error": 0.28756476683937826,
+    "sum_target_errors": 1.3859662844480716,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.2831824719905853,
+        "domains": {
+          "dacl": {
+            "tp": 157,
+            "fp": 125,
+            "fn": 54,
+            "tn": 374,
+            "fnr": 0.2559241706161137,
+            "fpr": 0.250501002004008,
+            "photo_error_fraction": 0.252112676056338
+          },
+          "damsegment": {
+            "tp": 246,
+            "fp": 1,
+            "fn": 2,
+            "tn": 175,
+            "fnr": 0.008064516129032258,
+            "fpr": 0.005681818181818182,
+            "photo_error_fraction": 0.007075471698113208
+          }
+        },
+        "worst_error": 0.2559241706161137,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.551179051399231,
+        "domains": {
+          "dacl": {
+            "tp": 234,
+            "fp": 111,
+            "fn": 90,
+            "tn": 275,
+            "fnr": 0.2777777777777778,
+            "fpr": 0.28756476683937826,
+            "photo_error_fraction": 0.2830985915492958
+          },
+          "damsegment": {
+            "tp": 42,
+            "fp": 9,
+            "fn": 16,
+            "tn": 357,
+            "fnr": 0.27586206896551724,
+            "fpr": 0.02459016393442623,
+            "photo_error_fraction": 0.0589622641509434
+          }
+        },
+        "worst_error": 0.28756476683937826,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7559581851338877,
+        "concrete_spalling": 0.7725054525075354,
+        "rust_stain": 0.8880059512607363,
+        "exposed_rebar": 0.7301993601797673,
+        "wet_surface": 0.4636085528749471,
+        "efflorescence": 0.7621056102724614,
+        "surface_cavity": 0.554705340357653
+      },
+      "damsegment": {
+        "concrete_crack": 0.9996422627002162,
+        "concrete_spalling": 0.8373431685613194
+      }
+    }
+  },
+  {
+    "epoch": 11,
+    "elapsed_minutes": 12.130403381666595,
+    "train_loss": 0.04300347679675045,
+    "worst_target_error": 0.2694300518134715,
+    "sum_target_errors": 1.232732103569607,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.30497244000434875,
+        "domains": {
+          "dacl": {
+            "tp": 164,
+            "fp": 111,
+            "fn": 47,
+            "tn": 388,
+            "fnr": 0.22274881516587677,
+            "fpr": 0.22244488977955912,
+            "photo_error_fraction": 0.22253521126760564
+          },
+          "damsegment": {
+            "tp": 246,
+            "fp": 10,
+            "fn": 2,
+            "tn": 166,
+            "fnr": 0.008064516129032258,
+            "fpr": 0.056818181818181816,
+            "photo_error_fraction": 0.02830188679245283
+          }
+        },
+        "worst_error": 0.22274881516587677,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.46728238463401794,
+        "domains": {
+          "dacl": {
+            "tp": 239,
+            "fp": 104,
+            "fn": 85,
+            "tn": 282,
+            "fnr": 0.2623456790123457,
+            "fpr": 0.2694300518134715,
+            "photo_error_fraction": 0.2661971830985915
+          },
+          "damsegment": {
+            "tp": 52,
+            "fp": 32,
+            "fn": 6,
+            "tn": 334,
+            "fnr": 0.10344827586206896,
+            "fpr": 0.08743169398907104,
+            "photo_error_fraction": 0.08962264150943396
+          }
+        },
+        "worst_error": 0.2694300518134715,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7783949742096121,
+        "concrete_spalling": 0.7625729570303241,
+        "rust_stain": 0.8908125065801096,
+        "exposed_rebar": 0.7015261030436031,
+        "wet_surface": 0.49092919689617887,
+        "efflorescence": 0.7554213794828516,
+        "surface_cavity": 0.4879621648146129
+      },
+      "damsegment": {
+        "concrete_crack": 0.9991408475952612,
+        "concrete_spalling": 0.8571642645423533
+      }
+    }
+  },
+  {
+    "epoch": 12,
+    "elapsed_minutes": 13.206490349999997,
+    "train_loss": 0.035224242956781816,
+    "worst_target_error": 0.2839506172839506,
+    "sum_target_errors": 1.325324347410403,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.2524380087852478,
+        "domains": {
+          "dacl": {
+            "tp": 158,
+            "fp": 123,
+            "fn": 53,
+            "tn": 376,
+            "fnr": 0.25118483412322273,
+            "fpr": 0.24649298597194388,
+            "photo_error_fraction": 0.24788732394366197
+          },
+          "damsegment": {
+            "tp": 248,
+            "fp": 10,
+            "fn": 0,
+            "tn": 166,
+            "fnr": 0.0,
+            "fpr": 0.056818181818181816,
+            "photo_error_fraction": 0.02358490566037736
+          }
+        },
+        "worst_error": 0.25118483412322273,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.47411906719207764,
+        "domains": {
+          "dacl": {
+            "tp": 232,
+            "fp": 108,
+            "fn": 92,
+            "tn": 278,
+            "fnr": 0.2839506172839506,
+            "fpr": 0.27979274611398963,
+            "photo_error_fraction": 0.28169014084507044
+          },
+          "damsegment": {
+            "tp": 49,
+            "fp": 19,
+            "fn": 9,
+            "tn": 347,
+            "fnr": 0.15517241379310345,
+            "fpr": 0.05191256830601093,
+            "photo_error_fraction": 0.0660377358490566
+          }
+        },
+        "worst_error": 0.2839506172839506,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7465454861816371,
+        "concrete_spalling": 0.716252382244198,
+        "rust_stain": 0.8732986502811693,
+        "exposed_rebar": 0.6917883281789778,
+        "wet_surface": 0.44840801196046237,
+        "efflorescence": 0.7335045797961666,
+        "surface_cavity": 0.5382519145855154
+      },
+      "damsegment": {
+        "concrete_crack": 0.9998557746175645,
+        "concrete_spalling": 0.8637835272140046
+      }
+    }
+  },
+  {
+    "epoch": 13,
+    "elapsed_minutes": 14.27290907000012,
+    "train_loss": 0.030690781424053386,
+    "worst_target_error": 0.25906735751295334,
+    "sum_target_errors": 1.2590869716150033,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.27417388558387756,
+        "domains": {
+          "dacl": {
+            "tp": 158,
+            "fp": 126,
+            "fn": 53,
+            "tn": 373,
+            "fnr": 0.25118483412322273,
+            "fpr": 0.25250501002004005,
+            "photo_error_fraction": 0.252112676056338
+          },
+          "damsegment": {
+            "tp": 247,
+            "fp": 4,
+            "fn": 1,
+            "tn": 172,
+            "fnr": 0.004032258064516129,
+            "fpr": 0.022727272727272728,
+            "photo_error_fraction": 0.01179245283018868
+          }
+        },
+        "worst_error": 0.25250501002004005,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.5800139904022217,
+        "domains": {
+          "dacl": {
+            "tp": 241,
+            "fp": 100,
+            "fn": 83,
+            "tn": 286,
+            "fnr": 0.25617283950617287,
+            "fpr": 0.25906735751295334,
+            "photo_error_fraction": 0.2577464788732394
+          },
+          "damsegment": {
+            "tp": 48,
+            "fp": 15,
+            "fn": 10,
+            "tn": 351,
+            "fnr": 0.1724137931034483,
+            "fpr": 0.040983606557377046,
+            "photo_error_fraction": 0.0589622641509434
+          }
+        },
+        "worst_error": 0.25906735751295334,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7551603147488093,
+        "concrete_spalling": 0.7708183418016543,
+        "rust_stain": 0.8906207108591375,
+        "exposed_rebar": 0.7186027105599162,
+        "wet_surface": 0.44212487831606057,
+        "efflorescence": 0.7824044943606172,
+        "surface_cavity": 0.5175014715490268
+      },
+      "damsegment": {
+        "concrete_crack": 0.9996128286588069,
+        "concrete_spalling": 0.8317340521609176
+      }
+    }
+  },
+  {
+    "epoch": 14,
+    "elapsed_minutes": 15.34620422666679,
+    "train_loss": 0.02355949218145234,
+    "worst_target_error": 0.2777777777777778,
+    "sum_target_errors": 1.3666391588649567,
+    "target_passed": false,
+    "operating_points": {
+      "concrete_crack": {
+        "threshold": 0.15771926939487457,
+        "domains": {
+          "dacl": {
+            "tp": 157,
+            "fp": 124,
+            "fn": 54,
+            "tn": 375,
+            "fnr": 0.2559241706161137,
+            "fpr": 0.24849699398797595,
+            "photo_error_fraction": 0.2507042253521127
+          },
+          "damsegment": {
+            "tp": 247,
+            "fp": 4,
+            "fn": 1,
+            "tn": 172,
+            "fnr": 0.004032258064516129,
+            "fpr": 0.022727272727272728,
+            "photo_error_fraction": 0.01179245283018868
+          }
+        },
+        "worst_error": 0.2559241706161137,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.5987830758094788,
+        "domains": {
+          "dacl": {
+            "tp": 234,
+            "fp": 107,
+            "fn": 90,
+            "tn": 279,
+            "fnr": 0.2777777777777778,
+            "fpr": 0.2772020725388601,
+            "photo_error_fraction": 0.2774647887323944
+          },
+          "damsegment": {
+            "tp": 43,
+            "fp": 8,
+            "fn": 15,
+            "tn": 358,
+            "fnr": 0.25862068965517243,
+            "fpr": 0.02185792349726776,
+            "photo_error_fraction": 0.054245283018867926
+          }
+        },
+        "worst_error": 0.2777777777777778,
+        "target_passed": false
+      }
+    },
+    "ranking_ap": {
+      "dacl": {
+        "concrete_crack": 0.7539101235736431,
+        "concrete_spalling": 0.7656478997377223,
+        "rust_stain": 0.8887649864603462,
+        "exposed_rebar": 0.7634210844506786,
+        "wet_surface": 0.452548647725191,
+        "efflorescence": 0.7707960422375859,
+        "surface_cavity": 0.5046090071682502
+      },
+      "damsegment": {
+        "concrete_crack": 0.999480839718387,
+        "concrete_spalling": 0.8503746839498636
+      }
+    }
+  }
+]

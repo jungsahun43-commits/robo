@@ -24,6 +24,7 @@ from scripts.facility_error_target import operating_point
 
 ARCH = "efficientnet_v2_s_multilabel_v1"
 TARGETS = ("concrete_crack", "concrete_spalling")
+DOMAINS = {"dacl": 0, "damsegment": 1, "codebrim": 2}
 
 
 def read(path): return json.loads(path.read_text(encoding="utf-8"))
@@ -57,7 +58,7 @@ class FacilityPhotos(Dataset):
         item = self.items[i]
         with Image.open(ROOT / item["image"]) as image: inputs = self.transform(image.convert("RGB"))
         targets = torch.tensor(item["targets"], dtype=torch.float32)
-        return inputs, targets.clamp_min(0), (targets >= 0).float(), int(item.get("domain") == "damsegment")
+        return inputs, targets.clamp_min(0), (targets >= 0).float(), DOMAINS[item.get("domain", "damsegment")]
 
 
 def dacl_items(split, size):
@@ -98,9 +99,14 @@ def main():
     parser.add_argument("--initial", type=Path)
     parser.add_argument("--domain-balance", action="store_true")
     parser.add_argument("--details", type=Path)
+    parser.add_argument("--detail-exposure", type=float, default=.5)
+    parser.add_argument("--domain-proportions", help="Ordered dacl,damsegment[,codebrim] exposure fractions")
+    parser.add_argument("--supplement", type=Path, help="Verified CODEBRIM training manifest; official validation/test remain reserved")
     parser.add_argument("--target-emphasis", type=float, default=1.)
     args = parser.parse_args()
-    if Path(args.name).name != args.name or args.gamma < 0: raise ValueError("Invalid run options")
+    if Path(args.name).name != args.name or args.gamma < 0 or not 0 < args.detail_exposure < 1 or args.target_emphasis <= 0:
+        raise ValueError("Invalid run options")
+    if args.domain_proportions and not args.domain_balance: raise ValueError("Domain fractions require domain balancing")
     output = ROOT / "runs" / args.name
     if (output / "best.pt").exists(): raise ValueError("Preserve the existing experiment")
     output.mkdir(parents=True, exist_ok=True)
@@ -113,6 +119,15 @@ def main():
     if classes != split["classes"]: raise ValueError("Class order mismatch")
     train = original + [{**item, "domain": "damsegment"} for item in split["train"]]
     full_count = len(train)
+    additional = None
+    if args.supplement:
+        additional = read(args.supplement)
+        if additional["split"] != "train" or additional["classes"] != classes or additional["audit"]["status"] != "prepared":
+            raise ValueError("Supplement is not audited matching training data")
+        if not all(i["split"] == "train" and i["domain"] == "codebrim" for i in additional["items"]):
+            raise ValueError("Supplement contains validation/test or other domain")
+        train += additional["items"]
+        full_count = len(train)
     if args.details:
         details = read(args.details)
         if details["split"] != "train" or details["classes"] != classes: raise ValueError("Detail manifest mismatch")
@@ -123,6 +138,16 @@ def main():
     val, _ = dacl_items("val", args.imgsz)
     loaders = {"dacl": DataLoader(FacilityPhotos(val, args.imgsz), batch_size=16, num_workers=4, persistent_workers=True),
                "damsegment": DataLoader(FacilityPhotos(split["val"], args.imgsz), batch_size=16, num_workers=4, persistent_workers=True)}
+    supplemental_validation = supplemental_test = None
+    if additional:
+        supplemental_validation = args.supplement.parent / "val.json"
+        supplemental_test = args.supplement.parent / "test.json"
+        sets = [additional, read(supplemental_validation), read(supplemental_test)]
+        for expected, data in zip(("train", "val", "test"), sets):
+            if data["classes"] != classes or data["split"] != expected: raise ValueError("Supplement split/classes mismatch")
+        groups = [{i["group_id"] for i in data["items"]} for data in sets]
+        if any(groups[i] & groups[j] for i in range(3) for j in range(i+1,3)): raise ValueError("Supplement parent group leakage")
+        loaders["codebrim"] = DataLoader(FacilityPhotos(sets[1]["items"], args.imgsz), batch_size=16, num_workers=4, persistent_workers=True)
     target = torch.tensor([item["targets"] for item in train])
     positives, negatives = (target == 1).sum(0), (target == 0).sum(0)
     positive_weights = (negatives / positives.clamp_min(1)).clamp(1, 6)
@@ -133,16 +158,20 @@ def main():
         value = min(3., max(1., len(train) / (2 * max(1, int(positives[i])))))
         sample_weights = torch.maximum(sample_weights, torch.where(target[:, i] == 1, value, 1.).double())
     if args.details:
-        sample_weights[full_count:] *= full_count / max(1, len(train)-full_count)
-    domains = torch.tensor([int(item.get("domain") == "damsegment") for item in train])
+        sample_weights[full_count:] *= full_count / max(1, len(train)-full_count) * args.detail_exposure / (1-args.detail_exposure)
+    domains = torch.tensor([DOMAINS[item["domain"]] for item in train])
+    active_domains = sorted(domains.unique().tolist())
+    exposure = [float(x) for x in args.domain_proportions.split(",")] if args.domain_proportions else [1/len(active_domains)]*len(active_domains)
+    if len(exposure) != len(active_domains) or any(x <= 0 for x in exposure) or abs(sum(exposure)-1) > .000001:
+        raise ValueError("Invalid domain exposure fractions")
     if args.domain_balance:
         # Equal aggregate domain exposure. Positive BCE weights correct each
         # domain's weighted training distribution rather than mixing its prior.
-        for domain in (0, 1):
+        for domain in active_domains:
             mask = domains == domain
-            sample_weights[mask] /= sample_weights[mask].sum()
+            sample_weights[mask] *= exposure[domain] / sample_weights[mask].sum()
         per_domain = []
-        for domain in (0, 1):
+        for domain in active_domains:
             weights = sample_weights * (domains == domain)
             pos = ((target == 1) * weights[:, None]).sum(0)
             neg = ((target == 0) * weights[:, None]).sum(0)
@@ -175,7 +204,14 @@ def main():
                 "split_sha256": sha(output / "SPLIT.json"), "selection": "minimax FNR/FPR on both validation domains, test never selected"}
     training.update(domain_balance=args.domain_balance, detail_crops=len(train)-full_count,
                     detail_manifest_sha256=sha(args.details) if args.details else None, target_emphasis=args.target_emphasis,
-                    draws_per_epoch=full_count)
+                    draws_per_epoch=full_count, detail_exposure=args.detail_exposure if args.details else 0,
+                    domain_proportions=exposure if args.domain_balance else None,
+                    train_codebrim=len(additional["items"]) if additional else 0,
+                    supplement_sha256=sha(args.supplement) if additional else None,
+                    additional_validation={"path": supplemental_validation.relative_to(ROOT).as_posix(), "sha256": sha(supplemental_validation)} if additional else None,
+                    additional_test={"path": supplemental_test.relative_to(ROOT).as_posix(), "sha256": sha(supplemental_test)} if additional else None,
+                    validation_domains=list(loaders))
+    training["selection"] = "minimax FNR/FPR in every recorded validation domain; test never selected"
     save(output / "TRAINING.json", training)
     for epoch in range(1, args.epochs + 1):
         freeze = epoch == 1 and args.initial is None
