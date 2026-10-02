@@ -1,0 +1,48 @@
+{
+  "split": "train",
+  "augmented_crops": 12041,
+  "domains": {
+    "dacl": 10586,
+    "damsegment": 1455
+  },
+  "parent_photos": 7171,
+  "new_independent_photos": 0,
+  "per_label": {
+    "concrete_crack": {
+      "positive": 3096,
+      "negative": 8942,
+      "unknown": 3
+    },
+    "concrete_spalling": {
+      "positive": 3536,
+      "negative": 8500,
+      "unknown": 5
+    },
+    "rust_stain": {
+      "positive": 2227,
+      "negative": 8336,
+      "unknown": 1478
+    },
+    "exposed_rebar": {
+      "positive": 578,
+      "negative": 10006,
+      "unknown": 1457
+    },
+    "wet_surface": {
+      "positive": 851,
+      "negative": 9729,
+      "unknown": 1461
+    },
+    "efflorescence": {
+      "positive": 1120,
+      "negative": 9452,
+      "unknown": 1469
+    },
+    "surface_cavity": {
+      "positive": 898,
+      "negative": 9679,
+      "unknown": 1464
+    }
+  },
+  "policy": "DACL train parents and new dam TRAIN only; up to two largest target-positive tiles + one negative tile; <=15 mask pixels unknown; original validation/test never cropped into train"
+}
