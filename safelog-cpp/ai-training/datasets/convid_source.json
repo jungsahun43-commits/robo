@@ -1,0 +1,23 @@
+{
+  "name": "ConViD — Concrete Visual Defect Dataset",
+  "author": "Gayakwad, Milind",
+  "year": 2026,
+  "version": 4,
+  "doi": "10.17632/fx3rthfjhy.4",
+  "page": "https://data.mendeley.com/datasets/fx3rthfjhy/4",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "folders_api": "https://data.mendeley.com/public-api/datasets/fx3rthfjhy/folders/4",
+  "selected_folders": {"crack": "concrete_crack", "Spalling": "concrete_spalling"},
+  "official_selected_folder_file_counts": {"crack": 365, "Spalling": 576},
+  "source_index_sha256": "7d10a985b47334894cd0e871a5416a565f20a000610e924f2fb825999e47e211",
+  "source_picks_sha256": "5016204d5ad1d8a230c3515d1c077748344dd4671233bac03321c0290124fecc",
+  "selection": "Fixed seed52; 100 photos per author folder before existing data lookup; screen by decoded SHA and whole-photo dHash; do not refill",
+  "downloaded_original_bytes": 574082757,
+  "prepared_train_photos": {"crack": 92, "Spalling": 100},
+  "labels": "Only the author folder class is positive; each photo leaves its other six public classes unknown. No spatial or auxiliary labels are asserted",
+  "source_environment": "Author describes consumer-phone photographs of outdoor concrete defects in Pune, India. Facility type is unverified; not a factory evaluation dataset",
+  "scene_ids_available": false,
+  "source_evaluation_created": false,
+  "limitations": "Multiple angles of the same defect are described by the author. Hash screening does not prove scene independence. Author Spalling folder semantics may differ from strict concrete material loss; eight TRAIN photos were AI-inspected without expert relabeling. This is bounded supplemental training, not industrial field accuracy evidence"
+}

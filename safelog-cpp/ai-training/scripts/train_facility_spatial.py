@@ -21,11 +21,12 @@ from scripts.train_facility_presence import average_precision
 from scripts.facility_hard_sampling import hard_multipliers
 from safelog_ai.auxiliary_classifier import AuxiliaryClassifier,AUX_CLASSES,ARCH as AUX_ARCH
 from scripts.facility_spatial_manifest import validate_replacement
+from scripts.facility_photo_supplement import validate_photo_supplement
 
 SPATIAL_DOMAINS={**DOMAINS,'s2ds':3}
 
 class SpatialPhotos(Dataset):
-    def __init__(self,items,auxiliary=None,full_count=None):self.items=items;self.auxiliary=auxiliary;self.full_count=full_count;self.transform=image_transform(640);self.jitter=ColorJitter(.1,.1,.1,.01)
+    def __init__(self,items,auxiliary=None,full_count=None,domain_map=None):self.items=items;self.auxiliary=auxiliary;self.full_count=full_count;self.domain_map=domain_map or SPATIAL_DOMAINS;self.transform=image_transform(640);self.jitter=ColorJitter(.1,.1,.1,.01)
     def __len__(self):return len(self.items)
     def __getitem__(self,i):
         item=self.items[i]
@@ -33,7 +34,7 @@ class SpatialPhotos(Dataset):
         with np.load(ROOT/item['pixel_target']) as data:mask=data['mask'].copy();pixel_known=data['known'].copy()
         if random.random()<.5:image=ImageOps.mirror(image);mask=mask[:,:,::-1].copy()
         targets=torch.tensor(item['targets'],dtype=torch.float32)
-        result=(self.transform(self.jitter(image)),targets.clamp_min(0),(targets>=0).float(),SPATIAL_DOMAINS[item['domain']],torch.from_numpy(mask).float(),torch.from_numpy(pixel_known).float())
+        result=(self.transform(self.jitter(image)),targets.clamp_min(0),(targets>=0).float(),self.domain_map[item['domain']],torch.from_numpy(mask).float(),torch.from_numpy(pixel_known).float())
         if self.auxiliary is not None:
             aux=torch.tensor(self.auxiliary.get(item['image'],[-1]*len(AUX_CLASSES)),dtype=torch.float32)
             result+=aux.clamp_min(0),(aux>=0).float()
@@ -58,11 +59,15 @@ def main():
     parser.add_argument('--epochs',type=int,default=18);parser.add_argument('--patience',type=int,default=5)
     parser.add_argument('--initial',type=Path);parser.add_argument('--supplement-spatial',type=Path)
     parser.add_argument('--spatial-manifest',type=Path,help='Audited TRAIN small-region crop replacement; core full rows and splits unchanged')
+    parser.add_argument('--photo-supplement',type=Path,help='Bounded verified building photo labels; source boxes/folders never become pixel masks')
+    parser.add_argument('--draws-per-epoch',type=int,help='Fixed sampling budget for a matched supplement/control comparison')
     parser.add_argument('--backbone-lr',type=float,default=.00008);parser.add_argument('--head-lr',type=float,default=.0005)
     parser.add_argument('--hard-mining-strength',type=float,default=0.,help='Bounded TRAIN-only residual sampling from frozen initializer (0 disables)')
     parser.add_argument('--auxiliary-manifest',type=Path)
     parser.add_argument('--auxiliary-weight',type=float,default=.5)
     args=parser.parse_args()
+    if args.photo_supplement and args.supplement_spatial:raise ValueError('Compare one supplemental source intervention at a time')
+    if args.draws_per_epoch is not None and args.draws_per_epoch<1:raise ValueError('Sampling budget must be positive')
     name,seed,epochs,patience=args.name,args.seed,args.epochs,args.patience
     if Path(name).name!=name or min(epochs,patience)<1:raise ValueError('Invalid spatial run options')
     if not np.isfinite(args.hard_mining_strength) or not 0<=args.hard_mining_strength<=4 or (args.hard_mining_strength and not args.initial):
@@ -92,6 +97,7 @@ def main():
     if any(i['parent_image'] not in allowed or i['parent_split']!='train' for i in items[full_count:]):raise ValueError('Detail parent leakage')
     supplemental=None;domain_map=DOMAINS;proportions=(.7,.1,.2)
     pixel_counts={c:dict(v) for c,v in manifest['audit']['per_label_pixel_cells'].items()}
+    core_full_count=full_count;core_items=list(items);photo_supplement=None
     if args.supplement_spatial:
         args.supplement_spatial=args.supplement_spatial.resolve();supplemental=read(args.supplement_spatial)
         if supplemental['split']!='train' or supplemental['classes']!=classes or supplemental['audit']['status']!='prepared':
@@ -106,6 +112,11 @@ def main():
         domain_map=SPATIAL_DOMAINS;proportions=(.6,.1,.2,.1)
         for c in classes:
             for k in ('positive','negative'):pixel_counts[c][k]+=supplemental['audit']['per_label_pixel_cells'][c][k]
+    if args.photo_supplement:
+        args.photo_supplement=args.photo_supplement.resolve();photo_supplement=read(args.photo_supplement)
+        extras=validate_photo_supplement(photo_supplement,classes,ROOT,allowed)
+        items=items[:full_count]+extras+items[full_count:];full_count+=len(extras)
+        domain_map={**DOMAINS,extras[0]['domain']:3};proportions=(.63,.09,.18,.10)
     labels=torch.tensor([i['targets'] for i in items]);domains=torch.tensor([domain_map[i['domain']] for i in items])
     auxiliary=None;auxiliary_manifest=None;auxiliary_weights=None;architecture=ARCH
     if args.auxiliary_manifest:
@@ -150,10 +161,12 @@ def main():
                     'policy':'Only verified TRAIN full photos and TRAIN-parent crops; no validation/test scores. Frozen initializer residual, max 1+strength; fixed domain mass retained.'}
         print(__import__('json').dumps(hard_audit),flush=True)
     sampling=torch.ones(len(items),dtype=torch.float64)
+    balance_labels=torch.tensor([i['targets'] for i in core_items]) if photo_supplement else labels
     for label in TARGETS:
-        k=classes.index(label);ratio=min(3.,max(1.,len(items)/(2*max(1,int((labels[:,k]==1).sum())))))
+        k=classes.index(label);ratio=min(3.,max(1.,len(balance_labels)/(2*max(1,int((balance_labels[:,k]==1).sum())))))
         sampling=torch.maximum(sampling,torch.where(labels[:,k]==1,ratio,1.).double())
-    sampling[full_count:]*=full_count/(len(items)-full_count)*.25/.75
+    crop_balance_full=core_full_count if photo_supplement else full_count
+    sampling[full_count:]*=crop_balance_full/(len(items)-full_count)*.25/.75
     if hard_audit:sampling*=multiplier
     weights=[]
     for d,exposure in enumerate(proportions):
@@ -162,8 +175,9 @@ def main():
         weights.append((neg/pos.clamp_min(1e-8)).clamp(.2,6).float())
     weights=torch.stack(weights).to('cuda')
     pixel_weights=torch.tensor([min(20.,max(1.,pixel_counts[c]['negative']/max(1,pixel_counts[c]['positive']))) for c in classes],device='cuda')
-    sampler=WeightedRandomSampler(sampling,full_count,replacement=True,generator=torch.Generator().manual_seed(seed))
-    loader=DataLoader(SpatialPhotos(items,auxiliary,full_count),batch_size=8,sampler=sampler,num_workers=4,persistent_workers=True,pin_memory=True)
+    draws_per_epoch=args.draws_per_epoch or full_count
+    sampler=WeightedRandomSampler(sampling,draws_per_epoch,replacement=True,generator=torch.Generator().manual_seed(seed))
+    loader=DataLoader(SpatialPhotos(items,auxiliary,full_count,domain_map),batch_size=8,sampler=sampler,num_workers=4,persistent_workers=True,pin_memory=True)
     val,_=dacl_items('val',640)
     loaders={name:DataLoader(FacilityPhotos(records,640),batch_size=16,num_workers=4,persistent_workers=True)
              for name,records in {'dacl':val,'damsegment':split['val'],'codebrim':code_val['items']}.items()}
@@ -174,12 +188,13 @@ def main():
     scheduler=torch.optim.lr_scheduler.CosineAnnealingLR(optimizer,epochs,eta_min=.000005);scaler=torch.amp.GradScaler('cuda')
     emphasis=torch.ones(len(classes),device='cuda')
     for label in TARGETS:emphasis[classes.index(label)]=2.
-    training={'status':'running','architecture':architecture,'classes':classes,'imgsz':640,'seed':seed,'requested_epochs':epochs,'patience':patience,
+    training={'status':'running','architecture':architecture,'classes':classes,'imgsz':640,'batch_size':8,'seed':seed,'requested_epochs':epochs,'patience':patience,
               'train_dacl':len(original),'train_damsegment':len(split['train']),'train_codebrim':len(code_train['items']),
-              'val_dacl':len(val),'val_damsegment':len(split['val']),'validation_domains':list(loaders),'draws_per_epoch':full_count,
+              'val_dacl':len(val),'val_damsegment':len(split['val']),'validation_domains':list(loaders),'draws_per_epoch':draws_per_epoch,
               'spatial_manifest_sha256':sha(manifest_path),'spatial_manifest_path':manifest_path.relative_to(ROOT).as_posix(),
               'core_spatial_manifest_sha256':sha(core_path),'spatial_manifest_audit':manifest['audit'],
               'training_script_sha256':sha(Path(__file__)),
+              'photo_supplement_helper_sha256':sha(ROOT/'scripts/facility_photo_supplement.py'),
               'model_source_sha256':sha(ROOT/'safelog_ai/spatial_classifier.py'),'split_sha256':sha(output/'SPLIT.json'),
               'pretrained_backbone_sha256':sha(ROOT/'.config/torch/hub/checkpoints/lraspp_mobilenet_v3_large-d234d4ea.pth') if args.initial is None else None,
               'additional_validation':{'path':'data/codebrim-training/val.json','sha256':sha(ROOT/'data/codebrim-training/val.json')},
@@ -188,6 +203,9 @@ def main():
               'loss':'Masked weighted focal photo presence + masked focal 8x8-cell source segmentation + .5 positive-class Dice',
               'domain_proportions':list(proportions),'backbone_lr':args.backbone_lr,'head_lr':args.head_lr,
               'selection':'Minimax per-class FNR/FPR in all three validation domains; no pixel accuracy or test used for selection'}
+    training['photo_positive_weights']={d:weights[k].detach().cpu().tolist() for d,k in domain_map.items()}
+    training['pixel_positive_weights']=pixel_weights.detach().cpu().tolist()
+    if auxiliary_weights is not None:training['auxiliary_positive_weights']=auxiliary_weights.detach().cpu().tolist()
     training['expected_sampling']={d:{'full':float(sampling[(domains==k)&(torch.arange(len(items))<full_count)].sum()/sampling.sum()),
                                      'crop':float(sampling[(domains==k)&(torch.arange(len(items))>=full_count)].sum()/sampling.sum())}
                                    for d,k in domain_map.items()}
@@ -205,6 +223,10 @@ def main():
     if supplemental:training.update(train_s2ds=len(supplemental['items']),supplement_spatial_path=args.supplement_spatial.relative_to(ROOT).as_posix(),
                                     supplement_spatial_sha256=sha(args.supplement_spatial),supplement_audit=supplemental['audit'],
                                     supplement_scope='Author TRAIN only; original scene IDs unavailable, heuristic crop screen does not prove field independence; S2DS val/test never selected')
+    if photo_supplement:training.update({f"train_{photo_supplement['items'][0]['domain']}":len(photo_supplement['items'])},photo_supplement_path=args.photo_supplement.relative_to(ROOT).as_posix(),
+                                       photo_supplement_sha256=sha(args.photo_supplement),photo_supplement_audit=photo_supplement['audit'],
+                                       photo_supplement_scope='Verified building photos TRAIN-only; source scene IDs unavailable, overlap screening is heuristic, no source/industrial test or new pixel truth',
+                                       core_sampling_policy='Original source item weights and crop balance preserved; original domain mass scaled to .90 and .10 assigned to building supplement')
     save(output/'TRAINING.json',training);history=[];best=None;bad=0;start=time.perf_counter()
     for epoch in range(1,epochs+1):
         freeze=epoch==1 and args.initial is None
@@ -212,7 +234,7 @@ def main():
         model.train()
         if freeze:model.backbone.eval()
         total=0.;draws=torch.zeros(len(domain_map),dtype=torch.long);row_types=torch.zeros(2,dtype=torch.long)
-        for batch in loader:
+        for batch_number,batch in enumerate(loader,1):
             image,label,known,domain,mask,pixel_known=batch[:6]
             row_types+=torch.bincount(batch[-1],minlength=2)
             draws+=torch.bincount(domain,minlength=len(domain_map));optimizer.zero_grad(set_to_none=True)
@@ -224,10 +246,11 @@ def main():
                     loss+=args.auxiliary_weight*masked_focal(auxiliary_scores,batch[6].to('cuda'),batch[7].to('cuda'),auxiliary_weights,1.)
             if not torch.isfinite(loss):raise ValueError('Nonfinite spatial training loss')
             scaler.scale(loss).backward();scaler.step(optimizer);scaler.update();total+=loss.item()*len(image)
+            if batch_number%400==0:print(__import__('json').dumps({'epoch':epoch,'sampled_so_far':int(draws.sum()),'budget':draws_per_epoch}),flush=True)
         predictions={domain:predict(model,validation_loader,'cuda') for domain,validation_loader in loaders.items()}
         points={label:operating_point({d:(t[:,classes.index(label)].astype(bool),p[:,classes.index(label)]) for d,(t,p) in predictions.items()}) for label in TARGETS}
         worst=max(p['worst_error'] for p in points.values());sum_errors=sum(r[k] for p in points.values() for r in p['domains'].values() for k in ('fnr','fpr'))
-        row={'epoch':epoch,'elapsed_minutes':(time.perf_counter()-start)/60,'train_loss':total/full_count,'worst_target_error':worst,'sum_target_errors':sum_errors,
+        row={'epoch':epoch,'elapsed_minutes':(time.perf_counter()-start)/60,'train_loss':total/draws_per_epoch,'worst_target_error':worst,'sum_target_errors':sum_errors,
              'target_passed':all(p['target_passed'] for p in points.values()),'operating_points':points,'sampled_domain_counts':{d:int(draws[k]) for d,k in domain_map.items()},
              'sampled_row_type_counts':{'full':int(row_types[0]),'crop':int(row_types[1])},
              'ranking_ap':{d:{label:average_precision(t[:,k],p[:,k]) for k,label in enumerate(classes) if (t[:,k]>=0).all()} for d,(t,p) in predictions.items()}}

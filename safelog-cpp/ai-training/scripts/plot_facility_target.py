@@ -20,7 +20,9 @@ EXPERIMENTS=[('facility-presence-target-v2s','Larger photo model',0),
              ('facility-presence-target-hard','Bounded hard TRAIN sampling',1),
              ('facility-presence-target-auxiliary','Original-tag auxiliary task',1),
              ('facility-presence-target-roi-control','Fixed crop control',1),
-             ('facility-presence-target-small-region','Small-region context crops',1)]
+             ('facility-presence-target-small-region','Small-region context crops',1),
+             ('facility-presence-target-building-control','Concrete study control',1),
+             ('facility-presence-target-building-convid','ConViD positive photos',1)]
 
 
 def main():

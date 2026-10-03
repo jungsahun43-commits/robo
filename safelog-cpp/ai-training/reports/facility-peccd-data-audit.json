@@ -1,0 +1,21 @@
+{
+  "status": "unprepared",
+  "source": "https://data.mendeley.com/datasets/w7549ryvx2/1",
+  "license": "CC BY 4.0",
+  "source_archive_sha256": "9acc37537c2a618c22bbda55d1353823d4e2dd82d98ae729d0c30315c72388ec",
+  "source_archive_bytes": 3767446444,
+  "download_sidecar_verified": true,
+  "selected_photos": 0,
+  "usable_train_photos": 0,
+  "trained": false,
+  "native_numeric_class_order_confirmed": false,
+  "archive_listing_complete": false,
+  "bsdtar_listing_returncode": 1,
+  "readable_archive_entries": 1683,
+  "block_reason": "Complete pinned RAR downloaded, but bsdtar listing reports unreadable/empty filenames; no authoritative numeric class-order file confirmed among readable entries. Incomplete listing is not evidence metadata is globally absent. Website prose class ordering is not a class-ID authority. Mapping, extraction, TRAIN preparation and training remain fail closed.",
+  "source_evaluation_created": false,
+  "original_manifests_modified": false,
+  "fallback": "Prepare independently verified ConViD V4 crack/Spalling folder positives; no PECCD IDs guessed.",
+  "source_attribution": "Mayya, Ali Mahmoud; Alkayem, Nizar Faisal; Saii, Mariam; Ahmad, Maha Haydar; Bayat, Mahmoud; Asteris, Panagiotis G.; Cao, Maosen (2025), 'Post-earthquake concrete crack dataset (PECCD)', Mendeley Data, v1, http://doi.org/10.17632/w7549ryvx2.1",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+}

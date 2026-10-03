@@ -1,0 +1,133 @@
+{
+  "status": "prepared",
+  "recipe": "convid_v4_folder_positive_photo_train_only_v1",
+  "source": "https://data.mendeley.com/datasets/fx3rthfjhy/4",
+  "license": "CC BY 4.0",
+  "source_version": 4,
+  "source_index_sha256": "7d10a985b47334894cd0e871a5416a565f20a000610e924f2fb825999e47e211",
+  "source_pick_sha256": "5016204d5ad1d8a230c3515d1c077748344dd4671233bac03321c0290124fecc",
+  "metadata_evidence_sha256": {
+    "convid-folders.json": "e887d625db94e4c58c48c0d1d3bb1cf28031210d314ec8b6ac7f3be2cfad8345",
+    "convid-crack-files.json": "49b30ba7f1ca354f7931e5fcd7ec0d427b20fc2367811ee759fd103566063c5d",
+    "convid-Spalling-files.json": "06eeb5201a68d5ba8d83e653ccbfe5aee73c2efbfc16726f892ee459f6bec89a"
+  },
+  "official_folder_photo_counts": {
+    "Spalling": 576,
+    "crack": 365
+  },
+  "max_selected": 200,
+  "selection_seed": 52,
+  "picked_before_existing_lookup": 200,
+  "picked_per_folder": {
+    "crack": 100,
+    "Spalling": 100
+  },
+  "verified_original_photos": 200,
+  "verified_original_bytes": 574082757,
+  "selected_photos": 192,
+  "selected_per_folder": {
+    "crack": 92,
+    "Spalling": 100
+  },
+  "selection_policy": "Fixed seed 52 selects up to 100 exact author crack-folder and 100 Spalling-folder photos before existing-data lookup. Screening only excludes/collapses these frozen picks; shortages are not refilled; no heldout labels or model scores used.",
+  "source_split": "train_only_unsplit",
+  "author_split": null,
+  "original_manifests_unchanged_sha256": {
+    "data/facility-spatial-training/train.json": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "data/dacl10k-yolo/records.json": "75f95e6035e58930defc0bec94c03aab952c66919d48e9c9a385bd7ea72e6fe3",
+    "data/damsegment-training/train.json": "95611122b9c23bf865fe16a18cda3736be977016c53b8f42ad22014bb02cd074",
+    "data/damsegment-training/test.json": "b7459e670fc4d7eda10aebb38b8dc35015a6e402ae07f86b226fd991af9671ab",
+    "data/codebrim-training/train.json": "5cce98c85f49d8e9f355c940306d21c9620e0b9fcbf0066965b4b6442ae49d5d",
+    "data/codebrim-training/val.json": "d17182c6070cfd73404de341f0662352441b1be5d983c85dfe5b0c86affed56e",
+    "data/codebrim-training/test.json": "fa9a2bb648afb0e4164028c564e903d45c8bcf88d769c75aa97c99cdb51e4df5",
+    "data/s2ds/pixel-audit.json": "603aa605a7494de974c26ddc1983860fdcebe1ea2fbfd225e05a59b8ae0a0eba"
+  },
+  "existing_photos_screened": 18935,
+  "existing_fingerprint_cache_sha256": "21013f0c4e7a105e6dfeecca5ca5380d3dc16eb812368359b5a468e01408ca61",
+  "existing_metadata_set_sha256": "f40dfc3c7bd8e1e10fb8a014277ab81f04e0b4f931354071d95a96d8d998a921",
+  "overlap_screen": {
+    "within_source_groups": 195,
+    "eligible_representatives": 192,
+    "within_source_collapsed_photos": 1,
+    "excluded_groups": 3,
+    "excluded_photos": 7,
+    "existing_near_candidate_review_pending": 3,
+    "near_rule": "64-bit whole-photo dHash Hamming<=6 transitive groups; decoded-pixel SHA exact check",
+    "review_policy": "All detected existing-near/derived-name/conflicting-label candidates excluded pending review; no model scores or heldout labels used",
+    "limitation": "Whole-photo hash screen does not prove crop, scene, building, photographer or site independence"
+  },
+  "photo_label_policy": "Exactly the author folder class is positive; all six other labels unknown, including the other crack/spalling class. No confirmed absences or normal photos are asserted.",
+  "pixel_policy": "No native segmentation annotations were supplied; all seven spatial known flags zero and all masks zero. Folder labels never become pixel masks or background truth.",
+  "per_label_train_counts": {
+    "concrete_crack": {
+      "positive": 92,
+      "negative": 0,
+      "unknown": 100
+    },
+    "concrete_spalling": {
+      "positive": 100,
+      "negative": 0,
+      "unknown": 92
+    },
+    "rust_stain": {
+      "positive": 0,
+      "negative": 0,
+      "unknown": 192
+    },
+    "exposed_rebar": {
+      "positive": 0,
+      "negative": 0,
+      "unknown": 192
+    },
+    "wet_surface": {
+      "positive": 0,
+      "negative": 0,
+      "unknown": 192
+    },
+    "efflorescence": {
+      "positive": 0,
+      "negative": 0,
+      "unknown": 192
+    },
+    "surface_cavity": {
+      "positive": 0,
+      "negative": 0,
+      "unknown": 192
+    }
+  },
+  "per_label_pixel_cells": {
+    "concrete_crack": {
+      "positive": 0,
+      "negative": 0
+    },
+    "concrete_spalling": {
+      "positive": 0,
+      "negative": 0
+    },
+    "rust_stain": {
+      "positive": 0,
+      "negative": 0
+    },
+    "exposed_rebar": {
+      "positive": 0,
+      "negative": 0
+    },
+    "wet_surface": {
+      "positive": 0,
+      "negative": 0
+    },
+    "efflorescence": {
+      "positive": 0,
+      "negative": 0
+    },
+    "surface_cavity": {
+      "positive": 0,
+      "negative": 0
+    }
+  },
+  "author_scene_ids_available": false,
+  "source_evaluation_created": false,
+  "source_environment": "Author describes consumer-phone photographs of outdoor concrete defects in Pune, India; no verified factory-site evaluation.",
+  "limitations": "Positive-only folder labels do not establish absence or support source false-positive evaluation. Whole-photo SHA/dHash screening and representative collapse do not prove crop, scene, building, site or photographer independence. Extra TRAIN photographs are not a measured accuracy gain. Public report contains aggregate counts/checksums; raw source photos and detailed IDs/paths remain ignored.",
+  "preparation_script_sha256": "46766a64a8fc26b3094903cd3d0b06195a00a1c341e06b84546641538fc18a5f"
+}
