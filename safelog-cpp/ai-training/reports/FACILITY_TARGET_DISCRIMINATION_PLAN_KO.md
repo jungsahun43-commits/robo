@@ -53,4 +53,17 @@ AI training 폴더에서 두 명령을 순서대로 실행한다. 이미 완료�
 ./.venv/Scripts/python.exe scripts/train_facility_spatial.py --name facility-presence-target-discrimination-ranking --initial runs/facility-presence-target-roi-control/best.pt --auxiliary-manifest data/facility-auxiliary-training/train.json --seed 53 --epochs 6 --patience 6 --draws-per-epoch 14248 --backbone-lr .00002 --head-lr .000125 --target-ranking-weight .25 --study-protocol reports/facility-target-discrimination-protocol.json
 ```
 
-학습 전 고정 조건 원문은 [실험 protocol](facility-target-discrimination-protocol.json)에 있다. 실행 중 결과에 맞춰 이 조건 파일을 수정하지 않는다. 원본 사진·주석·모델과 개별 사례는 무시되는 로컬 자료로 유지하고, 코드·집계 결과만 Git에 기록한다.
+두 학습이 완료된 뒤 같은 전체 사진 평가만 고정하고 집계 보고서를 만든다.
+
+```powershell
+./.venv/Scripts/python.exe scripts/evaluate_facility_target.py select --name facility-presence-target-discrimination-control --grids 1
+./.venv/Scripts/python.exe scripts/analyze_facility_target.py --name facility-presence-target-discrimination-control --aggregate-only
+./.venv/Scripts/python.exe scripts/evaluate_facility_target.py select --name facility-presence-target-discrimination-ranking --grids 1
+./.venv/Scripts/python.exe scripts/analyze_facility_target.py --name facility-presence-target-discrimination-ranking --aggregate-only
+./.venv/Scripts/python.exe scripts/verify_facility_discrimination.py
+./.venv/Scripts/python.exe scripts/report_facility_discrimination.py
+./.venv/Scripts/python.exe scripts/report_facility_target.py
+./.venv/Scripts/python.exe scripts/plot_facility_target.py
+```
+
+기존 준비 자료와 위 초기 모델이 필요하다. 원본 데이터·모델은 Git에 포함되지 않는다. 기술 검증은 이번 실행에서 저장한 로컬 GPU integration preflight 및 학습 전 소스 snapshot 기록도 확인한다. 이 기록이 없는 새 환경에서 검증 완료로 처리하지 않는다. 학습 전 고정 조건 원문은 [실험 protocol](facility-target-discrimination-protocol.json)에 있다. 실행 중 결과에 맞춰 이 조건 파일을 수정하지 않는다. 원본 사진·주석·모델과 개별 사례는 무시되는 로컬 자료로 유지하고, 코드·집계 결과만 Git에 기록한다.

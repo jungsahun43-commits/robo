@@ -22,12 +22,16 @@ EXPERIMENTS=[('facility-presence-target-v2s','Larger photo model',0),
              ('facility-presence-target-roi-control','Fixed crop control',1),
              ('facility-presence-target-small-region','Small-region context crops',1),
              ('facility-presence-target-building-control','Concrete study control',1),
-             ('facility-presence-target-building-convid','ConViD positive photos',1)]
+             ('facility-presence-target-building-convid','ConViD positive photos',1),
+             ('facility-presence-target-discrimination-control','Discrimination study control',1),
+             ('facility-presence-target-discrimination-ranking','Within-source pos/neg ranking',1)]
 
 
 def main():
     fig,axes=plt.subplots(1,2,figsize=(12,4.7),sharey=True)
     records=[];maximum=35
+    colors=[plt.get_cmap('tab10'),plt.get_cmap('tab20')]
+    color_counts=[0,0]
     for name,label,index in EXPERIMENTS:
         path=ROOT/'runs'/name/'history.json'
         if not path.exists():continue
@@ -36,7 +40,9 @@ def main():
         if not values:continue
         epochs=[r['epoch'] for r in history]
         state=read(path.with_name('TRAINING.json'))['status']
-        axes[index].plot(epochs,values,marker='.',label=label+(' (running)' if state!='complete' else ''))
+        color=colors[index](color_counts[index])
+        color_counts[index]+=1
+        axes[index].plot(epochs,values,marker='.',color=color,label=label+(' (running)' if state!='complete' else ''))
         best=min(range(len(values)),key=lambda i:values[i])
         axes[index].scatter(epochs[best],values[best],facecolors='none',edgecolors='black',s=75,zorder=3)
         maximum=max(maximum,max(values)+3)

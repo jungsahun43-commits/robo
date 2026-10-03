@@ -1,0 +1,116 @@
+{
+  "status": "passed",
+  "experiments": [
+    {
+      "run": "facility-presence-target-discrimination-control",
+      "weights_sha256": "785718b38b6eba5a1da1aae84f7d1424f23f3ec7860c29f79cc4ed1565bf6517",
+      "public_shape": [
+        1,
+        7
+      ],
+      "private_spatial_shape": [
+        1,
+        7,
+        80,
+        80
+      ],
+      "auxiliary_shape": [
+        1,
+        19
+      ],
+      "public_training_logits_equal": true,
+      "outputs_finite": true,
+      "study_protocol_sha256": "a90c769608cf1896ef077ca2bf2b5120d04bc387bf2d159fae54b87702147493"
+    },
+    {
+      "run": "facility-presence-target-discrimination-ranking",
+      "weights_sha256": "c481aab0d6689bdfdb97aad39bdc6a2c6bd2e4ea58122a9349d0c14c4bceb120",
+      "public_shape": [
+        1,
+        7
+      ],
+      "private_spatial_shape": [
+        1,
+        7,
+        80,
+        80
+      ],
+      "auxiliary_shape": [
+        1,
+        19
+      ],
+      "public_training_logits_equal": true,
+      "outputs_finite": true,
+      "study_protocol_sha256": "a90c769608cf1896ef077ca2bf2b5120d04bc387bf2d159fae54b87702147493"
+    }
+  ],
+  "python": "3.12.14",
+  "torch": "2.12.0+cu126",
+  "device": "cpu",
+  "check_input": "One zero 1x3x640x640 tensor per completed checkpoint; shape check only",
+  "actual_train_gpu_preflight": {
+    "status": "passed",
+    "scope": "8 original TRAIN DACL photos; source gold unchanged; disposable GPU backward, no optimizer step or saved weights; not a performance measurement",
+    "public_shape": [
+      8,
+      7
+    ],
+    "pixel_shape": [
+      8,
+      7,
+      80,
+      80
+    ],
+    "auxiliary_shape": [
+      8,
+      19
+    ],
+    "ranking_pair_count": 32,
+    "ranking_group_count": 2,
+    "finite_loss_and_gradients": true
+  },
+  "actual_train_gpu_preflight_sha256": "d90184ff18cffb44a580154f7171d42ff0558335b9ca5c8f4d3b1bbe3f8fa2a4",
+  "pre_training_source_snapshot": {
+    "pre_training_commit": "0c50518",
+    "sources": {
+      "scripts/train_facility_spatial.py": {
+        "git_blob_sha256": "c60e86aee35cc03ad552f582e1cd801128bd7ee672b4eab51e2a814ce713ec04",
+        "executed_file_sha256": "c60e86aee35cc03ad552f582e1cd801128bd7ee672b4eab51e2a814ce713ec04",
+        "equal": true
+      },
+      "scripts/facility_target_ranking.py": {
+        "git_blob_sha256": "9e194212425f1fe17f894d4448a35dfc8463df2e1ca332ce384e265ad84b13be",
+        "executed_file_sha256": "9e194212425f1fe17f894d4448a35dfc8463df2e1ca332ce384e265ad84b13be",
+        "equal": true
+      },
+      "reports/facility-target-discrimination-protocol.json": {
+        "git_blob_sha256": "a90c769608cf1896ef077ca2bf2b5120d04bc387bf2d159fae54b87702147493",
+        "executed_file_sha256": "a90c769608cf1896ef077ca2bf2b5120d04bc387bf2d159fae54b87702147493",
+        "equal": true
+      }
+    },
+    "comparison_started_before_outcomes": true
+  },
+  "actual_test_verification": {
+    "status": "passed",
+    "command": "python -m unittest discover -s tests -q",
+    "tests_run": 131,
+    "failures": 0,
+    "errors": 0,
+    "reported_test_seconds": 2.632,
+    "scope": "Full existing suite plus six ranking helper tests and seven discrimination report tests; no field accuracy measurement"
+  },
+  "executed_sources_sha256": {
+    "training_script_sha256": "c60e86aee35cc03ad552f582e1cd801128bd7ee672b4eab51e2a814ce713ec04",
+    "model_source_sha256": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+    "auxiliary_model_source_sha256": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7"
+  },
+  "ranking_helper_sha256": "9e194212425f1fe17f894d4448a35dfc8463df2e1ca332ce384e265ad84b13be",
+  "study_protocol_sha256": "a90c769608cf1896ef077ca2bf2b5120d04bc387bf2d159fae54b87702147493",
+  "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+  "app_profile_unchanged": true,
+  "research_models_deployed": false,
+  "accuracy_measured_by_this_check": false,
+  "independent_field_safety_verified": false,
+  "verification_script_sha256": "521babd28f429fdd7ca637dc43ca18465b2cd6ff639b89a7d359b9a955538e23"
+}

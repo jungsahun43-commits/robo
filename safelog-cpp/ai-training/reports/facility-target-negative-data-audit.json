@@ -1,0 +1,867 @@
+{
+  "status": "audited",
+  "scope": "Existing original TRAIN metadata and native DACL TRAIN annotations only; aggregate public output",
+  "input_sha256": {
+    "core_spatial_train": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "detail_train": "6f22582b287d2c220e3dc0104c7d9294febe0426820a5d9ec8b1c1acbc2756e6",
+    "auxiliary_train": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+    "dacl_source_records": "75f95e6035e58930defc0bec94c03aab952c66919d48e9c9a385bd7ea72e6fe3",
+    "codebrim_train": "5cce98c85f49d8e9f355c940306d21c9620e0b9fcbf0066965b4b6442ae49d5d",
+    "codebrim_license": "f9d79f5d3dddab9b4c3cff0ddc426cf26c739a9f922c00ec66acb35c67ed5aba",
+    "damsegment_source_registry": "e29f52012bc697640f0720c4d51114714df7ac1ae25b24a3ba15e874945ebc8c",
+    "damsegment_article_xml": "ca6c883d943c1cc2c00f1d16b61e49efc48525da584d61a0576af1cd189a7258",
+    "facility_source_registry": "f051fbd23408561101582d35297d5e4f73fd136fb0a034620117d1e9b923a3a5",
+    "preparation_spatial_script": "5615fa06041bae09ce84b0956629319fe6ed8b8db5b9fda00a709be0e80030d5",
+    "preparation_auxiliary_script": "1d3aecbc8b66c87684b445cd4dc0b097c6859d08f444733432e5062ca3564886",
+    "preparation_detail_script": "63cb63fcda3fbe49accd55d6150554968b35864007aaf44d270fedadf687a75b"
+  },
+  "audit_script_sha256": "d852e70f6e69e152cf92dee7efe59e9cbf0ef1b7d8b808a4eb373e060434aaea",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "full_base_rows": 14248,
+  "derived_crop_rows": 12041,
+  "counts": {
+    "full": {
+      "rows": 14248,
+      "per_label": {
+        "concrete_crack": {
+          "positive": 4861,
+          "negative": 9387,
+          "unknown": 0
+        },
+        "concrete_spalling": {
+          "positive": 4788,
+          "negative": 9460,
+          "unknown": 0
+        },
+        "rust_stain": {
+          "positive": 4347,
+          "negative": 8316,
+          "unknown": 1585
+        },
+        "exposed_rebar": {
+          "positive": 1908,
+          "negative": 10755,
+          "unknown": 1585
+        },
+        "wet_surface": {
+          "positive": 869,
+          "negative": 5356,
+          "unknown": 8023
+        },
+        "efflorescence": {
+          "positive": 1907,
+          "negative": 10756,
+          "unknown": 1585
+        },
+        "surface_cavity": {
+          "positive": 1082,
+          "negative": 5143,
+          "unknown": 8023
+        }
+      },
+      "crack_spall_joint_counts": {
+        "0,0": 5915,
+        "0,1": 3472,
+        "1,0": 3545,
+        "1,1": 1316
+      },
+      "both_targets_known_negative": 5915,
+      "both_negative_with_other_mapped_positive": 2129,
+      "other_mapped_positives_inside_both_negative": {
+        "rust_stain": 1401,
+        "exposed_rebar": 157,
+        "wet_surface": 246,
+        "efflorescence": 752,
+        "surface_cavity": 172
+      },
+      "both_negative_with_any_other_unknown": 3456,
+      "all_seven_known_negative": 960,
+      "general_normal_or_safe_ground_truth_asserted": false
+    },
+    "crop": {
+      "rows": 12041,
+      "per_label": {
+        "concrete_crack": {
+          "positive": 3096,
+          "negative": 8942,
+          "unknown": 3
+        },
+        "concrete_spalling": {
+          "positive": 3536,
+          "negative": 8500,
+          "unknown": 5
+        },
+        "rust_stain": {
+          "positive": 2227,
+          "negative": 8336,
+          "unknown": 1478
+        },
+        "exposed_rebar": {
+          "positive": 578,
+          "negative": 10006,
+          "unknown": 1457
+        },
+        "wet_surface": {
+          "positive": 851,
+          "negative": 9729,
+          "unknown": 1461
+        },
+        "efflorescence": {
+          "positive": 1120,
+          "negative": 9452,
+          "unknown": 1469
+        },
+        "surface_cavity": {
+          "positive": 898,
+          "negative": 9679,
+          "unknown": 1464
+        }
+      },
+      "crack_spall_joint_counts": {
+        "-1,1": 3,
+        "0,0": 6399,
+        "0,1": 2543,
+        "1,-1": 5,
+        "1,0": 2101,
+        "1,1": 990
+      },
+      "both_targets_known_negative": 6399,
+      "both_negative_with_other_mapped_positive": 1631,
+      "other_mapped_positives_inside_both_negative": {
+        "rust_stain": 767,
+        "exposed_rebar": 25,
+        "wet_surface": 338,
+        "efflorescence": 453,
+        "surface_cavity": 386
+      },
+      "both_negative_with_any_other_unknown": 375,
+      "all_seven_known_negative": 4401,
+      "general_normal_or_safe_ground_truth_asserted": false
+    },
+    "all": {
+      "rows": 26289,
+      "per_label": {
+        "concrete_crack": {
+          "positive": 7957,
+          "negative": 18329,
+          "unknown": 3
+        },
+        "concrete_spalling": {
+          "positive": 8324,
+          "negative": 17960,
+          "unknown": 5
+        },
+        "rust_stain": {
+          "positive": 6574,
+          "negative": 16652,
+          "unknown": 3063
+        },
+        "exposed_rebar": {
+          "positive": 2486,
+          "negative": 20761,
+          "unknown": 3042
+        },
+        "wet_surface": {
+          "positive": 1720,
+          "negative": 15085,
+          "unknown": 9484
+        },
+        "efflorescence": {
+          "positive": 3027,
+          "negative": 20208,
+          "unknown": 3054
+        },
+        "surface_cavity": {
+          "positive": 1980,
+          "negative": 14822,
+          "unknown": 9487
+        }
+      },
+      "crack_spall_joint_counts": {
+        "-1,1": 3,
+        "0,0": 12314,
+        "0,1": 6015,
+        "1,-1": 5,
+        "1,0": 5646,
+        "1,1": 2306
+      },
+      "both_targets_known_negative": 12314,
+      "both_negative_with_other_mapped_positive": 3760,
+      "other_mapped_positives_inside_both_negative": {
+        "rust_stain": 2168,
+        "exposed_rebar": 182,
+        "wet_surface": 584,
+        "efflorescence": 1205,
+        "surface_cavity": 558
+      },
+      "both_negative_with_any_other_unknown": 3831,
+      "all_seven_known_negative": 5361,
+      "general_normal_or_safe_ground_truth_asserted": false
+    }
+  },
+  "by_domain_and_row_type": {
+    "full": {
+      "dacl": {
+        "rows": 6225,
+        "per_label": {
+          "concrete_crack": {
+            "positive": 1748,
+            "negative": 4477,
+            "unknown": 0
+          },
+          "concrete_spalling": {
+            "positive": 2938,
+            "negative": 3287,
+            "unknown": 0
+          },
+          "rust_stain": {
+            "positive": 3084,
+            "negative": 3141,
+            "unknown": 0
+          },
+          "exposed_rebar": {
+            "positive": 693,
+            "negative": 5532,
+            "unknown": 0
+          },
+          "wet_surface": {
+            "positive": 869,
+            "negative": 5356,
+            "unknown": 0
+          },
+          "efflorescence": {
+            "positive": 1364,
+            "negative": 4861,
+            "unknown": 0
+          },
+          "surface_cavity": {
+            "positive": 1082,
+            "negative": 5143,
+            "unknown": 0
+          }
+        },
+        "crack_spall_joint_counts": {
+          "0,0": 2459,
+          "0,1": 2018,
+          "1,0": 828,
+          "1,1": 920
+        },
+        "both_targets_known_negative": 2459,
+        "both_negative_with_other_mapped_positive": 1499,
+        "other_mapped_positives_inside_both_negative": {
+          "rust_stain": 1114,
+          "exposed_rebar": 62,
+          "wet_surface": 246,
+          "efflorescence": 404,
+          "surface_cavity": 172
+        },
+        "both_negative_with_any_other_unknown": 0,
+        "all_seven_known_negative": 960,
+        "general_normal_or_safe_ground_truth_asserted": false
+      },
+      "damsegment": {
+        "rows": 1585,
+        "per_label": {
+          "concrete_crack": {
+            "positive": 905,
+            "negative": 680,
+            "unknown": 0
+          },
+          "concrete_spalling": {
+            "positive": 242,
+            "negative": 1343,
+            "unknown": 0
+          },
+          "rust_stain": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 1585
+          },
+          "exposed_rebar": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 1585
+          },
+          "wet_surface": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 1585
+          },
+          "efflorescence": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 1585
+          },
+          "surface_cavity": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 1585
+          }
+        },
+        "crack_spall_joint_counts": {
+          "0,0": 641,
+          "0,1": 39,
+          "1,0": 702,
+          "1,1": 203
+        },
+        "both_targets_known_negative": 641,
+        "both_negative_with_other_mapped_positive": 0,
+        "other_mapped_positives_inside_both_negative": {
+          "rust_stain": 0,
+          "exposed_rebar": 0,
+          "wet_surface": 0,
+          "efflorescence": 0,
+          "surface_cavity": 0
+        },
+        "both_negative_with_any_other_unknown": 641,
+        "all_seven_known_negative": 0,
+        "general_normal_or_safe_ground_truth_asserted": false
+      },
+      "codebrim": {
+        "rows": 6438,
+        "per_label": {
+          "concrete_crack": {
+            "positive": 2208,
+            "negative": 4230,
+            "unknown": 0
+          },
+          "concrete_spalling": {
+            "positive": 1608,
+            "negative": 4830,
+            "unknown": 0
+          },
+          "rust_stain": {
+            "positive": 1263,
+            "negative": 5175,
+            "unknown": 0
+          },
+          "exposed_rebar": {
+            "positive": 1215,
+            "negative": 5223,
+            "unknown": 0
+          },
+          "wet_surface": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 6438
+          },
+          "efflorescence": {
+            "positive": 543,
+            "negative": 5895,
+            "unknown": 0
+          },
+          "surface_cavity": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 6438
+          }
+        },
+        "crack_spall_joint_counts": {
+          "0,0": 2815,
+          "0,1": 1415,
+          "1,0": 2015,
+          "1,1": 193
+        },
+        "both_targets_known_negative": 2815,
+        "both_negative_with_other_mapped_positive": 630,
+        "other_mapped_positives_inside_both_negative": {
+          "rust_stain": 287,
+          "exposed_rebar": 95,
+          "wet_surface": 0,
+          "efflorescence": 348,
+          "surface_cavity": 0
+        },
+        "both_negative_with_any_other_unknown": 2815,
+        "all_seven_known_negative": 0,
+        "general_normal_or_safe_ground_truth_asserted": false
+      }
+    },
+    "crop": {
+      "dacl": {
+        "rows": 10586,
+        "per_label": {
+          "concrete_crack": {
+            "positive": 2070,
+            "negative": 8513,
+            "unknown": 3
+          },
+          "concrete_spalling": {
+            "positive": 3248,
+            "negative": 7334,
+            "unknown": 4
+          },
+          "rust_stain": {
+            "positive": 2227,
+            "negative": 8336,
+            "unknown": 23
+          },
+          "exposed_rebar": {
+            "positive": 578,
+            "negative": 10006,
+            "unknown": 2
+          },
+          "wet_surface": {
+            "positive": 851,
+            "negative": 9729,
+            "unknown": 6
+          },
+          "efflorescence": {
+            "positive": 1120,
+            "negative": 9452,
+            "unknown": 14
+          },
+          "surface_cavity": {
+            "positive": 898,
+            "negative": 9679,
+            "unknown": 9
+          }
+        },
+        "crack_spall_joint_counts": {
+          "-1,1": 3,
+          "0,0": 6051,
+          "0,1": 2462,
+          "1,-1": 4,
+          "1,0": 1283,
+          "1,1": 783
+        },
+        "both_targets_known_negative": 6051,
+        "both_negative_with_other_mapped_positive": 1631,
+        "other_mapped_positives_inside_both_negative": {
+          "rust_stain": 767,
+          "exposed_rebar": 25,
+          "wet_surface": 338,
+          "efflorescence": 453,
+          "surface_cavity": 386
+        },
+        "both_negative_with_any_other_unknown": 27,
+        "all_seven_known_negative": 4401,
+        "general_normal_or_safe_ground_truth_asserted": false
+      },
+      "damsegment": {
+        "rows": 1455,
+        "per_label": {
+          "concrete_crack": {
+            "positive": 1026,
+            "negative": 429,
+            "unknown": 0
+          },
+          "concrete_spalling": {
+            "positive": 288,
+            "negative": 1166,
+            "unknown": 1
+          },
+          "rust_stain": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 1455
+          },
+          "exposed_rebar": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 1455
+          },
+          "wet_surface": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 1455
+          },
+          "efflorescence": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 1455
+          },
+          "surface_cavity": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 1455
+          }
+        },
+        "crack_spall_joint_counts": {
+          "0,0": 348,
+          "0,1": 81,
+          "1,-1": 1,
+          "1,0": 818,
+          "1,1": 207
+        },
+        "both_targets_known_negative": 348,
+        "both_negative_with_other_mapped_positive": 0,
+        "other_mapped_positives_inside_both_negative": {
+          "rust_stain": 0,
+          "exposed_rebar": 0,
+          "wet_surface": 0,
+          "efflorescence": 0,
+          "surface_cavity": 0
+        },
+        "both_negative_with_any_other_unknown": 348,
+        "all_seven_known_negative": 0,
+        "general_normal_or_safe_ground_truth_asserted": false
+      },
+      "codebrim": {
+        "rows": 0,
+        "per_label": {
+          "concrete_crack": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0
+          },
+          "concrete_spalling": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0
+          },
+          "rust_stain": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0
+          },
+          "exposed_rebar": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0
+          },
+          "wet_surface": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0
+          },
+          "efflorescence": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0
+          },
+          "surface_cavity": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0
+          }
+        },
+        "crack_spall_joint_counts": {},
+        "both_targets_known_negative": 0,
+        "both_negative_with_other_mapped_positive": 0,
+        "other_mapped_positives_inside_both_negative": {
+          "rust_stain": 0,
+          "exposed_rebar": 0,
+          "wet_surface": 0,
+          "efflorescence": 0,
+          "surface_cavity": 0
+        },
+        "both_negative_with_any_other_unknown": 0,
+        "all_seven_known_negative": 0,
+        "general_normal_or_safe_ground_truth_asserted": false
+      }
+    }
+  },
+  "dacl_native19": {
+    "classes": [
+      "ACrack",
+      "Bearing",
+      "Cavity",
+      "Crack",
+      "Drainage",
+      "EJoint",
+      "Efflorescence",
+      "ExposedRebars",
+      "Graffiti",
+      "Hollowareas",
+      "JTape",
+      "PEquipment",
+      "Restformwork",
+      "Rockpocket",
+      "Rust",
+      "Spalling",
+      "WConccor",
+      "Weathering",
+      "Wetspot"
+    ],
+    "verified_train_annotations": 6225,
+    "annotation_sha256_mismatches": 0,
+    "native_aux_target_mismatches": 0,
+    "native_to_seven_target_mismatches": 0,
+    "source_annotations_aggregate_sha256": "a3e3d2c9bdc49e47895d694a261e9c33ebf2866ad6f37d663e0591339bd0c1e7",
+    "aggregate_hash_recipe": "SHA256 of canonical sorted (native TRAIN relative annotation path, SHA256) pairs; no individual paths published",
+    "native_tag_counts": {
+      "ACrack": {
+        "all_dacl_full_train": 299,
+        "crack_known_negative": 0,
+        "spall_known_negative": 161,
+        "both_targets_known_negative": 0,
+        "all_seven_known_negative": 0
+      },
+      "Bearing": {
+        "all_dacl_full_train": 646,
+        "crack_known_negative": 507,
+        "spall_known_negative": 316,
+        "both_targets_known_negative": 265,
+        "all_seven_known_negative": 119
+      },
+      "Cavity": {
+        "all_dacl_full_train": 1082,
+        "crack_known_negative": 567,
+        "spall_known_negative": 348,
+        "both_targets_known_negative": 172,
+        "all_seven_known_negative": 0
+      },
+      "Crack": {
+        "all_dacl_full_train": 1539,
+        "crack_known_negative": 0,
+        "spall_known_negative": 703,
+        "both_targets_known_negative": 0,
+        "all_seven_known_negative": 0
+      },
+      "Drainage": {
+        "all_dacl_full_train": 902,
+        "crack_known_negative": 752,
+        "spall_known_negative": 489,
+        "both_targets_known_negative": 439,
+        "all_seven_known_negative": 89
+      },
+      "EJoint": {
+        "all_dacl_full_train": 358,
+        "crack_known_negative": 329,
+        "spall_known_negative": 260,
+        "both_targets_known_negative": 253,
+        "all_seven_known_negative": 77
+      },
+      "Efflorescence": {
+        "all_dacl_full_train": 1364,
+        "crack_known_negative": 875,
+        "spall_known_negative": 598,
+        "both_targets_known_negative": 404,
+        "all_seven_known_negative": 0
+      },
+      "ExposedRebars": {
+        "all_dacl_full_train": 693,
+        "crack_known_negative": 547,
+        "spall_known_negative": 74,
+        "both_targets_known_negative": 62,
+        "all_seven_known_negative": 0
+      },
+      "Graffiti": {
+        "all_dacl_full_train": 715,
+        "crack_known_negative": 562,
+        "spall_known_negative": 414,
+        "both_targets_known_negative": 341,
+        "all_seven_known_negative": 189
+      },
+      "Hollowareas": {
+        "all_dacl_full_train": 984,
+        "crack_known_negative": 667,
+        "spall_known_negative": 273,
+        "both_targets_known_negative": 200,
+        "all_seven_known_negative": 62
+      },
+      "JTape": {
+        "all_dacl_full_train": 684,
+        "crack_known_negative": 515,
+        "spall_known_negative": 333,
+        "both_targets_known_negative": 266,
+        "all_seven_known_negative": 102
+      },
+      "PEquipment": {
+        "all_dacl_full_train": 1187,
+        "crack_known_negative": 966,
+        "spall_known_negative": 810,
+        "both_targets_known_negative": 699,
+        "all_seven_known_negative": 363
+      },
+      "Restformwork": {
+        "all_dacl_full_train": 644,
+        "crack_known_negative": 478,
+        "spall_known_negative": 212,
+        "both_targets_known_negative": 181,
+        "all_seven_known_negative": 56
+      },
+      "Rockpocket": {
+        "all_dacl_full_train": 282,
+        "crack_known_negative": 199,
+        "spall_known_negative": 101,
+        "both_targets_known_negative": 82,
+        "all_seven_known_negative": 28
+      },
+      "Rust": {
+        "all_dacl_full_train": 3084,
+        "crack_known_negative": 2362,
+        "spall_known_negative": 1332,
+        "both_targets_known_negative": 1114,
+        "all_seven_known_negative": 0
+      },
+      "Spalling": {
+        "all_dacl_full_train": 2938,
+        "crack_known_negative": 2018,
+        "spall_known_negative": 0,
+        "both_targets_known_negative": 0,
+        "all_seven_known_negative": 0
+      },
+      "WConccor": {
+        "all_dacl_full_train": 241,
+        "crack_known_negative": 177,
+        "spall_known_negative": 99,
+        "both_targets_known_negative": 75,
+        "all_seven_known_negative": 31
+      },
+      "Weathering": {
+        "all_dacl_full_train": 2416,
+        "crack_known_negative": 1693,
+        "spall_known_negative": 1086,
+        "both_targets_known_negative": 823,
+        "all_seven_known_negative": 310
+      },
+      "Wetspot": {
+        "all_dacl_full_train": 869,
+        "crack_known_negative": 600,
+        "spall_known_negative": 351,
+        "both_targets_known_negative": 246,
+        "all_seven_known_negative": 0
+      }
+    },
+    "empty_native19_annotations": 53,
+    "no_author13_damage_tag": 452,
+    "author_object_tags_only_nonempty": 399,
+    "native_paint_label_available": false,
+    "native_plaster_label_available": false,
+    "auxiliary_scope": "Only original DACL full TRAIN photos. No parent-tag propagation to crop or other domains; no seven-class output change."
+  },
+  "train_confusion_proxies": {
+    "linear_joint_tags": {
+      "native_tags": [
+        "EJoint",
+        "JTape"
+      ],
+      "full_train_both_negative_union_rows": 481,
+      "scope": "Existing native tag proxy only; does not assert paint, plaster or normal concrete"
+    },
+    "surface_texture_other_tags": {
+      "native_tags": [
+        "Hollowareas",
+        "Rockpocket",
+        "WConccor",
+        "Weathering"
+      ],
+      "full_train_both_negative_union_rows": 1030,
+      "scope": "Existing native tag proxy only; does not assert paint, plaster or normal concrete"
+    },
+    "graffiti_tag": {
+      "native_tags": [
+        "Graffiti"
+      ],
+      "full_train_both_negative_union_rows": 341,
+      "scope": "Existing native tag proxy only; does not assert paint, plaster or normal concrete"
+    },
+    "all_proxy_union": {
+      "native_tags": [
+        "EJoint",
+        "Graffiti",
+        "Hollowareas",
+        "JTape",
+        "Rockpocket",
+        "WConccor",
+        "Weathering"
+      ],
+      "full_train_both_negative_union_rows": 1458
+    }
+  },
+  "codebrim_author_background_train": {
+    "patch_rows": 2185,
+    "source_parent_ids": 437,
+    "five_source_defect_labels": "known absent",
+    "wet_surface_and_surface_cavity": "unknown",
+    "field_normal_or_safe": "not established"
+  },
+  "damsegment_train_label_provenance": {
+    "full_base_rows": 1585,
+    "native_detection_segmentation_rows": 946,
+    "native_detection_segmentation_both_negative": 2,
+    "classification_noncrack_rows": 639,
+    "classification_noncrack_both_negative": 639,
+    "classification_separate_native_spall_annotation_or_mask": false,
+    "classification_photo_absence_basis": "Author paper section 4.4 defines Crack as visible damage including cracks and spalling, and Non-Crack as intact concrete; classification predictions manually verified. Both target negatives are a source-supported semantic mapping, not two separate native classification tags.",
+    "classification_pixel_negative_basis": "Inherited known photo absence supplies negative grid cells; no released native classification segmentation mask was inspected or claimed.",
+    "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13247583/",
+    "paper_doi": "10.1016/j.dib.2026.112671",
+    "paper_section": "4.4 Partitioning and refinement",
+    "paper_xml_sha256": "ca6c883d943c1cc2c00f1d16b61e49efc48525da584d61a0576af1cd189a7258",
+    "paper_license": "CC BY-NC 4.0; distinct from CC BY 4.0 dataset license",
+    "historical_train_and_heldout_manifests_changed": false,
+    "scope": "Only visible crack/spalling absence in publisher patches; other five targets remain unknown. Does not establish all damage absence or general structural safety."
+  },
+  "spatial_supervision_existing_metadata": {
+    "per_label_pixel_cells": {
+      "concrete_crack": {
+        "positive": 3851077,
+        "negative": 150248123
+      },
+      "concrete_spalling": {
+        "positive": 6118869,
+        "negative": 151807531
+      },
+      "rust_stain": {
+        "positive": 2628965,
+        "negative": 137934235
+      },
+      "exposed_rebar": {
+        "positive": 351029,
+        "negative": 140653771
+      },
+      "wet_surface": {
+        "positive": 3056826,
+        "negative": 104495174
+      },
+      "efflorescence": {
+        "positive": 2528801,
+        "negative": 142699999
+      },
+      "surface_cavity": {
+        "positive": 1047436,
+        "negative": 106485364
+      }
+    },
+    "photo_pixel_presence_conflicts_masked_unknown": 0,
+    "verification_scope": "Copied from hashed prepared core audit; no pixel arrays rescanned in this label audit. Native polygons/masks for positives, asserted source-class absence for negatives; unknown supplies no supervision."
+  },
+  "source_provenance": {
+    "dacl10k": {
+      "title": "dacl10k v2 development phase",
+      "homepage": "https://github.com/phiyodr/dacl10k-toolkit",
+      "license": "CC BY-NC 4.0",
+      "citation": "Flotzinger, Rosch and Braml (2023), dacl10k: Benchmark for Semantic Bridge Damage Segmentation, arXiv:2309.00460",
+      "sha256": "dcbcd5fb82699076a2c7f3a72492a9ef798870e0ca1f0c9399360f273ea95260"
+    },
+    "codebrim": {
+      "source": "https://zenodo.org/records/2620293",
+      "archive_sha256": "3a9c740f92e0be9fdb03eaeab35c125621410aafbbf2347b9bd7ee9461028edb",
+      "license": "CODEBRIM custom noncommercial research/educational terms; no raw or modified data redistribution; data-free models shared under same terms",
+      "license_sha256": "f9d79f5d3dddab9b4c3cff0ddc426cf26c739a9f922c00ec66acb35c67ed5aba"
+    }
+  },
+  "policy": {
+    "unknown_is_normal": false,
+    "convid_labels_corrected": false,
+    "new_train_examples_created": 0,
+    "shared_dacl_split_index_loaded": true,
+    "shared_index_contains_heldout_label_summaries": true,
+    "shared_index_heldout_label_summaries_used": false,
+    "shared_index_scope": "Shared TRAIN/val/test records JSON, including boxes and ignored_labels, parsed; only TRAIN identities/labels contribute. No heldout record influences TRAIN counts, row selection or annotations.",
+    "native_validation_or_test_annotations_opened": false,
+    "validation_or_test_labels_used": false,
+    "validation_or_test_images_read": false,
+    "model_predictions_used": false,
+    "source_annotations_or_manifests_modified": false,
+    "training_executed": false
+  },
+  "limitations": [
+    "Target-negative means only that the author's named crack/spall label is absent; other defects, objects and unknown categories may be present.",
+    "Dam classification Non-Crack spall absence is supported by the author's intact-concrete definition, not an independent native per-class tag or classification mask. Native detection/segmentation and mapped classification evidence are distinct.",
+    "All-seven negative is narrower than general normal/safe facility ground truth. Even empty native19 annotation is not a prospective expert field safety decision.",
+    "Base full rows include publisher CODEBRIM patches, not 14,248 independent whole-site photographs. Existing crops add no independent photographs.",
+    "Graffiti, joints, weathering and other native tags are possible confusion proxies; they are not a paint/plaster annotation set.",
+    "ConViD's author folder cannot be repaired into paint/plaster labels without authoritative new annotations. Other six classes remain unknown; no corrections performed."
+  ]
+}
