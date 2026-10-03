@@ -22,6 +22,7 @@ from scripts.facility_hard_sampling import hard_multipliers
 from safelog_ai.auxiliary_classifier import AuxiliaryClassifier,AUX_CLASSES,ARCH as AUX_ARCH
 from scripts.facility_spatial_manifest import validate_replacement
 from scripts.facility_photo_supplement import validate_photo_supplement
+from scripts.facility_target_ranking import target_ranking_loss
 
 SPATIAL_DOMAINS={**DOMAINS,'s2ds':3}
 
@@ -65,6 +66,8 @@ def main():
     parser.add_argument('--hard-mining-strength',type=float,default=0.,help='Bounded TRAIN-only residual sampling from frozen initializer (0 disables)')
     parser.add_argument('--auxiliary-manifest',type=Path)
     parser.add_argument('--auxiliary-weight',type=float,default=.5)
+    parser.add_argument('--target-ranking-weight',type=float,default=0.,help='TRAIN original full-photo within-source known positive/negative ranking loss (0 disables)')
+    parser.add_argument('--study-protocol',type=Path,help='Optional immutable predeclared pair configuration recorded in TRAINING metadata')
     args=parser.parse_args()
     if args.photo_supplement and args.supplement_spatial:raise ValueError('Compare one supplemental source intervention at a time')
     if args.draws_per_epoch is not None and args.draws_per_epoch<1:raise ValueError('Sampling budget must be positive')
@@ -73,6 +76,23 @@ def main():
     if not np.isfinite(args.hard_mining_strength) or not 0<=args.hard_mining_strength<=4 or (args.hard_mining_strength and not args.initial):
         raise ValueError('Hard mining needs an initializer and finite strength in [0,4]')
     if not np.isfinite(args.auxiliary_weight) or args.auxiliary_weight<=0:raise ValueError('Auxiliary loss weight must be finite and positive')
+    if not np.isfinite(args.target_ranking_weight) or not 0<=args.target_ranking_weight<=1:
+        raise ValueError('Ranking loss weight must be finite and in [0,1]')
+    if args.target_ranking_weight and (not args.initial or args.photo_supplement or args.supplement_spatial or args.spatial_manifest or args.hard_mining_strength):
+        raise ValueError('Compare ranking from an initializer using unchanged core supervision and sampling only')
+    protocol=None
+    if args.study_protocol:
+        args.study_protocol=args.study_protocol.resolve();protocol=read(args.study_protocol)
+        if protocol.get('schema')!='facility_target_discrimination_protocol_v1' or name not in (protocol.get('control'),protocol.get('treatment')):
+            raise ValueError('Protocol schema or declared paired run changed')
+        for key in ('seed','requested_epochs','patience','draws_per_epoch','backbone_lr','head_lr','auxiliary_weight'):
+            actual=epochs if key=='requested_epochs' else getattr(args,key)
+            if actual!=protocol[key]:raise ValueError(f'Protocol fixed argument differs: {key}')
+        expected_weight=protocol['control_ranking_weight' if name==protocol['control'] else 'treatment_ranking_weight']
+        if args.target_ranking_weight!=expected_weight or not args.initial or sha(args.initial)!=protocol['initial_weights_sha256']:
+            raise ValueError('Protocol ranking intervention or initializer changed')
+        if not args.auxiliary_manifest or any((args.photo_supplement,args.supplement_spatial,args.spatial_manifest,args.hard_mining_strength)):
+            raise ValueError('Protocol requires unchanged core and original auxiliary supervision')
     output=ROOT/'runs'/name
     if (output/'best.pt').exists():raise ValueError('Preserve existing experiment')
     output.mkdir(parents=True,exist_ok=True)
@@ -205,6 +225,17 @@ def main():
               'selection':'Minimax per-class FNR/FPR in all three validation domains; no pixel accuracy or test used for selection'}
     training['photo_positive_weights']={d:weights[k].detach().cpu().tolist() for d,k in domain_map.items()}
     training['pixel_positive_weights']=pixel_weights.detach().cpu().tolist()
+    training['target_ranking']={'weight':args.target_ranking_weight,'classes':list(TARGETS),
+                               'helper_sha256':sha(ROOT/'scripts/facility_target_ranking.py'),
+                               'scope':'Original verified TRAIN full photos only; same-source same-class asserted positive versus negative pairs; crops and unknowns excluded',
+                               'formula':'Mean softplus(negative_logit-positive_logit) within each contributing source-class group, then equal group mean; float32',
+                               'sampling_changed':False,'new_labels_asserted':0,'public_outputs_changed':False}
+    training['total_loss_formula']='Recorded base photo/pixel/auxiliary loss + target_ranking.weight * within-source full-photo ranking loss'
+    if protocol:
+        for key in ('classes','imgsz','batch_size','domain_proportions'):
+            if training[key]!=protocol[key]:raise ValueError(f'Protocol model/input condition differs: {key}')
+        training['study_protocol_sha256']=sha(args.study_protocol)
+        training['study_protocol_path']=args.study_protocol.relative_to(ROOT).as_posix()
     if auxiliary_weights is not None:training['auxiliary_positive_weights']=auxiliary_weights.detach().cpu().tolist()
     training['expected_sampling']={d:{'full':float(sampling[(domains==k)&(torch.arange(len(items))<full_count)].sum()/sampling.sum()),
                                      'crop':float(sampling[(domains==k)&(torch.arange(len(items))>=full_count)].sum()/sampling.sum())}
@@ -234,9 +265,19 @@ def main():
         model.train()
         if freeze:model.backbone.eval()
         total=0.;draws=torch.zeros(len(domain_map),dtype=torch.long);row_types=torch.zeros(2,dtype=torch.long)
+        ranking_total=0.;ranking_pairs=0;ranking_batches=0;ranking_groups={}
+        full_target_states={d:{state:0 for state in ('00','10','01','11','unknown')} for d in domain_map}
         for batch_number,batch in enumerate(loader,1):
             image,label,known,domain,mask,pixel_known=batch[:6]
             row_types+=torch.bincount(batch[-1],minlength=2)
+            for d,k in domain_map.items():
+                eligible=(domain==k)&(batch[-1]==0)
+                target_known=known[:,[classes.index(c) for c in TARGETS]].all(1)
+                full_target_states[d]['unknown']+=int((eligible&~target_known).sum())
+                for state in ('00','10','01','11'):
+                    chosen=eligible&target_known
+                    for j,c in enumerate(TARGETS):chosen&=(label[:,classes.index(c)]==int(state[j]))
+                    full_target_states[d][state]+=int(chosen.sum())
             draws+=torch.bincount(domain,minlength=len(domain_map));optimizer.zero_grad(set_to_none=True)
             with torch.autocast(device_type='cuda'):
                 if auxiliary is None:scores,maps=model.forward_details(image.to('cuda'))
@@ -244,6 +285,15 @@ def main():
                 loss=masked_focal(scores,label.to('cuda'),known.to('cuda'),weights[domain],1.,emphasis)+spatial_loss(maps,mask.to('cuda'),pixel_known.to('cuda'),pixel_weights)
                 if auxiliary is not None:
                     loss+=args.auxiliary_weight*masked_focal(auxiliary_scores,batch[6].to('cuda'),batch[7].to('cuda'),auxiliary_weights,1.)
+                if args.target_ranking_weight:
+                    ranking,ranking_audit=target_ranking_loss(scores,label.to('cuda'),known.to('cuda'),domain.to('cuda'),
+                                                            (batch[-1]==0).to('cuda'),[classes.index(c) for c in TARGETS])
+                    loss+=args.target_ranking_weight*ranking
+                    ranking_total+=float(ranking.detach())*len(image)
+                    ranking_pairs+=ranking_audit['pair_count'];ranking_batches+=int(ranking_audit['contributing_groups']>0)
+                    for group in ranking_audit['groups']:
+                        key=f"{group['domain']}:{group['target_index']}"
+                        ranking_groups[key]=ranking_groups.get(key,0)+group['pair_count']
             if not torch.isfinite(loss):raise ValueError('Nonfinite spatial training loss')
             scaler.scale(loss).backward();scaler.step(optimizer);scaler.update();total+=loss.item()*len(image)
             if batch_number%400==0:print(__import__('json').dumps({'epoch':epoch,'sampled_so_far':int(draws.sum()),'budget':draws_per_epoch}),flush=True)
@@ -253,6 +303,9 @@ def main():
         row={'epoch':epoch,'elapsed_minutes':(time.perf_counter()-start)/60,'train_loss':total/draws_per_epoch,'worst_target_error':worst,'sum_target_errors':sum_errors,
              'target_passed':all(p['target_passed'] for p in points.values()),'operating_points':points,'sampled_domain_counts':{d:int(draws[k]) for d,k in domain_map.items()},
              'sampled_row_type_counts':{'full':int(row_types[0]),'crop':int(row_types[1])},
+             'sampled_full_target_joint_counts':full_target_states,
+             'target_ranking_audit':{'unweighted_mean_batch_loss':ranking_total/draws_per_epoch,'pair_count':ranking_pairs,
+                                     'contributing_batches':ranking_batches,'pair_counts_by_domain_target':ranking_groups},
              'ranking_ap':{d:{label:average_precision(t[:,k],p[:,k]) for k,label in enumerate(classes) if (t[:,k]>=0).all()} for d,(t,p) in predictions.items()}}
         history.append(row);print(__import__('json').dumps({k:row[k] for k in ('epoch','elapsed_minutes','train_loss','worst_target_error','target_passed')}),flush=True)
         key=(worst,sum_errors)
