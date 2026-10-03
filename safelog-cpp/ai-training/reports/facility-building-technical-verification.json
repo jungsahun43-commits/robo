@@ -1,0 +1,105 @@
+{
+  "status": "passed",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "experiments": [
+    {
+      "run": "facility-presence-target-building-control",
+      "weights_sha256": "b7115fec0d8729f82386c6c0f743ef73dde7661dcdb78278ce98f7e2d5136494",
+      "public_shape": [
+        1,
+        7
+      ],
+      "private_spatial_shape": [
+        1,
+        7,
+        80,
+        80
+      ],
+      "training_auxiliary_shape": [
+        1,
+        19
+      ],
+      "public_and_training_public_logits_equal": true,
+      "all_outputs_finite": true
+    },
+    {
+      "run": "facility-presence-target-building-convid",
+      "weights_sha256": "d2278cea80e0b7bc68988b7041dc02b9f79408fee8a4c15b6104844107649194",
+      "public_shape": [
+        1,
+        7
+      ],
+      "private_spatial_shape": [
+        1,
+        7,
+        80,
+        80
+      ],
+      "training_auxiliary_shape": [
+        1,
+        19
+      ],
+      "public_and_training_public_logits_equal": true,
+      "all_outputs_finite": true
+    }
+  ],
+  "python": "3.12.14",
+  "torch": "2.12.0+cu126",
+  "device": "cpu",
+  "input": "One all-zero 1x3x640x640 tensor; tensor/API verification only",
+  "accuracy_measured_by_this_check": false,
+  "structural_safety_verified": false,
+  "convid_preflight_photos": 192,
+  "convid_manifest_sha256": "c218041bf84935178d58f116e0f466b64896f56f481f7596443e5aa3afe4acef",
+  "shared_trainer_sha256": "403d96f61b8e2f80f42fda12a0d4dfc991a0663bfc22820f618fd367842cee98",
+  "current_trainer_sha256": "1ea00770af295dddcd1575472ff108b72280e4121be0369650a7580ce3ec5c43",
+  "trainer_provenance_note": "Executed paired trainer SHA is taken from both immutable TRAINING records; later source-scope wording can differ from that historical code version",
+  "source_validator_sha256": "6f2d7d0354f5da3aa1c89becc4ae271fb26d2d72a877c87649d6a4e85566ca02",
+  "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+  "app_profile_unchanged": true,
+  "experimental_models_deployed": false,
+  "interrupted_setup": {
+    "completed_epochs": 0,
+    "last_observed_draws": 12800,
+    "adopted_checkpoint": false
+  },
+  "verification_script_sha256": "2631d446b0690e3db9f1083cce4dab382ef91ddc1c4b58751765944198b6e2d9",
+  "executed_source_snapshot": {
+    "git_commit": "b842cc27cbcd9349fb337603d3e51a55fe55af5e",
+    "blob_sha256": {
+      "train_facility_spatial.py": "403d96f61b8e2f80f42fda12a0d4dfc991a0663bfc22820f618fd367842cee98",
+      "facility_photo_supplement.py": "6f2d7d0354f5da3aa1c89becc4ae271fb26d2d72a877c87649d6a4e85566ca02"
+    },
+    "matches_executed_pair": true,
+    "later_trainer_change": "Only source-scope description corrected after both experiments finished; historical TRAINING records retained"
+  },
+  "unit_suite": {
+    "tests_passed": 118,
+    "failures": 0,
+    "scope": "Training labels, source provenance, split safety, sampling, inference and existing API contracts"
+  },
+  "source_visual_review": {
+    "existing_train_photos_ai_reviewed": 23,
+    "new_source_train_photos_ai_inspected": 8,
+    "expert_relabeling_performed": false,
+    "original_gold_changed": false
+  },
+  "frozen_metric_recalculation": {
+    "three_models_checked": 3,
+    "confusion_rows_checked": 18,
+    "confusion_counts_match": true,
+    "known_label_ap_values_checked": 42,
+    "max_ap_float_precision_difference": 8.36e-09,
+    "raw_and_frozen_probability_max_abs_difference": 0.0,
+    "unannotated_ap_remains_null": true,
+    "scope": "Same original source validation probabilities; numerical consistency, not external accuracy"
+  }
+}

@@ -16,10 +16,11 @@ from scripts.facility_photo_supplement import validate_photo_supplement
 
 def main():
     torch.set_num_threads(4)
-    entries = []
+    entries, trainings = [], []
     for name in (CONTROL, TREATMENT):
         run = ROOT / 'runs' / name
         training = read(run / 'TRAINING.json')
+        trainings.append(training)
         weights = run / 'best.pt'
         if training.get('status') != 'complete' or training['weights_sha256'] != sha(weights):
             raise ValueError('Only completed unchanged experimental checkpoints may be verified')
@@ -47,6 +48,11 @@ def main():
     previous = ROOT / 'reports/facility-inference-profile-round1.json'
     if sha(profile) != sha(previous):
         raise ValueError('App default profile changed during the research experiment')
+    for key in ('training_script_sha256', 'photo_supplement_helper_sha256'):
+        if trainings[0][key] != trainings[1][key]:
+            raise ValueError('Paired executed source versions differ')
+    if trainings[0]['photo_supplement_helper_sha256'] != sha(ROOT / 'scripts/facility_photo_supplement.py'):
+        raise ValueError('Source preflight validator changed after the paired experiment')
     interrupted_path = ROOT / 'runs/facility-presence-target-building-control-preflight-aborted/TRAINING.json'
     interrupted = read(interrupted_path) if interrupted_path.exists() else None
     if interrupted and (interrupted.get('status') != 'aborted' or interrupted.get('actual_epochs') != 0):
@@ -56,7 +62,9 @@ def main():
               'input': 'One all-zero 1x3x640x640 tensor; tensor/API verification only',
               'accuracy_measured_by_this_check': False, 'structural_safety_verified': False,
               'convid_preflight_photos': len(rows), 'convid_manifest_sha256': sha(ROOT / 'data/convid-training/train.json'),
-              'shared_trainer_sha256': sha(ROOT / 'scripts/train_facility_spatial.py'),
+              'shared_trainer_sha256': trainings[0]['training_script_sha256'],
+              'current_trainer_sha256': sha(ROOT / 'scripts/train_facility_spatial.py'),
+              'trainer_provenance_note': 'Executed paired trainer SHA is taken from both immutable TRAINING records; later source-scope wording can differ from that historical code version',
               'source_validator_sha256': sha(ROOT / 'scripts/facility_photo_supplement.py'),
               'app_profile_sha256': sha(profile), 'app_profile_unchanged': True, 'experimental_models_deployed': False,
               'interrupted_setup': {'completed_epochs': 0, 'last_observed_draws': interrupted['last_observed_sampling_progress'],

@@ -45,7 +45,7 @@ def main():
         ax.axhline(5,color='#216e39',linestyle='--',label='Target: strictly below 5%')
         ax.set_title(title,fontsize=11);ax.set_xlabel('Actual training epoch')
         ax.set_ylim(0,maximum);ax.set_xlim(.5,18.5);ax.grid(alpha=.2)
-        ax.legend(loc='lower right',fontsize=7,ncol=2)
+        ax.legend(loc='lower right',fontsize=7,ncol=2,framealpha=1.)
     axes[0].set_ylabel('Largest crack/spalling FNR or FPR (%)')
     fig.suptitle('Facility target: full-photo validation during training',fontsize=13)
     fig.text(.5,.025,'Source validation only. Panels use different domains. Circles mark best epochs; tests are not selection data.',ha='center',fontsize=8)

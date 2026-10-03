@@ -22,6 +22,10 @@ C++ 앱용 로컬 API 서버를 재현하기 위한 코드다. 원본 데이터�
 - 세부 태그 보강: [원본19종 보조 학습](reports/FACILITY_AUXILIARY_PLAN_KO.md). DACL TRAIN 전체 사진만 원래 태그로 함께 학습한다. 앱 추론은 기존7항목을 유지한다.
 - 이번 추가24epoch 결과: [이전 후보와 비교·한계·적용 상태](reports/FACILITY_CONTINUED_TRAINING_RESULTS_KO.md). 최대 검증 오류는 낮아졌지만 일부 자료·항목은 나빠졌고5% 목표는 미달이다.
 - 오류 검수와 작은 손상 비교: [실행 방법](FACILITY_REVIEW_AND_SMALL_REGION_KO.md), [같은 조건의 비교 계획](reports/FACILITY_EFFICIENT_DEVELOPMENT_PLAN_KO.md), [추가12epoch 실측 결과](reports/FACILITY_SMALL_REGION_RESULTS_KO.md). 보강군 최대 검증 오류23.15%는 대조군22.28%보다 높아 채택을 보류했다. 검수 의견은 자동 정답 변경으로 쓰지 않는다.
+- 새 콘크리트 사진 보강: [준비·비교 명령](reports/FACILITY_BUILDING_SUPPLEMENT_PLAN_KO.md), [ConViD192장 감사](reports/facility-convid-data-audit.json), [추가12epoch 실측 결과](reports/FACILITY_BUILDING_SUPPLEMENT_RESULTS_KO.md). 기존 후보22.28% /대조군22.80% /보강군22.85%로 최대 검증 미탐·오탐 개선을 확인하지 못해 앱에 적용하지 않았다. 사진마다 저자 폴더의 손상 하나만 양성이고 다른6종은 미확인이다. 공장 현장 평가 자료가 아니며 박락 정의의 전문가 검증도 완료되지 않았다.
+- 원본 TRAIN 검수: [23장 AI 육안 확인](reports/FACILITY_TRAIN_VISUAL_REVIEW_KO.md). 전문가 검수나 정답 수정이 아니며,140개 검수 대상 중117개는 아직 사진을 확인하지 않았다.
+- 새 자료 취득 상태: [공식 출처·라이선스·접근 조사](reports/INDUSTRIAL_SOURCE_RESEARCH_KO.md), [기존 산업체 자료의 재사용 한계](reports/INDUSTRIAL_REUSE_AUDIT_KO.md). PECCD는 공식 아카이브 SHA가 맞지만 숫자 클래스 대응이 미확인되어 학습0장이다.
+- 새 모델의 실제 파일 확인: [CPU 재로딩·7개 출력·코드 버전 확인](reports/facility-building-technical-verification.json). 정확도 측정과 별도이다. 실행 당시 코드는 commit `b842cc27cbcd9349fb337603d3e51a55fe55af5e`에 보존했고 이후 바뀐 trainer 설명 문구와 구분한다.
 
 이 실험들은 `runs/facility-presence-target-*`에 분리한다. 기본 서버 프로필은 기존 채택 버전
 `facility-validation-v2`이며, 새 실험 가중치를 기본 모델에 덮어쓰지 않는다.

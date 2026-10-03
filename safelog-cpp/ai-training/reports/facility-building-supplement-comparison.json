@@ -1,0 +1,1846 @@
+{
+  "schema": "facility_building_supplement_comparison_v1",
+  "split": "val",
+  "deployed": false,
+  "criterion": "Crack/spalling FNR and FPR each strictly <.05 in every recorded original domain; no test selection",
+  "matched_pair_conditions": {
+    "architecture": "lraspp_mobilenet_facility_auxiliary_v1",
+    "classes": [
+      "concrete_crack",
+      "concrete_spalling",
+      "rust_stain",
+      "exposed_rebar",
+      "wet_surface",
+      "efflorescence",
+      "surface_cavity"
+    ],
+    "imgsz": 640,
+    "split_sha256": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+    "initial_weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+    "seed": 52,
+    "requested_epochs": 6,
+    "actual_epochs": 6,
+    "patience": 6,
+    "backbone_lr": 4e-05,
+    "head_lr": 0.00025,
+    "auxiliary_manifest_sha256": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+    "auxiliary_classes": [
+      "ACrack",
+      "Bearing",
+      "Cavity",
+      "Crack",
+      "Drainage",
+      "EJoint",
+      "Efflorescence",
+      "ExposedRebars",
+      "Graffiti",
+      "Hollowareas",
+      "JTape",
+      "PEquipment",
+      "Restformwork",
+      "Rockpocket",
+      "Rust",
+      "Spalling",
+      "WConccor",
+      "Weathering",
+      "Wetspot"
+    ],
+    "auxiliary_weight": 0.5,
+    "training_script_sha256": "403d96f61b8e2f80f42fda12a0d4dfc991a0663bfc22820f618fd367842cee98",
+    "model_source_sha256": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+    "auxiliary_model_source_sha256": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+    "draws_per_epoch": 14248,
+    "core_spatial_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "train_dacl": 6225,
+    "train_damsegment": 1585,
+    "train_codebrim": 6438,
+    "val_dacl": 710,
+    "val_damsegment": 424,
+    "validation_domains": [
+      "dacl",
+      "damsegment",
+      "codebrim"
+    ],
+    "additional_validation": {
+      "path": "data/codebrim-training/val.json",
+      "sha256": "d17182c6070cfd73404de341f0662352441b1be5d983c85dfe5b0c86affed56e"
+    },
+    "additional_test": {
+      "path": "data/codebrim-training/test.json",
+      "sha256": "fa9a2bb648afb0e4164028c564e903d45c8bcf88d769c75aa97c99cdb51e4df5"
+    },
+    "loss": "Masked weighted focal photo presence + masked focal 8x8-cell source segmentation + .5 positive-class Dice + 0.5 masked original-DACL photo-tag focal",
+    "spatial_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "batch_size": 8,
+    "photo_supplement_helper_sha256": "6f2d7d0354f5da3aa1c89becc4ae271fb26d2d72a877c87649d6a4e85566ca02",
+    "control_domain_proportions": [
+      0.7,
+      0.1,
+      0.2
+    ],
+    "treatment_domain_proportions": [
+      0.63,
+      0.09,
+      0.18,
+      0.1
+    ],
+    "pixel_positive_weights": [
+      20.0,
+      20.0,
+      20.0,
+      20.0,
+      20.0,
+      20.0,
+      20.0
+    ],
+    "auxiliary_positive_weights": [
+      6.0,
+      6.0,
+      4.75323486328125,
+      3.0448343753814697,
+      5.901330471038818,
+      6.0,
+      3.5637829303741455,
+      6.0,
+      6.0,
+      5.32621955871582,
+      6.0,
+      4.2443132400512695,
+      6.0,
+      6.0,
+      1.0184824466705322,
+      1.118788242340088,
+      6.0,
+      1.5765728950500488,
+      6.0
+    ],
+    "photo_positive_weights": {
+      "control": {
+        "dacl": [
+          2.258023500442505,
+          1.0440680980682373,
+          1.506913661956787,
+          6.0,
+          6.0,
+          4.389140605926514,
+          5.489816188812256
+        ],
+        "damsegment": [
+          0.41150352358818054,
+          4.243687629699707,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224
+        ],
+        "codebrim": [
+          1.384360909461975,
+          2.4061999320983887,
+          3.7183494567871094,
+          3.6503729820251465,
+          0.20000000298023224,
+          6.0,
+          0.20000000298023224
+        ]
+      },
+      "treatment": {
+        "dacl": [
+          2.258023500442505,
+          1.0440680980682373,
+          1.506913661956787,
+          6.0,
+          6.0,
+          4.389140605926514,
+          5.489816188812256
+        ],
+        "damsegment": [
+          0.41150352358818054,
+          4.243687629699707,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224
+        ],
+        "codebrim": [
+          1.384360909461975,
+          2.4061999320983887,
+          3.7183494567871094,
+          3.6503729820251465,
+          0.20000000298023224,
+          6.0,
+          0.20000000298023224
+        ],
+        "convid": [
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224
+        ]
+      }
+    },
+    "original_pixel_cell_counts_preserved": true,
+    "original_conditional_full_crop_sampling_preserved": true,
+    "treatment_convid_photo_rows": 192
+  },
+  "experiments": [
+    {
+      "run": "facility-presence-target-roi-control",
+      "best_epoch": 6,
+      "actual_epochs": 6,
+      "weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+      "configured_grids": [
+        1
+      ],
+      "selected_grid": 1,
+      "per_class": {
+        "concrete_crack": {
+          "threshold": 0.2898597717285156,
+          "domains": {
+            "dacl": {
+              "tp": 164,
+              "fn": 47,
+              "fp": 110,
+              "tn": 389,
+              "positive_photos": 211,
+              "negative_photos": 499,
+              "fnr": 0.22274881516587677,
+              "fpr": 0.22044088176352705
+            },
+            "damsegment": {
+              "tp": 246,
+              "fn": 2,
+              "fp": 1,
+              "tn": 175,
+              "positive_photos": 248,
+              "negative_photos": 176,
+              "fnr": 0.008064516129032258,
+              "fpr": 0.005681818181818182
+            },
+            "codebrim": {
+              "tp": 138,
+              "fn": 11,
+              "fp": 58,
+              "tn": 404,
+              "positive_photos": 149,
+              "negative_photos": 462,
+              "fnr": 0.0738255033557047,
+              "fpr": 0.12554112554112554
+            }
+          }
+        },
+        "concrete_spalling": {
+          "threshold": 0.4649081826210022,
+          "domains": {
+            "dacl": {
+              "tp": 252,
+              "fn": 72,
+              "fp": 86,
+              "tn": 300,
+              "positive_photos": 324,
+              "negative_photos": 386,
+              "fnr": 0.2222222222222222,
+              "fpr": 0.22279792746113988
+            },
+            "damsegment": {
+              "tp": 47,
+              "fn": 11,
+              "fp": 8,
+              "tn": 358,
+              "positive_photos": 58,
+              "negative_photos": 366,
+              "fnr": 0.1896551724137931,
+              "fpr": 0.02185792349726776
+            },
+            "codebrim": {
+              "tp": 125,
+              "fn": 15,
+              "fp": 42,
+              "tn": 429,
+              "positive_photos": 140,
+              "negative_photos": 471,
+              "fnr": 0.10714285714285714,
+              "fpr": 0.08917197452229299
+            }
+          }
+        }
+      },
+      "worst_error": 0.22279792746113988,
+      "target_passed": false,
+      "small_dacl_polygon_area_below_one_percent": {
+        "concrete_crack": {
+          "positive_photos": 93,
+          "false_negatives": 29,
+          "fnr": 0.3118279569892473,
+          "bins": [
+            {
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 7,
+              "false_negatives": 4,
+              "fnr": 0.5714285714285714
+            },
+            {
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 86,
+              "false_negatives": 25,
+              "fnr": 0.29069767441860467
+            },
+            {
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 91,
+              "false_negatives": 16,
+              "fnr": 0.17582417582417584
+            },
+            {
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 27,
+              "false_negatives": 2,
+              "fnr": 0.07407407407407407
+            }
+          ]
+        },
+        "concrete_spalling": {
+          "positive_photos": 105,
+          "false_negatives": 42,
+          "fnr": 0.4,
+          "bins": [
+            {
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 13,
+              "false_negatives": 3,
+              "fnr": 0.23076923076923078
+            },
+            {
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 92,
+              "false_negatives": 39,
+              "fnr": 0.42391304347826086
+            },
+            {
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 118,
+              "false_negatives": 21,
+              "fnr": 0.17796610169491525
+            },
+            {
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 101,
+              "false_negatives": 9,
+              "fnr": 0.0891089108910891
+            }
+          ]
+        }
+      },
+      "ranking_ap": {
+        "dacl": {
+          "concrete_crack": {
+            "ap": 0.7967034789345012,
+            "known_photos": 710,
+            "positive_photos": 211.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.8193860678486287,
+            "known_photos": 710,
+            "positive_photos": 324.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8771424675301529,
+            "known_photos": 710,
+            "positive_photos": 366.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.7010134084995547,
+            "known_photos": 710,
+            "positive_photos": 80.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "wet_surface": {
+            "ap": 0.5126998044734818,
+            "known_photos": 710,
+            "positive_photos": 96.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": 0.7545079582755292,
+            "known_photos": 710,
+            "positive_photos": 159.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": 0.6044535413567332,
+            "known_photos": 710,
+            "positive_photos": 106.0,
+            "status": "measured_on_asserted_source_labels"
+          }
+        },
+        "damsegment": {
+          "concrete_crack": {
+            "ap": 0.9997504472515859,
+            "known_photos": 424,
+            "positive_photos": 248.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.8736213439816796,
+            "known_photos": 424,
+            "positive_photos": 58.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "exposed_rebar": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "wet_surface": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "efflorescence": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        },
+        "codebrim": {
+          "concrete_crack": {
+            "ap": 0.9394068402360061,
+            "known_photos": 611,
+            "positive_photos": 149.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.9095550380671625,
+            "known_photos": 611,
+            "positive_photos": 140.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8768946957775418,
+            "known_photos": 611,
+            "positive_photos": 146.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.9660424389173996,
+            "known_photos": 611,
+            "positive_photos": 142.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "wet_surface": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "efflorescence": {
+            "ap": 0.8297829106579927,
+            "known_photos": 611,
+            "positive_photos": 141.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        }
+      },
+      "expected_sampling": {
+        "dacl": {
+          "full": 0.43271940360795774,
+          "crop": 0.26728059639204244
+        },
+        "damsegment": {
+          "full": 0.07196204935330967,
+          "crop": 0.028037950646690377
+        },
+        "codebrim": {
+          "full": 0.20000000000000004,
+          "crop": 0.0
+        }
+      },
+      "expected_label_sampling": {
+        "concrete_crack": {
+          "positive": 0.3695514735040612,
+          "negative": 0.6303537728339692,
+          "unknown": 9.475366196983197e-05
+        },
+        "concrete_spalling": {
+          "positive": 0.4201726329537338,
+          "negative": 0.579673865344606,
+          "unknown": 0.00015350170166037846
+        },
+        "rust_stain": {
+          "positive": 0.3213927142090813,
+          "negative": 0.5780487596472467,
+          "unknown": 0.10055852614367232
+        },
+        "exposed_rebar": {
+          "positive": 0.11529577783709329,
+          "negative": 0.7846511793293323,
+          "unknown": 0.10005304283357465
+        },
+        "wet_surface": {
+          "positive": 0.08665274226006249,
+          "negative": 0.6131895860103063,
+          "unknown": 0.3001576717296314
+        },
+        "efflorescence": {
+          "positive": 0.1451698714546736,
+          "negative": 0.754454529520269,
+          "unknown": 0.10037559902505767
+        },
+        "surface_cavity": {
+          "positive": 0.10782262756435362,
+          "negative": 0.5919264038151378,
+          "unknown": 0.30025096862050876
+        }
+      },
+      "actual_sampling_history": [
+        {
+          "epoch": 1,
+          "domain_counts": {
+            "dacl": 9944,
+            "damsegment": 1495,
+            "codebrim": 2809
+          },
+          "row_type_counts": {
+            "full": 10060,
+            "crop": 4188
+          }
+        },
+        {
+          "epoch": 2,
+          "domain_counts": {
+            "dacl": 9945,
+            "damsegment": 1440,
+            "codebrim": 2863
+          },
+          "row_type_counts": {
+            "full": 10060,
+            "crop": 4188
+          }
+        },
+        {
+          "epoch": 3,
+          "domain_counts": {
+            "dacl": 10019,
+            "damsegment": 1390,
+            "codebrim": 2839
+          },
+          "row_type_counts": {
+            "full": 10013,
+            "crop": 4235
+          }
+        },
+        {
+          "epoch": 4,
+          "domain_counts": {
+            "dacl": 9888,
+            "damsegment": 1458,
+            "codebrim": 2902
+          },
+          "row_type_counts": {
+            "full": 10059,
+            "crop": 4189
+          }
+        },
+        {
+          "epoch": 5,
+          "domain_counts": {
+            "dacl": 9907,
+            "damsegment": 1441,
+            "codebrim": 2900
+          },
+          "row_type_counts": {
+            "full": 10191,
+            "crop": 4057
+          }
+        },
+        {
+          "epoch": 6,
+          "domain_counts": {
+            "dacl": 10034,
+            "damsegment": 1422,
+            "codebrim": 2792
+          },
+          "row_type_counts": {
+            "full": 10051,
+            "crop": 4197
+          }
+        }
+      ],
+      "provenance": {
+        "TRAINING.json": "f92448d7307b4552ad95f52f7af7c9b5f54a60ce39f6322a5ffed96e88cdadb9",
+        "VALIDATION.json": "dc54e1f6d1f3c7b1958019da0f60b3f77be96dbb709e88c15b0f3bceba316e6c",
+        "history.json": "dea16aa67612b0306eb57272710956a4f923be89ac2e21bd73d0c68106575bbb",
+        "TARGET-SELECTION.json": "ce7ba26db8b5f383900a00fb46493bcc39268452b6cafb192280e2d7acd6fdad",
+        "SPLIT.json": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10"
+      },
+      "test_executed": false,
+      "test_result": null
+    },
+    {
+      "run": "facility-presence-target-building-control",
+      "best_epoch": 3,
+      "actual_epochs": 6,
+      "weights_sha256": "b7115fec0d8729f82386c6c0f743ef73dde7661dcdb78278ce98f7e2d5136494",
+      "configured_grids": [
+        1
+      ],
+      "selected_grid": 1,
+      "per_class": {
+        "concrete_crack": {
+          "threshold": 0.37786245346069336,
+          "domains": {
+            "dacl": {
+              "tp": 166,
+              "fn": 45,
+              "fp": 106,
+              "tn": 393,
+              "positive_photos": 211,
+              "negative_photos": 499,
+              "fnr": 0.2132701421800948,
+              "fpr": 0.2124248496993988
+            },
+            "damsegment": {
+              "tp": 246,
+              "fn": 2,
+              "fp": 4,
+              "tn": 172,
+              "positive_photos": 248,
+              "negative_photos": 176,
+              "fnr": 0.008064516129032258,
+              "fpr": 0.022727272727272728
+            },
+            "codebrim": {
+              "tp": 140,
+              "fn": 9,
+              "fp": 61,
+              "tn": 401,
+              "positive_photos": 149,
+              "negative_photos": 462,
+              "fnr": 0.06040268456375839,
+              "fpr": 0.13203463203463203
+            }
+          }
+        },
+        "concrete_spalling": {
+          "threshold": 0.5003358721733093,
+          "domains": {
+            "dacl": {
+              "tp": 252,
+              "fn": 72,
+              "fp": 88,
+              "tn": 298,
+              "positive_photos": 324,
+              "negative_photos": 386,
+              "fnr": 0.2222222222222222,
+              "fpr": 0.22797927461139897
+            },
+            "damsegment": {
+              "tp": 47,
+              "fn": 11,
+              "fp": 15,
+              "tn": 351,
+              "positive_photos": 58,
+              "negative_photos": 366,
+              "fnr": 0.1896551724137931,
+              "fpr": 0.040983606557377046
+            },
+            "codebrim": {
+              "tp": 123,
+              "fn": 17,
+              "fp": 42,
+              "tn": 429,
+              "positive_photos": 140,
+              "negative_photos": 471,
+              "fnr": 0.12142857142857143,
+              "fpr": 0.08917197452229299
+            }
+          }
+        }
+      },
+      "worst_error": 0.22797927461139897,
+      "target_passed": false,
+      "small_dacl_polygon_area_below_one_percent": {
+        "concrete_crack": {
+          "positive_photos": 93,
+          "false_negatives": 31,
+          "fnr": 0.3333333333333333,
+          "bins": [
+            {
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 7,
+              "false_negatives": 4,
+              "fnr": 0.5714285714285714
+            },
+            {
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 86,
+              "false_negatives": 27,
+              "fnr": 0.313953488372093
+            },
+            {
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 91,
+              "false_negatives": 12,
+              "fnr": 0.13186813186813187
+            },
+            {
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 27,
+              "false_negatives": 2,
+              "fnr": 0.07407407407407407
+            }
+          ]
+        },
+        "concrete_spalling": {
+          "positive_photos": 105,
+          "false_negatives": 41,
+          "fnr": 0.3904761904761905,
+          "bins": [
+            {
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 13,
+              "false_negatives": 3,
+              "fnr": 0.23076923076923078
+            },
+            {
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 92,
+              "false_negatives": 38,
+              "fnr": 0.41304347826086957
+            },
+            {
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 118,
+              "false_negatives": 20,
+              "fnr": 0.1694915254237288
+            },
+            {
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 101,
+              "false_negatives": 11,
+              "fnr": 0.10891089108910891
+            }
+          ]
+        }
+      },
+      "ranking_ap": {
+        "dacl": {
+          "concrete_crack": {
+            "ap": 0.7969788870180785,
+            "known_photos": 710,
+            "positive_photos": 211.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.8138512474186832,
+            "known_photos": 710,
+            "positive_photos": 324.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8759756771966106,
+            "known_photos": 710,
+            "positive_photos": 366.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.6880055461049588,
+            "known_photos": 710,
+            "positive_photos": 80.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "wet_surface": {
+            "ap": 0.5103370027513067,
+            "known_photos": 710,
+            "positive_photos": 96.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": 0.7452367162386474,
+            "known_photos": 710,
+            "positive_photos": 159.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": 0.6097834233256517,
+            "known_photos": 710,
+            "positive_photos": 106.0,
+            "status": "measured_on_asserted_source_labels"
+          }
+        },
+        "damsegment": {
+          "concrete_crack": {
+            "ap": 0.9995708333545812,
+            "known_photos": 424,
+            "positive_photos": 248.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.875697877273133,
+            "known_photos": 424,
+            "positive_photos": 58.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "exposed_rebar": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "wet_surface": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "efflorescence": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        },
+        "codebrim": {
+          "concrete_crack": {
+            "ap": 0.9390016518459876,
+            "known_photos": 611,
+            "positive_photos": 149.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.9158086945982515,
+            "known_photos": 611,
+            "positive_photos": 140.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8761973615133155,
+            "known_photos": 611,
+            "positive_photos": 146.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.966182668275232,
+            "known_photos": 611,
+            "positive_photos": 142.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "wet_surface": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "efflorescence": {
+            "ap": 0.8378343503706944,
+            "known_photos": 611,
+            "positive_photos": 141.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        }
+      },
+      "expected_sampling": {
+        "dacl": {
+          "full": 0.43271940360795774,
+          "crop": 0.26728059639204244
+        },
+        "damsegment": {
+          "full": 0.07196204935330967,
+          "crop": 0.028037950646690377
+        },
+        "codebrim": {
+          "full": 0.20000000000000004,
+          "crop": 0.0
+        }
+      },
+      "expected_label_sampling": {
+        "concrete_crack": {
+          "positive": 0.3695514735040612,
+          "negative": 0.6303537728339692,
+          "unknown": 9.475366196983197e-05
+        },
+        "concrete_spalling": {
+          "positive": 0.4201726329537338,
+          "negative": 0.579673865344606,
+          "unknown": 0.00015350170166037846
+        },
+        "rust_stain": {
+          "positive": 0.3213927142090813,
+          "negative": 0.5780487596472467,
+          "unknown": 0.10055852614367232
+        },
+        "exposed_rebar": {
+          "positive": 0.11529577783709329,
+          "negative": 0.7846511793293323,
+          "unknown": 0.10005304283357465
+        },
+        "wet_surface": {
+          "positive": 0.08665274226006249,
+          "negative": 0.6131895860103063,
+          "unknown": 0.3001576717296314
+        },
+        "efflorescence": {
+          "positive": 0.1451698714546736,
+          "negative": 0.754454529520269,
+          "unknown": 0.10037559902505767
+        },
+        "surface_cavity": {
+          "positive": 0.10782262756435362,
+          "negative": 0.5919264038151378,
+          "unknown": 0.30025096862050876
+        }
+      },
+      "actual_sampling_history": [
+        {
+          "epoch": 1,
+          "domain_counts": {
+            "dacl": 10090,
+            "damsegment": 1398,
+            "codebrim": 2760
+          },
+          "row_type_counts": {
+            "full": 9982,
+            "crop": 4266
+          }
+        },
+        {
+          "epoch": 2,
+          "domain_counts": {
+            "dacl": 9987,
+            "damsegment": 1393,
+            "codebrim": 2868
+          },
+          "row_type_counts": {
+            "full": 9970,
+            "crop": 4278
+          }
+        },
+        {
+          "epoch": 3,
+          "domain_counts": {
+            "dacl": 9944,
+            "damsegment": 1447,
+            "codebrim": 2857
+          },
+          "row_type_counts": {
+            "full": 10067,
+            "crop": 4181
+          }
+        },
+        {
+          "epoch": 4,
+          "domain_counts": {
+            "dacl": 9919,
+            "damsegment": 1455,
+            "codebrim": 2874
+          },
+          "row_type_counts": {
+            "full": 10070,
+            "crop": 4178
+          }
+        },
+        {
+          "epoch": 5,
+          "domain_counts": {
+            "dacl": 9963,
+            "damsegment": 1432,
+            "codebrim": 2853
+          },
+          "row_type_counts": {
+            "full": 10041,
+            "crop": 4207
+          }
+        },
+        {
+          "epoch": 6,
+          "domain_counts": {
+            "dacl": 9969,
+            "damsegment": 1395,
+            "codebrim": 2884
+          },
+          "row_type_counts": {
+            "full": 10016,
+            "crop": 4232
+          }
+        }
+      ],
+      "provenance": {
+        "TRAINING.json": "953d5e5f2bae36a8a98be604e815a2636febd94ca6d01357ba4321213dac34a9",
+        "VALIDATION.json": "9448628c1a25513adb04880079604d2213624eadb140a619208dce6a6125107e",
+        "history.json": "9cfe0919e8eeb91b17af5f3cb4f7ff4ad762f157f0994add1946ba2ebc473e7b",
+        "TARGET-SELECTION.json": "90ca0502b2510985c5f7ff80684ff662011f8b87d1f93e26faebf90fe177eec2",
+        "SPLIT.json": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10"
+      },
+      "test_executed": false,
+      "test_result": null
+    },
+    {
+      "run": "facility-presence-target-building-convid",
+      "best_epoch": 3,
+      "actual_epochs": 6,
+      "weights_sha256": "d2278cea80e0b7bc68988b7041dc02b9f79408fee8a4c15b6104844107649194",
+      "configured_grids": [
+        1
+      ],
+      "selected_grid": 1,
+      "per_class": {
+        "concrete_crack": {
+          "threshold": 0.3305392563343048,
+          "domains": {
+            "dacl": {
+              "tp": 163,
+              "fn": 48,
+              "fp": 114,
+              "tn": 385,
+              "positive_photos": 211,
+              "negative_photos": 499,
+              "fnr": 0.22748815165876776,
+              "fpr": 0.22845691382765532
+            },
+            "damsegment": {
+              "tp": 245,
+              "fn": 3,
+              "fp": 0,
+              "tn": 176,
+              "positive_photos": 248,
+              "negative_photos": 176,
+              "fnr": 0.012096774193548387,
+              "fpr": 0.0
+            },
+            "codebrim": {
+              "tp": 141,
+              "fn": 8,
+              "fp": 52,
+              "tn": 410,
+              "positive_photos": 149,
+              "negative_photos": 462,
+              "fnr": 0.053691275167785234,
+              "fpr": 0.11255411255411256
+            }
+          }
+        },
+        "concrete_spalling": {
+          "threshold": 0.423514723777771,
+          "domains": {
+            "dacl": {
+              "tp": 251,
+              "fn": 73,
+              "fp": 86,
+              "tn": 300,
+              "positive_photos": 324,
+              "negative_photos": 386,
+              "fnr": 0.22530864197530864,
+              "fpr": 0.22279792746113988
+            },
+            "damsegment": {
+              "tp": 47,
+              "fn": 11,
+              "fp": 12,
+              "tn": 354,
+              "positive_photos": 58,
+              "negative_photos": 366,
+              "fnr": 0.1896551724137931,
+              "fpr": 0.03278688524590164
+            },
+            "codebrim": {
+              "tp": 127,
+              "fn": 13,
+              "fp": 49,
+              "tn": 422,
+              "positive_photos": 140,
+              "negative_photos": 471,
+              "fnr": 0.09285714285714286,
+              "fpr": 0.1040339702760085
+            }
+          }
+        }
+      },
+      "worst_error": 0.22845691382765532,
+      "target_passed": false,
+      "small_dacl_polygon_area_below_one_percent": {
+        "concrete_crack": {
+          "positive_photos": 93,
+          "false_negatives": 32,
+          "fnr": 0.34408602150537637,
+          "bins": [
+            {
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 7,
+              "false_negatives": 5,
+              "fnr": 0.7142857142857143
+            },
+            {
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 86,
+              "false_negatives": 27,
+              "fnr": 0.313953488372093
+            },
+            {
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 91,
+              "false_negatives": 12,
+              "fnr": 0.13186813186813187
+            },
+            {
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 27,
+              "false_negatives": 4,
+              "fnr": 0.14814814814814814
+            }
+          ]
+        },
+        "concrete_spalling": {
+          "positive_photos": 105,
+          "false_negatives": 41,
+          "fnr": 0.3904761904761905,
+          "bins": [
+            {
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 13,
+              "false_negatives": 2,
+              "fnr": 0.15384615384615385
+            },
+            {
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 92,
+              "false_negatives": 39,
+              "fnr": 0.42391304347826086
+            },
+            {
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 118,
+              "false_negatives": 23,
+              "fnr": 0.19491525423728814
+            },
+            {
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 101,
+              "false_negatives": 9,
+              "fnr": 0.0891089108910891
+            }
+          ]
+        }
+      },
+      "ranking_ap": {
+        "dacl": {
+          "concrete_crack": {
+            "ap": 0.7816448157896321,
+            "known_photos": 710,
+            "positive_photos": 211.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.824560873986951,
+            "known_photos": 710,
+            "positive_photos": 324.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8740327796953565,
+            "known_photos": 710,
+            "positive_photos": 366.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.6539935037068927,
+            "known_photos": 710,
+            "positive_photos": 80.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "wet_surface": {
+            "ap": 0.5043170315068871,
+            "known_photos": 710,
+            "positive_photos": 96.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": 0.7398049520627283,
+            "known_photos": 710,
+            "positive_photos": 159.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": 0.6052985893840037,
+            "known_photos": 710,
+            "positive_photos": 106.0,
+            "status": "measured_on_asserted_source_labels"
+          }
+        },
+        "damsegment": {
+          "concrete_crack": {
+            "ap": 0.9998879235973528,
+            "known_photos": 424,
+            "positive_photos": 248.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.8672460868097864,
+            "known_photos": 424,
+            "positive_photos": 58.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "exposed_rebar": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "wet_surface": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "efflorescence": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        },
+        "codebrim": {
+          "concrete_crack": {
+            "ap": 0.9309925976641417,
+            "known_photos": 611,
+            "positive_photos": 149.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.9014228522295261,
+            "known_photos": 611,
+            "positive_photos": 140.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8585451206768822,
+            "known_photos": 611,
+            "positive_photos": 146.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.9685547221605326,
+            "known_photos": 611,
+            "positive_photos": 142.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "wet_surface": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "efflorescence": {
+            "ap": 0.8259108967384128,
+            "known_photos": 611,
+            "positive_photos": 141.0,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        }
+      },
+      "expected_sampling": {
+        "dacl": {
+          "full": 0.3894474632471618,
+          "crop": 0.24055253675283814
+        },
+        "damsegment": {
+          "full": 0.06476584441797868,
+          "crop": 0.025234155582021328
+        },
+        "codebrim": {
+          "full": 0.17999999999999994,
+          "crop": 0.0
+        },
+        "convid": {
+          "full": 0.09999999999999995,
+          "crop": 0.0
+        }
+      },
+      "expected_label_sampling": {
+        "concrete_crack": {
+          "positive": 0.38163917412249837,
+          "negative": 0.5673183955505723,
+          "unknown": 0.051042430326929206
+        },
+        "concrete_spalling": {
+          "positive": 0.42911252168951663,
+          "negative": 0.5217064788101454,
+          "unknown": 0.049180999500337975
+        },
+        "rust_stain": {
+          "positive": 0.2892534427881731,
+          "negative": 0.5202438836825217,
+          "unknown": 0.190502673529305
+        },
+        "exposed_rebar": {
+          "positive": 0.10376620005338394,
+          "negative": 0.7061860613963988,
+          "unknown": 0.1900477385502171
+        },
+        "wet_surface": {
+          "positive": 0.07798746803405622,
+          "negative": 0.5518706274092755,
+          "unknown": 0.3701419045566681
+        },
+        "efflorescence": {
+          "positive": 0.1306528843092062,
+          "negative": 0.6790090765682418,
+          "unknown": 0.19033803912255182
+        },
+        "surface_cavity": {
+          "positive": 0.09704036480791822,
+          "negative": 0.5327337634336239,
+          "unknown": 0.37022587175845784
+        }
+      },
+      "actual_sampling_history": [
+        {
+          "epoch": 1,
+          "domain_counts": {
+            "dacl": 9107,
+            "damsegment": 1271,
+            "codebrim": 2472,
+            "convid": 1398
+          },
+          "row_type_counts": {
+            "full": 10406,
+            "crop": 3842
+          }
+        },
+        {
+          "epoch": 2,
+          "domain_counts": {
+            "dacl": 8950,
+            "damsegment": 1289,
+            "codebrim": 2556,
+            "convid": 1453
+          },
+          "row_type_counts": {
+            "full": 10418,
+            "crop": 3830
+          }
+        },
+        {
+          "epoch": 3,
+          "domain_counts": {
+            "dacl": 8937,
+            "damsegment": 1269,
+            "codebrim": 2644,
+            "convid": 1398
+          },
+          "row_type_counts": {
+            "full": 10496,
+            "crop": 3752
+          }
+        },
+        {
+          "epoch": 4,
+          "domain_counts": {
+            "dacl": 8962,
+            "damsegment": 1252,
+            "codebrim": 2579,
+            "convid": 1455
+          },
+          "row_type_counts": {
+            "full": 10488,
+            "crop": 3760
+          }
+        },
+        {
+          "epoch": 5,
+          "domain_counts": {
+            "dacl": 9000,
+            "damsegment": 1280,
+            "codebrim": 2630,
+            "convid": 1338
+          },
+          "row_type_counts": {
+            "full": 10443,
+            "crop": 3805
+          }
+        },
+        {
+          "epoch": 6,
+          "domain_counts": {
+            "dacl": 8939,
+            "damsegment": 1293,
+            "codebrim": 2541,
+            "convid": 1475
+          },
+          "row_type_counts": {
+            "full": 10443,
+            "crop": 3805
+          }
+        }
+      ],
+      "provenance": {
+        "TRAINING.json": "58fa61dbb01ca983ff969df28bc5d4ba72959eecd7c5cb5318c6595d4b30c172",
+        "VALIDATION.json": "bfa11a06f52b8564562255b62cd895b0afe7dc25057e58ae95228f9ae90a776e",
+        "history.json": "3d847bc82d7a49952ead8e829b9588a5375f394fe30a085b3f0aaed6aef9e27d",
+        "TARGET-SELECTION.json": "f806d2edf7b8fc81ca64550bd2847bb2c67931f7edd3271eb9adbab73b88426c",
+        "SPLIT.json": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10"
+      },
+      "test_executed": false,
+      "test_result": null
+    }
+  ],
+  "comparisons": {
+    "error_rate_changes": [
+      {
+        "class": "concrete_crack",
+        "domain": "dacl",
+        "treatment_minus_control_fnr_pp": 1.4218009478672966,
+        "treatment_minus_control_fpr_pp": 1.603206412825653,
+        "control_minus_initializer_fnr_pp": -0.9478672985781977,
+        "control_minus_initializer_fpr_pp": -0.8016032064128265,
+        "treatment_minus_initializer_fnr_pp": 0.47393364928909887,
+        "treatment_minus_initializer_fpr_pp": 0.8016032064128265
+      },
+      {
+        "class": "concrete_crack",
+        "domain": "damsegment",
+        "treatment_minus_control_fnr_pp": 0.4032258064516129,
+        "treatment_minus_control_fpr_pp": -2.272727272727273,
+        "control_minus_initializer_fnr_pp": 0.0,
+        "control_minus_initializer_fpr_pp": 1.7045454545454544,
+        "treatment_minus_initializer_fnr_pp": 0.4032258064516129,
+        "treatment_minus_initializer_fpr_pp": -0.5681818181818182
+      },
+      {
+        "class": "concrete_crack",
+        "domain": "codebrim",
+        "treatment_minus_control_fnr_pp": -0.6711409395973158,
+        "treatment_minus_control_fpr_pp": -1.9480519480519474,
+        "control_minus_initializer_fnr_pp": -1.342281879194631,
+        "control_minus_initializer_fpr_pp": 0.6493506493506496,
+        "treatment_minus_initializer_fnr_pp": -2.013422818791947,
+        "treatment_minus_initializer_fpr_pp": -1.2987012987012978
+      },
+      {
+        "class": "concrete_spalling",
+        "domain": "dacl",
+        "treatment_minus_control_fnr_pp": 0.30864197530864335,
+        "treatment_minus_control_fpr_pp": -0.5181347150259086,
+        "control_minus_initializer_fnr_pp": 0.0,
+        "control_minus_initializer_fpr_pp": 0.5181347150259086,
+        "treatment_minus_initializer_fnr_pp": 0.30864197530864335,
+        "treatment_minus_initializer_fpr_pp": 0.0
+      },
+      {
+        "class": "concrete_spalling",
+        "domain": "damsegment",
+        "treatment_minus_control_fnr_pp": 0.0,
+        "treatment_minus_control_fpr_pp": -0.8196721311475406,
+        "control_minus_initializer_fnr_pp": 0.0,
+        "control_minus_initializer_fpr_pp": 1.9125683060109286,
+        "treatment_minus_initializer_fnr_pp": 0.0,
+        "treatment_minus_initializer_fpr_pp": 1.092896174863388
+      },
+      {
+        "class": "concrete_spalling",
+        "domain": "codebrim",
+        "treatment_minus_control_fnr_pp": -2.8571428571428568,
+        "treatment_minus_control_fpr_pp": 1.486199575371551,
+        "control_minus_initializer_fnr_pp": 1.428571428571429,
+        "control_minus_initializer_fpr_pp": 0.0,
+        "treatment_minus_initializer_fnr_pp": -1.4285714285714277,
+        "treatment_minus_initializer_fpr_pp": 1.486199575371551
+      }
+    ],
+    "small_area_changes": [
+      {
+        "class": "concrete_crack",
+        "treatment_minus_control_fnr_pp": 1.0752688172043057,
+        "control_minus_initializer_fnr_pp": 2.1505376344086002,
+        "treatment_minus_initializer_fnr_pp": 3.2258064516129057
+      },
+      {
+        "class": "concrete_spalling",
+        "treatment_minus_control_fnr_pp": 0.0,
+        "control_minus_initializer_fnr_pp": -0.9523809523809545,
+        "treatment_minus_initializer_fnr_pp": -0.9523809523809545
+      }
+    ],
+    "ranking_ap_changes": [
+      {
+        "class": "concrete_crack",
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.015334071228446433,
+        "control_minus_initializer_ap": 0.00027540808357728874,
+        "treatment_minus_initializer_ap": -0.015058663144869144
+      },
+      {
+        "class": "concrete_spalling",
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.010709626568267794,
+        "control_minus_initializer_ap": -0.005534820429945464,
+        "treatment_minus_initializer_ap": 0.00517480613832233
+      },
+      {
+        "class": "rust_stain",
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.0019428975012540928,
+        "control_minus_initializer_ap": -0.001166790333542278,
+        "treatment_minus_initializer_ap": -0.003109687834796371
+      },
+      {
+        "class": "exposed_rebar",
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.0340120423980661,
+        "control_minus_initializer_ap": -0.013007862394595948,
+        "treatment_minus_initializer_ap": -0.04701990479266205
+      },
+      {
+        "class": "wet_surface",
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.006019971244419553,
+        "control_minus_initializer_ap": -0.0023628017221751785,
+        "treatment_minus_initializer_ap": -0.008382772966594731
+      },
+      {
+        "class": "efflorescence",
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.005431764175919063,
+        "control_minus_initializer_ap": -0.009271242036881788,
+        "treatment_minus_initializer_ap": -0.014703006212800851
+      },
+      {
+        "class": "surface_cavity",
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.004484833941648003,
+        "control_minus_initializer_ap": 0.005329881968918482,
+        "treatment_minus_initializer_ap": 0.0008450480272704786
+      },
+      {
+        "class": "concrete_crack",
+        "domain": "damsegment",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.00031709024277160047,
+        "control_minus_initializer_ap": -0.00017961389700471564,
+        "treatment_minus_initializer_ap": 0.00013747634576688483
+      },
+      {
+        "class": "concrete_spalling",
+        "domain": "damsegment",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.008451790463346542,
+        "control_minus_initializer_ap": 0.0020765332914534085,
+        "treatment_minus_initializer_ap": -0.006375257171893134
+      },
+      {
+        "class": "rust_stain",
+        "domain": "damsegment",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "control_minus_initializer_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "exposed_rebar",
+        "domain": "damsegment",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "control_minus_initializer_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "wet_surface",
+        "domain": "damsegment",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "control_minus_initializer_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "efflorescence",
+        "domain": "damsegment",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "control_minus_initializer_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "surface_cavity",
+        "domain": "damsegment",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "control_minus_initializer_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "concrete_crack",
+        "domain": "codebrim",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.008009054181845943,
+        "control_minus_initializer_ap": -0.00040518839001846274,
+        "treatment_minus_initializer_ap": -0.008414242571864405
+      },
+      {
+        "class": "concrete_spalling",
+        "domain": "codebrim",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.014385842368725421,
+        "control_minus_initializer_ap": 0.0062536565310890024,
+        "treatment_minus_initializer_ap": -0.008132185837636419
+      },
+      {
+        "class": "rust_stain",
+        "domain": "codebrim",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.017652240836433353,
+        "control_minus_initializer_ap": -0.0006973342642262459,
+        "treatment_minus_initializer_ap": -0.0183495751006596
+      },
+      {
+        "class": "exposed_rebar",
+        "domain": "codebrim",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.0023720538853005957,
+        "control_minus_initializer_ap": 0.00014022935783242207,
+        "treatment_minus_initializer_ap": 0.0025122832431330178
+      },
+      {
+        "class": "wet_surface",
+        "domain": "codebrim",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "control_minus_initializer_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "efflorescence",
+        "domain": "codebrim",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.011923453632281644,
+        "control_minus_initializer_ap": 0.008051439712701725,
+        "treatment_minus_initializer_ap": -0.0038720139195799197
+      },
+      {
+        "class": "surface_cavity",
+        "domain": "codebrim",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "control_minus_initializer_ap": null,
+        "treatment_minus_initializer_ap": null
+      }
+    ],
+    "maximum_error_treatment_minus_control_pp": 0.04776392162563481,
+    "maximum_error_control_minus_initializer_pp": 0.5181347150259086,
+    "maximum_error_treatment_minus_initializer_pp": 0.5658986366515434
+  },
+  "supplement": {
+    "train_photos": 192,
+    "manifest_sha256": "c218041bf84935178d58f116e0f466b64896f56f481f7596443e5aa3afe4acef",
+    "photo_label_counts": {
+      "concrete_crack": {
+        "-1": 100,
+        "0": 0,
+        "1": 92
+      },
+      "concrete_spalling": {
+        "-1": 92,
+        "0": 0,
+        "1": 100
+      },
+      "rust_stain": {
+        "-1": 192,
+        "0": 0,
+        "1": 0
+      },
+      "exposed_rebar": {
+        "-1": 192,
+        "0": 0,
+        "1": 0
+      },
+      "wet_surface": {
+        "-1": 192,
+        "0": 0,
+        "1": 0
+      },
+      "efflorescence": {
+        "-1": 192,
+        "0": 0,
+        "1": 0
+      },
+      "surface_cavity": {
+        "-1": 192,
+        "0": 0,
+        "1": 0
+      }
+    },
+    "source_audit": {
+      "status": "prepared",
+      "source_index_sha256": "7d10a985b47334894cd0e871a5416a565f20a000610e924f2fb825999e47e211",
+      "source_pick_sha256": "5016204d5ad1d8a230c3515d1c077748344dd4671233bac03321c0290124fecc",
+      "audit_file_sha256": "2db2c219462f2f8ffeca4f01f763219a7373def78d6f43b9ae20332f9b18972d",
+      "preparation_script_sha256": "46766a64a8fc26b3094903cd3d0b06195a00a1c341e06b84546641538fc18a5f",
+      "selected_photos": 192
+    },
+    "pixel_known_cells": 0,
+    "auxiliary_photo_tag_labels_asserted": 0,
+    "scope": "Official ConViD V4 crack/Spalling folder positives used for TRAIN only; each photo asserts one positive and leaves all other six labels unknown; no pixel regions, source evaluation or industrial field validation"
+  },
+  "new_training_epochs": 12,
+  "convid_source_evaluation_executed": false,
+  "industrial_field_performance_measured": false,
+  "peccd_prepared_training_photos": 0,
+  "peccd_training_photos": 0,
+  "peccd_preparation_limitation": "Native numeric class authority and complete extraction verification unresolved; not used for training",
+  "app_profile": {
+    "version": "facility-validation-v2",
+    "sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+    "previous_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+    "unchanged": true
+  },
+  "limitations": [
+    "Single seed; repeated original-source validation checkpoint/cutoff selection",
+    "Official V4 folder asserts one photo-level positive only; no segmentation labels inferred",
+    "All other six labels unknown per ConViD photo; no ConViD or industrial field accuracy evaluation",
+    "Author Spalling folder mapped to concrete_spalling; class-definition compatibility not expert-verified and source labels not relabeled",
+    "Scene IDs unavailable; heuristic overlap screening does not prove independent scenes",
+    "Fixed draw budget, old conditional item/crop sampling retained, old domain mass intentionally reduced to .90"
+  ],
+  "report_script_sha256": "ae27b9dea46f7a8fc0b430f98699785c2e001eefa67f4b26d14bb8c9e6e72b6b"
+}

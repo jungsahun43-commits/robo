@@ -182,6 +182,11 @@ def render(result):
     lines += ['', f"대조군 − 초기 모델 최대 오류: {change['maximum_error_control_minus_initializer_pp']:+.2f}pp. 보강군 − 초기 모델: {change['maximum_error_treatment_minus_initializer_pp']:+.2f}pp. 보강군 − 대조군: {change['maximum_error_treatment_minus_control_pp']:+.2f}pp.",
               '양수는 악화, 음수는 개선이다. 대조군의 추가 학습이 초기 모델보다 나빠졌거나 일부 출처·항목이 나빠진 결과도 아래에 그대로 기록한다.',
               '미탐 FN/(TP+FN), 오탐 FP/(FP+TN)이 균열·박락 각각과 세 출처 각각에서 모두 5% 미만이어야 통과한다. 최대값은 전체 앱 오답 사진 비율이 아니다.', '']
+    if change['maximum_error_treatment_minus_control_pp'] >= 0 and not entries[2]['target_passed']:
+        lines += ['## 이번 결정', '',
+                  '이 보강 recipe는 채택하지 않는다. 최대 오류 개선을 확인하지 못했고 기존 후보보다도 나빠졌다. 일부 항목의 개선을 전체 성공으로 합치지 않으며 앱 기본 프로필을 유지한다.',
+                  '동일 조건 한 쌍만의 결과이므로 ConViD 자료 전체가 유용하지 않다는 결론은 아니다. 양성 폴더만의 보강, 저자 손상 정의의 차이, 기존 출처 추출 총량 감소 중 어느 것이 원인인지는 분리하지 않았다.',
+                  '후속 우선순위는 박락·도장/미장층 손상의 정의 확인과 정상 콘크리트 사진을 포함한 자료 준비다. 추가 epoch만 늘려5%를 보장하지 않는다.', '']
     for e in entries:
         lines += [f"## {TITLES[e['run']]} 상세 검증", '', '| 자료 | 항목 | 미탐/양성 | 미탐률 | 오탐/음성 | 오탐률 |', '|---|---|---:|---:|---:|---:|']
         for label in TARGETS:

@@ -225,7 +225,7 @@ def main():
                                     supplement_scope='Author TRAIN only; original scene IDs unavailable, heuristic crop screen does not prove field independence; S2DS val/test never selected')
     if photo_supplement:training.update({f"train_{photo_supplement['items'][0]['domain']}":len(photo_supplement['items'])},photo_supplement_path=args.photo_supplement.relative_to(ROOT).as_posix(),
                                        photo_supplement_sha256=sha(args.photo_supplement),photo_supplement_audit=photo_supplement['audit'],
-                                       photo_supplement_scope='Verified building photos TRAIN-only; source scene IDs unavailable, overlap screening is heuristic, no source/industrial test or new pixel truth',
+                                       photo_supplement_scope='Verified source files TRAIN-only; facility type unverified, scene IDs unavailable, overlap screening is heuristic, no source/industrial test or new pixel truth',
                                        core_sampling_policy='Original source item weights and crop balance preserved; original domain mass scaled to .90 and .10 assigned to building supplement')
     save(output/'TRAINING.json',training);history=[];best=None;bad=0;start=time.perf_counter()
     for epoch in range(1,epochs+1):
