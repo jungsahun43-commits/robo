@@ -1,0 +1,147 @@
+{
+  "schema": "facility_review_feedback_technical_verification_v1",
+  "created_utc": "2026-10-04T17:24:23.709449+00:00",
+  "scope": "Opinion tooling verification, not accuracy improvement or expert label adjudication",
+  "source_code_sha256": {
+    "safelog_ai/review_feedback.py": "2e9841a2ada1cf9cd332362c3aa27655ab31edc1c829436e0de174e7812e6328",
+    "scripts/build_facility_review_workbench.py": "39a239e98fc1e5cdc5810e470bea6a73ff7fb2da4ea18604c538d6b0871da0a7",
+    "scripts/summarize_facility_review_feedback.py": "d49ab16c2fd7fbe09126f2826b276db2bea726ea18db24f56178d2d0a1e9b1fb",
+    "review-ui/review-workbench.js": "b2241d24214956e670cc414a1d6e83cb9501bdfb8b5c6ede5ca10d765a38b765",
+    "review-ui/review-workbench.css": "af9c01dd4b9dff4a7ec4c674b87895addef5cc6f659f7356017a1a20259370d3",
+    "tests/test_facility_review_feedback.py": "6d44735ec8bf490a5b8e1223dcbff1aacb44a961ba54b2876b3d8364fb6fe08b",
+    "tests/test_facility_review_workbench.py": "84a427d406d1f13a84bc425761b6e3f24aa3087a87509b1f2e61463a70ef36b3",
+    "tests/test_facility_review_interop.py": "ae9aa6c6268fa224071502f817896ef9a044b9342dfc05b3793e9b3b2a4bd357",
+    "tests/test_facility_train_review.py": "9a61e3f3f778f9c32563db442cb1525f7cd44fb0d2b97b0c58fcce9f71a91715",
+    "tests/review_workbench.test.cjs": "81b5226fda14e521170c506d99ad0127ab078ff57b23d30ab43ea8274338c196",
+    "tests/review_workbench_interop.cjs": "04e149c4e2f5ab62c973c50a12c8a11d155404dd340df476486ce37ae3ecad30"
+  },
+  "source_package_sha256": "2c63eec39546f9944cc6475f2321e4499363fec087d23ecdb76b69d1e849a660",
+  "source_package_file_sha256": "f6fc9def0f80e51ea3efff156e2dc8e37ec017eab2088d1f256d08ad3bbf6b33",
+  "model_sha256_metadata": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+  "model_file_reloaded": false,
+  "source_package_unchanged": true,
+  "old_index_html_unchanged": true,
+  "verified_unique_source_assets": 326,
+  "verified_reference_asset_bytes": true,
+  "workbench_source_assets_match": true,
+  "workbench_case_count": 130,
+  "python_tests": {
+    "passed": 26,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "includes_original_train_review_tests": 5
+  },
+  "node_tests": {
+    "passed": 8,
+    "failures": 0,
+    "skipped": 0
+  },
+  "browser_python_contract_synthetic_inputs": 19,
+  "browser_smoke": {
+    "synthetic_case_count": 2,
+    "real_human_or_expert_opinions": 0,
+    "input_and_live_counts_verified": true,
+    "json_export_preview_verified": true,
+    "automatic_download_to_disk_verified": false,
+    "local_fixture_saved_from_rendered_export_json": true,
+    "saved_fixture_cli_accepted": true,
+    "valid_import_restores_note_and_counts": true,
+    "wrong_model_import_rejected_without_draft_change": true,
+    "browser": "Codex in-app browser",
+    "chrome_edge_download_tested": false
+  },
+  "actual_review_summary": {
+    "schema": "facility_train_review_feedback_summary_v1",
+    "source_package_sha256": "2c63eec39546f9944cc6475f2321e4499363fec087d23ecdb76b69d1e849a660",
+    "weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+    "scope": "TRAIN review opinions only; these counts are not model or app accuracy",
+    "package_cases": 130,
+    "package_tasks": 260,
+    "submitted_unique_feedback_documents": 0,
+    "duplicate_files_ignored": 0,
+    "reviewer_count_by_role": {
+      "team_observer": 0,
+      "domain_expert": 0
+    },
+    "reviewed_unique_cases": 0,
+    "reviewed_unique_case_tasks": 0,
+    "reviewed_task_opinions": 0,
+    "unreviewed_task_rows": 0,
+    "uncertain_task_opinions": 0,
+    "unresolved_unique_case_tasks": 260,
+    "judgements_by_role": {
+      "team_observer": {
+        "unreviewed": 0,
+        "present": 0,
+        "absent": 0,
+        "uncertain": 0
+      },
+      "domain_expert": {
+        "unreviewed": 0,
+        "present": 0,
+        "absent": 0,
+        "uncertain": 0
+      }
+    },
+    "counts_by_role_reason_source_task": [],
+    "disagreement_with_original_by_role": {
+      "team_observer": 0,
+      "domain_expert": 0
+    },
+    "decisive_opinions_on_unknown_original_by_role": {
+      "team_observer": 0,
+      "domain_expert": 0
+    },
+    "cross_reviewer_conflicting_case_tasks": 0,
+    "conflict_role_opinions_by_role": {
+      "team_observer": 0,
+      "domain_expert": 0
+    },
+    "conflicts_by_role_pair": {
+      "team_observer+team_observer": 0,
+      "domain_expert+team_observer": 0,
+      "domain_expert+domain_expert": 0
+    },
+    "expertise_self_declared": true,
+    "expert_identity_verified": false,
+    "reviewer_identity_authenticated": false,
+    "package_origin_authenticated": false,
+    "model_weights_file_verified": false,
+    "expert_confirmed_labels": 0,
+    "label_changes": 0,
+    "training_applied": 0,
+    "legacy": {
+      "documents": 0,
+      "case_level_reviewed_observations": 0,
+      "unreviewed_rows": 0,
+      "unique_reviewed_cases": 0,
+      "by_reason_source": [],
+      "excluded_from_task_opinions": true,
+      "reviewer_identity_available": false,
+      "expert_confirmed_labels": 0
+    },
+    "policy": "검수 의견을 분리 보관합니다. 원본 정답 변경·자동 학습·앱 모델 교체는 하지 않습니다.",
+    "limitations": [
+      "Reviewer roles and expertise descriptions are self-declared, not authenticated.",
+      "Reviewer counts are distinct submitted self-declared IDs, not verified independent people.",
+      "The package digest binds supplied content, not its publisher origin or an actual weights file.",
+      "Opinion disagreement with publisher targets is not proof of a wrong label.",
+      "Error-stratified TRAIN examples do not estimate dataset or factory error rates.",
+      "Counts are opinions or unique case-task pairs as named; they are not independent photos.",
+      "No votes, conflicts, legacy observations or expert declarations change training targets."
+    ]
+  },
+  "training_epochs_this_work": 0,
+  "accuracy_measured_this_work": false,
+  "app_model_promoted": false,
+  "actual_expert_confirmed_labels": 0,
+  "actual_label_changes": 0,
+  "limitations": [
+    "Synthetic functional tests are not dataset opinions or accuracy measurements.",
+    "Reviewer roles are self-declared, not authenticated.",
+    "Package digest binds supplied content, not publisher identity; builder separately checks referenced asset bytes.",
+    "Browser JSON disk download was not confirmed; copyable JSON fallback and valid file reimport were checked.",
+    "No factory field accuracy measured, no five-percent target achievement claimed."
+  ]
+}

@@ -20,6 +20,7 @@ C++ 앱용 로컬 API 서버를 재현하기 위한 코드다. 원본 데이터�
 - 학습 전에 고정한 조건·재현 명령: [pooling 대조 계획](reports/FACILITY_POOL_CONTEXT_PLAN_KO.md)
 - 실제 코드 테스트 155개·저장 모델 재로딩·6epoch 표본 순서 비교: [기술 검증](reports/facility-pool-context-technical-verification.json). 정확도 측정과 별도다.
 - 손상 정의·비슷한 표면·촬영 정보의 질문 목록: [전문가 검수 준비](reports/FACILITY_CONTEXT_LABEL_REVIEW_KO.md). 검수 대상 준비이며 전문가 확정·원본 라벨 수정은 0건이다.
+- 검수자·항목별 의견 JSON 저장/불러오기와 오류 원인·충돌 집계: [검수 피드백 사용 안내](FACILITY_REVIEW_FEEDBACK_KO.md). 130건의 새 로컬 화면을 만들었으며 실제 전문가 판정·라벨 수정·추가 학습은 0건이다.
 
 앞선 세부 특징 작업에서는 작은 손상을 위한 stride 4 세부 특징 분기를 구현하고,
 기존 구조 대조군과 각각 8epoch, 총 16epoch를 실제 추가 학습했다.
