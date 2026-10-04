@@ -1,0 +1,95 @@
+{
+  "run": "facility-presence-target-context-pool",
+  "split": "val",
+  "weights_sha256": "0d0b2edf2cf6670d3ac4dec1ed90b07504d11cc682c1b7653d5471ff04bbfde3",
+  "scope": "DACL validation only, 640x640 rasterized publisher polygons for approximate size analysis; gold labels unchanged",
+  "per_class": {
+    "concrete_crack": {
+      "threshold": 0.23026761412620544,
+      "positive_size_bins": [
+        {
+          "polygon_fraction": [
+            0.0,
+            0.001
+          ],
+          "positive_photos": 7,
+          "false_negatives": 5,
+          "fnr": 0.7142857142857143
+        },
+        {
+          "polygon_fraction": [
+            0.001,
+            0.01
+          ],
+          "positive_photos": 86,
+          "false_negatives": 24,
+          "fnr": 0.27906976744186046
+        },
+        {
+          "polygon_fraction": [
+            0.01,
+            0.05
+          ],
+          "positive_photos": 91,
+          "false_negatives": 15,
+          "fnr": 0.16483516483516483
+        },
+        {
+          "polygon_fraction": [
+            0.05,
+            1.00001
+          ],
+          "positive_photos": 27,
+          "false_negatives": 2,
+          "fnr": 0.07407407407407407
+        }
+      ],
+      "fp_count": 113,
+      "fn_count": 46
+    },
+    "concrete_spalling": {
+      "threshold": 0.448336660861969,
+      "positive_size_bins": [
+        {
+          "polygon_fraction": [
+            0.0,
+            0.001
+          ],
+          "positive_photos": 13,
+          "false_negatives": 3,
+          "fnr": 0.23076923076923078
+        },
+        {
+          "polygon_fraction": [
+            0.001,
+            0.01
+          ],
+          "positive_photos": 92,
+          "false_negatives": 38,
+          "fnr": 0.41304347826086957
+        },
+        {
+          "polygon_fraction": [
+            0.01,
+            0.05
+          ],
+          "positive_photos": 118,
+          "false_negatives": 24,
+          "fnr": 0.2033898305084746
+        },
+        {
+          "polygon_fraction": [
+            0.05,
+            1.00001
+          ],
+          "positive_photos": 101,
+          "false_negatives": 9,
+          "fnr": 0.0891089108910891
+        }
+      ],
+      "fp_count": 88,
+      "fn_count": 74
+    }
+  },
+  "individual_examples_published": false
+}

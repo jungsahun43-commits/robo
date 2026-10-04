@@ -26,7 +26,9 @@ EXPERIMENTS=[('facility-presence-target-v2s','Larger photo model',0),
              ('facility-presence-target-discrimination-control','Discrimination study control',1),
              ('facility-presence-target-discrimination-ranking','Within-source pos/neg ranking',1),
              ('facility-presence-target-detail-control','Architecture study control',1),
-             ('facility-presence-target-detail-s4','Stride4 feature residual',1)]
+             ('facility-presence-target-detail-s4','Stride4 feature residual',1),
+             ('facility-presence-target-context-control','Pool study control',1),
+             ('facility-presence-target-context-pool','Narrow/broad pool contrast',1)]
 
 
 def main():

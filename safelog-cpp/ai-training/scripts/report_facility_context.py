@@ -251,7 +251,10 @@ def render(result):
     for name,point in gate['small_area_comparisons'].items():
         common = gate['error_and_other_ap_gate']['comparisons'][name]
         lines.append(f"- {'초기 모델' if name == 'initializer' else '대조군'} 대비 최대 오류 개선 {common['maximum_error_improvement']*100:+.2f}pp, 작은 FN 변화 {-point['small_area_total_fn_improvement']:+d}건, 오류/AP 조건 {'통과' if common['passed'] else '미달'}, 작은 사례 조건 {'통과' if point['passed'] else '미달'}.")
-    lines += ['', 'FN 변화의 양수는 미탐 증가다.','', '## 관측 오류와 오차 범위','',
+    lines += ['', 'FN 변화의 양수는 미탐 증가다.','', '## 판단과 다음 우선순위','',
+              '이번 pooling 후보는 최대 오류가 대조군과 같고 기존 최고 후보보다 높아 채택하지 않는다. 작은 손상 FN 합계는 초기 71건·대조 71건·후보 70건으로 한 건 줄었지만, 두 비교 대상 각각보다 최소 두 건 감소한다는 기준을 통과하지 못했다.',
+              '다음 우선순위는 [TRAIN 정답 경계 검수 준비](FACILITY_CONTEXT_LABEL_REVIEW_KO.md)의 정의 질문을 전문가에게 확인하고, 승인된 근거가 확보되면 원본과 구분한 새 TRAIN 버전을 검토하는 것이다. 전문가 판정이나 원본 라벨 수정은 이번에 수행하지 않았다. 같은 조건의 추가 반복 학습을 이어가면 5%에 도달한다는 근거도 확인하지 못했다.','',
+              '## 관측 오류와 오차 범위','',
               'Wilson 양측 95% 범위는 독립 사진의 이항 가정에 따른 기술 통계다. 사진 상관과 같은 VAL에서 반복한 epoch·임계값 선택 때문에 확인적 신뢰구간·새 현장 오류 보장·모델 차이 유의성 검정으로 해석할 수 없다.','',
               '| 모델 | 출처 | 항목 | FN/양성 | 미탐률 | Wilson 95% | FP/음성 | 오탐률 | Wilson 95% |',
               '|---|---|---|---:|---:|---|---:|---:|---|']

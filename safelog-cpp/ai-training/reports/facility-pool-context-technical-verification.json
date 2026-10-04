@@ -1,0 +1,350 @@
+{
+  "status": "passed",
+  "schema": "facility_pool_context_technical_verification_v1",
+  "experiments": [
+    {
+      "run": "facility-presence-target-context-control",
+      "architecture": "lraspp_mobilenet_facility_auxiliary_v1",
+      "model_variant": "control",
+      "weights_sha256": "eddecaac9dd97f95b931bb55e569ebe318f16af58acba03362bf1b3e7d2e3a07",
+      "history_sha256": "1e43b30c60777c5bdfd55d4f2de8539143df6ca9e8a34af0abd64814dbd534fc",
+      "training_metadata_sha256": "61166b3208ea5030a89041040019f8b9d80e8647a8a6ec3a48e8900ffd5408ea",
+      "public_shape": [
+        1,
+        7
+      ],
+      "private_spatial_shape": [
+        1,
+        7,
+        80,
+        80
+      ],
+      "auxiliary_shape": [
+        1,
+        19
+      ],
+      "outputs_finite": true,
+      "public_training_logits_equal": true,
+      "strict_state_load": true,
+      "parameter_count": 3244151,
+      "study_protocol_sha256": "90fe02db4b286cdbbfc7aeeab6c78dc92f841def41f6d3f8321bfb797837d9c4",
+      "selected_epoch": 3,
+      "actual_epochs": 6,
+      "source_split_sha256": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+      "learned_context_gate_values": null,
+      "learned_context_gate_tanh": null
+    },
+    {
+      "run": "facility-presence-target-context-pool",
+      "architecture": "lraspp_mobilenet_facility_pool_context_v1",
+      "model_variant": "context",
+      "weights_sha256": "0d0b2edf2cf6670d3ac4dec1ed90b07504d11cc682c1b7653d5471ff04bbfde3",
+      "history_sha256": "4918534b21f69f9ef082a2bba6f8dfc6553b0e8dc4e3bc3bcc61c6989714cd25",
+      "training_metadata_sha256": "371b972d691920a6b3d54f6b92fae55a0317115c2482a0838021966d8acd20dd",
+      "public_shape": [
+        1,
+        7
+      ],
+      "private_spatial_shape": [
+        1,
+        7,
+        80,
+        80
+      ],
+      "auxiliary_shape": [
+        1,
+        19
+      ],
+      "outputs_finite": true,
+      "public_training_logits_equal": true,
+      "strict_state_load": true,
+      "parameter_count": 3244158,
+      "study_protocol_sha256": "90fe02db4b286cdbbfc7aeeab6c78dc92f841def41f6d3f8321bfb797837d9c4",
+      "selected_epoch": 3,
+      "actual_epochs": 6,
+      "source_split_sha256": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+      "learned_context_gate_values": [
+        -0.04481576755642891,
+        -0.03003077022731304,
+        -0.02738347463309765,
+        -0.022156907245516777,
+        -0.05676719918847084,
+        -0.04506565257906914,
+        -0.04408779367804527
+      ],
+      "learned_context_gate_tanh": [
+        -0.04478578642010689,
+        -0.030021745711565018,
+        -0.027376631274819374,
+        -0.022153282538056374,
+        -0.056706298142671585,
+        -0.045035168528556824,
+        -0.04405925050377846
+      ]
+    }
+  ],
+  "python": "3.12.14",
+  "torch": "2.12.0+cu126",
+  "device": "cpu",
+  "check_input": "One zero 1x3x640x640 tensor per completed checkpoint; shape check only",
+  "actual_train_gpu_preflight": {
+    "status": "passed",
+    "schema": "facility_context_preflight_v1",
+    "train_photo_count": 8,
+    "train_joint_tag_counts": {
+      "00": 2,
+      "10": 2,
+      "01": 2,
+      "11": 2
+    },
+    "public_shape": [
+      8,
+      7
+    ],
+    "pixel_shape": [
+      8,
+      7,
+      80,
+      80
+    ],
+    "auxiliary_shape": [
+      8,
+      19
+    ],
+    "backbone_forward_calls": 1,
+    "initial_fp32_outputs_equal": true,
+    "initial_state_transfer": {
+      "control": {
+        "shared_state_tensors_equal": true,
+        "shared_state_tensor_count": 324,
+        "new_state_tensor_count": 0,
+        "new_output_projection_zero": null
+      },
+      "context": {
+        "shared_state_tensors_equal": true,
+        "shared_state_tensor_count": 324,
+        "new_state_tensor_count": 1,
+        "new_output_projection_zero": true
+      }
+    },
+    "constructor_cpu_rng_equal": true,
+    "loader_randomness": {
+      "sampler_seed": 55,
+      "training_worker_seed": 56,
+      "post_model_seed": 57,
+      "validation_worker_seeds": {
+        "dacl": 155,
+        "damsegment": 156,
+        "codebrim": 157
+      }
+    },
+    "replay_num_workers": 4,
+    "replay_batches": 3,
+    "augmented_batch_replay_equal": true,
+    "bounded_replay_digests": [
+      {
+        "augmented_batch_sha256": "b4c41e1fb1cfb0777da1696365f8edf2dcc3a4ffe8d589a4fcb3370d008964ba",
+        "sampled_indices_sha256": "a7d6edf2233d7385a3224879c781d6e17345f0efc546e62e4af90d523fcb3d98"
+      },
+      {
+        "augmented_batch_sha256": "9fc51242bc5ab17742ef2398590fab165ab44f9755d7a70f83fae612cb4edbc4",
+        "sampled_indices_sha256": "f63bfcf55bc9f21ddcfe72f48fde6667a6939ff37267adad6884f901a0fa9340"
+      },
+      {
+        "augmented_batch_sha256": "00e1920a1e96bdd5d5f1a52b587392fa2f7b4efad27ac1b1b1af3b18ca8c5014",
+        "sampled_indices_sha256": "a2a11d283d5533ba7364ff73f847ae301d12b9b127403ee27b5eaaa467f70945"
+      }
+    ],
+    "finite_loss_and_gradients": true,
+    "learned_gate_gradient_nonzero": true,
+    "disposable_optimizer_steps": [
+      {
+        "step": 1,
+        "loss": 1.0470237731933594,
+        "all_gradients_finite": true,
+        "gate_gradient_nonzero": true,
+        "gate_gradient_l2": 0.08106204122304916,
+        "learned_gate_nonzero": true
+      },
+      {
+        "step": 2,
+        "loss": 0.9015328884124756,
+        "all_gradients_finite": true,
+        "gate_gradient_nonzero": true,
+        "gate_gradient_l2": 0.03499528020620346,
+        "learned_gate_nonzero": true
+      }
+    ],
+    "amp_initial_scale": 1024.0,
+    "checkpoint_saved": false,
+    "source_checkpoint_unchanged": true,
+    "frozen_inputs_unchanged": true,
+    "model_shapes_and_parameters": {
+      "control": {
+        "public_shape": [
+          8,
+          7
+        ],
+        "pixel_shape": [
+          8,
+          7,
+          80,
+          80
+        ],
+        "auxiliary_shape": [
+          8,
+          19
+        ],
+        "parameter_count": 3244151
+      },
+      "context": {
+        "public_shape": [
+          8,
+          7
+        ],
+        "pixel_shape": [
+          8,
+          7,
+          80,
+          80
+        ],
+        "auxiliary_shape": [
+          8,
+          19
+        ],
+        "parameter_count": 3244158
+      }
+    },
+    "latency_diagnostic": {
+      "control": {
+        "precision": "FP32",
+        "warmup_batches": 1,
+        "measured_batches": 3,
+        "batch_size": 8,
+        "batch_milliseconds": [
+          22.624256134033203,
+          24.301376342773438,
+          22.646751403808594
+        ],
+        "mean_batch_milliseconds": 23.190794626871746,
+        "diagnostic_photos_per_second": 344.9644623531012,
+        "baseline_allocated_bytes": 62960640,
+        "peak_allocated_bytes": 534819840,
+        "peak_increment_bytes": 471859200,
+        "production_latency_or_p95_measured": false
+      },
+      "context": {
+        "precision": "FP32",
+        "warmup_batches": 1,
+        "measured_batches": 3,
+        "batch_size": 8,
+        "batch_milliseconds": [
+          23.802879333496094,
+          22.573055267333984,
+          22.536191940307617
+        ],
+        "mean_batch_milliseconds": 22.9707088470459,
+        "diagnostic_photos_per_second": 348.2696182024363,
+        "baseline_allocated_bytes": 76530688,
+        "peak_allocated_bytes": 548389888,
+        "peak_increment_bytes": 471859200,
+        "production_latency_or_p95_measured": false
+      }
+    },
+    "amp_two_step_peak_allocated_bytes": 2065892864,
+    "python": "3.12.14",
+    "torch": "2.12.0+cu126",
+    "device": "NVIDIA GeForce RTX 4070 SUPER",
+    "scope": "Eight original TRAIN DACL photos; disposable GPU integration and bounded augmentation replay only",
+    "full_epoch_sampling_proved_by_this_replay": false,
+    "accuracy_measured_by_this_check": false
+  },
+  "actual_train_gpu_preflight_sha256": "56dd6cf803edd025e34c3e005c5c26a0e0b9dad7df1a1806e085424c004cdced",
+  "pre_training_source_snapshot": {
+    "pre_training_commit": "3e185174b335282d8529f8a3534f4c8cb0b05a4e",
+    "sources": {
+      "reports/facility-pool-context-protocol.json": {
+        "git_blob_sha256": "90fe02db4b286cdbbfc7aeeab6c78dc92f841def41f6d3f8321bfb797837d9c4",
+        "executed_file_sha256": "90fe02db4b286cdbbfc7aeeab6c78dc92f841def41f6d3f8321bfb797837d9c4",
+        "equal": true
+      },
+      "safelog_ai/auxiliary_classifier.py": {
+        "git_blob_sha256": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+        "executed_file_sha256": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+        "equal": true
+      },
+      "safelog_ai/context_classifier.py": {
+        "git_blob_sha256": "6b9bd80d6408e36bf245dd309cbd6ad744b7fd576a630cee08e331f804589a10",
+        "executed_file_sha256": "6b9bd80d6408e36bf245dd309cbd6ad744b7fd576a630cee08e331f804589a10",
+        "equal": true
+      },
+      "safelog_ai/presence_classifier.py": {
+        "git_blob_sha256": "f6e92cff8cee8d2a638f9a35c2e3db59d11481fb7e4938c6b79c1057b79a398d",
+        "executed_file_sha256": "f6e92cff8cee8d2a638f9a35c2e3db59d11481fb7e4938c6b79c1057b79a398d",
+        "equal": true
+      },
+      "safelog_ai/spatial_classifier.py": {
+        "git_blob_sha256": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+        "executed_file_sha256": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+        "equal": true
+      },
+      "scripts/preflight_facility_context.py": {
+        "git_blob_sha256": "2a2c07210b174b36d7857f258baebdb67bc0f96f838c6e91775d4e3a0c21ea64",
+        "executed_file_sha256": "2a2c07210b174b36d7857f258baebdb67bc0f96f838c6e91775d4e3a0c21ea64",
+        "equal": true
+      },
+      "scripts/preflight_facility_detail.py": {
+        "git_blob_sha256": "8e00aff1f2ffb557deec79f6c3545b808634d04a7a31e8475d57b37266267af6",
+        "executed_file_sha256": "8e00aff1f2ffb557deec79f6c3545b808634d04a7a31e8475d57b37266267af6",
+        "equal": true
+      },
+      "scripts/train_facility_context.py": {
+        "git_blob_sha256": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
+        "executed_file_sha256": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
+        "equal": true
+      },
+      "scripts/train_facility_detail.py": {
+        "git_blob_sha256": "e931284c390aa184142aa4ebc42c1b9d25a3c836565f73784bd68581456a33c4",
+        "executed_file_sha256": "e931284c390aa184142aa4ebc42c1b9d25a3c836565f73784bd68581456a33c4",
+        "equal": true
+      },
+      "tests/test_facility_context_classifier.py": {
+        "git_blob_sha256": "2e9b41a66ae998c6a253a6ad92c6374b4f8ab15e50f3536dec11da2ab67e1684",
+        "executed_file_sha256": "2e9b41a66ae998c6a253a6ad92c6374b4f8ab15e50f3536dec11da2ab67e1684",
+        "equal": true
+      }
+    },
+    "comparison_started_before_outcomes": true
+  },
+  "pre_training_source_snapshot_sha256": "da24d04d8863766ca3f757b24c9285fa39d044664fcad77f8bb354bc93fec8e6",
+  "actual_test_verification": {
+    "status": "passed",
+    "tests_run": 155,
+    "failures": 0,
+    "errors": 0
+  },
+  "actual_test_verification_sha256": "9d18972982103ab89060ee790fc91b85d78ab54406224a997b31c274bada3f31",
+  "executed_sources_sha256": {
+    "training_script_sha256": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
+    "source_parent_training_script_sha256": "e931284c390aa184142aa4ebc42c1b9d25a3c836565f73784bd68581456a33c4",
+    "context_model_source_sha256": "6b9bd80d6408e36bf245dd309cbd6ad744b7fd576a630cee08e331f804589a10",
+    "model_source_sha256": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+    "auxiliary_model_source_sha256": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+    "model_factory_source_sha256": "f6e92cff8cee8d2a638f9a35c2e3db59d11481fb7e4938c6b79c1057b79a398d"
+  },
+  "paired_sampled_row_indices_equal": true,
+  "paired_sampling_epochs": 6,
+  "paired_augmentation_replay_equal": true,
+  "augmentation_replay_scope": "Three batches over eight original TRAIN photos with four workers; configured RNG isolation verified. Full six-epoch ordered sample indices are checked separately; no full-epoch augmented tensor hashes asserted.",
+  "different_new_architecture_confirmed": true,
+  "new_context_parameter_count": 7,
+  "study_protocol_sha256": "90fe02db4b286cdbbfc7aeeab6c78dc92f841def41f6d3f8321bfb797837d9c4",
+  "core_spatial_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+  "auxiliary_manifest_sha256": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+  "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+  "app_profile_unchanged": true,
+  "research_models_deployed": false,
+  "accuracy_measured_by_this_check": false,
+  "independent_field_safety_verified": false,
+  "verification_script_sha256": "44723bf7e52cad4c23d1125fec94c3ecee20a1c50a01d7421a7e9ad20fcb031f"
+}

@@ -47,9 +47,9 @@ K=256·계수 범위·자료·정답·예산을 결과에 맞춰 재선택하지
 ./.venv/Scripts/python.exe scripts/preflight_facility_context.py
 ./.venv/Scripts/python.exe scripts/train_facility_context.py --name facility-presence-target-context-control --model-variant control --seed 55 --epochs 6 --patience 6 --initial runs/facility-presence-target-roi-control/best.pt --draws-per-epoch 14248 --backbone-lr .00004 --head-lr .00025 --auxiliary-manifest data/facility-auxiliary-training/train.json --study-protocol reports/facility-pool-context-protocol.json
 ./.venv/Scripts/python.exe scripts/train_facility_context.py --name facility-presence-target-context-pool --model-variant context --seed 55 --epochs 6 --patience 6 --initial runs/facility-presence-target-roi-control/best.pt --draws-per-epoch 14248 --backbone-lr .00004 --head-lr .00025 --auxiliary-manifest data/facility-auxiliary-training/train.json --study-protocol reports/facility-pool-context-protocol.json
-./.venv/Scripts/python.exe scripts/evaluate_facility_target.py select --name facility-presence-target-context-control --grid 1
+./.venv/Scripts/python.exe scripts/evaluate_facility_target.py select --name facility-presence-target-context-control --grids 1
 ./.venv/Scripts/python.exe scripts/analyze_facility_target.py --name facility-presence-target-context-control --aggregate-only
-./.venv/Scripts/python.exe scripts/evaluate_facility_target.py select --name facility-presence-target-context-pool --grid 1
+./.venv/Scripts/python.exe scripts/evaluate_facility_target.py select --name facility-presence-target-context-pool --grids 1
 ./.venv/Scripts/python.exe scripts/analyze_facility_target.py --name facility-presence-target-context-pool --aggregate-only
 ./.venv/Scripts/python.exe scripts/verify_facility_context.py
 ./.venv/Scripts/python.exe scripts/report_facility_context.py

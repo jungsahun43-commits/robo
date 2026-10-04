@@ -1,0 +1,326 @@
+{
+  "schema": "facility_roi_0773_train_review_verification_v1",
+  "status": "passed",
+  "verified_utc": "2026-10-04T11:36:16.989769+00:00",
+  "scope": "Frozen0773 full TRAIN inference and local review preparation only; not expert truth, a performance measurement or a new validation/test run",
+  "model_weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+  "cache_full_train_rows": 14248,
+  "original_full_train_rows": 14248,
+  "detail_rows_selected": 0,
+  "selected_photos": 130,
+  "source_counts": {
+    "codebrim": 60,
+    "dacl": 53,
+    "damsegment": 17
+  },
+  "annotation_kind_counts": {
+    "publisher_xml_tags": 60,
+    "publisher_polygons": 53,
+    "publisher_mask": 11,
+    "publisher_photo_category_only": 6
+  },
+  "sampling_options": {
+    "seed": 49,
+    "per_error": 12,
+    "per_correct": 3
+  },
+  "sampling_cohorts": [
+    {
+      "domain": "codebrim",
+      "task": "concrete_crack",
+      "outcome": "FN",
+      "available": 29,
+      "sampled": 12
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_crack",
+      "outcome": "FP",
+      "available": 348,
+      "sampled": 12
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_crack",
+      "outcome": "TN",
+      "available": 3882,
+      "sampled": 3
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_crack",
+      "outcome": "TP",
+      "available": 2179,
+      "sampled": 3
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_spalling",
+      "outcome": "FN",
+      "available": 33,
+      "sampled": 12
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_spalling",
+      "outcome": "FP",
+      "available": 183,
+      "sampled": 12
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_spalling",
+      "outcome": "TN",
+      "available": 4647,
+      "sampled": 3
+    },
+    {
+      "domain": "codebrim",
+      "task": "concrete_spalling",
+      "outcome": "TP",
+      "available": 1575,
+      "sampled": 3
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_crack",
+      "outcome": "FN",
+      "available": 5,
+      "sampled": 5
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_crack",
+      "outcome": "FP",
+      "available": 301,
+      "sampled": 12
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_crack",
+      "outcome": "TN",
+      "available": 4176,
+      "sampled": 3
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_crack",
+      "outcome": "TP",
+      "available": 1743,
+      "sampled": 3
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_spalling",
+      "outcome": "FN",
+      "available": 192,
+      "sampled": 12
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_spalling",
+      "outcome": "FP",
+      "available": 401,
+      "sampled": 12
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_spalling",
+      "outcome": "TN",
+      "available": 2886,
+      "sampled": 3
+    },
+    {
+      "domain": "dacl",
+      "task": "concrete_spalling",
+      "outcome": "TP",
+      "available": 2746,
+      "sampled": 3
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_crack",
+      "outcome": "FN",
+      "available": 1,
+      "sampled": 1
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_crack",
+      "outcome": "FP",
+      "available": 3,
+      "sampled": 3
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_crack",
+      "outcome": "TN",
+      "available": 677,
+      "sampled": 3
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_crack",
+      "outcome": "TP",
+      "available": 904,
+      "sampled": 3
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_spalling",
+      "outcome": "FP",
+      "available": 1,
+      "sampled": 1
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_spalling",
+      "outcome": "TN",
+      "available": 1342,
+      "sampled": 3
+    },
+    {
+      "domain": "damsegment",
+      "task": "concrete_spalling",
+      "outcome": "TP",
+      "available": 242,
+      "sampled": 3
+    }
+  ],
+  "native_tag_counts_nonexclusive": {
+    "dacl": {
+      "ACrack": 2,
+      "Bearing": 1,
+      "Cavity": 18,
+      "Crack": 14,
+      "Drainage": 6,
+      "EJoint": 3,
+      "Efflorescence": 14,
+      "ExposedRebars": 6,
+      "Graffiti": 4,
+      "Hollowareas": 10,
+      "JTape": 11,
+      "PEquipment": 7,
+      "Restformwork": 9,
+      "Rockpocket": 3,
+      "Rust": 27,
+      "Spalling": 27,
+      "WConccor": 3,
+      "Weathering": 27,
+      "Wetspot": 14
+    },
+    "codebrim": {
+      "Background": 9,
+      "CorrosionStain": 23,
+      "Crack": 25,
+      "Efflorescence": 6,
+      "ExposedBars": 17,
+      "Spallation": 24
+    }
+  },
+  "selected_photo_label_counts": {
+    "concrete_crack": {
+      "positive": 51,
+      "negative": 79,
+      "unknown": 0
+    },
+    "concrete_spalling": {
+      "positive": 57,
+      "negative": 73,
+      "unknown": 0
+    },
+    "rust_stain": {
+      "positive": 50,
+      "negative": 63,
+      "unknown": 17
+    },
+    "exposed_rebar": {
+      "positive": 23,
+      "negative": 90,
+      "unknown": 17
+    },
+    "wet_surface": {
+      "positive": 14,
+      "negative": 39,
+      "unknown": 77
+    },
+    "efflorescence": {
+      "positive": 20,
+      "negative": 93,
+      "unknown": 17
+    },
+    "surface_cavity": {
+      "positive": 18,
+      "negative": 35,
+      "unknown": 77
+    }
+  },
+  "native_label_verification_counts": {
+    "codebrim_stored_native_xml_5_known_2_unknown": 60,
+    "dacl_native_polygons_and_19_tags": 53,
+    "dam_native_rgb_mask": 11,
+    "dam_author_intact_photo_category_only": 6
+  },
+  "selected_train_photo_hash_checks_by_source": {
+    "codebrim": 60,
+    "dacl": 53,
+    "damsegment": 17
+  },
+  "source_photo_files_hashed": 130,
+  "publisher_photo_files_hashed": 130,
+  "native_annotation_files_hashed": 66,
+  "html_local_reference_checks": 448,
+  "html_photo_case_anchors_verified": 130,
+  "embedded_photo_payloads": 0,
+  "core_full_train_order_and_labels_equal": true,
+  "selected_train_membership_and_original_targets_equal": true,
+  "train_only_sampling_recomputed_equal": true,
+  "cache_scores_finite_and_seven_dimensional": true,
+  "frozen_grid1_thresholds_reused": true,
+  "new_threshold_fitting_performed": false,
+  "only_selected_train_native_annotation_labels_used": true,
+  "codebrim_master_xml_newly_parsed_for_labels": false,
+  "codebrim_native_xml_file_hash_and_stored_train_tags_checked": true,
+  "individual_validation_or_test_annotations_or_photos_opened": false,
+  "validation_or_test_prediction_cache_opened": false,
+  "model_inference_by_this_verifier": false,
+  "legacy_review_package_photos": 140,
+  "legacy_ai_visual_observation_photos": 23,
+  "legacy_not_in_ai_visual_review_photos": 117,
+  "same_photos_as_legacy_review_count": 32,
+  "same_photos_as_legacy_ai_observation_count": 8,
+  "legacy_ai_notes_applied_to_new_model_outcomes": false,
+  "new_ai_visual_inspections_performed": 0,
+  "expert_verified_labels": 0,
+  "original_label_edits": 0,
+  "automatic_training_applications": 0,
+  "existing_inputs_unchanged": true,
+  "input_sha256": {
+    "cache": "d208789d74f451929a5300312ce67ff6a2047e97f0ebb9bec6c75cde0e2c02b6",
+    "package": "f6fc9def0f80e51ea3efff156e2dc8e37ec017eab2088d1f256d08ad3bbf6b33",
+    "html": "d30954c4eb331d1c4e76d7ab1573e28e975b57fb0361d4708fc042485c24daf3",
+    "core_train": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "auxiliary_train": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+    "weights": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+    "training": "f92448d7307b4552ad95f52f7af7c9b5f54a60ce39f6322a5ffed96e88cdadb9",
+    "split": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+    "frozen_thresholds": "ce7ba26db8b5f383900a00fb46493bcc39268452b6cafb192280e2d7acd6fdad",
+    "scorer": "b213deeea053d628da30b072fdfb60a1d4177485c45e5a600cb7c1f87c8a5ea7",
+    "builder": "9fc90fa318b79d76ace7bb1ea1a4135b14b3ab118d5879fadfbb7be771c4e327",
+    "old_package": "007879f2618c1a6cd6476f90a8d31ce012e3d1518a01e16cb35699fbd24b913d",
+    "old_observations": "fd222ab1af9b4cf59637496757c80b14cc310746793fe15792ca4e4913ce5deb",
+    "old_priority": "1fadd11a27bd714cd31b0d70611b568d90a95816ddf7e8c29ffb307be7fad68b"
+  },
+  "public_contains_individual_photo_paths_case_ids_or_annotations": false,
+  "limitations": [
+    "Source full rows include publisher patches;130selected photos are not130independent sites.",
+    "Old23 AI observations do not certify new model errors or expert truth.",
+    "Published source-label absence is not an all-defects or structurally-safe ground truth.",
+    "Dam classification negatives follow author intact semantics, not native classification pixel masks.",
+    "CODEBRIM file byte SHA and stored TRAIN tags were checked; shared XML tags were not newly parsed here.",
+    "Frozen thresholds come from the previously declared validation selection; no validation/test prediction rows were used to select this TRAIN subset."
+  ],
+  "blank_new_package_proposed_review_rows": 130,
+  "latest_browser_render_and_export_verified": false,
+  "latest_exported_human_proposals_file_checked": false
+}
