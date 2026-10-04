@@ -1,0 +1,274 @@
+{
+  "run": "facility-presence-target-detail-control",
+  "weights_sha256": "e569a647e5dc7550b9b9be8829db162ff401ca94ff452c68b93e7f0551dfab29",
+  "selection_split": "val",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "configured_grids": [
+    1
+  ],
+  "validation_counts": {
+    "dacl": 710,
+    "damsegment": 424,
+    "codebrim": 611
+  },
+  "attempts": [
+    {
+      "grid": 1,
+      "views": 1,
+      "per_class": {
+        "concrete_crack": {
+          "threshold": 0.37295812368392944,
+          "domains": {
+            "dacl": {
+              "tp": 165,
+              "fp": 109,
+              "fn": 46,
+              "tn": 390,
+              "fnr": 0.21800947867298578,
+              "fpr": 0.218436873747495,
+              "fnr_ci95": [
+                0.16761059996190267,
+                0.2784925839709669
+              ],
+              "fpr_ci95": [
+                0.18440971124757374,
+                0.25676604092881855
+              ],
+              "photo_error_fraction": 0.21830985915492956
+            },
+            "damsegment": {
+              "tp": 245,
+              "fp": 2,
+              "fn": 3,
+              "tn": 174,
+              "fnr": 0.012096774193548387,
+              "fpr": 0.011363636363636364,
+              "fnr_ci95": [
+                0.004122365520547381,
+                0.03495562770097791
+              ],
+              "fpr_ci95": [
+                0.0031218708243352968,
+                0.04048019330545044
+              ],
+              "photo_error_fraction": 0.01179245283018868
+            },
+            "codebrim": {
+              "tp": 140,
+              "fp": 47,
+              "fn": 9,
+              "tn": 415,
+              "fnr": 0.06040268456375839,
+              "fpr": 0.10173160173160173,
+              "fnr_ci95": [
+                0.032100224500152576,
+                0.11080248651307728
+              ],
+              "fpr_ci95": [
+                0.07736895338992159,
+                0.13266271504162097
+              ],
+              "photo_error_fraction": 0.09165302782324058
+            }
+          },
+          "worst_error": 0.218436873747495,
+          "target_passed": false
+        },
+        "concrete_spalling": {
+          "threshold": 0.4863460659980774,
+          "domains": {
+            "dacl": {
+              "tp": 251,
+              "fp": 86,
+              "fn": 73,
+              "tn": 300,
+              "fnr": 0.22530864197530864,
+              "fpr": 0.22279792746113988,
+              "fnr_ci95": [
+                0.18318887535613515,
+                0.2738657612346772
+              ],
+              "fpr_ci95": [
+                0.18413195127229665,
+                0.2669269467541743
+              ],
+              "photo_error_fraction": 0.223943661971831
+            },
+            "damsegment": {
+              "tp": 49,
+              "fp": 12,
+              "fn": 9,
+              "tn": 354,
+              "fnr": 0.15517241379310345,
+              "fpr": 0.03278688524590164,
+              "fnr_ci95": [
+                0.0838449195301804,
+                0.2693398085989251
+              ],
+              "fpr_ci95": [
+                0.018853174433440964,
+                0.05642626803218097
+              ],
+              "photo_error_fraction": 0.049528301886792456
+            },
+            "codebrim": {
+              "tp": 124,
+              "fp": 41,
+              "fn": 16,
+              "tn": 430,
+              "fnr": 0.11428571428571428,
+              "fpr": 0.0870488322717622,
+              "fnr_ci95": [
+                0.07158260814437095,
+                0.17759074642631906
+              ],
+              "fpr_ci95": [
+                0.06481456552809073,
+                0.11596463398386447
+              ],
+              "photo_error_fraction": 0.09328968903436989
+            }
+          },
+          "worst_error": 0.22530864197530864,
+          "target_passed": false
+        }
+      },
+      "worst_error": 0.22530864197530864,
+      "target_passed": false
+    }
+  ],
+  "selected": {
+    "grid": 1,
+    "views": 1,
+    "per_class": {
+      "concrete_crack": {
+        "threshold": 0.37295812368392944,
+        "domains": {
+          "dacl": {
+            "tp": 165,
+            "fp": 109,
+            "fn": 46,
+            "tn": 390,
+            "fnr": 0.21800947867298578,
+            "fpr": 0.218436873747495,
+            "fnr_ci95": [
+              0.16761059996190267,
+              0.2784925839709669
+            ],
+            "fpr_ci95": [
+              0.18440971124757374,
+              0.25676604092881855
+            ],
+            "photo_error_fraction": 0.21830985915492956
+          },
+          "damsegment": {
+            "tp": 245,
+            "fp": 2,
+            "fn": 3,
+            "tn": 174,
+            "fnr": 0.012096774193548387,
+            "fpr": 0.011363636363636364,
+            "fnr_ci95": [
+              0.004122365520547381,
+              0.03495562770097791
+            ],
+            "fpr_ci95": [
+              0.0031218708243352968,
+              0.04048019330545044
+            ],
+            "photo_error_fraction": 0.01179245283018868
+          },
+          "codebrim": {
+            "tp": 140,
+            "fp": 47,
+            "fn": 9,
+            "tn": 415,
+            "fnr": 0.06040268456375839,
+            "fpr": 0.10173160173160173,
+            "fnr_ci95": [
+              0.032100224500152576,
+              0.11080248651307728
+            ],
+            "fpr_ci95": [
+              0.07736895338992159,
+              0.13266271504162097
+            ],
+            "photo_error_fraction": 0.09165302782324058
+          }
+        },
+        "worst_error": 0.218436873747495,
+        "target_passed": false
+      },
+      "concrete_spalling": {
+        "threshold": 0.4863460659980774,
+        "domains": {
+          "dacl": {
+            "tp": 251,
+            "fp": 86,
+            "fn": 73,
+            "tn": 300,
+            "fnr": 0.22530864197530864,
+            "fpr": 0.22279792746113988,
+            "fnr_ci95": [
+              0.18318887535613515,
+              0.2738657612346772
+            ],
+            "fpr_ci95": [
+              0.18413195127229665,
+              0.2669269467541743
+            ],
+            "photo_error_fraction": 0.223943661971831
+          },
+          "damsegment": {
+            "tp": 49,
+            "fp": 12,
+            "fn": 9,
+            "tn": 354,
+            "fnr": 0.15517241379310345,
+            "fpr": 0.03278688524590164,
+            "fnr_ci95": [
+              0.0838449195301804,
+              0.2693398085989251
+            ],
+            "fpr_ci95": [
+              0.018853174433440964,
+              0.05642626803218097
+            ],
+            "photo_error_fraction": 0.049528301886792456
+          },
+          "codebrim": {
+            "tp": 124,
+            "fp": 41,
+            "fn": 16,
+            "tn": 430,
+            "fnr": 0.11428571428571428,
+            "fpr": 0.0870488322717622,
+            "fnr_ci95": [
+              0.07158260814437095,
+              0.17759074642631906
+            ],
+            "fpr_ci95": [
+              0.06481456552809073,
+              0.11596463398386447
+            ],
+            "photo_error_fraction": 0.09328968903436989
+          }
+        },
+        "worst_error": 0.22530864197530864,
+        "target_passed": false
+      }
+    },
+    "worst_error": 0.22530864197530864,
+    "target_passed": false
+  },
+  "criterion": "Per target class FNR AND FPR strictly below .05 in EVERY recorded validation domain; no test selection",
+  "limitation": "All recorded domains are source validation domains; dam scene IDs unavailable; no independent field guarantee"
+}

@@ -9,11 +9,13 @@ RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility
       'facility-presence-target-codebrim','facility-presence-target-spatial','facility-presence-target-s2ds','facility-presence-target-hard','facility-presence-target-auxiliary',
       'facility-presence-target-roi-control','facility-presence-target-small-region',
       'facility-presence-target-building-control','facility-presence-target-building-convid',
-      'facility-presence-target-discrimination-control','facility-presence-target-discrimination-ranking')
+      'facility-presence-target-discrimination-control','facility-presence-target-discrimination-ranking',
+      'facility-presence-target-detail-control','facility-presence-target-detail-s4')
 NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강','원본19종 보조 학습',
        '작은 영역 비교: 기존 자료 대조군','작은 영역 비교: 맥락 crop 보강군',
        '콘크리트 사진 비교: 기존 자료 대조군','콘크리트 사진 비교: ConViD 양성 보강군',
-       '균열·박락 구분: 기존 손실 대조군','균열·박락 구분: 양성·음성 순위 학습군')
+       '균열·박락 구분: 기존 손실 대조군','균열·박락 구분: 양성·음성 순위 학습군',
+       '모델 구조 비교: 기존 모델 대조군','모델 구조 비교: stride4 특징 잔차 경로')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 
@@ -108,6 +110,7 @@ def main():
             '최근 작업은 [오류 검수·작은 영역 비교 계획](FACILITY_EFFICIENT_DEVELOPMENT_PLAN_KO.md)이다. 원본 TRAIN 오류 검수 화면을 만들고, 동일 초기 모델·seed·6epoch 조건으로 기존 격자 crop 대조군과 작은 부위 맥락 crop 보강군을 비교한다. 파생 사진은 새 독립 사진이 아니며, 원래 검증·시험 정답은 유지한다.','',
             '새 비교는 [콘크리트 사진 보강 계획](FACILITY_BUILDING_SUPPLEMENT_PLAN_KO.md)이다. ConViD 공식 균열·박락 폴더의 제한된 사진만 각각 해당 항목 양성으로 보강하고 나머지6항목은 미확인으로 유지한다. 공장 사진으로 표시하지 않으며 새 출처의 검증·시험 수치는 산출하지 않는다. PECCD는 숫자 클래스 대응 미확인으로 학습하지 않았다.','',
             '최근 구분 학습은 [고정 대조 계획](FACILITY_TARGET_DISCRIMINATION_PLAN_KO.md)을 따른다. 기존 원본 TRAIN의 같은 출처·항목에서 확인된 양성과 음성 점수 순위를 학습한다. 기존 sampler·정답·기본 손실을 유지하며 crop/unknown을 추가 순위 항에서 제외한다. 연구 후보 기준은 전체5% 목표와 다르며 [결과](FACILITY_TARGET_DISCRIMINATION_RESULTS_KO.md)에 항목별 변화와 서술적 Wilson 구간을 기록한다.','',
+            '최신 구조 비교는 [학습 전 고정 계획](FACILITY_DETAIL_ARCHITECTURE_PLAN_KO.md)에 따라 stride 4 세부 특징 residual 분기와 기존 구조를 각각8epoch, 총16epoch 실제 학습했다. 최대 오류는 대조22.53%·보강22.80%로 기존 최고22.28%보다 높아 채택하지 않았다. 작은 손상 FN도 대조67건·보강69건으로 새 분기의 개선 효과를 확인하지 못했다. [실측 결과](FACILITY_DETAIL_ARCHITECTURE_RESULTS_KO.md)에 항목별 집계·143개 코드 테스트·실제 자원 비용을 기록한다.','',
             '보류하는 방법의 별도 진단: [자동 판단 비율·조건부 오류](facility-presence-target-spatial-review-diagnostic_KO.md). 자동으로 판단한 일부 사진만의 오답률이며 기존 전체 사진의 미탐·오탐 기준을 통과했다는 뜻이 아니다. 두 항목을 모두 자동 판단한 사진 비율과 보류 수까지 기록한다. 앱 적용·독립 시험 전이다.','',
             f"기본 앱 프로필: `{profile['version']}`. 실험 프로필로 자동 교체하지 않았다.",
             '현장의 모든 시설, 나머지 다섯 항목, 정밀 위치와 구조 안전에 대한 5% 성능 주장은 하지 않는다.',

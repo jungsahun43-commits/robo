@@ -10,14 +10,25 @@ C++ 앱용 로컬 API 서버를 재현하기 위한 코드다. 원본 데이터�
 시험 정답은 반복 학습/임계값 선택에 쓰지 않는다. 검증 결과가 목표를 통과한 경우에만 설정을 고정해 시험한다.
 공개 자료의 검증 점수는 새로운 산업체 현장의 성능 보장이 아니다.
 
-최신 작업에서는 정답의 범위를 정리하고, 같은 출처의 손상 양성·음성을 구분하는
+최신 작업에서는 작은 손상을 위한 stride 4 세부 특징 분기를 구현하고,
+기존 구조 대조군과 각각 8epoch, 총 16epoch를 실제 추가 학습했다.
+최대 검증 미탐·오탐은 기존 최고 후보 22.28% / 대조군 22.53% / 새 구조 22.80%로
+개선되지 않았다. 작은 손상 미탐은 기존 71건 / 대조군 67건 / 새 구조 69건으로,
+새 분기의 효과를 확인하지 못했다. 연구 후보 기준과 엄격한 5% 기준 모두 미달이며
+앱 기본 프로필은 `facility-validation-v2`를 유지한다. 공장 현장 성능은 미측정이다.
+
+- 최신 구조 비교·항목별 오류·다음 우선순위: [세부 특징 구조 실측 결과](reports/FACILITY_DETAIL_ARCHITECTURE_RESULTS_KO.md)
+- 재현 명령·학습 전에 고정한 조건: [세부 특징 구조 대조 계획](reports/FACILITY_DETAIL_ARCHITECTURE_PLAN_KO.md)
+- 실제 코드 테스트 143개·저장 모델 재로딩·8epoch 표본 순서 비교: [세부 특징 기술 검증](reports/facility-detail-architecture-technical-verification.json). 정확도 측정과 별도다.
+
+앞선 구분 학습에서는 정답의 범위를 정리하고, 같은 출처의 손상 양성·음성을 구분하는
 순위 손실을 구현해 대조군과 각각 6epoch, 총 12epoch를 실제 추가 학습했다.
 최대 검증 미탐·오탐은 기존 후보 22.28% / 대조군 23.06% / 보강군 22.28%로,
 기존 후보보다 개선되지 않았다. 작은 손상은 균열 29→28/93, 박락 42→41/105로
 미탐 사진이 각각 한 장 줄었지만 일반적인 성능 향상의 증거로 보기는 부족하다.
 연구 후보 기준은 미달이며 앱 기본 모델은 `facility-validation-v2`를 유지한다.
 
-- 최신 비교·오차 범위·다음 우선순위: [손상 구분 학습 결과](reports/FACILITY_TARGET_DISCRIMINATION_RESULTS_KO.md)
+- 구분 학습 비교·오차 범위: [손상 구분 학습 결과](reports/FACILITY_TARGET_DISCRIMINATION_RESULTS_KO.md)
 - 정답으로 확인한 범위와 미확인 항목: [라벨 범위](reports/FACILITY_LABEL_SCOPE_KO.md)
 - 재현 명령·고정 조건: [대조 실험 계획](reports/FACILITY_TARGET_DISCRIMINATION_PLAN_KO.md)
 - 코드 테스트 131개 및 실제 저장 모델 재로딩 확인: [기술 검증](reports/facility-target-discrimination-technical-verification.json). 현장 정확도 측정과 별도다.

@@ -312,7 +312,7 @@ def render(result):
     intervals = lambda values: f'{pct(values[0])}–{pct(values[1])}'
     entries, gate, changes = result['experiments'], result['research_gate'], result['comparisons']
     lines = ['# 세부 특징 구조 대조 실험 결과', '',
-             '실제 완료된 8epoch 대조 실험 결과만 기록한다. 새 시설·사진·정답을 추가하지 않고 같은 초기 모델과 기존 원본 TRAIN로 작은 손상의 세부 특징 구조를 비교했다.',
+             '대조군과 보강군 각각 8epoch, 총 16epoch를 실제 추가 학습한 결과다. 새 시설·사진·정답을 추가하지 않고 같은 초기 모델과 기존 원본 TRAIN로 작은 손상의 세부 특징 구조를 비교했다.',
              '대조군은 기존 LRASPP·7종 사진 출력·19종 보조 출력이다. 보강군은 backbone block 3의 stride 4 특징을 24→48의 1×1 convolution, GroupNorm 8, SiLU, depthwise 3×3, GroupNorm 8, SiLU, 7종 zero-initialized 최종 층으로 처리한다. 80×80 adaptive average pooling 후 기존 spatial map에 residual을 더한다.',
              '7종 출력·19종 보조 태그·기존 사진/픽셀 손실·full/crop·출처 비중을 유지했다. 순위 추가 손실은 두 군 모두 0이다. stride 4 특징을 사용한다는 사실이 정밀 위치 검출 성능을 증명하지 않는다.', '',
              '| 모델 | 실제 epoch | 선택 epoch | 최대 검증 미탐·오탐 | 엄격한 5% 기준 |',
@@ -327,8 +327,12 @@ def render(result):
               '앱 배포는 자동으로 진행하지 않는다. 모든 target 출처 FNR/FPR이 각각 5% 미만이어야 하는 기존 엄격한 기준을 그대로 유지하고, 이번 보고는 보류 시험을 열거나 실행하지 않는다.', '']
     for name, point in gate['small_area_comparisons'].items():
         common = gate['error_and_other_ap_gate']['comparisons'][name]
-        lines.append(f"- {'초기 모델' if name == 'initializer' else '대조군'} 대비: 최대 오류 개선 {common['maximum_error_improvement'] * 100:+.2f}pp, 작은 손상 FN {point['small_area_total_fn_improvement']:+d}건 감소, 오류/AP 조건 {'통과' if common['passed'] else '미달'}, 작은 손상 조건 {'통과' if point['passed'] else '미달'}.")
-    lines += ['', '## 관측 오류와 기술적 범위', '',
+        lines.append(f"- {'초기 모델' if name == 'initializer' else '대조군'} 대비: 최대 오류 개선 {common['maximum_error_improvement'] * 100:+.2f}pp, 작은 손상 FN 변화 {-point['small_area_total_fn_improvement']:+d}건, 오류/AP 조건 {'통과' if common['passed'] else '미달'}, 작은 손상 조건 {'통과' if point['passed'] else '미달'}.")
+    lines += ['', 'FN 변화의 양수는 미탐 증가다.', '',
+              '## 판단과 다음 우선순위', '',
+              '보강군의 최대 오류는 초기 모델과 대조군보다 높아 채택하지 않는다. 작은 손상 FN 합계는 초기 71건·대조 67건·보강 69건이다. 초기 대비 2건 감소만으로 새 구조의 효과를 주장할 수 없으며, 같은 조건의 대조군보다 2건 더 놓쳤다.',
+              '이번 결과에서는 반복 학습이나 세부 특징 분기만으로 오류를 줄이는 효과를 확인하지 못했다. 다음 우선순위는 원본 TRAIN 정답 경계의 전문가 검수와 사진 단위 pooling·맥락을 바꾸는 한 가지 후보의 별도 대조 실험이다. 어느 쪽이 오류 원인인지는 확정하지 않았으며 이 후속 후보를 이번에 구현·학습한 것은 아니다.', '',
+              '## 관측 오류와 기술적 범위', '',
               'Wilson 양측 95% 범위는 독립 사진 이항 가정에 따른 관측 비율의 기술 통계다. 사진 상관과 같은 VAL에서 반복한 epoch·임계값 선택 때문에 확인적 신뢰구간, 미래 현장 오류 보장 또는 모델 차이의 유의성 검정으로 해석할 수 없다.', '',
               '| 모델 | 출처 | 항목 | FN/양성 | 미탐률 | Wilson 95% | FP/음성 | 오탐률 | Wilson 95% |',
               '|---|---|---|---:|---:|---|---:|---:|---|']
@@ -367,7 +371,7 @@ def render(result):
         cost = result['actual_resources'][name]
         updates = result['actual_optimizer_steps'][name]['total']
         lines.append(f"| {TITLES[name]} | {cost['elapsed_training_minutes']:.2f}분 | {cost['peak_cuda_allocated_bytes'] / (1024 ** 3):.3f} GiB | {updates['attempted_batches']} | {updates['actual_optimizer_steps']} | {updates['amp_skipped_steps']} |")
-    lines += ['', '각 run에서 관측한 시간과 allocated 메모리다. CUDA reserved·전체 프로세스 메모리·스마트폰 추론 비용 또는 미래 실행 시간의 추정값이 아니다.',
+    lines += ['', '각 run에서 관측한 시간과 allocated 메모리다. 시간에는 데이터 읽기·epoch 검증·캐시 상태·다른 작업의 영향이 포함되므로 두 시간의 차이를 순수 모델 속도 차이로 해석하지 않는다. CUDA reserved·전체 프로세스 메모리·스마트폰 추론 비용 또는 미래 실행 시간의 추정값이 아니다.',
               '같은 순서의 표본과 batch 예산이라도 AMP가 건너뛴 실제 optimizer update 수는 다를 수 있어 그대로 공개했다. 이 진단에 사후 채택 조건을 추가하지 않았다.', '']
     return '\n'.join(lines)
 
