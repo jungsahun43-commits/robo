@@ -1,0 +1,84 @@
+{
+  "schema": "facility_detail_architecture_protocol_v1",
+  "declared_before_training": true,
+  "client_date": "2026-10-04",
+  "reference": "facility-presence-target-roi-control",
+  "control": "facility-presence-target-detail-control",
+  "treatment": "facility-presence-target-detail-s4",
+  "initial_weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+  "core_spatial_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+  "auxiliary_manifest_sha256": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "seed": 54,
+  "requested_epochs": 8,
+  "patience": 8,
+  "imgsz": 640,
+  "batch_size": 8,
+  "draws_per_epoch": 14248,
+  "backbone_lr": 4e-05,
+  "head_lr": 0.00025,
+  "auxiliary_weight": 0.5,
+  "domain_proportions": [
+    0.7,
+    0.1,
+    0.2
+  ],
+  "control_architecture": "lraspp_mobilenet_facility_auxiliary_v1",
+  "treatment_architecture": "lraspp_mobilenet_facility_detail_s4_v1",
+  "target_ranking_weight": 0.0,
+  "loader_randomness": {
+    "sampler_seed": 54,
+    "training_worker_seed": 55,
+    "post_model_seed": 56,
+    "validation_worker_seeds": {
+      "dacl": 154,
+      "damsegment": 155,
+      "codebrim": 156
+    }
+  },
+  "detail_architecture": {
+    "early_backbone_block": "3",
+    "early_channels": 24,
+    "early_feature_stride": 4,
+    "early_feature_shape_640": [
+      160,
+      160
+    ],
+    "hidden_channels": 48,
+    "depthwise_kernel": 3,
+    "group_norm_groups": 8,
+    "residual_projection_zero_initialized": true,
+    "fusion": "Adaptive average pool learned stride4 seven-channel residual to original maps, then add before unchanged top32/mix",
+    "source_supervision_shape_640": [
+      80,
+      80
+    ],
+    "finer_pixel_gold_asserted": false,
+    "new_photo_labels": 0
+  },
+  "research_candidate_gate": {
+    "minimum_maximum_error_improvement_vs_reference_and_control": 0.005,
+    "maximum_any_target_fnr_fpr_regression_vs_reference_and_control": 0.02,
+    "maximum_any_known_other_class_ap_regression_vs_reference_and_control": 0.02,
+    "minimum_small_combined_fn_reduction_vs_reference_and_control": 2,
+    "maximum_any_small_class_fnr_regression_vs_reference_and_control": 0.02
+  },
+  "epoch_selection": "Same per-class minimax FNR/FPR in all three validation domains, then sum of target rates; full-photo grid1 only.",
+  "small_region_policy": "Existing DACL positives with native polygon area below 1% after 640 resize: crack93, spall105,198class-photo rows; photo miss counts, not precision localization or198necessarilyuniquephotos.",
+  "source_selection": "Original TRAIN labels/masks/crops, source sampler, photo/pixel/auxiliary weights and initialization fixed; no new data, mining, ranking or relabeling.",
+  "strict_target": "Every source crack/spalling FNR and FPR strictly below .05; not aggregate wrong-photo fraction or industrial field performance.",
+  "source_test_policy": "No test inference or test result use unless frozen strict validation target passes. Existing source holdouts are not fresh factory validation.",
+  "deployment": "Research nomination does not automatically replace facility-validation-v2 or its app profile.",
+  "interval_policy": "Wilson95 descriptive only; correlated photos and repeated validation selection limit interpretation.",
+  "stop": "Complete one eight-epoch pair, no validation-driven recipe retries or extra epochs; no5% guarantee.",
+  "implementation_parent_sha256": "c60e86aee35cc03ad552f582e1cd801128bd7ee672b4eab51e2a814ce713ec04",
+  "training_outcome": "Unmeasured when declared."
+}
