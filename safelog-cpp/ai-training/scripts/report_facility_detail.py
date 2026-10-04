@@ -294,7 +294,9 @@ def validate_technical_verification(proof, entries, protocol_sha, profile_sha):
     for relative,row in freeze['sources'].items():
         resolved = (ROOT / relative).resolve()
         require(resolved.is_relative_to(ROOT) and isinstance(relative,str)
-                and not Path(relative).is_absolute(), 'Technical source snapshot path outside local project')
+                and not Path(relative).is_absolute()
+                and (resolved.suffix == '.py' or relative == 'reports/facility-detail-architecture-protocol.json'),
+                'Technical source snapshot must reference local code/protocol only, never data/heldout inputs')
         require(row.get('equal') is True and row.get('git_blob_sha256') == row.get('executed_file_sha256') == sha(resolved),
                 'Committed architecture source/protocol revision changed')
     return {'checkpoint_pair_passed':True, 'public_outputs':7, 'private_auxiliary_outputs':19,
