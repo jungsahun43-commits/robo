@@ -1,0 +1,78 @@
+{
+  "schema": "facility_pool_context_protocol_v1",
+  "declared_before_training": true,
+  "client_date": "2026-10-04",
+  "reference": "facility-presence-target-roi-control",
+  "control": "facility-presence-target-context-control",
+  "treatment": "facility-presence-target-context-pool",
+  "initial_weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+  "core_spatial_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+  "auxiliary_manifest_sha256": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "seed": 55,
+  "requested_epochs": 6,
+  "patience": 6,
+  "imgsz": 640,
+  "batch_size": 8,
+  "draws_per_epoch": 14248,
+  "backbone_lr": 4e-05,
+  "head_lr": 0.00025,
+  "auxiliary_weight": 0.5,
+  "domain_proportions": [
+    0.7,
+    0.1,
+    0.2
+  ],
+  "control_architecture": "lraspp_mobilenet_facility_auxiliary_v1",
+  "treatment_architecture": "lraspp_mobilenet_facility_pool_context_v1",
+  "target_ranking_weight": 0.0,
+  "loader_randomness": {
+    "sampler_seed": 55,
+    "training_worker_seed": 56,
+    "post_model_seed": 57,
+    "validation_worker_seeds": {
+      "dacl": 155,
+      "damsegment": 156,
+      "codebrim": 157
+    }
+  },
+  "research_candidate_gate": {
+    "minimum_maximum_error_improvement_vs_reference_and_control": 0.005,
+    "maximum_any_target_fnr_fpr_regression_vs_reference_and_control": 0.02,
+    "maximum_any_known_other_class_ap_regression_vs_reference_and_control": 0.02,
+    "minimum_small_combined_fn_reduction_vs_reference_and_control": 2,
+    "maximum_any_small_class_fnr_regression_vs_reference_and_control": 0.02
+  },
+  "epoch_selection": "Same per-class minimax FNR/FPR in all three validation domains, then sum of target rates; full-photo grid1 only.",
+  "small_region_policy": "Existing DACL positives with native polygon area below 1% after 640 resize: crack93, spall105,198class-photo rows; photo miss counts, not precision localization or198necessarilyuniquephotos.",
+  "source_selection": "Original TRAIN labels/masks/crops, source sampler, photo/pixel/auxiliary weights and initialization fixed; no new data, mining, ranking or relabeling.",
+  "strict_target": "Every source crack/spalling FNR and FPR strictly below .05; not aggregate wrong-photo fraction or industrial field performance.",
+  "source_test_policy": "No test inference or test result use unless frozen strict validation target passes. Existing source holdouts are not fresh factory validation.",
+  "deployment": "Research nomination does not automatically replace facility-validation-v2 or its app profile.",
+  "interval_policy": "Wilson95 descriptive only; correlated photos and repeated validation selection limit interpretation.",
+  "stop": "Complete one six-epoch pair; no validation-driven K/gate/recipe retries or extra epochs; no5% guarantee.",
+  "implementation_parent_sha256": "e931284c390aa184142aa4ebc42c1b9d25a3c836565f73784bd68581456a33c4",
+  "training_outcome": "Unmeasured when declared.",
+  "context_architecture": {
+    "recipe": "zero_initialized_narrow_broad_pool_contrast_v1",
+    "narrow_topk": 32,
+    "broad_topk": 256,
+    "gate_transform": "tanh_signed_per_class",
+    "pool_formula": "narrow + tanh(context_gate) * (broad - narrow)",
+    "initial_gate": 0.0,
+    "additional_parameter_count_for_seven_classes": 7,
+    "maps_and_auxiliary_unchanged": true,
+    "backbone_passes": 1,
+    "new_photo_labels": 0,
+    "spatial_adjacency_or_scene_semantics_asserted": false
+  },
+  "label_review_policy": "Original TRAIN review preparation only; no expert corrections available, no labels changed. Existing review package may be an older initializer and is distinguished."
+}
