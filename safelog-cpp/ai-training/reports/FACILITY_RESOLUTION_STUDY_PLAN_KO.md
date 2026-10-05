@@ -77,9 +77,28 @@ GPU·저장·재로딩·라벨 보존 preflight를 통과하고 소스 commit을
 ./.venv/Scripts/python.exe scripts/evaluate_facility_target.py select --name facility-presence-target-resolution-highres --grids 1
 ./.venv/Scripts/python.exe scripts/analyze_facility_target.py --name facility-presence-target-resolution-control --aggregate-only
 ./.venv/Scripts/python.exe scripts/analyze_facility_target.py --name facility-presence-target-resolution-highres --aggregate-only
+./.venv/Scripts/python.exe scripts/test_facility_resolution.py
+./.venv/Scripts/python.exe scripts/verify_facility_resolution.py --test-results runs/facility-resolution-test-results.json
 ./.venv/Scripts/python.exe scripts/report_facility_resolution.py
+./.venv/Scripts/python.exe scripts/plot_facility_resolution.py
+./.venv/Scripts/python.exe scripts/report_facility_target.py
+./.venv/Scripts/python.exe scripts/plot_facility_target.py
 ```
 
 preflight는 TRAIN 8건의 제한된 기술 점검이며 새 학습 epoch·성능 측정에 더하지 않는다.
 전체 6epoch의 표본 순서 동등성은 완료 history의 row index SHA로 별도 검증한다.
 원본·파생 사진·개별 주석·경로·검수 메모·가중치는 로컬 ignored 폴더에 보관한다.
+
+### 실행 중단 기록
+
+최초 metadata 작성에서 문자열 경로를 `Path`로 감싸는 한 줄 오류를 수정했다.
+그 시점의 완료 epoch·optimizer update는 0이었다. GPU preflight를 다시 수행하고
+동일 학습 조건을 소스 commit `0097b4b851f69a5921ef9e9fe247a19c5eb1109b`에서 재고정했다.
+그 뒤 실행 세션 중단으로 대조군의 완료 2epoch 기록이 남았다. optimizer 복원 정보가
+없어 해당 기록을 보존하고, 같은 프로토콜·초기 모델에서 대조군 6epoch를 다시 시작했다.
+이전 중단 결과는 최종 대조·보강 쌍에 포함하지 않으며 [별도 집계](facility-resolution-interruption.json)에 남긴다.
+누적 완료 epoch에는 보존 2epoch를 별도로 더한다. 정량 기록이 없는 중단 당시 부분
+epoch 작업량은 추정 합산하지 않는다. 성능 결과에 따라 epoch·해상도·정답을 바꾼 재시도는 아니다.
+
+한 번의 백그라운드 순차 실행은 `scripts/run_facility_resolution_pair.py`를 사용한다.
+이미 존재하는 run과 증거를 덮어쓰지 않으며, 한 단계가 실패하면 다음 단계로 넘어가지 않는다.

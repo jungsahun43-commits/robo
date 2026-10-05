@@ -15,6 +15,46 @@ from scripts.report_facility_detail import detail_research_gate, validate_small_
 PROTOCOL = ROOT / 'reports/facility-resolution-study-protocol.json'
 
 
+def validate_technical_proof(proof, protocol, protocol_sha, trainings, app_sha):
+    require(proof.get('schema') == 'facility_resolution_study_verification_v1'
+            and proof.get('status') == 'passed', 'Completed technical verification is required')
+    require(proof.get('protocol_sha256') == protocol_sha
+            and proof.get('source_sha256') == protocol['source_sha256']
+            and proof.get('runtime_source_count') == len(protocol['source_sha256']),
+            'Technical proof belongs to a different frozen study')
+    for key in ('git_blob_bytes_verified','working_runtime_sources_unchanged','protected_files_unchanged'):
+        require(proof.get(key) is True, 'Technical source/protection proof is missing')
+    require(proof.get('actual_completed_training_epochs') == 2*protocol['requested_epochs']
+            and proof.get('verification_training_epochs') == 0, 'Actual epoch proof differs')
+    for key in ('source_test_inference_executed','app_model_promoted','deployed','accuracy_measured_by_verifier'):
+        require(proof.get(key) is False, 'Technical proof cannot claim inference, promotion or accuracy')
+    for key in ('additional_expert_confirmed_labels','label_changes','new_photo_targets','new_pixel_targets'):
+        require(type(proof.get(key)) is int and proof[key] == 0, 'Technical proof cannot create new truth')
+    require(proof.get('protected_file_sha256',{}).get('app_profile') == app_sha, 'App protection proof differs')
+    tests = proof.get('tests',{})
+    require(type(tests.get('tests_run')) is int and tests['tests_run'] >= 37
+            and all(type(tests.get(k)) is int and tests[k] == 0 for k in ('failures','errors','skipped')),
+            'Executed focused tests must pass')
+    experiments = proof.get('experiments',[])
+    require(len(experiments) == 2, 'Both real checkpoints require reload proof')
+    for variant, training, entry in zip(('control','highres'), trainings[1:], experiments):
+        require(entry.get('variant') == variant
+                and entry.get('weights_sha256') == training['weights_sha256']
+                and entry.get('actual_epochs') == protocol['requested_epochs']
+                and entry.get('imgsz') == protocol['imgsz_by_variant'][variant]
+                and entry.get('architecture') == protocol['architecture_by_variant'][variant]
+                and entry.get('strict_state_inventory_verified') is True
+                and entry.get('new_state_tensor_count') == 0, 'Actual checkpoint identity differs')
+        reload = entry.get('cpu_reload',{})
+        require(reload.get('strict_factory_reload_verified') is True
+                and reload.get('all_outputs_finite') is True
+                and reload.get('public_output_equals_training_photo_output') is True,
+                'Actual CPU checkpoint reload must pass')
+    return {'status':'passed','source_git_commit':proof['source_git_commit'],
+            'runtime_source_count':proof['runtime_source_count'],'tests_run':tests['tests_run'],
+            'actual_completed_training_epochs':proof['actual_completed_training_epochs']}
+
+
 def validate_histories(control, treatment, epochs, draws):
     require(len(control) == len(treatment) == epochs, 'The declared complete epoch pair is required')
     keys = ('sampled_row_indices_sha256', 'sampled_domain_counts', 'sampled_row_type_counts',
@@ -64,6 +104,10 @@ def render(result):
              '|---|---:|---:|---:|---:|---|']
     for entry in result['experiments']:
         lines.append(f'| {entry["title"]} | {entry["imgsz"]} | {entry["actual_epochs"]} | {entry["best_epoch"]} | {100*entry["worst_error"]:.2f}% | {"통과" if entry["target_passed"] else "미달"} |')
+    if result.get('interrupted_training_attempt'):
+        attempt = result['interrupted_training_attempt']
+        lines += ['', f'별도 실행 중단에서 완료 {attempt["completed_training_epochs"]}epoch·optimizer update {attempt["recorded_completed_epoch_optimizer_steps"]}회를 기록하고 보존했다. optimizer 복원 파일이 없어 같은 조건의 초기 가중치로 대조군을 다시 시작했다. 이 중단 기록은 위 모델 비교에 넣지 않았다.',
+                  f'이번 실험의 기록된 완료 학습 총량은 대조·보강 쌍 12epoch와 중단 기록을 합친 {result["total_recorded_completed_epochs_including_interruption"]}epoch다. 중단 당시 진행 중이던 부분 epoch 작업량은 정량 기록이 없어 이 수에 포함하지 않았다. 조건·예산·정답은 바꾸지 않았다.']
     change = result['comparisons']; nominated = result['research_gate']['research_candidate_nominated']
     lines += ['', f'보강군−초기 모델 최대 오류 {change["maximum_error_treatment_minus_initializer_pp"]:+.2f}pp, 보강군−대조군 {change["maximum_error_treatment_minus_control_pp"]:+.2f}pp. 양수는 악화다.',
               '최대값은 균열·박락 × 세 출처 × FNR/FPR의 12개 비율 중 최대다. 전체 오답 사진 비율이나 앱 정확도가 아니다.', '',
@@ -95,6 +139,10 @@ def render(result):
               '기존 processed DACL 최대 변1280 사진을 사용했다. 더 큰 native 원본 입력·새 현장 자료·전문가 라벨 수정·이음매 별도 정답을 추가한 실험은 아니다. 원래 19종 보조 태그에는 이음매 관련 태그가 포함되며 이전부터 사용했다.',
               '한 seed와 반복 사용한 공개 자료 VAL의 결과이며 공장 시설 성능은 미측정이다. 이번 결과로 구조 안전이나 법적 점검 완료를 확정하지 않는다.', '',
               '[사전 계획](FACILITY_RESOLUTION_STUDY_PLAN_KO.md), [고정 조건](facility-resolution-study-protocol.json), [실측 집계](facility-resolution-study-comparison.json), [기술 검증](facility-resolution-study-verification.json)', '']
+    if result.get('technical_verification'):
+        proof = result['technical_verification']
+        lines += [f'완료 가중치 두 개를 CPU에서 실제 재로딩하고, 학습 전 commit의 {proof["runtime_source_count"]}개 소스 바이트와 실제 {proof["tests_run"]}개 코드 테스트 통과를 확인했다. 코드 테스트 수는 성능 측정 수가 아니다.',
+                  '학습 시작 전 metadata 경로 형식 오류가 한 번 있었으며 당시 optimizer update·완료 epoch는 0이었다. 해당 기록을 보존하고 한 줄 수정 후 조건과 소스를 다시 고정해 두 군을 처음부터 실행했다.', '']
     return '\n'.join(lines)
 
 
@@ -150,14 +198,42 @@ def main():
     preflight = read(ROOT/'runs/facility-resolution-preflight.json')
     require(preflight['status'] == 'passed' and preflight['protocol_sha256'] == protocol_sha
             and preflight['protected_file_sha256']['app_profile'] == sha(profile), 'Preflight/app profile changed')
+    proof_path = ROOT/'reports/facility-resolution-study-verification.json'
+    proof = read(proof_path)
+    technical = validate_technical_proof(proof, protocol, protocol_sha, trainings, sha(profile))
+    require(proof['preflight_sha256'] == sha(ROOT/'runs/facility-resolution-preflight.json')
+            and proof['source_before_training_sha256'] == sha(ROOT/'runs/facility-resolution-source-before-training.json')
+            and proof['test_results_sha256'] == sha(ROOT/'runs/facility-resolution-test-results.json'),
+            'Technical verification input bytes changed')
+    for category in ('test_source_sha256','source_sha256'):
+        for path, expected in proof['tests'][category].items():
+            require(sha(ROOT/path) == expected, 'Executed test/verifier source bytes changed')
     result = {'schema':'facility_resolution_study_comparison_v1','protocol_sha256':protocol_sha,
               'experiments':entries,'comparisons':comparisons(*entries),
               'research_gate':detail_research_gate(*entries, protocol['research_candidate_gate']),
               'error_rows':error_rows(entries),'actual_sampling_verification':sampling,
               'original_validation_truth_sha256':truth[0],'verified_known_class_ap_measurements':ap_count,
               'app_profile_sha256':sha(profile),'deployed':False,'source_test_inference_executed':False,
+              'technical_verification':technical,'technical_verification_sha256':sha(proof_path),
               'additional_expert_confirmed_labels':0,'label_changes':0,
               'scope':'Source VAL photo presence; repeated selection, not factory accuracy or precise localization'}
+    interrupted_path = ROOT/'reports/facility-resolution-interruption.json'
+    if interrupted_path.exists():
+        interrupted = read(interrupted_path)
+        require(interrupted.get('schema') == 'facility_resolution_interruption_v1'
+                and interrupted.get('status') == 'interrupted'
+                and interrupted.get('study_protocol_sha256') == protocol_sha
+                and interrupted.get('source_sha256') == protocol['source_sha256']
+                and interrupted.get('experimental_recipe_changed') is False
+                and interrupted.get('included_in_final_model_comparison') is False,
+                'Operational interruption evidence differs from the frozen study')
+        require(type(interrupted.get('completed_training_epochs')) is int
+                and 0 < interrupted['completed_training_epochs'] < protocol['requested_epochs'],
+                'Interrupted epoch count is invalid')
+        result['interrupted_training_attempt'] = interrupted
+        result['interrupted_training_attempt_sha256'] = sha(interrupted_path)
+        result['total_recorded_completed_epochs_including_interruption'] = (
+            result['technical_verification']['actual_completed_training_epochs']+interrupted['completed_training_epochs'])
     require(protocol['research_candidate_gate'] == GATE, 'Declared research gate differs')
     (ROOT/'reports/facility-resolution-study-comparison.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     (ROOT/'reports/FACILITY_RESOLUTION_STUDY_RESULTS_KO.md').write_text(render(result),encoding='utf-8')

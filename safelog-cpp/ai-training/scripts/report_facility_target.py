@@ -11,15 +11,61 @@ RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility
       'facility-presence-target-building-control','facility-presence-target-building-convid',
       'facility-presence-target-discrimination-control','facility-presence-target-discrimination-ranking',
       'facility-presence-target-detail-control','facility-presence-target-detail-s4',
-      'facility-presence-target-context-control','facility-presence-target-context-pool')
+      'facility-presence-target-context-control','facility-presence-target-context-pool',
+      'facility-presence-target-resolution-control','facility-presence-target-resolution-highres')
 NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강','원본19종 보조 학습',
        '작은 영역 비교: 기존 자료 대조군','작은 영역 비교: 맥락 crop 보강군',
        '콘크리트 사진 비교: 기존 자료 대조군','콘크리트 사진 비교: ConViD 양성 보강군',
        '균열·박락 구분: 기존 손실 대조군','균열·박락 구분: 양성·음성 순위 학습군',
        '모델 구조 비교: 기존 모델 대조군','모델 구조 비교: stride4 특징 잔차 경로',
-       '사진 pooling 비교: 기존 모델 대조군','사진 pooling 비교: 좁은 피크·넓은 증거 대비')
+       '사진 pooling 비교: 기존 모델 대조군','사진 pooling 비교: 좁은 피크·넓은 증거 대비',
+       '입력 해상도 비교: 640 대조군','입력 해상도 비교: 960 보강군')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
+RESOLUTION_RUNS=RUNS[-2:]
+
+
+def interrupted_training_attempts(root):
+    """Count preserved complete epochs, never unrecorded partial work or scores."""
+    path=root/'reports/facility-resolution-interruption.json'
+    if not path.exists():return [],None
+    evidence=read(path)
+    if (evidence.get('schema')!='facility_resolution_interruption_v1'
+            or evidence.get('status')!='interrupted' or evidence.get('variant')!='control'
+            or any(evidence.get(key) is not False for key in ('experimental_recipe_changed',
+                    'included_in_final_model_comparison','app_model_promoted','source_test_inference_executed'))):
+        raise ValueError('Interrupted attempt must preserve the declared recipe and remain outside model comparison')
+    preserved='facility-resolution-control-interrupted-session'
+    archive=root/'runs'/preserved
+    history_path=archive/'history.json';metadata_path=archive/'TRAINING.json'
+    if (sha(history_path)!=evidence.get('history_sha256')
+            or sha(metadata_path)!=evidence.get('training_metadata_sha256')):
+        raise ValueError('Preserved interruption evidence changed')
+    history=read(history_path);metadata=read(metadata_path)
+    completed=evidence.get('completed_training_epochs')
+    if (type(completed) is not int or completed<1 or not isinstance(history,list)
+            or len(history)!=completed or any(type(row.get('epoch')) is not int
+                    or row['epoch']!=index for index,row in enumerate(history,1))
+            or metadata.get('study_protocol_sha256')!=evidence.get('study_protocol_sha256')
+            or metadata.get('source_sha256')!=evidence.get('source_sha256')):
+        raise ValueError('Interrupted complete-epoch history or frozen source provenance differs')
+    updates=evidence.get('recorded_completed_epoch_optimizer_steps')
+    actual=[row.get('optimizer_step_diagnostics',{}).get('actual_optimizer_steps') for row in history]
+    if (type(updates) is not int or updates<0 or any(type(value) is not int or value<0 for value in actual)
+            or sum(actual)!=updates):
+        raise ValueError('Interrupted complete-epoch optimizer accounting differs')
+    current=root/'runs'/RESOLUTION_RUNS[0]/'history.json'
+    if current.exists() and sha(current)==evidence['history_sha256']:
+        raise ValueError('Interrupted history remains in the active run and would be counted twice')
+    attempt={'original_run':RESOLUTION_RUNS[0],'preserved_run':preserved,'status':'interrupted',
+             'completed_training_epochs':completed,'recorded_completed_epoch_optimizer_steps':updates,
+             'additional_partial_epoch_updates':evidence.get('additional_partial_epoch_updates'),
+             'history_sha256':evidence['history_sha256'],'training_metadata_sha256':evidence['training_metadata_sha256'],
+             'study_protocol_sha256':evidence['study_protocol_sha256'],
+             'experimental_recipe_changed':False,'included_in_final_model_comparison':False,
+             'unrecorded_partial_epoch_work_counted':False,
+             'report':'reports/facility-resolution-interruption.json','report_sha256':sha(path)}
+    return [attempt],sha(path)
 
 
 def main():
@@ -56,12 +102,25 @@ def main():
     profile=read(ROOT/'reports/facility-inference-profile.json')
     comparable=[e for e in entries if e.get('frozen_validation') and e.get('validation_domains')==['dacl','damsegment','codebrim'] and e.get('worst_error') is not None]
     best=min(comparable,key=lambda e:e['worst_error']) if comparable else None
-    total_epochs=sum(e.get('epochs',0) for e in entries)
+    attempts,interruption_sha=interrupted_training_attempts(ROOT)
+    model_run_epochs=sum(e.get('epochs',0) for e in entries)
+    interrupted_epochs=sum(attempt['completed_training_epochs'] for attempt in attempts)
+    total_epochs=model_run_epochs+interrupted_epochs
+    paired_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in RESOLUTION_RUNS)
     running=[{'run':e['run'],'epochs':e['epochs'],'best_full_photo_worst_error':e['worst_error']}
              for e in entries if e.get('status')=='running' and e.get('worst_error') is not None]
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
             'experiments':entries,'app_profile':profile['version'],'app_profile_sha256':sha(ROOT/'reports/facility-inference-profile.json'),
-            'total_actual_training_epochs':total_epochs,'best_three_domain_validation_run':best['run'] if best else None,
+            'total_actual_training_epochs':total_epochs,
+            'model_run_recorded_training_epochs':model_run_epochs,
+            'interrupted_recorded_training_epochs':interrupted_epochs,
+            'interrupted_training_attempts':attempts,'interruption_report_sha256':interruption_sha,
+            'resolution_training_accounting':{'paired_budget_epochs':12,'paired_recorded_completed_epochs':paired_epochs,
+                    'interrupted_recorded_completed_epochs':interrupted_epochs,
+                    'recorded_completed_epochs_including_interruption':paired_epochs+interrupted_epochs,
+                    'unrecorded_partial_epoch_work_counted':False,
+                    'partial_work_scope':'Incomplete epoch batches, updates and time are not quantified or added to completed epochs'},
+            'best_three_domain_validation_run':best['run'] if best else None,
             'best_three_domain_validation_worst_error':best['worst_error'] if best else None,
             'best_three_domain_scope':'Completed validation view/cutoff selection only; running rows reported separately',
             'running_best_full_photo_validation':running,
@@ -72,7 +131,9 @@ def main():
     save(ROOT/'reports/facility-five-percent-results.json',result)
     lines=['# 시설 항목별 5% 목표 진행·결과','',
            '**5% 미만 목표 미달.**' if not result['release_target_achieved'] else '**기록된 보류 자료의 목표 통과 모델이 있음. 현장 보장은 아님.**','',
-           f'기록된 실제 학습은 총{total_epochs}epoch이다. 모델 확률 평균 검증은 학습 횟수에 더하지 않는다.',
+           f'기록된 완료 학습은 총{total_epochs}epoch이다. 현재 모델 실행 기록{model_run_epochs}epoch와 보존한 중단 실행 기록{interrupted_epochs}epoch를 합산했다. 모델 확률 평균 검증은 학습 횟수에 더하지 않는다.',
+           f'해상도 대조 실험의 계획 예산은 640·960 각각6epoch, 합계12epoch이다. 현재 두 모델의 완료 기록은 {paired_epochs}epoch이며 중단 실행의 {interrupted_epochs}epoch는 모델 비교 예산·성능 표에 포함하지 않고 누적 학습량에만 별도 더한다.',
+           *(['실행 세션 중단 뒤 optimizer 상태를 복구할 수 없어 같은 초기 모델·고정 조건으로 대조군을 처음부터 다시 시작했다. 중단 당시 완료하지 못한 epoch의 배치·업데이트·시간은 정량 기록이 없어 추정 합산하지 않는다. [보존한 중단 집계](facility-resolution-interruption.json)를 함께 기록한다.'] if attempts else []),
            f"동일한 세 검증 자료에서 뷰·임계값 선택 고정이 끝난 최대 오류 최소 관측 모델: `{best['run']}`, 최대 미탐·오탐 {best['worst_error']*100:.2f}%. 연구 후보 선정과 앱 배포 기준 통과는 별도다." if best else '동일한 세 검증 자료의 선택 고정 결과가 아직 없다.',
            *[f"진행 중 `{r['run']}`: 실제{r['epochs']}epoch, 지금까지 전체 사진의 최대 미탐·오탐 최저{r['best_full_photo_worst_error']*100:.2f}%. 학습 및 최종 확대 선택이 아직 끝나지 않았다." for r in running],
            '검증 미달 후보를 반복 시험하여 설정을 고르지 않았다. 목표를 통과했을 때 수행할 별도 추가1epoch 조건도 아직 발동하지 않았다.',
@@ -114,6 +175,7 @@ def main():
             '최근 구분 학습은 [고정 대조 계획](FACILITY_TARGET_DISCRIMINATION_PLAN_KO.md)을 따른다. 기존 원본 TRAIN의 같은 출처·항목에서 확인된 양성과 음성 점수 순위를 학습한다. 기존 sampler·정답·기본 손실을 유지하며 crop/unknown을 추가 순위 항에서 제외한다. 연구 후보 기준은 전체5% 목표와 다르며 [결과](FACILITY_TARGET_DISCRIMINATION_RESULTS_KO.md)에 항목별 변화와 서술적 Wilson 구간을 기록한다.','',
             '최신 구조 비교는 [학습 전 고정 계획](FACILITY_DETAIL_ARCHITECTURE_PLAN_KO.md)에 따라 stride 4 세부 특징 residual 분기와 기존 구조를 각각8epoch, 총16epoch 실제 학습했다. 최대 오류는 대조22.53%·보강22.80%로 기존 최고22.28%보다 높아 채택하지 않았다. 작은 손상 FN도 대조67건·보강69건으로 새 분기의 개선 효과를 확인하지 못했다. [실측 결과](FACILITY_DETAIL_ARCHITECTURE_RESULTS_KO.md)에 항목별 집계·143개 코드 테스트·실제 자원 비용을 기록한다.','',
             '후속 사진 pooling 비교는 [고정 계획](FACILITY_POOL_CONTEXT_PLAN_KO.md)을 따른다. 기존 global 경로·map·보조 head를 유지하고 top32/top256 로그잇 대비의 계수7개만 추가한다. 두 군 각각6epoch 예산이며 실제 진행·결과는 위 표와 [별도 집계](FACILITY_POOL_CONTEXT_RESULTS_KO.md)에 기록한다. 정답 검수 준비와 실제 정답 수정·새 산업 현장 검증을 구분한다.','',
+            '최신 입력 해상도 비교는 [고정 계획](FACILITY_RESOLUTION_STUDY_PLAN_KO.md)에 따라 기존 processed 사진을 640·960으로 읽어 각6epoch 비교한다. 960의 120×120 지도는 80×80으로 줄인 뒤 기존 top32와 픽셀 정답을 사용한다. 실제 epoch와 [결과](FACILITY_RESOLUTION_STUDY_RESULTS_KO.md)·[집계](facility-resolution-study-comparison.json)에 기록하며 새 native 원본 입력이나 정답 수정은 아니다.','',
             '보류하는 방법의 별도 진단: [자동 판단 비율·조건부 오류](facility-presence-target-spatial-review-diagnostic_KO.md). 자동으로 판단한 일부 사진만의 오답률이며 기존 전체 사진의 미탐·오탐 기준을 통과했다는 뜻이 아니다. 두 항목을 모두 자동 판단한 사진 비율과 보류 수까지 기록한다. 앱 적용·독립 시험 전이다.','',
             f"기본 앱 프로필: `{profile['version']}`. 실험 프로필로 자동 교체하지 않았다.",
             '현장의 모든 시설, 나머지 다섯 항목, 정밀 위치와 구조 안전에 대한 5% 성능 주장은 하지 않는다.',

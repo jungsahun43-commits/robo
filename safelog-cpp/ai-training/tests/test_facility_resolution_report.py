@@ -4,7 +4,8 @@ import hashlib
 import math
 import unittest
 
-from scripts.report_facility_resolution import DOMAINS, TARGETS, error_rows, render, validate_histories
+from scripts.report_facility_resolution import (DOMAINS, TARGETS, error_rows, render,
+                                               validate_histories, validate_technical_proof)
 
 
 class ResolutionReportTests(unittest.TestCase):
@@ -167,6 +168,53 @@ class ResolutionReportTests(unittest.TestCase):
         self.assertEqual(result["label_changes"], 0)
         self.assertFalse(result["deployed"])
         self.assertFalse(result["source_test_inference_executed"])
+
+    def test_report_requires_actual_matching_frozen_checkpoint_and_test_proof(self):
+        protocol = {'requested_epochs':6, 'source_sha256':{'runtime.py':'a'*64},
+                    'imgsz_by_variant':{'control':640,'highres':960},
+                    'architecture_by_variant':{'control':'aux','highres':'resolution'}}
+        trainings = [{}, {'weights_sha256':'b'*64}, {'weights_sha256':'c'*64}]
+        proof = {'schema':'facility_resolution_study_verification_v1','status':'passed',
+                 'protocol_sha256':'d'*64,'source_sha256':protocol['source_sha256'],
+                 'source_git_commit':'e'*40,'runtime_source_count':1,
+                 'git_blob_bytes_verified':True,'working_runtime_sources_unchanged':True,
+                 'protected_files_unchanged':True,'actual_completed_training_epochs':12,
+                 'verification_training_epochs':0,'source_test_inference_executed':False,
+                 'app_model_promoted':False,'deployed':False,'accuracy_measured_by_verifier':False,
+                 'additional_expert_confirmed_labels':0,'label_changes':0,
+                 'new_photo_targets':0,'new_pixel_targets':0,
+                 'protected_file_sha256':{'app_profile':'f'*64},
+                 'tests':{'tests_run':38,'failures':0,'errors':0,'skipped':0},'experiments':[]}
+        for variant, training in zip(('control','highres'),trainings[1:]):
+            proof['experiments'].append({'variant':variant,
+                'weights_sha256':training['weights_sha256'],'actual_epochs':6,
+                'imgsz':protocol['imgsz_by_variant'][variant],
+                'architecture':protocol['architecture_by_variant'][variant],
+                'strict_state_inventory_verified':True,'new_state_tensor_count':0,
+                'cpu_reload':{'strict_factory_reload_verified':True,'all_outputs_finite':True,
+                              'public_output_equals_training_photo_output':True}})
+        before = copy.deepcopy(proof)
+        self.assertEqual(validate_technical_proof(proof,protocol,'d'*64,trainings,'f'*64)['tests_run'],38)
+        self.assertEqual(proof,before)
+        for mutation in ('failed','stale_protocol','source_drift','no_git','incomplete_epochs',
+                         'new_training','promoted','new_labels','app_changed','test_failure',
+                         'no_second_checkpoint','stale_weights','nonfinite_reload'):
+            changed = copy.deepcopy(proof)
+            if mutation == 'failed': changed['status'] = 'failed'
+            elif mutation == 'stale_protocol': changed['protocol_sha256'] = '0'*64
+            elif mutation == 'source_drift': changed['source_sha256'] = {}
+            elif mutation == 'no_git': changed['git_blob_bytes_verified'] = False
+            elif mutation == 'incomplete_epochs': changed['actual_completed_training_epochs'] = 11
+            elif mutation == 'new_training': changed['verification_training_epochs'] = 1
+            elif mutation == 'promoted': changed['app_model_promoted'] = True
+            elif mutation == 'new_labels': changed['label_changes'] = 1
+            elif mutation == 'app_changed': changed['protected_file_sha256']['app_profile'] = '0'*64
+            elif mutation == 'test_failure': changed['tests']['failures'] = 1
+            elif mutation == 'no_second_checkpoint': changed['experiments'].pop()
+            elif mutation == 'stale_weights': changed['experiments'][1]['weights_sha256'] = '0'*64
+            else: changed['experiments'][1]['cpu_reload']['all_outputs_finite'] = False
+            with self.subTest(mutation=mutation),self.assertRaises(ValueError):
+                validate_technical_proof(changed,protocol,'d'*64,trainings,'f'*64)
 
 
 if __name__ == "__main__":
