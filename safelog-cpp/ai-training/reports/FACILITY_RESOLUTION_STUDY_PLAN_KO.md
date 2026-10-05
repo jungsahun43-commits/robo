@@ -88,6 +88,9 @@ GPU·저장·재로딩·라벨 보존 preflight를 통과하고 소스 commit을
 preflight는 TRAIN 8건의 제한된 기술 점검이며 새 학습 epoch·성능 측정에 더하지 않는다.
 전체 6epoch의 표본 순서 동등성은 완료 history의 row index SHA로 별도 검증한다.
 원본·파생 사진·개별 주석·경로·검수 메모·가중치는 로컬 ignored 폴더에 보관한다.
+소스 SHA는 실제 Git blob 바이트와 대조한다. Windows의 자동 LF↔CRLF 변환이 있으면
+검증이 실패하므로 재현용 별도 checkout은 `git -c core.autocrlf=false clone --branch feature/ai-engine https://github.com/jungsahun43-commits/robo.git robo-ai-repro`로 준비한다.
+학습 자료·초기 가중치·실행 증거는 Git에 포함되지 않아 로컬 연구 자료를 별도로 준비해야 한다.
 
 ### 실행 중단 기록
 

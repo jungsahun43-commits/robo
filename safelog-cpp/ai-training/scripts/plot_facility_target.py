@@ -34,7 +34,7 @@ EXPERIMENTS=[('facility-presence-target-v2s','Larger photo model',0),
 
 
 def main():
-    fig,axes=plt.subplots(1,2,figsize=(12,4.7),sharey=True)
+    fig,axes=plt.subplots(1,2,figsize=(12,7.2),sharey=True)
     records=[];maximum=35
     colors=[plt.get_cmap('tab10'),plt.get_cmap('tab20')]
     color_counts=[0,0]
@@ -57,11 +57,13 @@ def main():
         ax.axhline(5,color='#216e39',linestyle='--',label='Target: strictly below 5%')
         ax.set_title(title,fontsize=11);ax.set_xlabel('Actual training epoch')
         ax.set_ylim(0,maximum);ax.set_xlim(.5,18.5);ax.grid(alpha=.2)
-        ax.legend(loc='lower right',fontsize=7,ncol=2,framealpha=1.)
+        legend=ax.legend(loc='upper left',bbox_to_anchor=(0,-.20),
+                         fontsize=7,ncol=2,framealpha=1.,borderaxespad=0.)
+        legend.set_in_layout(False)
     axes[0].set_ylabel('Largest crack/spalling FNR or FPR (%)')
     fig.suptitle('Facility target: full-photo validation during training',fontsize=13)
     fig.text(.5,.025,'Source validation only. Panels use different domains. Circles mark best epochs; tests are not selection data.',ha='center',fontsize=8)
-    fig.tight_layout(rect=(0,.065,1,.94))
+    fig.tight_layout(rect=(0,.37,1,.94))
     output=ROOT/'reports/facility-five-percent-curve.png'
     fig.savefig(output,dpi=160);plt.close(fig)
     save(output.with_suffix('.json'),{'plot_sha256':sha(output),'script_sha256':sha(Path(__file__)),
