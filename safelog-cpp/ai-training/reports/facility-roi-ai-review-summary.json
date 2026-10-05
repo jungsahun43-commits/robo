@@ -1,0 +1,86 @@
+{
+  "schema": "facility_ai_roi_review_report_v1",
+  "created_utc": "2026-10-05T04:23:06.875825+00:00",
+  "ai_observations": {
+    "schema": "facility_ai_train_observation_summary_v1",
+    "source_package_sha256": "2c63eec39546f9944cc6475f2321e4499363fec087d23ecdb76b69d1e849a660",
+    "weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+    "observation_content_sha256": "036fb2d94217da4dfec1ac3f4bdb0c00ea33c6b9d0b217e3a2861f29fd755d6c",
+    "review_status": "unconfirmed",
+    "observer_type": "ai",
+    "observed_cases": 23,
+    "by_source": {
+      "codebrim": 8,
+      "dacl": 8,
+      "damsegment": 7
+    },
+    "observed_task_opinions": 31,
+    "by_task": {
+      "concrete_crack": 16,
+      "concrete_spalling": 15
+    },
+    "by_reason_task_opinions": {
+      "annotation_uncertain": 6,
+      "capture_quality": 2,
+      "correct_comparison": 13,
+      "other_damage_confusion": 3,
+      "small_damage": 4,
+      "texture_confusion": 3
+    },
+    "by_visual_judgement": {
+      "absent": 5,
+      "present": 10,
+      "uncertain": 16
+    },
+    "native_masks_reported_viewed": 5,
+    "cases_with_follow_up_questions": 23,
+    "human_review_opinions_generated": 0,
+    "expert_confirmed_labels": 0,
+    "label_changes": 0,
+    "training_applied": 0,
+    "scope": "AI hypotheses from selected TRAIN cases; not error prevalence, expert truth or field accuracy"
+  },
+  "input_dimensions": {
+    "codebrim": {
+      "cases": 60,
+      "min_input_side": 33,
+      "median_min_input_side": 222.5,
+      "min_side_below_64": 3,
+      "aspect_above_8": 2
+    },
+    "dacl": {
+      "cases": 53,
+      "min_input_side": 480,
+      "median_min_input_side": 960,
+      "min_side_below_64": 0,
+      "aspect_above_8": 0
+    },
+    "damsegment": {
+      "cases": 17,
+      "min_input_side": 512,
+      "median_min_input_side": 640,
+      "min_side_below_64": 0,
+      "aspect_above_8": 0
+    }
+  },
+  "package_file_sha256": "f6fc9def0f80e51ea3efff156e2dc8e37ec017eab2088d1f256d08ad3bbf6b33",
+  "observations_file_sha256": "6b3699ed022ad88d914009872640eea63caa13005f3759b5ece02c99b3445636",
+  "metadata_only_case_count": 107,
+  "visual_observation_is_full_package": false,
+  "error_rate_measured": false,
+  "app_model_promoted": false,
+  "training_epochs": 0,
+  "script_sha256": "45f01ce3fb9f6859c9477d0030edbecdeaa92e4b074477d455fcd20c00113480",
+  "prior_ai_observation_context": {
+    "prior_observed_cases": 23,
+    "same_photo_sha256_cases": 6,
+    "not_in_prior_observation_cases": 17,
+    "prior_record_file_sha256": "fd222ab1af9b4cf59637496757c80b14cc310746793fe15792ca4e4913ce5deb",
+    "prior_record_changed": false
+  },
+  "limitations": [
+    "Selected TRAIN observations do not estimate error prevalence or field accuracy.",
+    "Dimensions are original input headers; these flags do not exclude cases or confirm causes.",
+    "AI opinions are unconfirmed and are not human or expert feedback."
+  ]
+}

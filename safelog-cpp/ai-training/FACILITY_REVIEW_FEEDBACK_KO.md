@@ -81,6 +81,44 @@ runs/facility-train-review-roi-0773/review-workbench.html
 
 공장 시설 성능을 확인하려면 별도 현장 평가 자료가 필요하다. TRAIN 검수 사례나 의견에 맞춰 VAL/TEST 정답·어려운 사례를 바꾸어 5%를 맞추지 않는다.
 
+## 6. AI 보조 관찰을 연결한 화면
+
+최근 ROI 모델의 고정 TRAIN 묶음 130건 중 사진 23건을 AI가 확인하고, 항목 의견
+31개를 별도 `facility_ai_train_observations_v1` 기록에 저장했다. DACL 8건에는 두
+손상 항목을 기록하고, Dam 7건·CODEBRIM 8건에는 선택한 항목을 기록했다.
+이전 AI 관찰 23건과 사진 SHA가 같은 사례는 6건이며, 나머지 17건은 그 기록에
+포함되지 않았다. AI가 확인했다는 선언은 전문가 자격이나 정답 승인을 뜻하지 않는다.
+
+이 PC에 생성한 새 화면은 다음 파일이다. 기존 화면과 원본 검수 묶음은 보존했다.
+
+```text
+runs/facility-roi-ai-observations-20261005/workbench/review-workbench.html
+```
+
+`AI 보조 관찰 보기`를 켜면 관찰한 사실·원인 후보·추가 확인 질문을 볼 수 있다.
+기본은 꺼져 있고 AI 메모는 읽기 전용이다. 사람의 항목별 의견란에는 자동으로
+입력되지 않으며, 사람 의견 JSON·검수 의견 집계에도 자동 포함되지 않는다.
+먼저 사진을 판단한 뒤 참고 자료를 열고, 판단이 어려우면 불확실 의견을 남긴다.
+
+각자의 로컬 묶음과 해당 묶음·모델·사진 SHA가 일치하는 AI 기록을 준비했다면
+새 출력 폴더를 지정해 화면과 집계 보고서를 만든다. 아래 명령은 이 PC의 현재
+자료 이름을 사용한 예시다. 원본 사진·주석·개별 AI 기록은 Git에 포함되지 않는다.
+
+```powershell
+./.venv/Scripts/python.exe scripts/build_facility_review_workbench.py --package runs/facility-train-review-roi-0773/TRAIN-REVIEW.json --ai-observations runs/facility-roi-ai-observations-20261005/AI-OBSERVATIONS.json --output runs/ai-review-round-02/review-workbench.html
+./.venv/Scripts/python.exe scripts/report_facility_ai_observations.py --package runs/facility-train-review-roi-0773/TRAIN-REVIEW.json --observations runs/facility-roi-ai-observations-20261005/AI-OBSERVATIONS.json --prior-observations runs/facility-industrial-review/AI-OBSERVATIONS.json --output runs/ai-review-report-02
+```
+
+`--prior-observations`는 선택 옵션이다. 기존 기록과 사진 SHA의 겹침만 집계하며
+이전 의견을 새 의견이나 전문가 판정으로 합치지 않는다. 출력의 `summary.json`과
+`README_KO.md`는 집계용이며, `input-dimensions-details.json`은 사례별 로컬 기록이다.
+다시 실행할 때는 기존 파일을 덮어쓰지 않도록 새로운 출력 위치를 사용한다.
+
+실제 이번 관찰·크기 집계·한계는 [결과 보고서](reports/FACILITY_ROI_AI_REVIEW_KO.md),
+코드·원본 보존 검증은 [기술 기록](reports/facility-roi-ai-review-verification.json)에 있다.
+130건 중 107건은 크기와 SHA만 확인했다. 이번 작업은 새 학습·오류율 측정·라벨
+수정 없이 검수 원인 후보를 준비한 단계이며, 5% 목표는 아직 미달이다.
+
 ## 역할4와 연결할 내용
 
 역할3은 의견 형식 검증·오류 원인 집계·보강 자료 버전을 담당한다. 역할4는 앱에서 `AI 제안 → 사람 확인·수정 → 보고서 저장`을 연결하고, 저장할 때 점검 ID·사진 ID·판단 항목·작성자·시각·근거를 남기면 된다.

@@ -1,0 +1,85 @@
+{
+  "schema": "facility_roi_ai_review_technical_verification_v1",
+  "created_utc": "2026-10-05T04:24:46.551925+00:00",
+  "scope": "Read-only AI notes and input metadata, not expert adjudication or model accuracy",
+  "source_code_sha256": {
+    "safelog_ai/review_observations.py": "fab7d9cf10cced2292a46548ad9307b0d9ee07c6c3bbc751fdc0cc3eb4751fa6",
+    "scripts/report_facility_ai_observations.py": "45f01ce3fb9f6859c9477d0030edbecdeaa92e4b074477d455fcd20c00113480",
+    "scripts/build_facility_review_workbench.py": "ceab058f4817dd97ddde3b24de4ef018c3117e0fbd3059366d6c12fd6113134f",
+    "review-ui/review-workbench.js": "d2dfee25ac959933b797676bbc31894c7fdaac3112a3e7e8de468d64c445f2b3",
+    "review-ui/review-workbench.css": "afa57b8ad589120c34f235bd23c92bb781fc9c4ceb8b8f023b465fb96ebb8697",
+    "tests/test_facility_ai_observations.py": "442bc56ef30ff26f3090877e69831a074900b463fcaf52d667297650556fc87d",
+    "tests/test_facility_ai_observation_report.py": "a1b2dbe28933e20595635d7dc9793c5833416019ed32549de760e33decc75107"
+  },
+  "report_script_sha256_matches_current_source": true,
+  "source_package_file_sha256": "f6fc9def0f80e51ea3efff156e2dc8e37ec017eab2088d1f256d08ad3bbf6b33",
+  "source_package_content_sha256": "2c63eec39546f9944cc6475f2321e4499363fec087d23ecdb76b69d1e849a660",
+  "source_package_unchanged": true,
+  "old_index_html_unchanged": true,
+  "old_ai_observation_record_unchanged": true,
+  "original_local_source_records": [
+    {
+      "source": "dacl",
+      "observed_cases": 8,
+      "original_source_record_sha256": "0ef447409761ae24cc859c98178064ea3b6c5637b16ef9cf3543e97223d68bc3",
+      "extras_preserved_in_original_local_source_record": true
+    },
+    {
+      "source": "damsegment",
+      "observed_cases": 7,
+      "original_source_record_sha256": "cd4b6d2fbed4cd77abf2827bd08e8b066e574217804816953e3bc30fe69a7503",
+      "extras_preserved_in_original_local_source_record": true
+    },
+    {
+      "source": "codebrim",
+      "observed_cases": 8,
+      "original_source_record_sha256": "ba2565a5639f3c2fae6da414ecc2c602ccaca716b4fe8560534053f65d9911b5",
+      "extras_preserved_in_original_local_source_record": true
+    }
+  ],
+  "verified_unique_source_assets": 326,
+  "source_asset_sha256_verified": true,
+  "workbench_case_count": 130,
+  "workbench_ai_note_sections": 23,
+  "workbench_human_task_fields": 260,
+  "human_notes_start_empty": true,
+  "ai_notes_hidden_by_default": true,
+  "ai_notes_read_only": true,
+  "workbench_script_and_css_match_source": true,
+  "rebased_image_asset_bytes_verified": true,
+  "workbench_sha256": "7fb4e453b0b706f6e5216f3c7d94cc37f14b25a0a176dabf8e9ffcb49a15b368",
+  "actual_ai_observed_unique_photos": 23,
+  "actual_ai_task_opinions": 31,
+  "input_photo_dimensions_audited": 130,
+  "metadata_only_cases": 107,
+  "photo_overlap_with_prior_ai_record": 6,
+  "not_in_prior_ai_observation_record": 17,
+  "python_tests": {
+    "passed": 38,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "node_tests": {
+    "passed": 8,
+    "failures": 0,
+    "skipped": 0
+  },
+  "browser_python_contract_synthetic_inputs": 19,
+  "actual_new_browser_interaction_tested": false,
+  "actual_browser_disk_download_verified": false,
+  "independent_code_review": "Fixed report counts and historical-model wording identified and corrected",
+  "actual_human_opinion_documents_generated": 0,
+  "actual_expert_confirmed_labels": 0,
+  "actual_label_changes": 0,
+  "training_epochs_this_work": 0,
+  "accuracy_measured_this_work": false,
+  "app_model_promoted": false,
+  "limitations": [
+    "Photo-viewing declarations do not authenticate an observer or expert.",
+    "Selected TRAIN opinion counts do not measure error prevalence or factory accuracy.",
+    "No five-percent target achievement or new model improvement claimed.",
+    "UI file generation and unit tests verified; new browser interaction not tested.",
+    "Earlier verification file is historical evidence for the previous code revision."
+  ]
+}

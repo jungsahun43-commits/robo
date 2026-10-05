@@ -143,6 +143,7 @@
     }
     document.body.classList.toggle("show-reference", get("show-reference").checked);
     document.body.classList.toggle("show-model", get("show-model").checked);
+    document.body.classList.toggle("show-ai", get("show-ai")?.checked || false);
     document.body.classList.toggle("expert-mode", get("reviewer-role").value === "domain_expert");
   }
   function applyFeedback(doc) {
@@ -174,6 +175,7 @@
   }
   for (const id of ["reviewer-id", "reviewer-name", "reviewer-role", "reviewer-expertise"]) get(id).addEventListener("input", () => { dirty = true; refresh(); });
   for (const id of ["domain-filter", "pending-only", "show-reference", "show-model"]) get(id).addEventListener("change", refresh);
+  get("show-ai")?.addEventListener("change", refresh);
   get("export").addEventListener("click", () => {
     try {
       const doc = validateFeedback(snapshot(), metadata);
