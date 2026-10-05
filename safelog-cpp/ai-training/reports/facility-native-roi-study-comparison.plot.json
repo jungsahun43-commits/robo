@@ -1,0 +1,54 @@
+{
+  "schema": "facility_native_roi_aggregate_plot_v1",
+  "source_aggregate_sha256": "048056b102b008e84ed9405d14a571f06b51150174a361bd0a1a07db89eca8b5",
+  "plot_sha256": "8f1319c33cfe7f334102e1705ba13a32098cf365095f714f6994b029237dfeb5",
+  "script_sha256": "50a65802e76b58d4f7ca4119b9c49428969decdedb8a6ce553b9238817d3dc8e",
+  "metric": "Maximum of 12 source-VAL crack/spalling FNR/FPR rates; small-positive class-photo FN counts",
+  "source_test_inference_executed": false,
+  "industrial_field_performance_measured": false,
+  "deployed": false,
+  "experiments": [
+    {
+      "run": "facility-presence-target-roi-control",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.22279792746113988,
+      "small_false_negatives": [
+        29,
+        42
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ]
+    },
+    {
+      "run": "facility-presence-target-native-roi-control",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.23765432098765432,
+      "small_false_negatives": [
+        28,
+        40
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ]
+    },
+    {
+      "run": "facility-presence-target-native-roi-native",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.23575129533678757,
+      "small_false_negatives": [
+        31,
+        42
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ]
+    }
+  ]
+}

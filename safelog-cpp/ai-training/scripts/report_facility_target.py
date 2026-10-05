@@ -140,7 +140,7 @@ def main():
            f'기록된 완료 학습은 총{total_epochs}epoch이다. 현재 모델 실행 기록{model_run_epochs}epoch와 보존한 중단 실행 기록{interrupted_epochs}epoch를 합산했다. 모델 확률 평균 검증은 학습 횟수에 더하지 않는다.',
            f'해상도 대조 실험의 계획 예산은 640·960 각각6epoch, 합계12epoch이다. 현재 두 모델의 완료 기록은 {paired_epochs}epoch이며 중단 실행의 {interrupted_epochs}epoch는 모델 비교 예산·성능 표에 포함하지 않고 누적 학습량에만 별도 더한다.',
            f'원본 ROI 대조 실험도 각6epoch·합계12epoch의 고정 예산이며 완료 기록은 {native_epochs}epoch이다. 같은 원본 RGB와 기존 crop 범위에서 사전 축소 유무를 비교하고 양군을 640 PNG로 맞췄다. 독립 사진·정답·full row는 추가하지 않는다.',
-           *(['실행 세션 중단 뒤 optimizer 상태를 복구할 수 없어 같은 초기 모델·고정 조건으로 대조군을 처음부터 다시 시작했다. 중단 당시 완료하지 못한 epoch의 배치·업데이트·시간은 정량 기록이 없어 추정 합산하지 않는다. [보존한 중단 집계](facility-resolution-interruption.json)를 함께 기록한다.'] if attempts else []),
+           *(['직전 해상도 비교의 대조군은 실행 세션 중단 뒤 optimizer 상태를 복구할 수 없어 같은 초기 모델·고정 조건으로 처음부터 다시 시작했다. 중단 당시 완료하지 못한 epoch의 배치·업데이트·시간은 정량 기록이 없어 추정 합산하지 않는다. [보존한 중단 집계](facility-resolution-interruption.json)를 함께 기록한다.'] if attempts else []),
            f"동일한 세 검증 자료에서 뷰·임계값 선택 고정이 끝난 최대 오류 최소 관측 모델: `{best['run']}`, 최대 미탐·오탐 {best['worst_error']*100:.2f}%. 연구 후보 선정과 앱 배포 기준 통과는 별도다." if best else '동일한 세 검증 자료의 선택 고정 결과가 아직 없다.',
            *[f"진행 중 `{r['run']}`: 실제{r['epochs']}epoch, 지금까지 전체 사진의 최대 미탐·오탐 최저{r['best_full_photo_worst_error']*100:.2f}%. 학습 및 최종 확대 선택이 아직 끝나지 않았다." for r in running],
            '검증 미달 후보를 반복 시험하여 설정을 고르지 않았다. 목표를 통과했을 때 수행할 별도 추가1epoch 조건도 아직 발동하지 않았다.',

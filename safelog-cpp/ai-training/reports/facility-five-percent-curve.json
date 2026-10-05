@@ -1,6 +1,6 @@
 {
-  "plot_sha256": "1fec45c9a744314a1bfb290c1e08e97dab5632a5249630ea86a79ddc9f4dd3e4",
-  "script_sha256": "23a4e588c4f326ad294e498883042ccab67a5eb5cfd08c503044074026bddffe",
+  "plot_sha256": "f9028808b79c8bbc58cffa24ce86926a0dac32be12d13817e7430e0c689b0bee",
+  "script_sha256": "ebb7f189e1b999e89d9af476c1c9a5df72015e4dbd7fcf54a785b8c77e1ca6e6",
   "histories": [
     {
       "run": "facility-presence-target-v2s",
@@ -119,6 +119,18 @@
     {
       "run": "facility-presence-target-resolution-highres",
       "history_sha256": "bacb4e71a00a040ec910f46ccdb0881d800ab6f5ab33d8791b13dbf7be38cca0",
+      "status": "complete",
+      "actual_epochs": 6
+    },
+    {
+      "run": "facility-presence-target-native-roi-control",
+      "history_sha256": "d048c03b677e7a1b3b92bd61be868363d612f37bc2cf3d0f541b4397ce4cb31c",
+      "status": "complete",
+      "actual_epochs": 6
+    },
+    {
+      "run": "facility-presence-target-native-roi-native",
+      "history_sha256": "ad56145504303b39fa6d7513ce0402ea338027693904ba6fe9a640d859dfcdcd",
       "status": "complete",
       "actual_epochs": 6
     }

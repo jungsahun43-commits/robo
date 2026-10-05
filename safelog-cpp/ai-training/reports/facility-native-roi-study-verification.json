@@ -1,0 +1,269 @@
+{
+  "schema": "facility_native_roi_study_verification_v1",
+  "status": "passed",
+  "verified_utc": "2026-10-05T16:29:04.611115+00:00",
+  "protocol_sha256": "52b5b316da53b0e818c88d7ea14e18fd21d86908f5a9380148501167dc7970d5",
+  "preflight_sha256": "c9ce7ee36e8f8175f1f503893a1a114c784b8720397cf56617a8ae981187857c",
+  "source_before_training_sha256": "640375acedadc9767f8b19ab6f4e86a9b5b4193bd1e0c1204a3ecd98308aca10",
+  "source_git_commit": "ee46f81643d0aa87830c61d515d0590f8cea2353",
+  "runtime_source_count": 30,
+  "source_sha256": {
+    "scripts/train_facility_resolution.py": "94b5eb819cb47e242cb309b3a0b9c58ed5d28e78088a972797a81244005337bd",
+    "scripts/facility_resolution_study.py": "2a83f8839628c5da11d7fa1022dae509fc2980fccea56872ab04346fd4de13cc",
+    "scripts/train_facility_context.py": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
+    "scripts/train_facility_target.py": "5c80a49ed0d63bbe328df1593d93104930e1aaa39ebe8c036c04054900f769d4",
+    "scripts/train_facility_presence.py": "def4565d4d07cd7e4321de43529849ce1adcc03dc3fcbff64b33e0f169a526f0",
+    "scripts/facility_error_target.py": "5f1624c1e853bb6507b13529b7c6c4bddf1890b870e39f0ce20f8fb42feb09b9",
+    "safelog_ai/spatial_classifier.py": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+    "safelog_ai/auxiliary_classifier.py": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+    "safelog_ai/resolution_classifier.py": "afcccd8f75dc4a4f22b7c9c599207e851478e981d9ccdaa7b5d40e3701a45853",
+    "safelog_ai/presence_classifier.py": "29e34eb747ecd5d2e0b25fd2e630307ed764b1a1d3522591226f65e947de8849",
+    "safelog_ai/context_classifier.py": "6b9bd80d6408e36bf245dd309cbd6ad744b7fd576a630cee08e331f804589a10",
+    "scripts/preflight_facility_resolution.py": "2138ca4032a462c536ed59bfbff6a40d364ec09c4b0d9e64edd902190f51e3a5",
+    "scripts/preflight_facility_detail.py": "8e00aff1f2ffb557deec79f6c3545b808634d04a7a31e8475d57b37266267af6",
+    "scripts/report_facility_detail.py": "f25d51466e30040956c146b424257ede61bf0785870e3fbd55740436b0a782a4",
+    "scripts/report_facility_discrimination.py": "7ff1a79b238c97c7d9939ab553dac5afb16ed7d5ac5a2c39d0be15a2bd4e6d68",
+    "scripts/report_facility_small_region.py": "ae4fb18cf30cc00f2e4329667413543e3c4097b970821d2472c84fa0716bfd47",
+    "scripts/evaluate_facility_target.py": "937b633d72be3c2c720799164e6926346b7d2f6970583ee00392d79b88071355",
+    "scripts/analyze_facility_target.py": "d47699ed1ff4802e9cdd294a158502b5ebea87fb22ce085b4e59771a66f82aa8",
+    "scripts/audit_facility_resolution_sources.py": "9905df4b8a2933d7a1e1b35a39a1b71293225f0676a12e6bd3f709383fbf6204",
+    "scripts/prepare_facility_native_roi.py": "d635626d5517b07025f47c908c6252183b4a1f7c1a732f521fed2aea5b96668c",
+    "scripts/facility_native_roi_study.py": "fc75d5c61fd57c0d7f10e467e6ec9fe58c77507a6c9081d8b08e795da78863b9",
+    "scripts/train_facility_native_roi.py": "7cdec52da9a7bab891612f2b3813dad32068e532a7a3b3229529ac8975ca074d",
+    "scripts/preflight_facility_native_roi.py": "ca7f13e2bcdded0bc9b6a097248a37f38ce1414e895e0ab5c43c1b68eed1142b",
+    "scripts/verify_facility_native_roi.py": "d61f69e062f7f0e46f512c99d9bd16bdc3c39179cc057245dd3779b4bd4159ee",
+    "scripts/report_facility_native_roi.py": "b23b1224e783e91f42e780ea82c7eadd317428b382dcede6bb22dd84458c5639",
+    "scripts/run_facility_native_roi_pair.py": "b48ad907c5954ccf8bddd979e5bf9e049165e3e4a692673a5ae5deed330ee0ae",
+    "scripts/prepare_facility_data.py": "2ef54fc56f11b6b62c37fd26291e3f62bb5f9b7a23d117318b3a2cd2189141d9",
+    "scripts/test_facility_native_roi.py": "ea9866db68f46b44669648f76450c7038800876c021d8fbb4cc833fc2326880a",
+    "scripts/verify_facility_resolution.py": "ef67bb26c97801406c11085fde14924a18e95adb4151f414d7721d29d7ba536f",
+    "scripts/report_facility_resolution.py": "97d0f587b5849c32f396851147055d2f1c926a0c300bf5c598c216908505a3ea"
+  },
+  "git_blob_bytes_verified": true,
+  "working_runtime_sources_unchanged": true,
+  "preflight": {
+    "passed": true,
+    "actual_train_rows": 8,
+    "parameter_count": 3244151,
+    "disposable_amp_optimizer_steps": 2,
+    "actual_non_image_replay_identical": true
+  },
+  "test_results_sha256": "0eebe258bfacccdecc4688cc01845951cf9f81121298d974a47743cff377e06d",
+  "tests": {
+    "tests_run": 30,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "expected_tests_collected": 30,
+    "tests_by_module": {
+      "tests/test_facility_native_roi_data.py": 10,
+      "tests/test_facility_native_roi_study.py": 8,
+      "tests/test_facility_native_roi_report.py": 12
+    },
+    "test_source_sha256": {
+      "tests/test_facility_native_roi_data.py": "520b2ca7e1c864df1cb7fa5f73b22b24aa15524e6d411015f3383482e2fa2b03",
+      "tests/test_facility_native_roi_study.py": "458ba5a46218d176f2c2d50904ff8442aae59a09b56728d9cfca79712c521592",
+      "tests/test_facility_native_roi_report.py": "c9a26148e54e5f475e81238ca4b0f99b527ab49573be5984a688b6c2f47173ae"
+    },
+    "source_sha256": {
+      "scripts/train_facility_resolution.py": "94b5eb819cb47e242cb309b3a0b9c58ed5d28e78088a972797a81244005337bd",
+      "scripts/facility_resolution_study.py": "2a83f8839628c5da11d7fa1022dae509fc2980fccea56872ab04346fd4de13cc",
+      "scripts/train_facility_context.py": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
+      "scripts/train_facility_target.py": "5c80a49ed0d63bbe328df1593d93104930e1aaa39ebe8c036c04054900f769d4",
+      "scripts/train_facility_presence.py": "def4565d4d07cd7e4321de43529849ce1adcc03dc3fcbff64b33e0f169a526f0",
+      "scripts/facility_error_target.py": "5f1624c1e853bb6507b13529b7c6c4bddf1890b870e39f0ce20f8fb42feb09b9",
+      "safelog_ai/spatial_classifier.py": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+      "safelog_ai/auxiliary_classifier.py": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+      "safelog_ai/resolution_classifier.py": "afcccd8f75dc4a4f22b7c9c599207e851478e981d9ccdaa7b5d40e3701a45853",
+      "safelog_ai/presence_classifier.py": "29e34eb747ecd5d2e0b25fd2e630307ed764b1a1d3522591226f65e947de8849",
+      "safelog_ai/context_classifier.py": "6b9bd80d6408e36bf245dd309cbd6ad744b7fd576a630cee08e331f804589a10",
+      "scripts/preflight_facility_resolution.py": "2138ca4032a462c536ed59bfbff6a40d364ec09c4b0d9e64edd902190f51e3a5",
+      "scripts/preflight_facility_detail.py": "8e00aff1f2ffb557deec79f6c3545b808634d04a7a31e8475d57b37266267af6",
+      "scripts/report_facility_detail.py": "f25d51466e30040956c146b424257ede61bf0785870e3fbd55740436b0a782a4",
+      "scripts/report_facility_discrimination.py": "7ff1a79b238c97c7d9939ab553dac5afb16ed7d5ac5a2c39d0be15a2bd4e6d68",
+      "scripts/report_facility_small_region.py": "ae4fb18cf30cc00f2e4329667413543e3c4097b970821d2472c84fa0716bfd47",
+      "scripts/evaluate_facility_target.py": "937b633d72be3c2c720799164e6926346b7d2f6970583ee00392d79b88071355",
+      "scripts/analyze_facility_target.py": "d47699ed1ff4802e9cdd294a158502b5ebea87fb22ce085b4e59771a66f82aa8",
+      "scripts/audit_facility_resolution_sources.py": "9905df4b8a2933d7a1e1b35a39a1b71293225f0676a12e6bd3f709383fbf6204",
+      "scripts/prepare_facility_native_roi.py": "d635626d5517b07025f47c908c6252183b4a1f7c1a732f521fed2aea5b96668c",
+      "scripts/facility_native_roi_study.py": "fc75d5c61fd57c0d7f10e467e6ec9fe58c77507a6c9081d8b08e795da78863b9",
+      "scripts/train_facility_native_roi.py": "7cdec52da9a7bab891612f2b3813dad32068e532a7a3b3229529ac8975ca074d",
+      "scripts/preflight_facility_native_roi.py": "ca7f13e2bcdded0bc9b6a097248a37f38ce1414e895e0ab5c43c1b68eed1142b",
+      "scripts/verify_facility_native_roi.py": "d61f69e062f7f0e46f512c99d9bd16bdc3c39179cc057245dd3779b4bd4159ee",
+      "scripts/report_facility_native_roi.py": "b23b1224e783e91f42e780ea82c7eadd317428b382dcede6bb22dd84458c5639",
+      "scripts/run_facility_native_roi_pair.py": "b48ad907c5954ccf8bddd979e5bf9e049165e3e4a692673a5ae5deed330ee0ae",
+      "scripts/prepare_facility_data.py": "2ef54fc56f11b6b62c37fd26291e3f62bb5f9b7a23d117318b3a2cd2189141d9",
+      "scripts/test_facility_native_roi.py": "ea9866db68f46b44669648f76450c7038800876c021d8fbb4cc833fc2326880a",
+      "scripts/verify_facility_resolution.py": "ef67bb26c97801406c11085fde14924a18e95adb4151f414d7721d29d7ba536f",
+      "scripts/report_facility_resolution.py": "97d0f587b5849c32f396851147055d2f1c926a0c300bf5c598c216908505a3ea"
+    }
+  },
+  "prepared_data_integrity": {
+    "status": "passed",
+    "changed_rows": 5928,
+    "changed_dacl_parents": 3521,
+    "original_full_rows": 14248,
+    "train_rows": 26289,
+    "full_rows_unchanged": true,
+    "all_row_metadata_except_image_unchanged": true,
+    "labels_and_masks_unchanged": true,
+    "row_order_unchanged": true,
+    "crop_auxiliary_targets_remain_unknown19": true,
+    "derived_pngs": 11856,
+    "derived_png_hashes_verified": true,
+    "derived_png_pixels_verified": true,
+    "equivalent_half_open_roi_geometry_verified": true,
+    "input_files_checked": 65035,
+    "all_original_input_sha_size_mtime_preserved": true,
+    "output_png_bytes": 5841447752,
+    "output_png_bytes_by_variant": {
+      "control": 2826327702,
+      "native": 3015120050
+    },
+    "source_metadata_absent_in_derived_pngs": true,
+    "ledger_sha256": "22fb66dc3879c00ffb14b347da32ba283f138ae1410d99c903cac7a2d1bd23f6",
+    "data_audit_sha256": "a60a8da38b02dd1f4d19bdd6167198c421c12baf70d12820714ba98ec284f5fb",
+    "individual_paths_or_boxes_published": false
+  },
+  "actual_sampling_verification": {
+    "actual_ordered_row_index_hashes_identical_each_epoch": true,
+    "actual_source_full_crop_target_counts_identical_each_epoch": true,
+    "epochs_compared": 6,
+    "draws_per_epoch": 14248
+  },
+  "experiments": [
+    {
+      "imgsz": 640,
+      "architecture": "lraspp_mobilenet_facility_auxiliary_v1",
+      "actual_epochs": 6,
+      "selected_epoch": 3,
+      "weights_sha256": "3e3f37f6fd8753eb20a9a930d14cdb406ba37052987543944044062b98cace8c",
+      "state_tensor_count": 324,
+      "new_state_tensor_count": 0,
+      "strict_state_inventory_verified": true,
+      "optimizer_step_diagnostics": {
+        "attempted_batches": 10686,
+        "actual_optimizer_steps": 10681,
+        "amp_skipped_steps": 5
+      },
+      "variant": "control",
+      "cpu_reload": {
+        "device": "cpu",
+        "strict_factory_reload_verified": true,
+        "train_photos_forwarded": 1,
+        "input_shape": [
+          1,
+          3,
+          640,
+          640
+        ],
+        "native_map_shape": [
+          1,
+          7,
+          80,
+          80
+        ],
+        "photo_shape": [
+          1,
+          7
+        ],
+        "loss_and_pool_map_shape": [
+          1,
+          7,
+          80,
+          80
+        ],
+        "auxiliary_shape": [
+          1,
+          19
+        ],
+        "public_shape": [
+          1,
+          7
+        ],
+        "all_outputs_finite": true,
+        "public_output_equals_training_photo_output": true,
+        "parameter_count": 3244151
+      }
+    },
+    {
+      "imgsz": 640,
+      "architecture": "lraspp_mobilenet_facility_auxiliary_v1",
+      "actual_epochs": 6,
+      "selected_epoch": 6,
+      "weights_sha256": "4f429f8395f0e96a7d3515c05c4da79f2393351805069fe072a43e1363a27bb6",
+      "state_tensor_count": 324,
+      "new_state_tensor_count": 0,
+      "strict_state_inventory_verified": true,
+      "optimizer_step_diagnostics": {
+        "attempted_batches": 10686,
+        "actual_optimizer_steps": 10681,
+        "amp_skipped_steps": 5
+      },
+      "variant": "native",
+      "cpu_reload": {
+        "device": "cpu",
+        "strict_factory_reload_verified": true,
+        "train_photos_forwarded": 1,
+        "input_shape": [
+          1,
+          3,
+          640,
+          640
+        ],
+        "native_map_shape": [
+          1,
+          7,
+          80,
+          80
+        ],
+        "photo_shape": [
+          1,
+          7
+        ],
+        "loss_and_pool_map_shape": [
+          1,
+          7,
+          80,
+          80
+        ],
+        "auxiliary_shape": [
+          1,
+          19
+        ],
+        "public_shape": [
+          1,
+          7
+        ],
+        "all_outputs_finite": true,
+        "public_output_equals_training_photo_output": true,
+        "parameter_count": 3244151
+      }
+    }
+  ],
+  "actual_completed_training_epochs": 12,
+  "protected_file_sha256": {
+    "data/facility-spatial-training/train.json": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "data/facility-auxiliary-training/train.json": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+    "data/dacl10k-yolo/records.json": "75f95e6035e58930defc0bec94c03aab952c66919d48e9c9a385bd7ea72e6fe3",
+    "data/dacl10k-yolo/PREPARATION.json": "c31ea0b2f95cec7fde1fb07f0b9d5b24bb2ba14bdaceff5c547eeb8bb7a878b6",
+    "reports/facility-inference-profile.json": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+    "runs/facility-presence-target-roi-control/best.pt": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+    "reports/facility-resolution-study-protocol.json": "26a4cb1e032433b91d205a9e10de09e121b915fb2945f9c680c68cc1f8872d17",
+    "reports/facility-native-roi-study-protocol.json": "52b5b316da53b0e818c88d7ea14e18fd21d86908f5a9380148501167dc7970d5",
+    "reports/facility-native-roi-data-audit.json": "a60a8da38b02dd1f4d19bdd6167198c421c12baf70d12820714ba98ec284f5fb",
+    "data/facility-native-roi-training/control/train.json": "e3dce0bcdd6c0e950a6ad896dec2f07c77653328d57fb2fb2e57edaaebb3f818",
+    "data/facility-native-roi-training/native/train.json": "1cdf7388a1092d3c069ce5922a7bd8f2d03d383234c3e1c3dfe4f82ac4d7bb64"
+  },
+  "protected_files_unchanged": true,
+  "verification_training_epochs": 0,
+  "source_test_inference_executed": false,
+  "app_model_promoted": false,
+  "deployed": false,
+  "accuracy_measured_by_verifier": false,
+  "additional_expert_confirmed_labels": 0,
+  "label_changes": 0,
+  "new_photo_targets": 0,
+  "new_pixel_targets": 0,
+  "scope": "Local recorded TRAIN pixel/source/checkpoint/CPU proof; not authenticated truth or app accuracy"
+}
