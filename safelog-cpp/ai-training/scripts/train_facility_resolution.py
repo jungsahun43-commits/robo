@@ -161,7 +161,7 @@ def main(argv=None):
         "additional_test": {"path": "data/codebrim-training/test.json",
                             "sha256": sha(ROOT / "data/codebrim-training/test.json")},
         "auxiliary_classes": list(AUX_CLASSES), "auxiliary_source_class_count": len(AUX_CLASSES),
-        "training_script_sha256": sha(__file__),
+        "training_script_sha256": sha(Path(__file__)),
         "source_parent_training_script_sha256": sha(ROOT / "scripts/train_facility_context.py"),
         "model_source_sha256": sha(ROOT / "safelog_ai/spatial_classifier.py"),
         "auxiliary_model_source_sha256": sha(ROOT / "safelog_ai/auxiliary_classifier.py"),

@@ -1,7 +1,7 @@
 {
   "schema": "facility_resolution_study_protocol_v1",
   "declared_before_training": true,
-  "created_utc": "2026-10-05T07:29:22.193289+00:00",
+  "created_utc": "2026-10-05T07:42:19.069240+00:00",
   "client_date": "2026-10-05",
   "reference": "facility-presence-target-roi-control",
   "control": "facility-presence-target-resolution-control",
@@ -86,7 +86,7 @@
   "core_spatial_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
   "auxiliary_manifest_sha256": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
   "source_sha256": {
-    "scripts/train_facility_resolution.py": "8e87008818ffda99c838a9255643e8ee5bc5049382f47cb1f68e9695bb873d22",
+    "scripts/train_facility_resolution.py": "94b5eb819cb47e242cb309b3a0b9c58ed5d28e78088a972797a81244005337bd",
     "scripts/facility_resolution_study.py": "2a83f8839628c5da11d7fa1022dae509fc2980fccea56872ab04346fd4de13cc",
     "scripts/train_facility_context.py": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
     "scripts/train_facility_target.py": "5c80a49ed0d63bbe328df1593d93104930e1aaa39ebe8c036c04054900f769d4",
