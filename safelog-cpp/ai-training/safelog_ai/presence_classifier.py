@@ -13,6 +13,9 @@ STD = [.229, .224, .225]
 
 
 def build_model(classes: int, pretrained: bool = False, architecture: str = "efficientnet_b0_multilabel_v1"):
+    if architecture == "lraspp_mobilenet_facility_resolution_grid_v1":
+        from .resolution_classifier import ResolutionClassifier
+        return ResolutionClassifier(classes, pretrained)
     if architecture == "lraspp_mobilenet_facility_pool_context_v1":
         from .context_classifier import ContextClassifier
         return ContextClassifier(classes, pretrained)

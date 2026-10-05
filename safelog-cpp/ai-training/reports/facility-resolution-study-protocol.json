@@ -1,0 +1,129 @@
+{
+  "schema": "facility_resolution_study_protocol_v1",
+  "declared_before_training": true,
+  "created_utc": "2026-10-05T07:29:22.193289+00:00",
+  "client_date": "2026-10-05",
+  "reference": "facility-presence-target-roi-control",
+  "control": "facility-presence-target-resolution-control",
+  "treatment": "facility-presence-target-resolution-highres",
+  "architecture_by_variant": {
+    "control": "lraspp_mobilenet_facility_auxiliary_v1",
+    "highres": "lraspp_mobilenet_facility_resolution_grid_v1"
+  },
+  "imgsz_by_variant": {
+    "control": 640,
+    "highres": 960
+  },
+  "resolution_architecture": {
+    "input_sizes": [
+      640,
+      960
+    ],
+    "photo_and_loss_grid": [
+      80,
+      80
+    ],
+    "projection": "identity_at_80_else_area_downsample",
+    "photo_topk": 32,
+    "additional_parameters": 0,
+    "new_pixel_targets": 0
+  },
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "auxiliary_classes": [
+    "ACrack",
+    "Bearing",
+    "Cavity",
+    "Crack",
+    "Drainage",
+    "EJoint",
+    "Efflorescence",
+    "ExposedRebars",
+    "Graffiti",
+    "Hollowareas",
+    "JTape",
+    "PEquipment",
+    "Restformwork",
+    "Rockpocket",
+    "Rust",
+    "Spalling",
+    "WConccor",
+    "Weathering",
+    "Wetspot"
+  ],
+  "seed": 56,
+  "requested_epochs": 6,
+  "patience": 6,
+  "batch_size": 8,
+  "draws_per_epoch": 14248,
+  "backbone_lr": 4e-05,
+  "head_lr": 0.00025,
+  "auxiliary_weight": 0.5,
+  "target_ranking_weight": 0.0,
+  "domain_proportions": [
+    0.7,
+    0.1,
+    0.2
+  ],
+  "loader_randomness": {
+    "sampler_seed": 56,
+    "training_worker_seed": 57,
+    "post_model_seed": 58,
+    "validation_worker_seeds": {
+      "dacl": 156,
+      "damsegment": 157,
+      "codebrim": 158
+    }
+  },
+  "initial_weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+  "core_spatial_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+  "auxiliary_manifest_sha256": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+  "source_sha256": {
+    "scripts/train_facility_resolution.py": "8e87008818ffda99c838a9255643e8ee5bc5049382f47cb1f68e9695bb873d22",
+    "scripts/facility_resolution_study.py": "2a83f8839628c5da11d7fa1022dae509fc2980fccea56872ab04346fd4de13cc",
+    "scripts/train_facility_context.py": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
+    "scripts/train_facility_target.py": "5c80a49ed0d63bbe328df1593d93104930e1aaa39ebe8c036c04054900f769d4",
+    "scripts/train_facility_presence.py": "def4565d4d07cd7e4321de43529849ce1adcc03dc3fcbff64b33e0f169a526f0",
+    "scripts/facility_error_target.py": "5f1624c1e853bb6507b13529b7c6c4bddf1890b870e39f0ce20f8fb42feb09b9",
+    "safelog_ai/spatial_classifier.py": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+    "safelog_ai/auxiliary_classifier.py": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+    "safelog_ai/resolution_classifier.py": "afcccd8f75dc4a4f22b7c9c599207e851478e981d9ccdaa7b5d40e3701a45853",
+    "safelog_ai/presence_classifier.py": "29e34eb747ecd5d2e0b25fd2e630307ed764b1a1d3522591226f65e947de8849",
+    "safelog_ai/context_classifier.py": "6b9bd80d6408e36bf245dd309cbd6ad744b7fd576a630cee08e331f804589a10",
+    "scripts/preflight_facility_resolution.py": "2138ca4032a462c536ed59bfbff6a40d364ec09c4b0d9e64edd902190f51e3a5",
+    "scripts/preflight_facility_detail.py": "8e00aff1f2ffb557deec79f6c3545b808634d04a7a31e8475d57b37266267af6",
+    "scripts/report_facility_detail.py": "f25d51466e30040956c146b424257ede61bf0785870e3fbd55740436b0a782a4",
+    "scripts/report_facility_discrimination.py": "7ff1a79b238c97c7d9939ab553dac5afb16ed7d5ac5a2c39d0be15a2bd4e6d68",
+    "scripts/report_facility_small_region.py": "ae4fb18cf30cc00f2e4329667413543e3c4097b970821d2472c84fa0716bfd47",
+    "scripts/evaluate_facility_target.py": "937b633d72be3c2c720799164e6926346b7d2f6970583ee00392d79b88071355",
+    "scripts/analyze_facility_target.py": "d47699ed1ff4802e9cdd294a158502b5ebea87fb22ce085b4e59771a66f82aa8"
+  },
+  "research_candidate_gate": {
+    "minimum_maximum_error_improvement_vs_reference_and_control": 0.005,
+    "maximum_any_target_fnr_fpr_regression_vs_reference_and_control": 0.02,
+    "maximum_any_known_other_class_ap_regression_vs_reference_and_control": 0.02,
+    "minimum_small_combined_fn_reduction_vs_reference_and_control": 2,
+    "maximum_any_small_class_fnr_regression_vs_reference_and_control": 0.02
+  },
+  "source_audit_report_sha256": "87deb571682fb99b4e89b3c2db2932a1333c69429fddfbb868131ef398ebc0a8",
+  "source_selection": "Existing processed TRAIN full/crops, 80-cell truth and native19 tags unchanged; no new images or corrected labels.",
+  "epoch_selection": "Same three-source VAL minimax FNR/FPR, then rate sum, grid1 only.",
+  "strict_target": "All twelve crack/spall source FNR/FPR values strictly below .05.",
+  "small_region_policy": "Original DACL polygon area below1percent after640 raster: crack93/spall105;198class-photo cases, not198uniquephotos.",
+  "source_test_policy": "No TEST inference or result selection unless frozen strict validation target passes.",
+  "deployment": "Research nomination does not automatically replace facility-validation-v2.",
+  "stop": "Complete one six-epoch pair; no outcome-driven resolution, epochs or pooling retry.",
+  "training_outcome": "Unmeasured at declaration.",
+  "limitations": [
+    "Higher input does not reconstruct native detail absent from small patches.",
+    "No native full-resolution source replacement or new industrial field data.",
+    "Single seed, repeated source VAL selection and correlated derived crops."
+  ]
+}
