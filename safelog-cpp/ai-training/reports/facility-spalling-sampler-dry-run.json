@@ -1,0 +1,950 @@
+{
+  "schema": "facility_spalling_sampler_dry_run_v1",
+  "status": "prepared_dry_run",
+  "created_utc": "2026-10-05T21:42:29.365046+00:00",
+  "scope": "CPU-only fixed sampler plan using original full TRAIN tags and actual completed control row order; no new performance result",
+  "candidate_count": 1,
+  "eligible_factor": 1.5,
+  "eligible_other_four": [
+    "Rockpocket",
+    "WConccor",
+    "Hollowareas",
+    "Cavity"
+  ],
+  "original_rows": 26289,
+  "original_full_rows": 14248,
+  "original_full_dacl_parents": 6225,
+  "eligible_original_full_dacl_parents": 666,
+  "original_class_order": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "original_auxiliary_class_order": [
+    "ACrack",
+    "Bearing",
+    "Cavity",
+    "Crack",
+    "Drainage",
+    "EJoint",
+    "Efflorescence",
+    "ExposedRebars",
+    "Graffiti",
+    "Hollowareas",
+    "JTape",
+    "PEquipment",
+    "Restformwork",
+    "Rockpocket",
+    "Rust",
+    "Spalling",
+    "WConccor",
+    "Weathering",
+    "Wetspot"
+  ],
+  "domain_proportions": [
+    0.7,
+    0.1,
+    0.2
+  ],
+  "sampler_seed": 56,
+  "separate_coupling_numpy_seed": 59,
+  "draws_per_epoch": 14248,
+  "planned_epochs_each_arm": 6,
+  "draw_hash_recipe": "SHA256 of row-order concatenated little-endian int64 bytes",
+  "coupling": "Retain all base eligible rows; replace only noneligible base rows with (pt-p)/(1-p), sampling original-weight eligible rows in the same full DACL Crack/Spalling joint00 or10 stratum; pt=1.5p/(1+0.5p)",
+  "conditional_stratum_reweighting_preserves_original_stratum_mass": true,
+  "stratum_probabilities": {
+    "dacl/full/00": {
+      "original_rows": 2459,
+      "eligible_original_parents": 421,
+      "original_stratum_mass": 0.12469561580688904,
+      "original_eligible_probability": 0.1712078080520537,
+      "treatment_eligible_probability": 0.23656115377411505,
+      "noneligible_replacement_probability": 0.07885371792470502,
+      "minimum_changed_probability": 0.06535334572206133
+    },
+    "dacl/full/10": {
+      "original_rows": 828,
+      "eligible_original_parents": 245,
+      "original_stratum_mass": 0.06936137554521793,
+      "original_eligible_probability": 0.29589371980676316,
+      "treatment_eligible_probability": 0.38663861125723287,
+      "noneligible_replacement_probability": 0.1288795370857443,
+      "minimum_changed_probability": 0.09074489145046973
+    }
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "draws": 14248,
+      "control_order_sha256": "8ad05be07c40eaa5e243b8c9cc081dcf5d9fe64009fd0cf8fc1a89ac4774538d",
+      "treatment_order_sha256": "fd6fa85d66a2291ed94823fc5b9c9568c74000dc203c6760c283832ff638714f",
+      "actual_control_history_order_sha256": "8ad05be07c40eaa5e243b8c9cc081dcf5d9fe64009fd0cf8fc1a89ac4774538d",
+      "actual_native_history_order_sha256": "8ad05be07c40eaa5e243b8c9cc081dcf5d9fe64009fd0cf8fc1a89ac4774538d",
+      "actual_control_order_matches": true,
+      "actual_native_order_matches": true,
+      "changed_positions": 221,
+      "unchanged_positions": 14027,
+      "eligible_draws_control": 585,
+      "eligible_draws_treatment": 806,
+      "eligible_draws_by_stratum": {
+        "dacl/full/00": {
+          "control": 300,
+          "treatment": 430
+        },
+        "dacl/full/10": {
+          "control": 285,
+          "treatment": 376
+        }
+      },
+      "domain_counts": {
+        "dacl": 9961,
+        "damsegment": 1412,
+        "codebrim": 2875
+      },
+      "full_crop_counts": {
+        "full": 10061,
+        "crop": 4187
+      },
+      "full_target_joint_counts": {
+        "dacl": {
+          "00": 1792,
+          "10": 997,
+          "01": 2282,
+          "11": 1075,
+          "unknown": 0
+        },
+        "damsegment": {
+          "00": 309,
+          "10": 540,
+          "01": 35,
+          "11": 156,
+          "unknown": 0
+        },
+        "codebrim": {
+          "00": 908,
+          "10": 1159,
+          "01": 691,
+          "11": 117,
+          "unknown": 0
+        }
+      },
+      "stratum_counts_control": {
+        "codebrim/full/00": 908,
+        "codebrim/full/01": 691,
+        "codebrim/full/10": 1159,
+        "codebrim/full/11": 117,
+        "dacl/crop/00": 1719,
+        "dacl/crop/01": 1109,
+        "dacl/crop/10": 605,
+        "dacl/crop/11": 381,
+        "dacl/crop/unknown:-1,1": 1,
+        "dacl/full/00": 1792,
+        "dacl/full/01": 2282,
+        "dacl/full/10": 997,
+        "dacl/full/11": 1075,
+        "damsegment/crop/00": 67,
+        "damsegment/crop/01": 27,
+        "damsegment/crop/10": 217,
+        "damsegment/crop/11": 61,
+        "damsegment/full/00": 309,
+        "damsegment/full/01": 35,
+        "damsegment/full/10": 540,
+        "damsegment/full/11": 156
+      },
+      "stratum_counts_treatment": {
+        "codebrim/full/00": 908,
+        "codebrim/full/01": 691,
+        "codebrim/full/10": 1159,
+        "codebrim/full/11": 117,
+        "dacl/crop/00": 1719,
+        "dacl/crop/01": 1109,
+        "dacl/crop/10": 605,
+        "dacl/crop/11": 381,
+        "dacl/crop/unknown:-1,1": 1,
+        "dacl/full/00": 1792,
+        "dacl/full/01": 2282,
+        "dacl/full/10": 997,
+        "dacl/full/11": 1075,
+        "damsegment/crop/00": 67,
+        "damsegment/crop/01": 27,
+        "damsegment/crop/10": 217,
+        "damsegment/crop/11": 61,
+        "damsegment/full/00": 309,
+        "damsegment/full/01": 35,
+        "damsegment/full/10": 540,
+        "damsegment/full/11": 156
+      },
+      "all_stratum_counts_equal": true,
+      "every_position_domain_full_crop_and_two_targets_equal": true,
+      "all_original_eligible_draws_retained": true,
+      "all_non_dacl_crops_and_spalling_positive_positions_unchanged": true
+    },
+    {
+      "epoch": 2,
+      "draws": 14248,
+      "control_order_sha256": "8eae8ecf410cc9104fc17f25f380b35a1d50b2ac9ac47a5277d4d6e1e13ef2b0",
+      "treatment_order_sha256": "f7b93e1dbda5121fbd356880b7b3da0f7d9017a6fc4cc6b773a4caac95d91e22",
+      "actual_control_history_order_sha256": "8eae8ecf410cc9104fc17f25f380b35a1d50b2ac9ac47a5277d4d6e1e13ef2b0",
+      "actual_native_history_order_sha256": "8eae8ecf410cc9104fc17f25f380b35a1d50b2ac9ac47a5277d4d6e1e13ef2b0",
+      "actual_control_order_matches": true,
+      "actual_native_order_matches": true,
+      "changed_positions": 199,
+      "unchanged_positions": 14049,
+      "eligible_draws_control": 591,
+      "eligible_draws_treatment": 790,
+      "eligible_draws_by_stratum": {
+        "dacl/full/00": {
+          "control": 316,
+          "treatment": 432
+        },
+        "dacl/full/10": {
+          "control": 275,
+          "treatment": 358
+        }
+      },
+      "domain_counts": {
+        "dacl": 9910,
+        "damsegment": 1409,
+        "codebrim": 2929
+      },
+      "full_crop_counts": {
+        "full": 10076,
+        "crop": 4172
+      },
+      "full_target_joint_counts": {
+        "dacl": {
+          "00": 1778,
+          "10": 971,
+          "01": 2278,
+          "11": 1123,
+          "unknown": 0
+        },
+        "damsegment": {
+          "00": 283,
+          "10": 546,
+          "01": 31,
+          "11": 137,
+          "unknown": 0
+        },
+        "codebrim": {
+          "00": 934,
+          "10": 1129,
+          "01": 758,
+          "11": 108,
+          "unknown": 0
+        }
+      },
+      "stratum_counts_control": {
+        "codebrim/full/00": 934,
+        "codebrim/full/01": 758,
+        "codebrim/full/10": 1129,
+        "codebrim/full/11": 108,
+        "dacl/crop/00": 1723,
+        "dacl/crop/01": 1085,
+        "dacl/crop/10": 547,
+        "dacl/crop/11": 401,
+        "dacl/crop/unknown:-1,1": 1,
+        "dacl/crop/unknown:1,-1": 3,
+        "dacl/full/00": 1778,
+        "dacl/full/01": 2278,
+        "dacl/full/10": 971,
+        "dacl/full/11": 1123,
+        "damsegment/crop/00": 75,
+        "damsegment/crop/01": 19,
+        "damsegment/crop/10": 254,
+        "damsegment/crop/11": 63,
+        "damsegment/crop/unknown:1,-1": 1,
+        "damsegment/full/00": 283,
+        "damsegment/full/01": 31,
+        "damsegment/full/10": 546,
+        "damsegment/full/11": 137
+      },
+      "stratum_counts_treatment": {
+        "codebrim/full/00": 934,
+        "codebrim/full/01": 758,
+        "codebrim/full/10": 1129,
+        "codebrim/full/11": 108,
+        "dacl/crop/00": 1723,
+        "dacl/crop/01": 1085,
+        "dacl/crop/10": 547,
+        "dacl/crop/11": 401,
+        "dacl/crop/unknown:-1,1": 1,
+        "dacl/crop/unknown:1,-1": 3,
+        "dacl/full/00": 1778,
+        "dacl/full/01": 2278,
+        "dacl/full/10": 971,
+        "dacl/full/11": 1123,
+        "damsegment/crop/00": 75,
+        "damsegment/crop/01": 19,
+        "damsegment/crop/10": 254,
+        "damsegment/crop/11": 63,
+        "damsegment/crop/unknown:1,-1": 1,
+        "damsegment/full/00": 283,
+        "damsegment/full/01": 31,
+        "damsegment/full/10": 546,
+        "damsegment/full/11": 137
+      },
+      "all_stratum_counts_equal": true,
+      "every_position_domain_full_crop_and_two_targets_equal": true,
+      "all_original_eligible_draws_retained": true,
+      "all_non_dacl_crops_and_spalling_positive_positions_unchanged": true
+    },
+    {
+      "epoch": 3,
+      "draws": 14248,
+      "control_order_sha256": "91d2c9370494679c05c48d09890b069dc4da77c52692a6be29100ff412c4c006",
+      "treatment_order_sha256": "08606d5cb69eac7a4c6b6183939bc2e792b57e06404f8e2b10532b87301033e7",
+      "actual_control_history_order_sha256": "91d2c9370494679c05c48d09890b069dc4da77c52692a6be29100ff412c4c006",
+      "actual_native_history_order_sha256": "91d2c9370494679c05c48d09890b069dc4da77c52692a6be29100ff412c4c006",
+      "actual_control_order_matches": true,
+      "actual_native_order_matches": true,
+      "changed_positions": 197,
+      "unchanged_positions": 14051,
+      "eligible_draws_control": 604,
+      "eligible_draws_treatment": 801,
+      "eligible_draws_by_stratum": {
+        "dacl/full/00": {
+          "control": 300,
+          "treatment": 402
+        },
+        "dacl/full/10": {
+          "control": 304,
+          "treatment": 399
+        }
+      },
+      "domain_counts": {
+        "dacl": 10002,
+        "damsegment": 1449,
+        "codebrim": 2797
+      },
+      "full_crop_counts": {
+        "full": 10004,
+        "crop": 4244
+      },
+      "full_target_joint_counts": {
+        "dacl": {
+          "00": 1817,
+          "10": 1005,
+          "01": 2237,
+          "11": 1096,
+          "unknown": 0
+        },
+        "damsegment": {
+          "00": 296,
+          "10": 572,
+          "01": 29,
+          "11": 155,
+          "unknown": 0
+        },
+        "codebrim": {
+          "00": 935,
+          "10": 1068,
+          "01": 697,
+          "11": 97,
+          "unknown": 0
+        }
+      },
+      "stratum_counts_control": {
+        "codebrim/full/00": 935,
+        "codebrim/full/01": 697,
+        "codebrim/full/10": 1068,
+        "codebrim/full/11": 97,
+        "dacl/crop/00": 1768,
+        "dacl/crop/01": 1133,
+        "dacl/crop/10": 593,
+        "dacl/crop/11": 348,
+        "dacl/crop/unknown:-1,1": 3,
+        "dacl/crop/unknown:1,-1": 2,
+        "dacl/full/00": 1817,
+        "dacl/full/01": 2237,
+        "dacl/full/10": 1005,
+        "dacl/full/11": 1096,
+        "damsegment/crop/00": 62,
+        "damsegment/crop/01": 26,
+        "damsegment/crop/10": 250,
+        "damsegment/crop/11": 59,
+        "damsegment/full/00": 296,
+        "damsegment/full/01": 29,
+        "damsegment/full/10": 572,
+        "damsegment/full/11": 155
+      },
+      "stratum_counts_treatment": {
+        "codebrim/full/00": 935,
+        "codebrim/full/01": 697,
+        "codebrim/full/10": 1068,
+        "codebrim/full/11": 97,
+        "dacl/crop/00": 1768,
+        "dacl/crop/01": 1133,
+        "dacl/crop/10": 593,
+        "dacl/crop/11": 348,
+        "dacl/crop/unknown:-1,1": 3,
+        "dacl/crop/unknown:1,-1": 2,
+        "dacl/full/00": 1817,
+        "dacl/full/01": 2237,
+        "dacl/full/10": 1005,
+        "dacl/full/11": 1096,
+        "damsegment/crop/00": 62,
+        "damsegment/crop/01": 26,
+        "damsegment/crop/10": 250,
+        "damsegment/crop/11": 59,
+        "damsegment/full/00": 296,
+        "damsegment/full/01": 29,
+        "damsegment/full/10": 572,
+        "damsegment/full/11": 155
+      },
+      "all_stratum_counts_equal": true,
+      "every_position_domain_full_crop_and_two_targets_equal": true,
+      "all_original_eligible_draws_retained": true,
+      "all_non_dacl_crops_and_spalling_positive_positions_unchanged": true
+    },
+    {
+      "epoch": 4,
+      "draws": 14248,
+      "control_order_sha256": "c420332ac352003dc1f0e3a5f26d3d1002d50de6c757dd68ae7d8d8c14463f56",
+      "treatment_order_sha256": "fc1529ef58a614d73eeecfd5c0a4a5feb19ed9197a6eda23965ab73d4fa691f1",
+      "actual_control_history_order_sha256": "c420332ac352003dc1f0e3a5f26d3d1002d50de6c757dd68ae7d8d8c14463f56",
+      "actual_native_history_order_sha256": "c420332ac352003dc1f0e3a5f26d3d1002d50de6c757dd68ae7d8d8c14463f56",
+      "actual_control_order_matches": true,
+      "actual_native_order_matches": true,
+      "changed_positions": 187,
+      "unchanged_positions": 14061,
+      "eligible_draws_control": 586,
+      "eligible_draws_treatment": 773,
+      "eligible_draws_by_stratum": {
+        "dacl/full/00": {
+          "control": 300,
+          "treatment": 404
+        },
+        "dacl/full/10": {
+          "control": 286,
+          "treatment": 369
+        }
+      },
+      "domain_counts": {
+        "dacl": 9953,
+        "damsegment": 1456,
+        "codebrim": 2839
+      },
+      "full_crop_counts": {
+        "full": 10049,
+        "crop": 4199
+      },
+      "full_target_joint_counts": {
+        "dacl": {
+          "00": 1756,
+          "10": 953,
+          "01": 2375,
+          "11": 1092,
+          "unknown": 0
+        },
+        "damsegment": {
+          "00": 281,
+          "10": 551,
+          "01": 32,
+          "11": 170,
+          "unknown": 0
+        },
+        "codebrim": {
+          "00": 901,
+          "10": 1086,
+          "01": 737,
+          "11": 115,
+          "unknown": 0
+        }
+      },
+      "stratum_counts_control": {
+        "codebrim/full/00": 901,
+        "codebrim/full/01": 737,
+        "codebrim/full/10": 1086,
+        "codebrim/full/11": 115,
+        "dacl/crop/00": 1692,
+        "dacl/crop/01": 1106,
+        "dacl/crop/10": 587,
+        "dacl/crop/11": 389,
+        "dacl/crop/unknown:1,-1": 3,
+        "dacl/full/00": 1756,
+        "dacl/full/01": 2375,
+        "dacl/full/10": 953,
+        "dacl/full/11": 1092,
+        "damsegment/crop/00": 78,
+        "damsegment/crop/01": 23,
+        "damsegment/crop/10": 250,
+        "damsegment/crop/11": 70,
+        "damsegment/crop/unknown:1,-1": 1,
+        "damsegment/full/00": 281,
+        "damsegment/full/01": 32,
+        "damsegment/full/10": 551,
+        "damsegment/full/11": 170
+      },
+      "stratum_counts_treatment": {
+        "codebrim/full/00": 901,
+        "codebrim/full/01": 737,
+        "codebrim/full/10": 1086,
+        "codebrim/full/11": 115,
+        "dacl/crop/00": 1692,
+        "dacl/crop/01": 1106,
+        "dacl/crop/10": 587,
+        "dacl/crop/11": 389,
+        "dacl/crop/unknown:1,-1": 3,
+        "dacl/full/00": 1756,
+        "dacl/full/01": 2375,
+        "dacl/full/10": 953,
+        "dacl/full/11": 1092,
+        "damsegment/crop/00": 78,
+        "damsegment/crop/01": 23,
+        "damsegment/crop/10": 250,
+        "damsegment/crop/11": 70,
+        "damsegment/crop/unknown:1,-1": 1,
+        "damsegment/full/00": 281,
+        "damsegment/full/01": 32,
+        "damsegment/full/10": 551,
+        "damsegment/full/11": 170
+      },
+      "all_stratum_counts_equal": true,
+      "every_position_domain_full_crop_and_two_targets_equal": true,
+      "all_original_eligible_draws_retained": true,
+      "all_non_dacl_crops_and_spalling_positive_positions_unchanged": true
+    },
+    {
+      "epoch": 5,
+      "draws": 14248,
+      "control_order_sha256": "75e4fbd48b72490f15d5b0dd833f587d8f4e4a98d23750856e7300b84475500e",
+      "treatment_order_sha256": "fc993d6913ff832573a83043b907cae8faf0da65c1802b319dee7c2aa27f6819",
+      "actual_control_history_order_sha256": "75e4fbd48b72490f15d5b0dd833f587d8f4e4a98d23750856e7300b84475500e",
+      "actual_native_history_order_sha256": "75e4fbd48b72490f15d5b0dd833f587d8f4e4a98d23750856e7300b84475500e",
+      "actual_control_order_matches": true,
+      "actual_native_order_matches": true,
+      "changed_positions": 211,
+      "unchanged_positions": 14037,
+      "eligible_draws_control": 583,
+      "eligible_draws_treatment": 794,
+      "eligible_draws_by_stratum": {
+        "dacl/full/00": {
+          "control": 280,
+          "treatment": 408
+        },
+        "dacl/full/10": {
+          "control": 303,
+          "treatment": 386
+        }
+      },
+      "domain_counts": {
+        "dacl": 9984,
+        "damsegment": 1401,
+        "codebrim": 2863
+      },
+      "full_crop_counts": {
+        "full": 9972,
+        "crop": 4276
+      },
+      "full_target_joint_counts": {
+        "dacl": {
+          "00": 1754,
+          "10": 974,
+          "01": 2303,
+          "11": 1066,
+          "unknown": 0
+        },
+        "damsegment": {
+          "00": 307,
+          "10": 529,
+          "01": 25,
+          "11": 151,
+          "unknown": 0
+        },
+        "codebrim": {
+          "00": 885,
+          "10": 1085,
+          "01": 778,
+          "11": 115,
+          "unknown": 0
+        }
+      },
+      "stratum_counts_control": {
+        "codebrim/full/00": 885,
+        "codebrim/full/01": 778,
+        "codebrim/full/10": 1085,
+        "codebrim/full/11": 115,
+        "dacl/crop/00": 1744,
+        "dacl/crop/01": 1131,
+        "dacl/crop/10": 603,
+        "dacl/crop/11": 407,
+        "dacl/crop/unknown:-1,1": 1,
+        "dacl/crop/unknown:1,-1": 1,
+        "dacl/full/00": 1754,
+        "dacl/full/01": 2303,
+        "dacl/full/10": 974,
+        "dacl/full/11": 1066,
+        "damsegment/crop/00": 60,
+        "damsegment/crop/01": 19,
+        "damsegment/crop/10": 252,
+        "damsegment/crop/11": 57,
+        "damsegment/crop/unknown:1,-1": 1,
+        "damsegment/full/00": 307,
+        "damsegment/full/01": 25,
+        "damsegment/full/10": 529,
+        "damsegment/full/11": 151
+      },
+      "stratum_counts_treatment": {
+        "codebrim/full/00": 885,
+        "codebrim/full/01": 778,
+        "codebrim/full/10": 1085,
+        "codebrim/full/11": 115,
+        "dacl/crop/00": 1744,
+        "dacl/crop/01": 1131,
+        "dacl/crop/10": 603,
+        "dacl/crop/11": 407,
+        "dacl/crop/unknown:-1,1": 1,
+        "dacl/crop/unknown:1,-1": 1,
+        "dacl/full/00": 1754,
+        "dacl/full/01": 2303,
+        "dacl/full/10": 974,
+        "dacl/full/11": 1066,
+        "damsegment/crop/00": 60,
+        "damsegment/crop/01": 19,
+        "damsegment/crop/10": 252,
+        "damsegment/crop/11": 57,
+        "damsegment/crop/unknown:1,-1": 1,
+        "damsegment/full/00": 307,
+        "damsegment/full/01": 25,
+        "damsegment/full/10": 529,
+        "damsegment/full/11": 151
+      },
+      "all_stratum_counts_equal": true,
+      "every_position_domain_full_crop_and_two_targets_equal": true,
+      "all_original_eligible_draws_retained": true,
+      "all_non_dacl_crops_and_spalling_positive_positions_unchanged": true
+    },
+    {
+      "epoch": 6,
+      "draws": 14248,
+      "control_order_sha256": "d2ba9bf4d02078fb31868f62418fa82d7add42e905b754de0464b348176fe46d",
+      "treatment_order_sha256": "a3b1177c277c404319d8650d31cb061af49b6b4544ba9c0af63695db7983d009",
+      "actual_control_history_order_sha256": "d2ba9bf4d02078fb31868f62418fa82d7add42e905b754de0464b348176fe46d",
+      "actual_native_history_order_sha256": "d2ba9bf4d02078fb31868f62418fa82d7add42e905b754de0464b348176fe46d",
+      "actual_control_order_matches": true,
+      "actual_native_order_matches": true,
+      "changed_positions": 189,
+      "unchanged_positions": 14059,
+      "eligible_draws_control": 590,
+      "eligible_draws_treatment": 779,
+      "eligible_draws_by_stratum": {
+        "dacl/full/00": {
+          "control": 291,
+          "treatment": 394
+        },
+        "dacl/full/10": {
+          "control": 299,
+          "treatment": 385
+        }
+      },
+      "domain_counts": {
+        "dacl": 9910,
+        "damsegment": 1463,
+        "codebrim": 2875
+      },
+      "full_crop_counts": {
+        "full": 10074,
+        "crop": 4174
+      },
+      "full_target_joint_counts": {
+        "dacl": {
+          "00": 1752,
+          "10": 983,
+          "01": 2277,
+          "11": 1113,
+          "unknown": 0
+        },
+        "damsegment": {
+          "00": 313,
+          "10": 542,
+          "01": 38,
+          "11": 181,
+          "unknown": 0
+        },
+        "codebrim": {
+          "00": 915,
+          "10": 1108,
+          "01": 759,
+          "11": 93,
+          "unknown": 0
+        }
+      },
+      "stratum_counts_control": {
+        "codebrim/full/00": 915,
+        "codebrim/full/01": 759,
+        "codebrim/full/10": 1108,
+        "codebrim/full/11": 93,
+        "dacl/crop/00": 1722,
+        "dacl/crop/01": 1079,
+        "dacl/crop/10": 631,
+        "dacl/crop/11": 351,
+        "dacl/crop/unknown:1,-1": 2,
+        "dacl/full/00": 1752,
+        "dacl/full/01": 2277,
+        "dacl/full/10": 983,
+        "dacl/full/11": 1113,
+        "damsegment/crop/00": 71,
+        "damsegment/crop/01": 20,
+        "damsegment/crop/10": 238,
+        "damsegment/crop/11": 59,
+        "damsegment/crop/unknown:1,-1": 1,
+        "damsegment/full/00": 313,
+        "damsegment/full/01": 38,
+        "damsegment/full/10": 542,
+        "damsegment/full/11": 181
+      },
+      "stratum_counts_treatment": {
+        "codebrim/full/00": 915,
+        "codebrim/full/01": 759,
+        "codebrim/full/10": 1108,
+        "codebrim/full/11": 93,
+        "dacl/crop/00": 1722,
+        "dacl/crop/01": 1079,
+        "dacl/crop/10": 631,
+        "dacl/crop/11": 351,
+        "dacl/crop/unknown:1,-1": 2,
+        "dacl/full/00": 1752,
+        "dacl/full/01": 2277,
+        "dacl/full/10": 983,
+        "dacl/full/11": 1113,
+        "damsegment/crop/00": 71,
+        "damsegment/crop/01": 20,
+        "damsegment/crop/10": 238,
+        "damsegment/crop/11": 59,
+        "damsegment/crop/unknown:1,-1": 1,
+        "damsegment/full/00": 313,
+        "damsegment/full/01": 38,
+        "damsegment/full/10": 542,
+        "damsegment/full/11": 181
+      },
+      "all_stratum_counts_equal": true,
+      "every_position_domain_full_crop_and_two_targets_equal": true,
+      "all_original_eligible_draws_retained": true,
+      "all_non_dacl_crops_and_spalling_positive_positions_unchanged": true
+    }
+  ],
+  "total_changed_positions": 1204,
+  "total_eligible_draws_control": 3539,
+  "total_eligible_draws_treatment": 4743,
+  "all_six_actual_control_and_native_order_hashes_match": true,
+  "all_six_source_full_crop_crack_spalling_draw_counts_equal": true,
+  "every_position_original_two_photo_targets_equal": true,
+  "original_photo_positive_weights": [
+    [
+      2.258023500442505,
+      1.0440680980682373,
+      1.506913661956787,
+      6.0,
+      6.0,
+      4.389140605926514,
+      5.489816188812256
+    ],
+    [
+      0.41150352358818054,
+      4.243687629699707,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224
+    ],
+    [
+      1.384360909461975,
+      2.4061999320983887,
+      3.7183494567871094,
+      3.6503729820251465,
+      0.20000000298023224,
+      6.0,
+      0.20000000298023224
+    ]
+  ],
+  "original_pixel_positive_weights": [
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0
+  ],
+  "original_auxiliary_positive_weights": [
+    6.0,
+    6.0,
+    4.75323486328125,
+    3.0448343753814697,
+    5.901330471038818,
+    6.0,
+    3.5637829303741455,
+    6.0,
+    6.0,
+    5.32621955871582,
+    6.0,
+    4.2443132400512695,
+    6.0,
+    6.0,
+    1.0184824466705322,
+    1.118788242340088,
+    6.0,
+    1.5765728950500488,
+    6.0
+  ],
+  "original_loss_weights_preserved": true,
+  "other_five_photo_labels_and_auxiliary_exposure_may_change": true,
+  "other_class_ap_regression_gate_required_for_future_training": true,
+  "future_pair_scope": "One fixed new six-plus-six-epoch comparison only; requires a separately declared authorized training protocol before execution",
+  "completed_native_pair_training_epochs": 12,
+  "new_training_epochs": 0,
+  "training_epochs_budget_spent": 0,
+  "new_optimizer_steps": 0,
+  "gpu_used": false,
+  "new_inference_performed": false,
+  "new_labels": 0,
+  "label_changes": 0,
+  "new_photo_targets": 0,
+  "new_pixel_targets": 0,
+  "new_auxiliary_targets": 0,
+  "individual_errors_used_for_eligibility": false,
+  "original_0773_or_completed_native_val_performance_changed": false,
+  "individual_validation_or_test_photos_annotations_predictions_read": false,
+  "app_profile_changed": false,
+  "app_model_promoted": false,
+  "protected_inputs": 727,
+  "all_input_sha256_size_mtime_preserved": true,
+  "protected_snapshot_before_sha256": "d8283c197de5e2547fba6b059e5c549a460152b16fe345dd762175f5f970227f",
+  "protected_snapshot_after_sha256": "d8283c197de5e2547fba6b059e5c549a460152b16fe345dd762175f5f970227f",
+  "protected_input_sha256": {
+    "data/dacl10k-yolo/PREPARATION.json": "c31ea0b2f95cec7fde1fb07f0b9d5b24bb2ba14bdaceff5c547eeb8bb7a878b6",
+    "data/dacl10k-yolo/records.json": "75f95e6035e58930defc0bec94c03aab952c66919d48e9c9a385bd7ea72e6fe3",
+    "data/facility-auxiliary-training/train.json": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+    "data/facility-native-roi-training/control/train.json": "e3dce0bcdd6c0e950a6ad896dec2f07c77653328d57fb2fb2e57edaaebb3f818",
+    "data/facility-native-roi-training/native/train.json": "1cdf7388a1092d3c069ce5922a7bd8f2d03d383234c3e1c3dfe4f82ac4d7bb64",
+    "data/facility-spatial-training/train.json": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "reports/facility-inference-profile.json": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+    "reports/facility-native-roi-data-audit.json": "a60a8da38b02dd1f4d19bdd6167198c421c12baf70d12820714ba98ec284f5fb",
+    "reports/facility-native-roi-study-comparison.json": "048056b102b008e84ed9405d14a571f06b51150174a361bd0a1a07db89eca8b5",
+    "reports/facility-native-roi-study-protocol.json": "52b5b316da53b0e818c88d7ea14e18fd21d86908f5a9380148501167dc7970d5",
+    "reports/facility-native-roi-study-verification.json": "c686ffad01bf63bf359fc609e35a1a8e38a0d39774a06a94315be240e891c3d0",
+    "reports/facility-resolution-source-audit.json": "87deb571682fb99b4e89b3c2db2932a1333c69429fddfbb868131ef398ebc0a8",
+    "reports/facility-resolution-study-protocol.json": "26a4cb1e032433b91d205a9e10de09e121b915fb2945f9c680c68cc1f8872d17",
+    "reports/facility-spalling-tag-score-audit.json": "1e971f38470b1f6b32571ff02452a9fd3901d38edeb085e9de722da72ce78461",
+    "reports/facility-spalling-tag-score-tests.json": "f279387acf358ff81f7f1d77cf416524df290daa98cb538c8ea988c0e1ae131e",
+    "reports/facility-spalling-train-audit-tests.json": "875e93fa28d73ce5a089f42be9dfb9c2b5e70fe5f6a88b73037fb46ff756ead8",
+    "reports/facility-spalling-train-audit.json": "36174c30cbb6b6d4cd1e2f82ebc69b41f435fc71fefcb661339fecbc4975ddd2",
+    "reports/facility-train-label-groups.json": "b2e13175896a03d969f86e5be99b8a82c8de37bfdd5c14c59717c618b0ec85df",
+    "runs/facility-presence-target-native-roi-control/TRAINING.json": "f2285ba516ccfd0d2b90932ea0ef245030277a301964ba48158b71cdf23e7acc",
+    "runs/facility-presence-target-native-roi-control/history.json": "d048c03b677e7a1b3b92bd61be868363d612f37bc2cf3d0f541b4397ce4cb31c",
+    "runs/facility-presence-target-native-roi-native/TRAINING.json": "523433fce3795a4998cd91116fd5dc9446f5e06167bc97a9a932033798dd4a87",
+    "runs/facility-presence-target-native-roi-native/history.json": "ad56145504303b39fa6d7513ce0402ea338027693904ba6fe9a640d859dfcdcd",
+    "runs/facility-presence-target-roi-control/SPLIT.json": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+    "runs/facility-presence-target-roi-control/TARGET-SELECTION.json": "ce7ba26db8b5f383900a00fb46493bcc39268452b6cafb192280e2d7acd6fdad",
+    "runs/facility-presence-target-roi-control/best.pt": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+    "runs/facility-roi-0773-train-review-predictions.json": "d208789d74f451929a5300312ce67ff6a2047e97f0ebb9bec6c75cde0e2c02b6",
+    "runs/facility-spalling-train-audit/SPALLING-AUDIT.json": "24e4082d6c184ad7f35c9f1a7e7acb1b013cb2469318171ac69d8cd1d35409dc",
+    "runs/facility-train-review-roi-0773/TRAIN-REVIEW.json": "f6fc9def0f80e51ea3efff156e2dc8e37ec017eab2088d1f256d08ad3bbf6b33",
+    "safelog_ai/auxiliary_classifier.py": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+    "safelog_ai/context_classifier.py": "6b9bd80d6408e36bf245dd309cbd6ad744b7fd576a630cee08e331f804589a10",
+    "safelog_ai/presence_classifier.py": "29e34eb747ecd5d2e0b25fd2e630307ed764b1a1d3522591226f65e947de8849",
+    "safelog_ai/resolution_classifier.py": "afcccd8f75dc4a4f22b7c9c599207e851478e981d9ccdaa7b5d40e3701a45853",
+    "safelog_ai/spalling_sampler.py": "a1df26fbfb683e63bdaa92bfaf005b1d1d894668defa8aee80802cbce5f751d7",
+    "safelog_ai/spatial_classifier.py": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+    "scripts/analyze_facility_target.py": "d47699ed1ff4802e9cdd294a158502b5ebea87fb22ce085b4e59771a66f82aa8",
+    "scripts/audit_facility_resolution_sources.py": "9905df4b8a2933d7a1e1b35a39a1b71293225f0676a12e6bd3f709383fbf6204",
+    "scripts/audit_facility_spalling_tag_scores.py": "74f335644ff7cbf72699c256e4c0bc363eddd0e99e8a336837163a8c8c0c99bc",
+    "scripts/build_facility_train_review.py": "9fc90fa318b79d76ace7bb1ea1a4135b14b3ab118d5879fadfbb7be771c4e327",
+    "scripts/evaluate_facility_target.py": "937b633d72be3c2c720799164e6926346b7d2f6970583ee00392d79b88071355",
+    "scripts/facility_error_target.py": "5f1624c1e853bb6507b13529b7c6c4bddf1890b870e39f0ce20f8fb42feb09b9",
+    "scripts/facility_native_roi_study.py": "fc75d5c61fd57c0d7f10e467e6ec9fe58c77507a6c9081d8b08e795da78863b9",
+    "scripts/facility_resolution_study.py": "2a83f8839628c5da11d7fa1022dae509fc2980fccea56872ab04346fd4de13cc",
+    "scripts/preflight_facility_detail.py": "8e00aff1f2ffb557deec79f6c3545b808634d04a7a31e8475d57b37266267af6",
+    "scripts/preflight_facility_native_roi.py": "ca7f13e2bcdded0bc9b6a097248a37f38ce1414e895e0ab5c43c1b68eed1142b",
+    "scripts/preflight_facility_resolution.py": "2138ca4032a462c536ed59bfbff6a40d364ec09c4b0d9e64edd902190f51e3a5",
+    "scripts/prepare_facility_data.py": "2ef54fc56f11b6b62c37fd26291e3f62bb5f9b7a23d117318b3a2cd2189141d9",
+    "scripts/prepare_facility_native_roi.py": "d635626d5517b07025f47c908c6252183b4a1f7c1a732f521fed2aea5b96668c",
+    "scripts/prepare_facility_spalling_sampler.py": "ec3389c62a64f70589ca8761f6008152577bb49a19859df9c42f08765534587d",
+    "scripts/report_facility_detail.py": "f25d51466e30040956c146b424257ede61bf0785870e3fbd55740436b0a782a4",
+    "scripts/report_facility_discrimination.py": "7ff1a79b238c97c7d9939ab553dac5afb16ed7d5ac5a2c39d0be15a2bd4e6d68",
+    "scripts/report_facility_native_roi.py": "b23b1224e783e91f42e780ea82c7eadd317428b382dcede6bb22dd84458c5639",
+    "scripts/report_facility_resolution.py": "97d0f587b5849c32f396851147055d2f1c926a0c300bf5c598c216908505a3ea",
+    "scripts/report_facility_small_region.py": "ae4fb18cf30cc00f2e4329667413543e3c4097b970821d2472c84fa0716bfd47",
+    "scripts/run_facility_native_roi_pair.py": "b48ad907c5954ccf8bddd979e5bf9e049165e3e4a692673a5ae5deed330ee0ae",
+    "scripts/test_facility_native_roi.py": "ea9866db68f46b44669648f76450c7038800876c021d8fbb4cc833fc2326880a",
+    "scripts/train_facility_context.py": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
+    "scripts/train_facility_native_roi.py": "7cdec52da9a7bab891612f2b3813dad32068e532a7a3b3229529ac8975ca074d",
+    "scripts/train_facility_presence.py": "def4565d4d07cd7e4321de43529849ce1adcc03dc3fcbff64b33e0f169a526f0",
+    "scripts/train_facility_resolution.py": "94b5eb819cb47e242cb309b3a0b9c58ed5d28e78088a972797a81244005337bd",
+    "scripts/train_facility_target.py": "5c80a49ed0d63bbe328df1593d93104930e1aaa39ebe8c036c04054900f769d4",
+    "scripts/verify_facility_native_roi.py": "d61f69e062f7f0e46f512c99d9bd16bdc3c39179cc057245dd3779b4bd4159ee",
+    "scripts/verify_facility_resolution.py": "ef67bb26c97801406c11085fde14924a18e95adb4151f414d7721d29d7ba536f",
+    "tests/test_spalling_sampler.py": "bd1613e009d3e84ea650512246dc4985dd4eec3e0386a5eeee4e893d929ae54f",
+    "tests/test_spalling_tag_scores.py": "88330b900c561b8d1ea181d21d9e96544ffce985a2780783990022147ecf409b"
+  },
+  "input_sha256": {
+    "core": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "auxiliary": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+    "tag_audit": "1e971f38470b1f6b32571ff02452a9fd3901d38edeb085e9de722da72ce78461",
+    "tag_tests": "f279387acf358ff81f7f1d77cf416524df290daa98cb538c8ea988c0e1ae131e",
+    "prior_audit": "36174c30cbb6b6d4cd1e2f82ebc69b41f435fc71fefcb661339fecbc4975ddd2",
+    "prior_tests": "875e93fa28d73ce5a089f42be9dfb9c2b5e70fe5f6a88b73037fb46ff756ead8",
+    "prior_private": "24e4082d6c184ad7f35c9f1a7e7acb1b013cb2469318171ac69d8cd1d35409dc",
+    "native_protocol": "52b5b316da53b0e818c88d7ea14e18fd21d86908f5a9380148501167dc7970d5",
+    "native_verification": "c686ffad01bf63bf359fc609e35a1a8e38a0d39774a06a94315be240e891c3d0",
+    "native_comparison": "048056b102b008e84ed9405d14a571f06b51150174a361bd0a1a07db89eca8b5",
+    "control_history": "d048c03b677e7a1b3b92bd61be868363d612f37bc2cf3d0f541b4397ce4cb31c",
+    "native_history": "ad56145504303b39fa6d7513ce0402ea338027693904ba6fe9a640d859dfcdcd",
+    "control_training": "f2285ba516ccfd0d2b90932ea0ef245030277a301964ba48158b71cdf23e7acc",
+    "native_training": "523433fce3795a4998cd91116fd5dc9446f5e06167bc97a9a932033798dd4a87"
+  },
+  "source_sha256": {
+    "safelog_ai/spalling_sampler.py": "a1df26fbfb683e63bdaa92bfaf005b1d1d894668defa8aee80802cbce5f751d7",
+    "scripts/prepare_facility_spalling_sampler.py": "ec3389c62a64f70589ca8761f6008152577bb49a19859df9c42f08765534587d"
+  },
+  "test_source_sha256": {
+    "tests/test_spalling_sampler.py": "bd1613e009d3e84ea650512246dc4985dd4eec3e0386a5eeee4e893d929ae54f"
+  },
+  "focused_test_record_sha256": "c6c271c901c9b86c0cb928fdb37a476eeec1a1d7b39c329d3d4b4ff36f982ecf",
+  "focused_tests_passed": 6,
+  "private_draw_archive_path": "runs/facility-spalling-sampler-plan/paired-draws.npz",
+  "private_draw_archive_sha256": "18b46d4021962a7d8fa22fc9475bbf7d956d76c30779a449d08a2eaa85d3ed3b",
+  "private_draw_archive_shape_each_arm": [
+    6,
+    14248
+  ],
+  "individual_draw_row_indices_or_photo_ids_published": false,
+  "numerical_repair_note": {
+    "status": "corrected_before_any_new_training",
+    "reason": "Use algebraically stable interior replacement probability to avoid cancellation when eligible probability is almost one; add a near-one assertion in the existing boundary test",
+    "first_plan_actual_stratum_probabilities": {
+      "dacl/full/00": 0.1712078080520537,
+      "dacl/full/10": 0.29589371980676316
+    },
+    "first_plan_actual_probabilities_were_valid": true,
+    "preserved_v1_evidence_path": "runs/facility-spalling-sampler-v1-evidence",
+    "preserved_v1_source_sha256": {
+      "safelog_ai/spalling_sampler.py": "2b41b2f48c936bee11dfb9316f04a032ad61b07a601f25496db4d9a26246f6b3",
+      "scripts/prepare_facility_spalling_sampler.py": "039d41e8aaf5f7003a86ce1bab0030ea3da1884eb71da9ca4c8666ad0b45fe1a"
+    },
+    "preserved_v1_test_source_sha256": {
+      "tests/test_spalling_sampler.py": "9c42c2b91bd076ba1b0ff014f55a18273f426dc54d32c0c7b4ab38311846e572"
+    },
+    "preserved_v1_report_sha256": "88ea3fd14ccd3dec5b7460dc62078bf56691c3905d3ee8c147d71815b3e2cf8d",
+    "preserved_v1_test_record_sha256": "eee636771951c231b859c52a136cdb0226a376de094a456fea0c51333e5c9453",
+    "preserved_v1_private_draw_archive_sha256": "18b46d4021962a7d8fa22fc9475bbf7d956d76c30779a449d08a2eaa85d3ed3b",
+    "preserved_v1_protected_ledger_sha256": "713e13d776273747e50a22f1e516436d420c4a4ecb7da94decc6cd8da7ee437b",
+    "preserved_v1_protected_snapshot_sha256": "162edc993c43c7016cbc2a08eeddc2a230948a986250dc90af78a27dce12b1f6",
+    "all_six_by_14248_control_draw_arrays_exactly_equal": true,
+    "all_six_by_14248_treatment_draw_arrays_exactly_equal": true,
+    "corrected_source_and_tests_bound_before_final_publication": true,
+    "new_training_started_before_repair": false
+  },
+  "limitations": [
+    "This is a sampler dry-run and supplies no new VAL performance or causal error explanation.",
+    "Exact Crack/Spalling/source/full-crop preservation does not preserve other photo or auxiliary label exposure.",
+    "Original loss weights remain fixed even when other-class exposure shifts; future AP regression checks are mandatory."
+  ]
+}

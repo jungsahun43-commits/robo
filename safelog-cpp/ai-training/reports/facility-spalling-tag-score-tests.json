@@ -1,0 +1,30 @@
+{
+  "schema": "facility_spalling_tag_score_tests_v1",
+  "status": "passed",
+  "created_utc": "2026-10-05T21:24:32.614236+00:00",
+  "tests_run": 6,
+  "expected_tests_collected": 6,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "all_input_sha256_size_mtime_preserved": true,
+  "audit_source_sha256": "74f335644ff7cbf72699c256e4c0bc363eddd0e99e8a336837163a8c8c0c99bc",
+  "test_source_sha256": "88330b900c561b8d1ea181d21d9e96544ffce985a2780783990022147ecf409b",
+  "protected_input_sha256": {
+    "cache": "d208789d74f451929a5300312ce67ff6a2047e97f0ebb9bec6c75cde0e2c02b6",
+    "core": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "auxiliary": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+    "package": "f6fc9def0f80e51ea3efff156e2dc8e37ec017eab2088d1f256d08ad3bbf6b33",
+    "weights": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+    "selection": "ce7ba26db8b5f383900a00fb46493bcc39268452b6cafb192280e2d7acd6fdad",
+    "split": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+    "source_audit": "87deb571682fb99b4e89b3c2db2932a1333c69429fddfbb868131ef398ebc0a8",
+    "label_groups": "b2e13175896a03d969f86e5be99b8a82c8de37bfdd5c14c59717c618b0ec85df",
+    "app_profile": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+    "audit_source": "74f335644ff7cbf72699c256e4c0bc363eddd0e99e8a336837163a8c8c0c99bc",
+    "audit_tests": "88330b900c561b8d1ea181d21d9e96544ffce985a2780783990022147ecf409b",
+    "cache_verifier_source": "9fc90fa318b79d76ace7bb1ea1a4135b14b3ab118d5879fadfbb7be771c4e327"
+  },
+  "model_inference_performed": false,
+  "training_performed": false
+}

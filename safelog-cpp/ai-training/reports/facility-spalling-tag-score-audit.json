@@ -1,0 +1,910 @@
+{
+  "schema": "facility_spalling_tag_score_audit_v1",
+  "status": "audited",
+  "created_utc": "2026-10-05T21:24:37.604285+00:00",
+  "scope": "Frozen0773 full DACL TRAIN descriptive error census by unchanged native photo tags; not new generalization performance",
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "native_classes": [
+    "ACrack",
+    "Bearing",
+    "Cavity",
+    "Crack",
+    "Drainage",
+    "EJoint",
+    "Efflorescence",
+    "ExposedRebars",
+    "Graffiti",
+    "Hollowareas",
+    "JTape",
+    "PEquipment",
+    "Restformwork",
+    "Rockpocket",
+    "Rust",
+    "Spalling",
+    "WConccor",
+    "Weathering",
+    "Wetspot"
+  ],
+  "model_weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+  "frozen_grid1_spalling_cutoff": 0.4649081826210022,
+  "full_train_scoring_cache_rows": 14248,
+  "dacl_train_photos": 6225,
+  "overall": {
+    "photos": 6225,
+    "known_positive": 2938,
+    "known_negative": 3287,
+    "unknown_photo_targets": 0,
+    "confusion": {
+      "TP": 2746,
+      "FN": 192,
+      "FP": 401,
+      "TN": 2886
+    },
+    "descriptive_train_fnr": 0.0653505786249149,
+    "descriptive_train_fpr": 0.12199574079707941,
+    "score_quantiles": {
+      "all": {
+        "min": 0.001854130532592535,
+        "p10": 0.053016410768032075,
+        "median": 0.4765761196613312,
+        "p90": 0.9547037601470948,
+        "max": 0.9999593496322632
+      },
+      "known_positive": {
+        "min": 0.10252442210912704,
+        "p10": 0.5336297631263733,
+        "median": 0.8450876772403717,
+        "p90": 0.9831940412521363,
+        "max": 0.9999593496322632
+      },
+      "known_negative": {
+        "min": 0.001854130532592535,
+        "p10": 0.03190822601318359,
+        "median": 0.16298815608024597,
+        "p90": 0.5076369166374207,
+        "max": 0.9305083155632019
+      },
+      "FN": {
+        "min": 0.10252442210912704,
+        "p10": 0.23804729133844377,
+        "median": 0.3675437569618225,
+        "p90": 0.44714347124099735,
+        "max": 0.4640628397464752
+      },
+      "FP": {
+        "min": 0.46611103415489197,
+        "p10": 0.4864988327026367,
+        "median": 0.5855656862258911,
+        "p90": 0.7592653632164001,
+        "max": 0.9305083155632019
+      }
+    }
+  },
+  "disjoint_four_groups": {
+    "spalling_positive_other_four_present": {
+      "photos": 1360,
+      "known_positive": 1360,
+      "known_negative": 0,
+      "unknown_photo_targets": 0,
+      "confusion": {
+        "TP": 1296,
+        "FN": 64,
+        "FP": 0,
+        "TN": 0
+      },
+      "descriptive_train_fnr": 0.047058823529411764,
+      "descriptive_train_fpr": null,
+      "score_quantiles": {
+        "all": {
+          "min": 0.12853093445301056,
+          "p10": 0.5643274128437042,
+          "median": 0.8592135608196259,
+          "p90": 0.9842659831047059,
+          "max": 0.9999593496322632
+        },
+        "known_positive": {
+          "min": 0.12853093445301056,
+          "p10": 0.5643274128437042,
+          "median": 0.8592135608196259,
+          "p90": 0.9842659831047059,
+          "max": 0.9999593496322632
+        },
+        "known_negative": null,
+        "FN": {
+          "min": 0.12853093445301056,
+          "p10": 0.2269879534840584,
+          "median": 0.38772812485694885,
+          "p90": 0.45075650215148927,
+          "max": 0.4640628397464752
+        },
+        "FP": null
+      }
+    },
+    "spalling_positive_other_four_absent": {
+      "photos": 1578,
+      "known_positive": 1578,
+      "known_negative": 0,
+      "unknown_photo_targets": 0,
+      "confusion": {
+        "TP": 1450,
+        "FN": 128,
+        "FP": 0,
+        "TN": 0
+      },
+      "descriptive_train_fnr": 0.08111533586818757,
+      "descriptive_train_fpr": null,
+      "score_quantiles": {
+        "all": {
+          "min": 0.10252442210912704,
+          "p10": 0.5002473652362823,
+          "median": 0.8311083614826202,
+          "p90": 0.9816357731819153,
+          "max": 0.9998881816864014
+        },
+        "known_positive": {
+          "min": 0.10252442210912704,
+          "p10": 0.5002473652362823,
+          "median": 0.8311083614826202,
+          "p90": 0.9816357731819153,
+          "max": 0.9998881816864014
+        },
+        "known_negative": null,
+        "FN": {
+          "min": 0.10252442210912704,
+          "p10": 0.24320550858974457,
+          "median": 0.35493890941143036,
+          "p90": 0.44339304864406587,
+          "max": 0.4625345468521118
+        },
+        "FP": null
+      }
+    },
+    "spalling_negative_other_four_present": {
+      "photos": 666,
+      "known_positive": 0,
+      "known_negative": 666,
+      "unknown_photo_targets": 0,
+      "confusion": {
+        "TP": 0,
+        "FN": 0,
+        "FP": 176,
+        "TN": 490
+      },
+      "descriptive_train_fnr": null,
+      "descriptive_train_fpr": 0.26426426426426425,
+      "score_quantiles": {
+        "all": {
+          "min": 0.016605539247393608,
+          "p10": 0.08749566227197647,
+          "median": 0.3140132874250412,
+          "p90": 0.6412674188613892,
+          "max": 0.9209883809089661
+        },
+        "known_positive": null,
+        "known_negative": {
+          "min": 0.016605539247393608,
+          "p10": 0.08749566227197647,
+          "median": 0.3140132874250412,
+          "p90": 0.6412674188613892,
+          "max": 0.9209883809089661
+        },
+        "FN": null,
+        "FP": {
+          "min": 0.46740999817848206,
+          "p10": 0.4923827201128006,
+          "median": 0.6047669649124146,
+          "p90": 0.7792077660560608,
+          "max": 0.9209883809089661
+        }
+      }
+    },
+    "spalling_negative_other_four_absent": {
+      "photos": 2621,
+      "known_positive": 0,
+      "known_negative": 2621,
+      "unknown_photo_targets": 0,
+      "confusion": {
+        "TP": 0,
+        "FN": 0,
+        "FP": 225,
+        "TN": 2396
+      },
+      "descriptive_train_fnr": null,
+      "descriptive_train_fpr": 0.08584509729111027,
+      "score_quantiles": {
+        "all": {
+          "min": 0.001854130532592535,
+          "p10": 0.027539916336536407,
+          "median": 0.1376541256904602,
+          "p90": 0.43719184398651123,
+          "max": 0.9305083155632019
+        },
+        "known_positive": null,
+        "known_negative": {
+          "min": 0.001854130532592535,
+          "p10": 0.027539916336536407,
+          "median": 0.1376541256904602,
+          "p90": 0.43719184398651123,
+          "max": 0.9305083155632019
+        },
+        "FN": null,
+        "FP": {
+          "min": 0.46611103415489197,
+          "p10": 0.48409304618835447,
+          "median": 0.5741947889328003,
+          "p90": 0.747975218296051,
+          "max": 0.9305083155632019
+        }
+      }
+    }
+  },
+  "negative_other_four_crack_partition": {
+    "crack_or_acrack_present": {
+      "photos": 245,
+      "known_positive": 0,
+      "known_negative": 245,
+      "unknown_photo_targets": 0,
+      "confusion": {
+        "TP": 0,
+        "FN": 0,
+        "FP": 32,
+        "TN": 213
+      },
+      "descriptive_train_fnr": null,
+      "descriptive_train_fpr": 0.1306122448979592,
+      "score_quantiles": {
+        "all": {
+          "min": 0.016960924491286278,
+          "p10": 0.0651705726981163,
+          "median": 0.2448369413614273,
+          "p90": 0.5020333766937256,
+          "max": 0.8637417554855347
+        },
+        "known_positive": null,
+        "known_negative": {
+          "min": 0.016960924491286278,
+          "p10": 0.0651705726981163,
+          "median": 0.2448369413614273,
+          "p90": 0.5020333766937256,
+          "max": 0.8637417554855347
+        },
+        "FN": null,
+        "FP": {
+          "min": 0.47042420506477356,
+          "p10": 0.488820481300354,
+          "median": 0.5769302546977997,
+          "p90": 0.7429639279842377,
+          "max": 0.8637417554855347
+        }
+      }
+    },
+    "crack_or_acrack_absent": {
+      "photos": 421,
+      "known_positive": 0,
+      "known_negative": 421,
+      "unknown_photo_targets": 0,
+      "confusion": {
+        "TP": 0,
+        "FN": 0,
+        "FP": 144,
+        "TN": 277
+      },
+      "descriptive_train_fnr": null,
+      "descriptive_train_fpr": 0.342042755344418,
+      "score_quantiles": {
+        "all": {
+          "min": 0.016605539247393608,
+          "p10": 0.10751599818468094,
+          "median": 0.35803166031837463,
+          "p90": 0.6898074150085449,
+          "max": 0.9209883809089661
+        },
+        "known_positive": null,
+        "known_negative": {
+          "min": 0.016605539247393608,
+          "p10": 0.10751599818468094,
+          "median": 0.35803166031837463,
+          "p90": 0.6898074150085449,
+          "max": 0.9209883809089661
+        },
+        "FN": null,
+        "FP": {
+          "min": 0.46740999817848206,
+          "p10": 0.49588653445243835,
+          "median": 0.6088054478168488,
+          "p90": 0.7797473788261414,
+          "max": 0.9209883809089661
+        }
+      }
+    }
+  },
+  "non_disjoint_native_tags": {
+    "Rockpocket": {
+      "all": {
+        "photos": 282,
+        "known_positive": 181,
+        "known_negative": 101,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 176,
+          "FN": 5,
+          "FP": 53,
+          "TN": 48
+        },
+        "descriptive_train_fnr": 0.027624309392265192,
+        "descriptive_train_fpr": 0.5247524752475248,
+        "score_quantiles": {
+          "all": {
+            "min": 0.04926636442542076,
+            "p10": 0.3137365698814392,
+            "median": 0.7436348497867584,
+            "p90": 0.9691369354724884,
+            "max": 0.9994562268257141
+          },
+          "known_positive": {
+            "min": 0.18144553899765015,
+            "p10": 0.6077740788459778,
+            "median": 0.8591703772544861,
+            "p90": 0.9757874011993408,
+            "max": 0.9994562268257141
+          },
+          "known_negative": {
+            "min": 0.04926636442542076,
+            "p10": 0.21965843439102173,
+            "median": 0.49355843663215637,
+            "p90": 0.723051130771637,
+            "max": 0.8789449334144592
+          },
+          "FN": {
+            "min": 0.18144553899765015,
+            "p10": 0.2561667442321777,
+            "median": 0.4409300982952118,
+            "p90": 0.444368976354599,
+            "max": 0.44478341937065125
+          },
+          "FP": {
+            "min": 0.46740999817848206,
+            "p10": 0.5103767037391662,
+            "median": 0.6230678558349609,
+            "p90": 0.7685804843902588,
+            "max": 0.8789449334144592
+          }
+        }
+      },
+      "spalling_positive": {
+        "photos": 181,
+        "known_positive": 181,
+        "known_negative": 0,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 176,
+          "FN": 5,
+          "FP": 0,
+          "TN": 0
+        },
+        "descriptive_train_fnr": 0.027624309392265192,
+        "descriptive_train_fpr": null,
+        "score_quantiles": {
+          "all": {
+            "min": 0.18144553899765015,
+            "p10": 0.6077740788459778,
+            "median": 0.8591703772544861,
+            "p90": 0.9757874011993408,
+            "max": 0.9994562268257141
+          },
+          "known_positive": {
+            "min": 0.18144553899765015,
+            "p10": 0.6077740788459778,
+            "median": 0.8591703772544861,
+            "p90": 0.9757874011993408,
+            "max": 0.9994562268257141
+          },
+          "known_negative": null,
+          "FN": {
+            "min": 0.18144553899765015,
+            "p10": 0.2561667442321777,
+            "median": 0.4409300982952118,
+            "p90": 0.444368976354599,
+            "max": 0.44478341937065125
+          },
+          "FP": null
+        }
+      },
+      "spalling_negative": {
+        "photos": 101,
+        "known_positive": 0,
+        "known_negative": 101,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 0,
+          "FN": 0,
+          "FP": 53,
+          "TN": 48
+        },
+        "descriptive_train_fnr": null,
+        "descriptive_train_fpr": 0.5247524752475248,
+        "score_quantiles": {
+          "all": {
+            "min": 0.04926636442542076,
+            "p10": 0.21965843439102173,
+            "median": 0.49355843663215637,
+            "p90": 0.723051130771637,
+            "max": 0.8789449334144592
+          },
+          "known_positive": null,
+          "known_negative": {
+            "min": 0.04926636442542076,
+            "p10": 0.21965843439102173,
+            "median": 0.49355843663215637,
+            "p90": 0.723051130771637,
+            "max": 0.8789449334144592
+          },
+          "FN": null,
+          "FP": {
+            "min": 0.46740999817848206,
+            "p10": 0.5103767037391662,
+            "median": 0.6230678558349609,
+            "p90": 0.7685804843902588,
+            "max": 0.8789449334144592
+          }
+        }
+      }
+    },
+    "WConccor": {
+      "all": {
+        "photos": 241,
+        "known_positive": 142,
+        "known_negative": 99,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 138,
+          "FN": 4,
+          "FP": 33,
+          "TN": 66
+        },
+        "descriptive_train_fnr": 0.028169014084507043,
+        "descriptive_train_fpr": 0.3333333333333333,
+        "score_quantiles": {
+          "all": {
+            "min": 0.02604287676513195,
+            "p10": 0.17045937478542328,
+            "median": 0.7023794651031494,
+            "p90": 0.9650545120239258,
+            "max": 0.999914288520813
+          },
+          "known_positive": {
+            "min": 0.16238361597061157,
+            "p10": 0.5812937617301941,
+            "median": 0.8556609749794006,
+            "p90": 0.9868624985218049,
+            "max": 0.999914288520813
+          },
+          "known_negative": {
+            "min": 0.02604287676513195,
+            "p10": 0.09331728965044023,
+            "median": 0.34308263659477234,
+            "p90": 0.7108349323272705,
+            "max": 0.9209883809089661
+          },
+          "FN": {
+            "min": 0.16238361597061157,
+            "p10": 0.1839285358786583,
+            "median": 0.33949171751737595,
+            "p90": 0.458279013633728,
+            "max": 0.4640628397464752
+          },
+          "FP": {
+            "min": 0.4684591591358185,
+            "p10": 0.5306478500366211,
+            "median": 0.670982301235199,
+            "p90": 0.7838402271270752,
+            "max": 0.9209883809089661
+          }
+        }
+      },
+      "spalling_positive": {
+        "photos": 142,
+        "known_positive": 142,
+        "known_negative": 0,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 138,
+          "FN": 4,
+          "FP": 0,
+          "TN": 0
+        },
+        "descriptive_train_fnr": 0.028169014084507043,
+        "descriptive_train_fpr": null,
+        "score_quantiles": {
+          "all": {
+            "min": 0.16238361597061157,
+            "p10": 0.5812937617301941,
+            "median": 0.8556609749794006,
+            "p90": 0.9868624985218049,
+            "max": 0.999914288520813
+          },
+          "known_positive": {
+            "min": 0.16238361597061157,
+            "p10": 0.5812937617301941,
+            "median": 0.8556609749794006,
+            "p90": 0.9868624985218049,
+            "max": 0.999914288520813
+          },
+          "known_negative": null,
+          "FN": {
+            "min": 0.16238361597061157,
+            "p10": 0.1839285358786583,
+            "median": 0.33949171751737595,
+            "p90": 0.458279013633728,
+            "max": 0.4640628397464752
+          },
+          "FP": null
+        }
+      },
+      "spalling_negative": {
+        "photos": 99,
+        "known_positive": 0,
+        "known_negative": 99,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 0,
+          "FN": 0,
+          "FP": 33,
+          "TN": 66
+        },
+        "descriptive_train_fnr": null,
+        "descriptive_train_fpr": 0.3333333333333333,
+        "score_quantiles": {
+          "all": {
+            "min": 0.02604287676513195,
+            "p10": 0.09331728965044023,
+            "median": 0.34308263659477234,
+            "p90": 0.7108349323272705,
+            "max": 0.9209883809089661
+          },
+          "known_positive": null,
+          "known_negative": {
+            "min": 0.02604287676513195,
+            "p10": 0.09331728965044023,
+            "median": 0.34308263659477234,
+            "p90": 0.7108349323272705,
+            "max": 0.9209883809089661
+          },
+          "FN": null,
+          "FP": {
+            "min": 0.4684591591358185,
+            "p10": 0.5306478500366211,
+            "median": 0.670982301235199,
+            "p90": 0.7838402271270752,
+            "max": 0.9209883809089661
+          }
+        }
+      }
+    },
+    "Hollowareas": {
+      "all": {
+        "photos": 984,
+        "known_positive": 711,
+        "known_negative": 273,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 680,
+          "FN": 31,
+          "FP": 75,
+          "TN": 198
+        },
+        "descriptive_train_fnr": 0.04360056258790436,
+        "descriptive_train_fpr": 0.27472527472527475,
+        "score_quantiles": {
+          "all": {
+            "min": 0.024220498278737068,
+            "p10": 0.23823063820600512,
+            "median": 0.7948654294013977,
+            "p90": 0.9841633558273315,
+            "max": 0.9999593496322632
+          },
+          "known_positive": {
+            "min": 0.18144553899765015,
+            "p10": 0.6033300161361694,
+            "median": 0.8842810988426208,
+            "p90": 0.9901973009109497,
+            "max": 0.9999593496322632
+          },
+          "known_negative": {
+            "min": 0.024220498278737068,
+            "p10": 0.08787347227334977,
+            "median": 0.31801632046699524,
+            "p90": 0.6592690348625184,
+            "max": 0.9209883809089661
+          },
+          "FN": {
+            "min": 0.18144553899765015,
+            "p10": 0.2587602138519287,
+            "median": 0.3891696333885193,
+            "p90": 0.4507187008857727,
+            "max": 0.46010294556617737
+          },
+          "FP": {
+            "min": 0.46740999817848206,
+            "p10": 0.4907060205936432,
+            "median": 0.609476625919342,
+            "p90": 0.7779534459114076,
+            "max": 0.9209883809089661
+          }
+        }
+      },
+      "spalling_positive": {
+        "photos": 711,
+        "known_positive": 711,
+        "known_negative": 0,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 680,
+          "FN": 31,
+          "FP": 0,
+          "TN": 0
+        },
+        "descriptive_train_fnr": 0.04360056258790436,
+        "descriptive_train_fpr": null,
+        "score_quantiles": {
+          "all": {
+            "min": 0.18144553899765015,
+            "p10": 0.6033300161361694,
+            "median": 0.8842810988426208,
+            "p90": 0.9901973009109497,
+            "max": 0.9999593496322632
+          },
+          "known_positive": {
+            "min": 0.18144553899765015,
+            "p10": 0.6033300161361694,
+            "median": 0.8842810988426208,
+            "p90": 0.9901973009109497,
+            "max": 0.9999593496322632
+          },
+          "known_negative": null,
+          "FN": {
+            "min": 0.18144553899765015,
+            "p10": 0.2587602138519287,
+            "median": 0.3891696333885193,
+            "p90": 0.4507187008857727,
+            "max": 0.46010294556617737
+          },
+          "FP": null
+        }
+      },
+      "spalling_negative": {
+        "photos": 273,
+        "known_positive": 0,
+        "known_negative": 273,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 0,
+          "FN": 0,
+          "FP": 75,
+          "TN": 198
+        },
+        "descriptive_train_fnr": null,
+        "descriptive_train_fpr": 0.27472527472527475,
+        "score_quantiles": {
+          "all": {
+            "min": 0.024220498278737068,
+            "p10": 0.08787347227334977,
+            "median": 0.31801632046699524,
+            "p90": 0.6592690348625184,
+            "max": 0.9209883809089661
+          },
+          "known_positive": null,
+          "known_negative": {
+            "min": 0.024220498278737068,
+            "p10": 0.08787347227334977,
+            "median": 0.31801632046699524,
+            "p90": 0.6592690348625184,
+            "max": 0.9209883809089661
+          },
+          "FN": null,
+          "FP": {
+            "min": 0.46740999817848206,
+            "p10": 0.4907060205936432,
+            "median": 0.609476625919342,
+            "p90": 0.7779534459114076,
+            "max": 0.9209883809089661
+          }
+        }
+      }
+    },
+    "Cavity": {
+      "all": {
+        "photos": 1082,
+        "known_positive": 734,
+        "known_negative": 348,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 688,
+          "FN": 46,
+          "FP": 89,
+          "TN": 259
+        },
+        "descriptive_train_fnr": 0.06267029972752043,
+        "descriptive_train_fpr": 0.2557471264367816,
+        "score_quantiles": {
+          "all": {
+            "min": 0.016605539247393608,
+            "p10": 0.19497583508491517,
+            "median": 0.722975343465805,
+            "p90": 0.9697032988071441,
+            "max": 0.9999593496322632
+          },
+          "known_positive": {
+            "min": 0.12853093445301056,
+            "p10": 0.541074413061142,
+            "median": 0.8349652290344238,
+            "p90": 0.979763388633728,
+            "max": 0.9999593496322632
+          },
+          "known_negative": {
+            "min": 0.016605539247393608,
+            "p10": 0.08969772160053253,
+            "median": 0.3146763890981674,
+            "p90": 0.6374255418777466,
+            "max": 0.9057124257087708
+          },
+          "FN": {
+            "min": 0.12853093445301056,
+            "p10": 0.23846524953842163,
+            "median": 0.3875925540924072,
+            "p90": 0.4516458958387375,
+            "max": 0.46010294556617737
+          },
+          "FP": {
+            "min": 0.46740999817848206,
+            "p10": 0.4835437834262848,
+            "median": 0.5908942818641663,
+            "p90": 0.7810848116874695,
+            "max": 0.9057124257087708
+          }
+        }
+      },
+      "spalling_positive": {
+        "photos": 734,
+        "known_positive": 734,
+        "known_negative": 0,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 688,
+          "FN": 46,
+          "FP": 0,
+          "TN": 0
+        },
+        "descriptive_train_fnr": 0.06267029972752043,
+        "descriptive_train_fpr": null,
+        "score_quantiles": {
+          "all": {
+            "min": 0.12853093445301056,
+            "p10": 0.541074413061142,
+            "median": 0.8349652290344238,
+            "p90": 0.979763388633728,
+            "max": 0.9999593496322632
+          },
+          "known_positive": {
+            "min": 0.12853093445301056,
+            "p10": 0.541074413061142,
+            "median": 0.8349652290344238,
+            "p90": 0.979763388633728,
+            "max": 0.9999593496322632
+          },
+          "known_negative": null,
+          "FN": {
+            "min": 0.12853093445301056,
+            "p10": 0.23846524953842163,
+            "median": 0.3875925540924072,
+            "p90": 0.4516458958387375,
+            "max": 0.46010294556617737
+          },
+          "FP": null
+        }
+      },
+      "spalling_negative": {
+        "photos": 348,
+        "known_positive": 0,
+        "known_negative": 348,
+        "unknown_photo_targets": 0,
+        "confusion": {
+          "TP": 0,
+          "FN": 0,
+          "FP": 89,
+          "TN": 259
+        },
+        "descriptive_train_fnr": null,
+        "descriptive_train_fpr": 0.2557471264367816,
+        "score_quantiles": {
+          "all": {
+            "min": 0.016605539247393608,
+            "p10": 0.08969772160053253,
+            "median": 0.3146763890981674,
+            "p90": 0.6374255418777466,
+            "max": 0.9057124257087708
+          },
+          "known_positive": null,
+          "known_negative": {
+            "min": 0.016605539247393608,
+            "p10": 0.08969772160053253,
+            "median": 0.3146763890981674,
+            "p90": 0.6374255418777466,
+            "max": 0.9057124257087708
+          },
+          "FN": null,
+          "FP": {
+            "min": 0.46740999817848206,
+            "p10": 0.4835437834262848,
+            "median": 0.5908942818641663,
+            "p90": 0.7810848116874695,
+            "max": 0.9057124257087708
+          }
+        }
+      }
+    }
+  },
+  "group_policy": {
+    "other_four": [
+      "Rockpocket",
+      "WConccor",
+      "Hollowareas",
+      "Cavity"
+    ],
+    "disjoint_groups_partition_all_dacl": true,
+    "crack_partition_partitions_negative_other_four_only": true,
+    "native_tag_groups_overlap_do_not_sum": true,
+    "absence_is_not_normal_or_safe_ground_truth": true
+  },
+  "full_train_cache_targets_order_membership_and_domains_verified": true,
+  "existing130_review_cases_match_original_full_train_cache": true,
+  "native_spalling_photo_target_matches_original_seven_class_target": true,
+  "overall_confusion_matches_original_train_review_sampling_census": true,
+  "group_composition_matches_bound_original_source_audit": true,
+  "all_input_sha256_size_mtime_preserved": true,
+  "input_sha256": {
+    "cache": "d208789d74f451929a5300312ce67ff6a2047e97f0ebb9bec6c75cde0e2c02b6",
+    "core": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "auxiliary": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+    "package": "f6fc9def0f80e51ea3efff156e2dc8e37ec017eab2088d1f256d08ad3bbf6b33",
+    "weights": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+    "selection": "ce7ba26db8b5f383900a00fb46493bcc39268452b6cafb192280e2d7acd6fdad",
+    "split": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+    "source_audit": "87deb571682fb99b4e89b3c2db2932a1333c69429fddfbb868131ef398ebc0a8",
+    "label_groups": "b2e13175896a03d969f86e5be99b8a82c8de37bfdd5c14c59717c618b0ec85df",
+    "app_profile": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+    "audit_source": "74f335644ff7cbf72699c256e4c0bc363eddd0e99e8a336837163a8c8c0c99bc",
+    "audit_tests": "88330b900c561b8d1ea181d21d9e96544ffce985a2780783990022147ecf409b",
+    "cache_verifier_source": "9fc90fa318b79d76ace7bb1ea1a4135b14b3ab118d5879fadfbb7be771c4e327"
+  },
+  "focused_test_record_sha256": "f279387acf358ff81f7f1d77cf416524df290daa98cb538c8ea988c0e1ae131e",
+  "focused_tests_passed": 6,
+  "policy": {
+    "uses_existing_full_train_predictions": true,
+    "new_model_inference_performed": false,
+    "source_images_or_native_annotations_read": false,
+    "individual_validation_or_test_images_annotations_predictions_read": false,
+    "new_cutoff_fitting_performed": false,
+    "original_labels_or_app_profile_changed": false,
+    "training_performed": false,
+    "individual_photo_ids_paths_targets_or_predictions_published": false,
+    "model_promotion_performed": false,
+    "causal_error_explanation_proven": false
+  },
+  "limitations": [
+    "TRAIN predictions use a model trained on these sources; these rates do not estimate unseen factory performance.",
+    "Native tag coexistence is not polygon overlap, label error or proof that a tag caused an error.",
+    "Non-disjoint native-tag groups overlap and their counts must not be added.",
+    "Tag absence is a publisher label statement, not normality, all-defect absence or structural safety.",
+    "This census avoids the hard-plus-random selection of the local130 review but remains limited to existing DACL TRAIN photos.",
+    "All original photo/annotation verification is reused from the bound source audit; no image or annotation is newly read."
+  ]
+}

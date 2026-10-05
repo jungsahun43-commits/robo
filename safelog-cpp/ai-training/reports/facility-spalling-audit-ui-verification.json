@@ -1,0 +1,29 @@
+{
+  "schema": "facility_spalling_audit_ui_verification_v1",
+  "status": "verified",
+  "browser": "Codex in-app browser",
+  "viewport": [
+    650,
+    909
+  ],
+  "local_audit_html_sha256": "c4710ce01217cf98f53bf5e6a0c8807c1b2dec668fe4f788fe8931654c5ab87a",
+  "aggregate_audit_sha256": "36174c30cbb6b6d4cd1e2f82ebc69b41f435fc71fefcb661339fecbc4975ddd2",
+  "local_screenshot_sha256": "0ec83ce2fbfd86ae7e5f68df48877d678da41f4fa33c138937976b72c0eb5412",
+  "checks": {
+    "initial_all_error_cards": 54,
+    "dacl_all_error_cards": 29,
+    "dacl_fn_cards": 12,
+    "dacl_tp_comparison_cards": 15,
+    "dacl_tp_error_counter": 0,
+    "codebrim_fn_cards": 12,
+    "codebrim_fn_unknown_location_cards": 12,
+    "comparison_toggle_verified": true,
+    "processed_source_image_and_fine_and_stored_mask_display_verified": true,
+    "default_all_error_state_restored": true,
+    "workbench_case_link_references_present": true
+  },
+  "original_labels_changed": 0,
+  "opinions_or_expert_judgements_entered": 0,
+  "individual_images_ids_paths_or_predictions_published": false,
+  "scope": "Desktop IAB filters and selected source-mask displays; not Android, broad device compatibility or accuracy test."
+}

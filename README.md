@@ -38,3 +38,14 @@ AI 결과는 참고 제안이며 최종 판단은 점검자가 수행합니다. 
 - [전체 실험 진행·결과](safelog-cpp/ai-training/reports/FACILITY_FIVE_PERCENT_RESULTS_KO.md)
 
 학습 자료·가중치는 로컬에 보관하며 GitHub에는 코드와 집계 결과를 올립니다.
+
+## 후속 작업: 박락 TRAIN 감사 · 2026-10-06
+
+기존 검수 사진 130장의 박락 오답 54장과 마스크를 대조했습니다.
+전체 DACL TRAIN 6,225장의 저장 점수에서는 박락 음성·관련 손상 태그 집단의
+오탐 비율이 26.43%, 해당 태그가 없는 음성 집단은 8.58%였습니다. 이는 학습 사진의 기술 집계입니다.
+그 집단 666장을 제한적으로 강조하는 다음 표본 추출 방식을 준비하고 모의 실행했습니다.
+새 학습·추론·라벨 수정은 수행하지 않았고, 기존 검증 성능은 그대로입니다.
+
+- [실측 감사·다음 실험 준비·화면 사용 안내](safelog-cpp/ai-training/reports/FACILITY_SPALLING_TRAIN_AUDIT_KO.md)
+- [기존 표본 순서 재현·구성 보존 모의 실행](safelog-cpp/ai-training/reports/facility-spalling-sampler-dry-run.json)

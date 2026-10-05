@@ -1,0 +1,13 @@
+{
+  "schema": "facility_spalling_audit_report_provenance_v1",
+  "generated_utc": "2026-10-05T21:43:55.927458+00:00",
+  "script_sha256": "93f2ebdc01d3d875087fc8f3f42cbbebe0dd58af8c1b8f94c9d29105d0f517f5",
+  "input_sha256": {
+    "reports/facility-spalling-train-audit.json": "36174c30cbb6b6d4cd1e2f82ebc69b41f435fc71fefcb661339fecbc4975ddd2",
+    "reports/facility-spalling-tag-score-audit.json": "1e971f38470b1f6b32571ff02452a9fd3901d38edeb085e9de722da72ce78461",
+    "reports/facility-spalling-sampler-dry-run.json": "54c406c09f5bf4b01c994fb3344f1b6b50d0d3b3a927048a08f0f0fa2f8b5a12"
+  },
+  "report_sha256": "214c20e7b04e8b58d514a82d4ae48587d8c36d8a54debee8eef03bedc7d0c290",
+  "new_training_epochs": 0,
+  "accuracy_measured": false
+}

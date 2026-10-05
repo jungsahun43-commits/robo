@@ -1,0 +1,899 @@
+{
+  "schema": "facility_spalling_train_audit_aggregate_v1",
+  "status": "audited",
+  "audited_utc": "2026-10-05T21:16:54.165858+00:00",
+  "split": "train",
+  "case_counts": {
+    "all": 130,
+    "errors": 54,
+    "direct_spalling_errors": 49,
+    "additional_other_task_errors": 5
+  },
+  "all_package_case_counts": {
+    "dacl": {
+      "FP": 17,
+      "FN": 12,
+      "TP": 15,
+      "TN": 9,
+      "UNKNOWN": 0
+    },
+    "damsegment": {
+      "FP": 1,
+      "FN": 0,
+      "TP": 6,
+      "TN": 10,
+      "UNKNOWN": 0
+    },
+    "codebrim": {
+      "FP": 12,
+      "FN": 12,
+      "TP": 12,
+      "TN": 24,
+      "UNKNOWN": 0
+    }
+  },
+  "direct_spalling_selected_case_counts": {
+    "dacl": {
+      "FP": 12,
+      "FN": 12,
+      "TP": 3,
+      "TN": 3,
+      "UNKNOWN": 0
+    },
+    "damsegment": {
+      "FP": 1,
+      "FN": 0,
+      "TP": 3,
+      "TN": 3,
+      "UNKNOWN": 0
+    },
+    "codebrim": {
+      "FP": 12,
+      "FN": 12,
+      "TP": 3,
+      "TN": 3,
+      "UNKNOWN": 0
+    }
+  },
+  "error_counts_by_domain": {
+    "dacl": {
+      "FP": 17,
+      "FN": 12,
+      "TP": 0,
+      "TN": 0,
+      "UNKNOWN": 0
+    },
+    "damsegment": {
+      "FP": 1,
+      "FN": 0,
+      "TP": 0,
+      "TN": 0,
+      "UNKNOWN": 0
+    },
+    "codebrim": {
+      "FP": 12,
+      "FN": 12,
+      "TP": 0,
+      "TN": 0,
+      "UNKNOWN": 0
+    }
+  },
+  "groups": [
+    {
+      "domain": "dacl",
+      "outcome": "FP",
+      "selected_cases": 17,
+      "direct_spalling_selected_cases": 12,
+      "spalling_pixel_known_cases": 17,
+      "positive_spalling_source_geometry_cases": 0,
+      "positive_geometry_small_below_one_percent": 0,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 2,
+        "WConccor": 1,
+        "Hollowareas": 2,
+        "Cavity": 6
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 17,
+        "min": 0.006363293495312837,
+        "q1": 0.011374568810603272,
+        "median": 0.01805414270344288,
+        "q3": 0.024944910384830776,
+        "max": 0.04199892098369081
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 17,
+        "min": 0.0062032550152680025,
+        "q1": 0.010237936208394359,
+        "median": 0.013884484485756311,
+        "q3": 0.02881104101038429,
+        "max": 0.04208586988540968
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 17,
+        "min": 0.000197476402090401,
+        "q1": 0.0012807187736128144,
+        "median": 0.0023221403391707725,
+        "q3": 0.012314856367076006,
+        "max": 0.018757111702598556
+      }
+    },
+    {
+      "domain": "dacl",
+      "outcome": "FN",
+      "selected_cases": 12,
+      "direct_spalling_selected_cases": 12,
+      "spalling_pixel_known_cases": 12,
+      "positive_spalling_source_geometry_cases": 12,
+      "positive_geometry_small_below_one_percent": 6,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 12,
+        "min": 0.00205322265625,
+        "q1": 0.003544921875,
+        "median": 0.010159912109375,
+        "q3": 0.026102905273437498,
+        "max": 0.05883056640625
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 12,
+        "min": 0.00328125,
+        "q1": 0.0073828125000000005,
+        "median": 0.016015625,
+        "q3": 0.0309375,
+        "max": 0.07078125
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 12,
+        "min": 1.1393593144256273,
+        "q1": 1.2056148051926732,
+        "median": 1.5447558365337075,
+        "q3": 1.7502389431279957,
+        "max": 2.1822950819672133
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 12,
+        "min": 0.041666666666666664,
+        "q1": 0.05513272047118752,
+        "median": 0.08054287163876205,
+        "q3": 0.1456043956043956,
+        "max": 0.34615384615384615
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 0,
+        "WConccor": 1,
+        "Hollowareas": 3,
+        "Cavity": 5
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 12,
+        "min": 0.009712897248688207,
+        "q1": 0.014350563592441084,
+        "median": 0.02150681275219399,
+        "q3": 0.03351525014072041,
+        "max": 0.042255737504410994
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 12,
+        "min": 0.00797089386718454,
+        "q1": 0.013935589767940343,
+        "median": 0.02015250767922211,
+        "q3": 0.03406592798136765,
+        "max": 0.0667648594685916
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 11,
+        "min": 0.0009687268673927033,
+        "q1": 0.002318880704795688,
+        "median": 0.004500414255890475,
+        "q3": 0.01117994599282944,
+        "max": 0.038621312746789684
+      }
+    },
+    {
+      "domain": "dacl",
+      "outcome": "TP",
+      "selected_cases": 15,
+      "direct_spalling_selected_cases": 3,
+      "spalling_pixel_known_cases": 15,
+      "positive_spalling_source_geometry_cases": 15,
+      "positive_geometry_small_below_one_percent": 6,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 15,
+        "min": 0.00092041015625,
+        "q1": 0.0061364746093749995,
+        "median": 0.01673828125,
+        "q3": 0.045078125,
+        "max": 0.15962646484375
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 15,
+        "min": 0.0021875,
+        "q1": 0.00921875,
+        "median": 0.02328125,
+        "q3": 0.057031250000000006,
+        "max": 0.173125
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 15,
+        "min": 1.0845632656806816,
+        "q1": 1.2673580048320419,
+        "median": 1.394978696432973,
+        "q3": 1.603398388462614,
+        "max": 2.376657824933687
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 15,
+        "min": 0.018867924528301886,
+        "q1": 0.06230329041487839,
+        "median": 0.08562197092084006,
+        "q3": 0.11734352603917822,
+        "max": 0.17543859649122806
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 1,
+        "WConccor": 1,
+        "Hollowareas": 3,
+        "Cavity": 6
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 15,
+        "min": 0.00702011508868023,
+        "q1": 0.011203459861839885,
+        "median": 0.017942201763823683,
+        "q3": 0.021868263347103317,
+        "max": 0.03619695256643346
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 15,
+        "min": 0.005088401722202984,
+        "q1": 0.011372345427214759,
+        "median": 0.01530707104910242,
+        "q3": 0.01899609651116651,
+        "max": 0.03421591538823511
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 15,
+        "min": 0.0003454797638038697,
+        "q1": 0.0011801897142653746,
+        "median": 0.002324402271308748,
+        "q3": 0.005063247732936298,
+        "max": 0.014984279358090647
+      }
+    },
+    {
+      "domain": "dacl",
+      "outcome": "TN",
+      "selected_cases": 9,
+      "direct_spalling_selected_cases": 3,
+      "spalling_pixel_known_cases": 9,
+      "positive_spalling_source_geometry_cases": 0,
+      "positive_geometry_small_below_one_percent": 0,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 0,
+        "WConccor": 0,
+        "Hollowareas": 2,
+        "Cavity": 1
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 9,
+        "min": 0.010732403629292092,
+        "q1": 0.012453152300239344,
+        "median": 0.018022828465893398,
+        "q3": 0.03422620724209089,
+        "max": 0.04200506830813311
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 9,
+        "min": 0.0006809626853886568,
+        "q1": 0.009810964813118713,
+        "median": 0.012600606096645104,
+        "q3": 0.03392799270225682,
+        "max": 0.04103550973306204
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 9,
+        "min": 0.0001496464459155397,
+        "q1": 0.0011877372403841261,
+        "median": 0.0023505858754540366,
+        "q3": 0.009488891235599893,
+        "max": 0.015612048834996008
+      }
+    },
+    {
+      "domain": "damsegment",
+      "outcome": "FP",
+      "selected_cases": 1,
+      "direct_spalling_selected_cases": 1,
+      "spalling_pixel_known_cases": 1,
+      "positive_spalling_source_geometry_cases": 0,
+      "positive_geometry_small_below_one_percent": 0,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 0,
+        "WConccor": 0,
+        "Hollowareas": 0,
+        "Cavity": 0
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 1,
+        "min": 0.027461659479617356,
+        "q1": 0.027461659479617356,
+        "median": 0.027461659479617356,
+        "q3": 0.027461659479617356,
+        "max": 0.027461659479617356
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 1,
+        "min": 0.026155689785519288,
+        "q1": 0.026155689785519288,
+        "median": 0.026155689785519288,
+        "q3": 0.026155689785519288,
+        "max": 0.026155689785519288
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 1,
+        "min": 0.005473581521022171,
+        "q1": 0.005473581521022171,
+        "median": 0.005473581521022171,
+        "q3": 0.005473581521022171,
+        "max": 0.005473581521022171
+      }
+    },
+    {
+      "domain": "damsegment",
+      "outcome": "TP",
+      "selected_cases": 6,
+      "direct_spalling_selected_cases": 3,
+      "spalling_pixel_known_cases": 6,
+      "positive_spalling_source_geometry_cases": 6,
+      "positive_geometry_small_below_one_percent": 1,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 6,
+        "min": 0.0036767578125,
+        "q1": 0.02026123046875,
+        "median": 0.02818115234375,
+        "q3": 0.0372784423828125,
+        "max": 0.13941162109375
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 6,
+        "min": 0.0046875,
+        "q1": 0.026328125,
+        "median": 0.0328125,
+        "q3": 0.042109375,
+        "max": 0.14765625
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 6,
+        "min": 1.0591387492776212,
+        "q1": 1.130287069600761,
+        "median": 1.1675382035233932,
+        "q3": 1.2533484797416112,
+        "max": 1.3458135658417747
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 6,
+        "min": 0.014814814814814815,
+        "q1": 0.044170168067226886,
+        "median": 0.06274509803921569,
+        "q3": 0.07435897435897436,
+        "max": 0.12195121951219512
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 0,
+        "WConccor": 0,
+        "Hollowareas": 0,
+        "Cavity": 0
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 6,
+        "min": 0.009250627780846298,
+        "q1": 0.01704929639554374,
+        "median": 0.025030829509669672,
+        "q3": 0.02641438796569586,
+        "max": 0.031911784962909265
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 6,
+        "min": 0.005050488436055593,
+        "q1": 0.016454843785708294,
+        "median": 0.0242813372248376,
+        "q3": 0.024587320009558447,
+        "max": 0.03187321375053907
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 6,
+        "min": 0.0003365319397799503,
+        "q1": 0.0015377603000795658,
+        "median": 0.003313699396630618,
+        "q3": 0.004444221515293068,
+        "max": 0.0048475445423014915
+      }
+    },
+    {
+      "domain": "damsegment",
+      "outcome": "TN",
+      "selected_cases": 10,
+      "direct_spalling_selected_cases": 3,
+      "spalling_pixel_known_cases": 10,
+      "positive_spalling_source_geometry_cases": 0,
+      "positive_geometry_small_below_one_percent": 0,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 0,
+        "WConccor": 0,
+        "Hollowareas": 0,
+        "Cavity": 0
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 10,
+        "min": 0.0038182938740832792,
+        "q1": 0.01313875826222997,
+        "median": 0.021326864226617875,
+        "q3": 0.03313786446946247,
+        "max": 0.06805985314734266
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 4,
+        "min": 0.011799463966822797,
+        "q1": 0.012282449146480492,
+        "median": 0.02006070938407434,
+        "q3": 0.037858998577066164,
+        "max": 0.06840207062291778
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 4,
+        "min": 0.0008899126654809292,
+        "q1": 0.0011387257351229768,
+        "median": 0.0024060923392195833,
+        "q3": 0.010111728727393904,
+        "max": 0.029675351149269096
+      }
+    },
+    {
+      "domain": "codebrim",
+      "outcome": "FP",
+      "selected_cases": 12,
+      "direct_spalling_selected_cases": 12,
+      "spalling_pixel_known_cases": 12,
+      "positive_spalling_source_geometry_cases": 0,
+      "positive_geometry_small_below_one_percent": 0,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 0,
+        "WConccor": 0,
+        "Hollowareas": 0,
+        "Cavity": 0
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 12,
+        "min": 0.0021005568788548283,
+        "q1": 0.00679270194098277,
+        "median": 0.009347123034708797,
+        "q3": 0.011519485799944,
+        "max": 0.01436674932972015
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      }
+    },
+    {
+      "domain": "codebrim",
+      "outcome": "FN",
+      "selected_cases": 12,
+      "direct_spalling_selected_cases": 12,
+      "spalling_pixel_known_cases": 0,
+      "positive_spalling_source_geometry_cases": 0,
+      "positive_geometry_small_below_one_percent": 0,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 0,
+        "WConccor": 0,
+        "Hollowareas": 0,
+        "Cavity": 0
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 12,
+        "min": 0.0011935941575378195,
+        "q1": 0.0046115947997694764,
+        "median": 0.007181757307872288,
+        "q3": 0.008820814674094402,
+        "max": 0.012944576165462272
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      }
+    },
+    {
+      "domain": "codebrim",
+      "outcome": "TP",
+      "selected_cases": 12,
+      "direct_spalling_selected_cases": 3,
+      "spalling_pixel_known_cases": 0,
+      "positive_spalling_source_geometry_cases": 0,
+      "positive_geometry_small_below_one_percent": 0,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 0,
+        "WConccor": 0,
+        "Hollowareas": 0,
+        "Cavity": 0
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 12,
+        "min": 0.004001680297608089,
+        "q1": 0.009193694130160867,
+        "median": 0.010391694698076805,
+        "q3": 0.014807723907271243,
+        "max": 0.024515927814983584
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      }
+    },
+    {
+      "domain": "codebrim",
+      "outcome": "TN",
+      "selected_cases": 24,
+      "direct_spalling_selected_cases": 3,
+      "spalling_pixel_known_cases": 24,
+      "positive_spalling_source_geometry_cases": 0,
+      "positive_geometry_small_below_one_percent": 0,
+      "fine_spalling_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_any_area_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "coarse_expansion_ratio_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "thin_occupied_cell_fraction_positive_only": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "publisher_other_tag_cooccurrence": {
+        "Rockpocket": 0,
+        "WConccor": 0,
+        "Hollowareas": 0,
+        "Cavity": 0
+      },
+      "whole_image_difference_energy": {
+        "measured_cases": 24,
+        "min": 0.0006135815094817265,
+        "q1": 0.004106758263188882,
+        "median": 0.006326026805919942,
+        "q3": 0.008088694862530301,
+        "max": 0.014519795137929975
+      },
+      "source_unmarked_difference_energy": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      },
+      "source_unmarked_laplacian_variance": {
+        "measured_cases": 0,
+        "min": null,
+        "q1": null,
+        "median": null,
+        "q3": null,
+        "max": null
+      }
+    }
+  ],
+  "model_weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+  "frozen_spalling_threshold": 0.4649081826210022,
+  "package_file_sha256": "f6fc9def0f80e51ea3efff156e2dc8e37ec017eab2088d1f256d08ad3bbf6b33",
+  "package_content_sha256": "2c63eec39546f9944cc6475f2321e4499363fec087d23ecdb76b69d1e849a660",
+  "private_details_sha256": "24e4082d6c184ad7f35c9f1a7e7acb1b013cb2469318171ac69d8cd1d35409dc",
+  "local_html_sha256": "c4710ce01217cf98f53bf5e6a0c8807c1b2dec668fe4f788fe8931654c5ab87a",
+  "source_sha256": {
+    "scripts/audit_facility_spalling_train.py": "63264b51beafee2b3c8e83642f223e0eac74b173514f750e03a390863bfe2f9c",
+    "safelog_ai/spalling_geometry.py": "215ce97bec750e2107c109165a3932ffe46f2e123cc6712a5eeb7d7e27d0738a",
+    "scripts/render_facility_spalling_audit.py": "4b5b0863421f0774ad52f882ac7b645cdbf2afe299051cf4e12517580c5ab71f",
+    "scripts/prepare_facility_spatial.py": "5615fa06041bae09ce84b0956629319fe6ed8b8db5b9fda00a709be0e80030d5",
+    "scripts/build_facility_train_review.py": "9fc90fa318b79d76ace7bb1ea1a4135b14b3ab118d5879fadfbb7be771c4e327",
+    "safelog_ai/review_feedback.py": "2e9841a2ada1cf9cd332362c3aa27655ab31edc1c829436e0de174e7812e6328"
+  },
+  "test_results_sha256": "875e93fa28d73ce5a089f42be9dfb9c2b5e70fe5f6a88b73037fb46ff756ead8",
+  "tests_run": 14,
+  "original_inputs_checked": 565,
+  "all_original_sha_size_mtime_preserved": true,
+  "pixel_mask_known_replays_verified": 130,
+  "photo_pixel_presence_conflicts": {},
+  "new_training_epochs": 0,
+  "model_inference_executed": false,
+  "heldout_images_opened": 0,
+  "accuracy_measured": false,
+  "labels_modified": 0,
+  "expert_confirmed_labels": 0,
+  "observer_decisions": 0,
+  "expert_decisions": 0,
+  "causes_confirmed": 0,
+  "individual_paths_ids_coordinates_or_scores_published": false,
+  "background_policy": "Source-unmarked pixels are not healthy background; absent photo tags are not expert safety decisions.",
+  "raster_policy": "Source at processed-parent resolution -> BOX640 >0 -> any8x8 ->80. Texture on BILINEAR RGB640, no diagnostic cutoffs.",
+  "selection_policy": "Existing seed49 source/task/outcome sample; half hard errors, half random; proportions are not population error rates.",
+  "unknown_policy": "No location annotation is unknown, not zero area. CODEBRIM positive spalling has pixel-known0.",
+  "scope": "Biased 0773 TRAIN130 review; source-region/known-mask/descriptive features, not causal or accuracy evidence"
+}

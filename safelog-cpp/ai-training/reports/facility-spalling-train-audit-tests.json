@@ -1,0 +1,29 @@
+{
+  "schema": "facility_spalling_train_audit_tests_v1",
+  "status": "passed",
+  "executed_utc": "2026-10-05T21:15:57.612617+00:00",
+  "tests_run": 14,
+  "expected_tests_collected": 14,
+  "tests_by_module": {
+    "tests.test_spalling_geometry": 8,
+    "tests.test_facility_spalling_train_audit": 6
+  },
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_sha256": {
+    "scripts/audit_facility_spalling_train.py": "63264b51beafee2b3c8e83642f223e0eac74b173514f750e03a390863bfe2f9c",
+    "safelog_ai/spalling_geometry.py": "215ce97bec750e2107c109165a3932ffe46f2e123cc6712a5eeb7d7e27d0738a",
+    "scripts/render_facility_spalling_audit.py": "4b5b0863421f0774ad52f882ac7b645cdbf2afe299051cf4e12517580c5ab71f",
+    "scripts/prepare_facility_spatial.py": "5615fa06041bae09ce84b0956629319fe6ed8b8db5b9fda00a709be0e80030d5",
+    "scripts/build_facility_train_review.py": "9fc90fa318b79d76ace7bb1ea1a4135b14b3ab118d5879fadfbb7be771c4e327",
+    "safelog_ai/review_feedback.py": "2e9841a2ada1cf9cd332362c3aa27655ab31edc1c829436e0de174e7812e6328",
+    "scripts/test_facility_spalling_audit.py": "711eec84cac24fbde1feff96874e91d8a2f128f002594b148e1a980bdf2df1d1"
+  },
+  "test_source_sha256": {
+    "tests/test_spalling_geometry.py": "51e9ec718b5687254b1bda2541ceea7d90d07845a13ff1ecf4d5e6bf245de2e2",
+    "tests/test_facility_spalling_train_audit.py": "a5cd9c055440b285a6b01245fc018e293393b7b7493a675ac3acd0dc4b1e05a1"
+  },
+  "before_after_sources_equal": true,
+  "scope": "Synthetic replay/provenance tests; no accuracy measurement or training"
+}
