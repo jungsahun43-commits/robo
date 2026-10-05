@@ -30,7 +30,9 @@ EXPERIMENTS=[('facility-presence-target-v2s','Larger photo model',0),
              ('facility-presence-target-context-control','Pool study control',1),
              ('facility-presence-target-context-pool','Narrow/broad pool contrast',1),
              ('facility-presence-target-resolution-control','Resolution study 640 control',1),
-             ('facility-presence-target-resolution-highres','Resolution study 960 input',1)]
+             ('facility-presence-target-resolution-highres','Resolution study 960 input',1),
+             ('facility-presence-target-native-roi-control','Pre-downsampled ROI control',1),
+             ('facility-presence-target-native-roi-native','Direct native ROI pixels',1)]
 
 
 def main():

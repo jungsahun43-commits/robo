@@ -1,0 +1,142 @@
+{
+  "schema": "facility_native_roi_study_protocol_v1",
+  "declared_before_training": true,
+  "reference": "facility-presence-target-roi-control",
+  "control": "facility-presence-target-native-roi-control",
+  "treatment": "facility-presence-target-native-roi-native",
+  "architecture_by_variant": {
+    "control": "lraspp_mobilenet_facility_auxiliary_v1",
+    "native": "lraspp_mobilenet_facility_auxiliary_v1"
+  },
+  "imgsz_by_variant": {
+    "control": 640,
+    "native": 640
+  },
+  "classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "auxiliary_classes": [
+    "ACrack",
+    "Bearing",
+    "Cavity",
+    "Crack",
+    "Drainage",
+    "EJoint",
+    "Efflorescence",
+    "ExposedRebars",
+    "Graffiti",
+    "Hollowareas",
+    "JTape",
+    "PEquipment",
+    "Restformwork",
+    "Rockpocket",
+    "Rust",
+    "Spalling",
+    "WConccor",
+    "Weathering",
+    "Wetspot"
+  ],
+  "seed": 56,
+  "requested_epochs": 6,
+  "patience": 6,
+  "batch_size": 8,
+  "draws_per_epoch": 14248,
+  "backbone_lr": 4e-05,
+  "head_lr": 0.00025,
+  "auxiliary_weight": 0.5,
+  "target_ranking_weight": 0.0,
+  "domain_proportions": [
+    0.7,
+    0.1,
+    0.2
+  ],
+  "loader_randomness": {
+    "sampler_seed": 56,
+    "training_worker_seed": 57,
+    "post_model_seed": 58,
+    "validation_worker_seeds": {
+      "dacl": 156,
+      "damsegment": 157,
+      "codebrim": 158
+    }
+  },
+  "initial_weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+  "native_roi_recipe": {
+    "version": "native_roi_pixels_v1",
+    "input_size": 640,
+    "output_format": "PNG",
+    "control": "same native RGB -> existing processed-parent dimensions -> existing crop box -> 640 square",
+    "native": "same native RGB -> equivalent floating native crop box -> 640 square",
+    "resampling": "Pillow LANCZOS",
+    "reducing_gap": null,
+    "encoding_metadata": "pixels_only",
+    "historical_thumbnail_jpeg_pixel_replay": false,
+    "eligibility": "geometry only; native width/height >= processed, at least one greater",
+    "new_labels": 0,
+    "new_masks": 0,
+    "full_rows_changed": 0,
+    "scope": "Detail-only pre-crop downsampling intervention; no native full-photo inference"
+  },
+  "paired_manifest_paths": {
+    "control": "data/facility-native-roi-training/control/train.json",
+    "native": "data/facility-native-roi-training/native/train.json"
+  },
+  "research_candidate_gate": {
+    "minimum_maximum_error_improvement_vs_reference_and_control": 0.005,
+    "maximum_any_target_fnr_fpr_regression_vs_reference_and_control": 0.02,
+    "maximum_any_known_other_class_ap_regression_vs_reference_and_control": 0.02,
+    "minimum_small_combined_fn_reduction_vs_reference_and_control": 2,
+    "maximum_any_small_class_fnr_regression_vs_reference_and_control": 0.02
+  },
+  "source_test_inference_executed": false,
+  "app_model_promoted": false,
+  "declared_utc": "2026-10-05T15:20:30.014163+00:00",
+  "core_spatial_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+  "auxiliary_manifest_sha256": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+  "paired_data_audit_sha256": "a60a8da38b02dd1f4d19bdd6167198c421c12baf70d12820714ba98ec284f5fb",
+  "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
+  "source_records_sha256": "75f95e6035e58930defc0bec94c03aab952c66919d48e9c9a385bd7ea72e6fe3",
+  "source_preparation_sha256": "c31ea0b2f95cec7fde1fb07f0b9d5b24bb2ba14bdaceff5c547eeb8bb7a878b6",
+  "paired_manifest_sha256": {
+    "control": "e3dce0bcdd6c0e950a6ad896dec2f07c77653328d57fb2fb2e57edaaebb3f818",
+    "native": "1cdf7388a1092d3c069ce5922a7bd8f2d03d383234c3e1c3dfe4f82ac4d7bb64"
+  },
+  "source_sha256": {
+    "scripts/train_facility_resolution.py": "94b5eb819cb47e242cb309b3a0b9c58ed5d28e78088a972797a81244005337bd",
+    "scripts/facility_resolution_study.py": "2a83f8839628c5da11d7fa1022dae509fc2980fccea56872ab04346fd4de13cc",
+    "scripts/train_facility_context.py": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
+    "scripts/train_facility_target.py": "5c80a49ed0d63bbe328df1593d93104930e1aaa39ebe8c036c04054900f769d4",
+    "scripts/train_facility_presence.py": "def4565d4d07cd7e4321de43529849ce1adcc03dc3fcbff64b33e0f169a526f0",
+    "scripts/facility_error_target.py": "5f1624c1e853bb6507b13529b7c6c4bddf1890b870e39f0ce20f8fb42feb09b9",
+    "safelog_ai/spatial_classifier.py": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+    "safelog_ai/auxiliary_classifier.py": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+    "safelog_ai/resolution_classifier.py": "afcccd8f75dc4a4f22b7c9c599207e851478e981d9ccdaa7b5d40e3701a45853",
+    "safelog_ai/presence_classifier.py": "29e34eb747ecd5d2e0b25fd2e630307ed764b1a1d3522591226f65e947de8849",
+    "safelog_ai/context_classifier.py": "6b9bd80d6408e36bf245dd309cbd6ad744b7fd576a630cee08e331f804589a10",
+    "scripts/preflight_facility_resolution.py": "2138ca4032a462c536ed59bfbff6a40d364ec09c4b0d9e64edd902190f51e3a5",
+    "scripts/preflight_facility_detail.py": "8e00aff1f2ffb557deec79f6c3545b808634d04a7a31e8475d57b37266267af6",
+    "scripts/report_facility_detail.py": "f25d51466e30040956c146b424257ede61bf0785870e3fbd55740436b0a782a4",
+    "scripts/report_facility_discrimination.py": "7ff1a79b238c97c7d9939ab553dac5afb16ed7d5ac5a2c39d0be15a2bd4e6d68",
+    "scripts/report_facility_small_region.py": "ae4fb18cf30cc00f2e4329667413543e3c4097b970821d2472c84fa0716bfd47",
+    "scripts/evaluate_facility_target.py": "937b633d72be3c2c720799164e6926346b7d2f6970583ee00392d79b88071355",
+    "scripts/analyze_facility_target.py": "d47699ed1ff4802e9cdd294a158502b5ebea87fb22ce085b4e59771a66f82aa8",
+    "scripts/audit_facility_resolution_sources.py": "9905df4b8a2933d7a1e1b35a39a1b71293225f0676a12e6bd3f709383fbf6204",
+    "scripts/prepare_facility_native_roi.py": "d635626d5517b07025f47c908c6252183b4a1f7c1a732f521fed2aea5b96668c",
+    "scripts/facility_native_roi_study.py": "fc75d5c61fd57c0d7f10e467e6ec9fe58c77507a6c9081d8b08e795da78863b9",
+    "scripts/train_facility_native_roi.py": "7cdec52da9a7bab891612f2b3813dad32068e532a7a3b3229529ac8975ca074d",
+    "scripts/preflight_facility_native_roi.py": "ca7f13e2bcdded0bc9b6a097248a37f38ce1414e895e0ab5c43c1b68eed1142b",
+    "scripts/verify_facility_native_roi.py": "d61f69e062f7f0e46f512c99d9bd16bdc3c39179cc057245dd3779b4bd4159ee",
+    "scripts/report_facility_native_roi.py": "b23b1224e783e91f42e780ea82c7eadd317428b382dcede6bb22dd84458c5639",
+    "scripts/run_facility_native_roi_pair.py": "b48ad907c5954ccf8bddd979e5bf9e049165e3e4a692673a5ae5deed330ee0ae",
+    "scripts/prepare_facility_data.py": "2ef54fc56f11b6b62c37fd26291e3f62bb5f9b7a23d117318b3a2cd2189141d9",
+    "scripts/test_facility_native_roi.py": "ea9866db68f46b44669648f76450c7038800876c021d8fbb4cc833fc2326880a",
+    "scripts/verify_facility_resolution.py": "ef67bb26c97801406c11085fde14924a18e95adb4151f414d7721d29d7ba536f",
+    "scripts/report_facility_resolution.py": "97d0f587b5849c32f396851147055d2f1c926a0c300bf5c598c216908505a3ea"
+  }
+}

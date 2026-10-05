@@ -1,0 +1,85 @@
+{
+  "schema": "facility_train_label_groups_v1",
+  "status": "audited",
+  "scope": "TRAIN dataset composition, not label error, polygon overlap or accuracy",
+  "population": "Frozen internal TRAIN original DACL photos; publisher native split=train",
+  "train_photos": 6225,
+  "native_tag_count": 19,
+  "native_tag_photo_counts": {
+    "Crack": 1539,
+    "ACrack": 299,
+    "Spalling": 2938,
+    "Rockpocket": 282,
+    "WConccor": 241,
+    "Hollowareas": 984,
+    "Cavity": 1082
+  },
+  "native_tag_pairwise_photo_counts": {
+    "Crack + ACrack": 90,
+    "Crack + Spalling": 836,
+    "Crack + Rockpocket": 81,
+    "Crack + WConccor": 62,
+    "Crack + Hollowareas": 292,
+    "Crack + Cavity": 472,
+    "ACrack + Spalling": 138,
+    "ACrack + Rockpocket": 6,
+    "ACrack + WConccor": 4,
+    "ACrack + Hollowareas": 46,
+    "ACrack + Cavity": 80,
+    "Spalling + Rockpocket": 181,
+    "Spalling + WConccor": 142,
+    "Spalling + Hollowareas": 711,
+    "Spalling + Cavity": 734,
+    "Rockpocket + WConccor": 22,
+    "Rockpocket + Hollowareas": 97,
+    "Rockpocket + Cavity": 128,
+    "WConccor + Hollowareas": 73,
+    "WConccor + Cavity": 48,
+    "Hollowareas + Cavity": 288
+  },
+  "sampling_strata_photo_counts": {
+    "Crack_without_ACrack": 1449,
+    "ACrack_without_Crack": 209,
+    "Crack_and_ACrack": 90,
+    "Crack_or_ACrack": 1748,
+    "Spalling_without_other_four": 1578,
+    "Spalling_with_any_other_four": 1360,
+    "related_other_four_without_Spalling": 666,
+    "related_other_four_without_Spalling_or_crack": 421
+  },
+  "source_manifest_sha256": {
+    "records": "75f95e6035e58930defc0bec94c03aab952c66919d48e9c9a385bd7ea72e6fe3",
+    "preparation": "c31ea0b2f95cec7fde1fb07f0b9d5b24bb2ba14bdaceff5c547eeb8bb7a878b6",
+    "spatial": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+    "detail": "6f22582b287d2c220e3dc0104c7d9294febe0426820a5d9ec8b1c1acbc2756e6",
+    "auxiliary": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+    "source_registry": "f051fbd23408561101582d35297d5e4f73fd136fb0a034620117d1e9b923a3a5"
+  },
+  "existing_public_audit_sha256": {
+    "existing_source_audit": "87deb571682fb99b4e89b3c2db2932a1333c69429fddfbb868131ef398ebc0a8",
+    "existing_label_audit": "7ea29caf3b9063bdd36236e29dc79e50daaab869c8002f23ba3dea1dd3f122f2"
+  },
+  "native_train_annotations_rehashed": 6225,
+  "native_train_annotation_set_sha256": "a3e3d2c9bdc49e47895d694a261e9c33ebf2866ad6f37d663e0591339bd0c1e7",
+  "native19_targets_match_original_annotations": true,
+  "all_input_sha256_size_mtime_preserved": true,
+  "audit_script_sha256": "98e43a8e8b5525b0fac066be66171a990c28eee55b1b4056a803965019a87322",
+  "policy": {
+    "native_validation_or_test_annotations_opened": false,
+    "validation_or_test_images_read": false,
+    "source_images_read": false,
+    "source_photo_bytes_rehashed": false,
+    "publisher_archive_bytes_rehashed": false,
+    "model_predictions_used": false,
+    "training_executed": false,
+    "gpu_used": false,
+    "source_annotations_or_manifests_modified": false,
+    "individual_filenames_paths_or_target_arrays_published": false
+  },
+  "limitations": [
+    "Pair counts indicate photo-level tag coexistence, not polygon intersection or incorrect labels.",
+    "Crack-without-ACrack and ACrack-without-Crack do not assert absence of other defect tags.",
+    "Other-four strata use Rockpocket, WConccor, Hollowareas and Cavity; their target absence is not normal or safe ground truth.",
+    "Source image byte verification is reused from the bound existing source audit; this audit reads annotation bytes only."
+  ]
+}

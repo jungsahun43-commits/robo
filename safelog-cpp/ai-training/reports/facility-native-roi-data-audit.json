@@ -1,0 +1,112 @@
+{
+  "schema": "facility_native_roi_data_audit_v1",
+  "status": "prepared",
+  "split": "train",
+  "recipe": {
+    "output_size": [
+      640,
+      640
+    ],
+    "resampling": "LANCZOS",
+    "reducing_gap": null,
+    "source_box_interval": "half_open_float_scaled_no_rounding",
+    "historical_thumbnail_jpeg_pixel_replay": false,
+    "control": "native_RGB_resize_to_processed_dimensions_then_integer_crop",
+    "native": "native_RGB_direct_scaled_float_box",
+    "png_compress_level": 6,
+    "png_optimize": false,
+    "png_metadata": "pixels_only_no_source_metadata",
+    "selection": "native_both_axes_at_least_processed_and_one_strictly_larger",
+    "new_targets": 0,
+    "auxiliary_crop_tags": "unknown19"
+  },
+  "changed_rows": 5928,
+  "changed_dacl_parents": 3521,
+  "original_full_rows": 14248,
+  "train_rows": 26289,
+  "full_rows_unchanged": true,
+  "all_row_metadata_except_image_unchanged": true,
+  "labels_and_masks_unchanged": true,
+  "row_order_unchanged": true,
+  "crop_auxiliary_targets_remain_unknown19": true,
+  "audited_dacl_train_parents": 6225,
+  "eligible_larger_dacl_parents": 3521,
+  "exif_corrected_sources": 10,
+  "verified_decoded_native_rgb_hashes": 6225,
+  "verified_source_annotations": 6225,
+  "changed_original_target_counts": {
+    "concrete_crack": {
+      "positive": 1209,
+      "negative": 4717,
+      "unknown": 2
+    },
+    "concrete_spalling": {
+      "positive": 1735,
+      "negative": 4190,
+      "unknown": 3
+    },
+    "rust_stain": {
+      "positive": 1280,
+      "negative": 4636,
+      "unknown": 12
+    },
+    "exposed_rebar": {
+      "positive": 374,
+      "negative": 5552,
+      "unknown": 2
+    },
+    "wet_surface": {
+      "positive": 374,
+      "negative": 5552,
+      "unknown": 2
+    },
+    "efflorescence": {
+      "positive": 686,
+      "negative": 5235,
+      "unknown": 7
+    },
+    "surface_cavity": {
+      "positive": 453,
+      "negative": 5471,
+      "unknown": 4
+    }
+  },
+  "derived_manifest_sha256": {
+    "control": "e3dce0bcdd6c0e950a6ad896dec2f07c77653328d57fb2fb2e57edaaebb3f818",
+    "native": "1cdf7388a1092d3c069ce5922a7bd8f2d03d383234c3e1c3dfe4f82ac4d7bb64"
+  },
+  "private_ledger_sha256": "22fb66dc3879c00ffb14b347da32ba283f138ae1410d99c903cac7a2d1bd23f6",
+  "source_audit_sha256": "87deb571682fb99b4e89b3c2db2932a1333c69429fddfbb868131ef398ebc0a8",
+  "source_inventory_sha256": "d2724d624ca2c5c3e054c12fd44d909a1f24cfd7bf0e1cfe4945ff0851b91f22",
+  "input_files_checked": 65035,
+  "all_input_sha256_size_mtime_preserved": true,
+  "derived_pngs": 11856,
+  "new_independent_photos": 0,
+  "new_photo_targets": 0,
+  "new_pixel_targets": 0,
+  "expert_confirmed_labels": 0,
+  "label_changes": 0,
+  "training_performed_by_preparation": 0,
+  "accuracy_measured": false,
+  "heldout_photos_opened": 0,
+  "individual_paths_or_boxes_published": false,
+  "limitations": [
+    "Original masks/photo tags/ROI boxes remain unchanged; native crops are not new truth.",
+    "Coarse 80-cell masks are reused, not replaced with higher precision localization labels.",
+    "Both arms replace eligible historical JPEG crops with identical 640-square PNG recipes.",
+    "The control decodes the same native source then downscales, avoiding a different JPEG compression path.",
+    "The control is a new global-downsample-before-ROI counterfactual, not a pixel replay of historical thumbnail/JPEG95 preprocessing.",
+    "Only larger original DACL TRAIN parents are eligible; low resolution originals remain unchanged.",
+    "Existing public bridge imagery does not establish factory accuracy or a five percent error guarantee."
+  ],
+  "created_utc": "2026-10-05T11:15:27.300291Z",
+  "preparation_script_sha256": "d635626d5517b07025f47c908c6252183b4a1f7c1a732f521fed2aea5b96668c",
+  "preparation_elapsed_minutes": 9.035376274999969,
+  "worker_count": 4,
+  "control_parent_resizes": 3521,
+  "derived_png_bytes_by_variant": {
+    "control": 2826327702,
+    "native": 3015120050
+  },
+  "derived_png_bytes_total": 5841447752
+}
