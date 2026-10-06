@@ -38,7 +38,8 @@ EXPERIMENTS=[('facility-presence-target-v2s','Larger photo model',0),
              ('facility-presence-target-retention-control','Retention study no distillation',1),
              ('facility-presence-target-retention-distill','Known-class teacher distillation',1),
              ('facility-presence-target-retention-strong','Stronger retention weight4',1),
-             ('facility-presence-target-batchnorm-frozen','Reference BN statistics; affine trains',1)]
+             ('facility-presence-target-batchnorm-frozen','Reference BN statistics; affine trains',1),
+             ('facility-presence-target-head-lr-low','Lower head LR; reference BN statistics',1)]
 
 
 def main():
@@ -59,7 +60,8 @@ def main():
                'facility-presence-target-retention-control':'#446CB3',
                'facility-presence-target-retention-distill':'#8552A1',
                'facility-presence-target-retention-strong':'#187F4D',
-               'facility-presence-target-batchnorm-frozen':'#643E7B'}.get(name,colors[index](color_counts[index]))
+               'facility-presence-target-batchnorm-frozen':'#643E7B',
+               'facility-presence-target-head-lr-low':'#C47812'}.get(name,colors[index](color_counts[index]))
         color_counts[index]+=1
         axes[index].plot(epochs,values,marker='.',color=color,label=label+(' (running)' if state!='complete' else ''))
         best=min(range(len(values)),key=lambda i:values[i])
