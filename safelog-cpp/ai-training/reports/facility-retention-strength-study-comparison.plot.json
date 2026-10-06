@@ -1,0 +1,74 @@
+{
+  "schema": "facility_retention_strength_aggregate_plot_v1",
+  "source_aggregate_sha256": "e121e74c4f5095de0bfad0d034049021348c0504ff1379547be90c1a18eb17be",
+  "plot_sha256": "8f178f368dd7c6c5b6883c4035300dddc400714f1eb691266774397a666ed136",
+  "script_sha256": "45d1edb2b34af8f2fe40cca8d48493defcc7be6c158e0a45bb7c5dbfae79ead4",
+  "experiments": [
+    {
+      "run": "facility-presence-target-roi-control",
+      "maximum_fnr_fpr": 0.22279792746113988,
+      "dacl_exposed_rebar_ap": 0.7010134084995547,
+      "maximum_other_ap_drop_vs_reference": 0.0,
+      "small_false_negatives": [
+        29,
+        42
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "newly_trained_this_followup": false
+    },
+    {
+      "run": "facility-presence-target-retention-control",
+      "maximum_fnr_fpr": 0.23056994818652848,
+      "dacl_exposed_rebar_ap": 0.6485806473816492,
+      "maximum_other_ap_drop_vs_reference": 0.05243276111790551,
+      "small_false_negatives": [
+        27,
+        40
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "newly_trained_this_followup": false
+    },
+    {
+      "run": "facility-presence-target-retention-distill",
+      "maximum_fnr_fpr": 0.22530864197530864,
+      "dacl_exposed_rebar_ap": 0.6714564421231174,
+      "maximum_other_ap_drop_vs_reference": 0.029556966376437344,
+      "small_false_negatives": [
+        27,
+        40
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "newly_trained_this_followup": false
+    },
+    {
+      "run": "facility-presence-target-retention-strong",
+      "maximum_fnr_fpr": 0.22279792746113988,
+      "dacl_exposed_rebar_ap": 0.675802989781288,
+      "maximum_other_ap_drop_vs_reference": 0.0367158325424346,
+      "small_false_negatives": [
+        28,
+        44
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "newly_trained_this_followup": true
+    }
+  ],
+  "actual_new_completed_training_epochs": 6,
+  "new_control_training_epochs": 0,
+  "repeated_source_val_adaptation": true,
+  "source_test_inference_executed": false,
+  "industrial_field_performance_measured": false,
+  "deployed": false
+}

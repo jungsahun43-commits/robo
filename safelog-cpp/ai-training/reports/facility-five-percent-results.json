@@ -3453,6 +3453,144 @@
       ]
     },
     {
+      "run": "facility-presence-target-retention-strong",
+      "title": "\ubcf4\uc874 \uac15\ub3c4 \ud6c4\uc18d \ube44\uad50: \uac00\uc911\uce584 \ud559\uc0dd",
+      "status": "complete",
+      "epochs": 6,
+      "imgsz": 640,
+      "best_epoch": 3,
+      "frozen_validation": true,
+      "grid": 1,
+      "worst_error": 0.22279792746113988,
+      "target_passed_validation": false,
+      "operating_points": {
+        "concrete_crack": {
+          "threshold": 0.32393959164619446,
+          "domains": {
+            "dacl": {
+              "tp": 167,
+              "fp": 103,
+              "fn": 44,
+              "tn": 396,
+              "fnr": 0.20853080568720378,
+              "fpr": 0.20641282565130262,
+              "fnr_ci95": [
+                0.15916905788752075,
+                0.2683157456733443
+              ],
+              "fpr_ci95": [
+                0.17320951234833104,
+                0.2441018591380852
+              ],
+              "photo_error_fraction": 0.20704225352112676
+            },
+            "damsegment": {
+              "tp": 242,
+              "fp": 0,
+              "fn": 6,
+              "tn": 176,
+              "fnr": 0.024193548387096774,
+              "fpr": 0.0,
+              "fnr_ci95": [
+                0.011134220358494405,
+                0.05176828542778647
+              ],
+              "fpr_ci95": [
+                0.0,
+                0.021360251667687728
+              ],
+              "photo_error_fraction": 0.014150943396226415
+            },
+            "codebrim": {
+              "tp": 136,
+              "fp": 53,
+              "fn": 13,
+              "tn": 409,
+              "fnr": 0.087248322147651,
+              "fpr": 0.11471861471861472,
+              "fnr_ci95": [
+                0.0516966643607734,
+                0.14354786582722107
+              ],
+              "fpr_ci95": [
+                0.08878266379410645,
+                0.14700884153640753
+              ],
+              "photo_error_fraction": 0.10801963993453355
+            }
+          },
+          "worst_error": 0.20853080568720378,
+          "target_passed": false
+        },
+        "concrete_spalling": {
+          "threshold": 0.41591304540634155,
+          "domains": {
+            "dacl": {
+              "tp": 252,
+              "fp": 86,
+              "fn": 72,
+              "tn": 300,
+              "fnr": 0.2222222222222222,
+              "fpr": 0.22279792746113988,
+              "fnr_ci95": [
+                0.18035690686403077,
+                0.27059722002555475
+              ],
+              "fpr_ci95": [
+                0.18413195127229665,
+                0.2669269467541743
+              ],
+              "photo_error_fraction": 0.22253521126760564
+            },
+            "damsegment": {
+              "tp": 48,
+              "fp": 9,
+              "fn": 10,
+              "tn": 357,
+              "fnr": 0.1724137931034483,
+              "fpr": 0.02459016393442623,
+              "fnr_ci95": [
+                0.09644292662938801,
+                0.2890825650932622
+              ],
+              "fpr_ci95": [
+                0.012989837331867194,
+                0.04606643745771301
+              ],
+              "photo_error_fraction": 0.04481132075471698
+            },
+            "codebrim": {
+              "tp": 124,
+              "fp": 43,
+              "fn": 16,
+              "tn": 428,
+              "fnr": 0.11428571428571428,
+              "fpr": 0.09129511677282377,
+              "fnr_ci95": [
+                0.07158260814437095,
+                0.17759074642631906
+              ],
+              "fpr_ci95": [
+                0.06848487326628605,
+                0.12071819051803978
+              ],
+              "photo_error_fraction": 0.09656301145662848
+            }
+          },
+          "worst_error": 0.22279792746113988,
+          "target_passed": false
+        }
+      },
+      "test_executed": false,
+      "target_passed_test": null,
+      "weights_sha256": "07739923273a5733f43696b3c2a09d89503a760d3af9ca4a173bb351c452e712",
+      "validation_domains": [
+        "dacl",
+        "damsegment",
+        "codebrim"
+      ]
+    },
+    {
       "run": "facility-presence-target-ensemble",
       "title": "\ub450 \ubaa8\ub378 \ud655\ub960 \ud3c9\uade0",
       "status": "validation_only",
@@ -3632,8 +3770,8 @@
   ],
   "app_profile": "facility-validation-v2",
   "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
-  "total_actual_training_epochs": 208,
-  "model_run_recorded_training_epochs": 206,
+  "total_actual_training_epochs": 214,
+  "model_run_recorded_training_epochs": 212,
   "interrupted_recorded_training_epochs": 2,
   "interrupted_training_attempts": [
     {
@@ -3676,6 +3814,13 @@
     "paired_budget_epochs": 12,
     "paired_recorded_completed_epochs": 12,
     "scope": "Identical original640 TRAIN draw arrays and teacher forwards; known other-five Bernoulli KL weight0 vs1 at T2; frozen teacher probabilities are regularization signals"
+  },
+  "retention_strength_training_accounting": {
+    "new_candidate_budget_epochs": 6,
+    "new_candidate_recorded_completed_epochs": 6,
+    "reused_control_run": "facility-presence-target-retention-control",
+    "reused_control_epochs_counted_as_new": 0,
+    "scope": "Weight4 follow-up from0773 with identical original draw order; previous weight0 control reused without repeated training"
   },
   "best_three_domain_validation_run": "facility-presence-target-roi-control",
   "best_three_domain_validation_worst_error": 0.22279792746113988,
