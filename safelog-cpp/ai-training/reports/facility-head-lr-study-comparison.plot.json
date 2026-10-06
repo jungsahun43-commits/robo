@@ -1,0 +1,72 @@
+{
+  "schema": "facility_head_lr_aggregate_plot_v1",
+  "source_aggregate_sha256": "eaa4250ccd8a71b7af09ee2293e6eb213b805deb36322d7c6284f3f0a87dd773",
+  "plot_sha256": "8040a2391df7ed9d48c54becd1363907574caf4febb278263c7697040e741407",
+  "script_sha256": "9db4a4ce1de846ed2799944f1e9ee7c50ce6424c6aa5c576488534e25b037bbe",
+  "metric": "Maximum12 source-VAL crack/spalling FNR/FPR rates; DACL exposed-rebar AP; largest other-known-class AP decline; small-positive class-photo FN counts",
+  "source_test_inference_executed": false,
+  "industrial_field_performance_measured": false,
+  "deployed": false,
+  "experiments": [
+    {
+      "run": "facility-presence-target-roi-control",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.22279792746113988,
+      "small_false_negatives": [
+        29,
+        42
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "dacl_exposed_rebar_ap": 0.7010134084995547,
+      "maximum_other_ap_drop_vs_reference": 0.0,
+      "worst_other_ap_source_class": {
+        "domain": "dacl",
+        "class": "rust_stain"
+      }
+    },
+    {
+      "run": "facility-presence-target-batchnorm-frozen",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.22413793103448276,
+      "small_false_negatives": [
+        30,
+        40
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "dacl_exposed_rebar_ap": 0.7074829049796039,
+      "maximum_other_ap_drop_vs_reference": 0.020277483033947052,
+      "worst_other_ap_source_class": {
+        "domain": "dacl",
+        "class": "surface_cavity"
+      }
+    },
+    {
+      "run": "facility-presence-target-head-lr-low",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.22020725388601037,
+      "small_false_negatives": [
+        30,
+        40
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "dacl_exposed_rebar_ap": 0.7129187558010883,
+      "maximum_other_ap_drop_vs_reference": 0.0014209092151504787,
+      "worst_other_ap_source_class": {
+        "domain": "dacl",
+        "class": "surface_cavity"
+      }
+    }
+  ]
+}

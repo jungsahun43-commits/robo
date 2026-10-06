@@ -35,3 +35,16 @@ head는 backbone을 제외한 모든 기존 매개변수 그룹이다. 균열·�
 ## 결과 해석 범위
 
 이 실험은 이전 결과를 보고 선택한 추가 탐색이다. 같은 VAL을 반복 사용하므로 독립 시험·현장 성능으로 표현할 수 없다. DACL·Dam·CODEBRIM은 주로 교량·댐 콘크리트 자료이며 공장 시설 전체를 대표하지 않는다. 미확인 라벨과 교사 예측을 정답으로 바꾸지 않는다. 새 후보는 기준과 검증을 통과하기 전 앱 기본 모델로 교체하지 않는다.
+
+## 실행 순서
+
+아래는 `safelog-cpp/ai-training`에서 실행한다. 원본 데이터·0773 초기 가중치·완료된 대조군·기존 검증 기록은 로컬 전제 파일이며 Git에 포함하지 않는다. 고정 프로토콜은 저장소에 포함되어 있고, 소스는 LF 바이트를 보존해야 한다. 예비 검증 및 후보 실행 폴더가 없는 재현 workspace에서 다음 순서로 진행한다. 완료된 현재 실행의 기록은 그대로 보관한다.
+
+```powershell
+.venv/Scripts/python.exe scripts/test_facility_head_lr.py
+.venv/Scripts/python.exe scripts/preflight_facility_head_lr.py
+.venv/Scripts/python.exe scripts/verify_facility_head_lr.py --snapshot-before-training
+.venv/Scripts/python.exe scripts/run_facility_head_lr.py
+```
+
+마지막 명령은 후보 학습6epoch, source-VAL grid1, 작은 손상 분석, 완료 검증, 비교 보고서, 그래프를 순서대로 실행한다. 실행 상태는 `runs/facility-head-lr-background-candidate/status.json`, 각 단계 로그는 같은 폴더에 남긴다. 실제 완료 결과는 [비교 보고서](FACILITY_HEAD_LR_STUDY_RESULTS_KO.md)에 기록한다.
