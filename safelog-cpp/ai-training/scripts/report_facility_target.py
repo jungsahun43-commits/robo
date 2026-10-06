@@ -13,7 +13,8 @@ RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility
       'facility-presence-target-detail-control','facility-presence-target-detail-s4',
       'facility-presence-target-context-control','facility-presence-target-context-pool',
       'facility-presence-target-resolution-control','facility-presence-target-resolution-highres',
-      'facility-presence-target-native-roi-control','facility-presence-target-native-roi-native')
+      'facility-presence-target-native-roi-control','facility-presence-target-native-roi-native',
+      'facility-presence-target-subtype-control','facility-presence-target-subtype-negative')
 NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강','원본19종 보조 학습',
        '작은 영역 비교: 기존 자료 대조군','작은 영역 비교: 맥락 crop 보강군',
        '콘크리트 사진 비교: 기존 자료 대조군','콘크리트 사진 비교: ConViD 양성 보강군',
@@ -21,11 +22,13 @@ NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실�
        '모델 구조 비교: 기존 모델 대조군','모델 구조 비교: stride4 특징 잔차 경로',
        '사진 pooling 비교: 기존 모델 대조군','사진 pooling 비교: 좁은 피크·넓은 증거 대비',
        '입력 해상도 비교: 640 대조군','입력 해상도 비교: 960 보강군',
-       '원본 ROI 비교: 먼저 축소한 대조군','원본 ROI 비교: 직접 잘라낸 보강군')
+       '원본 ROI 비교: 먼저 축소한 대조군','원본 ROI 비교: 직접 잘라낸 보강군',
+       '박락 음성 태그 비교: 기존 추출 대조군','박락 음성 태그 비교: 관련 표면 손상 보강군')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 RESOLUTION_RUNS=('facility-presence-target-resolution-control','facility-presence-target-resolution-highres')
 NATIVE_ROI_RUNS=('facility-presence-target-native-roi-control','facility-presence-target-native-roi-native')
+SUBTYPE_RUNS=('facility-presence-target-subtype-control','facility-presence-target-subtype-negative')
 
 
 def interrupted_training_attempts(root):
@@ -111,6 +114,7 @@ def main():
     total_epochs=model_run_epochs+interrupted_epochs
     paired_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in RESOLUTION_RUNS)
     native_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in NATIVE_ROI_RUNS)
+    subtype_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in SUBTYPE_RUNS)
     running=[{'run':e['run'],'epochs':e['epochs'],'best_full_photo_worst_error':e['worst_error']}
              for e in entries if e.get('status')=='running' and e.get('worst_error') is not None]
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
@@ -126,6 +130,8 @@ def main():
                     'partial_work_scope':'Incomplete epoch batches, updates and time are not quantified or added to completed epochs'},
             'native_roi_training_accounting':{'paired_budget_epochs':12,'paired_recorded_completed_epochs':native_epochs,
                     'scope':'New matched640PNG TRAIN detail pixel intervention; original full rows, masks and labels unchanged'},
+            'subtype_training_accounting':{'paired_budget_epochs':12,'paired_recorded_completed_epochs':subtype_epochs,
+                    'scope':'Fixed original640 TRAIN pair; related-tag Spalling-negative sampling within original source/full-crop/Crack-Spalling strata; loss weights and labels unchanged'},
             'best_three_domain_validation_run':best['run'] if best else None,
             'best_three_domain_validation_worst_error':best['worst_error'] if best else None,
             'best_three_domain_scope':'Completed validation view/cutoff selection only; running rows reported separately',
@@ -140,6 +146,7 @@ def main():
            f'기록된 완료 학습은 총{total_epochs}epoch이다. 현재 모델 실행 기록{model_run_epochs}epoch와 보존한 중단 실행 기록{interrupted_epochs}epoch를 합산했다. 모델 확률 평균 검증은 학습 횟수에 더하지 않는다.',
            f'해상도 대조 실험의 계획 예산은 640·960 각각6epoch, 합계12epoch이다. 현재 두 모델의 완료 기록은 {paired_epochs}epoch이며 중단 실행의 {interrupted_epochs}epoch는 모델 비교 예산·성능 표에 포함하지 않고 누적 학습량에만 별도 더한다.',
            f'원본 ROI 대조 실험도 각6epoch·합계12epoch의 고정 예산이며 완료 기록은 {native_epochs}epoch이다. 같은 원본 RGB와 기존 crop 범위에서 사전 축소 유무를 비교하고 양군을 640 PNG로 맞췄다. 독립 사진·정답·full row는 추가하지 않는다.',
+           f'박락 음성 태그 대조 실험도 각6epoch·합계12epoch의 고정 예산이며 완료 기록은 {subtype_epochs}epoch이다. 같은 원본640 TRAIN에서 관련4태그 음성의 추출 빈도만 높이고 모든 위치의 출처·full/crop·균열/박락 정답과 손실 가중치를 유지한다. 다른5항목·보조태그 노출 변화는 별도로 평가한다.',
            *(['직전 해상도 비교의 대조군은 실행 세션 중단 뒤 optimizer 상태를 복구할 수 없어 같은 초기 모델·고정 조건으로 처음부터 다시 시작했다. 중단 당시 완료하지 못한 epoch의 배치·업데이트·시간은 정량 기록이 없어 추정 합산하지 않는다. [보존한 중단 집계](facility-resolution-interruption.json)를 함께 기록한다.'] if attempts else []),
            f"동일한 세 검증 자료에서 뷰·임계값 선택 고정이 끝난 최대 오류 최소 관측 모델: `{best['run']}`, 최대 미탐·오탐 {best['worst_error']*100:.2f}%. 연구 후보 선정과 앱 배포 기준 통과는 별도다." if best else '동일한 세 검증 자료의 선택 고정 결과가 아직 없다.',
            *[f"진행 중 `{r['run']}`: 실제{r['epochs']}epoch, 지금까지 전체 사진의 최대 미탐·오탐 최저{r['best_full_photo_worst_error']*100:.2f}%. 학습 및 최종 확대 선택이 아직 끝나지 않았다." for r in running],
