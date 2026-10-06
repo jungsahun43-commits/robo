@@ -36,7 +36,8 @@ EXPERIMENTS=[('facility-presence-target-v2s','Larger photo model',0),
              ('facility-presence-target-subtype-control','Subtype study original sampling',1),
              ('facility-presence-target-subtype-negative','Related-tag spalling negatives',1),
              ('facility-presence-target-retention-control','Retention study no distillation',1),
-             ('facility-presence-target-retention-distill','Known-class teacher distillation',1)]
+             ('facility-presence-target-retention-distill','Known-class teacher distillation',1),
+             ('facility-presence-target-retention-strong','Stronger retention weight4',1)]
 
 
 def main():
@@ -55,7 +56,8 @@ def main():
         color={'facility-presence-target-subtype-control':'#087F8C',
                'facility-presence-target-subtype-negative':'#AD482F',
                'facility-presence-target-retention-control':'#446CB3',
-               'facility-presence-target-retention-distill':'#8552A1'}.get(name,colors[index](color_counts[index]))
+               'facility-presence-target-retention-distill':'#8552A1',
+               'facility-presence-target-retention-strong':'#187F4D'}.get(name,colors[index](color_counts[index]))
         color_counts[index]+=1
         axes[index].plot(epochs,values,marker='.',color=color,label=label+(' (running)' if state!='complete' else ''))
         best=min(range(len(values)),key=lambda i:values[i])
