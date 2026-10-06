@@ -14,7 +14,8 @@ RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility
       'facility-presence-target-context-control','facility-presence-target-context-pool',
       'facility-presence-target-resolution-control','facility-presence-target-resolution-highres',
       'facility-presence-target-native-roi-control','facility-presence-target-native-roi-native',
-      'facility-presence-target-subtype-control','facility-presence-target-subtype-negative')
+      'facility-presence-target-subtype-control','facility-presence-target-subtype-negative',
+      'facility-presence-target-retention-control','facility-presence-target-retention-distill')
 NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강','원본19종 보조 학습',
        '작은 영역 비교: 기존 자료 대조군','작은 영역 비교: 맥락 crop 보강군',
        '콘크리트 사진 비교: 기존 자료 대조군','콘크리트 사진 비교: ConViD 양성 보강군',
@@ -23,12 +24,14 @@ NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실�
        '사진 pooling 비교: 기존 모델 대조군','사진 pooling 비교: 좁은 피크·넓은 증거 대비',
        '입력 해상도 비교: 640 대조군','입력 해상도 비교: 960 보강군',
        '원본 ROI 비교: 먼저 축소한 대조군','원본 ROI 비교: 직접 잘라낸 보강군',
-       '박락 음성 태그 비교: 기존 추출 대조군','박락 음성 태그 비교: 관련 표면 손상 보강군')
+       '박락 음성 태그 비교: 기존 추출 대조군','박락 음성 태그 비교: 관련 표면 손상 보강군',
+       '기존 항목 보존 비교: 증류 없는 대조군','기존 항목 보존 비교: 알려진 5항목 증류군')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 RESOLUTION_RUNS=('facility-presence-target-resolution-control','facility-presence-target-resolution-highres')
 NATIVE_ROI_RUNS=('facility-presence-target-native-roi-control','facility-presence-target-native-roi-native')
 SUBTYPE_RUNS=('facility-presence-target-subtype-control','facility-presence-target-subtype-negative')
+RETENTION_RUNS=('facility-presence-target-retention-control','facility-presence-target-retention-distill')
 
 
 def interrupted_training_attempts(root):
@@ -115,6 +118,7 @@ def main():
     paired_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in RESOLUTION_RUNS)
     native_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in NATIVE_ROI_RUNS)
     subtype_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in SUBTYPE_RUNS)
+    retention_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in RETENTION_RUNS)
     running=[{'run':e['run'],'epochs':e['epochs'],'best_full_photo_worst_error':e['worst_error']}
              for e in entries if e.get('status')=='running' and e.get('worst_error') is not None]
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
@@ -132,6 +136,8 @@ def main():
                     'scope':'New matched640PNG TRAIN detail pixel intervention; original full rows, masks and labels unchanged'},
             'subtype_training_accounting':{'paired_budget_epochs':12,'paired_recorded_completed_epochs':subtype_epochs,
                     'scope':'Fixed original640 TRAIN pair; related-tag Spalling-negative sampling within original source/full-crop/Crack-Spalling strata; loss weights and labels unchanged'},
+            'retention_training_accounting':{'paired_budget_epochs':12,'paired_recorded_completed_epochs':retention_epochs,
+                    'scope':'Identical original640 TRAIN draw arrays and teacher forwards; known other-five Bernoulli KL weight0 vs1 at T2; frozen teacher probabilities are regularization signals'},
             'best_three_domain_validation_run':best['run'] if best else None,
             'best_three_domain_validation_worst_error':best['worst_error'] if best else None,
             'best_three_domain_scope':'Completed validation view/cutoff selection only; running rows reported separately',
@@ -147,6 +153,7 @@ def main():
            f'해상도 대조 실험의 계획 예산은 640·960 각각6epoch, 합계12epoch이다. 현재 두 모델의 완료 기록은 {paired_epochs}epoch이며 중단 실행의 {interrupted_epochs}epoch는 모델 비교 예산·성능 표에 포함하지 않고 누적 학습량에만 별도 더한다.',
            f'원본 ROI 대조 실험도 각6epoch·합계12epoch의 고정 예산이며 완료 기록은 {native_epochs}epoch이다. 같은 원본 RGB와 기존 crop 범위에서 사전 축소 유무를 비교하고 양군을 640 PNG로 맞췄다. 독립 사진·정답·full row는 추가하지 않는다.',
            f'박락 음성 태그 대조 실험도 각6epoch·합계12epoch의 고정 예산이며 완료 기록은 {subtype_epochs}epoch이다. 같은 원본640 TRAIN에서 관련4태그 음성의 추출 빈도만 높이고 모든 위치의 출처·full/crop·균열/박락 정답과 손실 가중치를 유지한다. 다른5항목·보조태그 노출 변화는 별도로 평가한다.',
+           f'기존 항목 보존 실험도 각6epoch·합계12epoch의 고정 예산이며 완료 기록은 {retention_epochs}epoch이다. 두 조건에서 원본 사진 순서와 교사 추론을 같게 맞추고, 알려진 다른5항목의 증류 손실 가중치0·1만 비교한다. 교사 확률은 새로운 정답이 아니다.',
            *(['직전 해상도 비교의 대조군은 실행 세션 중단 뒤 optimizer 상태를 복구할 수 없어 같은 초기 모델·고정 조건으로 처음부터 다시 시작했다. 중단 당시 완료하지 못한 epoch의 배치·업데이트·시간은 정량 기록이 없어 추정 합산하지 않는다. [보존한 중단 집계](facility-resolution-interruption.json)를 함께 기록한다.'] if attempts else []),
            f"동일한 세 검증 자료에서 뷰·임계값 선택 고정이 끝난 최대 오류 최소 관측 모델: `{best['run']}`, 최대 미탐·오탐 {best['worst_error']*100:.2f}%. 연구 후보 선정과 앱 배포 기준 통과는 별도다." if best else '동일한 세 검증 자료의 선택 고정 결과가 아직 없다.',
            *[f"진행 중 `{r['run']}`: 실제{r['epochs']}epoch, 지금까지 전체 사진의 최대 미탐·오탐 최저{r['best_full_photo_worst_error']*100:.2f}%. 학습 및 최종 확대 선택이 아직 끝나지 않았다." for r in running],
@@ -191,6 +198,7 @@ def main():
             '후속 사진 pooling 비교는 [고정 계획](FACILITY_POOL_CONTEXT_PLAN_KO.md)을 따른다. 기존 global 경로·map·보조 head를 유지하고 top32/top256 로그잇 대비의 계수7개만 추가한다. 두 군 각각6epoch 예산이며 실제 진행·결과는 위 표와 [별도 집계](FACILITY_POOL_CONTEXT_RESULTS_KO.md)에 기록한다. 정답 검수 준비와 실제 정답 수정·새 산업 현장 검증을 구분한다.','',
             '최신 입력 해상도 비교는 [고정 계획](FACILITY_RESOLUTION_STUDY_PLAN_KO.md)에 따라 기존 processed 사진을 640·960으로 읽어 각6epoch 비교한다. 960의 120×120 지도는 80×80으로 줄인 뒤 기존 top32와 픽셀 정답을 사용한다. 실제 epoch와 [결과](FACILITY_RESOLUTION_STUDY_RESULTS_KO.md)·[집계](facility-resolution-study-comparison.json)에 기록하며 새 native 원본 입력이나 정답 수정은 아니다.','',
             '후속 원본 ROI 비교는 [고정 계획](FACILITY_NATIVE_ROI_STUDY_PLAN_KO.md)에 따라 기존 TRAIN DACL crop 범위와 라벨·80지도·표본 순서를 유지하고, 동일 native RGB에서 먼저 축소한 영역과 원본에서 직접 잘라낸 영역을 비교한다. 양군은 640 PNG이며 역사적 JPEG crop과 다른 전처리다. [실측 결과](FACILITY_NATIVE_ROI_STUDY_RESULTS_KO.md)에 비용·항목별 오류·작은 결함 FN을 기록한다.','',
+            '최근 기존 항목 보존 비교는 [고정 계획](FACILITY_RETENTION_STUDY_PLAN_KO.md)에 따라 원본 모델의 알려진 다른5항목 확률을 보존하는 학습을 비교한다. [실측 결과](FACILITY_RETENTION_STUDY_RESULTS_KO.md)에 철근 노출 AP 회복, 나머지 항목 AP, 균열·박락 미탐/오탐 및 작은 손상 FN을 따로 보고한다. 성능 보존 후보 기준과 전체5% 목표는 별도로 판정한다.','',
             '보류하는 방법의 별도 진단: [자동 판단 비율·조건부 오류](facility-presence-target-spatial-review-diagnostic_KO.md). 자동으로 판단한 일부 사진만의 오답률이며 기존 전체 사진의 미탐·오탐 기준을 통과했다는 뜻이 아니다. 두 항목을 모두 자동 판단한 사진 비율과 보류 수까지 기록한다. 앱 적용·독립 시험 전이다.','',
             f"기본 앱 프로필: `{profile['version']}`. 실험 프로필로 자동 교체하지 않았다.",
             '현장의 모든 시설, 나머지 다섯 항목, 정밀 위치와 구조 안전에 대한 5% 성능 주장은 하지 않는다.',

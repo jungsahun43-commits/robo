@@ -34,11 +34,13 @@ EXPERIMENTS=[('facility-presence-target-v2s','Larger photo model',0),
              ('facility-presence-target-native-roi-control','Pre-downsampled ROI control',1),
              ('facility-presence-target-native-roi-native','Direct native ROI pixels',1),
              ('facility-presence-target-subtype-control','Subtype study original sampling',1),
-             ('facility-presence-target-subtype-negative','Related-tag spalling negatives',1)]
+             ('facility-presence-target-subtype-negative','Related-tag spalling negatives',1),
+             ('facility-presence-target-retention-control','Retention study no distillation',1),
+             ('facility-presence-target-retention-distill','Known-class teacher distillation',1)]
 
 
 def main():
-    fig,axes=plt.subplots(1,2,figsize=(12,7.2),sharey=True)
+    fig,axes=plt.subplots(1,2,figsize=(12,7.8),sharey=True)
     records=[];maximum=35
     colors=[plt.get_cmap('tab10'),plt.get_cmap('tab20')]
     color_counts=[0,0]
@@ -51,7 +53,9 @@ def main():
         epochs=[r['epoch'] for r in history]
         state=read(path.with_name('TRAINING.json'))['status']
         color={'facility-presence-target-subtype-control':'#087F8C',
-               'facility-presence-target-subtype-negative':'#AD482F'}.get(name,colors[index](color_counts[index]))
+               'facility-presence-target-subtype-negative':'#AD482F',
+               'facility-presence-target-retention-control':'#446CB3',
+               'facility-presence-target-retention-distill':'#8552A1'}.get(name,colors[index](color_counts[index]))
         color_counts[index]+=1
         axes[index].plot(epochs,values,marker='.',color=color,label=label+(' (running)' if state!='complete' else ''))
         best=min(range(len(values)),key=lambda i:values[i])
@@ -68,7 +72,7 @@ def main():
     axes[0].set_ylabel('Largest crack/spalling FNR or FPR (%)')
     fig.suptitle('Facility target: full-photo validation during training',fontsize=13)
     fig.text(.5,.025,'Source validation only. Panels use different domains. Circles mark best epochs; tests are not selection data.',ha='center',fontsize=8)
-    fig.tight_layout(rect=(0,.37,1,.94))
+    fig.tight_layout(rect=(0,.40,1,.94))
     output=ROOT/'reports/facility-five-percent-curve.png'
     fig.savefig(output,dpi=160);plt.close(fig)
     save(output.with_suffix('.json'),{'plot_sha256':sha(output),'script_sha256':sha(Path(__file__)),
