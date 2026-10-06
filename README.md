@@ -24,28 +24,32 @@ AI 결과는 참고 제안이며 최종 판단은 점검자가 수행합니다. 
 
 ## AI 실험 최신 결과 · 2026-10-06
 
-기존 TRAIN 사진의 같은 영역을 먼저 축소한 경우와 원본에서 바로 잘라낸 경우를
-640 PNG로 맞춰 각각 6epoch 추가 학습했습니다. 같은 초기 모델·정답·표본 순서를 사용했습니다.
-공개 자료 VAL에서 균열·박락의 출처별 미탐률·오탐률 12개 중 최대값은
-기존 모델 22.28%, 새 대조군 23.77%, 원본 ROI 보강군 23.58%입니다.
-작은 결함의 누락은 각각 71·68·73건으로, 원본 보강군은 연구 후보 기준과 5% 미만 목표에 미달했습니다.
-공장 현장 정확도는 아직 측정하지 않았으며 앱 기본 `facility-validation-v2`는 유지합니다.
+원래 박락 음성이며 관련 표면 손상 태그를 가진 DACL TRAIN 사진666장의 추출 빈도를 높이는
+조건을 대조군과 각6epoch·총12epoch 실제 학습해 비교했습니다. 두 군은 모든 추출 위치에서
+출처·full/crop·균열/박락 정답을 보존했고, 원본 사진·마스크·손실 가중치를 유지했습니다.
+공개 VAL의 균열·박락×3출처×미탐률/오탐률12개 중 최대값은 초기22.28%, 대조22.84%, 보강23.32%입니다.
+작은 손상 항목·사진 사례의 FN 합계는 각각71·67·68건입니다. 보강군은 연구 후보 기준과5% 목표에 미달했습니다.
+다른 알려진 항목 AP도 초기 모델 대비 악화가 있어 새 모델을 승격하지 않았습니다.
+코드49개·실제 테스트28개·원본 파일58,874개·실제 추출과 업데이트를 검증했습니다.
+누적 완료 기록은 모델 실행194epoch와 이전 중단 기록2epoch를 합한196epoch입니다.
+공장 현장 정확도는 측정하지 않았으며 앱 기본 `facility-validation-v2`는 유지합니다.
 
-- [원본 ROI 비교 결과·그림·실행 기록](safelog-cpp/ai-training/reports/FACILITY_NATIVE_ROI_STUDY_RESULTS_KO.md)
-- [고정한 실험 조건·재현 순서](safelog-cpp/ai-training/reports/FACILITY_NATIVE_ROI_STUDY_PLAN_KO.md)
-- [완료 가중치·30개 코드 테스트·자료 무결성 검증](safelog-cpp/ai-training/reports/facility-native-roi-study-verification.json)
+- [박락 음성 태그 비교 결과·그림·실행 기록](safelog-cpp/ai-training/reports/FACILITY_SUBTYPE_STUDY_RESULTS_KO.md)
+- [고정한 실험 조건·재현 순서](safelog-cpp/ai-training/reports/FACILITY_SUBTYPE_STUDY_PLAN_KO.md)
+- [완료 가중치·28개 코드 테스트·자료 무결성 검증](safelog-cpp/ai-training/reports/facility-subtype-study-verification.json)
+- [직전 원본 ROI 비교](safelog-cpp/ai-training/reports/FACILITY_NATIVE_ROI_STUDY_RESULTS_KO.md)
 - [직전 640·960 해상도 비교](safelog-cpp/ai-training/reports/FACILITY_RESOLUTION_STUDY_RESULTS_KO.md)
 - [전체 실험 진행·결과](safelog-cpp/ai-training/reports/FACILITY_FIVE_PERCENT_RESULTS_KO.md)
 
 학습 자료·가중치는 로컬에 보관하며 GitHub에는 코드와 집계 결과를 올립니다.
 
-## 후속 작업: 박락 TRAIN 감사 · 2026-10-06
+## 학습 전 준비: 박락 TRAIN 감사 · 2026-10-06
 
 기존 검수 사진 130장의 박락 오답 54장과 마스크를 대조했습니다.
 전체 DACL TRAIN 6,225장의 저장 점수에서는 박락 음성·관련 손상 태그 집단의
 오탐 비율이 26.43%, 해당 태그가 없는 음성 집단은 8.58%였습니다. 이는 학습 사진의 기술 집계입니다.
 그 집단 666장을 제한적으로 강조하는 다음 표본 추출 방식을 준비하고 모의 실행했습니다.
-새 학습·추론·라벨 수정은 수행하지 않았고, 기존 검증 성능은 그대로입니다.
+이 준비 단계에서는 새 학습·추론·라벨 수정 없이 조건만 확인했습니다. 이후 실제 학습 결과는 위 최신 비교에 기록했습니다.
 
 - [실측 감사·다음 실험 준비·화면 사용 안내](safelog-cpp/ai-training/reports/FACILITY_SPALLING_TRAIN_AUDIT_KO.md)
 - [기존 표본 순서 재현·구성 보존 모의 실행](safelog-cpp/ai-training/reports/facility-spalling-sampler-dry-run.json)

@@ -10,12 +10,23 @@ C++ 앱용 로컬 API 서버를 재현하기 위한 코드다. 원본 데이터�
 시험 정답은 반복 학습/임계값 선택에 쓰지 않는다. 검증 결과가 목표를 통과한 경우에만 설정을 고정해 시험한다.
 공개 자료의 검증 점수는 새로운 산업체 현장의 성능 보장이 아니다.
 
-최신 작업은 [박락 TRAIN 오답 감사](reports/FACILITY_SPALLING_TRAIN_AUDIT_KO.md)다.
+최신 작업은 [박락 음성 태그 추출 대조 학습](reports/FACILITY_SUBTYPE_STUDY_RESULTS_KO.md)이다.
+같은0773 모델·원래640 TRAIN·손실 가중치에서 각6epoch·총12epoch를 실제 추가 학습했다.
+최대 source-VAL 미탐·오탐은 초기22.28% / 대조22.84% / 보강23.32%, 작은 손상 FN 합계는71 /67 /68이다.
+다른 알려진 항목 AP 악화도 확인되어 연구 후보 기준·5% 목표 모두 미달이며 앱 모델을 승격하지 않는다.
+원래 표본 구성을 모든 위치에서 유지하면서 관련 태그 음성 노출3,539→4,743회, 교체1,204곳을 검증했다.
+실제 테스트28개·소스49개·원본 파일58,874개와 가중치 CPU 재로딩 검증이 통과했다.
+누적 완료 학습은 모델 실행194epoch와 이전 중단 완료2epoch의 합196epoch이다.
+
+- [고정 조건·재현 명령](reports/FACILITY_SUBTYPE_STUDY_PLAN_KO.md)
+- [실제 기록·원본 보존·소스 검증](reports/facility-subtype-study-verification.json)
+
+학습 전 준비는 [박락 TRAIN 오답 감사](reports/FACILITY_SPALLING_TRAIN_AUDIT_KO.md)다.
 130장 중 박락 FP/FN54장과 원본 주석·기존80 마스크를 대조하고, DACL6225장의 저장 점수를
 원래 태그로 집계했다. 박락 음성·관련4태그 집단666장의 TRAIN 오탐 비율은26.43%였다.
 한 가지 제한적 표본 추출 보강을 준비했으며 모의85,488위치 중1,204곳만 같은 층의 음성으로 대체했다.
 모든 위치의 출처·full/crop·균열/박락 정답을 보존했다. 감사14개·태그 집계6개·표본 추출6개 테스트가 통과했다.
-새 GPU학습·추론·라벨 수정은0건이다. 기존 최대 source VAL 오류22.28%를 낮췄다는 실험이 아니다.
+당시 준비 단계의 새 GPU학습·추론·라벨 수정은0건이었다. 실제 후속 학습의 결과는 위 비교와 구분한다.
 
 - [표본 추출 모의 실행·수치 안정성 보완](reports/facility-spalling-sampler-dry-run.json)
 - 현재 PC의 검수 화면: `runs/facility-spalling-train-audit/SPALLING-AUDIT.html`. 자료·화면은 로컬 보관이다.

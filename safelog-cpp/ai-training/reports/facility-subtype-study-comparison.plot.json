@@ -1,0 +1,65 @@
+{
+  "schema": "facility_subtype_aggregate_plot_v1",
+  "source_aggregate_sha256": "ac895d508e2d05ab634356585a4cdeff9963665063ccaa726714f6ca592bb743",
+  "plot_sha256": "68bc7d3093beea3efc7c2652a3f1876ee50c4317b3f168669725a3c8ac10f555",
+  "script_sha256": "ea0d665c5c389e4d3c18c6e1bd6bd3730cf1527ac6979069f711fdfecbea032a",
+  "metric": "Maximum of 12 source-VAL crack/spalling FNR/FPR rates; small-positive class-photo FN counts",
+  "source_test_inference_executed": false,
+  "industrial_field_performance_measured": false,
+  "deployed": false,
+  "experiments": [
+    {
+      "run": "facility-presence-target-roi-control",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.22279792746113988,
+      "small_false_negatives": [
+        29,
+        42
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ]
+    },
+    {
+      "run": "facility-presence-target-subtype-control",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.22839506172839505,
+      "small_false_negatives": [
+        27,
+        40
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ]
+    },
+    {
+      "run": "facility-presence-target-subtype-negative",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.23316062176165803,
+      "small_false_negatives": [
+        27,
+        41
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ]
+    }
+  ],
+  "title_correction": {
+    "reason": "This study changes sampling frequency; the original title incorrectly said pixel comparison",
+    "performed_after_completed_training": true,
+    "new_training_epochs": 0,
+    "original_plot_sha256": "04e074b70e60376d4d2dc790d1e0b2a00ac63a7799a3e151722e077e2779ae3e",
+    "original_plot_record_sha256": "53fc1e7cdecc4bad7cd0b1d555d41d1e62aa17e520f2f00b03ab1a278bab632f",
+    "correction_script_sha256": "f621a815a8c4adb35a8a7f81b47955219f905d92a21f194a112e2a4e1774aac1",
+    "frozen_plot_script_sha256": "ea0d665c5c389e4d3c18c6e1bd6bd3730cf1527ac6979069f711fdfecbea032a",
+    "original_and_corrected_measurements_exactly_equal": true,
+    "corrected_title": "Spalling-negative subtype sampling on source validation"
+  }
+}
