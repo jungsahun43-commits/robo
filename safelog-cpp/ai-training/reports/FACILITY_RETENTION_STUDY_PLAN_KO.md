@@ -55,6 +55,6 @@
 .venv/Scripts/python.exe scripts/evaluate_facility_target.py select --name facility-presence-target-retention-distill --grids 1
 .venv/Scripts/python.exe scripts/analyze_facility_target.py --name facility-presence-target-retention-distill --aggregate-only
 .venv/Scripts/python.exe scripts/verify_facility_retention.py --test-results runs/facility-retention-test-results.json
-.venv/Scripts/python.exe scripts/report_facility_retention.py
-.venv/Scripts/python.exe scripts/plot_facility_retention.py
+.venv/Scripts/python.exe scripts/report_facility_retention_results.py
+.venv/Scripts/python.exe -m scripts.plot_facility_retention
 ```

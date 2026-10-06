@@ -1,0 +1,72 @@
+{
+  "schema": "facility_retention_aggregate_plot_v1",
+  "source_aggregate_sha256": "a5e2d128a3e4cf2a01474f4ac35836650792d5fb2bff81362c251e2dbf6ed555",
+  "plot_sha256": "e7c24bbd7b5aa42830b7dc5f3760f713abe13d1b1f68405dbe4981f61a68c35f",
+  "script_sha256": "2da3e9babd925e3018a45f7047df09ef532fbaeb2231a861c526a7a4e7a44737",
+  "metric": "Maximum12 source-VAL crack/spalling FNR/FPR rates; DACL exposed-rebar AP; largest other-known-class AP decline; small-positive class-photo FN counts",
+  "source_test_inference_executed": false,
+  "industrial_field_performance_measured": false,
+  "deployed": false,
+  "experiments": [
+    {
+      "run": "facility-presence-target-roi-control",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.22279792746113988,
+      "small_false_negatives": [
+        29,
+        42
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "dacl_exposed_rebar_ap": 0.7010134084995547,
+      "maximum_other_ap_drop_vs_reference": 0.0,
+      "worst_other_ap_source_class": {
+        "domain": "dacl",
+        "class": "rust_stain"
+      }
+    },
+    {
+      "run": "facility-presence-target-retention-control",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.23056994818652848,
+      "small_false_negatives": [
+        27,
+        40
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "dacl_exposed_rebar_ap": 0.6485806473816492,
+      "maximum_other_ap_drop_vs_reference": 0.05243276111790551,
+      "worst_other_ap_source_class": {
+        "domain": "dacl",
+        "class": "exposed_rebar"
+      }
+    },
+    {
+      "run": "facility-presence-target-retention-distill",
+      "imgsz": 640,
+      "actual_epochs": 6,
+      "maximum_fnr_fpr": 0.22530864197530864,
+      "small_false_negatives": [
+        27,
+        40
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "dacl_exposed_rebar_ap": 0.6714564421231174,
+      "maximum_other_ap_drop_vs_reference": 0.029556966376437344,
+      "worst_other_ap_source_class": {
+        "domain": "dacl",
+        "class": "exposed_rebar"
+      }
+    }
+  ]
+}

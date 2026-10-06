@@ -22,7 +22,26 @@ AI 결과는 참고 제안이며 최종 판단은 점검자가 수행합니다. 
 
 상세 빌드 방법과 협업 규칙은 빠른 시작 문서를 확인하세요.
 
-## AI 실험 최신 결과 · 2026-10-06
+## AI 실험 최신 결과 · 2026-10-07
+
+기존 다른5개 손상 항목의 성능을 보존하도록 고정 원본 교사의 확률을 참고하는 학습을
+증류 없는 대조군과 각6epoch·총12epoch 실제 비교했습니다. 사진 순서·정답·기존 손실·
+교사 실행 횟수는 동일하고 추가 보존 손실의 가중치0·1만 달랐습니다.
+최대 source-VAL 미탐·오탐은 원본22.28% / 대조23.06% / 보존22.53%입니다.
+DACL 철근 노출 AP는 0.7010 /0.6486 /0.6715로 부분 회복됐습니다. AP는 순위 판별 지표이며 오류율이 아닙니다.
+철근 노출 및 CODEBRIM 백화 AP 하락 폭이 원본 대비0.02를 넘어 성능 보존 기준은 미달했습니다.
+작은 손상 FN 합계는71 /67 /67건이고 기존 연구 후보 기준·5% 목표도 미달입니다.
+소스61개·실제 테스트34개·원본/보호 파일58,890개·교사 고정·실제 업데이트를 검증했습니다.
+원본 학습 기록의 생략된 계획 해시는 검증된 프로토콜에서 메모리 복사본에 연결했으며 보고서 보완 테스트2개가 통과했습니다.
+누적 완료 기록은 모델 실행206epoch와 이전 중단 기록2epoch를 합한208epoch입니다.
+공장 현장 정확도는 측정하지 않았으며 앱 기본 `facility-validation-v2`를 유지합니다.
+
+- [성능 보존 비교 결과·그림·실행 비용](safelog-cpp/ai-training/reports/FACILITY_RETENTION_STUDY_RESULTS_KO.md)
+- [고정 조건·재현 순서](safelog-cpp/ai-training/reports/FACILITY_RETENTION_STUDY_PLAN_KO.md)
+- [완료 학습·교사 고정·입력 보존 검증](safelog-cpp/ai-training/reports/facility-retention-study-verification.json)
+- [전체 실험 진행·결과](safelog-cpp/ai-training/reports/FACILITY_FIVE_PERCENT_RESULTS_KO.md)
+
+## 앞선 박락 음성 표본 비교 · 2026-10-06
 
 원래 박락 음성이며 관련 표면 손상 태그를 가진 DACL TRAIN 사진666장의 추출 빈도를 높이는
 조건을 대조군과 각6epoch·총12epoch 실제 학습해 비교했습니다. 두 군은 모든 추출 위치에서
