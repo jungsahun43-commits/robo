@@ -1,6 +1,6 @@
 {
-  "plot_sha256": "b180e759a6dc1d19c06eda460f8fe69b7649ef9886e9b8d9d84c7971dd5e8b63",
-  "script_sha256": "0009f98f387cd338521698eedde24079d067a1d372e2e28e67de435a7d66ab8b",
+  "plot_sha256": "9138effd27197f34f657f58db7757d5484a28890ec25360174ab129e349a3991",
+  "script_sha256": "1ea3110b0a018544f78223b7da8e67208558a783a8652222d7d898e2cd83625e",
   "histories": [
     {
       "run": "facility-presence-target-v2s",
@@ -161,6 +161,12 @@
     {
       "run": "facility-presence-target-retention-strong",
       "history_sha256": "5d7d2392beafaeb391e505b6fb59813c542dc7d9078451cbbadc1778c846029a",
+      "status": "complete",
+      "actual_epochs": 6
+    },
+    {
+      "run": "facility-presence-target-batchnorm-frozen",
+      "history_sha256": "913bd65519fcbffa2f5148acd85c0bd9a641e8e072743ae37d13344ed500301c",
       "status": "complete",
       "actual_epochs": 6
     }

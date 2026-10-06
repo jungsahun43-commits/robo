@@ -45,3 +45,9 @@ CPU에서 네 체크포인트의 상태만 비교했다. 모델 추론이나 VAL
 ```
 
 마지막 실행은6epoch 학습 뒤 공개 VAL grid1 재추론, 작은 손상 집계, 완료 검증, 결과 보고서와 그림 생성을 차례로 수행한다.
+
+GitHub의 그림 링크는 파일 이름의 대소문자를 구분한다. 최종 공개 그림은 아래처럼 입력·출력 이름을 명시해 생성했다. 기본 이름으로 생성한 첫 그림과 sidecar는 `runs/facility-batchnorm-original-plot-case`에 보존한 뒤 실행했다. 측정값과 고정 소스는 바꾸지 않았다.
+
+```powershell
+.venv/Scripts/python.exe scripts/plot_facility_batchnorm.py --input reports/facility-batchnorm-study-comparison.json --output reports/facility-batchnorm-study-comparison.png
+```

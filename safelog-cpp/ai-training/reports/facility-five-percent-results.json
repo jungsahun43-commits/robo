@@ -3591,6 +3591,144 @@
       ]
     },
     {
+      "run": "facility-presence-target-batchnorm-frozen",
+      "title": "BN \ud1b5\uacc4 \ube44\uad50: \uc6d0\ubcf8 \ud1b5\uacc4\ub85c \ud559\uc2b5",
+      "status": "complete",
+      "epochs": 6,
+      "imgsz": 640,
+      "best_epoch": 4,
+      "frozen_validation": true,
+      "grid": 1,
+      "worst_error": 0.22413793103448276,
+      "target_passed_validation": false,
+      "operating_points": {
+        "concrete_crack": {
+          "threshold": 0.2478133887052536,
+          "domains": {
+            "dacl": {
+              "tp": 167,
+              "fp": 105,
+              "fn": 44,
+              "tn": 394,
+              "fnr": 0.20853080568720378,
+              "fpr": 0.21042084168336672,
+              "fnr_ci95": [
+                0.15916905788752075,
+                0.2683157456733443
+              ],
+              "fpr_ci95": [
+                0.17693783196608892,
+                0.24832833308365265
+              ],
+              "photo_error_fraction": 0.20985915492957746
+            },
+            "damsegment": {
+              "tp": 246,
+              "fp": 3,
+              "fn": 2,
+              "tn": 173,
+              "fnr": 0.008064516129032258,
+              "fpr": 0.017045454545454544,
+              "fnr_ci95": [
+                0.0022143743392366525,
+                0.028922114694036785
+              ],
+              "fpr_ci95": [
+                0.005813642625307883,
+                0.04890932773552685
+              ],
+              "photo_error_fraction": 0.01179245283018868
+            },
+            "codebrim": {
+              "tp": 138,
+              "fp": 53,
+              "fn": 11,
+              "tn": 409,
+              "fnr": 0.0738255033557047,
+              "fpr": 0.11471861471861472,
+              "fnr_ci95": [
+                0.04172033311633155,
+                0.12735328748428063
+              ],
+              "fpr_ci95": [
+                0.08878266379410645,
+                0.14700884153640753
+              ],
+              "photo_error_fraction": 0.10474631751227496
+            }
+          },
+          "worst_error": 0.21042084168336672,
+          "target_passed": false
+        },
+        "concrete_spalling": {
+          "threshold": 0.5891395807266235,
+          "domains": {
+            "dacl": {
+              "tp": 252,
+              "fp": 83,
+              "fn": 72,
+              "tn": 303,
+              "fnr": 0.2222222222222222,
+              "fpr": 0.21502590673575128,
+              "fnr_ci95": [
+                0.18035690686403077,
+                0.27059722002555475
+              ],
+              "fpr_ci95": [
+                0.17695464207216305,
+                0.25871338393635845
+              ],
+              "photo_error_fraction": 0.21830985915492956
+            },
+            "damsegment": {
+              "tp": 45,
+              "fp": 5,
+              "fn": 13,
+              "tn": 361,
+              "fnr": 0.22413793103448276,
+              "fpr": 0.01366120218579235,
+              "fnr_ci95": [
+                0.1359366061140974,
+                0.3466111763891869
+              ],
+              "fpr_ci95": [
+                0.005848988527235737,
+                0.031576396027622175
+              ],
+              "photo_error_fraction": 0.04245283018867924
+            },
+            "codebrim": {
+              "tp": 123,
+              "fp": 40,
+              "fn": 17,
+              "tn": 431,
+              "fnr": 0.12142857142857143,
+              "fpr": 0.08492569002123142,
+              "fnr_ci95": [
+                0.07721261463005077,
+                0.18586493707821902
+              ],
+              "fpr_ci95": [
+                0.06298590419739705,
+                0.11358136317837284
+              ],
+              "photo_error_fraction": 0.09328968903436989
+            }
+          },
+          "worst_error": 0.22413793103448276,
+          "target_passed": false
+        }
+      },
+      "test_executed": false,
+      "target_passed_test": null,
+      "weights_sha256": "1d61498dcaa89c5e6009ca693aaec7113a8d3c24061c7b6426fd590227f6ea94",
+      "validation_domains": [
+        "dacl",
+        "damsegment",
+        "codebrim"
+      ]
+    },
+    {
       "run": "facility-presence-target-ensemble",
       "title": "\ub450 \ubaa8\ub378 \ud655\ub960 \ud3c9\uade0",
       "status": "validation_only",
@@ -3770,8 +3908,8 @@
   ],
   "app_profile": "facility-validation-v2",
   "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
-  "total_actual_training_epochs": 214,
-  "model_run_recorded_training_epochs": 212,
+  "total_actual_training_epochs": 220,
+  "model_run_recorded_training_epochs": 218,
   "interrupted_recorded_training_epochs": 2,
   "interrupted_training_attempts": [
     {
@@ -3821,6 +3959,13 @@
     "reused_control_run": "facility-presence-target-retention-control",
     "reused_control_epochs_counted_as_new": 0,
     "scope": "Weight4 follow-up from0773 with identical original draw order; previous weight0 control reused without repeated training"
+  },
+  "batchnorm_training_accounting": {
+    "new_candidate_budget_epochs": 6,
+    "new_candidate_recorded_completed_epochs": 6,
+    "reused_control_run": "facility-presence-target-retention-strong",
+    "reused_control_epochs_counted_as_new": 0,
+    "scope": "Same original teacher/weight4/T2/input/order/loss; student BatchNorm uses fixed0773 running statistics while affine/backbone/head parameters remain trainable"
   },
   "best_three_domain_validation_run": "facility-presence-target-roi-control",
   "best_three_domain_validation_worst_error": 0.22279792746113988,
