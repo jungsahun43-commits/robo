@@ -1,0 +1,60 @@
+{
+  "schema": "facility_semantic_aggregate_plot_v1",
+  "source_aggregate_sha256": "00d073b0df604ee97615a34042717e7c88bf3108ccfa81ca22520f112d3c945a",
+  "plot_sha256": "4bdbc0999f5c9bb3f077a6fde33c5881e4da4cd1e3d18f2e941a2c4deeefc9a8",
+  "script_sha256": "8bca8b72b47516448f63597b8d7b32ffd385123c6fd92ec5de0445b23c222397",
+  "experiments": [
+    {
+      "run": "facility-presence-target-roi-control",
+      "maximum_fnr_fpr": 0.22279792746113988,
+      "small_false_negatives": [
+        29,
+        42
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "dacl_exposed_rebar_ap": 0.7010134084995547,
+      "maximum_other_ap_drop_vs_reference": 0.0
+    },
+    {
+      "run": "facility-presence-target-head-lr-low",
+      "maximum_fnr_fpr": 0.22020725388601037,
+      "small_false_negatives": [
+        30,
+        40
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "dacl_exposed_rebar_ap": 0.7129187558010883,
+      "maximum_other_ap_drop_vs_reference": 0.0014209092151504787
+    },
+    {
+      "run": "facility-presence-target-semantic-features",
+      "maximum_fnr_fpr": 0.2222222222222222,
+      "small_false_negatives": [
+        31,
+        40
+      ],
+      "small_positive_cases": [
+        93,
+        105
+      ],
+      "dacl_exposed_rebar_ap": 0.7099331952024478,
+      "maximum_other_ap_drop_vs_reference": 0.0
+    }
+  ],
+  "outcomes": {
+    "Retention": false,
+    "Research": false,
+    "Strict<5%": false
+  },
+  "source_test_inference_executed": false,
+  "industrial_field_performance_measured": false,
+  "deployed": false,
+  "equal_compute_or_parameter_budget_asserted": false,
+  "accuracy_estimated_by_plot": false
+}

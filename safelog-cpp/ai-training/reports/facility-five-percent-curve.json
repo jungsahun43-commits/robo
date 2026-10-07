@@ -1,6 +1,6 @@
 {
-  "plot_sha256": "62039d509293479fdad2f1d7a7df2b3ea5dc26ab6a0c934d1d07a3daccc2d0a9",
-  "script_sha256": "791d122569afd48563ccf4537e791cb3a064a9e854d3a935f40b7115dbc2c856",
+  "plot_sha256": "3808b78d1695c92a6d8c001606df712b7d8a4db4d48d603520f1286363198a14",
+  "script_sha256": "baac34f183e03501a7d3b24d8233c849ddabf3eb5d7cb793c3d57f8798feb5a5",
   "histories": [
     {
       "run": "facility-presence-target-v2s",
@@ -173,6 +173,12 @@
     {
       "run": "facility-presence-target-head-lr-low",
       "history_sha256": "773c73e28a1d8b75fddb40c44368681c76bbcb7cb3ab0c1167fdfb8de3ce286f",
+      "status": "complete",
+      "actual_epochs": 6
+    },
+    {
+      "run": "facility-presence-target-semantic-features",
+      "history_sha256": "f330af14c955939e9b2bc5a17633e8c11e4940fddfa6ad3561571db623a86f6c",
       "status": "complete",
       "actual_epochs": 6
     }

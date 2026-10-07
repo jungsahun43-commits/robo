@@ -46,3 +46,17 @@ CCIC와 SDNET의 균열 음성은 모든 손상이나 박락이 없다는 정답
 코드·조건을 고정하고 집중 테스트 및 실제 TRAIN8개 입력의 출력 동일성·GPU 업데이트·CPU 재로드를 확인한다. 이어서 후보6epoch와 기존 전체 source-VAL grid1, 작은 손상, 알려진 나머지 항목 AP를 평가한다. 원래 source-TEST는 사용하지 않는다.
 
 이전 AP 유지·철근 회복·연구 후보 기준과 균열·박락의 출처별 FNR/FPR 각각5% 미만 기준은 그대로 적용한다. 반복 공개 VAL 탐색 및 한 seed의 결과이며 독립 공장 현장 성능으로 해석하지 않는다. 기존 앱 기본 프로필의 교체는 별도 검증 조건을 충족한 뒤 판단한다.
+
+## 로컬 재현 순서
+
+저장소에는 코드·공식 가중치 검증 메타데이터·고정 프로토콜이 포함된다. 원본 데이터와 완료된 원본·대조군 가중치 및 로컬 증거는 별도로 필요하다. 새 실험 실행 폴더가 없는 workspace에서 `safelog-cpp/ai-training`을 작업 폴더로 사용한다. 기존 고정 소스는 LF 바이트를 유지한다.
+
+```powershell
+.venv/Scripts/python.exe scripts/restore_facility_semantic_weights.py
+.venv/Scripts/python.exe scripts/test_facility_semantic.py
+.venv/Scripts/python.exe scripts/preflight_facility_semantic.py
+.venv/Scripts/python.exe scripts/verify_facility_semantic.py --snapshot-before-training
+.venv/Scripts/python.exe scripts/run_facility_semantic.py
+```
+
+복원 도구는 Git에 포함된 검증 메타데이터를 보존하면서 제외된 공식 가중치 파일을 취득·검증한다. 이 도구는 동결된112개 학습 실행 소스 외부의 유지보수 도구다. 마지막 명령은 학습·source-VAL grid1·작은 손상 분석·완료 검증·보고서·그래프를 순서대로 실행한다. 각 단계 상태와 로그는 `runs/facility-semantic-background-candidate`에 저장한다. 완료된 현재 실행 파일은 그대로 보관한다.
