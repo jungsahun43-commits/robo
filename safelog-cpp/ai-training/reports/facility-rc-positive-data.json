@@ -1,0 +1,46 @@
+{
+  "annotation_audit_sha256": "7d583ed9c82c25ad59d3af5a87cbd0cb7ea6c1518d929a3a731cc48c2b2c79fe",
+  "asserted_positive_cells": {
+    "concrete_crack": 51439,
+    "concrete_spalling": 118526,
+    "efflorescence": 0,
+    "exposed_rebar": 0,
+    "rust_stain": 0,
+    "surface_cavity": 0,
+    "wet_surface": 0
+  },
+  "background_negative_pixels_created": 0,
+  "crop_review_sha256": "2ddfc3b8c4c1de4d2030c06fd454bd124e2dcf7c561cb8c7a473082c9acb1ae3",
+  "known_negative_photos": 0,
+  "license": "CC BY 4.0",
+  "limitations": [
+    "Whole-photo dHash<=6 and native pixel SHA cannot prove crop, rotation or scene independence",
+    "Author background mask does not independently verify exhaustive annotation of every damage instance",
+    "No scene/group/split/upstream source mapping is provided by these three archives",
+    "Research dataset labels do not assert real-world structural safety",
+    "Approximate descriptor retrieval and limited features can miss shared views",
+    "A homography match is a review candidate, not established scene identity",
+    "No new source/scene independence or annotation completeness is established"
+  ],
+  "manifest_sha256": "eb6ad95ddb0d4e75d3f58221f39520577bcce3f5d29f3ad6a1d413ee1b5cc81c",
+  "new_auxiliary_labels": 0,
+  "policy": "Explicit crack/spalling positives only; all absent classes and background unknown. Original author masks supply foreground presence cells only",
+  "positive_photos": {
+    "concrete_crack": 117,
+    "concrete_spalling": 100,
+    "efflorescence": 0,
+    "exposed_rebar": 0,
+    "rust_stain": 0,
+    "surface_cavity": 0,
+    "wet_surface": 0
+  },
+  "schema": "rc2119_positive_region_preparation_v1",
+  "scope": "TRAIN-only research supplement; no new independent validation/test set or scene-independence claim",
+  "selected_photos": 200,
+  "selection_strata": {
+    "Concrete spalling": 100,
+    "Crack": 100
+  },
+  "source": "https://data.mendeley.com/datasets/2vkm6k4cfg/1",
+  "status": "prepared_for_limited_research"
+}

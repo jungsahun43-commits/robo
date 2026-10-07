@@ -1,0 +1,100 @@
+{
+  "actual_native_instances": {
+    "Concrete crushing": 88,
+    "Concrete spalling": 282,
+    "Crack": 1833,
+    "Rebar corrosion": 832,
+    "Rebar exposure": 89
+  },
+  "actual_positive_photos": {
+    "Concrete crushing": 81,
+    "Concrete spalling": 184,
+    "Crack": 1315,
+    "Rebar corrosion": 662,
+    "Rebar exposure": 82
+  },
+  "annotation_geometry_review_photos": 6,
+  "archive_crack_instance_count": 1833,
+  "background_code": 0,
+  "declared_exif_orientation_corrected_photos": 29,
+  "eligibility": "Pending crop/parent overlap and upstream provenance/annotation-coverage review; remaining candidates are not approved training photos",
+  "inventory": {
+    "cache_sha256": "21013f0c4e7a105e6dfeecca5ca5380d3dc16eb812368359b5a468e01408ca61",
+    "convid_audit_sha256": "b459fb5ad26beed3f0f58238327b3ceacd835dbb4abc7254035464039d0c5549",
+    "convid_originals_including_exclusions": 200,
+    "heldout_labels_or_predictions_used": false,
+    "metadata_sha256": {
+      "data/codebrim-training/test.json": "fa9a2bb648afb0e4164028c564e903d45c8bcf88d769c75aa97c99cdb51e4df5",
+      "data/codebrim-training/train.json": "5cce98c85f49d8e9f355c940306d21c9620e0b9fcbf0066965b4b6442ae49d5d",
+      "data/codebrim-training/val.json": "d17182c6070cfd73404de341f0662352441b1be5d983c85dfe5b0c86affed56e",
+      "data/dacl10k-yolo/records.json": "75f95e6035e58930defc0bec94c03aab952c66919d48e9c9a385bd7ea72e6fe3",
+      "data/damsegment-training/test.json": "b7459e670fc4d7eda10aebb38b8dc35015a6e402ae07f86b226fd991af9671ab",
+      "data/damsegment-training/train.json": "95611122b9c23bf865fe16a18cda3736be977016c53b8f42ad22014bb02cd074",
+      "data/ostrava-corrosion-yolo/records.json": "78b6e239ca18d1d79c179391e540305c8822f67d535c10bf4650148de26f4d6d",
+      "data/s2ds/pixel-audit.json": "603aa605a7494de974c26ddc1983860fdcebe1ea2fbfd225e05a59b8ae0a0eba"
+    },
+    "original_cached_photos": 18935,
+    "scope": "Native decoded RGB SHA + prepared full-photo dHash; all cached source splits plus all200 ConViD originals",
+    "total_compared_photo_records": 19135
+  },
+  "known_spalling_negative_photos_created": 0,
+  "label_policy": "Only explicit crack/spalling/rebar-exposure positives mapped; absent polygons unknown; rebar corrosion/crushing not mapped to rust/cavity/spalling",
+  "limitations": [
+    "Whole-photo dHash<=6 and native pixel SHA cannot prove crop, rotation or scene independence",
+    "Author background mask does not independently verify exhaustive annotation of every damage instance",
+    "No scene/group/split/upstream source mapping is provided by these three archives",
+    "Research dataset labels do not assert real-world structural safety"
+  ],
+  "mask_code_evidence_single_class_photo_counts": {
+    "Concrete crushing": {
+      "5": 64
+    },
+    "Concrete spalling": {
+      "2": 76
+    },
+    "Crack": {
+      "1": 1205
+    },
+    "Rebar corrosion": {
+      "4": 531
+    },
+    "Rebar exposure": {
+      "3": 56
+    }
+  },
+  "mask_registration_review_photos": 0,
+  "native_mask_codes": {
+    "Concrete crushing": 5,
+    "Concrete spalling": 2,
+    "Crack": 1,
+    "Rebar corrosion": 4,
+    "Rebar exposure": 3
+  },
+  "native_mask_mode": "L",
+  "new_training_epochs": 0,
+  "overlap_excluded_photos": 67,
+  "overlap_reason_photo_counts_nonexclusive": {
+    "annotation_geometry_review": 8,
+    "existing_near_whole_photo_candidate": 59
+  },
+  "photo_pairs_verified": 2119,
+  "polygon_check": {
+    "compared_photos": 2113,
+    "different_pixels": 310416,
+    "exactly_equal_photos": 19,
+    "skipped_geometry_invalid_photos": 6
+  },
+  "private_source_audit_sha256": "7d583ed9c82c25ad59d3af5a87cbd0cb7ea6c1518d929a3a731cc48c2b2c79fe",
+  "publisher_crack_instance_count": 1883,
+  "remaining_spalling_positive_photos": 183,
+  "remaining_whole_photo_screen_candidates": 2052,
+  "schema": "rc2119_annotation_overlap_audit_v1",
+  "source": "https://data.mendeley.com/datasets/2vkm6k4cfg/1",
+  "source_files_sha256": {
+    "imagedata.zip": "d11697ed550fac8b42799f9bb39c00ca70736d1b5c88fcfd280c558c465c851d",
+    "jsondata.zip": "db2242e4dae9a36afd52cf0af7ad66654b4ddf8195eec75cb5780c5c432d3dd1",
+    "maskdata.zip": "bd2c96de2b6a8eb90291062438661ddcf6b9a91f2bae500d98755423c0c1b1e8"
+  },
+  "train_manifest_created": false,
+  "within_source_near_groups": 1651
+}

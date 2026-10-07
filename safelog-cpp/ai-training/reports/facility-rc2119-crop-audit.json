@@ -1,0 +1,57 @@
+{
+  "additional_exclusions_after_whole_photo_screen": 24,
+  "annotation_audit_sha256": "7d583ed9c82c25ad59d3af5a87cbd0cb7ea6c1518d929a3a731cc48c2b2c79fe",
+  "direct_feature_candidate_photos": 25,
+  "existing_descriptors": 1577652,
+  "existing_photo_records": 19135,
+  "group_closed_candidate_photos": 25,
+  "limitations": [
+    "Approximate descriptor retrieval and limited features can miss shared views",
+    "A homography match is a review candidate, not established scene identity",
+    "No new source/scene independence or annotation completeness is established"
+  ],
+  "new_photos_examined": 2119,
+  "new_training_epochs": 0,
+  "opencv_version": "5.0.0",
+  "policy": {
+    "all_matches_excluded_as_candidates": true,
+    "descriptor_ratio_max": 0.75,
+    "feature": "OpenCV SIFT",
+    "global_flann_checks": 64,
+    "global_flann_trees": 4,
+    "heldout_labels_or_predictions_used": false,
+    "long_edge": 640,
+    "max_features": 96,
+    "minimum_inlier_fraction": 0.5,
+    "minimum_inliers": 6,
+    "minimum_tentative_matches": 8,
+    "nearest_neighbors": 2,
+    "new_training_epochs": 0,
+    "ransac_reprojection_pixels": 4.0
+  },
+  "previous_inventory": {
+    "cache_sha256": "21013f0c4e7a105e6dfeecca5ca5380d3dc16eb812368359b5a468e01408ca61",
+    "convid_audit_sha256": "b459fb5ad26beed3f0f58238327b3ceacd835dbb4abc7254035464039d0c5549",
+    "convid_originals_including_exclusions": 200,
+    "heldout_labels_or_predictions_used": false,
+    "metadata_sha256": {
+      "data/codebrim-training/test.json": "fa9a2bb648afb0e4164028c564e903d45c8bcf88d769c75aa97c99cdb51e4df5",
+      "data/codebrim-training/train.json": "5cce98c85f49d8e9f355c940306d21c9620e0b9fcbf0066965b4b6442ae49d5d",
+      "data/codebrim-training/val.json": "d17182c6070cfd73404de341f0662352441b1be5d983c85dfe5b0c86affed56e",
+      "data/dacl10k-yolo/records.json": "75f95e6035e58930defc0bec94c03aab952c66919d48e9c9a385bd7ea72e6fe3",
+      "data/damsegment-training/test.json": "b7459e670fc4d7eda10aebb38b8dc35015a6e402ae07f86b226fd991af9671ab",
+      "data/damsegment-training/train.json": "95611122b9c23bf865fe16a18cda3736be977016c53b8f42ad22014bb02cd074",
+      "data/ostrava-corrosion-yolo/records.json": "78b6e239ca18d1d79c179391e540305c8822f67d535c10bf4650148de26f4d6d",
+      "data/s2ds/pixel-audit.json": "603aa605a7494de974c26ddc1983860fdcebe1ea2fbfd225e05a59b8ae0a0eba"
+    },
+    "original_cached_photos": 18935,
+    "scope": "Native decoded RGB SHA + prepared full-photo dHash; all cached source splits plus all200 ConViD originals",
+    "total_compared_photo_records": 19135
+  },
+  "private_crop_review_sha256": "2ddfc3b8c4c1de4d2030c06fd454bd124e2dcf7c561cb8c7a473082c9acb1ae3",
+  "remaining_near_group_representatives": 1592,
+  "remaining_photos": 2028,
+  "remaining_spalling_positive_photos": 179,
+  "schema": "rc2119_crop_candidate_screen_v1",
+  "train_manifest_created": false
+}
