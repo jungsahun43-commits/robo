@@ -17,7 +17,7 @@ RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility
       'facility-presence-target-subtype-control','facility-presence-target-subtype-negative',
       'facility-presence-target-retention-control','facility-presence-target-retention-distill',
       'facility-presence-target-retention-strong','facility-presence-target-batchnorm-frozen',
-      'facility-presence-target-head-lr-low')
+      'facility-presence-target-head-lr-low','facility-presence-target-semantic-features')
 NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강','원본19종 보조 학습',
        '작은 영역 비교: 기존 자료 대조군','작은 영역 비교: 맥락 crop 보강군',
        '콘크리트 사진 비교: 기존 자료 대조군','콘크리트 사진 비교: ConViD 양성 보강군',
@@ -29,7 +29,7 @@ NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실�
        '박락 음성 태그 비교: 기존 추출 대조군','박락 음성 태그 비교: 관련 표면 손상 보강군',
        '기존 항목 보존 비교: 증류 없는 대조군','기존 항목 보존 비교: 알려진 5항목 증류군',
        '보존 강도 후속 비교: 가중치4 학생','BN 통계 비교: 원본 통계로 학습',
-       '학습률 후속 비교: head 초기 학습률 감소')
+       '학습률 후속 비교: head 초기 학습률 감소','새 특징 비교: 고정 ConvNeXt 특징 연결')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 RESOLUTION_RUNS=('facility-presence-target-resolution-control','facility-presence-target-resolution-highres')
@@ -39,6 +39,7 @@ RETENTION_RUNS=('facility-presence-target-retention-control','facility-presence-
 RETENTION_STRENGTH_RUNS=('facility-presence-target-retention-strong',)
 BATCHNORM_RUNS=('facility-presence-target-batchnorm-frozen',)
 HEAD_LR_RUNS=('facility-presence-target-head-lr-low',)
+SEMANTIC_RUNS=('facility-presence-target-semantic-features',)
 
 
 def interrupted_training_attempts(root):
@@ -129,6 +130,7 @@ def main():
     strength_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in RETENTION_STRENGTH_RUNS)
     batchnorm_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in BATCHNORM_RUNS)
     head_lr_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in HEAD_LR_RUNS)
+    semantic_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in SEMANTIC_RUNS)
     running=[{'run':e['run'],'epochs':e['epochs'],'best_full_photo_worst_error':e['worst_error']}
              for e in entries if e.get('status')=='running' and e.get('worst_error') is not None]
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
@@ -157,6 +159,9 @@ def main():
             'head_lr_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':head_lr_epochs,
                     'reused_control_run':BATCHNORM_RUNS[0],'reused_control_epochs_counted_as_new':0,
                     'scope':'Same original initializer, frozen BN, teacher weight4/T2, input/order/loss; only initial non-backbone head LR changes .00025 to .0001 with unchanged cosine floor .000005'},
+            'semantic_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':semantic_epochs,
+                    'reused_control_run':HEAD_LR_RUNS[0],'reused_control_epochs_counted_as_new':0,
+                    'scope':'Same original base and loss/teacher/LR/data; added fixed ImageNet ConvNeXt features with three zero-initialized learned heads. Epoch/draw budget matched, compute and model size not matched'},
             'best_three_domain_validation_run':best['run'] if best else None,
             'best_three_domain_validation_worst_error':best['worst_error'] if best else None,
             'best_three_domain_scope':'Completed validation view/cutoff selection only; running rows reported separately',
@@ -176,6 +181,7 @@ def main():
            f'보존 강도 후속 후보의 신규 예산은6epoch이며 완료 기록은 {strength_epochs}epoch이다. 가중치4만 새로 학습하고 이미 완료한 가중치0 대조군을 재사용하므로 대조군6epoch를 다시 합산하지 않는다.',
            f'BN 통계 고정 후보의 신규 예산은6epoch이며 완료 기록은 {batchnorm_epochs}epoch이다. 같은 가중치4 조건에서 학생 BN을 원본 평균·분산으로 정규화하고 학습 계수는 유지한다. 일반 BN 가중치4 대조군은 재사용해 다시 합산하지 않는다.',
            f'head 학습률 후속 후보의 신규 예산은6epoch이며 완료 기록은 {head_lr_epochs}epoch이다. 같은 원본 초기 모델·BN 정책·가중치4 조건에서 non-backbone 초기 학습률만0.00025→0.0001로 낮춘다. 기존 BN 고정 대조군을 재사용해 학습 횟수를 다시 더하지 않는다.',
+           f'사전학습 특징 추가 후보의 신규 예산은6epoch이며 완료 기록은 {semantic_epochs}epoch이다. 고정된 ImageNet ConvNeXt 특징에서 지도·사진·보조 점수 보정 연결층을 학습한다. 기존 head1e-4 대조군을 재사용하며 새 시설 정답은 추가하지 않는다. 모델 크기와 추가 encoder 연산 비용은 별도로 보고한다.',
            *(['직전 해상도 비교의 대조군은 실행 세션 중단 뒤 optimizer 상태를 복구할 수 없어 같은 초기 모델·고정 조건으로 처음부터 다시 시작했다. 중단 당시 완료하지 못한 epoch의 배치·업데이트·시간은 정량 기록이 없어 추정 합산하지 않는다. [보존한 중단 집계](facility-resolution-interruption.json)를 함께 기록한다.'] if attempts else []),
            f"동일한 세 검증 자료에서 뷰·임계값 선택 고정이 끝난 최대 오류 최소 관측 모델: `{best['run']}`, 최대 미탐·오탐 {best['worst_error']*100:.2f}%. 연구 후보 선정과 앱 배포 기준 통과는 별도다." if best else '동일한 세 검증 자료의 선택 고정 결과가 아직 없다.',
            *[f"진행 중 `{r['run']}`: 실제{r['epochs']}epoch, 지금까지 전체 사진의 최대 미탐·오탐 최저{r['best_full_photo_worst_error']*100:.2f}%. 학습 및 최종 확대 선택이 아직 끝나지 않았다." for r in running],
@@ -224,6 +230,7 @@ def main():
             '가중치1 비교 결과를 본 후 [가중치4 후속 계획](FACILITY_RETENTION_STRENGTH_STUDY_PLAN_KO.md)을 고정했다. 같은 원본 조건에서 후보6epoch만 추가하며 대조군은 재사용한다. [후속 결과](FACILITY_RETENTION_STRENGTH_STUDY_RESULTS_KO.md)는 반복 source-VAL 탐색으로 보고하며 독립 현장 성능을 주장하지 않는다.','',
             '가중치4의 상태 감사를 근거로 [BN 통계 고정 계획](FACILITY_BATCHNORM_STUDY_PLAN_KO.md)을 추가했다. 같은 가중치4·T2에서 학생 BN의 학습 정규화 정책만 비교한다. [실제 결과](FACILITY_BATCHNORM_STUDY_RESULTS_KO.md)에 신규6epoch와 재사용 대조군, 버퍼 불변·학습 계수 경사·항목별 평가를 구분한다.','',
             'BN 고정 결과 이후 [head 학습률 계획](FACILITY_HEAD_LR_STUDY_PLAN_KO.md)을 고정했다. head 업데이트 크기를 줄이는 후보6epoch를 추가하고 원본 모델 및 기존 BN 고정 대조군과 비교한다. [실측 결과](FACILITY_HEAD_LR_STUDY_RESULTS_KO.md)는 반복 source-VAL 탐색이며 새로운 현장 성능 수치가 아니다.','',
+            '[추가 데이터·새 특징 계획](FACILITY_DATA_AND_FEATURES_PLAN_KO.md)에서는 균열 음성과 박락 감독의 차이, 중복·접근 조건을 확인한 뒤 고정 ConvNeXt 특징을 추가하는 후보를 비교한다. [실측 결과](FACILITY_SEMANTIC_STUDY_RESULTS_KO.md)에 추가 모델 크기·비용·항목별 성능과 보존 검증을 기록한다.','',
             '보류하는 방법의 별도 진단: [자동 판단 비율·조건부 오류](facility-presence-target-spatial-review-diagnostic_KO.md). 자동으로 판단한 일부 사진만의 오답률이며 기존 전체 사진의 미탐·오탐 기준을 통과했다는 뜻이 아니다. 두 항목을 모두 자동 판단한 사진 비율과 보류 수까지 기록한다. 앱 적용·독립 시험 전이다.','',
             f"기본 앱 프로필: `{profile['version']}`. 실험 프로필로 자동 교체하지 않았다.",
             '현장의 모든 시설, 나머지 다섯 항목, 정밀 위치와 구조 안전에 대한 5% 성능 주장은 하지 않는다.',

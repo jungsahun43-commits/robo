@@ -1,0 +1,65 @@
+{
+  "schema": "facility_semantic_pretrained_weights_v1",
+  "status": "verified",
+  "created_utc": "2026-10-07T04:54:17.149716+00:00",
+  "weights_path": "data/pretrained/convnext-tiny-imagenet1k-v1.pth",
+  "official_url": "https://download.pytorch.org/models/convnext_tiny-983f1562.pth",
+  "weight_enum": "ConvNeXt_Tiny_Weights.IMAGENET1K_V1",
+  "expected_filename_sha256_prefix": "983f1562",
+  "weights_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d",
+  "file_size_bytes": 114419221,
+  "torch_version": "2.12.0+cu126",
+  "torchvision_version": "0.27.0+cu126",
+  "torchvision_convnext_source_sha256": "c4ce8859498fdfe4d29fbf7f00f0385834a0ccbe494915ef225789c959a64588",
+  "encoder_state_sha256": "712dc4bd02d35026a00afa56e842b33f7100fcb22020bcec74190b4631641d43",
+  "encoder_state_tensor_count": 180,
+  "encoder_parameter_count": 27820128,
+  "strict_encoder_load": true,
+  "official_pooling_norm_transferred": true,
+  "discarded_image_net_classifier_tensors": [
+    "classifier.2.weight",
+    "classifier.2.bias"
+  ],
+  "all_encoder_parameters_frozen": true,
+  "encoder_eval": true,
+  "feature_shapes_for_640": {
+    "low": [
+      192,
+      80,
+      80
+    ],
+    "high": [
+      768,
+      20,
+      20
+    ],
+    "pooled": [
+      768
+    ]
+  },
+  "encoder_inventory": {
+    "parameter_count": 31085624,
+    "trainable_parameter_count": 3265496,
+    "frozen_encoder_parameter_count": 27820128,
+    "new_semantic_head_parameter_count": 21345,
+    "state_tensor_count": 510,
+    "original_state_tensor_count": 324,
+    "encoder_state_tensor_count": 180,
+    "new_head_state_tensor_count": 6,
+    "all_encoder_parameters_frozen": true,
+    "encoder_eval": true,
+    "all_encoder_modules_eval": true,
+    "new_semantic_heads_trainable": true,
+    "new_semantic_heads_zero": true,
+    "low_channels": 192,
+    "pooled_channels": 768,
+    "low_feature_grid_for_640": [
+      80,
+      80
+    ]
+  },
+  "image_preprocessing": "Existing full640 RGB/MEAN/STD; no224 centre crop",
+  "new_training_epochs": 0,
+  "source_val_or_test_inference": false,
+  "app_model_promoted": false
+}
