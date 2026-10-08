@@ -17,7 +17,8 @@ RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility
       'facility-presence-target-subtype-control','facility-presence-target-subtype-negative',
       'facility-presence-target-retention-control','facility-presence-target-retention-distill',
       'facility-presence-target-retention-strong','facility-presence-target-batchnorm-frozen',
-      'facility-presence-target-head-lr-low','facility-presence-target-semantic-features')
+      'facility-presence-target-head-lr-low','facility-presence-target-semantic-features',
+      'facility-presence-target-rc2119-positive-regions')
 NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강','원본19종 보조 학습',
        '작은 영역 비교: 기존 자료 대조군','작은 영역 비교: 맥락 crop 보강군',
        '콘크리트 사진 비교: 기존 자료 대조군','콘크리트 사진 비교: ConViD 양성 보강군',
@@ -29,7 +30,8 @@ NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실�
        '박락 음성 태그 비교: 기존 추출 대조군','박락 음성 태그 비교: 관련 표면 손상 보강군',
        '기존 항목 보존 비교: 증류 없는 대조군','기존 항목 보존 비교: 알려진 5항목 증류군',
        '보존 강도 후속 비교: 가중치4 학생','BN 통계 비교: 원본 통계로 학습',
-       '학습률 후속 비교: head 초기 학습률 감소','새 특징 비교: 고정 ConvNeXt 특징 연결')
+       '학습률 후속 비교: head 초기 학습률 감소','새 특징 비교: 고정 ConvNeXt 특징 연결',
+       'RC2119 양성 사진·위치 보강')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 RESOLUTION_RUNS=('facility-presence-target-resolution-control','facility-presence-target-resolution-highres')
@@ -40,6 +42,7 @@ RETENTION_STRENGTH_RUNS=('facility-presence-target-retention-strong',)
 BATCHNORM_RUNS=('facility-presence-target-batchnorm-frozen',)
 HEAD_LR_RUNS=('facility-presence-target-head-lr-low',)
 SEMANTIC_RUNS=('facility-presence-target-semantic-features',)
+RC_POSITIVE_RUNS=('facility-presence-target-rc2119-positive-regions',)
 
 
 def interrupted_training_attempts(root):
@@ -105,7 +108,7 @@ def main():
                         'operating_points':point.get('per_class',point.get('operating_points')) if point else None,
                         'test_executed':bool(test),'target_passed_test':test['target_passed'] if test else None,
                         'weights_sha256':selection['weights_sha256'] if selection else training.get('weights_sha256'),
-                        'validation_domains':training.get('validation_domains',['dacl','damsegment'])})
+                        'validation_domains':list(selection['validation_counts']) if selection else training.get('validation_domains',['dacl','damsegment'])})
     ensemble_name='facility-presence-target-ensemble'
     ensemble_path=ROOT/'reports'/f'{ensemble_name}-target-validation.json'
     if ensemble_path.exists():
@@ -131,6 +134,7 @@ def main():
     batchnorm_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in BATCHNORM_RUNS)
     head_lr_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in HEAD_LR_RUNS)
     semantic_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in SEMANTIC_RUNS)
+    rc_positive_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in RC_POSITIVE_RUNS)
     running=[{'run':e['run'],'epochs':e['epochs'],'best_full_photo_worst_error':e['worst_error']}
              for e in entries if e.get('status')=='running' and e.get('worst_error') is not None]
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
@@ -162,6 +166,10 @@ def main():
             'semantic_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':semantic_epochs,
                     'reused_control_run':HEAD_LR_RUNS[0],'reused_control_epochs_counted_as_new':0,
                     'scope':'Same original base and loss/teacher/LR/data; added fixed ImageNet ConvNeXt features with three zero-initialized learned heads. Epoch/draw budget matched, compute and model size not matched'},
+            'rc_positive_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':rc_positive_epochs,
+                    'reused_control_run':HEAD_LR_RUNS[0],'reused_control_epochs_counted_as_new':0,
+                    'selected_source_photos':200,'temporary_preflight_updates':2,'temporary_preflight_epochs_counted':0,
+                    'scope':'RC2119 explicit crack/spalling positives plus foreground-only loss package;704 of14248 draws replaced, absent labels/background unknown; full3-source VAL restored by reporting adapter'},
             'best_three_domain_validation_run':best['run'] if best else None,
             'best_three_domain_validation_worst_error':best['worst_error'] if best else None,
             'best_three_domain_scope':'Completed validation view/cutoff selection only; running rows reported separately',
@@ -209,6 +217,7 @@ def main():
                 lines.append(f"| {DOMAINS[domain]} | {LABELS[label]} | {m['fn']}/{m['tp']+m['fn']} | {m['fnr']*100:.2f}% | {m['fp']}/{m['fp']+m['tn']} | {m['fpr']*100:.2f}% |")
         lines += ['',f"보류 시험: {'실행됨' if e['test_executed'] else '미실행. 검증 목표 미달이면 시험으로 모델을 반복 선택하지 않는다.'}",'']
     lines+=['## 실제 자료와 적용 상태','',
+            '최신 [RC2119 자료 검사](FACILITY_RC_DATA_AUDIT_KO.md)에서 원본2,119쌍·배포자SHA·정렬·전체/국소 특징 중복을 확인하고 양성200장을 추가했다. [실제6epoch 결과](FACILITY_RC_POSITIVE_STUDY_RESULTS_KO.md)는 기존 대조22.02%→새 후보22.22%, 작은 손상 FN70→70이다. 새 자료·foreground 손실 묶음의 개선을 확인하지 못했으며 앱 프로필을 교체하지 않았다. 임시 검사2회는 완료epoch에 포함하지 않는다.','',
             'DACL 학습6,225/검증710/기존 보류975. 원래 Dam 학습2,009개만 새 train1,585/val424로 분리, 기존 보류491 유지.',
             'CODEBRIM: 공식 MD5 및 7,810파일 CRC 확인. 정답 불명52개 제외 후 train6,438/val611/test628, 고유 부모 사진ID1,522.',
             'CODEBRIM 부모 ID의 분리 교차 및 기존 자료와 정확한 픽셀 겹침은0. 같은 시설/장면 독립성을 증명한 수치는 아니다.',

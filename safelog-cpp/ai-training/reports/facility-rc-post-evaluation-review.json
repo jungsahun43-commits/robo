@@ -1,0 +1,70 @@
+{
+  "schema": "facility_rc_post_evaluation_review_v1",
+  "review_date": "2026-10-08",
+  "status": "passed",
+  "scope": "Read-only post-training probability, selected epoch6 operating-point and reporting review; no new training, inference or code-test claim",
+  "actual_completed_training_epochs": 6,
+  "new_training_epochs_for_this_review": 0,
+  "new_inference_for_this_review": false,
+  "source_test_used": false,
+  "final_validation_counts": {
+    "dacl": 710,
+    "damsegment": 424,
+    "codebrim": 611
+  },
+  "total_validation_photo_or_patch_rows": 1745,
+  "all_three_domains_exact_raw_probability_equality": true,
+  "raw_epoch6_operating_points_exactly_equal_complete_selection": true,
+  "preserved_two_domain_primary_thresholds_and_all_metrics_exactly_equal": true,
+  "original_training_metadata_sha256": "fd7f7c499cb276f30da326e0485b7af85be6d3f34cc49875d1019a3440ed3439",
+  "weights_sha256": "0b70218aead95a4ae06a0326c0ea8c50e646aa0c71d574647902b019eb349140",
+  "adapter_sha256": "87a0016ac8ab23cf5a04a460b3918b6d5b6675a36b4908b4a32adf42d379566b",
+  "comparison_sha256": "bcf5701e40f4b16c0f3d6ba9f7a80a051ac4fc17b8b7065fcdaa9ddc668fc6e8",
+  "technical_verification_sha256": "481cea05adf9b9d3377a5e366b752790e69ee221b9a38caf5e20fda05d5af433",
+  "preserved_incomplete_outputs_sha256": {
+    "ERROR-SIZE-AUDIT.json": "e2356ca4831b1a9ef2a54f31b7a5b2c53cbe9bc6cae0d5a6efe93404e921691d",
+    "TARGET-SELECTION.json": "1d7c5c1ba28d7c3d89b2e7276db4ca72d6bbee95a6cd6745e8c76d5d239d37ca",
+    "public-error-size-audit.json": "dff7740cbef2415b9249a240d2eed841bc2f375e3530d5874d91a95e36f0f6c2",
+    "public-target-validation.json": "1d7c5c1ba28d7c3d89b2e7276db4ca72d6bbee95a6cd6745e8c76d5d239d37ca"
+  },
+  "historical_background_status_sha256": "4facf3e9bc15285ab26f88c755a72e507c01a7b82552592772f5c63241e5469a",
+  "historical_background_report_failure_preserved": true,
+  "final_report_available_and_technical_verification_passed": true,
+  "probability_equality_checks": [
+    {
+      "domain": "dacl",
+      "photo_rows": 710,
+      "classes": 7,
+      "raw_validation_path": "runs/facility-presence-target-rc2119-positive-regions/validation-dacl.json",
+      "raw_validation_sha256": "acf57c27a16b4bad9cfafa9f203654d93d2a9eae903413652b01637f4c0a054c",
+      "standalone_cache_path": "runs/facility-presence-target-rc2119-positive-regions/target-validation-dacl-grid1.json",
+      "standalone_cache_sha256": "94d6f71d046b58a503c40517667516839231359c8f0f008744657251090eb024",
+      "all_raw_training_probabilities_exactly_equal_standalone_cache": true
+    },
+    {
+      "domain": "damsegment",
+      "photo_rows": 424,
+      "classes": 7,
+      "raw_validation_path": "runs/facility-presence-target-rc2119-positive-regions/validation-damsegment.json",
+      "raw_validation_sha256": "90647d90a2c53a62fd6b1a85dae75fc9fdf38ccc4d24f025c057c030e48186d8",
+      "standalone_cache_path": "runs/facility-presence-target-rc2119-positive-regions/target-validation-damsegment-grid1.json",
+      "standalone_cache_sha256": "337ac6743af827f2dc18216cc0c01c5080a555b9d60c73d7fd6658b0e7032b5e",
+      "all_raw_training_probabilities_exactly_equal_standalone_cache": true
+    },
+    {
+      "domain": "codebrim",
+      "photo_rows": 611,
+      "classes": 7,
+      "raw_validation_path": "runs/facility-presence-target-rc2119-positive-regions/validation-codebrim.json",
+      "raw_validation_sha256": "ccb48f4ac25538808492531266422fb4cf4315b117a9765c5d17a1a3df03eb49",
+      "standalone_cache_path": "runs/facility-presence-target-rc2119-positive-regions/target-validation-codebrim-grid1.json",
+      "standalone_cache_sha256": "3fcab7f4de9430df48c5fc01f54bcdeb8a570e2b9c1d0195d26f562898584d82",
+      "all_raw_training_probabilities_exactly_equal_standalone_cache": true
+    }
+  ],
+  "limitations": [
+    "Exact values match stored actual training outputs; this is not an independent rerun on new field photographs",
+    "The historical failed report status records the earlier incomplete two-source reporting attempt and is intentionally unchanged",
+    "The original two-source probability files had no separate before-adapter snapshot; equality to stored pre-adapter training probabilities plus unchanged original two-source thresholds/metrics is checked here"
+  ]
+}

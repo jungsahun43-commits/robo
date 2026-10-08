@@ -1,0 +1,2857 @@
+{
+  "actual_new_training_epochs": 6,
+  "app_model_promoted": false,
+  "comparison_scope": "One new data+foreground-positive-loss package vs completed historical same-budget base recipe; not an isolated data-only or pixel-loss-only causal comparison",
+  "comparisons": {
+    "error_rate_changes": [
+      {
+        "class": "concrete_crack",
+        "control_minus_initializer_fnr_pp": -0.9478672985781977,
+        "control_minus_initializer_fpr_pp": -0.6012024048096198,
+        "domain": "dacl",
+        "treatment_minus_control_fnr_pp": 0.0,
+        "treatment_minus_control_fpr_pp": -0.4008016032064132,
+        "treatment_minus_initializer_fnr_pp": -0.9478672985781977,
+        "treatment_minus_initializer_fpr_pp": -1.002004008016033
+      },
+      {
+        "class": "concrete_crack",
+        "control_minus_initializer_fnr_pp": 0.0,
+        "control_minus_initializer_fpr_pp": 0.0,
+        "domain": "damsegment",
+        "treatment_minus_control_fnr_pp": 0.0,
+        "treatment_minus_control_fpr_pp": 0.0,
+        "treatment_minus_initializer_fnr_pp": 0.0,
+        "treatment_minus_initializer_fpr_pp": 0.0
+      },
+      {
+        "class": "concrete_crack",
+        "control_minus_initializer_fnr_pp": -1.342281879194631,
+        "control_minus_initializer_fpr_pp": 0.4329004329004321,
+        "domain": "codebrim",
+        "treatment_minus_control_fnr_pp": 0.0,
+        "treatment_minus_control_fpr_pp": 0.0,
+        "treatment_minus_initializer_fnr_pp": -1.342281879194631,
+        "treatment_minus_initializer_fpr_pp": 0.4329004329004321
+      },
+      {
+        "class": "concrete_spalling",
+        "control_minus_initializer_fnr_pp": -0.9259259259259245,
+        "control_minus_initializer_fpr_pp": -0.2590673575129515,
+        "domain": "dacl",
+        "treatment_minus_control_fnr_pp": 0.9259259259259245,
+        "treatment_minus_control_fpr_pp": 0.0,
+        "treatment_minus_initializer_fnr_pp": 0.0,
+        "treatment_minus_initializer_fpr_pp": -0.2590673575129515
+      },
+      {
+        "class": "concrete_spalling",
+        "control_minus_initializer_fnr_pp": 1.7241379310344835,
+        "control_minus_initializer_fpr_pp": -0.5464480874316939,
+        "domain": "damsegment",
+        "treatment_minus_control_fnr_pp": 0.0,
+        "treatment_minus_control_fpr_pp": 0.0,
+        "treatment_minus_initializer_fnr_pp": 1.7241379310344835,
+        "treatment_minus_initializer_fpr_pp": -0.5464480874316939
+      },
+      {
+        "class": "concrete_spalling",
+        "control_minus_initializer_fnr_pp": 1.428571428571429,
+        "control_minus_initializer_fpr_pp": -1.0615711252653925,
+        "domain": "codebrim",
+        "treatment_minus_control_fnr_pp": 0.0,
+        "treatment_minus_control_fpr_pp": -0.2123142250530785,
+        "treatment_minus_initializer_fnr_pp": 1.428571428571429,
+        "treatment_minus_initializer_fpr_pp": -1.273885350318471
+      }
+    ],
+    "maximum_error_control_minus_initializer_pp": -0.2590673575129515,
+    "maximum_error_treatment_minus_control_pp": 0.2014968336211842,
+    "maximum_error_treatment_minus_initializer_pp": -0.05757052389176731,
+    "ranking_ap_changes": [
+      {
+        "class": "concrete_crack",
+        "control_minus_initializer_ap": 0.011932015025843623,
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.0025849311598480362,
+        "treatment_minus_initializer_ap": 0.01451694618569166
+      },
+      {
+        "class": "concrete_spalling",
+        "control_minus_initializer_ap": -0.0015384122779692477,
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.0005621834814261151,
+        "treatment_minus_initializer_ap": -0.0009762287965431327
+      },
+      {
+        "class": "rust_stain",
+        "control_minus_initializer_ap": 0.00488899360300854,
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.0005180321850672964,
+        "treatment_minus_initializer_ap": 0.004370961417941244
+      },
+      {
+        "class": "exposed_rebar",
+        "control_minus_initializer_ap": 0.011905347301533586,
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.00019018349470112383,
+        "treatment_minus_initializer_ap": 0.01209553079623471
+      },
+      {
+        "class": "wet_surface",
+        "control_minus_initializer_ap": 0.007817763839315206,
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.0006973585378333702,
+        "treatment_minus_initializer_ap": 0.007120405301481836
+      },
+      {
+        "class": "efflorescence",
+        "control_minus_initializer_ap": 0.005562077136970878,
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.004338126881696103,
+        "treatment_minus_initializer_ap": 0.001223950255274775
+      },
+      {
+        "class": "surface_cavity",
+        "control_minus_initializer_ap": -0.0014209092151504787,
+        "domain": "dacl",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.005390972056792842,
+        "treatment_minus_initializer_ap": 0.003970062841642363
+      },
+      {
+        "class": "concrete_crack",
+        "control_minus_initializer_ap": 7.460438553130722e-05,
+        "domain": "damsegment",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 1.3969103100475166e-05,
+        "treatment_minus_initializer_ap": 8.857348863178238e-05
+      },
+      {
+        "class": "concrete_spalling",
+        "control_minus_initializer_ap": 0.006606094978108712,
+        "domain": "damsegment",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.004624724795865398,
+        "treatment_minus_initializer_ap": 0.01123081977397411
+      },
+      {
+        "class": "rust_stain",
+        "control_minus_initializer_ap": null,
+        "domain": "damsegment",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "exposed_rebar",
+        "control_minus_initializer_ap": null,
+        "domain": "damsegment",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "wet_surface",
+        "control_minus_initializer_ap": null,
+        "domain": "damsegment",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "efflorescence",
+        "control_minus_initializer_ap": null,
+        "domain": "damsegment",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "surface_cavity",
+        "control_minus_initializer_ap": null,
+        "domain": "damsegment",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "concrete_crack",
+        "control_minus_initializer_ap": 0.00407475550353098,
+        "domain": "codebrim",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.0016003437488827377,
+        "treatment_minus_initializer_ap": 0.005675099252413718
+      },
+      {
+        "class": "concrete_spalling",
+        "control_minus_initializer_ap": 0.0063311290618897065,
+        "domain": "codebrim",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.0016854011603343322,
+        "treatment_minus_initializer_ap": 0.008016530222224039
+      },
+      {
+        "class": "rust_stain",
+        "control_minus_initializer_ap": 0.01706418680525834,
+        "domain": "codebrim",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.0006777175168497518,
+        "treatment_minus_initializer_ap": 0.017741904322108093
+      },
+      {
+        "class": "exposed_rebar",
+        "control_minus_initializer_ap": 0.0030491544999164955,
+        "domain": "codebrim",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": 0.0007635742498325326,
+        "treatment_minus_initializer_ap": 0.003812728749749028
+      },
+      {
+        "class": "wet_surface",
+        "control_minus_initializer_ap": null,
+        "domain": "codebrim",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "treatment_minus_initializer_ap": null
+      },
+      {
+        "class": "efflorescence",
+        "control_minus_initializer_ap": 0.018826205450910183,
+        "domain": "codebrim",
+        "status": "measured_on_asserted_source_labels",
+        "treatment_minus_control_ap": -0.0038714605877583352,
+        "treatment_minus_initializer_ap": 0.014954744863151848
+      },
+      {
+        "class": "surface_cavity",
+        "control_minus_initializer_ap": null,
+        "domain": "codebrim",
+        "status": "not_measured_source_labels_unknown",
+        "treatment_minus_control_ap": null,
+        "treatment_minus_initializer_ap": null
+      }
+    ],
+    "small_area_changes": [
+      {
+        "class": "concrete_crack",
+        "control_minus_initializer_fnr_pp": 1.0752688172043001,
+        "treatment_minus_control_fnr_pp": 0.0,
+        "treatment_minus_initializer_fnr_pp": 1.0752688172043001
+      },
+      {
+        "class": "concrete_spalling",
+        "control_minus_initializer_fnr_pp": -1.904761904761909,
+        "treatment_minus_control_fnr_pp": 0.0,
+        "treatment_minus_initializer_fnr_pp": -1.904761904761909
+      }
+    ]
+  },
+  "error_rows": [
+    {
+      "class": "concrete_crack",
+      "domain": "dacl",
+      "fn": 47,
+      "fnr": 0.22274881516587677,
+      "fnr_wilson95_descriptive": [
+        0.17184701458856427,
+        0.2835653595303074
+      ],
+      "fp": 110,
+      "fpr": 0.22044088176352705,
+      "fpr_wilson95_descriptive": [
+        0.18628078195709047,
+        0.25887236700096455
+      ],
+      "negative_photos": 499,
+      "positive_photos": 211,
+      "run": "facility-presence-target-roi-control",
+      "tn": 389,
+      "tp": 164
+    },
+    {
+      "class": "concrete_crack",
+      "domain": "damsegment",
+      "fn": 2,
+      "fnr": 0.008064516129032258,
+      "fnr_wilson95_descriptive": [
+        0.0022143743392366525,
+        0.028922114694036785
+      ],
+      "fp": 1,
+      "fpr": 0.005681818181818182,
+      "fpr_wilson95_descriptive": [
+        0.0010036855324105573,
+        0.03147747236632618
+      ],
+      "negative_photos": 176,
+      "positive_photos": 248,
+      "run": "facility-presence-target-roi-control",
+      "tn": 175,
+      "tp": 246
+    },
+    {
+      "class": "concrete_crack",
+      "domain": "codebrim",
+      "fn": 11,
+      "fnr": 0.0738255033557047,
+      "fnr_wilson95_descriptive": [
+        0.04172033311633155,
+        0.12735328748428063
+      ],
+      "fp": 58,
+      "fpr": 0.12554112554112554,
+      "fpr_wilson95_descriptive": [
+        0.09838308975238502,
+        0.15887494632727184
+      ],
+      "negative_photos": 462,
+      "positive_photos": 149,
+      "run": "facility-presence-target-roi-control",
+      "tn": 404,
+      "tp": 138
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "dacl",
+      "fn": 72,
+      "fnr": 0.2222222222222222,
+      "fnr_wilson95_descriptive": [
+        0.18035690686403077,
+        0.27059722002555475
+      ],
+      "fp": 86,
+      "fpr": 0.22279792746113988,
+      "fpr_wilson95_descriptive": [
+        0.18413195127229665,
+        0.2669269467541743
+      ],
+      "negative_photos": 386,
+      "positive_photos": 324,
+      "run": "facility-presence-target-roi-control",
+      "tn": 300,
+      "tp": 252
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "damsegment",
+      "fn": 11,
+      "fnr": 0.1896551724137931,
+      "fnr_wilson95_descriptive": [
+        0.10934251661120264,
+        0.3085237387049922
+      ],
+      "fp": 8,
+      "fpr": 0.02185792349726776,
+      "fpr_wilson95_descriptive": [
+        0.01111646133459836,
+        0.042532090896301264
+      ],
+      "negative_photos": 366,
+      "positive_photos": 58,
+      "run": "facility-presence-target-roi-control",
+      "tn": 358,
+      "tp": 47
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "codebrim",
+      "fn": 15,
+      "fnr": 0.10714285714285714,
+      "fnr_wilson95_descriptive": [
+        0.0660121170081319,
+        0.1692570404249783
+      ],
+      "fp": 42,
+      "fpr": 0.08917197452229299,
+      "fpr_wilson95_descriptive": [
+        0.06664760092881244,
+        0.11834353071932807
+      ],
+      "negative_photos": 471,
+      "positive_photos": 140,
+      "run": "facility-presence-target-roi-control",
+      "tn": 429,
+      "tp": 125
+    },
+    {
+      "class": "concrete_crack",
+      "domain": "dacl",
+      "fn": 45,
+      "fnr": 0.2132701421800948,
+      "fnr_wilson95_descriptive": [
+        0.1633845331406176,
+        0.27340946060624977
+      ],
+      "fp": 107,
+      "fpr": 0.21442885771543085,
+      "fpr_wilson95_descriptive": [
+        0.18067126608820136,
+        0.25254969252486553
+      ],
+      "negative_photos": 499,
+      "positive_photos": 211,
+      "run": "facility-presence-target-head-lr-low",
+      "tn": 392,
+      "tp": 166
+    },
+    {
+      "class": "concrete_crack",
+      "domain": "damsegment",
+      "fn": 2,
+      "fnr": 0.008064516129032258,
+      "fnr_wilson95_descriptive": [
+        0.0022143743392366525,
+        0.028922114694036785
+      ],
+      "fp": 1,
+      "fpr": 0.005681818181818182,
+      "fpr_wilson95_descriptive": [
+        0.0010036855324105573,
+        0.03147747236632618
+      ],
+      "negative_photos": 176,
+      "positive_photos": 248,
+      "run": "facility-presence-target-head-lr-low",
+      "tn": 175,
+      "tp": 246
+    },
+    {
+      "class": "concrete_crack",
+      "domain": "codebrim",
+      "fn": 9,
+      "fnr": 0.06040268456375839,
+      "fnr_wilson95_descriptive": [
+        0.032100224500152576,
+        0.11080248651307728
+      ],
+      "fp": 60,
+      "fpr": 0.12987012987012986,
+      "fpr_wilson95_descriptive": [
+        0.10224370866570681,
+        0.16360093971360717
+      ],
+      "negative_photos": 462,
+      "positive_photos": 149,
+      "run": "facility-presence-target-head-lr-low",
+      "tn": 402,
+      "tp": 140
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "dacl",
+      "fn": 69,
+      "fnr": 0.21296296296296297,
+      "fnr_wilson95_descriptive": [
+        0.17188232124707756,
+        0.26077027653882745
+      ],
+      "fp": 85,
+      "fpr": 0.22020725388601037,
+      "fpr_wilson95_descriptive": [
+        0.1817372029296174,
+        0.2641914044242038
+      ],
+      "negative_photos": 386,
+      "positive_photos": 324,
+      "run": "facility-presence-target-head-lr-low",
+      "tn": 301,
+      "tp": 255
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "damsegment",
+      "fn": 12,
+      "fnr": 0.20689655172413793,
+      "fnr_wilson95_descriptive": [
+        0.12251483969490558,
+        0.3276921792148341
+      ],
+      "fp": 6,
+      "fpr": 0.01639344262295082,
+      "fpr_wilson95_descriptive": [
+        0.007534363607403727,
+        0.03529874350613476
+      ],
+      "negative_photos": 366,
+      "positive_photos": 58,
+      "run": "facility-presence-target-head-lr-low",
+      "tn": 360,
+      "tp": 46
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "codebrim",
+      "fn": 17,
+      "fnr": 0.12142857142857143,
+      "fnr_wilson95_descriptive": [
+        0.07721261463005077,
+        0.18586493707821902
+      ],
+      "fp": 37,
+      "fpr": 0.07855626326963906,
+      "fpr_wilson95_descriptive": [
+        0.057527665332015185,
+        0.10640380563519873
+      ],
+      "negative_photos": 471,
+      "positive_photos": 140,
+      "run": "facility-presence-target-head-lr-low",
+      "tn": 434,
+      "tp": 123
+    },
+    {
+      "class": "concrete_crack",
+      "domain": "dacl",
+      "fn": 45,
+      "fnr": 0.2132701421800948,
+      "fnr_wilson95_descriptive": [
+        0.1633845331406176,
+        0.27340946060624977
+      ],
+      "fp": 105,
+      "fpr": 0.21042084168336672,
+      "fpr_wilson95_descriptive": [
+        0.17693783196608892,
+        0.24832833308365265
+      ],
+      "negative_photos": 499,
+      "positive_photos": 211,
+      "run": "facility-presence-target-rc2119-positive-regions",
+      "tn": 394,
+      "tp": 166
+    },
+    {
+      "class": "concrete_crack",
+      "domain": "damsegment",
+      "fn": 2,
+      "fnr": 0.008064516129032258,
+      "fnr_wilson95_descriptive": [
+        0.0022143743392366525,
+        0.028922114694036785
+      ],
+      "fp": 1,
+      "fpr": 0.005681818181818182,
+      "fpr_wilson95_descriptive": [
+        0.0010036855324105573,
+        0.03147747236632618
+      ],
+      "negative_photos": 176,
+      "positive_photos": 248,
+      "run": "facility-presence-target-rc2119-positive-regions",
+      "tn": 175,
+      "tp": 246
+    },
+    {
+      "class": "concrete_crack",
+      "domain": "codebrim",
+      "fn": 9,
+      "fnr": 0.06040268456375839,
+      "fnr_wilson95_descriptive": [
+        0.032100224500152576,
+        0.11080248651307728
+      ],
+      "fp": 60,
+      "fpr": 0.12987012987012986,
+      "fpr_wilson95_descriptive": [
+        0.10224370866570681,
+        0.16360093971360717
+      ],
+      "negative_photos": 462,
+      "positive_photos": 149,
+      "run": "facility-presence-target-rc2119-positive-regions",
+      "tn": 402,
+      "tp": 140
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "dacl",
+      "fn": 72,
+      "fnr": 0.2222222222222222,
+      "fnr_wilson95_descriptive": [
+        0.18035690686403077,
+        0.27059722002555475
+      ],
+      "fp": 85,
+      "fpr": 0.22020725388601037,
+      "fpr_wilson95_descriptive": [
+        0.1817372029296174,
+        0.2641914044242038
+      ],
+      "negative_photos": 386,
+      "positive_photos": 324,
+      "run": "facility-presence-target-rc2119-positive-regions",
+      "tn": 301,
+      "tp": 252
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "damsegment",
+      "fn": 12,
+      "fnr": 0.20689655172413793,
+      "fnr_wilson95_descriptive": [
+        0.12251483969490558,
+        0.3276921792148341
+      ],
+      "fp": 6,
+      "fpr": 0.01639344262295082,
+      "fpr_wilson95_descriptive": [
+        0.007534363607403727,
+        0.03529874350613476
+      ],
+      "negative_photos": 366,
+      "positive_photos": 58,
+      "run": "facility-presence-target-rc2119-positive-regions",
+      "tn": 360,
+      "tp": 46
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "codebrim",
+      "fn": 17,
+      "fnr": 0.12142857142857143,
+      "fnr_wilson95_descriptive": [
+        0.07721261463005077,
+        0.18586493707821902
+      ],
+      "fp": 36,
+      "fpr": 0.07643312101910828,
+      "fpr_wilson95_descriptive": [
+        0.05571804961987248,
+        0.10400148921115612
+      ],
+      "negative_photos": 471,
+      "positive_photos": 140,
+      "run": "facility-presence-target-rc2119-positive-regions",
+      "tn": 435,
+      "tp": 123
+    }
+  ],
+  "experiments": [
+    {
+      "actual_epochs": 6,
+      "actual_sampling_history": [
+        {
+          "domain_counts": {
+            "codebrim": 2809,
+            "dacl": 9944,
+            "damsegment": 1495
+          },
+          "epoch": 1,
+          "row_type_counts": {
+            "crop": 4188,
+            "full": 10060
+          }
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2863,
+            "dacl": 9945,
+            "damsegment": 1440
+          },
+          "epoch": 2,
+          "row_type_counts": {
+            "crop": 4188,
+            "full": 10060
+          }
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2839,
+            "dacl": 10019,
+            "damsegment": 1390
+          },
+          "epoch": 3,
+          "row_type_counts": {
+            "crop": 4235,
+            "full": 10013
+          }
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2902,
+            "dacl": 9888,
+            "damsegment": 1458
+          },
+          "epoch": 4,
+          "row_type_counts": {
+            "crop": 4189,
+            "full": 10059
+          }
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2900,
+            "dacl": 9907,
+            "damsegment": 1441
+          },
+          "epoch": 5,
+          "row_type_counts": {
+            "crop": 4057,
+            "full": 10191
+          }
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2792,
+            "dacl": 10034,
+            "damsegment": 1422
+          },
+          "epoch": 6,
+          "row_type_counts": {
+            "crop": 4197,
+            "full": 10051
+          }
+        }
+      ],
+      "best_epoch": 6,
+      "configured_grids": [
+        1
+      ],
+      "expected_label_sampling": {
+        "concrete_crack": {
+          "negative": 0.6303537728339692,
+          "positive": 0.3695514735040612,
+          "unknown": 9.475366196983197e-05
+        },
+        "concrete_spalling": {
+          "negative": 0.579673865344606,
+          "positive": 0.4201726329537338,
+          "unknown": 0.00015350170166037846
+        },
+        "efflorescence": {
+          "negative": 0.754454529520269,
+          "positive": 0.1451698714546736,
+          "unknown": 0.10037559902505767
+        },
+        "exposed_rebar": {
+          "negative": 0.7846511793293323,
+          "positive": 0.11529577783709329,
+          "unknown": 0.10005304283357465
+        },
+        "rust_stain": {
+          "negative": 0.5780487596472467,
+          "positive": 0.3213927142090813,
+          "unknown": 0.10055852614367232
+        },
+        "surface_cavity": {
+          "negative": 0.5919264038151378,
+          "positive": 0.10782262756435362,
+          "unknown": 0.30025096862050876
+        },
+        "wet_surface": {
+          "negative": 0.6131895860103063,
+          "positive": 0.08665274226006249,
+          "unknown": 0.3001576717296314
+        }
+      },
+      "expected_sampling": {
+        "codebrim": {
+          "crop": 0.0,
+          "full": 0.20000000000000004
+        },
+        "dacl": {
+          "crop": 0.26728059639204244,
+          "full": 0.43271940360795774
+        },
+        "damsegment": {
+          "crop": 0.028037950646690377,
+          "full": 0.07196204935330967
+        }
+      },
+      "per_class": {
+        "concrete_crack": {
+          "domains": {
+            "codebrim": {
+              "fn": 11,
+              "fnr": 0.0738255033557047,
+              "fp": 58,
+              "fpr": 0.12554112554112554,
+              "negative_photos": 462,
+              "positive_photos": 149,
+              "tn": 404,
+              "tp": 138
+            },
+            "dacl": {
+              "fn": 47,
+              "fnr": 0.22274881516587677,
+              "fp": 110,
+              "fpr": 0.22044088176352705,
+              "negative_photos": 499,
+              "positive_photos": 211,
+              "tn": 389,
+              "tp": 164
+            },
+            "damsegment": {
+              "fn": 2,
+              "fnr": 0.008064516129032258,
+              "fp": 1,
+              "fpr": 0.005681818181818182,
+              "negative_photos": 176,
+              "positive_photos": 248,
+              "tn": 175,
+              "tp": 246
+            }
+          },
+          "threshold": 0.2898597717285156
+        },
+        "concrete_spalling": {
+          "domains": {
+            "codebrim": {
+              "fn": 15,
+              "fnr": 0.10714285714285714,
+              "fp": 42,
+              "fpr": 0.08917197452229299,
+              "negative_photos": 471,
+              "positive_photos": 140,
+              "tn": 429,
+              "tp": 125
+            },
+            "dacl": {
+              "fn": 72,
+              "fnr": 0.2222222222222222,
+              "fp": 86,
+              "fpr": 0.22279792746113988,
+              "negative_photos": 386,
+              "positive_photos": 324,
+              "tn": 300,
+              "tp": 252
+            },
+            "damsegment": {
+              "fn": 11,
+              "fnr": 0.1896551724137931,
+              "fp": 8,
+              "fpr": 0.02185792349726776,
+              "negative_photos": 366,
+              "positive_photos": 58,
+              "tn": 358,
+              "tp": 47
+            }
+          },
+          "threshold": 0.4649081826210022
+        }
+      },
+      "provenance": {
+        "SPLIT.json": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+        "TARGET-SELECTION.json": "ce7ba26db8b5f383900a00fb46493bcc39268452b6cafb192280e2d7acd6fdad",
+        "TRAINING.json": "f92448d7307b4552ad95f52f7af7c9b5f54a60ce39f6322a5ffed96e88cdadb9",
+        "VALIDATION.json": "dc54e1f6d1f3c7b1958019da0f60b3f77be96dbb709e88c15b0f3bceba316e6c",
+        "history.json": "dea16aa67612b0306eb57272710956a4f923be89ac2e21bd73d0c68106575bbb"
+      },
+      "ranking_ap": {
+        "codebrim": {
+          "concrete_crack": {
+            "ap": 0.9394068402360061,
+            "cpu_recomputed_ap": 0.9394068382899042,
+            "cpu_recomputed_minus_saved_ap": -1.946101835237357e-09,
+            "known_photos": 611,
+            "positive_photos": 149,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.9095550380671625,
+            "cpu_recomputed_ap": 0.909555038821343,
+            "cpu_recomputed_minus_saved_ap": 7.541804958322018e-10,
+            "known_photos": 611,
+            "positive_photos": 140,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": 0.8297829106579927,
+            "cpu_recomputed_ap": 0.8297829128797419,
+            "cpu_recomputed_minus_saved_ap": 2.221749229036618e-09,
+            "known_photos": 611,
+            "positive_photos": 141,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.9660424389173996,
+            "cpu_recomputed_ap": 0.9660424305669836,
+            "cpu_recomputed_minus_saved_ap": -8.35041602531561e-09,
+            "known_photos": 611,
+            "positive_photos": 142,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8768946957775418,
+            "cpu_recomputed_ap": 0.8768946891315931,
+            "cpu_recomputed_minus_saved_ap": -6.645948680272795e-09,
+            "known_photos": 611,
+            "positive_photos": 146,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "wet_surface": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        },
+        "dacl": {
+          "concrete_crack": {
+            "ap": 0.7967034789345012,
+            "cpu_recomputed_ap": 0.7967034782477711,
+            "cpu_recomputed_minus_saved_ap": -6.867301172164275e-10,
+            "known_photos": 710,
+            "positive_photos": 211,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.8193860678486287,
+            "cpu_recomputed_ap": 0.8193860673208596,
+            "cpu_recomputed_minus_saved_ap": -5.277690506844124e-10,
+            "known_photos": 710,
+            "positive_photos": 324,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": 0.7545079582755292,
+            "cpu_recomputed_ap": 0.7545079568386618,
+            "cpu_recomputed_minus_saved_ap": -1.4368674028375494e-09,
+            "known_photos": 710,
+            "positive_photos": 159,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.7010134084995547,
+            "cpu_recomputed_ap": 0.7010134076938195,
+            "cpu_recomputed_minus_saved_ap": -8.057352562929054e-10,
+            "known_photos": 710,
+            "positive_photos": 80,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8771424675301529,
+            "cpu_recomputed_ap": 0.8771424684393625,
+            "cpu_recomputed_minus_saved_ap": 9.092095965002045e-10,
+            "known_photos": 710,
+            "positive_photos": 366,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": 0.6044535413567332,
+            "cpu_recomputed_ap": 0.6044535399705335,
+            "cpu_recomputed_minus_saved_ap": -1.3861997105735213e-09,
+            "known_photos": 710,
+            "positive_photos": 106,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "wet_surface": {
+            "ap": 0.5126998044734818,
+            "cpu_recomputed_ap": 0.5126998050598585,
+            "cpu_recomputed_minus_saved_ap": 5.863766139313498e-10,
+            "known_photos": 710,
+            "positive_photos": 96,
+            "status": "measured_on_asserted_source_labels"
+          }
+        },
+        "damsegment": {
+          "concrete_crack": {
+            "ap": 0.9997504472515859,
+            "cpu_recomputed_ap": 0.9997504470135928,
+            "cpu_recomputed_minus_saved_ap": -2.3799306969607414e-10,
+            "known_photos": 424,
+            "positive_photos": 248,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.8736213439816796,
+            "cpu_recomputed_ap": 0.8736213427331601,
+            "cpu_recomputed_minus_saved_ap": -1.2485195099998236e-09,
+            "known_photos": 424,
+            "positive_photos": 58,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "exposed_rebar": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "rust_stain": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "wet_surface": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        }
+      },
+      "run": "facility-presence-target-roi-control",
+      "selected_grid": 1,
+      "small_dacl_polygon_area_below_one_percent": {
+        "concrete_crack": {
+          "bins": [
+            {
+              "false_negatives": 4,
+              "fnr": 0.5714285714285714,
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 7
+            },
+            {
+              "false_negatives": 25,
+              "fnr": 0.29069767441860467,
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 86
+            },
+            {
+              "false_negatives": 16,
+              "fnr": 0.17582417582417584,
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 91
+            },
+            {
+              "false_negatives": 2,
+              "fnr": 0.07407407407407407,
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 27
+            }
+          ],
+          "false_negatives": 29,
+          "fnr": 0.3118279569892473,
+          "positive_photos": 93
+        },
+        "concrete_spalling": {
+          "bins": [
+            {
+              "false_negatives": 3,
+              "fnr": 0.23076923076923078,
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 13
+            },
+            {
+              "false_negatives": 39,
+              "fnr": 0.42391304347826086,
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 92
+            },
+            {
+              "false_negatives": 21,
+              "fnr": 0.17796610169491525,
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 118
+            },
+            {
+              "false_negatives": 9,
+              "fnr": 0.0891089108910891,
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 101
+            }
+          ],
+          "false_negatives": 42,
+          "fnr": 0.4,
+          "positive_photos": 105
+        }
+      },
+      "target_passed": false,
+      "test_executed": false,
+      "test_result": null,
+      "title": "추가 학습 전 원본",
+      "weights_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+      "worst_error": 0.22279792746113988
+    },
+    {
+      "actual_epochs": 6,
+      "actual_sampling_history": [
+        {
+          "domain_counts": {
+            "codebrim": 2875,
+            "dacl": 9961,
+            "damsegment": 1412
+          },
+          "epoch": 1,
+          "row_type_counts": {
+            "crop": 4187,
+            "full": 10061
+          }
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2929,
+            "dacl": 9910,
+            "damsegment": 1409
+          },
+          "epoch": 2,
+          "row_type_counts": {
+            "crop": 4172,
+            "full": 10076
+          }
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2797,
+            "dacl": 10002,
+            "damsegment": 1449
+          },
+          "epoch": 3,
+          "row_type_counts": {
+            "crop": 4244,
+            "full": 10004
+          }
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2839,
+            "dacl": 9953,
+            "damsegment": 1456
+          },
+          "epoch": 4,
+          "row_type_counts": {
+            "crop": 4199,
+            "full": 10049
+          }
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2863,
+            "dacl": 9984,
+            "damsegment": 1401
+          },
+          "epoch": 5,
+          "row_type_counts": {
+            "crop": 4276,
+            "full": 9972
+          }
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2875,
+            "dacl": 9910,
+            "damsegment": 1463
+          },
+          "epoch": 6,
+          "row_type_counts": {
+            "crop": 4174,
+            "full": 10074
+          }
+        }
+      ],
+      "best_epoch": 6,
+      "configured_grids": [
+        1
+      ],
+      "expected_label_sampling": {
+        "concrete_crack": {
+          "negative": 0.6303537728339692,
+          "positive": 0.3695514735040612,
+          "unknown": 9.475366196983197e-05
+        },
+        "concrete_spalling": {
+          "negative": 0.579673865344606,
+          "positive": 0.4201726329537338,
+          "unknown": 0.00015350170166037846
+        },
+        "efflorescence": {
+          "negative": 0.754454529520269,
+          "positive": 0.1451698714546736,
+          "unknown": 0.10037559902505767
+        },
+        "exposed_rebar": {
+          "negative": 0.7846511793293323,
+          "positive": 0.11529577783709329,
+          "unknown": 0.10005304283357465
+        },
+        "rust_stain": {
+          "negative": 0.5780487596472467,
+          "positive": 0.3213927142090813,
+          "unknown": 0.10055852614367232
+        },
+        "surface_cavity": {
+          "negative": 0.5919264038151378,
+          "positive": 0.10782262756435362,
+          "unknown": 0.30025096862050876
+        },
+        "wet_surface": {
+          "negative": 0.6131895860103063,
+          "positive": 0.08665274226006249,
+          "unknown": 0.3001576717296314
+        }
+      },
+      "expected_sampling": {
+        "codebrim": {
+          "crop": 0.0,
+          "full": 0.20000000000000004
+        },
+        "dacl": {
+          "crop": 0.26728059639204244,
+          "full": 0.43271940360795774
+        },
+        "damsegment": {
+          "crop": 0.028037950646690377,
+          "full": 0.07196204935330967
+        }
+      },
+      "per_class": {
+        "concrete_crack": {
+          "domains": {
+            "codebrim": {
+              "fn": 9,
+              "fnr": 0.06040268456375839,
+              "fp": 60,
+              "fpr": 0.12987012987012986,
+              "negative_photos": 462,
+              "positive_photos": 149,
+              "tn": 402,
+              "tp": 140
+            },
+            "dacl": {
+              "fn": 45,
+              "fnr": 0.2132701421800948,
+              "fp": 107,
+              "fpr": 0.21442885771543085,
+              "negative_photos": 499,
+              "positive_photos": 211,
+              "tn": 392,
+              "tp": 166
+            },
+            "damsegment": {
+              "fn": 2,
+              "fnr": 0.008064516129032258,
+              "fp": 1,
+              "fpr": 0.005681818181818182,
+              "negative_photos": 176,
+              "positive_photos": 248,
+              "tn": 175,
+              "tp": 246
+            }
+          },
+          "threshold": 0.263308048248291
+        },
+        "concrete_spalling": {
+          "domains": {
+            "codebrim": {
+              "fn": 17,
+              "fnr": 0.12142857142857143,
+              "fp": 37,
+              "fpr": 0.07855626326963906,
+              "negative_photos": 471,
+              "positive_photos": 140,
+              "tn": 434,
+              "tp": 123
+            },
+            "dacl": {
+              "fn": 69,
+              "fnr": 0.21296296296296297,
+              "fp": 85,
+              "fpr": 0.22020725388601037,
+              "negative_photos": 386,
+              "positive_photos": 324,
+              "tn": 301,
+              "tp": 255
+            },
+            "damsegment": {
+              "fn": 12,
+              "fnr": 0.20689655172413793,
+              "fp": 6,
+              "fpr": 0.01639344262295082,
+              "negative_photos": 366,
+              "positive_photos": 58,
+              "tn": 360,
+              "tp": 46
+            }
+          },
+          "threshold": 0.44011878967285156
+        }
+      },
+      "provenance": {
+        "SPLIT.json": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+        "TARGET-SELECTION.json": "3841e092e43c6d95484f47c5d3c207a8b2b0e904eb75fe65acee42c23de525a7",
+        "TRAINING.json": "e3f1ee436565a0832b5bc1302dc61d8ef4277621e2e12e6a2e559507c0e6e89a",
+        "VALIDATION.json": "8b2fb26adf38e433af6a0b32dbbb11d44710677922a041ee90a77749a41a257d",
+        "history.json": "773c73e28a1d8b75fddb40c44368681c76bbcb7cb3ab0c1167fdfb8de3ce286f"
+      },
+      "ranking_ap": {
+        "codebrim": {
+          "concrete_crack": {
+            "ap": 0.943481595739537,
+            "cpu_recomputed_ap": 0.9434815962670612,
+            "cpu_recomputed_minus_saved_ap": 5.275241354851801e-10,
+            "known_photos": 611,
+            "positive_photos": 149,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.9158861671290522,
+            "cpu_recomputed_ap": 0.9158861647705149,
+            "cpu_recomputed_minus_saved_ap": -2.3585373654100295e-09,
+            "known_photos": 611,
+            "positive_photos": 140,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": 0.8486091161089029,
+            "cpu_recomputed_ap": 0.8486091179299621,
+            "cpu_recomputed_minus_saved_ap": 1.8210591923306652e-09,
+            "known_photos": 611,
+            "positive_photos": 141,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.9690915934173161,
+            "cpu_recomputed_ap": 0.9690915856324007,
+            "cpu_recomputed_minus_saved_ap": -7.784915379005497e-09,
+            "known_photos": 611,
+            "positive_photos": 142,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8939588825828001,
+            "cpu_recomputed_ap": 0.8939588778589428,
+            "cpu_recomputed_minus_saved_ap": -4.723857305322099e-09,
+            "known_photos": 611,
+            "positive_photos": 146,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "wet_surface": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        },
+        "dacl": {
+          "concrete_crack": {
+            "ap": 0.8086354939603448,
+            "cpu_recomputed_ap": 0.8086354957938042,
+            "cpu_recomputed_minus_saved_ap": 1.833459384315006e-09,
+            "known_photos": 710,
+            "positive_photos": 211,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.8178476555706594,
+            "cpu_recomputed_ap": 0.8178476550508789,
+            "cpu_recomputed_minus_saved_ap": -5.197805519330245e-10,
+            "known_photos": 710,
+            "positive_photos": 324,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": 0.7600700354125001,
+            "cpu_recomputed_ap": 0.7600700334688767,
+            "cpu_recomputed_minus_saved_ap": -1.943623373357184e-09,
+            "known_photos": 710,
+            "positive_photos": 159,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.7129187558010883,
+            "cpu_recomputed_ap": 0.7129187560097,
+            "cpu_recomputed_minus_saved_ap": 2.0861168348318415e-10,
+            "known_photos": 710,
+            "positive_photos": 80,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8820314611331614,
+            "cpu_recomputed_ap": 0.8820314619530036,
+            "cpu_recomputed_minus_saved_ap": 8.198421941330025e-10,
+            "known_photos": 710,
+            "positive_photos": 366,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": 0.6030326321415828,
+            "cpu_recomputed_ap": 0.6030326309447488,
+            "cpu_recomputed_minus_saved_ap": -1.1968339652668192e-09,
+            "known_photos": 710,
+            "positive_photos": 106,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "wet_surface": {
+            "ap": 0.520517568312797,
+            "cpu_recomputed_ap": 0.5205175716148188,
+            "cpu_recomputed_minus_saved_ap": 3.3020217671264618e-09,
+            "known_photos": 710,
+            "positive_photos": 96,
+            "status": "measured_on_asserted_source_labels"
+          }
+        },
+        "damsegment": {
+          "concrete_crack": {
+            "ap": 0.9998250516371172,
+            "cpu_recomputed_ap": 0.9998250514702725,
+            "cpu_recomputed_minus_saved_ap": -1.6684476022987837e-10,
+            "known_photos": 424,
+            "positive_photos": 248,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.8802274389597883,
+            "cpu_recomputed_ap": 0.8802274394438481,
+            "cpu_recomputed_minus_saved_ap": 4.840597922495249e-10,
+            "known_photos": 424,
+            "positive_photos": 58,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "exposed_rebar": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "rust_stain": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "wet_surface": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        }
+      },
+      "run": "facility-presence-target-head-lr-low",
+      "selected_grid": 1,
+      "small_dacl_polygon_area_below_one_percent": {
+        "concrete_crack": {
+          "bins": [
+            {
+              "false_negatives": 5,
+              "fnr": 0.7142857142857143,
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 7
+            },
+            {
+              "false_negatives": 25,
+              "fnr": 0.29069767441860467,
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 86
+            },
+            {
+              "false_negatives": 13,
+              "fnr": 0.14285714285714285,
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 91
+            },
+            {
+              "false_negatives": 2,
+              "fnr": 0.07407407407407407,
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 27
+            }
+          ],
+          "false_negatives": 30,
+          "fnr": 0.3225806451612903,
+          "positive_photos": 93
+        },
+        "concrete_spalling": {
+          "bins": [
+            {
+              "false_negatives": 3,
+              "fnr": 0.23076923076923078,
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 13
+            },
+            {
+              "false_negatives": 37,
+              "fnr": 0.40217391304347827,
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 92
+            },
+            {
+              "false_negatives": 20,
+              "fnr": 0.1694915254237288,
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 118
+            },
+            {
+              "false_negatives": 9,
+              "fnr": 0.0891089108910891,
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 101
+            }
+          ],
+          "false_negatives": 40,
+          "fnr": 0.38095238095238093,
+          "positive_photos": 105
+        }
+      },
+      "target_passed": false,
+      "test_executed": false,
+      "test_result": null,
+      "title": "기존 저학습률 대조군",
+      "weights_sha256": "058e6de039da9bb2b35c78e35c1cecf64099c8ac187597804fce99c8ce5afcb7",
+      "worst_error": 0.22020725388601037
+    },
+    {
+      "actual_epochs": 6,
+      "actual_sampling_history": [
+        {
+          "domain_counts": {
+            "codebrim": 2742,
+            "dacl": 9468,
+            "damsegment": 1334,
+            "rc2119": 704
+          },
+          "epoch": 1,
+          "row_type_counts": null
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2766,
+            "dacl": 9437,
+            "damsegment": 1341,
+            "rc2119": 704
+          },
+          "epoch": 2,
+          "row_type_counts": null
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2663,
+            "dacl": 9507,
+            "damsegment": 1374,
+            "rc2119": 704
+          },
+          "epoch": 3,
+          "row_type_counts": null
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2708,
+            "dacl": 9439,
+            "damsegment": 1397,
+            "rc2119": 704
+          },
+          "epoch": 4,
+          "row_type_counts": null
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2734,
+            "dacl": 9474,
+            "damsegment": 1336,
+            "rc2119": 704
+          },
+          "epoch": 5,
+          "row_type_counts": null
+        },
+        {
+          "domain_counts": {
+            "codebrim": 2731,
+            "dacl": 9425,
+            "damsegment": 1388,
+            "rc2119": 704
+          },
+          "epoch": 6,
+          "row_type_counts": null
+        }
+      ],
+      "best_epoch": 6,
+      "configured_grids": [
+        1
+      ],
+      "expected_label_sampling": null,
+      "expected_sampling": null,
+      "per_class": {
+        "concrete_crack": {
+          "domains": {
+            "codebrim": {
+              "fn": 9,
+              "fnr": 0.06040268456375839,
+              "fp": 60,
+              "fpr": 0.12987012987012986,
+              "negative_photos": 462,
+              "positive_photos": 149,
+              "tn": 402,
+              "tp": 140
+            },
+            "dacl": {
+              "fn": 45,
+              "fnr": 0.2132701421800948,
+              "fp": 105,
+              "fpr": 0.21042084168336672,
+              "negative_photos": 499,
+              "positive_photos": 211,
+              "tn": 394,
+              "tp": 166
+            },
+            "damsegment": {
+              "fn": 2,
+              "fnr": 0.008064516129032258,
+              "fp": 1,
+              "fpr": 0.005681818181818182,
+              "negative_photos": 176,
+              "positive_photos": 248,
+              "tn": 175,
+              "tp": 246
+            }
+          },
+          "threshold": 0.2807895541191101
+        },
+        "concrete_spalling": {
+          "domains": {
+            "codebrim": {
+              "fn": 17,
+              "fnr": 0.12142857142857143,
+              "fp": 36,
+              "fpr": 0.07643312101910828,
+              "negative_photos": 471,
+              "positive_photos": 140,
+              "tn": 435,
+              "tp": 123
+            },
+            "dacl": {
+              "fn": 72,
+              "fnr": 0.2222222222222222,
+              "fp": 85,
+              "fpr": 0.22020725388601037,
+              "negative_photos": 386,
+              "positive_photos": 324,
+              "tn": 301,
+              "tp": 252
+            },
+            "damsegment": {
+              "fn": 12,
+              "fnr": 0.20689655172413793,
+              "fp": 6,
+              "fpr": 0.01639344262295082,
+              "negative_photos": 366,
+              "positive_photos": 58,
+              "tn": 360,
+              "tp": 46
+            }
+          },
+          "threshold": 0.44395026564598083
+        }
+      },
+      "provenance": {
+        "SPLIT.json": "d470981d45cd73d5def2d7510dda64e792226c0d534a6829f091388b7c8e3c10",
+        "TARGET-SELECTION.json": "ecfc7477469e71191edb4cc27fd02d1f19245325ad5be25506476242b28bacdf",
+        "TRAINING.json": "fd7f7c499cb276f30da326e0485b7af85be6d3f34cc49875d1019a3440ed3439",
+        "VALIDATION.json": "12c9b087a3c9ae5f426a3552587efd7dab11e5bab94cdc2c8f7bfaf5b21c0df5",
+        "history.json": "57163c64f110eae2e9a54e83497e19aa547c58f07d498529d566d3e7295ccbb0"
+      },
+      "ranking_ap": {
+        "codebrim": {
+          "concrete_crack": {
+            "ap": 0.9450819394884198,
+            "cpu_recomputed_ap": 0.9450819391198585,
+            "cpu_recomputed_minus_saved_ap": -3.6856129259632553e-10,
+            "known_photos": 611,
+            "positive_photos": 149,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.9175715682893866,
+            "cpu_recomputed_ap": 0.9175715680014538,
+            "cpu_recomputed_minus_saved_ap": -2.8793278872285555e-10,
+            "known_photos": 611,
+            "positive_photos": 140,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": 0.8447376555211445,
+            "cpu_recomputed_ap": 0.8447376560232484,
+            "cpu_recomputed_minus_saved_ap": 5.021038029795477e-10,
+            "known_photos": 611,
+            "positive_photos": 141,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.9698551676671486,
+            "cpu_recomputed_ap": 0.9698551612243327,
+            "cpu_recomputed_minus_saved_ap": -6.442815947416136e-09,
+            "known_photos": 611,
+            "positive_photos": 142,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8946366000996498,
+            "cpu_recomputed_ap": 0.8946365965339477,
+            "cpu_recomputed_minus_saved_ap": -3.5657021779655906e-09,
+            "known_photos": 611,
+            "positive_photos": 146,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "wet_surface": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        },
+        "dacl": {
+          "concrete_crack": {
+            "ap": 0.8112204251201929,
+            "cpu_recomputed_ap": 0.811220428056062,
+            "cpu_recomputed_minus_saved_ap": 2.9358691033820605e-09,
+            "known_photos": 710,
+            "positive_photos": 211,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.8184098390520855,
+            "cpu_recomputed_ap": 0.81840983919934,
+            "cpu_recomputed_minus_saved_ap": 1.4725443087115764e-10,
+            "known_photos": 710,
+            "positive_photos": 324,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": 0.755731908530804,
+            "cpu_recomputed_ap": 0.7557319056190975,
+            "cpu_recomputed_minus_saved_ap": -2.9117064315187235e-09,
+            "known_photos": 710,
+            "positive_photos": 159,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "exposed_rebar": {
+            "ap": 0.7131089392957894,
+            "cpu_recomputed_ap": 0.7131089392860299,
+            "cpu_recomputed_minus_saved_ap": -9.759526520269901e-12,
+            "known_photos": 710,
+            "positive_photos": 80,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "rust_stain": {
+            "ap": 0.8815134289480941,
+            "cpu_recomputed_ap": 0.8815134291242654,
+            "cpu_recomputed_minus_saved_ap": 1.7617129977054446e-10,
+            "known_photos": 710,
+            "positive_photos": 366,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "surface_cavity": {
+            "ap": 0.6084236041983756,
+            "cpu_recomputed_ap": 0.6084236055321112,
+            "cpu_recomputed_minus_saved_ap": 1.3337355664333472e-09,
+            "known_photos": 710,
+            "positive_photos": 106,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "wet_surface": {
+            "ap": 0.5198202097749637,
+            "cpu_recomputed_ap": 0.5198202122432937,
+            "cpu_recomputed_minus_saved_ap": 2.4683299848504703e-09,
+            "known_photos": 710,
+            "positive_photos": 96,
+            "status": "measured_on_asserted_source_labels"
+          }
+        },
+        "damsegment": {
+          "concrete_crack": {
+            "ap": 0.9998390207402177,
+            "cpu_recomputed_ap": 0.9998390205866949,
+            "cpu_recomputed_minus_saved_ap": -1.5352275006819127e-10,
+            "known_photos": 424,
+            "positive_photos": 248,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "concrete_spalling": {
+            "ap": 0.8848521637556537,
+            "cpu_recomputed_ap": 0.8848521638327395,
+            "cpu_recomputed_minus_saved_ap": 7.708578220189111e-11,
+            "known_photos": 424,
+            "positive_photos": 58,
+            "status": "measured_on_asserted_source_labels"
+          },
+          "efflorescence": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "exposed_rebar": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "rust_stain": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "surface_cavity": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          },
+          "wet_surface": {
+            "ap": null,
+            "cpu_recomputed_ap": null,
+            "cpu_recomputed_minus_saved_ap": null,
+            "known_photos": 0,
+            "positive_photos": 0,
+            "status": "not_measured_source_labels_unknown"
+          }
+        }
+      },
+      "run": "facility-presence-target-rc2119-positive-regions",
+      "selected_grid": 1,
+      "small_dacl_polygon_area_below_one_percent": {
+        "concrete_crack": {
+          "bins": [
+            {
+              "false_negatives": 5,
+              "fnr": 0.7142857142857143,
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 7
+            },
+            {
+              "false_negatives": 25,
+              "fnr": 0.29069767441860467,
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 86
+            },
+            {
+              "false_negatives": 13,
+              "fnr": 0.14285714285714285,
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 91
+            },
+            {
+              "false_negatives": 2,
+              "fnr": 0.07407407407407407,
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 27
+            }
+          ],
+          "false_negatives": 30,
+          "fnr": 0.3225806451612903,
+          "positive_photos": 93
+        },
+        "concrete_spalling": {
+          "bins": [
+            {
+              "false_negatives": 3,
+              "fnr": 0.23076923076923078,
+              "polygon_fraction": [
+                0.0,
+                0.001
+              ],
+              "positive_photos": 13
+            },
+            {
+              "false_negatives": 37,
+              "fnr": 0.40217391304347827,
+              "polygon_fraction": [
+                0.001,
+                0.01
+              ],
+              "positive_photos": 92
+            },
+            {
+              "false_negatives": 22,
+              "fnr": 0.1864406779661017,
+              "polygon_fraction": [
+                0.01,
+                0.05
+              ],
+              "positive_photos": 118
+            },
+            {
+              "false_negatives": 10,
+              "fnr": 0.09900990099009901,
+              "polygon_fraction": [
+                0.05,
+                1.00001
+              ],
+              "positive_photos": 101
+            }
+          ],
+          "false_negatives": 40,
+          "fnr": 0.38095238095238093,
+          "positive_photos": 105
+        }
+      },
+      "target_passed": false,
+      "test_executed": false,
+      "test_result": null,
+      "title": "새 자료·양성 위치 보강",
+      "weights_sha256": "0b70218aead95a4ae06a0326c0ea8c50e646aa0c71d574647902b019eb349140",
+      "worst_error": 0.2222222222222222
+    }
+  ],
+  "new_data": {
+    "annotation_audit_sha256": "7d583ed9c82c25ad59d3af5a87cbd0cb7ea6c1518d929a3a731cc48c2b2c79fe",
+    "asserted_positive_cells": {
+      "concrete_crack": 51439,
+      "concrete_spalling": 118526,
+      "efflorescence": 0,
+      "exposed_rebar": 0,
+      "rust_stain": 0,
+      "surface_cavity": 0,
+      "wet_surface": 0
+    },
+    "background_negative_pixels_created": 0,
+    "crop_review_sha256": "2ddfc3b8c4c1de4d2030c06fd454bd124e2dcf7c561cb8c7a473082c9acb1ae3",
+    "known_negative_photos": 0,
+    "license": "CC BY 4.0",
+    "limitations": [
+      "Whole-photo dHash<=6 and native pixel SHA cannot prove crop, rotation or scene independence",
+      "Author background mask does not independently verify exhaustive annotation of every damage instance",
+      "No scene/group/split/upstream source mapping is provided by these three archives",
+      "Research dataset labels do not assert real-world structural safety",
+      "Approximate descriptor retrieval and limited features can miss shared views",
+      "A homography match is a review candidate, not established scene identity",
+      "No new source/scene independence or annotation completeness is established"
+    ],
+    "manifest_sha256": "eb6ad95ddb0d4e75d3f58221f39520577bcce3f5d29f3ad6a1d413ee1b5cc81c",
+    "new_auxiliary_labels": 0,
+    "policy": "Explicit crack/spalling positives only; all absent classes and background unknown. Original author masks supply foreground presence cells only",
+    "positive_photos": {
+      "concrete_crack": 117,
+      "concrete_spalling": 100,
+      "efflorescence": 0,
+      "exposed_rebar": 0,
+      "rust_stain": 0,
+      "surface_cavity": 0,
+      "wet_surface": 0
+    },
+    "schema": "rc2119_positive_region_preparation_v1",
+    "scope": "TRAIN-only research supplement; no new independent validation/test set or scene-independence claim",
+    "selected_photos": 200,
+    "selection_strata": {
+      "Concrete spalling": 100,
+      "Crack": 100
+    },
+    "source": "https://data.mendeley.com/datasets/2vkm6k4cfg/1",
+    "status": "prepared_for_limited_research"
+  },
+  "protocol_sha256": "ca7d98ce450168b39bba41ddb1f5bfa5baefae701af1c01a2152e972226b0351",
+  "research_gate": {
+    "deployment_authorized": false,
+    "descriptive_only": true,
+    "error_and_other_ap_gate": {
+      "comparisons": {
+        "control": {
+          "maximum_error_improvement": -0.002014968336211842,
+          "minimum_improvement_passed": false,
+          "other_class_ap_drops": [
+            {
+              "ap_drop": 0.0005180321850672964,
+              "class": "rust_stain",
+              "domain": "dacl"
+            },
+            {
+              "ap_drop": -0.00019018349470112383,
+              "class": "exposed_rebar",
+              "domain": "dacl"
+            },
+            {
+              "ap_drop": 0.0006973585378333702,
+              "class": "wet_surface",
+              "domain": "dacl"
+            },
+            {
+              "ap_drop": 0.004338126881696103,
+              "class": "efflorescence",
+              "domain": "dacl"
+            },
+            {
+              "ap_drop": -0.005390972056792842,
+              "class": "surface_cavity",
+              "domain": "dacl"
+            },
+            {
+              "ap_drop": -0.0006777175168497518,
+              "class": "rust_stain",
+              "domain": "codebrim"
+            },
+            {
+              "ap_drop": -0.0007635742498325326,
+              "class": "exposed_rebar",
+              "domain": "codebrim"
+            },
+            {
+              "ap_drop": 0.0038714605877583352,
+              "class": "efflorescence",
+              "domain": "codebrim"
+            }
+          ],
+          "other_known_class_ap_guard_passed": true,
+          "passed": false,
+          "target_rate_changes": [
+            {
+              "change": 0.0,
+              "class": "concrete_crack",
+              "domain": "dacl",
+              "metric": "fnr"
+            },
+            {
+              "change": -0.004008016032064132,
+              "class": "concrete_crack",
+              "domain": "dacl",
+              "metric": "fpr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_crack",
+              "domain": "damsegment",
+              "metric": "fnr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_crack",
+              "domain": "damsegment",
+              "metric": "fpr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_crack",
+              "domain": "codebrim",
+              "metric": "fnr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_crack",
+              "domain": "codebrim",
+              "metric": "fpr"
+            },
+            {
+              "change": 0.009259259259259245,
+              "class": "concrete_spalling",
+              "domain": "dacl",
+              "metric": "fnr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_spalling",
+              "domain": "dacl",
+              "metric": "fpr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_spalling",
+              "domain": "damsegment",
+              "metric": "fnr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_spalling",
+              "domain": "damsegment",
+              "metric": "fpr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_spalling",
+              "domain": "codebrim",
+              "metric": "fnr"
+            },
+            {
+              "change": -0.002123142250530785,
+              "class": "concrete_spalling",
+              "domain": "codebrim",
+              "metric": "fpr"
+            }
+          ],
+          "target_regression_guard_passed": true
+        },
+        "initializer": {
+          "maximum_error_improvement": 0.0005757052389176731,
+          "minimum_improvement_passed": false,
+          "other_class_ap_drops": [
+            {
+              "ap_drop": -0.004370961417941244,
+              "class": "rust_stain",
+              "domain": "dacl"
+            },
+            {
+              "ap_drop": -0.01209553079623471,
+              "class": "exposed_rebar",
+              "domain": "dacl"
+            },
+            {
+              "ap_drop": -0.007120405301481836,
+              "class": "wet_surface",
+              "domain": "dacl"
+            },
+            {
+              "ap_drop": -0.001223950255274775,
+              "class": "efflorescence",
+              "domain": "dacl"
+            },
+            {
+              "ap_drop": -0.003970062841642363,
+              "class": "surface_cavity",
+              "domain": "dacl"
+            },
+            {
+              "ap_drop": -0.017741904322108093,
+              "class": "rust_stain",
+              "domain": "codebrim"
+            },
+            {
+              "ap_drop": -0.003812728749749028,
+              "class": "exposed_rebar",
+              "domain": "codebrim"
+            },
+            {
+              "ap_drop": -0.014954744863151848,
+              "class": "efflorescence",
+              "domain": "codebrim"
+            }
+          ],
+          "other_known_class_ap_guard_passed": true,
+          "passed": false,
+          "target_rate_changes": [
+            {
+              "change": -0.009478672985781977,
+              "class": "concrete_crack",
+              "domain": "dacl",
+              "metric": "fnr"
+            },
+            {
+              "change": -0.01002004008016033,
+              "class": "concrete_crack",
+              "domain": "dacl",
+              "metric": "fpr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_crack",
+              "domain": "damsegment",
+              "metric": "fnr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_crack",
+              "domain": "damsegment",
+              "metric": "fpr"
+            },
+            {
+              "change": -0.01342281879194631,
+              "class": "concrete_crack",
+              "domain": "codebrim",
+              "metric": "fnr"
+            },
+            {
+              "change": 0.004329004329004321,
+              "class": "concrete_crack",
+              "domain": "codebrim",
+              "metric": "fpr"
+            },
+            {
+              "change": 0.0,
+              "class": "concrete_spalling",
+              "domain": "dacl",
+              "metric": "fnr"
+            },
+            {
+              "change": -0.002590673575129515,
+              "class": "concrete_spalling",
+              "domain": "dacl",
+              "metric": "fpr"
+            },
+            {
+              "change": 0.017241379310344834,
+              "class": "concrete_spalling",
+              "domain": "damsegment",
+              "metric": "fnr"
+            },
+            {
+              "change": -0.005464480874316939,
+              "class": "concrete_spalling",
+              "domain": "damsegment",
+              "metric": "fpr"
+            },
+            {
+              "change": 0.01428571428571429,
+              "class": "concrete_spalling",
+              "domain": "codebrim",
+              "metric": "fnr"
+            },
+            {
+              "change": -0.01273885350318471,
+              "class": "concrete_spalling",
+              "domain": "codebrim",
+              "metric": "fpr"
+            }
+          ],
+          "target_regression_guard_passed": true
+        }
+      },
+      "deployment_authorized": false,
+      "descriptive_only": true,
+      "research_candidate_nominated": false,
+      "thresholds": {
+        "maximum_any_known_other_class_ap_regression_vs_reference_and_control": 0.02,
+        "maximum_any_target_fnr_fpr_regression_vs_reference_and_control": 0.02,
+        "minimum_maximum_error_improvement_vs_reference_and_control": 0.005
+      }
+    },
+    "research_candidate_nominated": false,
+    "small_area_comparisons": {
+      "control": {
+        "minimum_two_cases_improvement_passed": false,
+        "passed": false,
+        "per_class_changes": [
+          {
+            "class": "concrete_crack",
+            "positive_photo_label_cases": 93,
+            "treatment_minus_comparator_false_negatives": 0,
+            "treatment_minus_comparator_fnr": 0.0
+          },
+          {
+            "class": "concrete_spalling",
+            "positive_photo_label_cases": 105,
+            "treatment_minus_comparator_false_negatives": 0,
+            "treatment_minus_comparator_fnr": 0.0
+          }
+        ],
+        "small_area_per_class_regression_guard_passed": true,
+        "small_area_total_fn_improvement": 0
+      },
+      "initializer": {
+        "minimum_two_cases_improvement_passed": false,
+        "passed": false,
+        "per_class_changes": [
+          {
+            "class": "concrete_crack",
+            "positive_photo_label_cases": 93,
+            "treatment_minus_comparator_false_negatives": 1,
+            "treatment_minus_comparator_fnr": 0.010752688172043001
+          },
+          {
+            "class": "concrete_spalling",
+            "positive_photo_label_cases": 105,
+            "treatment_minus_comparator_false_negatives": -2,
+            "treatment_minus_comparator_fnr": -0.01904761904761909
+          }
+        ],
+        "small_area_per_class_regression_guard_passed": true,
+        "small_area_total_fn_improvement": 1
+      }
+    },
+    "small_area_photo_label_case_totals": {
+      "control": {
+        "false_negative_cases": 70,
+        "photo_label_positive_cases": 198,
+        "unique_photo_count_established": false
+      },
+      "initializer": {
+        "false_negative_cases": 71,
+        "photo_label_positive_cases": 198,
+        "unique_photo_count_established": false
+      },
+      "treatment": {
+        "false_negative_cases": 70,
+        "photo_label_positive_cases": 198,
+        "unique_photo_count_established": false
+      }
+    },
+    "thresholds": {
+      "maximum_any_known_other_class_ap_regression_vs_reference_and_control": 0.02,
+      "maximum_any_small_class_fnr_regression_vs_reference_and_control": 0.02,
+      "maximum_any_target_fnr_fpr_regression_vs_reference_and_control": 0.02,
+      "minimum_maximum_error_improvement_vs_reference_and_control": 0.005,
+      "minimum_small_combined_fn_reduction_vs_reference_and_control": 2
+    }
+  },
+  "resources": {
+    "actual_optimizer_steps": 10679,
+    "attempted_batches": 10686,
+    "elapsed_training_minutes": 16.428783791666742,
+    "peak_cuda_allocated_bytes": 2232256000
+  },
+  "retention_gate": {
+    "all_known_other_class_reference_retention_passed": true,
+    "dacl_exposed_rebar": {
+      "control_ap": 0.7129187558010883,
+      "known_photos": 710,
+      "positive_photos": 80,
+      "reference_ap": 0.7010134084995547,
+      "treatment_ap": 0.7131089392957894,
+      "treatment_minus_control_ap": 0.00019018349470112383,
+      "treatment_minus_reference_ap": 0.01209553079623471
+    },
+    "dacl_exposed_rebar_recovery_vs_control_passed": false,
+    "declared": {
+      "maximum_known_other_class_ap_drop_vs_reference": 0.02,
+      "maximum_primary_worst_error_regression_vs_reference_and_control": 0.02,
+      "minimum_dacl_exposed_rebar_ap_recovery_vs_control": 0.02
+    },
+    "independent_of_research_gate_and_strict_five_percent": true,
+    "known_source_class_combinations_each_model": 8,
+    "other_class_ap_measurements": 24,
+    "per_source_other_class_ap": [
+      {
+        "class": "rust_stain",
+        "control_ap": 0.8820314611331614,
+        "domain": "dacl",
+        "known_photos": 710,
+        "positive_photos": 366,
+        "reference_ap": 0.8771424675301529,
+        "retained_vs_reference": true,
+        "treatment_ap": 0.8815134289480941,
+        "treatment_minus_control_ap": -0.0005180321850672964,
+        "treatment_minus_reference_ap": 0.004370961417941244
+      },
+      {
+        "class": "exposed_rebar",
+        "control_ap": 0.7129187558010883,
+        "domain": "dacl",
+        "known_photos": 710,
+        "positive_photos": 80,
+        "reference_ap": 0.7010134084995547,
+        "retained_vs_reference": true,
+        "treatment_ap": 0.7131089392957894,
+        "treatment_minus_control_ap": 0.00019018349470112383,
+        "treatment_minus_reference_ap": 0.01209553079623471
+      },
+      {
+        "class": "wet_surface",
+        "control_ap": 0.520517568312797,
+        "domain": "dacl",
+        "known_photos": 710,
+        "positive_photos": 96,
+        "reference_ap": 0.5126998044734818,
+        "retained_vs_reference": true,
+        "treatment_ap": 0.5198202097749637,
+        "treatment_minus_control_ap": -0.0006973585378333702,
+        "treatment_minus_reference_ap": 0.007120405301481836
+      },
+      {
+        "class": "efflorescence",
+        "control_ap": 0.7600700354125001,
+        "domain": "dacl",
+        "known_photos": 710,
+        "positive_photos": 159,
+        "reference_ap": 0.7545079582755292,
+        "retained_vs_reference": true,
+        "treatment_ap": 0.755731908530804,
+        "treatment_minus_control_ap": -0.004338126881696103,
+        "treatment_minus_reference_ap": 0.001223950255274775
+      },
+      {
+        "class": "surface_cavity",
+        "control_ap": 0.6030326321415828,
+        "domain": "dacl",
+        "known_photos": 710,
+        "positive_photos": 106,
+        "reference_ap": 0.6044535413567332,
+        "retained_vs_reference": true,
+        "treatment_ap": 0.6084236041983756,
+        "treatment_minus_control_ap": 0.005390972056792842,
+        "treatment_minus_reference_ap": 0.003970062841642363
+      },
+      {
+        "class": "rust_stain",
+        "control_ap": 0.8939588825828001,
+        "domain": "codebrim",
+        "known_photos": 611,
+        "positive_photos": 146,
+        "reference_ap": 0.8768946957775418,
+        "retained_vs_reference": true,
+        "treatment_ap": 0.8946366000996498,
+        "treatment_minus_control_ap": 0.0006777175168497518,
+        "treatment_minus_reference_ap": 0.017741904322108093
+      },
+      {
+        "class": "exposed_rebar",
+        "control_ap": 0.9690915934173161,
+        "domain": "codebrim",
+        "known_photos": 611,
+        "positive_photos": 142,
+        "reference_ap": 0.9660424389173996,
+        "retained_vs_reference": true,
+        "treatment_ap": 0.9698551676671486,
+        "treatment_minus_control_ap": 0.0007635742498325326,
+        "treatment_minus_reference_ap": 0.003812728749749028
+      },
+      {
+        "class": "efflorescence",
+        "control_ap": 0.8486091161089029,
+        "domain": "codebrim",
+        "known_photos": 611,
+        "positive_photos": 141,
+        "reference_ap": 0.8297829106579927,
+        "retained_vs_reference": true,
+        "treatment_ap": 0.8447376555211445,
+        "treatment_minus_control_ap": -0.0038714605877583352,
+        "treatment_minus_reference_ap": 0.014954744863151848
+      }
+    ],
+    "primary_maximum_error_changes": {
+      "control": 0.002014968336211842,
+      "reference": -0.0005757052389176731
+    },
+    "primary_maximum_error_regression_guard_passed": true,
+    "retention_candidate_nominated": false,
+    "worst_other_class_ap_decline_by_model": [
+      {
+        "class": "rust_stain",
+        "domain": "dacl",
+        "maximum_other_ap_drop_vs_reference": 0.0,
+        "minimum_other_ap_change_vs_reference": 0.0,
+        "run": "facility-presence-target-roi-control"
+      },
+      {
+        "class": "surface_cavity",
+        "domain": "dacl",
+        "maximum_other_ap_drop_vs_reference": 0.0014209092151504787,
+        "minimum_other_ap_change_vs_reference": -0.0014209092151504787,
+        "run": "facility-presence-target-head-lr-low"
+      },
+      {
+        "class": "efflorescence",
+        "domain": "dacl",
+        "maximum_other_ap_drop_vs_reference": 0.0,
+        "minimum_other_ap_change_vs_reference": 0.001223950255274775,
+        "run": "facility-presence-target-rc2119-positive-regions"
+      }
+    ]
+  },
+  "schema": "facility_rc_positive_study_comparison_v1",
+  "source_test_used": false,
+  "technical_verification": {
+    "actual_completed_training_epochs": 6,
+    "actual_sampling": {
+      "actual_optimizer_steps": 10679,
+      "amp_skipped_steps": 7,
+      "completed_epochs": 6,
+      "new_positive_source_draws": 4224,
+      "sampled_draws": 85488
+    },
+    "all_original_and_new_input_sha_size_mtime_preserved": true,
+    "all_outputs_finite": true,
+    "app_model_promoted": false,
+    "before_training_sha256": "69599471b72d079286a9fba5e9be6e0e13aeed9b8452965c583507d9b856ee46",
+    "cpu_strict_324_state_reload": true,
+    "frozen_teacher_and_bn_preserved": true,
+    "git_blob_bytes_verified": true,
+    "individual_input_paths_published": false,
+    "input_ledger_sha256": "2422204780600c0580a413050535a2fd618164efa7b6cc662adca7aedb674fd9",
+    "new_auxiliary_labels": 0,
+    "new_background_negative_pixels": 0,
+    "new_negative_photo_targets": 0,
+    "original_input_files_preserved": 59026,
+    "protected_file_count": 60061,
+    "protocol_sha256": "ca7d98ce450168b39bba41ddb1f5bfa5baefae701af1c01a2152e972226b0351",
+    "public_output_equals_training_photo_output": true,
+    "reused_control_epochs_not_recounted": 6,
+    "runtime_source_count": 123,
+    "schema": "facility_rc_positive_study_verification_v1",
+    "source_git_commit": "a7a8e705c83a6328604cd4e6ea176255a9c40081",
+    "source_sha256": {
+      "safelog_ai/auxiliary_classifier.py": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+      "safelog_ai/context_classifier.py": "6b9bd80d6408e36bf245dd309cbd6ad744b7fd576a630cee08e331f804589a10",
+      "safelog_ai/frozen_batchnorm.py": "2dbb8dc844837ebccd8734caa590a6a6b62e5c5477798d5f362f7a6765819aeb",
+      "safelog_ai/positive_region_loss.py": "37512b40ccf7a66f881b1d06daf770cb0123ddddd6e2914d6c0e15962e630239",
+      "safelog_ai/presence_classifier.py": "29e34eb747ecd5d2e0b25fd2e630307ed764b1a1d3522591226f65e947de8849",
+      "safelog_ai/research_presence.py": "81e0a370c5dbc686dc1127d5c59d10a92a246c3ad80a384365758c8f83df8fc2",
+      "safelog_ai/resolution_classifier.py": "afcccd8f75dc4a4f22b7c9c599207e851478e981d9ccdaa7b5d40e3701a45853",
+      "safelog_ai/retention_distillation.py": "291ff0b2127b6a42ca8db3493206f4fa709cd6803010f7070ec09ccdd82ec270",
+      "safelog_ai/semantic_residual_classifier.py": "27d253a55a56a6a8ce653760ac92aaab2b5c71bd4bb0051ab63f0a4a33e86907",
+      "safelog_ai/spalling_sampler.py": "a1df26fbfb683e63bdaa92bfaf005b1d1d894668defa8aee80802cbce5f751d7",
+      "safelog_ai/spatial_classifier.py": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+      "scripts/analyze_facility_target.py": "d47699ed1ff4802e9cdd294a158502b5ebea87fb22ce085b4e59771a66f82aa8",
+      "scripts/audit_facility_resolution_sources.py": "9905df4b8a2933d7a1e1b35a39a1b71293225f0676a12e6bd3f709383fbf6204",
+      "scripts/audit_rc2119.py": "ef9824755fde9c0cb2f196127885715597d16360abe38dca372acb84e69f1d86",
+      "scripts/evaluate_facility_semantic.py": "2e006121bb81619aa617e1f868e64f873f8e3e3bf133ede68021390ea02d8b47",
+      "scripts/evaluate_facility_target.py": "937b633d72be3c2c720799164e6926346b7d2f6970583ee00392d79b88071355",
+      "scripts/facility_batchnorm_study.py": "6af31d1f1e73301ac46c64eb50acd136a733e6e025eaee02427cf450ad910f29",
+      "scripts/facility_error_target.py": "5f1624c1e853bb6507b13529b7c6c4bddf1890b870e39f0ce20f8fb42feb09b9",
+      "scripts/facility_head_lr_study.py": "5214a346782e34e60345c5f01baf56c6da05b5dd223182386965489a5710baa2",
+      "scripts/facility_native_roi_study.py": "fc75d5c61fd57c0d7f10e467e6ec9fe58c77507a6c9081d8b08e795da78863b9",
+      "scripts/facility_rc_positive.py": "b29567b819cf0e90d534ccf17fb19ac4fcc776924c95c6473bc7aa2ed439f1ce",
+      "scripts/facility_resolution_study.py": "2a83f8839628c5da11d7fa1022dae509fc2980fccea56872ab04346fd4de13cc",
+      "scripts/facility_retention_strength_study.py": "4d44dd03462076625606a7ddbe525702f972d9fc12db924cad1479e08936f726",
+      "scripts/facility_retention_study.py": "cceb3da96a3636d65e2b13f06eaf5730be4efb12fa6f473a65566e5ea2695df6",
+      "scripts/facility_semantic_study.py": "1e312a7a220500ac26a3d85bc9c3d570caa80c64d5858ea8315ef57ba67fa212",
+      "scripts/facility_subtype_study.py": "c7ffbc0cb966bc9732c201f08e1b0af8a422467b91411f8c7706434fbff2939e",
+      "scripts/fetch_facility_semantic_weights.py": "f9bb95afe9804864b119b1d8d5f117e2e2708f10c9a7d43d4bb33b41d671a461",
+      "scripts/fetch_rc2119.py": "4906b7d940e01f769294f005cc93ee246f0fe4c6a9e09a57ce189d15cd3cb1a5",
+      "scripts/plot_facility_batchnorm.py": "2777161da49d0c53713c42b5a3018f3df678818450c56e9247226043e7c584cd",
+      "scripts/plot_facility_head_lr.py": "9db4a4ce1de846ed2799944f1e9ee7c50ce6424c6aa5c576488534e25b037bbe",
+      "scripts/plot_facility_retention.py": "2da3e9babd925e3018a45f7047df09ef532fbaeb2231a861c526a7a4e7a44737",
+      "scripts/plot_facility_retention_strength.py": "45d1edb2b34af8f2fe40cca8d48493defcc7be6c158e0a45bb7c5dbfae79ead4",
+      "scripts/plot_facility_semantic.py": "8bca8b72b47516448f63597b8d7b32ffd385123c6fd92ec5de0445b23c222397",
+      "scripts/plot_facility_subtype.py": "ea0d665c5c389e4d3c18c6e1bd6bd3730cf1527ac6979069f711fdfecbea032a",
+      "scripts/preflight_facility_batchnorm.py": "ae4f719cc049c914633633f43428f299a596cd7b1aeaed1a9350ff992988f2fe",
+      "scripts/preflight_facility_detail.py": "8e00aff1f2ffb557deec79f6c3545b808634d04a7a31e8475d57b37266267af6",
+      "scripts/preflight_facility_head_lr.py": "0e44120e7f458c3b5a10bda5f4769a55034f72db0f7709bb728e32d8e14531e2",
+      "scripts/preflight_facility_native_roi.py": "ca7f13e2bcdded0bc9b6a097248a37f38ce1414e895e0ab5c43c1b68eed1142b",
+      "scripts/preflight_facility_resolution.py": "2138ca4032a462c536ed59bfbff6a40d364ec09c4b0d9e64edd902190f51e3a5",
+      "scripts/preflight_facility_retention.py": "5423f46f59d41bc6c9b6cc8a24d27b03e8bc142500ad06d620857320f8b1b689",
+      "scripts/preflight_facility_retention_strength.py": "0d518ac49aa96df946800df056b7e9e07b16d369b0f249c50310fb9b81a99695",
+      "scripts/preflight_facility_semantic.py": "2dd2dbb16ebac26a5b09b3dd1c0d78f6e0968c491b0b2eb449e014c85045f545",
+      "scripts/preflight_facility_subtype.py": "2e0e1a973d4cff0a0a3906c3ca2c711aa2bb9be80c572787316bdcd384a3cf08",
+      "scripts/prepare_facility_data.py": "2ef54fc56f11b6b62c37fd26291e3f62bb5f9b7a23d117318b3a2cd2189141d9",
+      "scripts/prepare_facility_native_roi.py": "d635626d5517b07025f47c908c6252183b4a1f7c1a732f521fed2aea5b96668c",
+      "scripts/prepare_facility_spalling_sampler.py": "ec3389c62a64f70589ca8761f6008152577bb49a19859df9c42f08765534587d",
+      "scripts/report_facility_batchnorm.py": "45fca9b485a1ec540821cf4718a4ff88cd3e1cc867324f23d246277f50d8b803",
+      "scripts/report_facility_detail.py": "f25d51466e30040956c146b424257ede61bf0785870e3fbd55740436b0a782a4",
+      "scripts/report_facility_discrimination.py": "7ff1a79b238c97c7d9939ab553dac5afb16ed7d5ac5a2c39d0be15a2bd4e6d68",
+      "scripts/report_facility_head_lr.py": "8ed1e99512e89bee8bf18b25cefe80ec6aeb3664a682cec4432c7e060fe5cf7b",
+      "scripts/report_facility_native_roi.py": "b23b1224e783e91f42e780ea82c7eadd317428b382dcede6bb22dd84458c5639",
+      "scripts/report_facility_native_roi_results.py": "4cd8eeac69767cf848086f16bc1d1574a63987d2b1b88c4593d6721c83261975",
+      "scripts/report_facility_rc_positive.py": "087fedaf758b1a27d8667b0c25aadb233818bf4f9ce86d3dc05a9cf109ce530d",
+      "scripts/report_facility_resolution.py": "97d0f587b5849c32f396851147055d2f1c926a0c300bf5c598c216908505a3ea",
+      "scripts/report_facility_retention.py": "db8ad9e59ab9f67cd89c8f27b52446559bbdfa6826362308bfce73101559311b",
+      "scripts/report_facility_retention_results.py": "0280fc85e4fda448addb4b90f41bc30ba9c92e0cbc9f0ae10ed7fca013a38845",
+      "scripts/report_facility_retention_strength.py": "12df3f113dec9e17165780a662f024bc0916cfe97b1fc50795dbeac698fc428a",
+      "scripts/report_facility_semantic.py": "115004c2ab47df95a7adc2fa875e00dec332b3d6e265a387a1b8fee4ba33af0c",
+      "scripts/report_facility_small_region.py": "ae4fb18cf30cc00f2e4329667413543e3c4097b970821d2472c84fa0716bfd47",
+      "scripts/report_facility_subtype.py": "ee7a86835253578c423ea425fff8a3b09083ba48f40b141b28b4e807901a821b",
+      "scripts/run_facility_batchnorm.py": "ba828fd8730a117ce5eaa52faa146c01c8e7b9912212eb77124c1c50bf1709e4",
+      "scripts/run_facility_head_lr.py": "61339e90e68436a2a111edd1a8c489d3dd08908e09d1a69ef3a2b90824ffaff9",
+      "scripts/run_facility_native_roi_pair.py": "b48ad907c5954ccf8bddd979e5bf9e049165e3e4a692673a5ae5deed330ee0ae",
+      "scripts/run_facility_retention_pair.py": "99780c6f6dc3533e762b5b2bb22179923d689b0ce49a95da8d2b7aa5bb94eeef",
+      "scripts/run_facility_retention_strength.py": "959f3636612d5482d5823d763c787dc3a1dd743eb0b4d95a59fb41a36a71cb07",
+      "scripts/run_facility_semantic.py": "d2deee98c68304c9c9fcdca351b9027da1a039f40d6250c70d4168cccc4fe222",
+      "scripts/run_facility_subtype_pair.py": "21f25db4687eb0c90afbaab1ae482c50e10ab4e54f81a519afaa0c7883d03925",
+      "scripts/screen_rc2119_crops.py": "fde41d856ac583c749cd607ace7201efb7ed036fa30010b2c2d357e226ec73ce",
+      "scripts/test_facility_batchnorm.py": "1c27420afaa34215a95dc52c9f6ca502b1b51f28c7ca6731873b13115ec3628d",
+      "scripts/test_facility_head_lr.py": "2c18031f6361e753866506678643e9d8857d118d6f628b43d15be1b3a6f5b1a4",
+      "scripts/test_facility_native_roi.py": "ea9866db68f46b44669648f76450c7038800876c021d8fbb4cc833fc2326880a",
+      "scripts/test_facility_retention.py": "4380187fb557ceb0fa52eb20ca047ea211171fc8adfed6c15344dfb9d8f2049d",
+      "scripts/test_facility_retention_strength.py": "a4fef8eac9c435affce35cd92fdf08171fe5f1f179c48e19987fa8d129a58154",
+      "scripts/test_facility_semantic.py": "636725094850e766d869930901096db8ac17fbdd429664db46e8ced57cb5cbc0",
+      "scripts/test_facility_subtype.py": "a473ce3618a6e3d6e01f8db0677366678cba535c140a29305a1bc2154368bc1f",
+      "scripts/train_facility_batchnorm.py": "faa50248cad670a5a602e30ca8983afd24cea623537176a43d56b2a2d43ca63b",
+      "scripts/train_facility_context.py": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
+      "scripts/train_facility_head_lr.py": "f3546dfc7274298be7d27e5abd0abfd95d3d2e4337502aec38737494cf27bc45",
+      "scripts/train_facility_native_roi.py": "7cdec52da9a7bab891612f2b3813dad32068e532a7a3b3229529ac8975ca074d",
+      "scripts/train_facility_presence.py": "def4565d4d07cd7e4321de43529849ce1adcc03dc3fcbff64b33e0f169a526f0",
+      "scripts/train_facility_rc_positive.py": "6fec2e8c22800a7fbc65fd410f3f4025b02dbcd722f68654e60c6fd921e7d7fc",
+      "scripts/train_facility_resolution.py": "94b5eb819cb47e242cb309b3a0b9c58ed5d28e78088a972797a81244005337bd",
+      "scripts/train_facility_retention.py": "f92534e50322e70f6d860c685bd068b682a4826a58a3148fd94cf17f22d9a7e9",
+      "scripts/train_facility_retention_strength.py": "2921a27776685b7d2977dff61ddf365c67af095baa732ffec07643f148e3afb7",
+      "scripts/train_facility_semantic.py": "db26a6a695de899bd263dffbf9897b9eb81d442e320e8bda1fc12a1dcab48f58",
+      "scripts/train_facility_subtype.py": "83f3e8a3264b96f04b7033a5cc1c4beebd3c6402c0a97d5df686f674f71d58ab",
+      "scripts/train_facility_target.py": "5c80a49ed0d63bbe328df1593d93104930e1aaa39ebe8c036c04054900f769d4",
+      "scripts/verify_facility_batchnorm.py": "d5aba45865edfc735d06fa56228b99578019249c9b620e7506c44df730b6c9f6",
+      "scripts/verify_facility_head_lr.py": "ff8a4c277e99d1b1ee0d5ee7c56ab2b391d340c8b097fd41ddd194039ccbc4ed",
+      "scripts/verify_facility_native_roi.py": "d61f69e062f7f0e46f512c99d9bd16bdc3c39179cc057245dd3779b4bd4159ee",
+      "scripts/verify_facility_rc_positive.py": "238575a429fff1d54da980a41be0f963d79b4768751ba04af45915c541ad4440",
+      "scripts/verify_facility_resolution.py": "ef67bb26c97801406c11085fde14924a18e95adb4151f414d7721d29d7ba536f",
+      "scripts/verify_facility_retention.py": "b64e8183309960ccc992dcf4860c96036d34ca78a823f024af89c4930c0aa8e3",
+      "scripts/verify_facility_retention_strength.py": "8226be4a0993e8111393d80f4dd42d9e970be78d02de24bba4ad0f6b17618723",
+      "scripts/verify_facility_semantic.py": "8ed09261a4eec228914614dcd6cf38cd08b57675b7de66ee40202d0a200f2b73",
+      "scripts/verify_facility_subtype.py": "9837570c8ffc741eda86b3aedb248f9887a76264e06f139d7f1c0ece20baa532",
+      "tests/test_facility_batchnorm_report.py": "7f44b03dd12758def28807503a05193215976e95437e6e118fba9aa745308f7d",
+      "tests/test_facility_batchnorm_study.py": "a44925562d81124b1d70b34ea06047a29f405d36623968d9eac38962fdbaba42",
+      "tests/test_facility_batchnorm_verification.py": "46f269451cb8d97f6500a96d670c54ab1c3eff38e0c3f9ea5dc6a92e09a4c24f",
+      "tests/test_facility_head_lr_report.py": "81f3715e5c3d8cc6781c4b78ebdd7504cc659e32ba96deadccecc1f41e8e39c2",
+      "tests/test_facility_head_lr_study.py": "396906e5a4b0a413e3bbb233ef18087d39d936c133078f9504300fd83ec0c446",
+      "tests/test_facility_head_lr_verification.py": "b3861954a04798d644fbc4838971a367303f98216f996860580c59c61aca4d56",
+      "tests/test_facility_native_roi_data.py": "520b2ca7e1c864df1cb7fa5f73b22b24aa15524e6d411015f3383482e2fa2b03",
+      "tests/test_facility_native_roi_report.py": "c9a26148e54e5f475e81238ca4b0f99b527ab49573be5984a688b6c2f47173ae",
+      "tests/test_facility_native_roi_report_adapter.py": "50a492afe1e1e559f9babd42615d6dad6015451dc59a0ead6b9419f046b76e51",
+      "tests/test_facility_native_roi_study.py": "458ba5a46218d176f2c2d50904ff8442aae59a09b56728d9cfca79712c521592",
+      "tests/test_facility_retention_report.py": "09326eb98b8aaf4f60878d229ae24494ae174e29b702b3f6aa8e34d256b04986",
+      "tests/test_facility_retention_report_adapter.py": "9a5eb2ad46d462848b498d2bfba16173b110785f824d7f98f476a6d7dfa114b1",
+      "tests/test_facility_retention_strength_report.py": "5a01eea87cc12c1dbaf450a7cd7c52244de51f2eb66553b3afa9c3074d73aaae",
+      "tests/test_facility_retention_strength_study.py": "5ee4a9fbf62de009bd7c09a6c6b6b7aee40d456f5e10fa3f9e206bf97ae8ff30",
+      "tests/test_facility_retention_strength_verification.py": "2b349c2b5bd5e9ea6313567593c2f5f36a1c0bbe8ac5a16fa5d4fcb4ce8fc74d",
+      "tests/test_facility_retention_study.py": "7b2c9a5e22f10161f17d251fcfb9ccd1f2d5f50afb072ae13550518aa03f9bd0",
+      "tests/test_facility_retention_verification.py": "c79b0d89dc161031ed6c6cd2f7a38fec1a389cfebc89374c0aa468f417468fe5",
+      "tests/test_facility_semantic_report.py": "588bc7a37f82056c9bf2c06d0bd7f108ad28a6cb277259b05518f09c7f7ed00c",
+      "tests/test_facility_semantic_study.py": "666e211c3f76b00f1e48cd2182999212d9f2872659fc440f7fc12a4f0b2b5011",
+      "tests/test_facility_semantic_verification.py": "47c224e02a44b7d401c515f4bd23c41410e1ecc267e5c0a163c5c53684656d16",
+      "tests/test_facility_subtype_report.py": "700a7dc69bee8d37cfa347bb324f25fd1aed769db0e6553fa110fe31fdcc7182",
+      "tests/test_facility_subtype_study.py": "3e16ec67cd6e7e759faa55e88ff7169772d6d42dd00b396e861221eb1718b6b6",
+      "tests/test_facility_subtype_verification.py": "cbab315451855898003b5caee1deb1e864550321955b62b2a99ceb325075d78c",
+      "tests/test_rc2119_audit.py": "f4fe3d93d2950da912547476ada9b07a616cad18fba42fc74ad4a8c90f5cda0b",
+      "tests/test_rc2119_fetch.py": "3aff4d8a9ea1bca570fd0bff8d4621b94ef0441a8f7c174e1816844d0f2e5958",
+      "tests/test_rc_positive.py": "9108a2de756d24d50bf080ab878f3bee378d4643abb2555b2e2c739a3b26d7c7",
+      "tests/test_spalling_sampler.py": "bd1613e009d3e84ea650512246dc4985dd4eec3e0386a5eeee4e893d929ae54f"
+    },
+    "source_test_inference_executed": false,
+    "status": "passed",
+    "test_record_sha256": "348e0f29ef63c755ceeea9c4c66ce0b5b4e4f0fcf41b99f3e0b554e36b96a9d7",
+    "tests": {
+      "errors": 0,
+      "failures": 0,
+      "modules": [
+        "tests.test_rc2119_fetch",
+        "tests.test_rc2119_audit",
+        "tests.test_rc_positive"
+      ],
+      "skipped": 0,
+      "source_sha256": {
+        "safelog_ai/auxiliary_classifier.py": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+        "safelog_ai/context_classifier.py": "6b9bd80d6408e36bf245dd309cbd6ad744b7fd576a630cee08e331f804589a10",
+        "safelog_ai/frozen_batchnorm.py": "2dbb8dc844837ebccd8734caa590a6a6b62e5c5477798d5f362f7a6765819aeb",
+        "safelog_ai/positive_region_loss.py": "37512b40ccf7a66f881b1d06daf770cb0123ddddd6e2914d6c0e15962e630239",
+        "safelog_ai/presence_classifier.py": "29e34eb747ecd5d2e0b25fd2e630307ed764b1a1d3522591226f65e947de8849",
+        "safelog_ai/research_presence.py": "81e0a370c5dbc686dc1127d5c59d10a92a246c3ad80a384365758c8f83df8fc2",
+        "safelog_ai/resolution_classifier.py": "afcccd8f75dc4a4f22b7c9c599207e851478e981d9ccdaa7b5d40e3701a45853",
+        "safelog_ai/retention_distillation.py": "291ff0b2127b6a42ca8db3493206f4fa709cd6803010f7070ec09ccdd82ec270",
+        "safelog_ai/semantic_residual_classifier.py": "27d253a55a56a6a8ce653760ac92aaab2b5c71bd4bb0051ab63f0a4a33e86907",
+        "safelog_ai/spalling_sampler.py": "a1df26fbfb683e63bdaa92bfaf005b1d1d894668defa8aee80802cbce5f751d7",
+        "safelog_ai/spatial_classifier.py": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+        "scripts/analyze_facility_target.py": "d47699ed1ff4802e9cdd294a158502b5ebea87fb22ce085b4e59771a66f82aa8",
+        "scripts/audit_facility_resolution_sources.py": "9905df4b8a2933d7a1e1b35a39a1b71293225f0676a12e6bd3f709383fbf6204",
+        "scripts/audit_rc2119.py": "ef9824755fde9c0cb2f196127885715597d16360abe38dca372acb84e69f1d86",
+        "scripts/evaluate_facility_semantic.py": "2e006121bb81619aa617e1f868e64f873f8e3e3bf133ede68021390ea02d8b47",
+        "scripts/evaluate_facility_target.py": "937b633d72be3c2c720799164e6926346b7d2f6970583ee00392d79b88071355",
+        "scripts/facility_batchnorm_study.py": "6af31d1f1e73301ac46c64eb50acd136a733e6e025eaee02427cf450ad910f29",
+        "scripts/facility_error_target.py": "5f1624c1e853bb6507b13529b7c6c4bddf1890b870e39f0ce20f8fb42feb09b9",
+        "scripts/facility_head_lr_study.py": "5214a346782e34e60345c5f01baf56c6da05b5dd223182386965489a5710baa2",
+        "scripts/facility_native_roi_study.py": "fc75d5c61fd57c0d7f10e467e6ec9fe58c77507a6c9081d8b08e795da78863b9",
+        "scripts/facility_rc_positive.py": "b29567b819cf0e90d534ccf17fb19ac4fcc776924c95c6473bc7aa2ed439f1ce",
+        "scripts/facility_resolution_study.py": "2a83f8839628c5da11d7fa1022dae509fc2980fccea56872ab04346fd4de13cc",
+        "scripts/facility_retention_strength_study.py": "4d44dd03462076625606a7ddbe525702f972d9fc12db924cad1479e08936f726",
+        "scripts/facility_retention_study.py": "cceb3da96a3636d65e2b13f06eaf5730be4efb12fa6f473a65566e5ea2695df6",
+        "scripts/facility_semantic_study.py": "1e312a7a220500ac26a3d85bc9c3d570caa80c64d5858ea8315ef57ba67fa212",
+        "scripts/facility_subtype_study.py": "c7ffbc0cb966bc9732c201f08e1b0af8a422467b91411f8c7706434fbff2939e",
+        "scripts/fetch_facility_semantic_weights.py": "f9bb95afe9804864b119b1d8d5f117e2e2708f10c9a7d43d4bb33b41d671a461",
+        "scripts/fetch_rc2119.py": "4906b7d940e01f769294f005cc93ee246f0fe4c6a9e09a57ce189d15cd3cb1a5",
+        "scripts/plot_facility_batchnorm.py": "2777161da49d0c53713c42b5a3018f3df678818450c56e9247226043e7c584cd",
+        "scripts/plot_facility_head_lr.py": "9db4a4ce1de846ed2799944f1e9ee7c50ce6424c6aa5c576488534e25b037bbe",
+        "scripts/plot_facility_retention.py": "2da3e9babd925e3018a45f7047df09ef532fbaeb2231a861c526a7a4e7a44737",
+        "scripts/plot_facility_retention_strength.py": "45d1edb2b34af8f2fe40cca8d48493defcc7be6c158e0a45bb7c5dbfae79ead4",
+        "scripts/plot_facility_semantic.py": "8bca8b72b47516448f63597b8d7b32ffd385123c6fd92ec5de0445b23c222397",
+        "scripts/plot_facility_subtype.py": "ea0d665c5c389e4d3c18c6e1bd6bd3730cf1527ac6979069f711fdfecbea032a",
+        "scripts/preflight_facility_batchnorm.py": "ae4f719cc049c914633633f43428f299a596cd7b1aeaed1a9350ff992988f2fe",
+        "scripts/preflight_facility_detail.py": "8e00aff1f2ffb557deec79f6c3545b808634d04a7a31e8475d57b37266267af6",
+        "scripts/preflight_facility_head_lr.py": "0e44120e7f458c3b5a10bda5f4769a55034f72db0f7709bb728e32d8e14531e2",
+        "scripts/preflight_facility_native_roi.py": "ca7f13e2bcdded0bc9b6a097248a37f38ce1414e895e0ab5c43c1b68eed1142b",
+        "scripts/preflight_facility_resolution.py": "2138ca4032a462c536ed59bfbff6a40d364ec09c4b0d9e64edd902190f51e3a5",
+        "scripts/preflight_facility_retention.py": "5423f46f59d41bc6c9b6cc8a24d27b03e8bc142500ad06d620857320f8b1b689",
+        "scripts/preflight_facility_retention_strength.py": "0d518ac49aa96df946800df056b7e9e07b16d369b0f249c50310fb9b81a99695",
+        "scripts/preflight_facility_semantic.py": "2dd2dbb16ebac26a5b09b3dd1c0d78f6e0968c491b0b2eb449e014c85045f545",
+        "scripts/preflight_facility_subtype.py": "2e0e1a973d4cff0a0a3906c3ca2c711aa2bb9be80c572787316bdcd384a3cf08",
+        "scripts/prepare_facility_data.py": "2ef54fc56f11b6b62c37fd26291e3f62bb5f9b7a23d117318b3a2cd2189141d9",
+        "scripts/prepare_facility_native_roi.py": "d635626d5517b07025f47c908c6252183b4a1f7c1a732f521fed2aea5b96668c",
+        "scripts/prepare_facility_spalling_sampler.py": "ec3389c62a64f70589ca8761f6008152577bb49a19859df9c42f08765534587d",
+        "scripts/report_facility_batchnorm.py": "45fca9b485a1ec540821cf4718a4ff88cd3e1cc867324f23d246277f50d8b803",
+        "scripts/report_facility_detail.py": "f25d51466e30040956c146b424257ede61bf0785870e3fbd55740436b0a782a4",
+        "scripts/report_facility_discrimination.py": "7ff1a79b238c97c7d9939ab553dac5afb16ed7d5ac5a2c39d0be15a2bd4e6d68",
+        "scripts/report_facility_head_lr.py": "8ed1e99512e89bee8bf18b25cefe80ec6aeb3664a682cec4432c7e060fe5cf7b",
+        "scripts/report_facility_native_roi.py": "b23b1224e783e91f42e780ea82c7eadd317428b382dcede6bb22dd84458c5639",
+        "scripts/report_facility_native_roi_results.py": "4cd8eeac69767cf848086f16bc1d1574a63987d2b1b88c4593d6721c83261975",
+        "scripts/report_facility_rc_positive.py": "087fedaf758b1a27d8667b0c25aadb233818bf4f9ce86d3dc05a9cf109ce530d",
+        "scripts/report_facility_resolution.py": "97d0f587b5849c32f396851147055d2f1c926a0c300bf5c598c216908505a3ea",
+        "scripts/report_facility_retention.py": "db8ad9e59ab9f67cd89c8f27b52446559bbdfa6826362308bfce73101559311b",
+        "scripts/report_facility_retention_results.py": "0280fc85e4fda448addb4b90f41bc30ba9c92e0cbc9f0ae10ed7fca013a38845",
+        "scripts/report_facility_retention_strength.py": "12df3f113dec9e17165780a662f024bc0916cfe97b1fc50795dbeac698fc428a",
+        "scripts/report_facility_semantic.py": "115004c2ab47df95a7adc2fa875e00dec332b3d6e265a387a1b8fee4ba33af0c",
+        "scripts/report_facility_small_region.py": "ae4fb18cf30cc00f2e4329667413543e3c4097b970821d2472c84fa0716bfd47",
+        "scripts/report_facility_subtype.py": "ee7a86835253578c423ea425fff8a3b09083ba48f40b141b28b4e807901a821b",
+        "scripts/run_facility_batchnorm.py": "ba828fd8730a117ce5eaa52faa146c01c8e7b9912212eb77124c1c50bf1709e4",
+        "scripts/run_facility_head_lr.py": "61339e90e68436a2a111edd1a8c489d3dd08908e09d1a69ef3a2b90824ffaff9",
+        "scripts/run_facility_native_roi_pair.py": "b48ad907c5954ccf8bddd979e5bf9e049165e3e4a692673a5ae5deed330ee0ae",
+        "scripts/run_facility_retention_pair.py": "99780c6f6dc3533e762b5b2bb22179923d689b0ce49a95da8d2b7aa5bb94eeef",
+        "scripts/run_facility_retention_strength.py": "959f3636612d5482d5823d763c787dc3a1dd743eb0b4d95a59fb41a36a71cb07",
+        "scripts/run_facility_semantic.py": "d2deee98c68304c9c9fcdca351b9027da1a039f40d6250c70d4168cccc4fe222",
+        "scripts/run_facility_subtype_pair.py": "21f25db4687eb0c90afbaab1ae482c50e10ab4e54f81a519afaa0c7883d03925",
+        "scripts/screen_rc2119_crops.py": "fde41d856ac583c749cd607ace7201efb7ed036fa30010b2c2d357e226ec73ce",
+        "scripts/test_facility_batchnorm.py": "1c27420afaa34215a95dc52c9f6ca502b1b51f28c7ca6731873b13115ec3628d",
+        "scripts/test_facility_head_lr.py": "2c18031f6361e753866506678643e9d8857d118d6f628b43d15be1b3a6f5b1a4",
+        "scripts/test_facility_native_roi.py": "ea9866db68f46b44669648f76450c7038800876c021d8fbb4cc833fc2326880a",
+        "scripts/test_facility_retention.py": "4380187fb557ceb0fa52eb20ca047ea211171fc8adfed6c15344dfb9d8f2049d",
+        "scripts/test_facility_retention_strength.py": "a4fef8eac9c435affce35cd92fdf08171fe5f1f179c48e19987fa8d129a58154",
+        "scripts/test_facility_semantic.py": "636725094850e766d869930901096db8ac17fbdd429664db46e8ced57cb5cbc0",
+        "scripts/test_facility_subtype.py": "a473ce3618a6e3d6e01f8db0677366678cba535c140a29305a1bc2154368bc1f",
+        "scripts/train_facility_batchnorm.py": "faa50248cad670a5a602e30ca8983afd24cea623537176a43d56b2a2d43ca63b",
+        "scripts/train_facility_context.py": "558e930f742f4892d173c18fdddfea8638f368a29ed918c7c78a4e3181b94cfd",
+        "scripts/train_facility_head_lr.py": "f3546dfc7274298be7d27e5abd0abfd95d3d2e4337502aec38737494cf27bc45",
+        "scripts/train_facility_native_roi.py": "7cdec52da9a7bab891612f2b3813dad32068e532a7a3b3229529ac8975ca074d",
+        "scripts/train_facility_presence.py": "def4565d4d07cd7e4321de43529849ce1adcc03dc3fcbff64b33e0f169a526f0",
+        "scripts/train_facility_rc_positive.py": "6fec2e8c22800a7fbc65fd410f3f4025b02dbcd722f68654e60c6fd921e7d7fc",
+        "scripts/train_facility_resolution.py": "94b5eb819cb47e242cb309b3a0b9c58ed5d28e78088a972797a81244005337bd",
+        "scripts/train_facility_retention.py": "f92534e50322e70f6d860c685bd068b682a4826a58a3148fd94cf17f22d9a7e9",
+        "scripts/train_facility_retention_strength.py": "2921a27776685b7d2977dff61ddf365c67af095baa732ffec07643f148e3afb7",
+        "scripts/train_facility_semantic.py": "db26a6a695de899bd263dffbf9897b9eb81d442e320e8bda1fc12a1dcab48f58",
+        "scripts/train_facility_subtype.py": "83f3e8a3264b96f04b7033a5cc1c4beebd3c6402c0a97d5df686f674f71d58ab",
+        "scripts/train_facility_target.py": "5c80a49ed0d63bbe328df1593d93104930e1aaa39ebe8c036c04054900f769d4",
+        "scripts/verify_facility_batchnorm.py": "d5aba45865edfc735d06fa56228b99578019249c9b620e7506c44df730b6c9f6",
+        "scripts/verify_facility_head_lr.py": "ff8a4c277e99d1b1ee0d5ee7c56ab2b391d340c8b097fd41ddd194039ccbc4ed",
+        "scripts/verify_facility_native_roi.py": "d61f69e062f7f0e46f512c99d9bd16bdc3c39179cc057245dd3779b4bd4159ee",
+        "scripts/verify_facility_rc_positive.py": "238575a429fff1d54da980a41be0f963d79b4768751ba04af45915c541ad4440",
+        "scripts/verify_facility_resolution.py": "ef67bb26c97801406c11085fde14924a18e95adb4151f414d7721d29d7ba536f",
+        "scripts/verify_facility_retention.py": "b64e8183309960ccc992dcf4860c96036d34ca78a823f024af89c4930c0aa8e3",
+        "scripts/verify_facility_retention_strength.py": "8226be4a0993e8111393d80f4dd42d9e970be78d02de24bba4ad0f6b17618723",
+        "scripts/verify_facility_semantic.py": "8ed09261a4eec228914614dcd6cf38cd08b57675b7de66ee40202d0a200f2b73",
+        "scripts/verify_facility_subtype.py": "9837570c8ffc741eda86b3aedb248f9887a76264e06f139d7f1c0ece20baa532",
+        "tests/test_facility_batchnorm_report.py": "7f44b03dd12758def28807503a05193215976e95437e6e118fba9aa745308f7d",
+        "tests/test_facility_batchnorm_study.py": "a44925562d81124b1d70b34ea06047a29f405d36623968d9eac38962fdbaba42",
+        "tests/test_facility_batchnorm_verification.py": "46f269451cb8d97f6500a96d670c54ab1c3eff38e0c3f9ea5dc6a92e09a4c24f",
+        "tests/test_facility_head_lr_report.py": "81f3715e5c3d8cc6781c4b78ebdd7504cc659e32ba96deadccecc1f41e8e39c2",
+        "tests/test_facility_head_lr_study.py": "396906e5a4b0a413e3bbb233ef18087d39d936c133078f9504300fd83ec0c446",
+        "tests/test_facility_head_lr_verification.py": "b3861954a04798d644fbc4838971a367303f98216f996860580c59c61aca4d56",
+        "tests/test_facility_native_roi_data.py": "520b2ca7e1c864df1cb7fa5f73b22b24aa15524e6d411015f3383482e2fa2b03",
+        "tests/test_facility_native_roi_report.py": "c9a26148e54e5f475e81238ca4b0f99b527ab49573be5984a688b6c2f47173ae",
+        "tests/test_facility_native_roi_report_adapter.py": "50a492afe1e1e559f9babd42615d6dad6015451dc59a0ead6b9419f046b76e51",
+        "tests/test_facility_native_roi_study.py": "458ba5a46218d176f2c2d50904ff8442aae59a09b56728d9cfca79712c521592",
+        "tests/test_facility_retention_report.py": "09326eb98b8aaf4f60878d229ae24494ae174e29b702b3f6aa8e34d256b04986",
+        "tests/test_facility_retention_report_adapter.py": "9a5eb2ad46d462848b498d2bfba16173b110785f824d7f98f476a6d7dfa114b1",
+        "tests/test_facility_retention_strength_report.py": "5a01eea87cc12c1dbaf450a7cd7c52244de51f2eb66553b3afa9c3074d73aaae",
+        "tests/test_facility_retention_strength_study.py": "5ee4a9fbf62de009bd7c09a6c6b6b7aee40d456f5e10fa3f9e206bf97ae8ff30",
+        "tests/test_facility_retention_strength_verification.py": "2b349c2b5bd5e9ea6313567593c2f5f36a1c0bbe8ac5a16fa5d4fcb4ce8fc74d",
+        "tests/test_facility_retention_study.py": "7b2c9a5e22f10161f17d251fcfb9ccd1f2d5f50afb072ae13550518aa03f9bd0",
+        "tests/test_facility_retention_verification.py": "c79b0d89dc161031ed6c6cd2f7a38fec1a389cfebc89374c0aa468f417468fe5",
+        "tests/test_facility_semantic_report.py": "588bc7a37f82056c9bf2c06d0bd7f108ad28a6cb277259b05518f09c7f7ed00c",
+        "tests/test_facility_semantic_study.py": "666e211c3f76b00f1e48cd2182999212d9f2872659fc440f7fc12a4f0b2b5011",
+        "tests/test_facility_semantic_verification.py": "47c224e02a44b7d401c515f4bd23c41410e1ecc267e5c0a163c5c53684656d16",
+        "tests/test_facility_subtype_report.py": "700a7dc69bee8d37cfa347bb324f25fd1aed769db0e6553fa110fe31fdcc7182",
+        "tests/test_facility_subtype_study.py": "3e16ec67cd6e7e759faa55e88ff7169772d6d42dd00b396e861221eb1718b6b6",
+        "tests/test_facility_subtype_verification.py": "cbab315451855898003b5caee1deb1e864550321955b62b2a99ceb325075d78c",
+        "tests/test_rc2119_audit.py": "f4fe3d93d2950da912547476ada9b07a616cad18fba42fc74ad4a8c90f5cda0b",
+        "tests/test_rc2119_fetch.py": "3aff4d8a9ea1bca570fd0bff8d4621b94ef0441a8f7c174e1816844d0f2e5958",
+        "tests/test_rc_positive.py": "9108a2de756d24d50bf080ab878f3bee378d4643abb2555b2e2c739a3b26d7c7",
+        "tests/test_spalling_sampler.py": "bd1613e009d3e84ea650512246dc4985dd4eec3e0386a5eeee4e893d929ae54f"
+      },
+      "stdout": "test_case_collision_fails_before_extraction (tests.test_rc2119_fetch.AcquisitionTests.test_case_collision_fails_before_extraction) ... ok\ntest_failed_download_never_creates_original (tests.test_rc2119_fetch.AcquisitionTests.test_failed_download_never_creates_original) ... ok\ntest_file_parent_collision_fails (tests.test_rc2119_fetch.AcquisitionTests.test_file_parent_collision_fails) ... ok\ntest_metadata_binds_all_three_official_files (tests.test_rc2119_fetch.AcquisitionTests.test_metadata_binds_all_three_official_files) ... ok\ntest_paths_reject_windows_and_traversal (tests.test_rc2119_fetch.AcquisitionTests.test_paths_reject_windows_and_traversal) ... ok\ntest_safe_full_extract_and_no_overwrite (tests.test_rc2119_fetch.AcquisitionTests.test_safe_full_extract_and_no_overwrite) ... ok\ntest_symlink_fails_before_extraction (tests.test_rc2119_fetch.AcquisitionTests.test_symlink_fails_before_extraction) ... ok\ntest_wrong_digest_and_truncation_rejected (tests.test_rc2119_fetch.AcquisitionTests.test_wrong_digest_and_truncation_rejected) ... ok\ntest_absent_damage_stays_unknown (tests.test_rc2119_audit.AnnotationTests.test_absent_damage_stays_unknown) ... ok\ntest_conflicting_numeric_evidence_rejected (tests.test_rc2119_audit.AnnotationTests.test_conflicting_numeric_evidence_rejected) ... ok\ntest_corrosion_and_crushing_not_relabelled (tests.test_rc2119_audit.AnnotationTests.test_corrosion_and_crushing_not_relabelled) ... ok\ntest_exact_overlap_excludes_transitive_whole_group (tests.test_rc2119_audit.AnnotationTests.test_exact_overlap_excludes_transitive_whole_group) ... ok\ntest_geometry_dimensions_and_nonfinite_are_rejected (tests.test_rc2119_audit.AnnotationTests.test_geometry_dimensions_and_nonfinite_are_rejected) ... ok\ntest_geometry_review_propagates_to_group (tests.test_rc2119_audit.AnnotationTests.test_geometry_review_propagates_to_group) ... ok\ntest_numeric_codes_need_paired_evidence (tests.test_rc2119_audit.AnnotationTests.test_numeric_codes_need_paired_evidence) ... ok\ntest_outside_geometry_is_not_silently_clipped (tests.test_rc2119_audit.AnnotationTests.test_outside_geometry_is_not_silently_clipped) ... ok\ntest_homography_recovers_known_cropped_view (tests.test_rc2119_audit.CropGeometryTests.test_homography_recovers_known_cropped_view) ... ok\ntest_sparse_matches_not_approved (tests.test_rc2119_audit.CropGeometryTests.test_sparse_matches_not_approved) ... ok\ntest_bad_sampler_budget_rejected (tests.test_rc_positive.PositiveRegionTests.test_bad_sampler_budget_rejected) ... ok\ntest_empty_unknown_supervision_produces_zero_loss (tests.test_rc_positive.PositiveRegionTests.test_empty_unknown_supervision_produces_zero_loss) ... ok\ntest_exact_bounded_replacements_preserve_other_positions (tests.test_rc_positive.PositiveRegionTests.test_exact_bounded_replacements_preserve_other_positions) ... ok\ntest_extreme_scores_keep_finite_loss_and_gradient (tests.test_rc_positive.PositiveRegionTests.test_extreme_scores_keep_finite_loss_and_gradient) ... ok\ntest_group_selection_is_source_only_and_excludes_flagged_rows (tests.test_rc_positive.PositiveRegionTests.test_group_selection_is_source_only_and_excludes_flagged_rows) ... ok\ntest_targets_reject_zero_bool_and_all_unknown (tests.test_rc_positive.PositiveRegionTests.test_targets_reject_zero_bool_and_all_unknown) ... ok\ntest_unknown_cells_and_other_classes_have_zero_gradient (tests.test_rc_positive.PositiveRegionTests.test_unknown_cells_and_other_classes_have_zero_gradient) ... ok\ntest_unsupported_other_class_foreground_rejected (tests.test_rc_positive.PositiveRegionTests.test_unsupported_other_class_foreground_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.085s\n\nOK\n",
+      "tests_run": 26
+    },
+    "verification_training_epochs": 0,
+    "weights_sha256": "0b70218aead95a4ae06a0326c0ea8c50e646aa0c71d574647902b019eb349140"
+  },
+  "technical_verification_sha256": "481cea05adf9b9d3377a5e366b752790e69ee221b9a38caf5e20fda05d5af433",
+  "verified_known_class_ap_measurements": 42
+}
