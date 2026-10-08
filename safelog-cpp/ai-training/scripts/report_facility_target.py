@@ -18,7 +18,7 @@ RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility
       'facility-presence-target-retention-control','facility-presence-target-retention-distill',
       'facility-presence-target-retention-strong','facility-presence-target-batchnorm-frozen',
       'facility-presence-target-head-lr-low','facility-presence-target-semantic-features',
-      'facility-presence-target-rc2119-positive-regions')
+      'facility-presence-target-rc2119-positive-regions','facility-presence-target-dense-native19')
 NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강','원본19종 보조 학습',
        '작은 영역 비교: 기존 자료 대조군','작은 영역 비교: 맥락 crop 보강군',
        '콘크리트 사진 비교: 기존 자료 대조군','콘크리트 사진 비교: ConViD 양성 보강군',
@@ -31,7 +31,7 @@ NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실�
        '기존 항목 보존 비교: 증류 없는 대조군','기존 항목 보존 비교: 알려진 5항목 증류군',
        '보존 강도 후속 비교: 가중치4 학생','BN 통계 비교: 원본 통계로 학습',
        '학습률 후속 비교: head 초기 학습률 감소','새 특징 비교: 고정 ConvNeXt 특징 연결',
-       'RC2119 양성 사진·위치 보강')
+       'RC2119 양성 사진·위치 보강','원본19종 위치 보조 학습')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 RESOLUTION_RUNS=('facility-presence-target-resolution-control','facility-presence-target-resolution-highres')
@@ -43,6 +43,7 @@ BATCHNORM_RUNS=('facility-presence-target-batchnorm-frozen',)
 HEAD_LR_RUNS=('facility-presence-target-head-lr-low',)
 SEMANTIC_RUNS=('facility-presence-target-semantic-features',)
 RC_POSITIVE_RUNS=('facility-presence-target-rc2119-positive-regions',)
+DENSE_AUXILIARY_RUNS=('facility-presence-target-dense-native19',)
 
 
 def interrupted_training_attempts(root):
@@ -135,6 +136,7 @@ def main():
     head_lr_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in HEAD_LR_RUNS)
     semantic_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in SEMANTIC_RUNS)
     rc_positive_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in RC_POSITIVE_RUNS)
+    dense_auxiliary_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in DENSE_AUXILIARY_RUNS)
     running=[{'run':e['run'],'epochs':e['epochs'],'best_full_photo_worst_error':e['worst_error']}
              for e in entries if e.get('status')=='running' and e.get('worst_error') is not None]
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
@@ -166,6 +168,10 @@ def main():
             'semantic_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':semantic_epochs,
                     'reused_control_run':HEAD_LR_RUNS[0],'reused_control_epochs_counted_as_new':0,
                     'scope':'Same original base and loss/teacher/LR/data; added fixed ImageNet ConvNeXt features with three zero-initialized learned heads. Epoch/draw budget matched, compute and model size not matched'},
+            'dense_auxiliary_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':dense_auxiliary_epochs,
+                    'reused_control_run':'facility-presence-target-head-lr-low','control_retrained':False,
+                    'original_sampling_and_public_targets_unchanged':True,'independent_new_photos':0,
+                    'scope':'Native19 multilabel spatial head+loss0.1 on original6225 full DACL TRAIN only; other sources/crops and invalid channels unknown; original324 inference contract retained'},
             'rc_positive_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':rc_positive_epochs,
                     'reused_control_run':HEAD_LR_RUNS[0],'reused_control_epochs_counted_as_new':0,
                     'selected_source_photos':200,'temporary_preflight_updates':2,'temporary_preflight_epochs_counted':0,
@@ -190,6 +196,7 @@ def main():
            f'BN 통계 고정 후보의 신규 예산은6epoch이며 완료 기록은 {batchnorm_epochs}epoch이다. 같은 가중치4 조건에서 학생 BN을 원본 평균·분산으로 정규화하고 학습 계수는 유지한다. 일반 BN 가중치4 대조군은 재사용해 다시 합산하지 않는다.',
            f'head 학습률 후속 후보의 신규 예산은6epoch이며 완료 기록은 {head_lr_epochs}epoch이다. 같은 원본 초기 모델·BN 정책·가중치4 조건에서 non-backbone 초기 학습률만0.00025→0.0001로 낮춘다. 기존 BN 고정 대조군을 재사용해 학습 횟수를 다시 더하지 않는다.',
            f'사전학습 특징 추가 후보의 신규 예산은6epoch이며 완료 기록은 {semantic_epochs}epoch이다. 고정된 ImageNet ConvNeXt 특징에서 지도·사진·보조 점수 보정 연결층을 학습한다. 기존 head1e-4 대조군을 재사용하며 새 시설 정답은 추가하지 않는다. 모델 크기와 추가 encoder 연산 비용은 별도로 보고한다.',
+           f'원본19종 위치 보조 후보의 신규 예산은6epoch이며 완료 기록은 {dense_auxiliary_epochs}epoch이다. 기존 DACL TRAIN 전체 사진6,225장의 원본 폴리곤에만 독립19종 위치 손실0.1을 추가한다. 부분 사진·다른 출처·부적합 채널은 미확인이다. 기존 대조군은 재학습하지 않으며 새 독립 사진은0장이다.',
            *(['직전 해상도 비교의 대조군은 실행 세션 중단 뒤 optimizer 상태를 복구할 수 없어 같은 초기 모델·고정 조건으로 처음부터 다시 시작했다. 중단 당시 완료하지 못한 epoch의 배치·업데이트·시간은 정량 기록이 없어 추정 합산하지 않는다. [보존한 중단 집계](facility-resolution-interruption.json)를 함께 기록한다.'] if attempts else []),
            f"동일한 세 검증 자료에서 뷰·임계값 선택 고정이 끝난 최대 오류 최소 관측 모델: `{best['run']}`, 최대 미탐·오탐 {best['worst_error']*100:.2f}%. 연구 후보 선정과 앱 배포 기준 통과는 별도다." if best else '동일한 세 검증 자료의 선택 고정 결과가 아직 없다.',
            *[f"진행 중 `{r['run']}`: 실제{r['epochs']}epoch, 지금까지 전체 사진의 최대 미탐·오탐 최저{r['best_full_photo_worst_error']*100:.2f}%. 학습 및 최종 확대 선택이 아직 끝나지 않았다." for r in running],
@@ -217,6 +224,7 @@ def main():
                 lines.append(f"| {DOMAINS[domain]} | {LABELS[label]} | {m['fn']}/{m['tp']+m['fn']} | {m['fnr']*100:.2f}% | {m['fp']}/{m['fp']+m['tn']} | {m['fpr']*100:.2f}% |")
         lines += ['',f"보류 시험: {'실행됨' if e['test_executed'] else '미실행. 검증 목표 미달이면 시험으로 모델을 반복 선택하지 않는다.'}",'']
     lines+=['## 실제 자료와 적용 상태','',
+            '원본19종 위치 보조 학습의 [정답 준비](FACILITY_DENSE_AUXILIARY_DATA_KO.md)와 [실제 비교 결과](FACILITY_DENSE_AUXILIARY_STUDY_RESULTS_KO.md)를 별도 기록한다. 원래7종 정답과 표본·증강 순서를 유지하고, 기존 사진 태그에 위치 감독을 추가한 새로운 방법이다. 학습용328state와 공개 출력이 같은324state 추론 파일을 분리하며 앱 프로필은 자동 교체하지 않는다.','',
             '최신 [RC2119 자료 검사](FACILITY_RC_DATA_AUDIT_KO.md)에서 원본2,119쌍·배포자SHA·정렬·전체/국소 특징 중복을 확인하고 양성200장을 추가했다. [실제6epoch 결과](FACILITY_RC_POSITIVE_STUDY_RESULTS_KO.md)는 기존 대조22.02%→새 후보22.22%, 작은 손상 FN70→70이다. 새 자료·foreground 손실 묶음의 개선을 확인하지 못했으며 앱 프로필을 교체하지 않았다. 임시 검사2회는 완료epoch에 포함하지 않는다.','',
             'DACL 학습6,225/검증710/기존 보류975. 원래 Dam 학습2,009개만 새 train1,585/val424로 분리, 기존 보류491 유지.',
             'CODEBRIM: 공식 MD5 및 7,810파일 CRC 확인. 정답 불명52개 제외 후 train6,438/val611/test628, 고유 부모 사진ID1,522.',
