@@ -1,0 +1,276 @@
+{
+  "schema": "facility_dense_auxiliary_data_audit_v1",
+  "status": "prepared",
+  "recipe": "dacl_v2_full_train_native19_processed_polygon_box640_any80_v1",
+  "source": "https://github.com/phiyodr/dacl10k-toolkit",
+  "source_version": "DACL v2 development phase",
+  "license": "CC BY-NC 4.0",
+  "source_auxiliary_manifest_sha256": "53544bf83e1b32e3a7b8775c5f8348594359bf6e01eade1c8571242e758f4b61",
+  "full_train_photos": 6225,
+  "independent_new_photos": 0,
+  "derived_mask_files": 6225,
+  "classes": [
+    "ACrack",
+    "Bearing",
+    "Cavity",
+    "Crack",
+    "Drainage",
+    "EJoint",
+    "Efflorescence",
+    "ExposedRebars",
+    "Graffiti",
+    "Hollowareas",
+    "JTape",
+    "PEquipment",
+    "Restformwork",
+    "Rockpocket",
+    "Rust",
+    "Spalling",
+    "WConccor",
+    "Weathering",
+    "Wetspot"
+  ],
+  "source_split": "train",
+  "grid_size": 80,
+  "per_label_pixel_cells": {
+    "ACrack": {
+      "positive": 501689,
+      "negative": 39120711,
+      "unknown": 217600
+    },
+    "Bearing": {
+      "positive": 476177,
+      "negative": 39261423,
+      "unknown": 102400
+    },
+    "Cavity": {
+      "positive": 355586,
+      "negative": 39420414,
+      "unknown": 64000
+    },
+    "Crack": {
+      "positive": 228766,
+      "negative": 39553634,
+      "unknown": 57600
+    },
+    "Drainage": {
+      "positive": 387834,
+      "negative": 39272966,
+      "unknown": 179200
+    },
+    "EJoint": {
+      "positive": 464663,
+      "negative": 39272937,
+      "unknown": 102400
+    },
+    "Efflorescence": {
+      "positive": 886652,
+      "negative": 38818948,
+      "unknown": 134400
+    },
+    "ExposedRebars": {
+      "positive": 74562,
+      "negative": 39650238,
+      "unknown": 115200
+    },
+    "Graffiti": {
+      "positive": 822392,
+      "negative": 38902408,
+      "unknown": 115200
+    },
+    "Hollowareas": {
+      "positive": 688936,
+      "negative": 37423064,
+      "unknown": 1728000
+    },
+    "JTape": {
+      "positive": 182277,
+      "negative": 39632123,
+      "unknown": 25600
+    },
+    "PEquipment": {
+      "positive": 1583025,
+      "negative": 37911375,
+      "unknown": 345600
+    },
+    "Restformwork": {
+      "positive": 157130,
+      "negative": 39657270,
+      "unknown": 25600
+    },
+    "Rockpocket": {
+      "positive": 113498,
+      "negative": 39688102,
+      "unknown": 38400
+    },
+    "Rust": {
+      "positive": 996349,
+      "negative": 38421251,
+      "unknown": 422400
+    },
+    "Spalling": {
+      "positive": 1188401,
+      "negative": 38542799,
+      "unknown": 108800
+    },
+    "WConccor": {
+      "positive": 218285,
+      "negative": 39570515,
+      "unknown": 51200
+    },
+    "Weathering": {
+      "positive": 5152681,
+      "negative": 33829719,
+      "unknown": 857600
+    },
+    "Wetspot": {
+      "positive": 988094,
+      "negative": 38519106,
+      "unknown": 332800
+    }
+  },
+  "per_label_photo_counts": {
+    "ACrack": {
+      "positive": 299,
+      "negative": 5926,
+      "spatial_known": 6191,
+      "spatial_unknown": 34
+    },
+    "Bearing": {
+      "positive": 646,
+      "negative": 5579,
+      "spatial_known": 6209,
+      "spatial_unknown": 16
+    },
+    "Cavity": {
+      "positive": 1082,
+      "negative": 5143,
+      "spatial_known": 6215,
+      "spatial_unknown": 10
+    },
+    "Crack": {
+      "positive": 1539,
+      "negative": 4686,
+      "spatial_known": 6216,
+      "spatial_unknown": 9
+    },
+    "Drainage": {
+      "positive": 902,
+      "negative": 5323,
+      "spatial_known": 6197,
+      "spatial_unknown": 28
+    },
+    "EJoint": {
+      "positive": 358,
+      "negative": 5867,
+      "spatial_known": 6209,
+      "spatial_unknown": 16
+    },
+    "Efflorescence": {
+      "positive": 1364,
+      "negative": 4861,
+      "spatial_known": 6204,
+      "spatial_unknown": 21
+    },
+    "ExposedRebars": {
+      "positive": 693,
+      "negative": 5532,
+      "spatial_known": 6207,
+      "spatial_unknown": 18
+    },
+    "Graffiti": {
+      "positive": 715,
+      "negative": 5510,
+      "spatial_known": 6207,
+      "spatial_unknown": 18
+    },
+    "Hollowareas": {
+      "positive": 984,
+      "negative": 5241,
+      "spatial_known": 5955,
+      "spatial_unknown": 270
+    },
+    "JTape": {
+      "positive": 684,
+      "negative": 5541,
+      "spatial_known": 6221,
+      "spatial_unknown": 4
+    },
+    "PEquipment": {
+      "positive": 1187,
+      "negative": 5038,
+      "spatial_known": 6171,
+      "spatial_unknown": 54
+    },
+    "Restformwork": {
+      "positive": 644,
+      "negative": 5581,
+      "spatial_known": 6221,
+      "spatial_unknown": 4
+    },
+    "Rockpocket": {
+      "positive": 282,
+      "negative": 5943,
+      "spatial_known": 6219,
+      "spatial_unknown": 6
+    },
+    "Rust": {
+      "positive": 3084,
+      "negative": 3141,
+      "spatial_known": 6159,
+      "spatial_unknown": 66
+    },
+    "Spalling": {
+      "positive": 2938,
+      "negative": 3287,
+      "spatial_known": 6208,
+      "spatial_unknown": 17
+    },
+    "WConccor": {
+      "positive": 241,
+      "negative": 5984,
+      "spatial_known": 6217,
+      "spatial_unknown": 8
+    },
+    "Weathering": {
+      "positive": 2416,
+      "negative": 3809,
+      "spatial_known": 6091,
+      "spatial_unknown": 134
+    },
+    "Wetspot": {
+      "positive": 869,
+      "negative": 5356,
+      "spatial_known": 6173,
+      "spatial_unknown": 52
+    }
+  },
+  "unknown_channel_reason_counts_nonexclusive": {
+    "invalid_native_polygon": 785,
+    "raster_presence_photo_tag_conflict": 587
+  },
+  "photos_with_any_unknown_spatial_channel": 740,
+  "original_input_files_preserved": 18676,
+  "all_original_input_sha_size_mtime_preserved": true,
+  "private_input_ledger_sha256": "a7f8853f8d8e83f6e81f1d3cff68d9764e08e879580158e4de01b26671e0b6e3",
+  "preparation_elapsed_minutes": 1.8399555749999612,
+  "worker_count": 4,
+  "created_utc": "2026-10-08T13:55:16.786365+00:00",
+  "preparation_script_sha256": "0f03a62bc7ad44fc789ad03249be0b38fd95230a6a83345761b399ae64c9ca28",
+  "heldout_images_or_annotations_opened": false,
+  "model_inference_executed": false,
+  "new_training_epochs": 0,
+  "original_photo_targets_changed": false,
+  "original_seven_channel_targets_changed": false,
+  "individual_paths_or_annotations_published": false,
+  "coverage_policy": "Only6225 original full DACL TRAIN photos. Other sources and all detail crops have19 spatial channels unknown and are absent from this manifest.",
+  "pixel_policy": "Independent native-class polygon unions at prepared-parent RGB dimensions; original BOX640 threshold>0 then8x8 any-positive80 cells. Invalid or conflicting whole class channels are zeroed and unknown.",
+  "negative_policy": "Only eligible full DACL author annotation coverage defines per-class outside-polygon/absent-class negatives; zero does not assert a normal or structurally safe facility.",
+  "limitations": [
+    "Coarse source polygon cells are not exact material boundaries or expert reannotation",
+    "Classes can overlap; this is19 independent binary channels, not mutually exclusive segmentation",
+    "Hollowareas reflects author inspection markings and does not establish photo-only internal damage diagnosis",
+    "Derived spatial supervision adds no independent photos, source validation or field evaluation"
+  ],
+  "manifest_sha256": "8e83be3501104315a9b7ce941c6acb3b68d94e6c748edc31ed50af5f4fd810a7"
+}
