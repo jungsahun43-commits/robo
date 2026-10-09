@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SafeLog · 200장 직접 검수</title><link rel="stylesheet" href="/human-review.css"></head>
+<body><header><div><span class="brand">SAFELOG</span><span class="tag">사람 피드백 학습</span><h1>사진을 보고 손상 여부를 골라주세요.</h1><p>균열과 박락을 각각 선택하세요. 애매한 사진은 <strong>판단 불가</strong>로 남기면 됩니다.</p></div><div class="identity"><label>검수자 표시명<input id="reviewer" value="검수자1" maxlength="120"></label><span id="save-status" role="status">불러오는 중</span></div></header>
+<div id="test-banner" hidden>테스트 화면입니다. 이 입력은 실제 학습에 사용할 수 없습니다.</div>
+<section class="toolbar"><div><strong id="progress">0 / 200장</strong><span id="task-progress"></span><progress id="bar" value="0" max="200"></progress></div><div class="actions"><button id="pending" class="quiet">다음 미완료 사진</button><button id="export" class="quiet">파일로 보관</button><button id="submit" class="primary">검수 결과 제출</button></div></section>
+<main><section class="photo-panel"><div class="photo-heading"><span id="photo-number">사진 1</span><a id="full-photo" target="_blank" rel="noopener">크게 보기 ↗</a></div><a id="photo-link" target="_blank" rel="noopener"><img id="photo" alt="검수할 학습 사진"></a><div class="photo-footer"><span id="source"></span><span>사진을 직접 보고 선택하세요.</span></div></section>
+<section class="decision-panel"><div class="task-card" data-task="0"><span class="step">01</span><h2>균열이 보이나요?</h2><p>표면이 갈라진 선이나 틈을 확인하세요.</p><div class="choices"><button data-task="0" data-choice="present">있음</button><button data-task="0" data-choice="absent">없음</button><button data-task="0" data-choice="uncertain">판단 불가</button></div></div>
+<div class="task-card" data-task="1"><span class="step">02</span><h2>박락이 보이나요?</h2><p>콘크리트 표면이 떨어져 나간 흔적을 확인하세요.</p><div class="choices"><button data-task="1" data-choice="present">있음</button><button data-task="1" data-choice="absent">없음</button><button data-task="1" data-choice="uncertain">판단 불가</button></div></div>
+<label class="note-label">메모 <span>선택 사항</span><textarea id="note" maxlength="3000" placeholder="그림자와 구분하기 어려움, 확대해도 흐림 등"></textarea></label>
+<details><summary>AI 제안·원래 정답 참고</summary><p class="hint">먼저 사진을 보고 판단한 후 참고하세요. 원래 정답과 다른 의견도 기록할 수 있습니다.</p><div id="reference"></div></details>
+<div class="navigation"><button id="previous" class="quiet">← 이전</button><span id="case-status"></span><button id="next" class="primary">다음 →</button></div></section></main>
+<section class="queue"><div class="queue-title"><h2>사진 목록</h2><p>초록: 두 항목 입력 완료 · 숫자를 눌러 이동</p></div><div id="photo-list"></div></section>
+<footer>선택값은 이 PC에 자동 저장됩니다. 제출한 판단은 별도 학습 자료로 기록하며, 원본·검증·시험 정답을 덮어쓰지 않습니다. 제출은 재학습 준비 단계입니다.</footer>
+<dialog id="submitted"><h2>검수 결과가 저장됐어요.</h2><p id="submission-message"></p><p>이제 대화창에 <strong>“검수 제출했어, 학습해줘”</strong>라고 알려주세요. 실제 입력 파일을 확인해 재학습과 비교 평가를 진행합니다.</p><button id="close-dialog" class="primary">확인</button></dialog>
+<script src="/human-review.js"></script></body></html>

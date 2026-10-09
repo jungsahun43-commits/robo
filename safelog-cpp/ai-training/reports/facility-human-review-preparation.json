@@ -1,0 +1,58 @@
+{
+  "schema": "facility_human_review_preparation_v1",
+  "status": "ready_for_real_human_input",
+  "photos": 200,
+  "primary_tasks_per_photo": 2,
+  "error_candidate_photos": 120,
+  "correct_comparison_photos": 80,
+  "sampling": [
+    {
+      "domain": "dacl",
+      "stratum": "error_candidate",
+      "available": 553,
+      "sampled": 92
+    },
+    {
+      "domain": "dacl",
+      "stratum": "correct_comparison",
+      "available": 5672,
+      "sampled": 28
+    },
+    {
+      "domain": "damsegment",
+      "stratum": "error_candidate",
+      "available": 4,
+      "sampled": 4
+    },
+    {
+      "domain": "damsegment",
+      "stratum": "correct_comparison",
+      "available": 1581,
+      "sampled": 36
+    },
+    {
+      "domain": "codebrim",
+      "stratum": "error_candidate",
+      "available": 415,
+      "sampled": 24
+    },
+    {
+      "domain": "codebrim",
+      "stratum": "correct_comparison",
+      "available": 6023,
+      "sampled": 16
+    }
+  ],
+  "weights_sha256": "058e6de039da9bb2b35c78e35c1cecf64099c8ac187597804fce99c8ce5afcb7",
+  "package_content_sha256": "e4d373e6b20521029226c872d5d2faabd5be8ba8400b60d4a2fe1a2eb40426ef",
+  "package_file_sha256": "2b1296d7ce81ec552b107bbc35da43edb620acf85e4941150534a8f9b1004924",
+  "source_core_manifest_sha256": "8216d8c1c958e59401b7ec20809afa681eb2b1ccb9640fec953597c5db61c681",
+  "source_train_photos_scored": 14248,
+  "actual_new_training_epochs": 0,
+  "actual_human_judgements": 0,
+  "source_test_inference": false,
+  "source_validation_inference": false,
+  "original_labels_changed": false,
+  "existing_app_model_promoted": false,
+  "individual_source_paths_published": false
+}
