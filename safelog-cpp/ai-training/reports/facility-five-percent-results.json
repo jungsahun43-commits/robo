@@ -4419,6 +4419,144 @@
       ]
     },
     {
+      "run": "facility-presence-target-primary-asymmetric",
+      "title": "\uade0\uc5f4\u00b7\ubc15\ub77d \ube44\ub300\uce6d \uc0ac\uc9c4 \uc190\uc2e4",
+      "status": "complete",
+      "epochs": 6,
+      "imgsz": 640,
+      "best_epoch": 3,
+      "frozen_validation": true,
+      "grid": 1,
+      "worst_error": 0.22413793103448276,
+      "target_passed_validation": false,
+      "operating_points": {
+        "concrete_crack": {
+          "threshold": 0.6951766610145569,
+          "domains": {
+            "dacl": {
+              "tp": 166,
+              "fp": 101,
+              "fn": 45,
+              "tn": 398,
+              "fnr": 0.2132701421800948,
+              "fpr": 0.20240480961923848,
+              "fnr_ci95": [
+                0.1633845331406176,
+                0.27340946060624977
+              ],
+              "fpr_ci95": [
+                0.16948641583138707,
+                0.23987016209170375
+              ],
+              "photo_error_fraction": 0.2056338028169014
+            },
+            "damsegment": {
+              "tp": 245,
+              "fp": 1,
+              "fn": 3,
+              "tn": 175,
+              "fnr": 0.012096774193548387,
+              "fpr": 0.005681818181818182,
+              "fnr_ci95": [
+                0.004122365520547381,
+                0.03495562770097791
+              ],
+              "fpr_ci95": [
+                0.0010036855324105573,
+                0.03147747236632618
+              ],
+              "photo_error_fraction": 0.009433962264150943
+            },
+            "codebrim": {
+              "tp": 139,
+              "fp": 44,
+              "fn": 10,
+              "tn": 418,
+              "fnr": 0.06711409395973154,
+              "fpr": 0.09523809523809523,
+              "fnr_ci95": [
+                0.03686034060709469,
+                0.11912782519982631
+              ],
+              "fpr_ci95": [
+                0.07171131598467127,
+                0.12544043399738558
+              ],
+              "photo_error_fraction": 0.088379705400982
+            }
+          },
+          "worst_error": 0.2132701421800948,
+          "target_passed": false
+        },
+        "concrete_spalling": {
+          "threshold": 0.819313645362854,
+          "domains": {
+            "dacl": {
+              "tp": 252,
+              "fp": 85,
+              "fn": 72,
+              "tn": 301,
+              "fnr": 0.2222222222222222,
+              "fpr": 0.22020725388601037,
+              "fnr_ci95": [
+                0.18035690686403077,
+                0.27059722002555475
+              ],
+              "fpr_ci95": [
+                0.1817372029296174,
+                0.2641914044242038
+              ],
+              "photo_error_fraction": 0.2211267605633803
+            },
+            "damsegment": {
+              "tp": 45,
+              "fp": 8,
+              "fn": 13,
+              "tn": 358,
+              "fnr": 0.22413793103448276,
+              "fpr": 0.02185792349726776,
+              "fnr_ci95": [
+                0.1359366061140974,
+                0.3466111763891869
+              ],
+              "fpr_ci95": [
+                0.01111646133459836,
+                0.042532090896301264
+              ],
+              "photo_error_fraction": 0.049528301886792456
+            },
+            "codebrim": {
+              "tp": 123,
+              "fp": 41,
+              "fn": 17,
+              "tn": 430,
+              "fnr": 0.12142857142857143,
+              "fpr": 0.0870488322717622,
+              "fnr_ci95": [
+                0.07721261463005077,
+                0.18586493707821902
+              ],
+              "fpr_ci95": [
+                0.06481456552809073,
+                0.11596463398386447
+              ],
+              "photo_error_fraction": 0.09492635024549918
+            }
+          },
+          "worst_error": 0.22413793103448276,
+          "target_passed": false
+        }
+      },
+      "test_executed": false,
+      "target_passed_test": null,
+      "weights_sha256": "32b2862eabde7866b75c3fda827cfaa01ffc2463968aec9fcae0c685cbc277e4",
+      "validation_domains": [
+        "dacl",
+        "damsegment",
+        "codebrim"
+      ]
+    },
+    {
       "run": "facility-presence-target-ensemble",
       "title": "\ub450 \ubaa8\ub378 \ud655\ub960 \ud3c9\uade0",
       "status": "validation_only",
@@ -4598,8 +4736,8 @@
   ],
   "app_profile": "facility-validation-v2",
   "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
-  "total_actual_training_epochs": 250,
-  "model_run_recorded_training_epochs": 248,
+  "total_actual_training_epochs": 256,
+  "model_run_recorded_training_epochs": 254,
   "interrupted_recorded_training_epochs": 2,
   "interrupted_training_attempts": [
     {
@@ -4679,6 +4817,19 @@
     "original_sampling_and_public_targets_unchanged": true,
     "independent_new_photos": 0,
     "scope": "Native19 multilabel spatial head+loss0.1 on original6225 full DACL TRAIN only; other sources/crops and invalid channels unknown; original324 inference contract retained"
+  },
+  "primary_asymmetric_training_accounting": {
+    "new_candidate_budget_epochs": 6,
+    "new_candidate_recorded_completed_epochs": 6,
+    "reused_control_run": "facility-presence-target-head-lr-low",
+    "reused_control_epochs_counted_as_new": 0,
+    "gamma_positive": 0.0,
+    "gamma_negative": 4.0,
+    "negative_probability_shift": 0.05,
+    "original_sampling_and_labels_unchanged": true,
+    "ai_native_reviews": 12,
+    "new_ai_labels": 0,
+    "scope": "Primary photo objective ASL-style; other-five focal/spatial/auxiliary/KD unchanged; exact original draw order and teacher/BN/LR/initial state retained"
   },
   "ai_agreement_training_accounting": {
     "new_candidate_budget_epochs": 6,
