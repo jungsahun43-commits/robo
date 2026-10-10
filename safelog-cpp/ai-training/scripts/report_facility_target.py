@@ -19,7 +19,7 @@ RUNS=('facility-presence-target-v2s','facility-presence-target-detail','facility
       'facility-presence-target-retention-strong','facility-presence-target-batchnorm-frozen',
       'facility-presence-target-head-lr-low','facility-presence-target-semantic-features',
       'facility-presence-target-rc2119-positive-regions','facility-presence-target-dense-native19',
-      'facility-presence-target-ai-agreement','facility-presence-target-primary-asymmetric','facility-presence-target-convnext-finetune')
+      'facility-presence-target-ai-agreement','facility-presence-target-primary-asymmetric','facility-presence-target-convnext-finetune','facility-presence-target-spalling-ohem')
 NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실제 CODEBRIM 추가','사진·위치 동시 학습','S2DS 위치 정답 추가','어려운 TRAIN 사례 보강','원본19종 보조 학습',
        '작은 영역 비교: 기존 자료 대조군','작은 영역 비교: 맥락 crop 보강군',
        '콘크리트 사진 비교: 기존 자료 대조군','콘크리트 사진 비교: ConViD 양성 보강군',
@@ -32,7 +32,7 @@ NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실�
        '기존 항목 보존 비교: 증류 없는 대조군','기존 항목 보존 비교: 알려진 5항목 증류군',
        '보존 강도 후속 비교: 가중치4 학생','BN 통계 비교: 원본 통계로 학습',
        '학습률 후속 비교: head 초기 학습률 감소','새 특징 비교: 고정 ConvNeXt 특징 연결',
-       'RC2119 양성 사진·위치 보강','원본19종 위치 보조 학습','AI 검토 일치 사진 추가 노출','균열·박락 비대칭 사진 손실','ConvNeXt 특징 추출기 전체 학습')
+       'RC2119 양성 사진·위치 보강','원본19종 위치 보조 학습','AI 검토 일치 사진 추가 노출','균열·박락 비대칭 사진 손실','ConvNeXt 특징 추출기 전체 학습','박락 배경 픽셀 집중 학습')
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 RESOLUTION_RUNS=('facility-presence-target-resolution-control','facility-presence-target-resolution-highres')
@@ -143,6 +143,7 @@ def main():
     ai_agreement_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in AI_AGREEMENT_RUNS)
     primary_asymmetric_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in PRIMARY_ASYMMETRIC_RUNS)
     convnext_epochs=sum(e.get('epochs',0)for e in entries if e['run']=='facility-presence-target-convnext-finetune')
+    spalling_ohem_epochs=sum(e.get('epochs',0)for e in entries if e['run']=='facility-presence-target-spalling-ohem')
     running=[{'run':e['run'],'epochs':e['epochs'],'best_full_photo_worst_error':e['worst_error']}
              for e in entries if e.get('status')=='running' and e.get('worst_error') is not None]
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
@@ -178,6 +179,9 @@ def main():
                     'reused_control_run':'facility-presence-target-head-lr-low','control_retrained':False,
                     'original_sampling_and_public_targets_unchanged':True,'independent_new_photos':0,
                     'scope':'Native19 multilabel spatial head+loss0.1 on original6225 full DACL TRAIN only; other sources/crops and invalid channels unknown; original324 inference contract retained'},
+            'spalling_ohem_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':spalling_ohem_epochs,
+                    'reused_control_run':HEAD_LR_RUNS[0],'reused_control_epochs_counted_as_new':0,'independent_new_photos':0,'hard_background_fraction':.1,
+                    'scope':'Only asserted spalling-background spatial focal hard-tail per photo; original foreground/other-six/Dice/photo/auxiliary/KD/BN/LR/order/324-state graph retained'},
             'convnext_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':convnext_epochs,
                     'reused_control_run':HEAD_LR_RUNS[0],'reused_control_epochs_counted_as_new':0,'independent_new_photos':0,
                     'scope':'Trainable ImageNet ConvNeXt encoder plus new FPN/photo7/aux19 heads; exact original draw order, labels, losses, fixed MobileNet teacher and LRs; architecture/initialization/normalization package'},

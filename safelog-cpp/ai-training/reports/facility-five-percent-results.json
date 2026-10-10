@@ -4695,6 +4695,144 @@
       ]
     },
     {
+      "run": "facility-presence-target-spalling-ohem",
+      "title": "\ubc15\ub77d \ubc30\uacbd \ud53d\uc140 \uc9d1\uc911 \ud559\uc2b5",
+      "status": "complete",
+      "epochs": 6,
+      "imgsz": 640,
+      "best_epoch": 3,
+      "frozen_validation": true,
+      "grid": 1,
+      "worst_error": 0.22530864197530864,
+      "target_passed_validation": false,
+      "operating_points": {
+        "concrete_crack": {
+          "threshold": 0.26048359274864197,
+          "domains": {
+            "dacl": {
+              "tp": 165,
+              "fp": 110,
+              "fn": 46,
+              "tn": 389,
+              "fnr": 0.21800947867298578,
+              "fpr": 0.22044088176352705,
+              "fnr_ci95": [
+                0.16761059996190267,
+                0.2784925839709669
+              ],
+              "fpr_ci95": [
+                0.18628078195709047,
+                0.25887236700096455
+              ],
+              "photo_error_fraction": 0.21971830985915494
+            },
+            "damsegment": {
+              "tp": 246,
+              "fp": 1,
+              "fn": 2,
+              "tn": 175,
+              "fnr": 0.008064516129032258,
+              "fpr": 0.005681818181818182,
+              "fnr_ci95": [
+                0.0022143743392366525,
+                0.028922114694036785
+              ],
+              "fpr_ci95": [
+                0.0010036855324105573,
+                0.03147747236632618
+              ],
+              "photo_error_fraction": 0.007075471698113208
+            },
+            "codebrim": {
+              "tp": 139,
+              "fp": 62,
+              "fn": 10,
+              "tn": 400,
+              "fnr": 0.06711409395973154,
+              "fpr": 0.1341991341991342,
+              "fnr_ci95": [
+                0.03686034060709469,
+                0.11912782519982631
+              ],
+              "fpr_ci95": [
+                0.10611527348399018,
+                0.16831598719498098
+              ],
+              "photo_error_fraction": 0.11783960720130933
+            }
+          },
+          "worst_error": 0.22044088176352705,
+          "target_passed": false
+        },
+        "concrete_spalling": {
+          "threshold": 0.473182737827301,
+          "domains": {
+            "dacl": {
+              "tp": 251,
+              "fp": 86,
+              "fn": 73,
+              "tn": 300,
+              "fnr": 0.22530864197530864,
+              "fpr": 0.22279792746113988,
+              "fnr_ci95": [
+                0.18318887535613515,
+                0.2738657612346772
+              ],
+              "fpr_ci95": [
+                0.18413195127229665,
+                0.2669269467541743
+              ],
+              "photo_error_fraction": 0.223943661971831
+            },
+            "damsegment": {
+              "tp": 46,
+              "fp": 6,
+              "fn": 12,
+              "tn": 360,
+              "fnr": 0.20689655172413793,
+              "fpr": 0.01639344262295082,
+              "fnr_ci95": [
+                0.12251483969490558,
+                0.3276921792148341
+              ],
+              "fpr_ci95": [
+                0.007534363607403727,
+                0.03529874350613476
+              ],
+              "photo_error_fraction": 0.04245283018867924
+            },
+            "codebrim": {
+              "tp": 122,
+              "fp": 38,
+              "fn": 18,
+              "tn": 433,
+              "fnr": 0.12857142857142856,
+              "fpr": 0.08067940552016985,
+              "fnr_ci95": [
+                0.08289789018597554,
+                0.1940838586598741
+              ],
+              "fpr_ci95": [
+                0.05934229464691987,
+                0.10880110845647939
+              ],
+              "photo_error_fraction": 0.09165302782324058
+            }
+          },
+          "worst_error": 0.22530864197530864,
+          "target_passed": false
+        }
+      },
+      "test_executed": false,
+      "target_passed_test": null,
+      "weights_sha256": "0c1a2614e2efcc52b7220da65582b084544ff0d85f49e703cc102da1c33cfcc5",
+      "validation_domains": [
+        "dacl",
+        "damsegment",
+        "codebrim"
+      ]
+    },
+    {
       "run": "facility-presence-target-ensemble",
       "title": "\ub450 \ubaa8\ub378 \ud655\ub960 \ud3c9\uade0",
       "status": "validation_only",
@@ -4874,8 +5012,8 @@
   ],
   "app_profile": "facility-validation-v2",
   "app_profile_sha256": "ecc09958022c659ef37385d1633177c034d27cda8034cadc3ab4af2ab8abb035",
-  "total_actual_training_epochs": 262,
-  "model_run_recorded_training_epochs": 260,
+  "total_actual_training_epochs": 268,
+  "model_run_recorded_training_epochs": 266,
   "interrupted_recorded_training_epochs": 2,
   "interrupted_training_attempts": [
     {
@@ -4955,6 +5093,15 @@
     "original_sampling_and_public_targets_unchanged": true,
     "independent_new_photos": 0,
     "scope": "Native19 multilabel spatial head+loss0.1 on original6225 full DACL TRAIN only; other sources/crops and invalid channels unknown; original324 inference contract retained"
+  },
+  "spalling_ohem_training_accounting": {
+    "new_candidate_budget_epochs": 6,
+    "new_candidate_recorded_completed_epochs": 6,
+    "reused_control_run": "facility-presence-target-head-lr-low",
+    "reused_control_epochs_counted_as_new": 0,
+    "independent_new_photos": 0,
+    "hard_background_fraction": 0.1,
+    "scope": "Only asserted spalling-background spatial focal hard-tail per photo; original foreground/other-six/Dice/photo/auxiliary/KD/BN/LR/order/324-state graph retained"
   },
   "convnext_training_accounting": {
     "new_candidate_budget_epochs": 6,

@@ -1,6 +1,6 @@
 {
-  "plot_sha256": "98386f09b5e6d1fb63e06fc293e726929dfeb431fd10fd4d879c72a14748f46f",
-  "script_sha256": "3e79d3ca2ea0ba2f475c51c3f56c13f07c4dbd0bf81e549b0f76456e4e70b7a8",
+  "plot_sha256": "0ff87909a22075ee6874ede64fd45b610aac8c0f88fdb0b679625a8a8c5de70f",
+  "script_sha256": "7c5a3245a8dd88e973835617409bac8138294237d3c29a1033ac5630763e8003",
   "histories": [
     {
       "run": "facility-presence-target-v2s",
@@ -209,6 +209,12 @@
     {
       "run": "facility-presence-target-convnext-finetune",
       "history_sha256": "fef82f87d3d8cd5838cd1e012ac05bbd8c2c26de4ea0bce0fdaab4ff6e1db1c4",
+      "status": "complete",
+      "actual_epochs": 6
+    },
+    {
+      "run": "facility-presence-target-spalling-ohem",
+      "history_sha256": "d875ab19d56ef028a0637182a54e1e950acc07222e2fba1a0e455e0801e6cfc9",
       "status": "complete",
       "actual_epochs": 6
     }
