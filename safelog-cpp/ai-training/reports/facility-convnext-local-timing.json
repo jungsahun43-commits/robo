@@ -1,0 +1,42 @@
+{
+  "batch_size": 1,
+  "clock": "perf_counter with CUDA synchronize",
+  "device": "NVIDIA GeForce RTX 4070 SUPER",
+  "dtype": "float32",
+  "end_to_end_app_latency_measured": false,
+  "experiments": [
+    {
+      "all_outputs_finite": true,
+      "checkpoint_bytes": 13159513,
+      "median_milliseconds": 4.227899989928119,
+      "p90_milliseconds": 4.684070002986118,
+      "parameter_count": 3244151,
+      "peak_cuda_allocated_bytes": 87674880,
+      "run": "facility-presence-target-head-lr-low",
+      "timed_calls": 40,
+      "weights_sha256": "058e6de039da9bb2b35c78e35c1cecf64099c8ac187597804fce99c8ce5afcb7"
+    },
+    {
+      "all_outputs_finite": true,
+      "checkpoint_bytes": 113088202,
+      "median_milliseconds": 15.613350013154559,
+      "p90_milliseconds": 17.129589992691763,
+      "parameter_count": 28259976,
+      "peak_cuda_allocated_bytes": 226493440,
+      "run": "facility-presence-target-convnext-finetune",
+      "timed_calls": 40,
+      "weights_sha256": "8c756099b6f78ac0fc6cc8aa8bd165f3116a61456d2f8fc1d3a07f6c662a7bb1"
+    }
+  ],
+  "imgsz": 640,
+  "includes_file_io_or_transfer": false,
+  "limitation": "One local GPU session and TRAIN photo; model-only latency, not mobile/server end-to-end or representative fleet measurements",
+  "schema": "facility_convnext_local_timing_v1",
+  "script_sha256": "77e80bebe562c8ff4d6a4abe64e5b881dcf3c5531955099ba9afc1a48001d2da",
+  "source_photo_sha256": "ad54ca6440ad4b45afa3bd9fee871701cc3a05f3d6ad9875794ac5f04aaf899e",
+  "source_split": "train",
+  "source_test_used": false,
+  "timed_calls_per_model": 40,
+  "torch": "2.12.0+cu126",
+  "warmup_calls": 10
+}

@@ -1,0 +1,41 @@
+{
+  "app_model_promoted": false,
+  "files": {
+    "reports/FACILITY_CONVNEXT_HANDOFF_KO.md": {
+      "sha256": "e8e4cd980bc565babd32d8cf6d2d6b91608a97fa85674a66d155b45360488c1c",
+      "size_bytes": 3030
+    },
+    "reports/FACILITY_CONVNEXT_STUDY_RESULTS_KO.md": {
+      "sha256": "dbb8ed19f4494b37bd6c07fa91cedb5d8e4ad2be76300fa29049905c3c7e6c26",
+      "size_bytes": 3537
+    },
+    "reports/facility-convnext-local-timing.json": {
+      "sha256": "d61687339820fd8b8e5b8c3bb79a601d22a869df5329050f6b7189e5f4238ffb",
+      "size_bytes": 1630
+    },
+    "reports/facility-convnext-study-comparison.json": {
+      "sha256": "1fc83cc15664e03bbba01e5ef17b17d541ebb8458fa3d1748a45547697541bcd",
+      "size_bytes": 119212
+    },
+    "reports/facility-convnext-study-protocol.json": {
+      "sha256": "dff2b4065a6dde4f36e1dfbe412cc382160d7185d341c9d6d51d051c9dd5a926",
+      "size_bytes": 20226
+    },
+    "reports/facility-convnext-study-verification.json": {
+      "sha256": "ff0679fb2306aa868148c26c0843cfeb598a9a2613a5b2c5ee05129ac15914da",
+      "size_bytes": 37643
+    },
+    "runs/facility-presence-target-convnext-finetune/best.pt": {
+      "sha256": "8c756099b6f78ac0fc6cc8aa8bd165f3116a61456d2f8fc1d3a07f6c662a7bb1",
+      "size_bytes": 113088202
+    }
+  },
+  "human_review_required": true,
+  "independent_industrial_accuracy_verified": false,
+  "schema": "facility_convnext_research_handoff_v1",
+  "script_sha256": "e1d30baa23f5e6846e727c0cecd32ddeb5af226d4812435ddc3bd12234ee8872",
+  "weights_sha256": "8c756099b6f78ac0fc6cc8aa8bd165f3116a61456d2f8fc1d3a07f6c662a7bb1",
+  "zip_members_verified": true,
+  "zip_sha256": "e5ec132757254b1418c5c548001778fb6e92966b51303ee27428dc0ed17f5655",
+  "zip_size_bytes": 113276395
+}

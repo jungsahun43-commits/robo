@@ -2,6 +2,12 @@
 
 SafeLog AI is a contract-first C++20 project for AI-assisted workplace safety inspection. A multimodal analyzer suggests hazards and corrective action from a before photo, compares before/after photos, and drafts a report summary. A human reviews every AI result and makes the final decision.
 
+## Latest facility AI research (2026-10-10)
+
+A fully trainable ConvNeXt facility model completed six actual epochs. Matched public validation worst crack/spalling FNR/FPR: 22.0207% control versus 22.2798% candidate. Each rate below5% remains unmet. This is repeated source validation, not independent workplace accuracy.
+
+[Study results](ai-training/reports/FACILITY_CONVNEXT_STUDY_RESULTS_KO.md) · [Research checkpoint handoff and local inference timing](ai-training/reports/FACILITY_CONVNEXT_HANDOFF_KO.md). The application's default model remains unchanged.
+
 ## Current vertical slice
 
 The included CLI demo executes the complete scenario:

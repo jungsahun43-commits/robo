@@ -1,0 +1,24 @@
+{
+  "accuracy_measured": false,
+  "payload": {
+    "application_profile_updated": false,
+    "architecture": "convnext_tiny_facility_fpn_auxiliary_v1",
+    "human_review_required": true,
+    "probabilities_are_verified_industrial_accuracy": false,
+    "schema": "facility_research_scores_v1",
+    "scores": {
+      "concrete_crack": 0.10485374927520752,
+      "concrete_spalling": 0.0998288169503212,
+      "efflorescence": 0.017632054165005684,
+      "exposed_rebar": 0.003068379359319806,
+      "rust_stain": 0.08126625418663025,
+      "surface_cavity": 0.06378570199012756,
+      "wet_surface": 0.016679009422659874
+    },
+    "weights_sha256": "8c756099b6f78ac0fc6cc8aa8bd165f3116a61456d2f8fc1d3a07f6c662a7bb1"
+  },
+  "script_sha256": "d51241566150d0c2379e79231bf58980242b8d76cbf5287e84d3f6797ffd12dd",
+  "source_photo_sha256": "ad54ca6440ad4b45afa3bd9fee871701cc3a05f3d6ad9875794ac5f04aaf899e",
+  "split": "train",
+  "status": "passed"
+}
