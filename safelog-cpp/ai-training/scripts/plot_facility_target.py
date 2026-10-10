@@ -46,7 +46,8 @@ EXPERIMENTS=[('facility-presence-target-v2s','Larger photo model',0),
              ('facility-presence-target-ai-agreement','AI visual agreement exposure',1),
              ('facility-presence-target-primary-asymmetric','Primary asymmetric photo loss',1),
              ('facility-presence-target-convnext-finetune','Full ConvNeXt encoder + new heads',1),
-             ('facility-presence-target-spalling-ohem','Spalling hard-background pixel mining',1)]
+             ('facility-presence-target-spalling-ohem','Spalling hard-background pixel mining',1),
+             ('facility-presence-target-idea-building','IDEA building spalling / normal photos',1)]
 
 
 def main():
@@ -75,7 +76,8 @@ def main():
                'facility-presence-target-ai-agreement':'#39752C',
                'facility-presence-target-primary-asymmetric':'#4E7FAA',
                'facility-presence-target-convnext-finetune':'#C63842',
-               'facility-presence-target-spalling-ohem':'#BD7E18'}.get(name,colors[index](color_counts[index]))
+               'facility-presence-target-spalling-ohem':'#BD7E18',
+               'facility-presence-target-idea-building':'#138B72'}.get(name,colors[index](color_counts[index]))
         color_counts[index]+=1
         axes[index].plot(epochs,values,marker='.',color=color,label=label+(' (running)' if state!='complete' else ''))
         best=min(range(len(values)),key=lambda i:values[i])

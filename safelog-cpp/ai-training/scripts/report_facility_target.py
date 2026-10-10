@@ -33,6 +33,8 @@ NAMES=('큰 사진 모델','상세 조각·자료 균형','640 해상도','실�
        '보존 강도 후속 비교: 가중치4 학생','BN 통계 비교: 원본 통계로 학습',
        '학습률 후속 비교: head 초기 학습률 감소','새 특징 비교: 고정 ConvNeXt 특징 연결',
        'RC2119 양성 사진·위치 보강','원본19종 위치 보조 학습','AI 검토 일치 사진 추가 노출','균열·박락 비대칭 사진 손실','ConvNeXt 특징 추출기 전체 학습','박락 배경 픽셀 집중 학습')
+RUNS += ('facility-presence-target-idea-building',)
+NAMES += ('IDEA 건물 박락·정상 사진 보강',)
 DOMAINS={'dacl':'기존 교량','damsegment':'추가 댐','codebrim':'CODEBRIM 교량'}
 LABELS={'concrete_crack':'균열','concrete_spalling':'박락'}
 RESOLUTION_RUNS=('facility-presence-target-resolution-control','facility-presence-target-resolution-highres')
@@ -144,6 +146,7 @@ def main():
     primary_asymmetric_epochs=sum(e.get('epochs',0) for e in entries if e['run'] in PRIMARY_ASYMMETRIC_RUNS)
     convnext_epochs=sum(e.get('epochs',0)for e in entries if e['run']=='facility-presence-target-convnext-finetune')
     spalling_ohem_epochs=sum(e.get('epochs',0)for e in entries if e['run']=='facility-presence-target-spalling-ohem')
+    idea_epochs=sum(e.get('epochs',0)for e in entries if e['run']=='facility-presence-target-idea-building')
     running=[{'run':e['run'],'epochs':e['epochs'],'best_full_photo_worst_error':e['worst_error']}
              for e in entries if e.get('status')=='running' and e.get('worst_error') is not None]
     result={'criterion':'Crack and spalling, per-class FNR and FPR each strictly < .05 in every recorded domain; test only after frozen validation passes',
@@ -179,6 +182,10 @@ def main():
                     'reused_control_run':'facility-presence-target-head-lr-low','control_retrained':False,
                     'original_sampling_and_public_targets_unchanged':True,'independent_new_photos':0,
                     'scope':'Native19 multilabel spatial head+loss0.1 on original6225 full DACL TRAIN only; other sources/crops and invalid channels unknown; original324 inference contract retained'},
+            'idea_building_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':idea_epochs,
+                    'reused_control_run':HEAD_LR_RUNS[0],'reused_control_epochs_counted_as_new':0,'selected_original_photos':363,'spalling_positive_photos':163,'author_normal_photos':200,
+                    'supplement_draws_per_epoch':1784,'positive_normal_draws_each_per_epoch':892,'local_noncommercial_research_only':True,'checkpoint_redistributed':False,
+                    'scope':'Building-only IDEA primary photo targets; missing/other5/pixel/aux unknown; source data and12.52% exposure package; original model/initializer/loss/BN/LR retained'},
             'spalling_ohem_training_accounting':{'new_candidate_budget_epochs':6,'new_candidate_recorded_completed_epochs':spalling_ohem_epochs,
                     'reused_control_run':HEAD_LR_RUNS[0],'reused_control_epochs_counted_as_new':0,'independent_new_photos':0,'hard_background_fraction':.1,
                     'scope':'Only asserted spalling-background spatial focal hard-tail per photo; original foreground/other-six/Dice/photo/auxiliary/KD/BN/LR/order/324-state graph retained'},
