@@ -1,0 +1,29 @@
+{
+  "excluded_images": 0,
+  "heldout_labels_or_predictions_used": false,
+  "new_photos": 439,
+  "new_training_epochs": 0,
+  "old_descriptors": 1765434,
+  "old_images": 21254,
+  "policy": {
+    "all_matches_excluded_as_candidates": true,
+    "descriptor_ratio_max": 0.75,
+    "feature": "OpenCV SIFT",
+    "global_flann_checks": 64,
+    "global_flann_trees": 4,
+    "heldout_labels_or_predictions_used": false,
+    "long_edge": 640,
+    "max_features": 96,
+    "minimum_inlier_fraction": 0.5,
+    "minimum_inliers": 6,
+    "minimum_tentative_matches": 8,
+    "nearest_neighbors": 2,
+    "new_training_epochs": 0,
+    "ransac_reprojection_pixels": 4.0
+  },
+  "scene_independence_verified": false,
+  "schema": "idea_crop_screen_v1",
+  "source_audit_sha256": "6f6be7fe0929bc95a1c6b8fac0e95fd9cc69b56685964891ee129d894aceb598",
+  "within_source_dhash_groups_screened": true,
+  "within_source_local_crop_pairs_screened": false
+}

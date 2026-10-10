@@ -1,0 +1,65 @@
+{
+  "author": "EUCENTRE / Senaldi, Casarotti, Mandirola, Cantoni",
+  "crop_review_sha256": "f9ca92825692a8700c8dac46b9ac33b765e54a273f7336f3de734cd45a76a942",
+  "distribution_policy": "Do not distribute source images/adapted images or this research checkpoint. Reports and software only.",
+  "industrial_factory_ground_truth": false,
+  "known_target_counts": {
+    "concrete_crack": {
+      "negative": 200,
+      "positive": 54,
+      "unknown": 109
+    },
+    "concrete_spalling": {
+      "negative": 200,
+      "positive": 163,
+      "unknown": 0
+    },
+    "efflorescence": {
+      "negative": 0,
+      "positive": 0,
+      "unknown": 363
+    },
+    "exposed_rebar": {
+      "negative": 0,
+      "positive": 0,
+      "unknown": 363
+    },
+    "rust_stain": {
+      "negative": 0,
+      "positive": 0,
+      "unknown": 363
+    },
+    "surface_cavity": {
+      "negative": 0,
+      "positive": 0,
+      "unknown": 363
+    },
+    "wet_surface": {
+      "negative": 0,
+      "positive": 0,
+      "unknown": 363
+    }
+  },
+  "license": "cc-by-nc-nd-4.0",
+  "limitations": [
+    "Normal-photo material is not established.",
+    "Buildings include seismic/ordinary inspections, not verified factory scenes.",
+    "Publisher no-damage ontology has not been independently relabelled against SafeLog visible-surface definitions.",
+    "No original scene IDs; near-photo grouping and local-view screening cannot prove independence.",
+    "No new independently heldout evaluation; original public VAL repeatedly explored."
+  ],
+  "local_noncommercial_research_only": true,
+  "manifest_sha256": "51528d0faf5158cc22a452534e9c00424590d1457c3823fe1275a47dba994ee6",
+  "new_ai_labels": 0,
+  "new_human_labels": 0,
+  "new_spatial_or_auxiliary_labels": 0,
+  "photos": 363,
+  "schema": "idea_research_photo_preparation_v1",
+  "source_audit_sha256": "6f6be7fe0929bc95a1c6b8fac0e95fd9cc69b56685964891ee129d894aceb598",
+  "source_url": "https://zenodo.org/records/15120522",
+  "strata": {
+    "author_no_damage": 200,
+    "rc_spalling": 163
+  },
+  "unknown_policy": "Explicit no-damage whole-photo primary negatives only. Missing damage annotations unknown. Other5/pixel/aux unknown."
+}

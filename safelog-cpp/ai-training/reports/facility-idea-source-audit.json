@@ -1,0 +1,42 @@
+{
+  "acquisition_sha256": "089a4e0aa5a2e0015cec736de9b07da33960e07355a1da94c91473d9b409c5d6",
+  "additional_rc2119_photos_screened": 2119,
+  "downloaded_original_photos": 439,
+  "eligible_counts": {
+    "author_no_damage": 209,
+    "rc_spalling": 164
+  },
+  "full_archive_md5_verified": false,
+  "heldout_labels_or_predictions_used": false,
+  "license": "cc-by-nc-nd-4.0",
+  "new_training_epochs": 0,
+  "old_inventory": {
+    "cache_sha256": "21013f0c4e7a105e6dfeecca5ca5380d3dc16eb812368359b5a468e01408ca61",
+    "convid_audit_sha256": "b459fb5ad26beed3f0f58238327b3ceacd835dbb4abc7254035464039d0c5549",
+    "convid_originals_including_exclusions": 200,
+    "heldout_labels_or_predictions_used": false,
+    "metadata_sha256": {
+      "data/codebrim-training/test.json": "fa9a2bb648afb0e4164028c564e903d45c8bcf88d769c75aa97c99cdb51e4df5",
+      "data/codebrim-training/train.json": "5cce98c85f49d8e9f355c940306d21c9620e0b9fcbf0066965b4b6442ae49d5d",
+      "data/codebrim-training/val.json": "d17182c6070cfd73404de341f0662352441b1be5d983c85dfe5b0c86affed56e",
+      "data/dacl10k-yolo/records.json": "75f95e6035e58930defc0bec94c03aab952c66919d48e9c9a385bd7ea72e6fe3",
+      "data/damsegment-training/test.json": "b7459e670fc4d7eda10aebb38b8dc35015a6e402ae07f86b226fd991af9671ab",
+      "data/damsegment-training/train.json": "95611122b9c23bf865fe16a18cda3736be977016c53b8f42ad22014bb02cd074",
+      "data/ostrava-corrosion-yolo/records.json": "78b6e239ca18d1d79c179391e540305c8822f67d535c10bf4650148de26f4d6d",
+      "data/s2ds/pixel-audit.json": "603aa605a7494de974c26ddc1983860fdcebe1ea2fbfd225e05a59b8ae0a0eba"
+    },
+    "original_cached_photos": 18935,
+    "scope": "Native decoded RGB SHA + prepared full-photo dHash; all cached source splits plus all200 ConViD originals",
+    "total_compared_photo_records": 19135
+  },
+  "photo_groups": 433,
+  "scene_independence_verified": false,
+  "schema": "idea_source_audit_v1",
+  "scope": "Selected building RC spalling positives; explicit whole-photo no-damage building negatives. Normal material unspecified, other5 targets unknown.",
+  "selection_counts": {
+    "eligible_building_no_damage": 1538,
+    "eligible_rc_spalling": 189
+  },
+  "whole_photo_excluded": 66,
+  "zip_members_crc_verified": true
+}
