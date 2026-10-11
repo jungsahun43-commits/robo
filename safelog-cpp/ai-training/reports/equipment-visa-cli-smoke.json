@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "scope": "One held-out normal TRAIN calibration photo, not test retuning",
+  "result": {
+    "schema": "safelog.equipment.visual-anomaly.v1",
+    "equipment_category": "pcb1",
+    "assessment": "no_visual_anomaly_detected",
+    "anomaly_score": 0.00037399973371066153,
+    "threshold": 0.0011194200487807393,
+    "score_is_probability": false,
+    "mechanical_failure_state": "not_assessed",
+    "human_confirmation_required": true,
+    "model_sha256": "f50d46df7f37b64d4e2cde0980c6289803ee3c398968c611ba01b1c07144fc9a",
+    "scope": "Aligned close-up of the specified PCB type; external benchmark research candidate",
+    "heatmap": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\equipment-visa-inference-smoke.png",
+    "heatmap_scale": "Per-photo relative intensity for visualization; not a calibrated pixel verdict"
+  }
+}
