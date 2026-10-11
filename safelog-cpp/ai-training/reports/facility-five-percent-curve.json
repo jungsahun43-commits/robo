@@ -1,6 +1,6 @@
 {
-  "plot_sha256": "a1c98a0c54ceeccc264a453c2f546886bcf9df392519db4f52da13555a09f136",
-  "script_sha256": "cf6c44dd88bf8efd22c22061ba7cbe856e1a1ef6c1c9d6754df65ea7bdaf6e15",
+  "plot_sha256": "f61044e33ee4aab627b441725b68d95b32f0fe1f1d00e182f2b77c5804e7a962",
+  "script_sha256": "8dba02410955a5a8e37fc283b6ddf2e9e7a883d9a05d8f9ac82c77bc6cac057e",
   "histories": [
     {
       "run": "facility-presence-target-v2s",
@@ -221,6 +221,12 @@
     {
       "run": "facility-presence-target-idea-building",
       "history_sha256": "78cb8e5618636ddd95a4db40beea7e2a313e0eb95a84d6136257c133d1a6fc26",
+      "status": "complete",
+      "actual_epochs": 6
+    },
+    {
+      "run": "facility-presence-target-primary-preservation",
+      "history_sha256": "e0c893c8e9ecf041a07d5876768ec551709b2d600ace1c79773815b691d6fc5d",
       "status": "complete",
       "actual_epochs": 6
     }

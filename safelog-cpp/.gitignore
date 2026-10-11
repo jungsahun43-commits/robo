@@ -31,6 +31,7 @@ Thumbs.db
 # Local AI training artifacts and downloaded datasets
 ai-training/.venv/
 ai-training/.config/
+ai-training/.cache/
 ai-training/Ultralytics/
 ai-training/*.pt
 ai-training/data/
