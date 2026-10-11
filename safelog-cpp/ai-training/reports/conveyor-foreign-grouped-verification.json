@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "actual_epochs": 30,
+  "actual_optimizer_updates": 1170,
+  "disposable_preflight_updates": 1,
+  "strict_cpu_gpu_reload_passed": true,
+  "tests_passed": 4,
+  "foreign_inputs_sha_size_mtime_preserved": 4003,
+  "previous_artifacts_sha_size_mtime_preserved": 9832,
+  "legacy_sources_sha_preserved": 365,
+  "older_complete_check": "reports/beltcrack-expansion-verification.json",
+  "weights_sha256": "9d646df61e488bd90d6f00aeaba8bd67c184f9470526139636f335443d1825fe",
+  "protocol_sha256": "57279837c353072c15ada0ba1a0343c6f0ca875c6e3b5d6dc1b00a463f1377e6",
+  "test_score_passes": 1,
+  "app_default_promoted": false
+}

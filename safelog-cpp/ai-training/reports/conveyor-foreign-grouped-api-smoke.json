@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "transport": "ActualHTTP loopback127.0.0.1:8772; CPU inference",
+  "observations": [
+    {
+      "source_id": "split-ds-normal-filtered/train/normal-op/3640-boardcamera_iron_ore_3_detected_1.jpg",
+      "split": "train",
+      "publisher_label": 0,
+      "http_status": 200,
+      "elapsed_post_seconds": 0.06299999996554106,
+      "result": {
+        "schema": "safelog.equipment.conveyor-foreign.v1",
+        "equipmentCategory": "conveyor_belt",
+        "sceneType": "iron_ore_closeup",
+        "analysisType": "foreign_object_presence",
+        "className": "conveyor_foreign_object",
+        "candidateDetected": false,
+        "presenceScore": 0.0007339728181250393,
+        "threshold": 0.5,
+        "scoreIsCalibratedProbability": false,
+        "scoreIsMechanicalFailureProbability": false,
+        "mechanicalFailureState": "not_assessed",
+        "fieldPerformanceValidated": false,
+        "humanConfirmationRequired": true,
+        "localizationAvailable": false,
+        "modelName": "conveyor-foreign-grouped-v1",
+        "modelSha256": "9d646df61e488bd90d6f00aeaba8bd67c184f9470526139636f335443d1825fe",
+        "inputSha256": "d5cd3577c0fe4b86b5f451af693843ebc1697c3427528ae6c9e054b7bac5886e",
+        "inputWidth": 1280,
+        "inputHeight": 611,
+        "scope": "Close-up iron-ore conveyor flow; foreign-object photo presence only, no health verdict",
+        "promptVersion": "conveyor-foreign-v1"
+      }
+    },
+    {
+      "source_id": "split-ds-normal-filtered/anomalous/anomaly/2437-boardcamera_iron_ore_7_wood_detected_1.jpg",
+      "split": "train",
+      "publisher_label": 1,
+      "http_status": 200,
+      "elapsed_post_seconds": 0.0470000000204891,
+      "result": {
+        "schema": "safelog.equipment.conveyor-foreign.v1",
+        "equipmentCategory": "conveyor_belt",
+        "sceneType": "iron_ore_closeup",
+        "analysisType": "foreign_object_presence",
+        "className": "conveyor_foreign_object",
+        "candidateDetected": true,
+        "presenceScore": 0.9999327659606934,
+        "threshold": 0.5,
+        "scoreIsCalibratedProbability": false,
+        "scoreIsMechanicalFailureProbability": false,
+        "mechanicalFailureState": "not_assessed",
+        "fieldPerformanceValidated": false,
+        "humanConfirmationRequired": true,
+        "localizationAvailable": false,
+        "modelName": "conveyor-foreign-grouped-v1",
+        "modelSha256": "9d646df61e488bd90d6f00aeaba8bd67c184f9470526139636f335443d1825fe",
+        "inputSha256": "b126b036b73446ed9303963d1def91af0adeed9d6172309761a7bcde9f56a2f3",
+        "inputWidth": 1280,
+        "inputHeight": 555,
+        "scope": "Close-up iron-ore conveyor flow; foreign-object photo presence only, no health verdict",
+        "promptVersion": "conveyor-foreign-v1"
+      }
+    }
+  ],
+  "weights_sha256": "9d646df61e488bd90d6f00aeaba8bd67c184f9470526139636f335443d1825fe",
+  "held_out_performance_measurement": false,
+  "server_stopped": true,
+  "server_tests_passed": 5,
+  "source_sha256": {
+    "safelog_ai/conveyor_foreign_inference.py": "752ae31a5bf677fe7cdde8b72f2d5c99cb89c850aa858f2a1d877fc6ffa67568",
+    "safelog_ai/conveyor_foreign_server.py": "9cf6ddc17fd42bca9f1afca54fda04d1299a351ae344d5563802ddbbbd794c54",
+    "scripts/smoke_conveyor_foreign_api.py": "9737e5bffedfcdfa38019f7090f7975179cef8b9d0e87ca9400f62881f4dc826",
+    "tests/test_conveyor_foreign_server.py": "8405e0f99c9606a29178fb19e0c3add9ed689d18190cddbb40b245db0644384f"
+  }
+}

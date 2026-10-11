@@ -1,0 +1,22 @@
+{
+  "status": "created",
+  "saved_predictions_only": true,
+  "additional_test_model_inference": 0,
+  "selected_example_ids": [
+    "split-ds-normal-filtered/anomalous/anomaly/3328-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/3334-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/3340-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/3347-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/2776-boardcamera_iron_ore_7_wood_3_detected_1.jpg",
+    "split-ds-normal-filtered/test/normal-op/7482-boardcamera_iron_ore_detected_1.jpg",
+    "split-ds-normal-filtered/test/normal-op/1493-boardcamera_iron_ore_canga_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/1746-boardcamera_iron_ore_canga_detected_1.jpg"
+  ],
+  "figure_sha256": {
+    "conveyor-foreign-grouped-rates.png": "9645034898885cf2053d85840278d7a7b87123460d0a1a07001a78cba71076e3",
+    "conveyor-foreign-grouped-examples.png": "23643b2635e565f1994f3c0ef60f642f63dd1b02268c41f46b343634d16643ec"
+  },
+  "report_sha256": "9bd20895c1a3e7e6def1e2b12cf4bc1787e45304897932c4d699287c9e48cb9a",
+  "source_sha256": "6fbb5609566a8b06c48b76e1e9cd99d3359f36e7832e54cad65c35b87ca8e4bb",
+  "model_sha256": "9d646df61e488bd90d6f00aeaba8bd67c184f9470526139636f335443d1825fe"
+}

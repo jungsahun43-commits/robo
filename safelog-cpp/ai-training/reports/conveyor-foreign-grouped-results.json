@@ -1,0 +1,193 @@
+{
+  "status": "evaluated",
+  "val": {
+    "tp": 120,
+    "fn": 8,
+    "fp": 0,
+    "tn": 192,
+    "positive_photos": 128,
+    "negative_photos": 192,
+    "fnr": 0.0625,
+    "fpr": 0.0,
+    "fnr_frame_binomial_wilson95": [
+      0.03200692569506119,
+      0.11848791104425865
+    ],
+    "fpr_frame_binomial_wilson95": [
+      1.734723475976807e-18,
+      0.01961514606675411
+    ],
+    "intervals_assume_independent_frames_not_proven_here": true,
+    "photo_fpr_fnr_below_5_percent": false,
+    "auroc": 0.9999186197916666,
+    "per_group": {
+      "boardcamera_iron_ore_2": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 0,
+        "negative_photos": 64,
+        "fnr": null,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": null,
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      },
+      "boardcamera_iron_ore_canga2": {
+        "tp": 56,
+        "fn": 8,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.125,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0.06472242663330453,
+          0.22774561821129946
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      },
+      "boardcamera_iron_ore_jaspilito_3": {
+        "tp": 64,
+        "fn": 0,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.0,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": true
+      }
+    }
+  },
+  "test": {
+    "tp": 191,
+    "fn": 1,
+    "fp": 1,
+    "tn": 255,
+    "positive_photos": 192,
+    "negative_photos": 256,
+    "fnr": 0.005208333333333333,
+    "fpr": 0.00390625,
+    "fnr_frame_binomial_wilson95": [
+      0.0009199911384848523,
+      0.02890749715674057
+    ],
+    "fpr_frame_binomial_wilson95": [
+      0.0006898821669617927,
+      0.021790975380582514
+    ],
+    "intervals_assume_independent_frames_not_proven_here": true,
+    "photo_fpr_fnr_below_5_percent": true,
+    "auroc": 0.9991861979166666,
+    "per_group": {
+      "boardcamera_iron_ore": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 1,
+        "tn": 63,
+        "positive_photos": 0,
+        "negative_photos": 64,
+        "fnr": null,
+        "fpr": 0.015625,
+        "fnr_frame_binomial_wilson95": null,
+        "fpr_frame_binomial_wilson95": [
+          0.002763541923337505,
+          0.08334101600094265
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      },
+      "boardcamera_iron_ore_7_wood_2": {
+        "tp": 64,
+        "fn": 0,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.0,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": true
+      },
+      "boardcamera_iron_ore_7_wood_3": {
+        "tp": 63,
+        "fn": 1,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.015625,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0.002763541923337505,
+          0.08334101600094265
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": true
+      },
+      "boardcamera_iron_ore_canga": {
+        "tp": 64,
+        "fn": 0,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.0,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": true
+      }
+    }
+  },
+  "fixed_threshold": 0.5,
+  "weights_sha256": "9d646df61e488bd90d6f00aeaba8bd67c184f9470526139636f335443d1825fe",
+  "protocol_sha256": "57279837c353072c15ada0ba1a0343c6f0ca875c6e3b5d6dc1b00a463f1377e6",
+  "test_recording_groups": 4,
+  "source_test_used_for_fit_or_selection": false,
+  "test_score_passes": 1,
+  "new_ai_or_human_labels": 0,
+  "mechanical_failure_or_belt_crack_performance_claimed": false,
+  "independent_factory_or_physical_object_holdout_verified": false,
+  "app_default_promoted": false
+}

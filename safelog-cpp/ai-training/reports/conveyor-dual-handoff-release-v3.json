@@ -1,0 +1,63 @@
+{
+  "status": "created_and_verified",
+  "package": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\equipment-ai-role4-handoff-2026-10-12-v3.zip",
+  "bytes": 55512598,
+  "package_sha256": "63b2c00b8f307c80b94898077c71348b32f703ae68dc811d02a65996a7c0fc3f",
+  "models": {
+    "belt_crack": {
+      "path": "beltcrack-cached-expansion-v2/final.pt",
+      "sha256": "6c46ae0e85ed7b0447127b2c9a085ee9389344aaff368073985c1b5c6db19aa2",
+      "actual_epochs": 40,
+      "actual_optimizer_updates": 7000
+    },
+    "conveyor_foreign_object": {
+      "path": "conveyor-foreign-grouped-v1/final.pt",
+      "sha256": "9d646df61e488bd90d6f00aeaba8bd67c184f9470526139636f335443d1825fe",
+      "actual_epochs": 30,
+      "actual_optimizer_updates": 1170
+    }
+  },
+  "file_sha256": {
+    "beltcrack-cached-expansion-v2/final.pt": "6c46ae0e85ed7b0447127b2c9a085ee9389344aaff368073985c1b5c6db19aa2",
+    "reports/beltcrack-expansion-protocol.json": "337b0a81bf71dd01664954a284e6aacd96a2348bc77d14c4be1d695b5b1665ae",
+    "reports/beltcrack-expansion-training.json": "6301eccbf99b2b8b182ce763b68b734a3b34d490fefd874f021ce82b464946c0",
+    "reports/beltcrack-expansion-results.json": "e08a554bebd57f153a2f8d8b0cfa870857c9587768f5e847d31e7f3c2bbf1b22",
+    "reports/beltcrack-expansion-verification.json": "17e6225547b0e4820f960f70057175401b89ae8166f505d34e4cdfff5a6ec360",
+    "reports/beltcrack-expansion-api-smoke.json": "cc982e687ab782232ff50e8ed73199b3438234b23674d94f9bf16b0534a4e8aa",
+    "reports/beltcrack-expansion-plot.json": "34fcf581a356c814d1c301d51382ffdb2ab57e941e85ba6644c49cf752192691",
+    "conveyor-foreign-grouped-v1/final.pt": "9d646df61e488bd90d6f00aeaba8bd67c184f9470526139636f335443d1825fe",
+    "reports/conveyor-foreign-grouped-protocol.json": "57279837c353072c15ada0ba1a0343c6f0ca875c6e3b5d6dc1b00a463f1377e6",
+    "reports/conveyor-foreign-grouped-training.json": "f118392717a98b3bcff3587ce5ec8962f2a2e1803bcd1bf83d960b3057bef9de",
+    "reports/conveyor-foreign-grouped-results.json": "2a9b372f87a8b690e83904c0c268dc56487c436beba54f85e9b67ece26d2048c",
+    "reports/conveyor-foreign-grouped-verification.json": "90e8ad183ea2b9022a6631c15be7b8b9699bfc5c7ae365199aff8b81630b0648",
+    "reports/conveyor-foreign-grouped-api-smoke.json": "f8534fbd52aa931a51fad58dce12de94efcd65e9b944b338fd7efad1aecedb70",
+    "reports/conveyor-foreign-grouped-plot.json": "64bfc628f22ce1d31b5b59e609d3bd034b90434dfeb7f5da00efeabc80ca9e74",
+    "safelog_ai/belt_inference.py": "e7502539b04b3490389bed5508a3c908e72ade6df7a3fe2c0be5fbc11c47c108",
+    "safelog_ai/belt_segmentation.py": "9e903468de6521811ee8ce22cf477e48484ec382af83492b5e5edf052735c885",
+    "safelog_ai/equipment_server.py": "a636660ed6d81d2c1a781d1e241bf77b8a5e72ad2e69f75b7e9c3b8c21723dcd",
+    "safelog_ai/conveyor_foreign.py": "fa0b4d68749e5b5bb3841f295f8d9cf9c2a51ffe81fea4f3efd1b25cdc8a69de",
+    "safelog_ai/conveyor_foreign_inference.py": "752ae31a5bf677fe7cdde8b72f2d5c99cb89c850aa858f2a1d877fc6ffa67568",
+    "safelog_ai/conveyor_foreign_server.py": "9cf6ddc17fd42bca9f1afca54fda04d1299a351ae344d5563802ddbbbd794c54",
+    "reports/BELT_NORMAL_DATA_AUDIT_KO.md": "f6652f34f23a040238ee5537c5bd505990393203b4570470c9aa6077929b537f",
+    "reports/CONVEYOR_DATA_ATTRIBUTION_KO.md": "260c19c04dc83d4f1e5d082a25fd88d1f5aa0b4a3b6f63fde2cc2bb50ddcc12b",
+    "reports/CONVEYOR_FOREIGN_ACQUISITION_KO.md": "c02629a0378bc2646b1d63b543b5082f91a4197935d7524a1875ddbeb152a5dd",
+    "reports/CONVEYOR_FOREIGN_ATTRIBUTION_KO.md": "314956839723f0a3b57948653af211d0afc20a17f96d5142a6bef4315f9f4f25",
+    "reports/conveyor-foreign-acquisition.json": "6f9d7959d5e82953b424387176994ff2383d514ffc623ca6808be613e74fc728",
+    "reports/beltcrack-expansion-comparison.png": "a5aa348a76ea491e2dc2fb6fc97bf275c31c13a5ec22ebcc770a91933769fa0e",
+    "reports/beltcrack-expansion-examples.png": "b0d6a64e260d6b20996895bb90e7ae06630d773898e8a98b78cfaf9ea504fd07",
+    "reports/conveyor-foreign-grouped-rates.png": "9645034898885cf2053d85840278d7a7b87123460d0a1a07001a78cba71076e3",
+    "reports/conveyor-foreign-grouped-examples.png": "23643b2635e565f1994f3c0ef60f642f63dd1b02268c41f46b343634d16643ec",
+    "docs/EQUIPMENT_API_HANDOFF_KO.md": "1f739a44ac285b31507af0a132f0ef8b1ed87ed3c6d9e7b6346aead907dc75e2",
+    "docs/CONVEYOR_FOREIGN_API_HANDOFF_KO.md": "5a606910de36528bebda4a14618fab4274a0962843ed1d0bf9bd478d4cbdf638",
+    "reports/BELTCRACK_EXPANSION_RESULTS_KO.md": "cf5ab7a9d9139fefbb6b528d0157ebf1b68940c715d84a64d1de37a29bfc5625",
+    "reports/CONVEYOR_FOREIGN_RESULTS_KO.md": "3810408f945c4f28293f773bdbc7f2b8598b0ae7565ece84505c4cb888ad9491",
+    "README_RUN_KO.md": "4d25a1f9601a7c32018c7f24834f73b3a1aece911036e0b49f04aac9cd56bd85",
+    "safelog_ai/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "environment.json": "3fd97442883a4ccd9d4a6bc2242732dd09c1248fcd669e14f21a008fc25b55bb",
+    "models.json": "81f8ccde63280960f92b648145e4672a907ef8536aacf704c1c96617fbca849a"
+  },
+  "private_photos_or_api_keys_included": false,
+  "builder_sha256": "f582afb3ea01e31c5f650a6f8b9f8bb4d73a5f0532d4eb98fdadc394e88a548d",
+  "existing_role4_v2_package_untouched": true,
+  "standalone_unpack_execution_check_pending": true
+}

@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "package_sha256": "63b2c00b8f307c80b94898077c71348b32f703ae68dc811d02a65996a7c0fc3f",
+  "unpack_directory": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\conveyor-dual-handoff-v3-standalone",
+  "all_package_file_hashes_passed": true,
+  "imports_from_unpacked_package_without_workspace_pythonpath": true,
+  "actual_http_cpu_inference": {
+    "belt_crack": {
+      "status": "passed",
+      "http_status": 200,
+      "module": "safelog_ai.equipment_server",
+      "port": 58982,
+      "elapsed_post_seconds": 0.09399999998277053,
+      "result": {
+        "schema": "safelog.equipment.belt-visual.v1",
+        "equipmentCategory": "conveyor_belt",
+        "analysisType": "surface_crack_candidate",
+        "className": "belt_crack",
+        "candidateDetected": true,
+        "maximumPixelScore": 0.9999995231628418,
+        "pixelThreshold": 0.5,
+        "scoreIsMechanicalFailureProbability": false,
+        "normalPhotoFprValidated": false,
+        "mechanicalFailureState": "not_assessed",
+        "humanConfirmationRequired": true,
+        "modelName": "beltcrack-cached-expansion-v2",
+        "modelSha256": "6c46ae0e85ed7b0447127b2c9a085ee9389344aaff368073985c1b5c6db19aa2",
+        "inputSha256": "fac69f9f79aa3a064d3d45a79c2427c509eded303dfbbf735a37a102fd185c6c",
+        "inputWidth": 1920,
+        "inputHeight": 1080,
+        "heatmapScale": "Raw sigmoid scores0..255, no per-photo normalization",
+        "scope": "Belt surface crack/tear candidate only; no roller, motor, alignment or internal fault verdict",
+        "promptVersion": "belt-appearance-v1"
+      },
+      "owned_server_stopped": true
+    },
+    "conveyor_foreign_object": {
+      "status": "passed",
+      "http_status": 200,
+      "module": "safelog_ai.conveyor_foreign_server",
+      "port": 58992,
+      "elapsed_post_seconds": 0.06300000002374873,
+      "result": {
+        "schema": "safelog.equipment.conveyor-foreign.v1",
+        "equipmentCategory": "conveyor_belt",
+        "sceneType": "iron_ore_closeup",
+        "analysisType": "foreign_object_presence",
+        "className": "conveyor_foreign_object",
+        "candidateDetected": false,
+        "presenceScore": 0.0007339728181250393,
+        "threshold": 0.5,
+        "scoreIsCalibratedProbability": false,
+        "scoreIsMechanicalFailureProbability": false,
+        "mechanicalFailureState": "not_assessed",
+        "fieldPerformanceValidated": false,
+        "humanConfirmationRequired": true,
+        "localizationAvailable": false,
+        "modelName": "conveyor-foreign-grouped-v1",
+        "modelSha256": "9d646df61e488bd90d6f00aeaba8bd67c184f9470526139636f335443d1825fe",
+        "inputSha256": "d5cd3577c0fe4b86b5f451af693843ebc1697c3427528ae6c9e054b7bac5886e",
+        "inputWidth": 1280,
+        "inputHeight": 611,
+        "scope": "Close-up iron-ore conveyor flow; foreign-object photo presence only, no health verdict",
+        "promptVersion": "conveyor-foreign-v1"
+      },
+      "owned_server_stopped": true
+    }
+  },
+  "benchmark_test_images_used": false,
+  "additional_test_model_scores": 0,
+  "owned_servers_stopped": true,
+  "source_sha256": "0176ec82585e3bd66b10a859e84809e2f41e336412ece442dbaee820e865ad89"
+}

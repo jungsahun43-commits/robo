@@ -1,0 +1,27 @@
+{
+  "architecture": "resnet18-foreign-presence-v1",
+  "class": "conveyor_foreign_object",
+  "epochs": 30,
+  "input_size": 384,
+  "threshold": 0.5,
+  "train_photos": 1230,
+  "optimizer_updates": 1170,
+  "initial_state_sha256": "b786e4991da834eff5c2939f44b98e0519a160057c4c3828f34d7df64fc9c337",
+  "final_state_sha256": "1679921671a3cdb341aa2dac0a48844786ef6211f66f78868c2aaa7f67cff52b",
+  "protocol_sha256": "57279837c353072c15ada0ba1a0343c6f0ca875c6e3b5d6dc1b00a463f1377e6",
+  "manifest_sha256": "3c56e53c6518d232d3370356b742cabc3cd087c13f5ece4fa1cf3d97d4610a72",
+  "frozen_before_fit_commit": "8a1b787abca352cb233ab682a584aba9ae6c75c7",
+  "source_sha256": {
+    "scripts/prepare_conveyor_foreign.py": "78ece25515ea6f1fa3d18fc57f6fb87ccf7307da8a2ef45a3a298e7d851c1a64",
+    "scripts/study_conveyor_foreign.py": "79f7f19a45a25761777822a12135c5be510826d9dc358885712225376ede69ef",
+    "safelog_ai/conveyor_foreign.py": "fa0b4d68749e5b5bb3841f295f8d9cf9c2a51ffe81fea4f3efd1b25cdc8a69de",
+    "tests/test_conveyor_foreign.py": "e386e0b70ff6a0e22ae22efbcd21de5c5f6c78d258c0d8bc70665e84c88a14e2"
+  },
+  "mechanical_health_ground_truth": false,
+  "source_test_used_for_fit_or_selection": false,
+  "weights_sha256": "9d646df61e488bd90d6f00aeaba8bd67c184f9470526139636f335443d1825fe",
+  "elapsed_training_minutes": 2.694283333333442,
+  "strict_cpu_gpu_reload_passed": true,
+  "validation_used_for_selection": false,
+  "preflight_updates_counted_as_epochs": false
+}

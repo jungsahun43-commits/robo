@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "frozen_and_previous_sources_preserved": 369,
+  "new_api_and_packaging_sources_preserved": true,
+  "completed_reports_and_figures_preserved": true,
+  "old_v2_zip_preserved": true,
+  "new_v3_zip_verified": true,
+  "standalone_two_model_http_passed": true,
+  "feedback_cases_exported": 10,
+  "additional_test_model_scores": 0,
+  "new_ai_or_human_labels": 0,
+  "actual_epochs": 30,
+  "actual_optimizer_updates": 1170,
+  "package_sha256": "63b2c00b8f307c80b94898077c71348b32f703ae68dc811d02a65996a7c0fc3f"
+}
