@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "actual_epochs": 40,
+  "actual_optimizer_updates": 2760,
+  "disposable_preflight_updates": 2,
+  "tests_passed": 3,
+  "belt_input_files_sha_size_mtime_preserved": 2722,
+  "previous_model_artifacts_sha_size_mtime_preserved": 41,
+  "legacy_runtime_sources_preserved": 178,
+  "strict_cpu_gpu_reload_passed": true,
+  "threshold_tuned_after_val": false,
+  "source_test_used": false,
+  "new_ai_or_human_labels": 0,
+  "building_epochs_after_direction_change": 0,
+  "app_default_changed": false,
+  "weights_sha256": "c858420844613b9a46e5057ff06040c2ad8289d886124e447a48b631978a975d",
+  "protocol_sha256": "9b6a3c6f83f0bf560ec26b0f58f88b1fdb6b01d7c42e667461968efc15b2530b",
+  "result_sha256": "503312e13003696bfeca6f48501a32ca5c04d3b9b670b7e715f232dd2287df3a"
+}

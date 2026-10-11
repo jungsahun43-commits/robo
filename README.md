@@ -26,6 +26,14 @@ AI 결과는 참고 제안이며 최종 판단은 점검자가 수행합니다. 
 
 컨베이어 벨트와 전기 설비 관련 데이터·모델을 별도로 구축합니다. 사진에서 보이는 손상·결함 후보를 점검자가 확인하는 흐름이며, 외관 사진만으로 내부 고장이나 안전한 가동을 확정하지 않습니다.
 
+벨트 정답 사진552장으로 새 위치 탐지 모델을 **실제40epoch** 학습했습니다. 서로 다른 검증 구간127장에서 사진 미탐11.02%, 모델 좌표 IoU41.28%입니다. 정상 벨트 사진이 없어 사진 오탐률은 아직 측정 불가이며5% 미만을 달성한 결과가 아닙니다. 전기 설비는 회로기판4종을 각각20epoch 실제 학습했습니다.
+
+- [컨베이어 실제 결과](safelog-cpp/ai-training/reports/BELTCRACK_STARTER_RESULTS_KO.md)
+- [전기 설비 실제 결과](safelog-cpp/ai-training/reports/EQUIPMENT_VISA_RESULTS_KO.md)
+- [앱 기능·역할별 연결 범위](safelog-cpp/docs/EQUIPMENT_SCOPE_KO.md)
+
+코드와 수치는 이 브랜치에 포함하고 연구 체크포인트는 로컬에 보관합니다. 기존 앱 API에 새 설비 모델을 연결하는 작업은 별도로 진행합니다.
+
 건물 모델은 마지막 실제6epoch·20.05분의 학습까지 종료했습니다. 공개 VAL 최대 오류율22.0207%→21.5026%지만 CODEBRIM 균열 오탐이+6.06pp 악화해 채택 기준에 미달했습니다. [종료 결과](safelog-cpp/ai-training/reports/FACILITY_PRIMARY_PRESERVATION_STUDY_RESULTS_KO.md)를 보관했습니다.
 
 ## IDEA 건물 사진 보강 학습 · 2026-10-11

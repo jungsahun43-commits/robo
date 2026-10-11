@@ -36,6 +36,7 @@
 
 - **회로기판:** Amazon VisA의 PCB1~4만 사용한다. 식품·생활용품 사진은 설비 정답으로 학습하지 않는다. 네 유형의 정상 사진으로 각각20epoch 실제 학습한 학생·교사 이상 탐지 모델을 제공한다. 다른 종류의 기판·전체 설비 사진에 그대로 적용되는 범용 고장 모델은 아니다.
 - **컨베이어:** BeltCrack 공식 V1 자료를 사용한다. 압축명14ks와 실제 내용의 개수·주석 형식에 차이가 있어, 실제9,645장의 파일 구성과 LabelMe `crack` 주석을 기준으로 검증한다. 작성자 TRAIN23개·VAL10개·TEST9개 촬영 구간의 분리를 유지한다. 처음에는 각 TRAIN/VAL 구간에서 최대32개의 정답 포함 프레임을 일정 간격으로 선택한다. 공개 원본 주석의 `imageData`와 실제 polygon/rectangle 정답으로 학습한다.
+- 제공처429 요청 제한으로1,031장 계획 중 이미 완전한 원본이 확보된679장(학습552/19구간·검증127/4구간)부터 실제40epoch 학습했다. 사진 미탐11.02%·모델 좌표 IoU41.28%다. 정상 벨트 사진이0장이므로 사진 오탐은 측정할 수 없다. 이후 정상 벨트 자료로 오탐 검증을 추가한다.
 - 건물의 `concrete_crack` 모델·정답을 벨트 균열 모델로 옮겨 붙이지 않는다.
 
 ## 팀 연결 시 지킬 결과 구분
@@ -51,4 +52,5 @@
 - [BeltCrack 작성자 저장소](https://github.com/UESTC-nnLab/BeltCrack), [공식 데이터 DOI](https://doi.org/10.57760/sciencedb.31181). 데이터는 CC BY-SA4.0이고 작성자 코드의 Apache2.0과 구분한다.
 - [VisA 작성자 저장소](https://github.com/amazon-science/spot-diff), [AWS 공식 안내](https://registry.opendata.aws/visa/). 데이터는 CC BY4.0이다.
 - [회로기판 실제 학습 결과](../ai-training/reports/EQUIPMENT_VISA_RESULTS_KO.md)
+- [컨베이어 실제 학습 결과](../ai-training/reports/BELTCRACK_STARTER_RESULTS_KO.md)
 - [건물 마지막 학습 종료 결과](../ai-training/reports/FACILITY_PRIMARY_PRESERVATION_STUDY_RESULTS_KO.md)

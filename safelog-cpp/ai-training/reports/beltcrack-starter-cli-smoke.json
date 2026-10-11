@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "scope": "Publisher TRAIN photo, CPU interface smoke, not field evaluation",
+  "result": {
+    "schema": "safelog.equipment.belt-visual.v1",
+    "equipment_category": "conveyor_belt",
+    "class": "belt_crack",
+    "candidate_detected": true,
+    "maximum_pixel_score": 0.999764621257782,
+    "pixel_threshold": 0.5,
+    "score_is_mechanical_failure_probability": false,
+    "normal_belt_specificity_validated": false,
+    "mechanical_failure_state": "not_assessed",
+    "human_confirmation_required": true,
+    "scope": "First belt surface research candidate; no roller/motor/alignment diagnosis",
+    "checkpoint_sha256": "c858420844613b9a46e5057ff06040c2ad8289d886124e447a48b631978a975d",
+    "input_sha256": "fac69f9f79aa3a064d3d45a79c2427c509eded303dfbbf735a37a102fd185c6c",
+    "input_size": [
+      1920,
+      1080
+    ]
+  },
+  "heatmap_sha256": "729d096fc48a63c63eeb56e13b9954342b2b8f395378f099048dfd0fca3a0cb9"
+}

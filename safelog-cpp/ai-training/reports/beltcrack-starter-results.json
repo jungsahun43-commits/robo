@@ -1,0 +1,61 @@
+{
+  "status": "evaluated",
+  "split": "publisher val subset, original disjoint sequences",
+  "val_photos": 127,
+  "val_sequences": 4,
+  "pixel_counts": {
+    "tp": 213408,
+    "fp": 48359,
+    "tn": 28743845,
+    "fn": 255188
+  },
+  "pixel_iou": 0.4128173632134325,
+  "pixel_dice": 0.5843888586908154,
+  "pixel_fnr": 0.5445799793425466,
+  "pixel_fpr": 0.0016795865992058128,
+  "photo_rates": {
+    "tp": 113,
+    "fn": 14,
+    "fp": 0,
+    "tn": 0,
+    "positive_photos": 127,
+    "negative_photos": 0,
+    "fnr": 0.11023622047244094,
+    "fpr": null
+  },
+  "threshold": 0.5,
+  "source_test_used": false,
+  "independent_factory_error_rate": false,
+  "source_sequence_correlation_not_removed": true,
+  "pixel_truth_at_model_resolution": true,
+  "padding_excluded": true,
+  "default_app_model_changed": false,
+  "weights_sha256": "c858420844613b9a46e5057ff06040c2ad8289d886124e447a48b631978a975d",
+  "photo_fpr_fnr_below_5_percent": false,
+  "per_sequence_pixel_counts": {
+    "data24": {
+      "tp": 130202,
+      "fp": 24089,
+      "tn": 7124579,
+      "fn": 93930
+    },
+    "data25": {
+      "tp": 11501,
+      "fp": 7692,
+      "tn": 7327250,
+      "fn": 26357
+    },
+    "data26": {
+      "tp": 36269,
+      "fp": 8580,
+      "tn": 7259578,
+      "fn": 68373
+    },
+    "data27": {
+      "tp": 35436,
+      "fp": 7998,
+      "tn": 7032438,
+      "fn": 66528
+    }
+  }
+}

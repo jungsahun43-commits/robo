@@ -1,0 +1,28 @@
+{
+  "architecture": "safelog-belt-lraspp-polygon-v1",
+  "class": "belt_crack",
+  "epochs": 40,
+  "input_size": 640,
+  "threshold": 0.5,
+  "manifest_sha256": "effc0b3451d7eb09ed54c5aec09d9a8fec5d059ec2f2645ced8d140b130e9635",
+  "protocol_sha256": "9b6a3c6f83f0bf560ec26b0f58f88b1fdb6b01d7c42e667461968efc15b2530b",
+  "optimizer_updates": 2760,
+  "train_photos": 552,
+  "source_test_used": false,
+  "initial_state_sha256": "19f7621fbc2c56fbcb87c38639ef63066cb20ce22642c9588ac28d55ea279f27",
+  "final_state_sha256": "b3f9b6842336fd7e11c9ac1f4c69e69695f98dc7dff846ef5df21424e36bd018",
+  "pretrained_source": "Torchvision LRASPP COCO-with-VOC labels, fresh 1-class heads; no building weights",
+  "weights_sha256": "c858420844613b9a46e5057ff06040c2ad8289d886124e447a48b631978a975d",
+  "elapsed_training_minutes": 4.891666666666667,
+  "strict_cpu_gpu_reload_passed": true,
+  "validation_used_for_selection": false,
+  "source_sha256": {
+    "safelog_ai/belt_segmentation.py": "9e903468de6521811ee8ce22cf477e48484ec382af83492b5e5edf052735c885",
+    "scripts/train_beltcrack_starter.py": "902bff8283c9e2fcf1dc58ffe9e18062a9862c876ea47ff54092089cf0f7c54d",
+    "scripts/prepare_beltcrack_starter.py": "3b2170172f0e8ed9234fcb07bc75bbb6219417bf69d8133d841d64238c834943",
+    "scripts/fetch_beltcrack_subset.py": "634780a346e952a06351c0f5a12b6853e629ae424fa1d468d7ff206b99efb88e",
+    "safelog_ai/equipment_anomaly.py": "7545688a32f43c61e7f0c3ff77d303552ab7a484f05814b69ea601067e0b4add",
+    "safelog_ai/retention_distillation.py": "291ff0b2127b6a42ca8db3493206f4fa709cd6803010f7070ec09ccdd82ec270",
+    "tests/test_belt_segmentation.py": "4da0ae62d89a6c5af328f4248eaccfda57162964d86a17c98c0a17c900fd7c9e"
+  }
+}
