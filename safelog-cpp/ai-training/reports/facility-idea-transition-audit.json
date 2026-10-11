@@ -1,0 +1,308 @@
+{
+  "candidate": "facility-presence-target-idea-building",
+  "control": "facility-presence-target-head-lr-low",
+  "input_sha256": {
+    "runs/facility-presence-target-head-lr-low/validation-codebrim.json": "05069f2bd76a4f24b9c5d1baa14f9de6e0ad71c7f147e0e565f01f34f97a6033",
+    "runs/facility-presence-target-head-lr-low/validation-dacl.json": "295cc02778b85d79771915e6397080d1ba512ee58eb136295fe7da4a55135d75",
+    "runs/facility-presence-target-head-lr-low/validation-damsegment.json": "bbdd1b8f1468bf766b1cdcfcf4c3b231c578af7d6edbcaf9e177dbb6b2ec8e44",
+    "runs/facility-presence-target-idea-building/validation-codebrim.json": "93b1bb6c8d596c238c44a69bf06cc66f369d1cc92fea5fffaa0fa23a8fc2043a",
+    "runs/facility-presence-target-idea-building/validation-dacl.json": "65dbcf39bddfde3287913544e4e1b0c3fd946fdf67a56a502cc819ff4225c160",
+    "runs/facility-presence-target-idea-building/validation-damsegment.json": "cc46063548d369c3446ecf080f762a6abe42bc48fbfcc600fadbc50b7cd6c998"
+  },
+  "interpretation": "Score/threshold transition description only; native tags do not establish cause or annotation completeness. No primary forgetting causal claim.",
+  "local_visual_review_cases": 8,
+  "native_annotation_mapping_agrees": true,
+  "native_dacl_changed_case_count": 42,
+  "native_overlay_sha256": "e191dd1d8ce016028c1712cf60c4262e76b77fc35e72b0b4214ea99794cedc5d",
+  "new_labels_created": 0,
+  "new_training_epochs": 0,
+  "private_case_sha256": "9d053f1707931dc4a74fdc1ddb8e8441294facbd52ab06f5391926af122bc0b2",
+  "schema": "facility_idea_transition_audit_v1",
+  "source_test_used": false,
+  "split": "val",
+  "transitions": [
+    {
+      "class": "concrete_crack",
+      "domain": "dacl",
+      "same_old_threshold": {
+        "both_correct": 547,
+        "both_wrong": 143,
+        "corrected": 9,
+        "new_fn": 6,
+        "new_fp": 5,
+        "new_wrong": 154,
+        "newly_wrong": 11,
+        "old_wrong": 152,
+        "photos": 710,
+        "resolved_fn": 2,
+        "resolved_fp": 7
+      },
+      "selected": {
+        "both_correct": 548,
+        "both_wrong": 142,
+        "corrected": 10,
+        "new_fn": 4,
+        "new_fp": 6,
+        "new_wrong": 152,
+        "newly_wrong": 10,
+        "old_wrong": 152,
+        "photos": 710,
+        "resolved_fn": 4,
+        "resolved_fp": 6
+      },
+      "selected_thresholds": {
+        "new": 0.2500077784061432,
+        "old": 0.263308048248291
+      },
+      "threshold_only_changes_on_new_scores": {
+        "both_correct": 554,
+        "both_wrong": 150,
+        "corrected": 4,
+        "new_fn": 0,
+        "new_fp": 2,
+        "new_wrong": 152,
+        "newly_wrong": 2,
+        "old_wrong": 154,
+        "photos": 710,
+        "resolved_fn": 4,
+        "resolved_fp": 0
+      }
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "dacl",
+      "same_old_threshold": {
+        "both_correct": 543,
+        "both_wrong": 143,
+        "corrected": 11,
+        "new_fn": 5,
+        "new_fp": 8,
+        "new_wrong": 156,
+        "newly_wrong": 13,
+        "old_wrong": 154,
+        "photos": 710,
+        "resolved_fn": 2,
+        "resolved_fp": 9
+      },
+      "selected": {
+        "both_correct": 545,
+        "both_wrong": 143,
+        "corrected": 11,
+        "new_fn": 5,
+        "new_fp": 6,
+        "new_wrong": 154,
+        "newly_wrong": 11,
+        "old_wrong": 154,
+        "photos": 710,
+        "resolved_fn": 2,
+        "resolved_fp": 9
+      },
+      "selected_thresholds": {
+        "new": 0.4421985447406769,
+        "old": 0.44011878967285156
+      },
+      "threshold_only_changes_on_new_scores": {
+        "both_correct": 554,
+        "both_wrong": 154,
+        "corrected": 2,
+        "new_fn": 0,
+        "new_fp": 0,
+        "new_wrong": 154,
+        "newly_wrong": 0,
+        "old_wrong": 156,
+        "photos": 710,
+        "resolved_fn": 0,
+        "resolved_fp": 2
+      }
+    },
+    {
+      "class": "concrete_crack",
+      "domain": "damsegment",
+      "same_old_threshold": {
+        "both_correct": 421,
+        "both_wrong": 3,
+        "corrected": 0,
+        "new_fn": 0,
+        "new_fp": 0,
+        "new_wrong": 3,
+        "newly_wrong": 0,
+        "old_wrong": 3,
+        "photos": 424,
+        "resolved_fn": 0,
+        "resolved_fp": 0
+      },
+      "selected": {
+        "both_correct": 421,
+        "both_wrong": 3,
+        "corrected": 0,
+        "new_fn": 0,
+        "new_fp": 0,
+        "new_wrong": 3,
+        "newly_wrong": 0,
+        "old_wrong": 3,
+        "photos": 424,
+        "resolved_fn": 0,
+        "resolved_fp": 0
+      },
+      "selected_thresholds": {
+        "new": 0.2500077784061432,
+        "old": 0.263308048248291
+      },
+      "threshold_only_changes_on_new_scores": {
+        "both_correct": 421,
+        "both_wrong": 3,
+        "corrected": 0,
+        "new_fn": 0,
+        "new_fp": 0,
+        "new_wrong": 3,
+        "newly_wrong": 0,
+        "old_wrong": 3,
+        "photos": 424,
+        "resolved_fn": 0,
+        "resolved_fp": 0
+      }
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "damsegment",
+      "same_old_threshold": {
+        "both_correct": 406,
+        "both_wrong": 18,
+        "corrected": 0,
+        "new_fn": 0,
+        "new_fp": 0,
+        "new_wrong": 18,
+        "newly_wrong": 0,
+        "old_wrong": 18,
+        "photos": 424,
+        "resolved_fn": 0,
+        "resolved_fp": 0
+      },
+      "selected": {
+        "both_correct": 406,
+        "both_wrong": 18,
+        "corrected": 0,
+        "new_fn": 0,
+        "new_fp": 0,
+        "new_wrong": 18,
+        "newly_wrong": 0,
+        "old_wrong": 18,
+        "photos": 424,
+        "resolved_fn": 0,
+        "resolved_fp": 0
+      },
+      "selected_thresholds": {
+        "new": 0.4421985447406769,
+        "old": 0.44011878967285156
+      },
+      "threshold_only_changes_on_new_scores": {
+        "both_correct": 406,
+        "both_wrong": 18,
+        "corrected": 0,
+        "new_fn": 0,
+        "new_fp": 0,
+        "new_wrong": 18,
+        "newly_wrong": 0,
+        "old_wrong": 18,
+        "photos": 424,
+        "resolved_fn": 0,
+        "resolved_fp": 0
+      }
+    },
+    {
+      "class": "concrete_crack",
+      "domain": "codebrim",
+      "same_old_threshold": {
+        "both_correct": 538,
+        "both_wrong": 66,
+        "corrected": 3,
+        "new_fn": 0,
+        "new_fp": 4,
+        "new_wrong": 70,
+        "newly_wrong": 4,
+        "old_wrong": 69,
+        "photos": 611,
+        "resolved_fn": 0,
+        "resolved_fp": 3
+      },
+      "selected": {
+        "both_correct": 534,
+        "both_wrong": 67,
+        "corrected": 2,
+        "new_fn": 0,
+        "new_fp": 8,
+        "new_wrong": 75,
+        "newly_wrong": 8,
+        "old_wrong": 69,
+        "photos": 611,
+        "resolved_fn": 0,
+        "resolved_fp": 2
+      },
+      "selected_thresholds": {
+        "new": 0.2500077784061432,
+        "old": 0.263308048248291
+      },
+      "threshold_only_changes_on_new_scores": {
+        "both_correct": 536,
+        "both_wrong": 70,
+        "corrected": 0,
+        "new_fn": 0,
+        "new_fp": 5,
+        "new_wrong": 75,
+        "newly_wrong": 5,
+        "old_wrong": 70,
+        "photos": 611,
+        "resolved_fn": 0,
+        "resolved_fp": 0
+      }
+    },
+    {
+      "class": "concrete_spalling",
+      "domain": "codebrim",
+      "same_old_threshold": {
+        "both_correct": 554,
+        "both_wrong": 50,
+        "corrected": 4,
+        "new_fn": 1,
+        "new_fp": 2,
+        "new_wrong": 53,
+        "newly_wrong": 3,
+        "old_wrong": 54,
+        "photos": 611,
+        "resolved_fn": 2,
+        "resolved_fp": 2
+      },
+      "selected": {
+        "both_correct": 554,
+        "both_wrong": 49,
+        "corrected": 5,
+        "new_fn": 1,
+        "new_fp": 2,
+        "new_wrong": 52,
+        "newly_wrong": 3,
+        "old_wrong": 54,
+        "photos": 611,
+        "resolved_fn": 2,
+        "resolved_fp": 3
+      },
+      "selected_thresholds": {
+        "new": 0.4421985447406769,
+        "old": 0.44011878967285156
+      },
+      "threshold_only_changes_on_new_scores": {
+        "both_correct": 558,
+        "both_wrong": 52,
+        "corrected": 1,
+        "new_fn": 0,
+        "new_fp": 0,
+        "new_wrong": 52,
+        "newly_wrong": 0,
+        "old_wrong": 53,
+        "photos": 611,
+        "resolved_fn": 0,
+        "resolved_fp": 1
+      }
+    }
+  ],
+  "val_cases_used_in_training_or_sampling": false
+}
