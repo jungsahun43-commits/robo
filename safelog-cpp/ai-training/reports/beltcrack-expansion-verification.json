@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "actual_epochs": 40,
+  "actual_optimizer_updates": 7000,
+  "tests_passed": 4,
+  "disposable_preflight_updates": 1,
+  "strict_cpu_gpu_reload": true,
+  "legacy_runtime_sources_sha_preserved": 189,
+  "previous_artifacts_sha_size_mtime_preserved": 2772,
+  "expanded_inputs_sha_size_mtime_preserved": 7005,
+  "baseline_common_prediction_reproduction_passed": true,
+  "source_test_used": false,
+  "normal_fpr_reported_as_zero": false,
+  "app_default_promoted": false,
+  "older_complete_building_and_pcb_check": "reports/equipment-visa-verification.json",
+  "weights_sha256": "6c46ae0e85ed7b0447127b2c9a085ee9389344aaff368073985c1b5c6db19aa2",
+  "protocol_sha256": "337b0a81bf71dd01664954a284e6aacd96a2348bc77d14c4be1d695b5b1665ae"
+}

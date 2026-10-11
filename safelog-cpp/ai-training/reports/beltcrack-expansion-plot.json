@@ -1,0 +1,29 @@
+{
+  "labels": [
+    "Photo false negatives",
+    "Crack pixel false negatives",
+    "Damage area IoU"
+  ],
+  "baseline_percent": [
+    11.023622047244094,
+    54.457997934254664,
+    41.281736321343246
+  ],
+  "expanded_percent": [
+    5.511811023622047,
+    51.3664222485894,
+    44.704666139640906
+  ],
+  "example_ids": [
+    "BeltCrack14ks/json/val/data24/8.json",
+    "BeltCrack14ks/json/val/data24/12.json",
+    "BeltCrack14ks/json/val/data27/211.json",
+    "BeltCrack14ks/json/val/data27/180.json"
+  ],
+  "example_selection": "By old saved scores, not new performance",
+  "report_script_sha256": "57d988a4a5a3b13baa3f63e746b1a4539df5878229425c44359f315e9ad44e53",
+  "protocol_sha256": "337b0a81bf71dd01664954a284e6aacd96a2348bc77d14c4be1d695b5b1665ae",
+  "result_sha256": "e08a554bebd57f153a2f8d8b0cfa870857c9587768f5e847d31e7f3c2bbf1b22",
+  "comparison_png_sha256": "a5aa348a76ea491e2dc2fb6fc97bf275c31c13a5ec22ebcc770a91933769fa0e",
+  "examples_png_sha256": "b0d6a64e260d6b20996895bb90e7ae06630d773898e8a98b78cfaf9ea504fd07"
+}

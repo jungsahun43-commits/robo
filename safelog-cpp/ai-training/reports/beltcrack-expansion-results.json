@@ -1,0 +1,285 @@
+{
+  "status": "evaluated",
+  "common127_baseline": {
+    "photos": 127,
+    "sequences": 4,
+    "pixel_counts": {
+      "tp": 213408,
+      "fp": 48359,
+      "tn": 28743845,
+      "fn": 255188
+    },
+    "pixel_iou": 0.4128173632134325,
+    "pixel_dice": 0.5843888586908154,
+    "pixel_fnr": 0.5445799793425466,
+    "pixel_fpr": 0.0016795865992058128,
+    "photo_rates": {
+      "tp": 113,
+      "fn": 14,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 127,
+      "negative_photos": 0,
+      "fnr": 0.11023622047244094,
+      "fpr": null
+    },
+    "positive_photos_without_any_gt_overlap": 24,
+    "photo_fpr_fnr_below_5_percent": false,
+    "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+  },
+  "common127_expanded": {
+    "photos": 127,
+    "sequences": 4,
+    "pixel_counts": {
+      "tp": 227895,
+      "fp": 41183,
+      "tn": 28751021,
+      "fn": 240701
+    },
+    "pixel_iou": 0.44704666139640903,
+    "pixel_dice": 0.6178745624761073,
+    "pixel_fnr": 0.513664222485894,
+    "pixel_fpr": 0.0014303524662439874,
+    "photo_rates": {
+      "tp": 120,
+      "fn": 7,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 127,
+      "negative_photos": 0,
+      "fnr": 0.05511811023622047,
+      "fpr": null
+    },
+    "positive_photos_without_any_gt_overlap": 19,
+    "photo_fpr_fnr_below_5_percent": false,
+    "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+  },
+  "expanded_val": {
+    "photos": 353,
+    "sequences": 4,
+    "pixel_counts": {
+      "tp": 648878,
+      "fp": 127591,
+      "tn": 79844261,
+      "fn": 710470
+    },
+    "pixel_iou": 0.43638508371896895,
+    "pixel_dice": 0.6076157273773923,
+    "pixel_fnr": 0.5226549787103817,
+    "pixel_fpr": 0.0015954488586809269,
+    "photo_rates": {
+      "tp": 332,
+      "fn": 21,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 353,
+      "negative_photos": 0,
+      "fnr": 0.059490084985835696,
+      "fpr": null
+    },
+    "positive_photos_without_any_gt_overlap": 48,
+    "photo_fpr_fnr_below_5_percent": false,
+    "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+  },
+  "additional_val_frames": {
+    "photos": 226,
+    "sequences": 4,
+    "pixel_counts": {
+      "tp": 420983,
+      "fp": 86408,
+      "tn": 51093240,
+      "fn": 469769
+    },
+    "pixel_iou": 0.43082299725735806,
+    "pixel_dice": 0.6022030650655906,
+    "pixel_fnr": 0.5273847266130192,
+    "pixel_fpr": 0.0016883273601256499,
+    "photo_rates": {
+      "tp": 212,
+      "fn": 14,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 226,
+      "negative_photos": 0,
+      "fnr": 0.061946902654867256,
+      "fpr": null
+    },
+    "positive_photos_without_any_gt_overlap": 29,
+    "photo_fpr_fnr_below_5_percent": false,
+    "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+  },
+  "tiny_gt_area_ratio_cutoff_train_only": 0.0013350694444444443,
+  "common_tiny_baseline": {
+    "photos": 8,
+    "sequences": 3,
+    "pixel_counts": {
+      "tp": 358,
+      "fp": 419,
+      "tn": 1841079,
+      "fn": 1344
+    },
+    "pixel_iou": 0.1687883074021688,
+    "pixel_dice": 0.2888261395724082,
+    "pixel_fnr": 0.7896592244418331,
+    "pixel_fpr": 0.00022753215045577025,
+    "photo_rates": {
+      "tp": 4,
+      "fn": 4,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 8,
+      "negative_photos": 0,
+      "fnr": 0.5,
+      "fpr": null
+    },
+    "positive_photos_without_any_gt_overlap": 5,
+    "photo_fpr_fnr_below_5_percent": false,
+    "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+  },
+  "common_tiny_expanded": {
+    "photos": 8,
+    "sequences": 3,
+    "pixel_counts": {
+      "tp": 222,
+      "fp": 195,
+      "tn": 1841303,
+      "fn": 1480
+    },
+    "pixel_iou": 0.11702688455455983,
+    "pixel_dice": 0.2095327984898537,
+    "pixel_fnr": 0.8695652173913043,
+    "pixel_fpr": 0.00010589205092810309,
+    "photo_rates": {
+      "tp": 6,
+      "fn": 2,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 8,
+      "negative_photos": 0,
+      "fnr": 0.25,
+      "fpr": null
+    },
+    "positive_photos_without_any_gt_overlap": 4,
+    "photo_fpr_fnr_below_5_percent": false,
+    "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+  },
+  "per_sequence_common": {
+    "data24": {
+      "photos": 32,
+      "sequences": 1,
+      "pixel_counts": {
+        "tp": 146932,
+        "fp": 20227,
+        "tn": 7128441,
+        "fn": 77200
+      },
+      "pixel_iou": 0.6012956347014025,
+      "pixel_dice": 0.7510113956109392,
+      "pixel_fnr": 0.34443988363999783,
+      "pixel_fpr": 0.0028294781629248974,
+      "photo_rates": {
+        "tp": 30,
+        "fn": 2,
+        "fp": 0,
+        "tn": 0,
+        "positive_photos": 32,
+        "negative_photos": 0,
+        "fnr": 0.0625,
+        "fpr": null
+      },
+      "positive_photos_without_any_gt_overlap": 3,
+      "photo_fpr_fnr_below_5_percent": false,
+      "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+    },
+    "data25": {
+      "photos": 32,
+      "sequences": 1,
+      "pixel_counts": {
+        "tp": 12186,
+        "fp": 7018,
+        "tn": 7327924,
+        "fn": 25672
+      },
+      "pixel_iou": 0.27154826633389784,
+      "pixel_dice": 0.4271143668290631,
+      "pixel_fnr": 0.6781129483860743,
+      "pixel_fpr": 0.0009567901150411278,
+      "photo_rates": {
+        "tp": 29,
+        "fn": 3,
+        "fp": 0,
+        "tn": 0,
+        "positive_photos": 32,
+        "negative_photos": 0,
+        "fnr": 0.09375,
+        "fpr": null
+      },
+      "positive_photos_without_any_gt_overlap": 13,
+      "photo_fpr_fnr_below_5_percent": false,
+      "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+    },
+    "data26": {
+      "photos": 32,
+      "sequences": 1,
+      "pixel_counts": {
+        "tp": 37595,
+        "fp": 8057,
+        "tn": 7260101,
+        "fn": 67047
+      },
+      "pixel_iou": 0.33358769820495304,
+      "pixel_dice": 0.5002861058991044,
+      "pixel_fnr": 0.6407274325796525,
+      "pixel_fpr": 0.0011085339641763428,
+      "photo_rates": {
+        "tp": 32,
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "positive_photos": 32,
+        "negative_photos": 0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "positive_photos_without_any_gt_overlap": 0,
+      "photo_fpr_fnr_below_5_percent": false,
+      "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+    },
+    "data27": {
+      "photos": 31,
+      "sequences": 1,
+      "pixel_counts": {
+        "tp": 31182,
+        "fp": 5881,
+        "tn": 7034555,
+        "fn": 70782
+      },
+      "pixel_iou": 0.2891371876303955,
+      "pixel_dice": 0.4485747372812475,
+      "pixel_fnr": 0.6941861833588325,
+      "pixel_fpr": 0.0008353175854449923,
+      "photo_rates": {
+        "tp": 29,
+        "fn": 2,
+        "fp": 0,
+        "tn": 0,
+        "positive_photos": 31,
+        "negative_photos": 0,
+        "fnr": 0.06451612903225806,
+        "fpr": null
+      },
+      "positive_photos_without_any_gt_overlap": 3,
+      "photo_fpr_fnr_below_5_percent": false,
+      "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+    }
+  },
+  "fixed_threshold": 0.5,
+  "source_test_used": false,
+  "normal_photo_fpr_measurable": false,
+  "independent_factory_performance_verified": false,
+  "new_ai_or_human_labels": 0,
+  "baseline_prediction_reproduction_passed": true,
+  "app_default_promoted": false,
+  "weights_sha256": "6c46ae0e85ed7b0447127b2c9a085ee9389344aaff368073985c1b5c6db19aa2",
+  "protocol_sha256": "337b0a81bf71dd01664954a284e6aacd96a2348bc77d14c4be1d695b5b1665ae"
+}

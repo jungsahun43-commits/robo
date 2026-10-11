@@ -86,6 +86,13 @@ def main():
     pp = (expanded['photo_rates']['fnr']-baseline['photo_rates']['fnr'])*100
     iou_pp = (expanded['pixel_iou']-baseline['pixel_iou'])*100
     counts = read(DATA/'manifest.json')['counts']
+    tiny_old,tiny_new = result['common_tiny_baseline'],result['common_tiny_expanded']
+    tiny_text = (f"작은 균열{tiny_old['photos']}장에서는 사진 미탐 "
+        f"{tiny_old['photo_rates']['fn']}→{tiny_new['photo_rates']['fn']}장으로 감소했지만, "
+        f"손상 위치 IoU **{pct(tiny_old['pixel_iou'])}→{pct(tiny_new['pixel_iou'])}로 악화**됐고 "
+        f"균열 픽셀 미탐도{pct(tiny_old['pixel_fnr'])}→{pct(tiny_new['pixel_fnr'])}로 증가했다. "
+        "전체 사진 미탐 개선만으로 작은 손상의 위치 탐지가 해결됐다고 해석하지 않는다. "
+        "작은 표본이며 다음 실험에서는 원본 해상도의 국소 영역이나 다중 크기 특징으로 위치 손실을 보강할 필요가 있다.") if tiny_old else ''
     text = f'''# 컨베이어 벨트 원본 사진 확대: 실제 학습 결과
 
 ## 변경 내용
@@ -123,6 +130,8 @@ def main():
 사진 미탐 **{full['photo_rates']['fn']}/{full['photos']} · {pct(full['photo_rates']['fnr'])}**, IoU **{pct(full['pixel_iou'])}**, Dice **{pct(full['pixel_dice'])}**, 균열 픽셀 미탐 **{pct(full['pixel_fnr'])}**다. 정상 사진은0장이며 사진 오탐률은 여전히 `null`이다. 추가226장도 기존127장과 같은 네 촬영 구간의 프레임이므로 별도 독립 현장 시험으로 해석하지 않는다.
 
 작은 균열의 기준은 TRAIN정답 면적 비율의 하위10%({result['tiny_gt_area_ratio_cutoff_train_only']:.8f})로 학습 전에 고정했다. 해당 비교와 촬영 구간별 혼동 행렬은 [결과 JSON](beltcrack-expansion-results.json)에 기록했다.
+
+{tiny_text}
 
 **정상 사진 분모가0이므로 사진 오탐·미탐 각각5% 미만을 달성했다고 말할 수 없다.** 로컬화·정상 데이터 검증을 마칠 때까지 연구 후보로 유지하며 앱 기본 모델을 자동으로 바꾸지 않았다.
 

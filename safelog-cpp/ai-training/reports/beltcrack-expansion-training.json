@@ -1,0 +1,29 @@
+{
+  "architecture": "safelog-belt-lraspp-polygon-v1",
+  "class": "belt_crack",
+  "epochs": 40,
+  "input_size": 640,
+  "threshold": 0.5,
+  "train_photos": 1397,
+  "optimizer_updates": 7000,
+  "manifest_sha256": "d2ea6a7ba85bfd5d4b1ecf933252b16dd283d71304e9895be3d3ea1ac5d6cf43",
+  "protocol_sha256": "337b0a81bf71dd01664954a284e6aacd96a2348bc77d14c4be1d695b5b1665ae",
+  "initial_state_sha256": "19f7621fbc2c56fbcb87c38639ef63066cb20ce22642c9588ac28d55ea279f27",
+  "final_state_sha256": "844e9bbf434b3a065a649b5e6e17b8c85668c8bc54a7a26fcdac92f55235f41b",
+  "same_initial_state_as_baseline": true,
+  "source_test_used": false,
+  "source_sha256": {
+    "scripts/expand_beltcrack_cached.py": "25bf620d4b4c4230951513305d24445f0aa2b7b35a2cdbd3355232fffb7bf581",
+    "scripts/study_beltcrack_expansion.py": "fdcfb50fb3143f101a7e806ccf19112822b84b10082b2ac1a7174070d6b25de7",
+    "safelog_ai/belt_evaluation.py": "412d836e4f39325e773e80e6312a3e0242dbc36a4e8534edeed315c75e22804d",
+    "tests/test_belt_expansion.py": "0898cf76da79066ad20582adaf9b3effd4340176377ba4bf27edbe1debe8235b",
+    "scripts/prepare_beltcrack_starter.py": "3b2170172f0e8ed9234fcb07bc75bbb6219417bf69d8133d841d64238c834943",
+    "safelog_ai/belt_segmentation.py": "9e903468de6521811ee8ce22cf477e48484ec382af83492b5e5edf052735c885",
+    "safelog_ai/equipment_anomaly.py": "7545688a32f43c61e7f0c3ff77d303552ab7a484f05814b69ea601067e0b4add",
+    "safelog_ai/retention_distillation.py": "291ff0b2127b6a42ca8db3493206f4fa709cd6803010f7070ec09ccdd82ec270"
+  },
+  "weights_sha256": "6c46ae0e85ed7b0447127b2c9a085ee9389344aaff368073985c1b5c6db19aa2",
+  "elapsed_training_minutes": 27.333333333333332,
+  "strict_cpu_gpu_reload_passed": true,
+  "validation_used_for_selection": false
+}

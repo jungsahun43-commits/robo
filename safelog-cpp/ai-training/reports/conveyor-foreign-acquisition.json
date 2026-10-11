@@ -1,0 +1,155 @@
+{
+  "status": "source_acquired_task_and_overlap_audited_not_trained",
+  "source": "https://data.mendeley.com/datasets/s25x2bnshz/1",
+  "license_declared_on_dataset_page": "CC-BY-4.0",
+  "archive_sha256": "f4ced924f274bcd729fd77ab0aca8fa72a48b5419077e2862b87ab175fd12480",
+  "publisher_whole_archive_sha256_verified": true,
+  "archive_bytes": 6228464374,
+  "all_archive_members": 69636,
+  "curated_photos": 18933,
+  "normal_train": 12951,
+  "normal_publisher_test": 2991,
+  "foreign_object_anomalous": 2991,
+  "recording_name_hints": 19,
+  "cross_source_train_test_recording_name_overlap": [
+    "boardcamera_iron_ore",
+    "boardcamera_iron_ore_2",
+    "boardcamera_iron_ore_3",
+    "boardcamera_iron_ore_4",
+    "boardcamera_iron_ore_5_fastandfurious",
+    "boardcamera_iron_ore_6",
+    "boardcamera_iron_ore_7_wood",
+    "boardcamera_iron_ore_7_wood_2",
+    "boardcamera_iron_ore_7_wood_3",
+    "boardcamera_iron_ore_canga",
+    "boardcamera_iron_ore_canga2",
+    "boardcamera_iron_ore_canga3",
+    "boardcamera_iron_ore_jaspilito",
+    "boardcamera_iron_ore_jaspilito_2",
+    "boardcamera_iron_ore_jaspilito_3",
+    "boardcamera_iron_ore_jaspilito_4",
+    "boardcamera_iron_ore_things",
+    "boardcamera_iron_ore_things_2",
+    "boardcamera_iron_ore_things_3"
+  ],
+  "physical_recording_equivalence_verified": false,
+  "raw_video_to_processed_photo_equivalence_verified": false,
+  "crc_and_size_duplicate_candidates": [],
+  "decoded_rgb_and_near_frame_duplicates_verified": false,
+  "yolo_classes": [
+    "conveyor"
+  ],
+  "yolo_export_license_field": "Private",
+  "yolo_subset_used": false,
+  "normal_means_no_foreign_objects_not_healthy_belt": true,
+  "belt_crack_labels_created": 0,
+  "new_ai_or_human_labels": 0,
+  "model_training_epochs": 0,
+  "model_inference_performed": false,
+  "source_preview_seen": "split-ds-normal-filtered/train/normal-op/10745-boardcamera_iron_ore_jaspilito_detected_1.jpg",
+  "next_required_work": "Resolve source video aliases, group splits without sourceTEST fitting, decoded duplicates, and image quality before a separate foreign-object experiment",
+  "extensions": {
+    "test/.jpg": 2991,
+    "anomalous/.jpg": 2991,
+    "train/.jpg": 12951
+  },
+  "per_recording_name_counts": {
+    "boardcamera_iron_ore_5_fastandfurious": {
+      "test": 187,
+      "train": 820
+    },
+    "boardcamera_iron_ore_canga": {
+      "test": 95,
+      "anomalous": 196,
+      "train": 442
+    },
+    "boardcamera_iron_ore_jaspilito_4": {
+      "test": 139,
+      "anomalous": 85,
+      "train": 604
+    },
+    "boardcamera_iron_ore_jaspilito_3": {
+      "test": 191,
+      "anomalous": 117,
+      "train": 749
+    },
+    "boardcamera_iron_ore_things_2": {
+      "test": 125,
+      "anomalous": 274,
+      "train": 530
+    },
+    "boardcamera_iron_ore_2": {
+      "test": 276,
+      "train": 1221
+    },
+    "boardcamera_iron_ore_7_wood_3": {
+      "test": 205,
+      "anomalous": 194,
+      "train": 874
+    },
+    "boardcamera_iron_ore_canga3": {
+      "test": 106,
+      "anomalous": 174,
+      "train": 526
+    },
+    "boardcamera_iron_ore_7_wood": {
+      "test": 67,
+      "anomalous": 163,
+      "train": 276
+    },
+    "boardcamera_iron_ore_7_wood_2": {
+      "test": 176,
+      "anomalous": 238,
+      "train": 722
+    },
+    "boardcamera_iron_ore_jaspilito_2": {
+      "test": 183,
+      "anomalous": 135,
+      "train": 706
+    },
+    "boardcamera_iron_ore": {
+      "test": 316,
+      "train": 1379
+    },
+    "boardcamera_iron_ore_things": {
+      "test": 137,
+      "anomalous": 167,
+      "train": 633
+    },
+    "boardcamera_iron_ore_canga2": {
+      "test": 117,
+      "anomalous": 382,
+      "train": 535
+    },
+    "boardcamera_iron_ore_4": {
+      "test": 196,
+      "train": 921
+    },
+    "boardcamera_iron_ore_3": {
+      "test": 338,
+      "train": 1436
+    },
+    "boardcamera_iron_ore_6": {
+      "test": 37,
+      "train": 147
+    },
+    "boardcamera_iron_ore_things_3": {
+      "test": 99,
+      "anomalous": 205,
+      "train": 416
+    },
+    "boardcamera_iron_ore_jaspilito": {
+      "test": 1,
+      "anomalous": 661,
+      "train": 14
+    }
+  },
+  "acquisition_source_sha256": {
+    "scripts/fetch_conveyor_foreign.py": "ef11d8b7c0a3828aa664b93ad05995776b40a3832d3320c3701a6144c228038c",
+    "scripts/fetch_conveyor_foreign_parallel.py": "06038e2e1c63002048d6cfd8ce7598468d093ccab00d63e3557ceb36a7f97031",
+    "scripts/audit_conveyor_foreign.py": "da8fabc0c5b50e8afaece88ff9a7ec443b0eb0eb04dac909cae5451671f11518"
+  },
+  "source_test_image_or_annotation_payloads_decoded": 0,
+  "source_test_normal_folder_label_metadata_counted": 2991,
+  "source_test_model_fit_calibration_or_scoring_performed": false
+}

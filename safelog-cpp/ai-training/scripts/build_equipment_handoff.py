@@ -24,7 +24,7 @@ def main():
     assert verified['status']=='passed' and smoke['status']=='passed'
     assert digest==training['weights_sha256']==result['weights_sha256']==verified['weights_sha256']==smoke['result']['modelSha256']
     OUT.mkdir(parents=True,exist_ok=True)
-    package = OUT/'equipment-ai-role4-handoff-2026-10-12.zip'
+    package = OUT/'equipment-ai-role4-handoff-2026-10-12-v2.zip'
     assert not package.exists()
     versions = {name:importlib.metadata.version(name) for name in
                 ('torch','torchvision','numpy','Pillow','fastapi','uvicorn')}
@@ -57,7 +57,10 @@ python -m safelog_ai.equipment_server --checkpoint beltcrack-cached-expansion-v2
     files = {
         'beltcrack-cached-expansion-v2/final.pt':model,
         'reports/BELTCRACK_EXPANSION_RESULTS_KO.md':ROOT/'reports/BELTCRACK_EXPANSION_RESULTS_KO.md',
-        'reports/BELT_NORMAL_DATA_AUDIT_KO.md':ROOT/'reports/BELT_NORMAL_DATA_AUDIT_KO.md'}
+        'reports/BELT_NORMAL_DATA_AUDIT_KO.md':ROOT/'reports/BELT_NORMAL_DATA_AUDIT_KO.md',
+        'reports/CONVEYOR_DATA_ATTRIBUTION_KO.md':ROOT/'reports/CONVEYOR_DATA_ATTRIBUTION_KO.md',
+        'reports/CONVEYOR_FOREIGN_ACQUISITION_KO.md':ROOT/'reports/CONVEYOR_FOREIGN_ACQUISITION_KO.md',
+        'reports/conveyor-foreign-acquisition.json':ROOT/'reports/conveyor-foreign-acquisition.json'}
     for name in ('belt_inference.py','belt_segmentation.py','equipment_server.py'):
         files['safelog_ai/'+name] = ROOT/'safelog_ai'/name
     files['scripts/audit_belt_normal_coco.py'] = ROOT/'scripts/audit_belt_normal_coco.py'
@@ -90,7 +93,7 @@ python -m safelog_ai.equipment_server --checkpoint beltcrack-cached-expansion-v2
         'whole_photo_normal_fpr_verified':False,'actual_loopback_http_smoke_passed':True,
         'private_photos_or_api_keys_included':False,'file_sha256':manifest,
         'builder_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
-    with (ROOT/'reports/beltcrack-expansion-release.json').open('x',encoding='utf-8') as handle:
+    with (ROOT/'reports/beltcrack-expansion-release-v2.json').open('x',encoding='utf-8') as handle:
         json.dump(release,handle,indent=2)
     print(json.dumps({k:v for k,v in release.items() if k!='file_sha256'},indent=2))
 
