@@ -1,0 +1,16 @@
+{
+  "schema": "CAL-provenance-bookkeeping-fix",
+  "cause": "Threshold guard correctly rejected missing split field in caller-generated CAL observations",
+  "resume_source_sha256": "b02a0de28c6977506793ea165927306c907a63aab246417863af18ca67af4317",
+  "neural_loss_or_sampling_changed": false,
+  "threshold_algorithm_changed": false,
+  "uses_exact_CAL320_ids_labels_in_order": true,
+  "TEST_excluded_by_membership_check": true,
+  "joint_completed_epochs_before_fix": 10,
+  "joint_completed_updates_before_fix": 3840,
+  "joint_training_state_saved": "runs/unified-preservation-typed-v3/joint/progress.pt",
+  "joint_neural_updates_to_replay": 0,
+  "frozen_fit_not_yet_started": true,
+  "prior_frozen_sources_preserved": true,
+  "app_default_promoted": false
+}
