@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "selected": "native_mix",
+  "total_real_updates": 2560,
+  "protected_inputs_artifacts": 37880,
+  "protected_legacy_sources": 425,
+  "final_equals_last_progress_for_both": true,
+  "all_non_belt_tensors_exact_v1": true,
+  "original_v1_1_zip_SHA_unchanged": "9cf40237b0d795166bf90e2cfba69c17d8342f01bb992d597af583c88874bec1",
+  "new_archive": {
+    "path": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-main-belt-detail-role4-handoff-2026-10-13-v1.zip",
+    "sha256": "b2b77bfb5f1b79a1d53a5af0f4ff79ef506d90e456e97deed4d94bbaec774cb0",
+    "bytes": 13809820
+  },
+  "local_markdown_links_checked": 241,
+  "figure_pixels": [
+    1950,
+    720
+  ],
+  "current_source_sha256": {
+    "safelog_ai/belt_detail.py": "977580d6f72039c41cde903bde87316bdac840fd885842bdb351c04f3e884658",
+    "scripts/study_unified_belt_detail.py": "4d48b9a15e223dbd22ec41a4d334764235a863edbf2f0adfb54dba3675cee25d",
+    "tests/test_belt_detail.py": "e0f84c253e7cf8314dcbd42e8074d4db34b2b22f6b7627f387368525e56bd971"
+  },
+  "audit_script_sha256": "23456913bc4bafa17e7ecd795daa9615b91940a729058219a0b58c57d919d06e",
+  "torch_version": "2.12.0+cu126",
+  "torchvision_version": "0.27.0+cu126",
+  "GPU": "NVIDIA GeForce RTX 4070 SUPER",
+  "reserved_belt_TEST_used": false,
+  "new_foreign_CAL_TEST_evaluation": false,
+  "normal_belt_photo_FPR_available": false,
+  "industrial_all_tasks_5percent_verified": false,
+  "app_default_promoted": false
+}

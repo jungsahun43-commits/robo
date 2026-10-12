@@ -1,0 +1,4273 @@
+{
+  "status": "known_reused_VAL353_fullframe",
+  "variant": "native_mix",
+  "model_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+  "rows": [
+    {
+      "id": "BeltCrack14ks/json/val/data24/0.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9986685514450073,
+      "pixels": {
+        "tp": 277,
+        "fn": 269,
+        "fp": 480,
+        "tn": 229374
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/1.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9114366769790649,
+      "pixels": {
+        "tp": 78,
+        "fn": 1364,
+        "fp": 316,
+        "tn": 228642
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/3.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9904608130455017,
+      "pixels": {
+        "tp": 726,
+        "fn": 5046,
+        "fp": 1487,
+        "tn": 223141
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/4.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9699520468711853,
+      "pixels": {
+        "tp": 847,
+        "fn": 3033,
+        "fp": 419,
+        "tn": 226101
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/5.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9503438472747803,
+      "pixels": {
+        "tp": 1398,
+        "fn": 2331,
+        "fp": 243,
+        "tn": 226428
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/7.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9465742111206055,
+      "pixels": {
+        "tp": 0,
+        "fn": 741,
+        "fp": 433,
+        "tn": 229226
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/8.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.8728022575378418,
+      "pixels": {
+        "tp": 0,
+        "fn": 2782,
+        "fp": 333,
+        "tn": 227285
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/9.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9592229723930359,
+      "pixels": {
+        "tp": 722,
+        "fn": 3372,
+        "fp": 665,
+        "tn": 225641
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/11.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.8837165832519531,
+      "pixels": {
+        "tp": 0,
+        "fn": 7477,
+        "fp": 138,
+        "tn": 222785
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/12.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.8951305747032166,
+      "pixels": {
+        "tp": 0,
+        "fn": 8693,
+        "fp": 182,
+        "tn": 221525
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/13.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.8046541213989258,
+      "pixels": {
+        "tp": 16,
+        "fn": 6364,
+        "fp": 80,
+        "tn": 223940
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/15.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999994039535522,
+      "pixels": {
+        "tp": 7407,
+        "fn": 130,
+        "fp": 2222,
+        "tn": 220641
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/16.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999994039535522,
+      "pixels": {
+        "tp": 13454,
+        "fn": 1222,
+        "fp": 2189,
+        "tn": 213535
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/17.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999896287918091,
+      "pixels": {
+        "tp": 2057,
+        "fn": 0,
+        "fp": 1453,
+        "tn": 226890
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/19.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999996423721313,
+      "pixels": {
+        "tp": 23512,
+        "fn": 2970,
+        "fp": 4216,
+        "tn": 199702
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/20.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999978542327881,
+      "pixels": {
+        "tp": 24900,
+        "fn": 6805,
+        "fp": 3888,
+        "tn": 194807
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/21.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999985694885254,
+      "pixels": {
+        "tp": 18363,
+        "fn": 5493,
+        "fp": 5226,
+        "tn": 201318
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/23.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9608095288276672,
+      "pixels": {
+        "tp": 684,
+        "fn": 244,
+        "fp": 559,
+        "tn": 228913
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/24.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9968189001083374,
+      "pixels": {
+        "tp": 309,
+        "fn": 56,
+        "fp": 92,
+        "tn": 229943
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/25.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999960660934448,
+      "pixels": {
+        "tp": 1849,
+        "fn": 1,
+        "fp": 2300,
+        "tn": 226250
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/27.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999953508377075,
+      "pixels": {
+        "tp": 6987,
+        "fn": 582,
+        "fp": 6582,
+        "tn": 216249
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/28.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9953342080116272,
+      "pixels": {
+        "tp": 1198,
+        "fn": 4683,
+        "fp": 2062,
+        "tn": 222457
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/29.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9997742772102356,
+      "pixels": {
+        "tp": 4000,
+        "fn": 3225,
+        "fp": 3065,
+        "tn": 220110
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/31.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9383813142776489,
+      "pixels": {
+        "tp": 481,
+        "fn": 295,
+        "fp": 1190,
+        "tn": 228434
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/32.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9998494386672974,
+      "pixels": {
+        "tp": 1586,
+        "fn": 98,
+        "fp": 1877,
+        "tn": 226839
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/33.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9978715181350708,
+      "pixels": {
+        "tp": 3065,
+        "fn": 558,
+        "fp": 571,
+        "tn": 226206
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/35.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9991255402565002,
+      "pixels": {
+        "tp": 610,
+        "fn": 634,
+        "fp": 2076,
+        "tn": 227080
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/36.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9994756579399109,
+      "pixels": {
+        "tp": 3650,
+        "fn": 120,
+        "fp": 1167,
+        "tn": 225463
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/37.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999985694885254,
+      "pixels": {
+        "tp": 7716,
+        "fn": 33,
+        "fp": 3123,
+        "tn": 219528
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/39.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9998799562454224,
+      "pixels": {
+        "tp": 650,
+        "fn": 2,
+        "fp": 1219,
+        "tn": 228529
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/40.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.8452572822570801,
+      "pixels": {
+        "tp": 0,
+        "fn": 1388,
+        "fp": 651,
+        "tn": 228361
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/41.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9555583596229553,
+      "pixels": {
+        "tp": 0,
+        "fn": 1433,
+        "fp": 615,
+        "tn": 228352
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/43.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9153416156768799,
+      "pixels": {
+        "tp": 736,
+        "fn": 1513,
+        "fp": 248,
+        "tn": 227903
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/44.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9998918771743774,
+      "pixels": {
+        "tp": 831,
+        "fn": 15,
+        "fp": 1993,
+        "tn": 227561
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/45.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9990839958190918,
+      "pixels": {
+        "tp": 1101,
+        "fn": 907,
+        "fp": 572,
+        "tn": 227820
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/47.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999998807907104,
+      "pixels": {
+        "tp": 5992,
+        "fn": 0,
+        "fp": 3366,
+        "tn": 221042
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/48.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 1.0,
+      "pixels": {
+        "tp": 12394,
+        "fn": 192,
+        "fp": 4724,
+        "tn": 213090
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/49.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9992826581001282,
+      "pixels": {
+        "tp": 2417,
+        "fn": 69,
+        "fp": 1408,
+        "tn": 226506
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/51.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999982118606567,
+      "pixels": {
+        "tp": 3582,
+        "fn": 3366,
+        "fp": 2193,
+        "tn": 221259
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/52.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999995231628418,
+      "pixels": {
+        "tp": 15361,
+        "fn": 4941,
+        "fp": 4398,
+        "tn": 205700
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/53.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999992847442627,
+      "pixels": {
+        "tp": 23548,
+        "fn": 8202,
+        "fp": 3370,
+        "tn": 195280
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/55.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999998807907104,
+      "pixels": {
+        "tp": 15416,
+        "fn": 1599,
+        "fp": 4937,
+        "tn": 208448
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/56.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9997537732124329,
+      "pixels": {
+        "tp": 2812,
+        "fn": 210,
+        "fp": 3236,
+        "tn": 224142
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/57.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999754428863525,
+      "pixels": {
+        "tp": 1910,
+        "fn": 20,
+        "fp": 1540,
+        "tn": 226930
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/59.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999992847442627,
+      "pixels": {
+        "tp": 8647,
+        "fn": 528,
+        "fp": 5971,
+        "tn": 215254
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/60.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999991655349731,
+      "pixels": {
+        "tp": 7257,
+        "fn": 194,
+        "fp": 7815,
+        "tn": 215134
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/61.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9888144135475159,
+      "pixels": {
+        "tp": 3193,
+        "fn": 2424,
+        "fp": 1553,
+        "tn": 223230
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/63.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.8735081553459167,
+      "pixels": {
+        "tp": 700,
+        "fn": 5236,
+        "fp": 276,
+        "tn": 224188
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/64.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.999438464641571,
+      "pixels": {
+        "tp": 1077,
+        "fn": 664,
+        "fp": 411,
+        "tn": 228248
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/65.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999027252197266,
+      "pixels": {
+        "tp": 2782,
+        "fn": 129,
+        "fp": 1916,
+        "tn": 225573
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/67.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9988301396369934,
+      "pixels": {
+        "tp": 462,
+        "fn": 0,
+        "fp": 1501,
+        "tn": 228437
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/68.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9997817873954773,
+      "pixels": {
+        "tp": 3543,
+        "fn": 3,
+        "fp": 1370,
+        "tn": 225484
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/69.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999978542327881,
+      "pixels": {
+        "tp": 5666,
+        "fn": 11,
+        "fp": 3166,
+        "tn": 221557
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/71.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9995768666267395,
+      "pixels": {
+        "tp": 0,
+        "fn": 2165,
+        "fp": 602,
+        "tn": 227633
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/72.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9887883067131042,
+      "pixels": {
+        "tp": 775,
+        "fn": 2989,
+        "fp": 187,
+        "tn": 226449
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/73.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.8463349342346191,
+      "pixels": {
+        "tp": 268,
+        "fn": 3327,
+        "fp": 142,
+        "tn": 226663
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/75.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999938011169434,
+      "pixels": {
+        "tp": 5229,
+        "fn": 19,
+        "fp": 2032,
+        "tn": 223120
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/76.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999963045120239,
+      "pixels": {
+        "tp": 9799,
+        "fn": 857,
+        "fp": 3038,
+        "tn": 216706
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/77.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9844523668289185,
+      "pixels": {
+        "tp": 1386,
+        "fn": 6616,
+        "fp": 3304,
+        "tn": 219094
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/79.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999995231628418,
+      "pixels": {
+        "tp": 11866,
+        "fn": 2856,
+        "fp": 5113,
+        "tn": 210565
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/80.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.999995231628418,
+      "pixels": {
+        "tp": 23826,
+        "fn": 6101,
+        "fp": 4504,
+        "tn": 195969
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/81.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999966621398926,
+      "pixels": {
+        "tp": 20384,
+        "fn": 8035,
+        "fp": 4349,
+        "tn": 197632
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/83.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.99993896484375,
+      "pixels": {
+        "tp": 5949,
+        "fn": 237,
+        "fp": 7339,
+        "tn": 216875
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/84.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9994736313819885,
+      "pixels": {
+        "tp": 664,
+        "fn": 5,
+        "fp": 2074,
+        "tn": 227657
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/85.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999964237213135,
+      "pixels": {
+        "tp": 3303,
+        "fn": 102,
+        "fp": 4782,
+        "tn": 222213
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/87.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999980926513672,
+      "pixels": {
+        "tp": 8329,
+        "fn": 512,
+        "fp": 8719,
+        "tn": 212840
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/88.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999457597732544,
+      "pixels": {
+        "tp": 5091,
+        "fn": 1341,
+        "fp": 5766,
+        "tn": 218202
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/89.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.973118782043457,
+      "pixels": {
+        "tp": 217,
+        "fn": 6012,
+        "fp": 1885,
+        "tn": 222286
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/91.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9992971420288086,
+      "pixels": {
+        "tp": 858,
+        "fn": 22,
+        "fp": 2046,
+        "tn": 227474
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/92.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9995216131210327,
+      "pixels": {
+        "tp": 1186,
+        "fn": 15,
+        "fp": 1967,
+        "tn": 227232
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/93.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9991039633750916,
+      "pixels": {
+        "tp": 1802,
+        "fn": 63,
+        "fp": 3363,
+        "tn": 225172
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/95.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999604225158691,
+      "pixels": {
+        "tp": 2221,
+        "fn": 21,
+        "fp": 1367,
+        "tn": 226791
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/96.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999841451644897,
+      "pixels": {
+        "tp": 4302,
+        "fn": 95,
+        "fp": 2979,
+        "tn": 223024
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/97.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999991655349731,
+      "pixels": {
+        "tp": 8851,
+        "fn": 140,
+        "fp": 2889,
+        "tn": 218520
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/99.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.924712061882019,
+      "pixels": {
+        "tp": 107,
+        "fn": 70,
+        "fp": 305,
+        "tn": 229918
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/100.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9998979568481445,
+      "pixels": {
+        "tp": 2135,
+        "fn": 15,
+        "fp": 1185,
+        "tn": 227065
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/101.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.7283724546432495,
+      "pixels": {
+        "tp": 110,
+        "fn": 3765,
+        "fp": 171,
+        "tn": 226354
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/103.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.8726747632026672,
+      "pixels": {
+        "tp": 491,
+        "fn": 3817,
+        "fp": 102,
+        "tn": 225990
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/104.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9430181980133057,
+      "pixels": {
+        "tp": 1124,
+        "fn": 2705,
+        "fp": 285,
+        "tn": 226286
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/105.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9276371598243713,
+      "pixels": {
+        "tp": 999,
+        "fn": 839,
+        "fp": 106,
+        "tn": 228456
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/107.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999998807907104,
+      "pixels": {
+        "tp": 7997,
+        "fn": 219,
+        "fp": 3055,
+        "tn": 219129
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/108.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999610185623169,
+      "pixels": {
+        "tp": 3774,
+        "fn": 347,
+        "fp": 524,
+        "tn": 225755
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/109.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999992847442627,
+      "pixels": {
+        "tp": 7380,
+        "fn": 36,
+        "fp": 2791,
+        "tn": 220193
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/111.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9992081522941589,
+      "pixels": {
+        "tp": 1472,
+        "fn": 32,
+        "fp": 547,
+        "tn": 228349
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/112.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999901056289673,
+      "pixels": {
+        "tp": 1624,
+        "fn": 43,
+        "fp": 1134,
+        "tn": 227599
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/113.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999969005584717,
+      "pixels": {
+        "tp": 9148,
+        "fn": 286,
+        "fp": 3390,
+        "tn": 217576
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/115.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999979734420776,
+      "pixels": {
+        "tp": 22657,
+        "fn": 9079,
+        "fp": 2558,
+        "tn": 196106
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/116.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999995231628418,
+      "pixels": {
+        "tp": 18542,
+        "fn": 5483,
+        "fp": 3605,
+        "tn": 202770
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/117.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999943971633911,
+      "pixels": {
+        "tp": 11263,
+        "fn": 1643,
+        "fp": 2233,
+        "tn": 215261
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/119.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.7980310320854187,
+      "pixels": {
+        "tp": 45,
+        "fn": 191,
+        "fp": 8,
+        "tn": 230156
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/120.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999610185623169,
+      "pixels": {
+        "tp": 1510,
+        "fn": 21,
+        "fp": 1657,
+        "tn": 227212
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/121.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9999985694885254,
+      "pixels": {
+        "tp": 6094,
+        "fn": 120,
+        "fp": 4405,
+        "tn": 219781
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/123.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.9992372989654541,
+      "pixels": {
+        "tp": 3845,
+        "fn": 1727,
+        "fp": 2295,
+        "tn": 222533
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data24/125.json",
+      "sequence": "data24",
+      "photo_positive": true,
+      "score": 0.7999870777130127,
+      "pixels": {
+        "tp": 637,
+        "fn": 4262,
+        "fp": 156,
+        "tn": 225345
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/0.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9817249774932861,
+      "pixels": {
+        "tp": 125,
+        "fn": 1547,
+        "fp": 167,
+        "tn": 228561
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/3.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9990611672401428,
+      "pixels": {
+        "tp": 449,
+        "fn": 3154,
+        "fp": 2494,
+        "tn": 224303
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/6.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9993528723716736,
+      "pixels": {
+        "tp": 91,
+        "fn": 2020,
+        "fp": 2931,
+        "tn": 225358
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/7.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9904914498329163,
+      "pixels": {
+        "tp": 0,
+        "fn": 715,
+        "fp": 2261,
+        "tn": 227424
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/10.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9997808337211609,
+      "pixels": {
+        "tp": 164,
+        "fn": 422,
+        "fp": 4274,
+        "tn": 225540
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/13.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.999515175819397,
+      "pixels": {
+        "tp": 10,
+        "fn": 1111,
+        "fp": 3943,
+        "tn": 225336
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/14.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9970468878746033,
+      "pixels": {
+        "tp": 615,
+        "fn": 689,
+        "fp": 3646,
+        "tn": 225450
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/17.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9986770749092102,
+      "pixels": {
+        "tp": 1106,
+        "fn": 771,
+        "fp": 3493,
+        "tn": 225030
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/20.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9995753169059753,
+      "pixels": {
+        "tp": 11,
+        "fn": 157,
+        "fp": 2553,
+        "tn": 227679
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/21.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9275444149971008,
+      "pixels": {
+        "tp": 0,
+        "fn": 325,
+        "fp": 225,
+        "tn": 229850
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/24.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9212484955787659,
+      "pixels": {
+        "tp": 0,
+        "fn": 350,
+        "fp": 825,
+        "tn": 229225
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/27.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.955916702747345,
+      "pixels": {
+        "tp": 0,
+        "fn": 407,
+        "fp": 562,
+        "tn": 229431
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/28.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9047255516052246,
+      "pixels": {
+        "tp": 19,
+        "fn": 479,
+        "fp": 1203,
+        "tn": 228699
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/31.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9997796416282654,
+      "pixels": {
+        "tp": 944,
+        "fn": 1118,
+        "fp": 1468,
+        "tn": 226870
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/34.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999818801879883,
+      "pixels": {
+        "tp": 1971,
+        "fn": 116,
+        "fp": 1136,
+        "tn": 227177
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/35.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9875786900520325,
+      "pixels": {
+        "tp": 235,
+        "fn": 496,
+        "fp": 997,
+        "tn": 228672
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/38.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9988430738449097,
+      "pixels": {
+        "tp": 283,
+        "fn": 28,
+        "fp": 189,
+        "tn": 229900
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/41.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999967813491821,
+      "pixels": {
+        "tp": 1299,
+        "fn": 446,
+        "fp": 2976,
+        "tn": 225679
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/42.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9995447993278503,
+      "pixels": {
+        "tp": 1697,
+        "fn": 1790,
+        "fp": 3221,
+        "tn": 223692
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/45.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9351592063903809,
+      "pixels": {
+        "tp": 0,
+        "fn": 161,
+        "fp": 896,
+        "tn": 229343
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/48.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.8921528458595276,
+      "pixels": {
+        "tp": 0,
+        "fn": 327,
+        "fp": 164,
+        "tn": 229909
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/49.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.8325794339179993,
+      "pixels": {
+        "tp": 0,
+        "fn": 504,
+        "fp": 319,
+        "tn": 229577
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/52.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9647796750068665,
+      "pixels": {
+        "tp": 0,
+        "fn": 132,
+        "fp": 557,
+        "tn": 229711
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/55.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9243645071983337,
+      "pixels": {
+        "tp": 0,
+        "fn": 147,
+        "fp": 255,
+        "tn": 229998
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/56.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9994146823883057,
+      "pixels": {
+        "tp": 0,
+        "fn": 120,
+        "fp": 2322,
+        "tn": 227958
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/59.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9994397759437561,
+      "pixels": {
+        "tp": 50,
+        "fn": 1091,
+        "fp": 3668,
+        "tn": 225591
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/62.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.999997615814209,
+      "pixels": {
+        "tp": 377,
+        "fn": 523,
+        "fp": 4935,
+        "tn": 224565
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/63.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999991655349731,
+      "pixels": {
+        "tp": 770,
+        "fn": 50,
+        "fp": 4399,
+        "tn": 225181
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/66.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9911062121391296,
+      "pixels": {
+        "tp": 0,
+        "fn": 334,
+        "fp": 3002,
+        "tn": 227064
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/69.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.999815046787262,
+      "pixels": {
+        "tp": 68,
+        "fn": 288,
+        "fp": 3586,
+        "tn": 226458
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/70.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9992029070854187,
+      "pixels": {
+        "tp": 27,
+        "fn": 678,
+        "fp": 2853,
+        "tn": 226842
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/73.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999088048934937,
+      "pixels": {
+        "tp": 369,
+        "fn": 511,
+        "fp": 3290,
+        "tn": 226230
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/76.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999715089797974,
+      "pixels": {
+        "tp": 1270,
+        "fn": 372,
+        "fp": 3171,
+        "tn": 225587
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/77.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999963045120239,
+      "pixels": {
+        "tp": 2028,
+        "fn": 560,
+        "fp": 3214,
+        "tn": 224598
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/79.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999986886978149,
+      "pixels": {
+        "tp": 5155,
+        "fn": 1240,
+        "fp": 4635,
+        "tn": 219370
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/83.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9991119503974915,
+      "pixels": {
+        "tp": 0,
+        "fn": 764,
+        "fp": 2467,
+        "tn": 227169
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/84.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9985935091972351,
+      "pixels": {
+        "tp": 0,
+        "fn": 1015,
+        "fp": 1992,
+        "tn": 227393
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/86.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9947026371955872,
+      "pixels": {
+        "tp": 661,
+        "fn": 1756,
+        "fp": 2082,
+        "tn": 225901
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/90.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9995519518852234,
+      "pixels": {
+        "tp": 0,
+        "fn": 254,
+        "fp": 3213,
+        "tn": 226933
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/91.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.999505877494812,
+      "pixels": {
+        "tp": 0,
+        "fn": 401,
+        "fp": 1796,
+        "tn": 228203
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/93.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9958510398864746,
+      "pixels": {
+        "tp": 0,
+        "fn": 434,
+        "fp": 722,
+        "tn": 229244
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/97.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.999718964099884,
+      "pixels": {
+        "tp": 155,
+        "fn": 1467,
+        "fp": 3403,
+        "tn": 225375
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/98.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9992683529853821,
+      "pixels": {
+        "tp": 1025,
+        "fn": 1029,
+        "fp": 2696,
+        "tn": 225650
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/100.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9987419247627258,
+      "pixels": {
+        "tp": 923,
+        "fn": 737,
+        "fp": 2442,
+        "tn": 226298
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/104.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9998306035995483,
+      "pixels": {
+        "tp": 176,
+        "fn": 207,
+        "fp": 3746,
+        "tn": 226271
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/105.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.6974197626113892,
+      "pixels": {
+        "tp": 10,
+        "fn": 93,
+        "fp": 62,
+        "tn": 230235
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/107.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9998984336853027,
+      "pixels": {
+        "tp": 492,
+        "fn": 197,
+        "fp": 4759,
+        "tn": 224952
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/111.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9996931552886963,
+      "pixels": {
+        "tp": 195,
+        "fn": 11,
+        "fp": 201,
+        "tn": 229993
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/113.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9998438358306885,
+      "pixels": {
+        "tp": 344,
+        "fn": 12,
+        "fp": 340,
+        "tn": 229704
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/114.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9991624355316162,
+      "pixels": {
+        "tp": 376,
+        "fn": 15,
+        "fp": 514,
+        "tn": 229495
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/118.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.997220516204834,
+      "pixels": {
+        "tp": 344,
+        "fn": 429,
+        "fp": 293,
+        "tn": 229334
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/120.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.19005654752254486,
+      "pixels": {
+        "tp": 0,
+        "fn": 216,
+        "fp": 0,
+        "tn": 230184
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/121.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.3929060995578766,
+      "pixels": {
+        "tp": 0,
+        "fn": 228,
+        "fp": 0,
+        "tn": 230172
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/125.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999997615814209,
+      "pixels": {
+        "tp": 1084,
+        "fn": 399,
+        "fp": 506,
+        "tn": 228411
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/127.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.4182620346546173,
+      "pixels": {
+        "tp": 0,
+        "fn": 256,
+        "fp": 0,
+        "tn": 230144
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/128.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9972079396247864,
+      "pixels": {
+        "tp": 203,
+        "fn": 1822,
+        "fp": 67,
+        "tn": 228308
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/132.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9859375357627869,
+      "pixels": {
+        "tp": 111,
+        "fn": 803,
+        "fp": 2872,
+        "tn": 226614
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/134.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9997217059135437,
+      "pixels": {
+        "tp": 418,
+        "fn": 134,
+        "fp": 773,
+        "tn": 229075
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/135.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.999991774559021,
+      "pixels": {
+        "tp": 427,
+        "fn": 149,
+        "fp": 1957,
+        "tn": 227867
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/139.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9553318023681641,
+      "pixels": {
+        "tp": 0,
+        "fn": 556,
+        "fp": 770,
+        "tn": 229074
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/141.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.8518445491790771,
+      "pixels": {
+        "tp": 0,
+        "fn": 237,
+        "fp": 289,
+        "tn": 229874
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/142.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.7578561902046204,
+      "pixels": {
+        "tp": 0,
+        "fn": 315,
+        "fp": 79,
+        "tn": 230006
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/146.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9024555087089539,
+      "pixels": {
+        "tp": 126,
+        "fn": 684,
+        "fp": 429,
+        "tn": 229161
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/148.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9998148083686829,
+      "pixels": {
+        "tp": 519,
+        "fn": 867,
+        "fp": 530,
+        "tn": 228484
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/149.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9989919066429138,
+      "pixels": {
+        "tp": 293,
+        "fn": 858,
+        "fp": 397,
+        "tn": 228852
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/152.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999971389770508,
+      "pixels": {
+        "tp": 3070,
+        "fn": 559,
+        "fp": 3693,
+        "tn": 223078
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/155.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.999998927116394,
+      "pixels": {
+        "tp": 2880,
+        "fn": 3236,
+        "fp": 1779,
+        "tn": 222505
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/156.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.999823272228241,
+      "pixels": {
+        "tp": 1769,
+        "fn": 1749,
+        "fp": 575,
+        "tn": 226307
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/159.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9962150454521179,
+      "pixels": {
+        "tp": 455,
+        "fn": 399,
+        "fp": 1777,
+        "tn": 227769
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/162.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9976699948310852,
+      "pixels": {
+        "tp": 1866,
+        "fn": 1210,
+        "fp": 4716,
+        "tn": 222608
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/163.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9961744546890259,
+      "pixels": {
+        "tp": 2368,
+        "fn": 910,
+        "fp": 2108,
+        "tn": 225014
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/166.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9939032196998596,
+      "pixels": {
+        "tp": 871,
+        "fn": 869,
+        "fp": 372,
+        "tn": 228288
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/169.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9912604689598083,
+      "pixels": {
+        "tp": 179,
+        "fn": 117,
+        "fp": 747,
+        "tn": 229357
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/170.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.996648371219635,
+      "pixels": {
+        "tp": 290,
+        "fn": 117,
+        "fp": 1373,
+        "tn": 228620
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/173.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999926090240479,
+      "pixels": {
+        "tp": 1944,
+        "fn": 292,
+        "fp": 1208,
+        "tn": 226956
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/176.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9998903274536133,
+      "pixels": {
+        "tp": 553,
+        "fn": 7,
+        "fp": 642,
+        "tn": 229198
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/177.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999829530715942,
+      "pixels": {
+        "tp": 647,
+        "fn": 117,
+        "fp": 736,
+        "tn": 228900
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/180.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9914522171020508,
+      "pixels": {
+        "tp": 40,
+        "fn": 383,
+        "fp": 1403,
+        "tn": 228574
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/183.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.8862910270690918,
+      "pixels": {
+        "tp": 30,
+        "fn": 1562,
+        "fp": 103,
+        "tn": 228705
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/184.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9950525164604187,
+      "pixels": {
+        "tp": 734,
+        "fn": 2144,
+        "fp": 480,
+        "tn": 227042
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/187.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9172492027282715,
+      "pixels": {
+        "tp": 99,
+        "fn": 715,
+        "fp": 10,
+        "tn": 229576
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/190.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9993128776550293,
+      "pixels": {
+        "tp": 9,
+        "fn": 839,
+        "fp": 2795,
+        "tn": 226757
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/191.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9935459494590759,
+      "pixels": {
+        "tp": 0,
+        "fn": 1478,
+        "fp": 2669,
+        "tn": 226253
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/194.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999920129776001,
+      "pixels": {
+        "tp": 344,
+        "fn": 0,
+        "fp": 573,
+        "tn": 229483
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/197.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999290704727173,
+      "pixels": {
+        "tp": 445,
+        "fn": 610,
+        "fp": 349,
+        "tn": 228996
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/198.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999233484268188,
+      "pixels": {
+        "tp": 486,
+        "fn": 1069,
+        "fp": 249,
+        "tn": 228596
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/201.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9929759502410889,
+      "pixels": {
+        "tp": 0,
+        "fn": 1326,
+        "fp": 976,
+        "tn": 228098
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/204.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.925553023815155,
+      "pixels": {
+        "tp": 162,
+        "fn": 239,
+        "fp": 22,
+        "tn": 229977
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/205.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.999987006187439,
+      "pixels": {
+        "tp": 604,
+        "fn": 581,
+        "fp": 726,
+        "tn": 228489
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/208.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9932750463485718,
+      "pixels": {
+        "tp": 187,
+        "fn": 1024,
+        "fp": 67,
+        "tn": 229122
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/211.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9999922513961792,
+      "pixels": {
+        "tp": 2039,
+        "fn": 810,
+        "fp": 997,
+        "tn": 226554
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/212.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 1.0,
+      "pixels": {
+        "tp": 4241,
+        "fn": 1004,
+        "fp": 1330,
+        "tn": 223825
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/215.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9998385906219482,
+      "pixels": {
+        "tp": 249,
+        "fn": 1911,
+        "fp": 2421,
+        "tn": 225819
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/219.json",
+      "sequence": "data25",
+      "photo_positive": true,
+      "score": 0.9997652173042297,
+      "pixels": {
+        "tp": 0,
+        "fn": 1020,
+        "fp": 3118,
+        "tn": 226262
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/0.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999997615814209,
+      "pixels": {
+        "tp": 1087,
+        "fn": 0,
+        "fp": 5744,
+        "tn": 223569
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/2.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999995231628418,
+      "pixels": {
+        "tp": 5110,
+        "fn": 201,
+        "fp": 4471,
+        "tn": 220618
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/4.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999842643737793,
+      "pixels": {
+        "tp": 6228,
+        "fn": 2843,
+        "fp": 5602,
+        "tn": 215727
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/6.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999556541442871,
+      "pixels": {
+        "tp": 2,
+        "fn": 4013,
+        "fp": 2164,
+        "tn": 224221
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/8.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999997615814209,
+      "pixels": {
+        "tp": 339,
+        "fn": 22,
+        "fp": 5492,
+        "tn": 224547
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/10.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999605417251587,
+      "pixels": {
+        "tp": 1451,
+        "fn": 239,
+        "fp": 4069,
+        "tn": 224641
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/12.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.999997615814209,
+      "pixels": {
+        "tp": 1045,
+        "fn": 1028,
+        "fp": 2961,
+        "tn": 225366
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/13.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9994544386863708,
+      "pixels": {
+        "tp": 1087,
+        "fn": 649,
+        "fp": 3144,
+        "tn": 225520
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/15.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 1.0,
+      "pixels": {
+        "tp": 1403,
+        "fn": 53,
+        "fp": 3642,
+        "tn": 225302
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/17.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999880790710449,
+      "pixels": {
+        "tp": 3986,
+        "fn": 257,
+        "fp": 3059,
+        "tn": 223098
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/19.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9998880624771118,
+      "pixels": {
+        "tp": 3355,
+        "fn": 689,
+        "fp": 4142,
+        "tn": 222214
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/21.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9988632202148438,
+      "pixels": {
+        "tp": 635,
+        "fn": 54,
+        "fp": 1634,
+        "tn": 228077
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/23.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9997534155845642,
+      "pixels": {
+        "tp": 1885,
+        "fn": 1304,
+        "fp": 508,
+        "tn": 226703
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/25.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9599722623825073,
+      "pixels": {
+        "tp": 571,
+        "fn": 661,
+        "fp": 346,
+        "tn": 228822
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/26.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9986581802368164,
+      "pixels": {
+        "tp": 380,
+        "fn": 204,
+        "fp": 1102,
+        "tn": 228714
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/28.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999467134475708,
+      "pixels": {
+        "tp": 1498,
+        "fn": 28,
+        "fp": 2278,
+        "tn": 226596
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/30.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9998549222946167,
+      "pixels": {
+        "tp": 232,
+        "fn": 81,
+        "fp": 3829,
+        "tn": 226258
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/32.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999899864196777,
+      "pixels": {
+        "tp": 2333,
+        "fn": 117,
+        "fp": 1956,
+        "tn": 225994
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/34.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9998082518577576,
+      "pixels": {
+        "tp": 727,
+        "fn": 974,
+        "fp": 893,
+        "tn": 227806
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/35.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.99897301197052,
+      "pixels": {
+        "tp": 1409,
+        "fn": 3405,
+        "fp": 1368,
+        "tn": 224218
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/36.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9997721314430237,
+      "pixels": {
+        "tp": 1113,
+        "fn": 7206,
+        "fp": 1085,
+        "tn": 220996
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/38.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9887285232543945,
+      "pixels": {
+        "tp": 1674,
+        "fn": 3511,
+        "fp": 1263,
+        "tn": 223952
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/39.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9857581853866577,
+      "pixels": {
+        "tp": 2217,
+        "fn": 618,
+        "fp": 732,
+        "tn": 226833
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/41.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9843335747718811,
+      "pixels": {
+        "tp": 1392,
+        "fn": 205,
+        "fp": 1500,
+        "tn": 227303
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/43.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9997338652610779,
+      "pixels": {
+        "tp": 983,
+        "fn": 215,
+        "fp": 1883,
+        "tn": 227319
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/45.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9996374845504761,
+      "pixels": {
+        "tp": 1094,
+        "fn": 4841,
+        "fp": 3698,
+        "tn": 220767
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/47.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9996618032455444,
+      "pixels": {
+        "tp": 1883,
+        "fn": 164,
+        "fp": 1839,
+        "tn": 226514
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/48.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9985610842704773,
+      "pixels": {
+        "tp": 654,
+        "fn": 127,
+        "fp": 2378,
+        "tn": 227241
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/49.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999945163726807,
+      "pixels": {
+        "tp": 1990,
+        "fn": 70,
+        "fp": 2136,
+        "tn": 226204
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/51.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9994056224822998,
+      "pixels": {
+        "tp": 2405,
+        "fn": 787,
+        "fp": 2097,
+        "tn": 225111
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/52.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999431371688843,
+      "pixels": {
+        "tp": 2874,
+        "fn": 2991,
+        "fp": 3425,
+        "tn": 221110
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/53.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.999441921710968,
+      "pixels": {
+        "tp": 2153,
+        "fn": 5087,
+        "fp": 3633,
+        "tn": 219527
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/56.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999430179595947,
+      "pixels": {
+        "tp": 575,
+        "fn": 2,
+        "fp": 5871,
+        "tn": 223952
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/57.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999997615814209,
+      "pixels": {
+        "tp": 2228,
+        "fn": 18,
+        "fp": 4342,
+        "tn": 223812
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/58.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999997615814209,
+      "pixels": {
+        "tp": 4443,
+        "fn": 76,
+        "fp": 5947,
+        "tn": 219934
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/60.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999998807907104,
+      "pixels": {
+        "tp": 8239,
+        "fn": 2016,
+        "fp": 4222,
+        "tn": 215923
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/61.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999704360961914,
+      "pixels": {
+        "tp": 4137,
+        "fn": 6279,
+        "fp": 3717,
+        "tn": 216267
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/62.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999840259552002,
+      "pixels": {
+        "tp": 955,
+        "fn": 5765,
+        "fp": 2695,
+        "tn": 220985
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/64.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9976429343223572,
+      "pixels": {
+        "tp": 20,
+        "fn": 235,
+        "fp": 2621,
+        "tn": 227524
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/65.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999834299087524,
+      "pixels": {
+        "tp": 851,
+        "fn": 184,
+        "fp": 2822,
+        "tn": 226543
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/66.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9995742440223694,
+      "pixels": {
+        "tp": 1305,
+        "fn": 347,
+        "fp": 3298,
+        "tn": 225450
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/69.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999759197235107,
+      "pixels": {
+        "tp": 1073,
+        "fn": 824,
+        "fp": 4219,
+        "tn": 224284
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/70.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9995410442352295,
+      "pixels": {
+        "tp": 903,
+        "fn": 47,
+        "fp": 4425,
+        "tn": 225025
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/71.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.999835729598999,
+      "pixels": {
+        "tp": 396,
+        "fn": 11,
+        "fp": 3761,
+        "tn": 226232
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/73.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999982118606567,
+      "pixels": {
+        "tp": 2085,
+        "fn": 26,
+        "fp": 5054,
+        "tn": 223235
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/74.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999945163726807,
+      "pixels": {
+        "tp": 3795,
+        "fn": 121,
+        "fp": 5329,
+        "tn": 221155
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/75.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999969005584717,
+      "pixels": {
+        "tp": 3999,
+        "fn": 589,
+        "fp": 5217,
+        "tn": 220595
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/77.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9997822642326355,
+      "pixels": {
+        "tp": 2190,
+        "fn": 605,
+        "fp": 2223,
+        "tn": 225382
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/78.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9991375207901001,
+      "pixels": {
+        "tp": 2269,
+        "fn": 108,
+        "fp": 4680,
+        "tn": 223343
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/79.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9998486042022705,
+      "pixels": {
+        "tp": 572,
+        "fn": 1,
+        "fp": 4293,
+        "tn": 225534
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/82.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9998890161514282,
+      "pixels": {
+        "tp": 2538,
+        "fn": 53,
+        "fp": 2707,
+        "tn": 225102
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/83.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999895095825195,
+      "pixels": {
+        "tp": 2258,
+        "fn": 0,
+        "fp": 2920,
+        "tn": 225222
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/84.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.999993085861206,
+      "pixels": {
+        "tp": 1705,
+        "fn": 6470,
+        "fp": 3893,
+        "tn": 218332
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/86.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999555349349976,
+      "pixels": {
+        "tp": 1194,
+        "fn": 28,
+        "fp": 2948,
+        "tn": 226230
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/87.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9998701810836792,
+      "pixels": {
+        "tp": 1028,
+        "fn": 0,
+        "fp": 3027,
+        "tn": 226345
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/88.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9992486834526062,
+      "pixels": {
+        "tp": 1563,
+        "fn": 4867,
+        "fp": 2666,
+        "tn": 221304
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/90.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999991655349731,
+      "pixels": {
+        "tp": 2253,
+        "fn": 0,
+        "fp": 2142,
+        "tn": 226005
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/92.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9994947910308838,
+      "pixels": {
+        "tp": 251,
+        "fn": 14,
+        "fp": 918,
+        "tn": 229217
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/94.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9992725253105164,
+      "pixels": {
+        "tp": 628,
+        "fn": 7,
+        "fp": 897,
+        "tn": 228868
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/96.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9989025592803955,
+      "pixels": {
+        "tp": 2672,
+        "fn": 4307,
+        "fp": 1373,
+        "tn": 222048
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/97.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999946355819702,
+      "pixels": {
+        "tp": 1479,
+        "fn": 6182,
+        "fp": 3203,
+        "tn": 219536
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/99.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9993224143981934,
+      "pixels": {
+        "tp": 2933,
+        "fn": 705,
+        "fp": 2787,
+        "tn": 223975
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/100.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9976471066474915,
+      "pixels": {
+        "tp": 1210,
+        "fn": 1968,
+        "fp": 2117,
+        "tn": 225105
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/101.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9990127086639404,
+      "pixels": {
+        "tp": 3216,
+        "fn": 114,
+        "fp": 3248,
+        "tn": 223822
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/103.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9976428151130676,
+      "pixels": {
+        "tp": 734,
+        "fn": 98,
+        "fp": 1605,
+        "tn": 227963
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/105.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9973823428153992,
+      "pixels": {
+        "tp": 685,
+        "fn": 1902,
+        "fp": 1733,
+        "tn": 226080
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/107.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9994801878929138,
+      "pixels": {
+        "tp": 791,
+        "fn": 4587,
+        "fp": 2459,
+        "tn": 222563
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/109.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.999911904335022,
+      "pixels": {
+        "tp": 2293,
+        "fn": 86,
+        "fp": 2603,
+        "tn": 225418
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/110.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999305009841919,
+      "pixels": {
+        "tp": 1968,
+        "fn": 271,
+        "fp": 2036,
+        "tn": 226125
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/112.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9998867511749268,
+      "pixels": {
+        "tp": 2115,
+        "fn": 1489,
+        "fp": 2057,
+        "tn": 224739
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/114.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9932331442832947,
+      "pixels": {
+        "tp": 2138,
+        "fn": 5734,
+        "fp": 2093,
+        "tn": 220435
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/116.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999583959579468,
+      "pixels": {
+        "tp": 2000,
+        "fn": 633,
+        "fp": 2879,
+        "tn": 224888
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/118.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999948740005493,
+      "pixels": {
+        "tp": 4376,
+        "fn": 97,
+        "fp": 4137,
+        "tn": 221790
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/120.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999967813491821,
+      "pixels": {
+        "tp": 9041,
+        "fn": 362,
+        "fp": 4318,
+        "tn": 216679
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/122.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999940395355225,
+      "pixels": {
+        "tp": 2056,
+        "fn": 6061,
+        "fp": 4901,
+        "tn": 217382
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/123.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.997147262096405,
+      "pixels": {
+        "tp": 830,
+        "fn": 3051,
+        "fp": 3120,
+        "tn": 223399
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/125.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999206066131592,
+      "pixels": {
+        "tp": 1261,
+        "fn": 788,
+        "fp": 3119,
+        "tn": 225232
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/127.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9998965263366699,
+      "pixels": {
+        "tp": 679,
+        "fn": 5161,
+        "fp": 5720,
+        "tn": 218840
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/129.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999723434448242,
+      "pixels": {
+        "tp": 528,
+        "fn": 143,
+        "fp": 4608,
+        "tn": 225121
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/131.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9999624490737915,
+      "pixels": {
+        "tp": 1737,
+        "fn": 69,
+        "fp": 3993,
+        "tn": 224601
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/133.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9987053871154785,
+      "pixels": {
+        "tp": 341,
+        "fn": 3345,
+        "fp": 2177,
+        "tn": 224537
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data26/136.json",
+      "sequence": "data26",
+      "photo_positive": true,
+      "score": 0.9992341995239258,
+      "pixels": {
+        "tp": 1652,
+        "fn": 1691,
+        "fp": 3524,
+        "tn": 223533
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/0.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9551926851272583,
+      "pixels": {
+        "tp": 0,
+        "fn": 917,
+        "fp": 1294,
+        "tn": 228189
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/3.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9894412755966187,
+      "pixels": {
+        "tp": 356,
+        "fn": 1472,
+        "fp": 1440,
+        "tn": 227132
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/7.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.999990701675415,
+      "pixels": {
+        "tp": 3586,
+        "fn": 139,
+        "fp": 1306,
+        "tn": 225369
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/11.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9939233660697937,
+      "pixels": {
+        "tp": 2518,
+        "fn": 10585,
+        "fp": 1762,
+        "tn": 215535
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/15.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9915508031845093,
+      "pixels": {
+        "tp": 2847,
+        "fn": 208,
+        "fp": 1948,
+        "tn": 225397
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/18.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9884290099143982,
+      "pixels": {
+        "tp": 1825,
+        "fn": 5462,
+        "fp": 478,
+        "tn": 222635
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/22.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9999727010726929,
+      "pixels": {
+        "tp": 2472,
+        "fn": 64,
+        "fp": 955,
+        "tn": 226909
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/23.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9999992847442627,
+      "pixels": {
+        "tp": 2733,
+        "fn": 184,
+        "fp": 936,
+        "tn": 226547
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/26.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9977651834487915,
+      "pixels": {
+        "tp": 2252,
+        "fn": 8908,
+        "fp": 560,
+        "tn": 218680
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/30.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9999608993530273,
+      "pixels": {
+        "tp": 4859,
+        "fn": 2371,
+        "fp": 1727,
+        "tn": 221443
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/31.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.99993896484375,
+      "pixels": {
+        "tp": 7273,
+        "fn": 4603,
+        "fp": 1093,
+        "tn": 217431
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/33.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9999972581863403,
+      "pixels": {
+        "tp": 6875,
+        "fn": 6333,
+        "fp": 1197,
+        "tn": 215995
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/37.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9973894953727722,
+      "pixels": {
+        "tp": 1605,
+        "fn": 179,
+        "fp": 1636,
+        "tn": 226980
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/39.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9981016516685486,
+      "pixels": {
+        "tp": 1629,
+        "fn": 961,
+        "fp": 1068,
+        "tn": 226742
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/41.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9990735054016113,
+      "pixels": {
+        "tp": 708,
+        "fn": 554,
+        "fp": 1567,
+        "tn": 227571
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/45.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9827389717102051,
+      "pixels": {
+        "tp": 2839,
+        "fn": 2578,
+        "fp": 1183,
+        "tn": 223800
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/47.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9988872408866882,
+      "pixels": {
+        "tp": 3288,
+        "fn": 871,
+        "fp": 1817,
+        "tn": 224424
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/48.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.999305009841919,
+      "pixels": {
+        "tp": 1921,
+        "fn": 4,
+        "fp": 2199,
+        "tn": 226276
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/52.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9886264204978943,
+      "pixels": {
+        "tp": 800,
+        "fn": 53,
+        "fp": 3290,
+        "tn": 226257
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/54.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.998971700668335,
+      "pixels": {
+        "tp": 0,
+        "fn": 4952,
+        "fp": 4397,
+        "tn": 221051
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/56.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.997715950012207,
+      "pixels": {
+        "tp": 3309,
+        "fn": 13702,
+        "fp": 1996,
+        "tn": 211393
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/60.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9958536624908447,
+      "pixels": {
+        "tp": 4465,
+        "fn": 13405,
+        "fp": 1247,
+        "tn": 211283
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/62.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9994491934776306,
+      "pixels": {
+        "tp": 5192,
+        "fn": 1101,
+        "fp": 2019,
+        "tn": 222088
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/63.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.8789699673652649,
+      "pixels": {
+        "tp": 495,
+        "fn": 9644,
+        "fp": 385,
+        "tn": 219876
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/67.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9924665093421936,
+      "pixels": {
+        "tp": 3491,
+        "fn": 99,
+        "fp": 2271,
+        "tn": 224539
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/70.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9974060654640198,
+      "pixels": {
+        "tp": 3752,
+        "fn": 6165,
+        "fp": 0,
+        "tn": 220483
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/71.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9822024703025818,
+      "pixels": {
+        "tp": 970,
+        "fn": 1052,
+        "fp": 252,
+        "tn": 228126
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/75.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9995840191841125,
+      "pixels": {
+        "tp": 1051,
+        "fn": 876,
+        "fp": 948,
+        "tn": 227525
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/78.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9999936819076538,
+      "pixels": {
+        "tp": 1119,
+        "fn": 254,
+        "fp": 959,
+        "tn": 228068
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/79.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9984777569770813,
+      "pixels": {
+        "tp": 2287,
+        "fn": 3812,
+        "fp": 158,
+        "tn": 224143
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/82.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9947845339775085,
+      "pixels": {
+        "tp": 1092,
+        "fn": 4283,
+        "fp": 589,
+        "tn": 224436
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/86.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9994767308235168,
+      "pixels": {
+        "tp": 5835,
+        "fn": 4345,
+        "fp": 834,
+        "tn": 219386
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/90.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9990059733390808,
+      "pixels": {
+        "tp": 2325,
+        "fn": 1024,
+        "fp": 1031,
+        "tn": 226020
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/100.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9965750575065613,
+      "pixels": {
+        "tp": 2000,
+        "fn": 398,
+        "fp": 609,
+        "tn": 227393
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/101.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9954767823219299,
+      "pixels": {
+        "tp": 2429,
+        "fn": 807,
+        "fp": 615,
+        "tn": 226549
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/103.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9994804263114929,
+      "pixels": {
+        "tp": 3260,
+        "fn": 431,
+        "fp": 1768,
+        "tn": 224941
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/107.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.971782386302948,
+      "pixels": {
+        "tp": 285,
+        "fn": 1064,
+        "fp": 1554,
+        "tn": 227497
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/109.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9996310472488403,
+      "pixels": {
+        "tp": 1050,
+        "fn": 4,
+        "fp": 1961,
+        "tn": 227385
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/111.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9998294115066528,
+      "pixels": {
+        "tp": 549,
+        "fn": 28,
+        "fp": 569,
+        "tn": 229254
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/115.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9999929666519165,
+      "pixels": {
+        "tp": 687,
+        "fn": 9,
+        "fp": 644,
+        "tn": 229060
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/117.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9997343420982361,
+      "pixels": {
+        "tp": 333,
+        "fn": 21,
+        "fp": 1150,
+        "tn": 228896
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/118.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9996497631072998,
+      "pixels": {
+        "tp": 1156,
+        "fn": 51,
+        "fp": 1083,
+        "tn": 228110
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/122.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9967118501663208,
+      "pixels": {
+        "tp": 1175,
+        "fn": 2736,
+        "fp": 1012,
+        "tn": 225477
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/125.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.99892657995224,
+      "pixels": {
+        "tp": 3109,
+        "fn": 202,
+        "fp": 2658,
+        "tn": 224431
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/126.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9993458390235901,
+      "pixels": {
+        "tp": 1726,
+        "fn": 1132,
+        "fp": 3014,
+        "tn": 224528
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/130.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9989244341850281,
+      "pixels": {
+        "tp": 466,
+        "fn": 23,
+        "fp": 869,
+        "tn": 229042
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/133.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9999008178710938,
+      "pixels": {
+        "tp": 1391,
+        "fn": 956,
+        "fp": 649,
+        "tn": 227404
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/137.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9985471367835999,
+      "pixels": {
+        "tp": 1016,
+        "fn": 148,
+        "fp": 431,
+        "tn": 228805
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/141.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9923169612884521,
+      "pixels": {
+        "tp": 878,
+        "fn": 2240,
+        "fp": 167,
+        "tn": 227115
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/145.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9985283613204956,
+      "pixels": {
+        "tp": 1307,
+        "fn": 380,
+        "fp": 1002,
+        "tn": 227711
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/148.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.7223642468452454,
+      "pixels": {
+        "tp": 23,
+        "fn": 186,
+        "fp": 46,
+        "tn": 230145
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/152.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9999523162841797,
+      "pixels": {
+        "tp": 4243,
+        "fn": 3407,
+        "fp": 1117,
+        "tn": 221633
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/156.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9997573494911194,
+      "pixels": {
+        "tp": 1843,
+        "fn": 179,
+        "fp": 1422,
+        "tn": 226956
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/160.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9975807666778564,
+      "pixels": {
+        "tp": 380,
+        "fn": 928,
+        "fp": 100,
+        "tn": 228992
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/164.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9965949654579163,
+      "pixels": {
+        "tp": 100,
+        "fn": 1371,
+        "fp": 209,
+        "tn": 228720
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/167.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9981245398521423,
+      "pixels": {
+        "tp": 1204,
+        "fn": 731,
+        "fp": 856,
+        "tn": 227609
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/171.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9998737573623657,
+      "pixels": {
+        "tp": 1715,
+        "fn": 235,
+        "fp": 2143,
+        "tn": 226307
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/172.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9991853833198547,
+      "pixels": {
+        "tp": 1146,
+        "fn": 221,
+        "fp": 808,
+        "tn": 228225
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/175.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9986096620559692,
+      "pixels": {
+        "tp": 7623,
+        "fn": 1590,
+        "fp": 3355,
+        "tn": 217832
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/179.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9999014139175415,
+      "pixels": {
+        "tp": 735,
+        "fn": 33,
+        "fp": 2364,
+        "tn": 227268
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/180.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9998774528503418,
+      "pixels": {
+        "tp": 460,
+        "fn": 25,
+        "fp": 1121,
+        "tn": 228794
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/182.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9998370409011841,
+      "pixels": {
+        "tp": 10529,
+        "fn": 309,
+        "fp": 7329,
+        "tn": 212233
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/186.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.998641312122345,
+      "pixels": {
+        "tp": 530,
+        "fn": 104,
+        "fp": 81,
+        "tn": 229685
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/188.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9412652850151062,
+      "pixels": {
+        "tp": 133,
+        "fn": 246,
+        "fp": 10,
+        "tn": 230011
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/190.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9934604167938232,
+      "pixels": {
+        "tp": 1107,
+        "fn": 544,
+        "fp": 54,
+        "tn": 228695
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/194.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9998751878738403,
+      "pixels": {
+        "tp": 7911,
+        "fn": 454,
+        "fp": 3875,
+        "tn": 218160
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/195.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9981552958488464,
+      "pixels": {
+        "tp": 325,
+        "fn": 199,
+        "fp": 72,
+        "tn": 229804
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/197.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.5182453989982605,
+      "pixels": {
+        "tp": 0,
+        "fn": 1166,
+        "fp": 1,
+        "tn": 229233
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/201.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9981770515441895,
+      "pixels": {
+        "tp": 3914,
+        "fn": 316,
+        "fp": 2384,
+        "tn": 223786
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/203.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9988176226615906,
+      "pixels": {
+        "tp": 2502,
+        "fn": 1106,
+        "fp": 2702,
+        "tn": 224090
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/205.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9988090991973877,
+      "pixels": {
+        "tp": 1261,
+        "fn": 60,
+        "fp": 1866,
+        "tn": 227213
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/209.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9876178503036499,
+      "pixels": {
+        "tp": 387,
+        "fn": 377,
+        "fp": 0,
+        "tn": 229636
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/211.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9994680285453796,
+      "pixels": {
+        "tp": 874,
+        "fn": 3105,
+        "fp": 735,
+        "tn": 225686
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/212.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9976305961608887,
+      "pixels": {
+        "tp": 2368,
+        "fn": 622,
+        "fp": 631,
+        "tn": 226779
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/216.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.999559223651886,
+      "pixels": {
+        "tp": 768,
+        "fn": 506,
+        "fp": 233,
+        "tn": 228893
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/219.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9928072690963745,
+      "pixels": {
+        "tp": 853,
+        "fn": 4633,
+        "fp": 99,
+        "tn": 224815
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/220.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9987248778343201,
+      "pixels": {
+        "tp": 518,
+        "fn": 3256,
+        "fp": 1776,
+        "tn": 224850
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/224.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9989006519317627,
+      "pixels": {
+        "tp": 0,
+        "fn": 171,
+        "fp": 1450,
+        "tn": 228779
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/227.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9999188184738159,
+      "pixels": {
+        "tp": 4041,
+        "fn": 1515,
+        "fp": 1972,
+        "tn": 222872
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/231.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9968305230140686,
+      "pixels": {
+        "tp": 2262,
+        "fn": 1708,
+        "fp": 412,
+        "tn": 226018
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/235.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9867427349090576,
+      "pixels": {
+        "tp": 252,
+        "fn": 771,
+        "fp": 779,
+        "tn": 228598
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/239.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9904636144638062,
+      "pixels": {
+        "tp": 897,
+        "fn": 1426,
+        "fp": 750,
+        "tn": 227327
+      }
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data27/243.json",
+      "sequence": "data27",
+      "photo_positive": true,
+      "score": 0.9992602467536926,
+      "pixels": {
+        "tp": 0,
+        "fn": 481,
+        "fp": 1986,
+        "tn": 227933
+      }
+    }
+  ],
+  "summary": {
+    "photos": 353,
+    "sequences": 4,
+    "pixel_counts": {
+      "tp": 841678,
+      "fp": 721055,
+      "tn": 79250797,
+      "fn": 517670
+    },
+    "pixel_iou": 0.40457449830633774,
+    "pixel_dice": 0.5760812243055549,
+    "pixel_fnr": 0.38082227656199885,
+    "pixel_fpr": 0.009016359906233009,
+    "photo_rates": {
+      "tp": 350,
+      "fn": 3,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 353,
+      "negative_photos": 0,
+      "fnr": 0.0084985835694051,
+      "fpr": null
+    },
+    "positive_photos_without_any_gt_overlap": 37,
+    "photo_fpr_fnr_below_5_percent": false,
+    "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+  },
+  "threshold": 0.5,
+  "normal_photo_FPR_available": false,
+  "reserved_TEST_used": false
+}
