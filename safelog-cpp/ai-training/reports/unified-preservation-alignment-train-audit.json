@@ -1,0 +1,27 @@
+{
+  "status": "audited_TRAIN_only",
+  "unique_scheduled_facility_records": 9305,
+  "domains": {
+    "dacl": {
+      "selected_records": 6225,
+      "asymmetric_known_grid_records": 0,
+      "mirrored_known_cells_changed": 0,
+      "unknown_cells": 0
+    },
+    "damsegment": {
+      "selected_records": 1040,
+      "asymmetric_known_grid_records": 1040,
+      "mirrored_known_cells_changed": 4160,
+      "unknown_cells": 5200
+    },
+    "codebrim": {
+      "selected_records": 2040,
+      "asymmetric_known_grid_records": 2017,
+      "mirrored_known_cells_changed": 7286,
+      "unknown_cells": 6215
+    }
+  },
+  "new_labels": 0,
+  "meaning": "Count changed known coordinates under horizontal mirroring; not additional defect labels",
+  "heldout_images_or_annotations_used": false
+}

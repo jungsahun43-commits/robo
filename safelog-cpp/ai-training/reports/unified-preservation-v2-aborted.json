@@ -1,0 +1,27 @@
+{
+  "status": "aborted_invalid_known_class_order",
+  "usable_for_model_selection": false,
+  "inherited_by_corrected_run": false,
+  "actual_journal_optimizer_calls": 2179,
+  "last_completed_update": {
+    "epoch": 6,
+    "cursor": 259,
+    "task": "belt_damage",
+    "committed_model_update_index": 2179
+  },
+  "completed_epochs": 5,
+  "known_scope_shape": [
+    7
+  ],
+  "mask_shape": [
+    7,
+    80,
+    80
+  ],
+  "cause": "pixel_known is class supervision flags; mistaken AlignedCache flipped class order. Original v1 Cache was correct.",
+  "prior_completed_v1_checkpoint_unchanged": true,
+  "partial_run_directory_preserved": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\unified-preservation-v2\\joint",
+  "spatial_alignment_audit_valid_for_actual_data": false,
+  "new_corrected_run_directory": "runs/unified-preservation-typed-v3",
+  "app_default_promoted": false
+}

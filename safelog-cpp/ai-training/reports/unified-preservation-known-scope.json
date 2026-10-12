@@ -1,0 +1,26 @@
+{
+  "schema": "known-class-vector-contract-v3",
+  "declared_before_fit": true,
+  "protocol_path": "reports/unified-preservation-typed-protocol.json",
+  "protocol_sha256": "8e6c887afe4c2f9593f600437dde0eeb8eb3918c3b63ef6470274bec3d5c22db",
+  "source_sha256": {
+    "scripts/study_unified_preservation_typed.py": "1ce9845369a37172e4923efa49ad8d227b2464396d9f1bd62e3fae24584d79d5",
+    "tests/test_unified_preservation_typed.py": "1e15bea3f7ce303ec926feb70b3ea5e5f41b96f9bec7893e12dac566bbfa94b9"
+  },
+  "actual_known_shape_per_item": [
+    7
+  ],
+  "actual_mask_shape_per_item": [
+    7,
+    80,
+    80
+  ],
+  "meaning": "known[c] enables spatial supervision for class c over the whole grid; not a spatial mask",
+  "correct_augmentation": "Use preserved v1 Cache: flip image and pixel target mask, leave known class vector unchanged",
+  "typed_cache_matches_previous_train_processing": true,
+  "both_variants_use_same_correct_cache": true,
+  "invalid_v2_partial_run_excluded": "unified-preservation-v2-aborted.json",
+  "new_gold_or_unknown_to_negative_conversion": false,
+  "tests_passed": 2,
+  "GPU_preflight_reused_from_v2": "Two disposable backbone freeze checks used only foreign task and remain valid; no new GPU preflight calls"
+}

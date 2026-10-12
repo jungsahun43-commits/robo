@@ -19,12 +19,14 @@
 
 ```powershell
 cd safelog-cpp/ai-training
-./.venv/Scripts/python.exe scripts/study_unified_preservation_aligned.py train
+./.venv/Scripts/python.exe scripts/study_unified_preservation_typed.py train
 ```
 
-기존 데이터·출처·모델과 완료된 보고서는 SHA로 보호한다. 사전 등록된 [조건](../ai-training/reports/unified-preservation-protocol.json)에 따라 최종10epoch만 평가한다. 중간 검증 결과로 학습 회차나 기준을 반복 바꾸지 않는다.
+기존 데이터·출처·모델과 완료된 보고서는 SHA로 보호한다. 사전 등록된 [조건](../ai-training/reports/unified-preservation-typed-protocol.json)에 따라 최종10epoch만 평가한다. 중간 검증 결과로 학습 회차나 기준을 반복 바꾸지 않는다.
 
-학습 전에 좌우 반전에서 시설 정답의 `pixel_known` 영역도 이미지·mask와 함께 반전하도록 [정렬 수정](../ai-training/reports/unified-preservation-alignment-amendment.json)을 등록했다. 두 후보에 같은 수정이 적용되며, 확인하지 않은 영역을 새로운 정답으로 만들지 않는다. 기존 학습 소스와 원래 프로토콜은 보존한다. 검증·시험 입력은 바뀌지 않는다.
+사전 처리 점검에서 `pixel_known`을 좌표 영역으로 잘못 해석한 수정은 철회했다. 실제 파일은 mask가7×80×80이고 known은7개 클래스의 공간 정답 사용 여부 벡터다. 사진과 mask만 반전하고 클래스 벡터의 순서는 보존하는 기존 v1 처리 방식이 올바르다. 실제3개 자료 출처의 파일 구조와 강제 반전 테스트로 이를 검증했다.
+
+잘못된 수정으로 실행한 v2 부분 학습의2,179회 journal 업데이트와 중간 파일은 [중단·제외 기록](../ai-training/reports/unified-preservation-v2-aborted.json)으로 남겼다. 최종 연구 후보를 고르는 자료나 올바른 후속 모델의 초기 가중치로 사용하지 않는다. 새 `unified-preservation-typed-v3` 폴더에서 같은 완료 v1 모델을 다시 불러온다. 이전 `study_unified_preservation_aligned.py`는 중단한 실험의 기록이며 사용하지 않는다. [실제 정답 구조](../ai-training/reports/unified-preservation-known-scope.json)가 현재 적용 조건이다.
 
 ## 비교와 선택
 
