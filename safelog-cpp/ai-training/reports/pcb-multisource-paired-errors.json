@@ -1,0 +1,80 @@
+{
+  "same_VisA802_ids_and_labels": true,
+  "categories": {
+    "pcb1": {
+      "corrected_false_negative": [
+        "VisA/pcb1/Data/Images/Anomaly/047.JPG",
+        "VisA/pcb1/Data/Images/Anomaly/073.JPG",
+        "VisA/pcb1/Data/Images/Anomaly/085.JPG"
+      ],
+      "new_false_negative": [],
+      "corrected_false_positive": [
+        "VisA/pcb1/Data/Images/Normal/0174.JPG",
+        "VisA/pcb1/Data/Images/Normal/0261.JPG"
+      ],
+      "new_false_positive": [
+        "VisA/pcb1/Data/Images/Normal/0804.JPG",
+        "VisA/pcb1/Data/Images/Normal/0800.JPG",
+        "VisA/pcb1/Data/Images/Normal/0768.JPG"
+      ]
+    },
+    "pcb2": {
+      "corrected_false_negative": [
+        "VisA/pcb2/Data/Images/Anomaly/010.JPG",
+        "VisA/pcb2/Data/Images/Anomaly/036.JPG",
+        "VisA/pcb2/Data/Images/Anomaly/038.JPG",
+        "VisA/pcb2/Data/Images/Anomaly/073.JPG",
+        "VisA/pcb2/Data/Images/Anomaly/075.JPG",
+        "VisA/pcb2/Data/Images/Anomaly/082.JPG",
+        "VisA/pcb2/Data/Images/Anomaly/083.JPG"
+      ],
+      "new_false_negative": [
+        "VisA/pcb2/Data/Images/Anomaly/000.JPG",
+        "VisA/pcb2/Data/Images/Anomaly/092.JPG"
+      ],
+      "corrected_false_positive": [
+        "VisA/pcb2/Data/Images/Normal/0764.JPG",
+        "VisA/pcb2/Data/Images/Normal/0804.JPG",
+        "VisA/pcb2/Data/Images/Normal/0024.JPG"
+      ],
+      "new_false_positive": []
+    },
+    "pcb3": {
+      "corrected_false_negative": [
+        "VisA/pcb3/Data/Images/Anomaly/072.JPG"
+      ],
+      "new_false_negative": [
+        "VisA/pcb3/Data/Images/Anomaly/031.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/035.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/044.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/049.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/050.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/059.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/060.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/065.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/085.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/090.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/091.JPG",
+        "VisA/pcb3/Data/Images/Anomaly/094.JPG"
+      ],
+      "corrected_false_positive": [
+        "VisA/pcb3/Data/Images/Normal/0730.JPG"
+      ],
+      "new_false_positive": []
+    },
+    "pcb4": {
+      "corrected_false_negative": [],
+      "new_false_negative": [],
+      "corrected_false_positive": [
+        "VisA/pcb4/Data/Images/Normal/0320.JPG",
+        "VisA/pcb4/Data/Images/Normal/0784.JPG",
+        "VisA/pcb4/Data/Images/Normal/0615.JPG"
+      ],
+      "new_false_positive": [
+        "VisA/pcb4/Data/Images/Normal/0552.JPG",
+        "VisA/pcb4/Data/Images/Normal/0923.JPG",
+        "VisA/pcb4/Data/Images/Normal/0974.JPG"
+      ]
+    }
+  }
+}

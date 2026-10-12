@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "one_neural_detector_checkpoint": true,
+  "both_datasets_really_fitted": true,
+  "actual_epochs": 40,
+  "actual_optimizer_updates": 5000,
+  "five_CPU_HTTP_requests": true,
+  "archive_sha256": "71617109978a21f8a77127ad11d22db9dad31c2b58ea5ffebaa9a2555f7da859",
+  "all_archive_hashes_CRC_and_document_links_verified": true,
+  "all_frozen_and_legacy_sources_preserved": true,
+  "supplemental_source_sha256": {
+    "safelog_ai/pcb_multisource_server.py": "cc8fc292b6311296613d6f3b9d87f53d168af96a0a91106dcad1323948be4b6b",
+    "tests/test_pcb_multisource_server.py": "cbd5a45e20148074f430e2bf7bd63a5b1528ec44224e753e70022b0761c0e9b3",
+    "scripts/release_pcb_multisource.py": "c4ad84d559b92a289bd1c9b7c4ef564beba045764de075f44fd16703f8714e49"
+  },
+  "API_tests_passed": 2,
+  "app_default_promoted": false
+}

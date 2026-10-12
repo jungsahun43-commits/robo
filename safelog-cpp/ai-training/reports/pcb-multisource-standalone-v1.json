@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "actual_five_CPU_HTTP_requests": [
+    {
+      "category": "pcb1",
+      "phase": "fit",
+      "id": "VisA/pcb1/Data/Images/Normal/0499.JPG",
+      "one_model_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302",
+      "input_sha256": "a31ecabf408bbb5cf660cc829d12e5dc3e1eb9b4336c9aedf8370f553d332e46",
+      "native_geometry": [
+        1404,
+        1070
+      ],
+      "score": 0.23319920897483826,
+      "threshold": 0.33564987778663635,
+      "candidate": false
+    },
+    {
+      "category": "pcb2",
+      "phase": "fit",
+      "id": "VisA/pcb2/Data/Images/Normal/0836.JPG",
+      "one_model_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302",
+      "input_sha256": "944eb87e3697ef0938d1ad28d708b267372f286478acf65b52f25602e9b6fd77",
+      "native_geometry": [
+        1404,
+        1070
+      ],
+      "score": 0.24570904672145844,
+      "threshold": 0.3956905007362366,
+      "candidate": false
+    },
+    {
+      "category": "pcb3",
+      "phase": "fit",
+      "id": "VisA/pcb3/Data/Images/Normal/0562.JPG",
+      "one_model_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302",
+      "input_sha256": "82b00a04617b5a328387a0b44c2318a26cb7ab77c1efdeee80012889913da0c8",
+      "native_geometry": [
+        1562,
+        960
+      ],
+      "score": 0.24114498496055603,
+      "threshold": 0.39313921332359314,
+      "candidate": false
+    },
+    {
+      "category": "pcb4",
+      "phase": "fit",
+      "id": "VisA/pcb4/Data/Images/Normal/0499.JPG",
+      "one_model_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302",
+      "input_sha256": "121f9f42c1544009cbaf9c5c25e7d44521bdb31b999f9d4041ca6f152ddafb31",
+      "native_geometry": [
+        1358,
+        1104
+      ],
+      "score": 0.22802883386611938,
+      "threshold": 0.3573419451713562,
+      "candidate": false
+    },
+    {
+      "category": "robustad_pcb",
+      "phase": "fit",
+      "id": "RobustAD/PCB/pcb_data_dir_train/normal/Train_PCB_resized_None_None_Normal_Set1_36.jpg",
+      "one_model_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302",
+      "input_sha256": "b8256729aad2ec4823966da265f799599f22c9ad757f3b21c08643225bbb6ac2",
+      "native_geometry": [
+        2560,
+        2560
+      ],
+      "score": 0.18440291285514832,
+      "threshold": 0.36685922741889954,
+      "candidate": false
+    }
+  ],
+  "one_model_checkpoint_for_every_type": true,
+  "both_source_TRAIN_samples_used": true,
+  "TEST_not_rescored": true,
+  "exact_training_preprocessing_all_five": true,
+  "native_output_geometry_verified": true,
+  "owned_server_stopped": true,
+  "workspace_pythonpath_removed": true,
+  "isolated_runtime_directory": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\pcb-multisource-isolated-zip-v1",
+  "archive_sha256": "71617109978a21f8a77127ad11d22db9dad31c2b58ea5ffebaa9a2555f7da859"
+}

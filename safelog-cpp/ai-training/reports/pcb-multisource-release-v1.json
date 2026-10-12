@@ -1,0 +1,111 @@
+{
+  "archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\pcb-multisource-role4-handoff-2026-10-12-v1.zip",
+  "archive_sha256": "71617109978a21f8a77127ad11d22db9dad31c2b58ea5ffebaa9a2555f7da859",
+  "size_bytes": 26458892,
+  "one_checkpoint_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302",
+  "neuralModelCount": 1,
+  "trainedSourceDatasets": [
+    "VisA",
+    "RobustAD"
+  ],
+  "files": {
+    "model.json": {
+      "sha256": "c837096609f54425b3017817e644ca9ea131335a6a4882dabef40bdc0c38caf3",
+      "size_bytes": 198
+    },
+    "model.pt": {
+      "sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302",
+      "size_bytes": 28338635
+    },
+    "README_KO.md": {
+      "sha256": "b6cb6b89ee344715d16b7d746792ce2a28a7ababf72253b78db2279ee01ee2d7",
+      "size_bytes": 1280
+    },
+    "requirements-api.txt": {
+      "sha256": "75bffb787ce32d5f60a066b3f341142ae9a726d3a329f64c4ce589052b2ac6ed",
+      "size_bytes": 65
+    },
+    "requirements-host-tested.txt": {
+      "sha256": "44bdfab09659b33d1aba954f3474fec953c01544d9a7796412f15d7ff03ec4fe",
+      "size_bytes": 131
+    },
+    "safelog_ai/belt_inference.py": {
+      "sha256": "e7502539b04b3490389bed5508a3c908e72ade6df7a3fe2c0be5fbc11c47c108",
+      "size_bytes": 3798
+    },
+    "safelog_ai/belt_segmentation.py": {
+      "sha256": "9e903468de6521811ee8ce22cf477e48484ec382af83492b5e5edf052735c885",
+      "size_bytes": 1795
+    },
+    "safelog_ai/equipment_anomaly.py": {
+      "sha256": "7545688a32f43c61e7f0c3ff77d303552ab7a484f05814b69ea601067e0b4add",
+      "size_bytes": 4688
+    },
+    "safelog_ai/pcb_multisource.py": {
+      "sha256": "c450d3cfa5f36f2fdc5947ec07cb55e7ae77266464144e32de07d6327f480170",
+      "size_bytes": 1272
+    },
+    "safelog_ai/pcb_multisource_server.py": {
+      "sha256": "cc8fc292b6311296613d6f3b9d87f53d168af96a0a91106dcad1323948be4b6b",
+      "size_bytes": 6856
+    },
+    "safelog_ai/pcb_reverse.py": {
+      "sha256": "123f2fc1a8f7f392345f685b6d580948fef72fde3df416ebf89224b4a0d23ee9",
+      "size_bytes": 2482
+    },
+    "safelog_ai/pcb_reverse_server.py": {
+      "sha256": "e8523518080ee31202142d2a3f8256266d8eb399c2944771ad3bb540941597df",
+      "size_bytes": 6526
+    },
+    "safelog_ai/retention_distillation.py": {
+      "sha256": "291ff0b2127b6a42ca8db3493206f4fa709cd6803010f7070ec09ccdd82ec270",
+      "size_bytes": 4588
+    },
+    "safelog_ai/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "safelog-cpp/docs/PCB_MULTISOURCE_HANDOFF_KO.md": {
+      "sha256": "5717f7a2868e26304c0946145d925c373b3c6fc894a349afb4bcc5acdd71b285",
+      "size_bytes": 7622
+    },
+    "safelog-cpp/ai-training/reports/pcb-multisource-comparison.png": {
+      "sha256": "8bc20bbc75cf17a4d23be3ee25da46ea9270efb34869430ff016b1ae8d5cfa41",
+      "size_bytes": 95999
+    },
+    "safelog-cpp/ai-training/reports/pcb-multisource-paired-errors.json": {
+      "sha256": "8bff56122e5cdeeb634d4bd346c539636aa661f4751999414487c9415841f1d4",
+      "size_bytes": 2808
+    },
+    "safelog-cpp/ai-training/reports/pcb-multisource-protocol.json": {
+      "sha256": "963d2cd3f9bce46a36f657e6f713265a60910e337b78fb70ee62527103f01d4e",
+      "size_bytes": 48122
+    },
+    "safelog-cpp/ai-training/reports/pcb-multisource-results.json": {
+      "sha256": "09b5e7566ff93b48e9d684df5852df927f4d62ed6712d637c54aff91d68c5ce3",
+      "size_bytes": 4530
+    },
+    "safelog-cpp/ai-training/reports/pcb-multisource-training.json": {
+      "sha256": "c8229f2c98a0ffefeb365ec2e2c09560dfd9db1269549a5d411741350a57890e",
+      "size_bytes": 2070
+    },
+    "safelog-cpp/ai-training/reports/pcb-multisource-verification.json": {
+      "sha256": "b6a2b3469319b3e369f68164a3cd8cd57183837295e371119548497f3c5d5367",
+      "size_bytes": 662
+    },
+    "safelog-cpp/ai-training/reports/pcb-reverse-results.json": {
+      "sha256": "30577c6377c056886db1ebee796961999f92e95dfb778e72313cd0fcca40174a",
+      "size_bytes": 3246
+    },
+    "safelog-cpp/ai-training/reports/PCB_MULTISOURCE_RESULTS_KO.md": {
+      "sha256": "360f56d2b8dcb425d1783660f79cdaae887dbe6045ca0d261ecfc5dec44ccb4d",
+      "size_bytes": 6171
+    },
+    "safelog-cpp/ai-training/reports/robustad-pcb-acquisition-summary.json": {
+      "sha256": "b2b3c0349194e82bf242176835878d13e485eb44568febe8024e079c118c534e",
+      "size_bytes": 882
+    }
+  },
+  "all_local_document_links_closed": true,
+  "actual_CPU_HTTP_proof": "Run smoke next; see pcb-multisource-standalone-v1.json"
+}

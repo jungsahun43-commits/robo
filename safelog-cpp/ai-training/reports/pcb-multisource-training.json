@@ -1,0 +1,64 @@
+{
+  "status": "one_model_trained_and_all_thresholds_fixed_before_TEST",
+  "architecture": "safelog-pcb-pooled-visa-robustad-v1",
+  "input_size": 256,
+  "categories": [
+    "pcb1",
+    "pcb2",
+    "pcb3",
+    "pcb4",
+    "robustad_pcb"
+  ],
+  "trained_source_datasets": [
+    "VisA",
+    "RobustAD"
+  ],
+  "one_shared_student_network": true,
+  "epochs": 40,
+  "optimizer_updates": 5000,
+  "unique_fit_photos": 3390,
+  "operating_points": {
+    "pcb1": {
+      "threshold": 0.33564987778663635,
+      "pixel_threshold": 0.22764693200588226,
+      "normal_CAL_photos": 91
+    },
+    "pcb2": {
+      "threshold": 0.3956905007362366,
+      "pixel_threshold": 0.24984996020793915,
+      "normal_CAL_photos": 91
+    },
+    "pcb3": {
+      "threshold": 0.39313921332359314,
+      "pixel_threshold": 0.23497256636619568,
+      "normal_CAL_photos": 91
+    },
+    "pcb4": {
+      "threshold": 0.3573419451713562,
+      "pixel_threshold": 0.23520494997501373,
+      "normal_CAL_photos": 91
+    },
+    "robustad_pcb": {
+      "threshold": 0.36685922741889954,
+      "pixel_threshold": 0.2160637229681015,
+      "normal_CAL_photos": 40
+    }
+  },
+  "initial_student_sha256": "ed729f5ce26601ff2484d6feb02777397fdcdc46286d8fed108ee9df4902fa51",
+  "final_student_sha256": "6f5a811cfe65511ca32a0434ec6f9695d1449f71589cb182699b91c6047b4653",
+  "teacher_sha256": "73ca3b9e91a7b893414d46a258878e0ac28c017c968a96e1d84a2206323da90c",
+  "manifest_sha256": "8b2189268e90b0b9dd476ac072cb4fcc5ad9d61e056184ee85b2e8a541be510e",
+  "protocol_sha256": "963d2cd3f9bce46a36f657e6f713265a60910e337b78fb70ee62527103f01d4e",
+  "fit_protocol_commit": "5eeb1985f38c7474b3833cc642a242d971f0567c",
+  "elapsed_training_minutes": 12.22215000000045,
+  "source_TEST_used_for_fit_or_calibration": false,
+  "weights_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302",
+  "strict_CPU_GPU_categories": [
+    "pcb1",
+    "pcb2",
+    "pcb3",
+    "pcb4",
+    "robustad_pcb"
+  ],
+  "TEST_not_scored_by_new_model_at_this_record": true
+}

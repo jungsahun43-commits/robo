@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "actual_neural_epochs": 40,
+  "actual_optimizer_updates": 5000,
+  "single_trained_student": true,
+  "one_checkpoint": true,
+  "both_dataset_sources_contributed_every_epoch": true,
+  "tests_passed": 2,
+  "preflight_updates_excluded": 1,
+  "strict_CPU_GPU_all_five_types": true,
+  "teacher_unchanged": true,
+  "new_photo_labels_created": 0,
+  "protected_file_counts": {
+    "VisA_inputs": 9237,
+    "RobustAD_and_prepared_inputs": 831,
+    "prior_model_and_report_artifacts": 39
+  },
+  "previous_source_files_preserved": 398,
+  "same_one_checkpoint_in_all_five_TEST_categories": true,
+  "app_default_promoted": false
+}

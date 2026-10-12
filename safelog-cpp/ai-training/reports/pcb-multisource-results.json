@@ -1,0 +1,157 @@
+{
+  "status": "evaluated",
+  "categories": [
+    {
+      "category": "pcb1",
+      "source": "VisA",
+      "tp": 95,
+      "fn": 5,
+      "fp": 10,
+      "tn": 90,
+      "positive_photos": 100,
+      "negative_photos": 100,
+      "fnr": 0.05,
+      "fpr": 0.1,
+      "auroc": 0.9663,
+      "threshold": 0.33564987778663635,
+      "pixel_threshold": 0.22764693200588226,
+      "normal_CAL_photos": 91,
+      "pixel_counts_model256": {
+        "tp": 59979,
+        "fp": 306607,
+        "tn": 12739548,
+        "fn": 1066
+      },
+      "pixel_iou_model256": 0.1631406873891615,
+      "native_positive_mask_vanished_at256": 0,
+      "one_checkpoint_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302"
+    },
+    {
+      "category": "pcb2",
+      "source": "VisA",
+      "tp": 81,
+      "fn": 19,
+      "fp": 2,
+      "tn": 98,
+      "positive_photos": 100,
+      "negative_photos": 100,
+      "fnr": 0.19,
+      "fpr": 0.02,
+      "auroc": 0.9566,
+      "threshold": 0.3956905007362366,
+      "pixel_threshold": 0.24984996020793915,
+      "normal_CAL_photos": 91,
+      "pixel_counts_model256": {
+        "tp": 24001,
+        "fp": 245846,
+        "tn": 12834275,
+        "fn": 3078
+      },
+      "pixel_iou_model256": 0.08793991023174864,
+      "native_positive_mask_vanished_at256": 0,
+      "one_checkpoint_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302"
+    },
+    {
+      "category": "pcb3",
+      "source": "VisA",
+      "tp": 69,
+      "fn": 31,
+      "fp": 5,
+      "tn": 96,
+      "positive_photos": 100,
+      "negative_photos": 101,
+      "fnr": 0.31,
+      "fpr": 0.04950495049504951,
+      "auroc": 0.9302970297029703,
+      "threshold": 0.39313921332359314,
+      "pixel_threshold": 0.23497256636619568,
+      "normal_CAL_photos": 91,
+      "pixel_counts_model256": {
+        "tp": 29486,
+        "fp": 267217,
+        "tn": 12872311,
+        "fn": 3722
+      },
+      "pixel_iou_model256": 0.09814762419905135,
+      "native_positive_mask_vanished_at256": 0,
+      "one_checkpoint_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302"
+    },
+    {
+      "category": "pcb4",
+      "source": "VisA",
+      "tp": 100,
+      "fn": 0,
+      "fp": 9,
+      "tn": 92,
+      "positive_photos": 100,
+      "negative_photos": 101,
+      "fnr": 0.0,
+      "fpr": 0.0891089108910891,
+      "auroc": 0.9979207920792079,
+      "threshold": 0.3573419451713562,
+      "pixel_threshold": 0.23520494997501373,
+      "normal_CAL_photos": 91,
+      "pixel_counts_model256": {
+        "tp": 78928,
+        "fp": 734588,
+        "tn": 12351542,
+        "fn": 7678
+      },
+      "pixel_iou_model256": 0.09611370760137068,
+      "native_positive_mask_vanished_at256": 0,
+      "one_checkpoint_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302"
+    },
+    {
+      "category": "robustad_pcb",
+      "source": "RobustAD",
+      "tp": 74,
+      "fn": 1,
+      "fp": 4,
+      "tn": 116,
+      "positive_photos": 75,
+      "negative_photos": 120,
+      "fnr": 0.013333333333333334,
+      "fpr": 0.03333333333333333,
+      "auroc": 0.9925555555555555,
+      "threshold": 0.36685922741889954,
+      "pixel_threshold": 0.2160637229681015,
+      "normal_CAL_photos": 40,
+      "pixel_counts_model256": {
+        "tp": 3322,
+        "fp": 1350607,
+        "tn": 11425543,
+        "fn": 48
+      },
+      "pixel_iou_model256": 0.002453512873556936,
+      "native_positive_mask_vanished_at256": 0,
+      "one_checkpoint_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302"
+    }
+  ],
+  "by_source": {
+    "VisA": {
+      "tp": 345,
+      "fp": 26,
+      "tn": 376,
+      "fn": 55,
+      "fpr": 0.06467661691542288,
+      "fnr": 0.1375
+    },
+    "RobustAD": {
+      "tp": 74,
+      "fp": 4,
+      "tn": 116,
+      "fn": 1,
+      "fpr": 0.03333333333333333,
+      "fnr": 0.013333333333333334
+    }
+  },
+  "all_ten_photo_rates_below5_percent": false,
+  "one_shared_student_network": true,
+  "weights_sha256": "7a6c9070c437417ff4fb285a548913c9f272afea030fd8a1e00799204a892302",
+  "source_TEST_used_for_fit_or_calibration": false,
+  "known_VisA_TEST_reused": true,
+  "RobustAD_test0_first_scoring": true,
+  "physical_factory_independence_verified": false,
+  "app_default_promoted": false,
+  "protocol_sha256": "963d2cd3f9bce46a36f657e6f713265a60910e337b78fb70ee62527103f01d4e"
+}

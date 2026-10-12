@@ -1,0 +1,20 @@
+{
+  "status": "downloaded_verified",
+  "source": "https://huggingface.co/datasets/AmazonScience/RobustAD",
+  "revision": "82c642b2d18be60f2dab104f8dd4dea1f4ccfacb",
+  "license": "CC-BY-4.0",
+  "downloaded_files": 450,
+  "downloaded_bytes": 716662533,
+  "author_LFS_full_SHA256_verified_files": 450,
+  "all_local_file_SHA256_recorded": true,
+  "TRAIN_normal_photos": 180,
+  "TRAIN_anomalies_not_used": 75,
+  "TEST0_normal_photos": 120,
+  "TEST0_anomaly_photos": 75,
+  "exact_RGB_overlap_with_VisA": 0,
+  "within_or_cross_split_exact_RGB_duplicates": 0,
+  "physical_board_capture_session_independence_verified": false,
+  "other_RobustAD_test_domains_used": false,
+  "acquisition_manifest_sha256": "104acd1575a44d600ef172de54c1105db6f35ffeba71151d11f3f0368b3052fe",
+  "two_source_manifest_sha256": "8b2189268e90b0b9dd476ac072cb4fcc5ad9d61e056184ee85b2e8a541be510e"
+}
