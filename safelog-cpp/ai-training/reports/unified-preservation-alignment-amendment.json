@@ -1,0 +1,19 @@
+{
+  "schema": "unified-preservation-spatial-alignment-v1",
+  "declared_before_fit": true,
+  "base_protocol_sha256": "4846e9edcd19306025f1867d686855df5400cbe4cb9935b76a0244949d7b10ab",
+  "source_sha256": {
+    "scripts/study_unified_preservation_aligned.py": "232a50d47486ecad5131ffc0067d56728b2f72fd660fb9aa0eefb2d18d023df8",
+    "tests/test_unified_preservation_alignment.py": "aae1cd434fac7aab6eed69f1b61204aa1c270f84589b894e45b1dd99546f1d24"
+  },
+  "correction": "Use identical horizontal-flip mask for image, pixel mask, pixel_known and valid; previous Cache omitted pixel_known",
+  "applied_to_both_variants": true,
+  "one_factor_between_candidates_still_backbone_freezing": true,
+  "photo_labels_and_known_counts_unchanged": true,
+  "new_gold_labels": 0,
+  "TRAIN_only": true,
+  "VAL_and_TEST_transform_unchanged": true,
+  "tests_passed": 2,
+  "preflight_backbone_checks_remain_valid": "Disposable preflight used foreign task without spatial grids",
+  "old_study_code_and_protocol_preserved": true
+}
