@@ -1,0 +1,26 @@
+{
+  "architecture": "resnet18-foreign-presence-v1",
+  "class": "conveyor_foreign_object",
+  "epochs": 30,
+  "input_size": 384,
+  "threshold": 0.5,
+  "train_photos": 4558,
+  "optimizer_updates": 4290,
+  "initial_state_sha256": "b786e4991da834eff5c2939f44b98e0519a160057c4c3828f34d7df64fc9c337",
+  "final_state_sha256": "303126b1acf4c22b5e486f8c297cc6bd7e5ddde0fb11c68a73372855f5e7c714",
+  "manifest_sha256": "883bf8023f52739ba8d8594219c52a4a471a1308f823f946d01fe542c7bf876b",
+  "protocol_sha256": "0371202ffb5deda73ba514f436ed7dda698d639822a9a5514e82c407fba72b2a",
+  "source_sha256": {
+    "scripts/prepare_conveyor_expansion.py": "9e088b9fdc1e0f2cc911fe5e79d991ab97595b5c4af9661d3e0025582688d847",
+    "scripts/study_conveyor_expansion.py": "f85605b86b7603ba7a942ff9ed09bd99fc036b5307a9300acf8b1cdeb99a333c",
+    "tests/test_conveyor_expansion.py": "6a1c97ea5ac0f17f86b41b5104f64c51ef9ff7b089f6c93a2930c11ad77f7a18"
+  },
+  "frozen_before_fit_commit": "4bd69c502f4d4cf34937daf7f0963683f5f18d53",
+  "same_initial_state_as_v1": true,
+  "source_test_used_for_fit": false,
+  "mechanical_health_ground_truth": false,
+  "weights_sha256": "16f7436e76785a18eca151592ee523657daf07895a2d64900b6ecc0ee3cecb5e",
+  "elapsed_training_minutes": 19.629166666666666,
+  "strict_cpu_gpu_reload_passed": true,
+  "validation_used_for_checkpoint_or_threshold_selection": false
+}

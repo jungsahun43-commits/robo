@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "frozen_and_legacy_source_files_preserved": 386,
+  "all_previous_and_new_zip_hashes_preserved": true,
+  "plots_and_reports_unchanged": true,
+  "actual_cpu_http_passed": true,
+  "package_documentation_links_closed": true,
+  "actual_neural_training_epochs_this_cycle": 30,
+  "actual_neural_updates_this_cycle": 4290,
+  "new_neural_epochs_in_calibration": 0,
+  "new_optimizer_updates_in_calibration": 0,
+  "fresh_photo_count": 783,
+  "same_known_test_recordings": true,
+  "independent_factory_verified": false,
+  "known_test_false_positive_regression_reported": true,
+  "new_ai_or_human_labels": 0,
+  "additional_test_model_scores": 0,
+  "final_package_sha256": "d4f29b22d832ae7168bdc6d6dc61cab2c65b35cea6dbb0c28c5d74782975521a",
+  "source_sha256": "08f549179e185a69d6bb813249379c0824a00bef83f8ee78a4d3fcbdc9d18091"
+}

@@ -1,0 +1,38 @@
+{
+  "threshold": 0.0014614396534601965,
+  "method": "Minimize max(FPR,FNR), then sum; logit midpoint candidates; CAL only",
+  "calibration_photos": 320,
+  "calibration_negative_photos": 192,
+  "calibration_positive_photos": 128,
+  "calibration_max_error_rate": 0.0,
+  "weights_sha256": "0e2a737abced228daa33ea96197fadca88bf2779748bae43c0bd4df9ea0492ff",
+  "source_weights_sha256": "16f7436e76785a18eca151592ee523657daf07895a2d64900b6ecc0ee3cecb5e",
+  "neural_state_sha256": "303126b1acf4c22b5e486f8c297cc6bd7e5ddde0fb11c68a73372855f5e7c714",
+  "neural_weights_unchanged": true,
+  "new_neural_epochs": 0,
+  "new_optimizer_updates": 0,
+  "strict_cpu_reload_passed": true,
+  "calibration_resubstitution": {
+    "tp": 128,
+    "fn": 0,
+    "fp": 0,
+    "tn": 192,
+    "positive_photos": 128,
+    "negative_photos": 192,
+    "fnr": 0.0,
+    "fpr": 0.0,
+    "fnr_frame_binomial_wilson95": [
+      0,
+      0.029136956273508416
+    ],
+    "fpr_frame_binomial_wilson95": [
+      1.734723475976807e-18,
+      0.01961514606675411
+    ],
+    "intervals_assume_independent_frames_not_proven_here": true,
+    "photo_fpr_fnr_below_5_percent": true
+  },
+  "fit_before_fresh_scores": true,
+  "protocol_sha256": "015c0d6948f1ef6d74afd6195f1bf7fd26d941240899ead21bc06dc933b5c491",
+  "frozen_before_fit_commit": "5e029c3377ce6210c0083e60604e84f96e16c36c"
+}

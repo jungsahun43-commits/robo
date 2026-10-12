@@ -1,0 +1,22 @@
+{
+  "status": "created",
+  "additional_model_test_scores": 0,
+  "saved_predictions_only": true,
+  "all_original_val_miss_ids": [
+    "split-ds-normal-filtered/anomalous/anomaly/3328-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/3334-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/3340-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/3347-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/3353-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/3359-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/3365-boardcamera_iron_ore_canga2_detected_1.jpg",
+    "split-ds-normal-filtered/anomalous/anomaly/3371-boardcamera_iron_ore_canga2_detected_1.jpg"
+  ],
+  "figures": {
+    "conveyor-foreign-expansion-rates.png": "02d1d3a0f8a99ea12fdf03721c0cb4126ffa7da423cfb1016390a28218bb5524",
+    "conveyor-foreign-expansion-original-misses.png": "c2abeb8c3136d4d7b3a2fdd90d27eabbf59fc4b9a9ca17714de74625dcb2b692"
+  },
+  "report_sha256": "f737c2953626f3cf12231663ff50cef6dd03c8dcbeb21f76ec8c7cd649cd1a23",
+  "source_sha256": "f546ecb880fd0b7ba0710659d761d1a6239da099c03d3632790a7fc514216c40",
+  "model_sha256": "16f7436e76785a18eca151592ee523657daf07895a2d64900b6ecc0ee3cecb5e"
+}

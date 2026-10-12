@@ -1,0 +1,605 @@
+{
+  "status": "evaluated",
+  "val": {
+    "tp": 106,
+    "fn": 22,
+    "fp": 0,
+    "tn": 192,
+    "positive_photos": 128,
+    "negative_photos": 192,
+    "fnr": 0.171875,
+    "fpr": 0.0,
+    "fnr_frame_binomial_wilson95": [
+      0.11633115948147267,
+      0.24653996807301726
+    ],
+    "fpr_frame_binomial_wilson95": [
+      1.734723475976807e-18,
+      0.01961514606675411
+    ],
+    "intervals_assume_independent_frames_not_proven_here": true,
+    "photo_fpr_fnr_below_5_percent": false,
+    "auroc": 1.0,
+    "per_group": {
+      "boardcamera_iron_ore_2": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 0,
+        "negative_photos": 64,
+        "fnr": null,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": null,
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      },
+      "boardcamera_iron_ore_canga2": {
+        "tp": 55,
+        "fn": 9,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.140625,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0.0757857255603086,
+          0.24616281741577023
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      },
+      "boardcamera_iron_ore_jaspilito_3": {
+        "tp": 51,
+        "fn": 13,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.203125,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0.12273417819183653,
+          0.3171363573101416
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      }
+    }
+  },
+  "audit_val": {
+    "tp": 100,
+    "fn": 17,
+    "fp": 0,
+    "tn": 192,
+    "positive_photos": 117,
+    "negative_photos": 192,
+    "fnr": 0.1452991452991453,
+    "fpr": 0.0,
+    "fnr_frame_binomial_wilson95": [
+      0.09273939280804755,
+      0.22041024300397705
+    ],
+    "fpr_frame_binomial_wilson95": [
+      1.734723475976807e-18,
+      0.01961514606675411
+    ],
+    "intervals_assume_independent_frames_not_proven_here": true,
+    "photo_fpr_fnr_below_5_percent": false,
+    "auroc": 1.0,
+    "per_group": {
+      "boardcamera_iron_ore_2": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 0,
+        "negative_photos": 64,
+        "fnr": null,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": null,
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      },
+      "boardcamera_iron_ore_canga2": {
+        "tp": 56,
+        "fn": 8,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.125,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0.06472242663330453,
+          0.22774561821129946
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      },
+      "boardcamera_iron_ore_jaspilito_3": {
+        "tp": 44,
+        "fn": 9,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 53,
+        "negative_photos": 64,
+        "fnr": 0.16981132075471697,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0.09199945379618975,
+          0.2922528028109605
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      }
+    }
+  },
+  "test": {
+    "tp": 187,
+    "fn": 5,
+    "fp": 1,
+    "tn": 255,
+    "positive_photos": 192,
+    "negative_photos": 256,
+    "fnr": 0.026041666666666668,
+    "fpr": 0.00390625,
+    "fnr_frame_binomial_wilson95": [
+      0.01117360901615741,
+      0.05950324819295327
+    ],
+    "fpr_frame_binomial_wilson95": [
+      0.0006898821669617927,
+      0.021790975380582514
+    ],
+    "intervals_assume_independent_frames_not_proven_here": true,
+    "photo_fpr_fnr_below_5_percent": true,
+    "auroc": 0.9998779296875,
+    "per_group": {
+      "boardcamera_iron_ore": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 1,
+        "tn": 63,
+        "positive_photos": 0,
+        "negative_photos": 64,
+        "fnr": null,
+        "fpr": 0.015625,
+        "fnr_frame_binomial_wilson95": null,
+        "fpr_frame_binomial_wilson95": [
+          0.002763541923337505,
+          0.08334101600094265
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      },
+      "boardcamera_iron_ore_7_wood_2": {
+        "tp": 64,
+        "fn": 0,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.0,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": true
+      },
+      "boardcamera_iron_ore_7_wood_3": {
+        "tp": 59,
+        "fn": 5,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.078125,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0.03383117690855046,
+          0.17019537354162906
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": false
+      },
+      "boardcamera_iron_ore_canga": {
+        "tp": 64,
+        "fn": 0,
+        "fp": 0,
+        "tn": 64,
+        "positive_photos": 64,
+        "negative_photos": 64,
+        "fnr": 0.0,
+        "fpr": 0.0,
+        "fnr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "fpr_frame_binomial_wilson95": [
+          0,
+          0.05662405979280534
+        ],
+        "intervals_assume_independent_frames_not_proven_here": true,
+        "photo_fpr_fnr_below_5_percent": true
+      }
+    }
+  },
+  "common_baseline": {
+    "val": {
+      "tp": 120,
+      "fn": 8,
+      "fp": 0,
+      "tn": 192,
+      "positive_photos": 128,
+      "negative_photos": 192,
+      "fnr": 0.0625,
+      "fpr": 0.0,
+      "fnr_frame_binomial_wilson95": [
+        0.03200692569506119,
+        0.11848791104425865
+      ],
+      "fpr_frame_binomial_wilson95": [
+        1.734723475976807e-18,
+        0.01961514606675411
+      ],
+      "intervals_assume_independent_frames_not_proven_here": true,
+      "photo_fpr_fnr_below_5_percent": false,
+      "auroc": 0.9999186197916666,
+      "per_group": {
+        "boardcamera_iron_ore_2": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 64,
+          "positive_photos": 0,
+          "negative_photos": 64,
+          "fnr": null,
+          "fpr": 0.0,
+          "fnr_frame_binomial_wilson95": null,
+          "fpr_frame_binomial_wilson95": [
+            0,
+            0.05662405979280534
+          ],
+          "intervals_assume_independent_frames_not_proven_here": true,
+          "photo_fpr_fnr_below_5_percent": false
+        },
+        "boardcamera_iron_ore_canga2": {
+          "tp": 56,
+          "fn": 8,
+          "fp": 0,
+          "tn": 64,
+          "positive_photos": 64,
+          "negative_photos": 64,
+          "fnr": 0.125,
+          "fpr": 0.0,
+          "fnr_frame_binomial_wilson95": [
+            0.06472242663330453,
+            0.22774561821129946
+          ],
+          "fpr_frame_binomial_wilson95": [
+            0,
+            0.05662405979280534
+          ],
+          "intervals_assume_independent_frames_not_proven_here": true,
+          "photo_fpr_fnr_below_5_percent": false
+        },
+        "boardcamera_iron_ore_jaspilito_3": {
+          "tp": 64,
+          "fn": 0,
+          "fp": 0,
+          "tn": 64,
+          "positive_photos": 64,
+          "negative_photos": 64,
+          "fnr": 0.0,
+          "fpr": 0.0,
+          "fnr_frame_binomial_wilson95": [
+            0,
+            0.05662405979280534
+          ],
+          "fpr_frame_binomial_wilson95": [
+            0,
+            0.05662405979280534
+          ],
+          "intervals_assume_independent_frames_not_proven_here": true,
+          "photo_fpr_fnr_below_5_percent": true
+        }
+      }
+    },
+    "test": {
+      "tp": 191,
+      "fn": 1,
+      "fp": 1,
+      "tn": 255,
+      "positive_photos": 192,
+      "negative_photos": 256,
+      "fnr": 0.005208333333333333,
+      "fpr": 0.00390625,
+      "fnr_frame_binomial_wilson95": [
+        0.0009199911384848523,
+        0.02890749715674057
+      ],
+      "fpr_frame_binomial_wilson95": [
+        0.0006898821669617927,
+        0.021790975380582514
+      ],
+      "intervals_assume_independent_frames_not_proven_here": true,
+      "photo_fpr_fnr_below_5_percent": true,
+      "auroc": 0.9991861979166666,
+      "per_group": {
+        "boardcamera_iron_ore": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 1,
+          "tn": 63,
+          "positive_photos": 0,
+          "negative_photos": 64,
+          "fnr": null,
+          "fpr": 0.015625,
+          "fnr_frame_binomial_wilson95": null,
+          "fpr_frame_binomial_wilson95": [
+            0.002763541923337505,
+            0.08334101600094265
+          ],
+          "intervals_assume_independent_frames_not_proven_here": true,
+          "photo_fpr_fnr_below_5_percent": false
+        },
+        "boardcamera_iron_ore_7_wood_2": {
+          "tp": 64,
+          "fn": 0,
+          "fp": 0,
+          "tn": 64,
+          "positive_photos": 64,
+          "negative_photos": 64,
+          "fnr": 0.0,
+          "fpr": 0.0,
+          "fnr_frame_binomial_wilson95": [
+            0,
+            0.05662405979280534
+          ],
+          "fpr_frame_binomial_wilson95": [
+            0,
+            0.05662405979280534
+          ],
+          "intervals_assume_independent_frames_not_proven_here": true,
+          "photo_fpr_fnr_below_5_percent": true
+        },
+        "boardcamera_iron_ore_7_wood_3": {
+          "tp": 63,
+          "fn": 1,
+          "fp": 0,
+          "tn": 64,
+          "positive_photos": 64,
+          "negative_photos": 64,
+          "fnr": 0.015625,
+          "fpr": 0.0,
+          "fnr_frame_binomial_wilson95": [
+            0.002763541923337505,
+            0.08334101600094265
+          ],
+          "fpr_frame_binomial_wilson95": [
+            0,
+            0.05662405979280534
+          ],
+          "intervals_assume_independent_frames_not_proven_here": true,
+          "photo_fpr_fnr_below_5_percent": true
+        },
+        "boardcamera_iron_ore_canga": {
+          "tp": 64,
+          "fn": 0,
+          "fp": 0,
+          "tn": 64,
+          "positive_photos": 64,
+          "negative_photos": 64,
+          "fnr": 0.0,
+          "fpr": 0.0,
+          "fnr_frame_binomial_wilson95": [
+            0,
+            0.05662405979280534
+          ],
+          "fpr_frame_binomial_wilson95": [
+            0,
+            0.05662405979280534
+          ],
+          "intervals_assume_independent_frames_not_proven_here": true,
+          "photo_fpr_fnr_below_5_percent": true
+        }
+      }
+    }
+  },
+  "changed_classifications": {
+    "val": [
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/3377-boardcamera_iron_ore_canga2_detected_1.jpg",
+        "group": "boardcamera_iron_ore_canga2",
+        "label": 1,
+        "old_score": 0.5221300721168518,
+        "new_score": 0.4505753517150879,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2391-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.8649430871009827,
+        "new_score": 0.2969602644443512,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2404-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.8432395458221436,
+        "new_score": 0.3968006372451782,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2408-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.8910761475563049,
+        "new_score": 0.19024160504341125,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2410-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.9203656315803528,
+        "new_score": 0.06419398635625839,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2412-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.9414973855018616,
+        "new_score": 0.24136486649513245,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2413-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.9666070938110352,
+        "new_score": 0.2914612591266632,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2421-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.9934178590774536,
+        "new_score": 0.3644982874393463,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2424-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.9215887784957886,
+        "new_score": 0.17989687621593475,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2428-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.953917920589447,
+        "new_score": 0.47172507643699646,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2430-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.9077107310295105,
+        "new_score": 0.11557656526565552,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2432-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.8828728199005127,
+        "new_score": 0.014797908253967762,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2434-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.9565848112106323,
+        "new_score": 0.08799943327903748,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2436-boardcamera_iron_ore_jaspilito_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_jaspilito_3",
+        "label": 1,
+        "old_score": 0.9422426223754883,
+        "new_score": 0.0818961039185524,
+        "change": "new_error"
+      }
+    ],
+    "test": [
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2758-boardcamera_iron_ore_7_wood_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_7_wood_3",
+        "label": 1,
+        "old_score": 0.9213836193084717,
+        "new_score": 0.264556348323822,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2761-boardcamera_iron_ore_7_wood_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_7_wood_3",
+        "label": 1,
+        "old_score": 0.9031411409378052,
+        "new_score": 0.2333069145679474,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2764-boardcamera_iron_ore_7_wood_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_7_wood_3",
+        "label": 1,
+        "old_score": 0.8475147485733032,
+        "new_score": 0.16478897631168365,
+        "change": "new_error"
+      },
+      {
+        "id": "split-ds-normal-filtered/anomalous/anomaly/2767-boardcamera_iron_ore_7_wood_3_detected_1.jpg",
+        "group": "boardcamera_iron_ore_7_wood_3",
+        "label": 1,
+        "old_score": 0.7849397659301758,
+        "new_score": 0.42683374881744385,
+        "change": "new_error"
+      }
+    ]
+  },
+  "common_val_reference_passed": false,
+  "extra_val_fpr_fnr_below_5_percent": false,
+  "fixed_threshold": 0.5,
+  "weights_sha256": "16f7436e76785a18eca151592ee523657daf07895a2d64900b6ecc0ee3cecb5e",
+  "protocol_sha256": "0371202ffb5deda73ba514f436ed7dda698d639822a9a5514e82c407fba72b2a",
+  "source_test_used_for_fit": false,
+  "previous_test_reused_as_known_benchmark": true,
+  "extra_val_is_independent_factory_or_recording": false,
+  "new_ai_or_human_labels": 0,
+  "app_default_promoted": false
+}

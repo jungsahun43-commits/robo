@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "tests_passed": 5,
+  "new_neural_epochs": 0,
+  "new_optimizer_updates": 0,
+  "source_actual_neural_epochs": 30,
+  "source_updates": 4290,
+  "neural_state_unchanged": true,
+  "threshold_fit_before_fresh_scores": true,
+  "legacy_sources_sha_preserved": 382,
+  "fresh_inputs_sha_size_mtime_preserved": 1568,
+  "protected_recent_artifacts_sha_size_mtime_preserved": 80,
+  "old_full_verification_inherited_from": "conveyor-foreign-expansion-verification.json",
+  "old_size_mtime_entries_checked": 25155,
+  "weights_sha256": "0e2a737abced228daa33ea96197fadca88bf2779748bae43c0bd4df9ea0492ff",
+  "protocol_sha256": "015c0d6948f1ef6d74afd6195f1bf7fd26d941240899ead21bc06dc933b5c491",
+  "app_default_promoted": false
+}
