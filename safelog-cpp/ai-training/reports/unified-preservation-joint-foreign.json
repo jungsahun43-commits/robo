@@ -1,0 +1,31 @@
+{
+  "status": "known_TEST_scored_after_VAL_selection",
+  "variant": "joint",
+  "foreign": {
+    "common448": {
+      "tp": 187,
+      "fn": 5,
+      "fp": 9,
+      "tn": 247,
+      "positive_photos": 192,
+      "negative_photos": 256,
+      "fnr": 0.026041666666666668,
+      "fpr": 0.03515625
+    },
+    "known783": {
+      "tp": 380,
+      "fn": 4,
+      "fp": 4,
+      "tn": 395,
+      "positive_photos": 384,
+      "negative_photos": 399,
+      "fnr": 0.010416666666666666,
+      "fpr": 0.010025062656641603
+    }
+  },
+  "selection_sha256_before_TEST": "d57c33c4b5037b3a1774aa11d3dc2298b081ddd2b73768e079d43da3975f32e9",
+  "selection_sha256_after_TEST": "d57c33c4b5037b3a1774aa11d3dc2298b081ddd2b73768e079d43da3975f32e9",
+  "model_sha256": "da1ea371da255fa2009e974186d158d231217f524c35de8f54e5b1ee08258e22",
+  "known_recordings_reused": true,
+  "independent_factory_verified": false
+}

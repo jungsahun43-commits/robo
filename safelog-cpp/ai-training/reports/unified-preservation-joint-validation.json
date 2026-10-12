@@ -1,0 +1,527 @@
+{
+  "status": "evaluated_known_VAL",
+  "variant": "joint",
+  "model_sha256": "da1ea371da255fa2009e974186d158d231217f524c35de8f54e5b1ee08258e22",
+  "facility": {
+    "dacl": {
+      "concrete_crack": {
+        "previous_v1": {
+          "tp": 163,
+          "fn": 48,
+          "fp": 101,
+          "tn": 398,
+          "positive_photos": 211,
+          "negative_photos": 499,
+          "fnr": 0.22748815165876776,
+          "fpr": 0.20240480961923848
+        },
+        "candidate": {
+          "tp": 163,
+          "fn": 48,
+          "fp": 115,
+          "tn": 384,
+          "positive_photos": 211,
+          "negative_photos": 499,
+          "fnr": 0.22748815165876776,
+          "fpr": 0.23046092184368738
+        },
+        "threshold": 0.2898597717285156
+      },
+      "concrete_spalling": {
+        "previous_v1": {
+          "tp": 258,
+          "fn": 66,
+          "fp": 97,
+          "tn": 289,
+          "positive_photos": 324,
+          "negative_photos": 386,
+          "fnr": 0.2037037037037037,
+          "fpr": 0.25129533678756477
+        },
+        "candidate": {
+          "tp": 252,
+          "fn": 72,
+          "fp": 92,
+          "tn": 294,
+          "positive_photos": 324,
+          "negative_photos": 386,
+          "fnr": 0.2222222222222222,
+          "fpr": 0.23834196891191708
+        },
+        "threshold": 0.4649081826210022
+      },
+      "rust_stain": {
+        "previous_v1": {
+          "tp": 281,
+          "fn": 85,
+          "fp": 61,
+          "tn": 283,
+          "positive_photos": 366,
+          "negative_photos": 344,
+          "fnr": 0.23224043715846995,
+          "fpr": 0.17732558139534885
+        },
+        "candidate": {
+          "tp": 282,
+          "fn": 84,
+          "fp": 60,
+          "tn": 284,
+          "positive_photos": 366,
+          "negative_photos": 344,
+          "fnr": 0.22950819672131148,
+          "fpr": 0.1744186046511628
+        },
+        "threshold": 0.5
+      },
+      "exposed_rebar": {
+        "previous_v1": {
+          "tp": 48,
+          "fn": 32,
+          "fp": 26,
+          "tn": 604,
+          "positive_photos": 80,
+          "negative_photos": 630,
+          "fnr": 0.4,
+          "fpr": 0.04126984126984127
+        },
+        "candidate": {
+          "tp": 48,
+          "fn": 32,
+          "fp": 23,
+          "tn": 607,
+          "positive_photos": 80,
+          "negative_photos": 630,
+          "fnr": 0.4,
+          "fpr": 0.03650793650793651
+        },
+        "threshold": 0.5
+      },
+      "wet_surface": {
+        "previous_v1": {
+          "tp": 51,
+          "fn": 45,
+          "fp": 49,
+          "tn": 565,
+          "positive_photos": 96,
+          "negative_photos": 614,
+          "fnr": 0.46875,
+          "fpr": 0.07980456026058631
+        },
+        "candidate": {
+          "tp": 50,
+          "fn": 46,
+          "fp": 49,
+          "tn": 565,
+          "positive_photos": 96,
+          "negative_photos": 614,
+          "fnr": 0.4791666666666667,
+          "fpr": 0.07980456026058631
+        },
+        "threshold": 0.5
+      },
+      "efflorescence": {
+        "previous_v1": {
+          "tp": 124,
+          "fn": 35,
+          "fp": 72,
+          "tn": 479,
+          "positive_photos": 159,
+          "negative_photos": 551,
+          "fnr": 0.22012578616352202,
+          "fpr": 0.1306715063520871
+        },
+        "candidate": {
+          "tp": 125,
+          "fn": 34,
+          "fp": 74,
+          "tn": 477,
+          "positive_photos": 159,
+          "negative_photos": 551,
+          "fnr": 0.2138364779874214,
+          "fpr": 0.13430127041742287
+        },
+        "threshold": 0.5
+      },
+      "surface_cavity": {
+        "previous_v1": {
+          "tp": 74,
+          "fn": 32,
+          "fp": 86,
+          "tn": 518,
+          "positive_photos": 106,
+          "negative_photos": 604,
+          "fnr": 0.3018867924528302,
+          "fpr": 0.1423841059602649
+        },
+        "candidate": {
+          "tp": 72,
+          "fn": 34,
+          "fp": 84,
+          "tn": 520,
+          "positive_photos": 106,
+          "negative_photos": 604,
+          "fnr": 0.32075471698113206,
+          "fpr": 0.1390728476821192
+        },
+        "threshold": 0.5
+      }
+    },
+    "damsegment": {
+      "concrete_crack": {
+        "previous_v1": {
+          "tp": 246,
+          "fn": 2,
+          "fp": 2,
+          "tn": 174,
+          "positive_photos": 248,
+          "negative_photos": 176,
+          "fnr": 0.008064516129032258,
+          "fpr": 0.011363636363636364
+        },
+        "candidate": {
+          "tp": 246,
+          "fn": 2,
+          "fp": 2,
+          "tn": 174,
+          "positive_photos": 248,
+          "negative_photos": 176,
+          "fnr": 0.008064516129032258,
+          "fpr": 0.011363636363636364
+        },
+        "threshold": 0.2898597717285156
+      },
+      "concrete_spalling": {
+        "previous_v1": {
+          "tp": 47,
+          "fn": 11,
+          "fp": 9,
+          "tn": 357,
+          "positive_photos": 58,
+          "negative_photos": 366,
+          "fnr": 0.1896551724137931,
+          "fpr": 0.02459016393442623
+        },
+        "candidate": {
+          "tp": 47,
+          "fn": 11,
+          "fp": 7,
+          "tn": 359,
+          "positive_photos": 58,
+          "negative_photos": 366,
+          "fnr": 0.1896551724137931,
+          "fpr": 0.01912568306010929
+        },
+        "threshold": 0.4649081826210022
+      },
+      "rust_stain": {
+        "previous_v1": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "candidate": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      },
+      "exposed_rebar": {
+        "previous_v1": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "candidate": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      },
+      "wet_surface": {
+        "previous_v1": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "candidate": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      },
+      "efflorescence": {
+        "previous_v1": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "candidate": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      },
+      "surface_cavity": {
+        "previous_v1": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "candidate": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      }
+    },
+    "codebrim": {
+      "concrete_crack": {
+        "previous_v1": {
+          "tp": 139,
+          "fn": 10,
+          "fp": 54,
+          "tn": 408,
+          "positive_photos": 149,
+          "negative_photos": 462,
+          "fnr": 0.06711409395973154,
+          "fpr": 0.11688311688311688
+        },
+        "candidate": {
+          "tp": 140,
+          "fn": 9,
+          "fp": 54,
+          "tn": 408,
+          "positive_photos": 149,
+          "negative_photos": 462,
+          "fnr": 0.06040268456375839,
+          "fpr": 0.11688311688311688
+        },
+        "threshold": 0.2898597717285156
+      },
+      "concrete_spalling": {
+        "previous_v1": {
+          "tp": 123,
+          "fn": 17,
+          "fp": 41,
+          "tn": 430,
+          "positive_photos": 140,
+          "negative_photos": 471,
+          "fnr": 0.12142857142857143,
+          "fpr": 0.0870488322717622
+        },
+        "candidate": {
+          "tp": 124,
+          "fn": 16,
+          "fp": 40,
+          "tn": 431,
+          "positive_photos": 140,
+          "negative_photos": 471,
+          "fnr": 0.11428571428571428,
+          "fpr": 0.08492569002123142
+        },
+        "threshold": 0.4649081826210022
+      },
+      "rust_stain": {
+        "previous_v1": {
+          "tp": 129,
+          "fn": 17,
+          "fp": 45,
+          "tn": 420,
+          "positive_photos": 146,
+          "negative_photos": 465,
+          "fnr": 0.11643835616438356,
+          "fpr": 0.0967741935483871
+        },
+        "candidate": {
+          "tp": 132,
+          "fn": 14,
+          "fp": 39,
+          "tn": 426,
+          "positive_photos": 146,
+          "negative_photos": 465,
+          "fnr": 0.0958904109589041,
+          "fpr": 0.08387096774193549
+        },
+        "threshold": 0.5
+      },
+      "exposed_rebar": {
+        "previous_v1": {
+          "tp": 127,
+          "fn": 15,
+          "fp": 8,
+          "tn": 461,
+          "positive_photos": 142,
+          "negative_photos": 469,
+          "fnr": 0.1056338028169014,
+          "fpr": 0.017057569296375266
+        },
+        "candidate": {
+          "tp": 126,
+          "fn": 16,
+          "fp": 9,
+          "tn": 460,
+          "positive_photos": 142,
+          "negative_photos": 469,
+          "fnr": 0.11267605633802817,
+          "fpr": 0.019189765458422176
+        },
+        "threshold": 0.5
+      },
+      "wet_surface": {
+        "previous_v1": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "candidate": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      },
+      "efflorescence": {
+        "previous_v1": {
+          "tp": 115,
+          "fn": 26,
+          "fp": 37,
+          "tn": 433,
+          "positive_photos": 141,
+          "negative_photos": 470,
+          "fnr": 0.18439716312056736,
+          "fpr": 0.07872340425531915
+        },
+        "candidate": {
+          "tp": 116,
+          "fn": 25,
+          "fp": 35,
+          "tn": 435,
+          "positive_photos": 141,
+          "negative_photos": 470,
+          "fnr": 0.1773049645390071,
+          "fpr": 0.07446808510638298
+        },
+        "threshold": 0.5
+      },
+      "surface_cavity": {
+        "previous_v1": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "candidate": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      }
+    }
+  },
+  "facility_primary_max": 0.23834196891191708,
+  "belt": {
+    "photos": 353,
+    "sequences": 4,
+    "pixel_counts": {
+      "tp": 674042,
+      "fp": 445670,
+      "tn": 79526182,
+      "fn": 685306
+    },
+    "pixel_iou": 0.37342674699088874,
+    "pixel_dice": 0.5437883713988366,
+    "pixel_fnr": 0.5041431627515545,
+    "pixel_fpr": 0.005572835802277031,
+    "photo_rates": {
+      "tp": 348,
+      "fn": 5,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 353,
+      "negative_photos": 0,
+      "fnr": 0.014164305949008499,
+      "fpr": null
+    },
+    "positive_photos_without_any_gt_overlap": 39,
+    "photo_fpr_fnr_below_5_percent": false,
+    "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+  },
+  "foreign_TEST_scored": false,
+  "normal_belt_FPR_available": false,
+  "known_benchmarks_reused": true
+}

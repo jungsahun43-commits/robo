@@ -19,7 +19,7 @@
 
 ```powershell
 cd safelog-cpp/ai-training
-./.venv/Scripts/python.exe scripts/study_unified_preservation_typed.py train
+./.venv/Scripts/python.exe scripts/resume_unified_preservation_typed.py
 ```
 
 기존 데이터·출처·모델과 완료된 보고서는 SHA로 보호한다. 사전 등록된 [조건](../ai-training/reports/unified-preservation-typed-protocol.json)에 따라 최종10epoch만 평가한다. 중간 검증 결과로 학습 회차나 기준을 반복 바꾸지 않는다.
@@ -27,6 +27,10 @@ cd safelog-cpp/ai-training
 사전 처리 점검에서 `pixel_known`을 좌표 영역으로 잘못 해석한 수정은 철회했다. 실제 파일은 mask가7×80×80이고 known은7개 클래스의 공간 정답 사용 여부 벡터다. 사진과 mask만 반전하고 클래스 벡터의 순서는 보존하는 기존 v1 처리 방식이 올바르다. 실제3개 자료 출처의 파일 구조와 강제 반전 테스트로 이를 검증했다.
 
 잘못된 수정으로 실행한 v2 부분 학습의2,179회 journal 업데이트와 중간 파일은 [중단·제외 기록](../ai-training/reports/unified-preservation-v2-aborted.json)으로 남겼다. 최종 연구 후보를 고르는 자료나 올바른 후속 모델의 초기 가중치로 사용하지 않는다. 새 `unified-preservation-typed-v3` 폴더에서 같은 완료 v1 모델을 다시 불러온다. 이전 `study_unified_preservation_aligned.py`는 중단한 실험의 기록이며 사용하지 않는다. [실제 정답 구조](../ai-training/reports/unified-preservation-known-scope.json)가 현재 적용 조건이다.
+
+## 기준 보정 단계의 재개
+
+대조 모델10회·3,840회 학습 후 CAL 관측값을 만드는 코드에서 split 표시를 빠뜨려 기존 보호 검사가 중단했다. 완료된 epoch11 재개 상태에서 신경망 업데이트0회로 다시 불러오고, 지정된 CAL320장의 ID·라벨·순서와 TEST 미포함을 확인한 뒤 같은 기준 보정 알고리즘을 실행한다. 손실·표본·신경망 가중치는 이 보완으로 바뀌지 않는다. [보정 자료 표시·재개 기록](../ai-training/reports/unified-preservation-calibration-provenance-fix.json)을 보존한다.
 
 ## 비교와 선택
 

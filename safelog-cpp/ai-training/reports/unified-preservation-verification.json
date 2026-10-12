@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "epochs_per_candidate": 10,
+  "additional_candidate_epochs_total": 20,
+  "committed_updates_total": 7680,
+  "actual_optimizer_calls_total": 7680,
+  "two_research_candidates_not_two_models_loaded_in_app": true,
+  "candidate_weights": {
+    "joint": "da1ea371da255fa2009e974186d158d231217f524c35de8f54e5b1ee08258e22",
+    "frozen": "ade2d3a698df1d3e6df60daed0ca97186ca40724a390be3e3fa26313436c9efd"
+  },
+  "frozen_candidate_backbone_exactly_unchanged": true,
+  "previous_sources_and_inputs_preserved": true,
+  "input_files_protected": 31718,
+  "previous_artifacts_protected": 104,
+  "selected": {
+    "selected": "prior_v1",
+    "validation_guards": {
+      "joint": {
+        "facility_primary_max_not_worse": true,
+        "belt_FNR_not_worse": true,
+        "belt_IoU_not_worse": false
+      },
+      "frozen": {
+        "facility_primary_max_not_worse": true,
+        "belt_FNR_not_worse": true,
+        "belt_IoU_not_worse": false
+      }
+    },
+    "normal_belt_photo_FPR_available": false,
+    "foreign_TEST_used_for_selection": false,
+    "independent_factory_proof": false,
+    "app_default_promoted": false,
+    "checkpoint_path": "runs/unified-main-v1/final.pt",
+    "checkpoint_sha256": "362f9cab4a137419e63118f73b6b622dccfacc37c94a8f52af62f217b1491598",
+    "decided_utc": "2026-10-12T18:34:35.771455+00:00",
+    "protocol_sha256": "8e6c887afe4c2f9593f600437dde0eeb8eb3918c3b63ef6470274bec3d5c22db"
+  },
+  "preflight_updates_excluded": 2,
+  "new_data_or_labels": 0,
+  "all_industrial_tasks_5percent_verified": false,
+  "app_default_promoted": false
+}

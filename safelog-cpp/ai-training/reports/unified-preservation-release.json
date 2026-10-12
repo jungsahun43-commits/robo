@@ -1,0 +1,28 @@
+{
+  "status": "prior_v1_preserved_no_new_model_recommended",
+  "selection": {
+    "selected": "prior_v1",
+    "validation_guards": {
+      "joint": {
+        "facility_primary_max_not_worse": true,
+        "belt_FNR_not_worse": true,
+        "belt_IoU_not_worse": false
+      },
+      "frozen": {
+        "facility_primary_max_not_worse": true,
+        "belt_FNR_not_worse": true,
+        "belt_IoU_not_worse": false
+      }
+    },
+    "normal_belt_photo_FPR_available": false,
+    "foreign_TEST_used_for_selection": false,
+    "independent_factory_proof": false,
+    "app_default_promoted": false,
+    "checkpoint_path": "runs/unified-main-v1/final.pt",
+    "checkpoint_sha256": "362f9cab4a137419e63118f73b6b622dccfacc37c94a8f52af62f217b1491598",
+    "decided_utc": "2026-10-12T18:34:35.771455+00:00",
+    "protocol_sha256": "8e6c887afe4c2f9593f600437dde0eeb8eb3918c3b63ef6470274bec3d5c22db"
+  },
+  "app_default_promoted": false,
+  "new_package": null
+}

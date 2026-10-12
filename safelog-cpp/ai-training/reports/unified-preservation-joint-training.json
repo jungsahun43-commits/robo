@@ -1,0 +1,64 @@
+{
+  "status": "trained",
+  "strict_CPU_GPU_all_three": true,
+  "weights_sha256": "da1ea371da255fa2009e974186d158d231217f524c35de8f54e5b1ee08258e22",
+  "checkpoint_count": 1,
+  "backbone_count": 1,
+  "architecture": "safelog-unified-facility-belt-foreign-v1",
+  "input_size": 640,
+  "facility_classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "tasks": [
+    "facility_surface",
+    "belt_damage",
+    "conveyor_foreign"
+  ],
+  "one_shared_backbone": true,
+  "thresholds": {
+    "facility_surface": {
+      "concrete_crack": 0.2898597717285156,
+      "concrete_spalling": 0.4649081826210022,
+      "rust_stain": 0.5,
+      "exposed_rebar": 0.5,
+      "wet_surface": 0.5,
+      "efflorescence": 0.5,
+      "surface_cavity": 0.5
+    },
+    "belt_damage": 0.5,
+    "conveyor_foreign": 0.0015858316068772145
+  },
+  "epochs": 10,
+  "optimizer_updates": 3840,
+  "actual_optimizer_calls_including_discarded_replay": 3840,
+  "variant": "joint",
+  "dataset_sources": [
+    "DACL10k",
+    "DamSegment",
+    "CODEBRIM",
+    "BeltCrack",
+    "Mendeley-s25x2bnshz"
+  ],
+  "initial_main_sha256": "362f9cab4a137419e63118f73b6b622dccfacc37c94a8f52af62f217b1491598",
+  "initial_state_sha256": "f65429ca8ed2a2832ef3b3ba4ce5b39801a871223ae3bd922f21326ea5a408b7",
+  "final_state_sha256": "1b0a5caa03991dc94e0e7ddaa3782c0afb67e4f3fc8dc9e2ed0737caf238406e",
+  "initial_backbone_sha256": "6b39bce4fb091b37ee0ace42266b70e0a73660a0442169a6357a86fd68d4aaca",
+  "final_backbone_sha256": "203038de0e314623d7050d2456d44fe804455842791b1e05c2a86a17794ab8a3",
+  "backbone_changed": true,
+  "teacher_unchanged": true,
+  "protocol_sha256": "8e6c887afe4c2f9593f600437dde0eeb8eb3918c3b63ef6470274bec3d5c22db",
+  "fit_protocol_commit": "d819213b4c59a81576ed13f742684ce682a15c2a",
+  "elapsed_training_and_CAL_minutes": 18.18906666666638,
+  "TEST_used_for_fit_or_CAL": false,
+  "app_default_promoted": false,
+  "known_class_vector_preserved": true,
+  "known_scope_sha256": "ba67015689ea2020f5541617b56b37a76bd6d941681588a931e5702d525660ec",
+  "protocol_path": "reports/unified-preservation-typed-protocol.json",
+  "invalid_partial_fit_inherited": false
+}
