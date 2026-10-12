@@ -1,0 +1,120 @@
+{
+  "archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\pcb-ai-role4-handoff-2026-10-12-v1.zip",
+  "sha256": "568dea9e2cb854b3f707d65a9979c012f7dee70a35fbc223fd603b813f029e4f",
+  "size_bytes": 105401800,
+  "model_count": 4,
+  "registry": {
+    "pcb3": {
+      "path": "pcb-reverse-v2/pcb3/final.pt",
+      "sha256": "8c25b4ebe7e34bbbb5d8962a26ca5f964187502f83e74a1136351360cd67ca9a"
+    },
+    "pcb1": {
+      "path": "pcb-reverse-v2/pcb1/final.pt",
+      "sha256": "9fc62598da3511bb0731f660687194d23eaf8ecb75cce78c9fa60df96d81f0d6"
+    },
+    "pcb2": {
+      "path": "pcb-reverse-v2/pcb2/final.pt",
+      "sha256": "a6889f6430ea5a1f75bdca3b1a8c5a25be71146ff205c4df0b5c968fa44c61fc"
+    },
+    "pcb4": {
+      "path": "pcb-reverse-v2/pcb4/final.pt",
+      "sha256": "d8c63bba2db73fc7b2d75d8ad07e909d5df6e5cf938f273545ae8fc05a7400fa"
+    }
+  },
+  "files": {
+    "models.json": {
+      "sha256": "fc5b76ff7bd22f982f733e6fba8799b9958a5c173613562dc432c1b597de4312",
+      "size": 571
+    },
+    "README_KO.md": {
+      "sha256": "d61b701b8b700f248095b8e9caf55db12c29e11cb186e323fb7993204e1f5893",
+      "size": 1669
+    },
+    "requirements-api.txt": {
+      "sha256": "75bffb787ce32d5f60a066b3f341142ae9a726d3a329f64c4ce589052b2ac6ed",
+      "size": 65
+    },
+    "requirements-host-tested.txt": {
+      "sha256": "44bdfab09659b33d1aba954f3474fec953c01544d9a7796412f15d7ff03ec4fe",
+      "size": 131
+    },
+    "safelog_ai/belt_inference.py": {
+      "sha256": "e7502539b04b3490389bed5508a3c908e72ade6df7a3fe2c0be5fbc11c47c108",
+      "size": 3798
+    },
+    "safelog_ai/belt_segmentation.py": {
+      "sha256": "9e903468de6521811ee8ce22cf477e48484ec382af83492b5e5edf052735c885",
+      "size": 1795
+    },
+    "safelog_ai/equipment_anomaly.py": {
+      "sha256": "7545688a32f43c61e7f0c3ff77d303552ab7a484f05814b69ea601067e0b4add",
+      "size": 4688
+    },
+    "safelog_ai/pcb_reverse.py": {
+      "sha256": "123f2fc1a8f7f392345f685b6d580948fef72fde3df416ebf89224b4a0d23ee9",
+      "size": 2482
+    },
+    "safelog_ai/pcb_reverse_server.py": {
+      "sha256": "e8523518080ee31202142d2a3f8256266d8eb399c2944771ad3bb540941597df",
+      "size": 6526
+    },
+    "safelog_ai/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "pcb-reverse-v2/pcb1/final.pt": {
+      "sha256": "9fc62598da3511bb0731f660687194d23eaf8ecb75cce78c9fa60df96d81f0d6",
+      "size": 28338251
+    },
+    "pcb-reverse-v2/pcb2/final.pt": {
+      "sha256": "a6889f6430ea5a1f75bdca3b1a8c5a25be71146ff205c4df0b5c968fa44c61fc",
+      "size": 28338251
+    },
+    "pcb-reverse-v2/pcb3/final.pt": {
+      "sha256": "8c25b4ebe7e34bbbb5d8962a26ca5f964187502f83e74a1136351360cd67ca9a",
+      "size": 28338251
+    },
+    "pcb-reverse-v2/pcb4/final.pt": {
+      "sha256": "d8c63bba2db73fc7b2d75d8ad07e909d5df6e5cf938f273545ae8fc05a7400fa",
+      "size": 28338251
+    },
+    "safelog-cpp/docs/PCB_REVERSE_HANDOFF_KO.md": {
+      "sha256": "98f5fb96669e66e2c053f0847b29f65aa13a5046f43b045e252df99b33c64f57",
+      "size": 7948
+    },
+    "safelog-cpp/ai-training/reports/equipment-visa-results.json": {
+      "sha256": "8a3a01b4235e3659cb6f2abaeb1c318a282d883ee49d77c8ac03dd824d16db93",
+      "size": 3450
+    },
+    "safelog-cpp/ai-training/reports/pcb-reverse-comparison.png": {
+      "sha256": "671047aeffd28635588863e39b6806dce260812e1ed7e05479ad55e495a308d9",
+      "size": 79473
+    },
+    "safelog-cpp/ai-training/reports/pcb-reverse-paired-errors.json": {
+      "sha256": "7ce0bd88d2850d39ca287c79fb9bd051a6a9629ee5aea55c5c7e6dd6ba715552",
+      "size": 3996
+    },
+    "safelog-cpp/ai-training/reports/pcb-reverse-protocol.json": {
+      "sha256": "f25417b9f5a4bcd5dfb837248c4e1b9e8a27036b384f32fe4d3eb1bc25710453",
+      "size": 47515
+    },
+    "safelog-cpp/ai-training/reports/pcb-reverse-results.json": {
+      "sha256": "30577c6377c056886db1ebee796961999f92e95dfb778e72313cd0fcca40174a",
+      "size": 3246
+    },
+    "safelog-cpp/ai-training/reports/pcb-reverse-training.json": {
+      "sha256": "953dd7f50c682d977c969261dec7b5bbdee142daa94c0cbc244b6a3bce2ec315",
+      "size": 4952
+    },
+    "safelog-cpp/ai-training/reports/pcb-reverse-verification.json": {
+      "sha256": "49b805ca86952088b2ba8c04ad06b970417a79d7ff04ce1b38a3b86a7e527e8b",
+      "size": 596
+    },
+    "safelog-cpp/ai-training/reports/PCB_REVERSE_RESULTS_KO.md": {
+      "sha256": "87b4f73f3912fe069294e51e9837cf7a0262df4a297e3aa33029bbba6397c043",
+      "size": 4060
+    }
+  },
+  "closed_local_document_links": true,
+  "http_cpu_standalone_verification": "Run release_pcb_reverse.py smoke next; see pcb-reverse-standalone-v1.json"
+}

@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "four_actual_cpu_http_requests": [
+    {
+      "category": "pcb1",
+      "source_train_image": "pcb1/Data/Images/Normal/0499.JPG",
+      "phase": "fit",
+      "seconds": 0.125,
+      "model_sha256": "9fc62598da3511bb0731f660687194d23eaf8ecb75cce78c9fa60df96d81f0d6",
+      "input_sha256": "a31ecabf408bbb5cf660cc829d12e5dc3e1eb9b4336c9aedf8370f553d332e46",
+      "native_geometry": [
+        1404,
+        1070
+      ],
+      "score": 0.26806318759918213,
+      "threshold": 0.45129135251045227,
+      "candidateDetected": false
+    },
+    {
+      "category": "pcb2",
+      "source_train_image": "pcb2/Data/Images/Normal/0836.JPG",
+      "phase": "fit",
+      "seconds": 0.125,
+      "model_sha256": "a6889f6430ea5a1f75bdca3b1a8c5a25be71146ff205c4df0b5c968fa44c61fc",
+      "input_sha256": "944eb87e3697ef0938d1ad28d708b267372f286478acf65b52f25602e9b6fd77",
+      "native_geometry": [
+        1404,
+        1070
+      ],
+      "score": 0.29465457797050476,
+      "threshold": 0.5205130577087402,
+      "candidateDetected": false
+    },
+    {
+      "category": "pcb3",
+      "source_train_image": "pcb3/Data/Images/Normal/0562.JPG",
+      "phase": "fit",
+      "seconds": 0.10999999998603016,
+      "model_sha256": "8c25b4ebe7e34bbbb5d8962a26ca5f964187502f83e74a1136351360cd67ca9a",
+      "input_sha256": "82b00a04617b5a328387a0b44c2318a26cb7ab77c1efdeee80012889913da0c8",
+      "native_geometry": [
+        1562,
+        960
+      ],
+      "score": 0.2800474464893341,
+      "threshold": 0.46439415216445923,
+      "candidateDetected": false
+    },
+    {
+      "category": "pcb4",
+      "source_train_image": "pcb4/Data/Images/Normal/0499.JPG",
+      "phase": "fit",
+      "seconds": 0.10999999998603016,
+      "model_sha256": "d8c63bba2db73fc7b2d75d8ad07e909d5df6e5cf938f273545ae8fc05a7400fa",
+      "input_sha256": "121f9f42c1544009cbaf9c5c25e7d44521bdb31b999f9d4041ca6f152ddafb31",
+      "native_geometry": [
+        1358,
+        1104
+      ],
+      "score": 0.29204902052879333,
+      "threshold": 0.41434019804000854,
+      "candidateDetected": false
+    }
+  ],
+  "train_only_smoke_no_test_rescoring": true,
+  "exact_training_preprocessing_verified_all_four": true,
+  "zip_sha256": "568dea9e2cb854b3f707d65a9979c012f7dee70a35fbc223fd603b813f029e4f",
+  "isolated_extracted_runtime_cwd": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\pcb-reverse-zip-verification-v1",
+  "workspace_pythonpath_removed": true,
+  "owned_server_stopped": true,
+  "archive_source_files_sha_verified": true
+}

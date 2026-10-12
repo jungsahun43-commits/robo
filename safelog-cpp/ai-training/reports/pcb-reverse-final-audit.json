@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "archive_sha256": "568dea9e2cb854b3f707d65a9979c012f7dee70a35fbc223fd603b813f029e4f",
+  "archive_size_bytes": 105401800,
+  "all_archive_member_sha256_checked": 23,
+  "archive_crc_passed": true,
+  "all_local_document_links_resolve": true,
+  "four_cpu_http_models_passed": true,
+  "actual_optimizer_updates": 4160,
+  "actual_category_model_epochs": 160,
+  "frozen_neural_sources_and_392_legacy_sources_preserved": true,
+  "registry_four_checkpoint_hashes_match": true,
+  "app_default_promoted": false,
+  "supplemental_source_sha256": {
+    "safelog-cpp/ai-training/safelog_ai/pcb_reverse_server.py": "e8523518080ee31202142d2a3f8256266d8eb399c2944771ad3bb540941597df",
+    "safelog-cpp/ai-training/scripts/release_pcb_reverse.py": "d74d8381e463cf011ee97692fe35a1144745edb82e6f5795140a985c47e78001",
+    "safelog-cpp/ai-training/tests/test_pcb_reverse_server.py": "ed98b21bf1c11d5e81cfee01e0c38be013c48d938a0244cc297617995ddc1fe0",
+    "safelog-cpp/docs/PCB_REVERSE_HANDOFF_KO.md": "98f5fb96669e66e2c053f0847b29f65aa13a5046f43b045e252df99b33c64f57"
+  },
+  "standalone_verification_sha256": "53b1fff8f3487aa2102946f75af921d04eef926e45b7d98c4903a2b1e8864656"
+}

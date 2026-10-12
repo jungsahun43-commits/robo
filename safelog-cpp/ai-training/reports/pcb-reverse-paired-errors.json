@@ -1,0 +1,116 @@
+{
+  "same_802_ids_and_labels": true,
+  "categories": {
+    "pcb1": {
+      "corrected_false_negative": [
+        "pcb1/Data/Images/Anomaly/000.JPG",
+        "pcb1/Data/Images/Anomaly/015.JPG",
+        "pcb1/Data/Images/Anomaly/018.JPG",
+        "pcb1/Data/Images/Anomaly/023.JPG",
+        "pcb1/Data/Images/Anomaly/052.JPG",
+        "pcb1/Data/Images/Anomaly/060.JPG",
+        "pcb1/Data/Images/Anomaly/061.JPG",
+        "pcb1/Data/Images/Anomaly/062.JPG",
+        "pcb1/Data/Images/Anomaly/063.JPG",
+        "pcb1/Data/Images/Anomaly/075.JPG",
+        "pcb1/Data/Images/Anomaly/076.JPG",
+        "pcb1/Data/Images/Anomaly/077.JPG",
+        "pcb1/Data/Images/Anomaly/081.JPG",
+        "pcb1/Data/Images/Anomaly/091.JPG",
+        "pcb1/Data/Images/Anomaly/094.JPG",
+        "pcb1/Data/Images/Anomaly/097.JPG"
+      ],
+      "new_false_negative": [
+        "pcb1/Data/Images/Anomaly/073.JPG",
+        "pcb1/Data/Images/Anomaly/085.JPG"
+      ],
+      "corrected_false_positive": [
+        "pcb1/Data/Images/Normal/0214.JPG",
+        "pcb1/Data/Images/Normal/0964.JPG"
+      ],
+      "new_false_positive": [
+        "pcb1/Data/Images/Normal/0764.JPG",
+        "pcb1/Data/Images/Normal/0333.JPG",
+        "pcb1/Data/Images/Normal/0261.JPG",
+        "pcb1/Data/Images/Normal/0684.JPG"
+      ]
+    },
+    "pcb2": {
+      "corrected_false_negative": [
+        "pcb2/Data/Images/Anomaly/000.JPG",
+        "pcb2/Data/Images/Anomaly/012.JPG",
+        "pcb2/Data/Images/Anomaly/062.JPG",
+        "pcb2/Data/Images/Anomaly/066.JPG"
+      ],
+      "new_false_negative": [
+        "pcb2/Data/Images/Anomaly/003.JPG",
+        "pcb2/Data/Images/Anomaly/033.JPG",
+        "pcb2/Data/Images/Anomaly/038.JPG",
+        "pcb2/Data/Images/Anomaly/045.JPG",
+        "pcb2/Data/Images/Anomaly/048.JPG",
+        "pcb2/Data/Images/Anomaly/052.JPG",
+        "pcb2/Data/Images/Anomaly/054.JPG",
+        "pcb2/Data/Images/Anomaly/073.JPG",
+        "pcb2/Data/Images/Anomaly/075.JPG",
+        "pcb2/Data/Images/Anomaly/077.JPG",
+        "pcb2/Data/Images/Anomaly/082.JPG"
+      ],
+      "corrected_false_positive": [
+        "pcb2/Data/Images/Normal/0768.JPG",
+        "pcb2/Data/Images/Normal/0797.JPG",
+        "pcb2/Data/Images/Normal/0479.JPG",
+        "pcb2/Data/Images/Normal/0187.JPG"
+      ],
+      "new_false_positive": [
+        "pcb2/Data/Images/Normal/0725.JPG"
+      ]
+    },
+    "pcb3": {
+      "corrected_false_negative": [
+        "pcb3/Data/Images/Anomaly/003.JPG",
+        "pcb3/Data/Images/Anomaly/014.JPG",
+        "pcb3/Data/Images/Anomaly/032.JPG",
+        "pcb3/Data/Images/Anomaly/034.JPG",
+        "pcb3/Data/Images/Anomaly/039.JPG",
+        "pcb3/Data/Images/Anomaly/041.JPG",
+        "pcb3/Data/Images/Anomaly/049.JPG",
+        "pcb3/Data/Images/Anomaly/057.JPG",
+        "pcb3/Data/Images/Anomaly/061.JPG",
+        "pcb3/Data/Images/Anomaly/064.JPG",
+        "pcb3/Data/Images/Anomaly/069.JPG",
+        "pcb3/Data/Images/Anomaly/079.JPG",
+        "pcb3/Data/Images/Anomaly/090.JPG",
+        "pcb3/Data/Images/Anomaly/091.JPG",
+        "pcb3/Data/Images/Anomaly/093.JPG",
+        "pcb3/Data/Images/Anomaly/094.JPG",
+        "pcb3/Data/Images/Anomaly/097.JPG"
+      ],
+      "new_false_negative": [
+        "pcb3/Data/Images/Anomaly/030.JPG",
+        "pcb3/Data/Images/Anomaly/066.JPG"
+      ],
+      "corrected_false_positive": [
+        "pcb3/Data/Images/Normal/0159.JPG"
+      ],
+      "new_false_positive": [
+        "pcb3/Data/Images/Normal/0654.JPG",
+        "pcb3/Data/Images/Normal/0869.JPG",
+        "pcb3/Data/Images/Normal/0013.JPG"
+      ]
+    },
+    "pcb4": {
+      "corrected_false_negative": [],
+      "new_false_negative": [],
+      "corrected_false_positive": [
+        "pcb4/Data/Images/Normal/0923.JPG",
+        "pcb4/Data/Images/Normal/0952.JPG",
+        "pcb4/Data/Images/Normal/0974.JPG"
+      ],
+      "new_false_positive": [
+        "pcb4/Data/Images/Normal/0016.JPG",
+        "pcb4/Data/Images/Normal/0013.JPG",
+        "pcb4/Data/Images/Normal/0784.JPG"
+      ]
+    }
+  }
+}

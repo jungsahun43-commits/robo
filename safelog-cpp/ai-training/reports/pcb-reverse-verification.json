@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "actual_category_model_epochs": 160,
+  "actual_optimizer_updates": 4160,
+  "tests_passed": 4,
+  "preflight_updates": 1,
+  "strict_cpu_gpu_reload_all_four": true,
+  "teacher_unchanged_all_four": true,
+  "pcb_input_sha_size_mtime_preserved": 9237,
+  "older_model_artifacts_sha_size_mtime_preserved": 25,
+  "legacy_sources_sha_preserved": 392,
+  "inherited_other_inputs_size_mtime_checked": 26723,
+  "known_official_test_reused": true,
+  "app_default_promoted": false,
+  "protocol_sha256": "f25417b9f5a4bcd5dfb837248c4e1b9e8a27036b384f32fe4d3eb1bc25710453"
+}

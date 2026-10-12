@@ -1,0 +1,113 @@
+{
+  "status": "evaluated",
+  "categories": [
+    {
+      "category": "pcb3",
+      "tp": 80,
+      "fn": 20,
+      "fp": 6,
+      "tn": 95,
+      "positive_photos": 100,
+      "negative_photos": 101,
+      "fnr": 0.2,
+      "fpr": 0.0594059405940594,
+      "auroc": 0.9421782178217821,
+      "pixel_counts_model256": {
+        "tp": 31523,
+        "fp": 323655,
+        "tn": 12815873,
+        "fn": 1685
+      },
+      "pixel_iou_model256": 0.08833361822323973,
+      "native_positive_mask_vanished_at256": 0,
+      "threshold": 0.46439415216445923,
+      "pixel_threshold": 0.2798137366771698,
+      "weights_sha256": "8c25b4ebe7e34bbbb5d8962a26ca5f964187502f83e74a1136351360cd67ca9a"
+    },
+    {
+      "category": "pcb1",
+      "tp": 92,
+      "fn": 8,
+      "fp": 9,
+      "tn": 91,
+      "positive_photos": 100,
+      "negative_photos": 100,
+      "fnr": 0.08,
+      "fpr": 0.09,
+      "auroc": 0.9606,
+      "pixel_counts_model256": {
+        "tp": 60085,
+        "fp": 282524,
+        "tn": 12763631,
+        "fn": 960
+      },
+      "pixel_iou_model256": 0.17488481207559473,
+      "native_positive_mask_vanished_at256": 0,
+      "threshold": 0.45129135251045227,
+      "pixel_threshold": 0.27759188413619995,
+      "weights_sha256": "9fc62598da3511bb0731f660687194d23eaf8ecb75cce78c9fa60df96d81f0d6"
+    },
+    {
+      "category": "pcb2",
+      "tp": 76,
+      "fn": 24,
+      "fp": 5,
+      "tn": 95,
+      "positive_photos": 100,
+      "negative_photos": 100,
+      "fnr": 0.24,
+      "fpr": 0.05,
+      "auroc": 0.9509,
+      "pixel_counts_model256": {
+        "tp": 24345,
+        "fp": 283503,
+        "tn": 12796618,
+        "fn": 2734
+      },
+      "pixel_iou_model256": 0.07838509636746495,
+      "native_positive_mask_vanished_at256": 0,
+      "threshold": 0.5205130577087402,
+      "pixel_threshold": 0.29602286219596863,
+      "weights_sha256": "a6889f6430ea5a1f75bdca3b1a8c5a25be71146ff205c4df0b5c968fa44c61fc"
+    },
+    {
+      "category": "pcb4",
+      "tp": 100,
+      "fn": 0,
+      "fp": 9,
+      "tn": 92,
+      "positive_photos": 100,
+      "negative_photos": 101,
+      "fnr": 0.0,
+      "fpr": 0.0891089108910891,
+      "auroc": 0.9963366336633663,
+      "pixel_counts_model256": {
+        "tp": 78328,
+        "fp": 720037,
+        "tn": 12366093,
+        "fn": 8278
+      },
+      "pixel_iou_model256": 0.09710367535576457,
+      "native_positive_mask_vanished_at256": 0,
+      "threshold": 0.41434019804000854,
+      "pixel_threshold": 0.28560003638267517,
+      "weights_sha256": "d8c63bba2db73fc7b2d75d8ad07e909d5df6e5cf938f273545ae8fc05a7400fa"
+    }
+  ],
+  "pooled": {
+    "tp": 348,
+    "fp": 29,
+    "tn": 373,
+    "fn": 52,
+    "fpr": 0.07213930348258707,
+    "fnr": 0.13
+  },
+  "all_eight_photo_rates_below5_percent": false,
+  "normal_only_thresholds_fixed_before_test": true,
+  "source_test_used_for_fit_or_calibration": false,
+  "known_official_test_reused": true,
+  "independent_factory_or_physical_boards_verified": false,
+  "mechanical_failure_diagnosis": false,
+  "app_default_promoted": false,
+  "protocol_sha256": "f25417b9f5a4bcd5dfb837248c4e1b9e8a27036b384f32fe4d3eb1bc25710453"
+}
