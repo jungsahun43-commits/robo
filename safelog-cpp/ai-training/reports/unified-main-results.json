@@ -1,0 +1,579 @@
+{
+  "status": "evaluated",
+  "facility_fixed_old_thresholds": {
+    "dacl": {
+      "concrete_crack": {
+        "baseline": {
+          "tp": 164,
+          "fn": 47,
+          "fp": 110,
+          "tn": 389,
+          "positive_photos": 211,
+          "negative_photos": 499,
+          "fnr": 0.22274881516587677,
+          "fpr": 0.22044088176352705
+        },
+        "unified": {
+          "tp": 163,
+          "fn": 48,
+          "fp": 101,
+          "tn": 398,
+          "positive_photos": 211,
+          "negative_photos": 499,
+          "fnr": 0.22748815165876776,
+          "fpr": 0.20240480961923848
+        },
+        "threshold": 0.2898597717285156
+      },
+      "concrete_spalling": {
+        "baseline": {
+          "tp": 252,
+          "fn": 72,
+          "fp": 86,
+          "tn": 300,
+          "positive_photos": 324,
+          "negative_photos": 386,
+          "fnr": 0.2222222222222222,
+          "fpr": 0.22279792746113988
+        },
+        "unified": {
+          "tp": 258,
+          "fn": 66,
+          "fp": 97,
+          "tn": 289,
+          "positive_photos": 324,
+          "negative_photos": 386,
+          "fnr": 0.2037037037037037,
+          "fpr": 0.25129533678756477
+        },
+        "threshold": 0.4649081826210022
+      },
+      "rust_stain": {
+        "baseline": {
+          "tp": 285,
+          "fn": 81,
+          "fp": 58,
+          "tn": 286,
+          "positive_photos": 366,
+          "negative_photos": 344,
+          "fnr": 0.22131147540983606,
+          "fpr": 0.1686046511627907
+        },
+        "unified": {
+          "tp": 281,
+          "fn": 85,
+          "fp": 61,
+          "tn": 283,
+          "positive_photos": 366,
+          "negative_photos": 344,
+          "fnr": 0.23224043715846995,
+          "fpr": 0.17732558139534885
+        },
+        "threshold": 0.5
+      },
+      "exposed_rebar": {
+        "baseline": {
+          "tp": 48,
+          "fn": 32,
+          "fp": 27,
+          "tn": 603,
+          "positive_photos": 80,
+          "negative_photos": 630,
+          "fnr": 0.4,
+          "fpr": 0.04285714285714286
+        },
+        "unified": {
+          "tp": 48,
+          "fn": 32,
+          "fp": 26,
+          "tn": 604,
+          "positive_photos": 80,
+          "negative_photos": 630,
+          "fnr": 0.4,
+          "fpr": 0.04126984126984127
+        },
+        "threshold": 0.5
+      },
+      "wet_surface": {
+        "baseline": {
+          "tp": 54,
+          "fn": 42,
+          "fp": 46,
+          "tn": 568,
+          "positive_photos": 96,
+          "negative_photos": 614,
+          "fnr": 0.4375,
+          "fpr": 0.0749185667752443
+        },
+        "unified": {
+          "tp": 51,
+          "fn": 45,
+          "fp": 49,
+          "tn": 565,
+          "positive_photos": 96,
+          "negative_photos": 614,
+          "fnr": 0.46875,
+          "fpr": 0.07980456026058631
+        },
+        "threshold": 0.5
+      },
+      "efflorescence": {
+        "baseline": {
+          "tp": 121,
+          "fn": 38,
+          "fp": 78,
+          "tn": 473,
+          "positive_photos": 159,
+          "negative_photos": 551,
+          "fnr": 0.2389937106918239,
+          "fpr": 0.14156079854809436
+        },
+        "unified": {
+          "tp": 124,
+          "fn": 35,
+          "fp": 72,
+          "tn": 479,
+          "positive_photos": 159,
+          "negative_photos": 551,
+          "fnr": 0.22012578616352202,
+          "fpr": 0.1306715063520871
+        },
+        "threshold": 0.5
+      },
+      "surface_cavity": {
+        "baseline": {
+          "tp": 74,
+          "fn": 32,
+          "fp": 80,
+          "tn": 524,
+          "positive_photos": 106,
+          "negative_photos": 604,
+          "fnr": 0.3018867924528302,
+          "fpr": 0.13245033112582782
+        },
+        "unified": {
+          "tp": 74,
+          "fn": 32,
+          "fp": 86,
+          "tn": 518,
+          "positive_photos": 106,
+          "negative_photos": 604,
+          "fnr": 0.3018867924528302,
+          "fpr": 0.1423841059602649
+        },
+        "threshold": 0.5
+      }
+    },
+    "damsegment": {
+      "concrete_crack": {
+        "baseline": {
+          "tp": 246,
+          "fn": 2,
+          "fp": 1,
+          "tn": 175,
+          "positive_photos": 248,
+          "negative_photos": 176,
+          "fnr": 0.008064516129032258,
+          "fpr": 0.005681818181818182
+        },
+        "unified": {
+          "tp": 246,
+          "fn": 2,
+          "fp": 2,
+          "tn": 174,
+          "positive_photos": 248,
+          "negative_photos": 176,
+          "fnr": 0.008064516129032258,
+          "fpr": 0.011363636363636364
+        },
+        "threshold": 0.2898597717285156
+      },
+      "concrete_spalling": {
+        "baseline": {
+          "tp": 47,
+          "fn": 11,
+          "fp": 8,
+          "tn": 358,
+          "positive_photos": 58,
+          "negative_photos": 366,
+          "fnr": 0.1896551724137931,
+          "fpr": 0.02185792349726776
+        },
+        "unified": {
+          "tp": 47,
+          "fn": 11,
+          "fp": 9,
+          "tn": 357,
+          "positive_photos": 58,
+          "negative_photos": 366,
+          "fnr": 0.1896551724137931,
+          "fpr": 0.02459016393442623
+        },
+        "threshold": 0.4649081826210022
+      },
+      "rust_stain": {
+        "baseline": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "unified": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      },
+      "exposed_rebar": {
+        "baseline": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "unified": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      },
+      "wet_surface": {
+        "baseline": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "unified": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      },
+      "efflorescence": {
+        "baseline": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "unified": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      },
+      "surface_cavity": {
+        "baseline": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "unified": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      }
+    },
+    "codebrim": {
+      "concrete_crack": {
+        "baseline": {
+          "tp": 138,
+          "fn": 11,
+          "fp": 58,
+          "tn": 404,
+          "positive_photos": 149,
+          "negative_photos": 462,
+          "fnr": 0.0738255033557047,
+          "fpr": 0.12554112554112554
+        },
+        "unified": {
+          "tp": 139,
+          "fn": 10,
+          "fp": 54,
+          "tn": 408,
+          "positive_photos": 149,
+          "negative_photos": 462,
+          "fnr": 0.06711409395973154,
+          "fpr": 0.11688311688311688
+        },
+        "threshold": 0.2898597717285156
+      },
+      "concrete_spalling": {
+        "baseline": {
+          "tp": 125,
+          "fn": 15,
+          "fp": 42,
+          "tn": 429,
+          "positive_photos": 140,
+          "negative_photos": 471,
+          "fnr": 0.10714285714285714,
+          "fpr": 0.08917197452229299
+        },
+        "unified": {
+          "tp": 123,
+          "fn": 17,
+          "fp": 41,
+          "tn": 430,
+          "positive_photos": 140,
+          "negative_photos": 471,
+          "fnr": 0.12142857142857143,
+          "fpr": 0.0870488322717622
+        },
+        "threshold": 0.4649081826210022
+      },
+      "rust_stain": {
+        "baseline": {
+          "tp": 127,
+          "fn": 19,
+          "fp": 44,
+          "tn": 421,
+          "positive_photos": 146,
+          "negative_photos": 465,
+          "fnr": 0.13013698630136986,
+          "fpr": 0.09462365591397849
+        },
+        "unified": {
+          "tp": 129,
+          "fn": 17,
+          "fp": 45,
+          "tn": 420,
+          "positive_photos": 146,
+          "negative_photos": 465,
+          "fnr": 0.11643835616438356,
+          "fpr": 0.0967741935483871
+        },
+        "threshold": 0.5
+      },
+      "exposed_rebar": {
+        "baseline": {
+          "tp": 126,
+          "fn": 16,
+          "fp": 10,
+          "tn": 459,
+          "positive_photos": 142,
+          "negative_photos": 469,
+          "fnr": 0.11267605633802817,
+          "fpr": 0.021321961620469083
+        },
+        "unified": {
+          "tp": 127,
+          "fn": 15,
+          "fp": 8,
+          "tn": 461,
+          "positive_photos": 142,
+          "negative_photos": 469,
+          "fnr": 0.1056338028169014,
+          "fpr": 0.017057569296375266
+        },
+        "threshold": 0.5
+      },
+      "wet_surface": {
+        "baseline": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "unified": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      },
+      "efflorescence": {
+        "baseline": {
+          "tp": 116,
+          "fn": 25,
+          "fp": 40,
+          "tn": 430,
+          "positive_photos": 141,
+          "negative_photos": 470,
+          "fnr": 0.1773049645390071,
+          "fpr": 0.0851063829787234
+        },
+        "unified": {
+          "tp": 115,
+          "fn": 26,
+          "fp": 37,
+          "tn": 433,
+          "positive_photos": 141,
+          "negative_photos": 470,
+          "fnr": 0.18439716312056736,
+          "fpr": 0.07872340425531915
+        },
+        "threshold": 0.5
+      },
+      "surface_cavity": {
+        "baseline": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "unified": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 0,
+          "negative_photos": 0,
+          "fnr": null,
+          "fpr": null
+        },
+        "threshold": 0.5
+      }
+    }
+  },
+  "belt_val353": {
+    "photos": 353,
+    "sequences": 4,
+    "pixel_counts": {
+      "tp": 698541,
+      "fp": 477860,
+      "tn": 79493992,
+      "fn": 660807
+    },
+    "pixel_iou": 0.38021878850952096,
+    "pixel_dice": 0.5509543728499943,
+    "pixel_fnr": 0.48612055191165177,
+    "pixel_fpr": 0.0059753524277517045,
+    "photo_rates": {
+      "tp": 348,
+      "fn": 5,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 353,
+      "negative_photos": 0,
+      "fnr": 0.014164305949008499,
+      "fpr": null
+    },
+    "positive_photos_without_any_gt_overlap": 41,
+    "photo_fpr_fnr_below_5_percent": false,
+    "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+  },
+  "belt_baseline_val353": {
+    "photos": 353,
+    "sequences": 4,
+    "pixel_counts": {
+      "tp": 648878,
+      "fp": 127591,
+      "tn": 79844261,
+      "fn": 710470
+    },
+    "pixel_iou": 0.43638508371896895,
+    "pixel_dice": 0.6076157273773923,
+    "pixel_fnr": 0.5226549787103817,
+    "pixel_fpr": 0.0015954488586809269,
+    "photo_rates": {
+      "tp": 332,
+      "fn": 21,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 353,
+      "negative_photos": 0,
+      "fnr": 0.059490084985835696,
+      "fpr": null
+    },
+    "positive_photos_without_any_gt_overlap": 48,
+    "photo_fpr_fnr_below_5_percent": false,
+    "photo_score_definition": "Maximum sigmoid over known, non-padding pixels; not a calibrated probability"
+  },
+  "foreign": {
+    "common448": {
+      "tp": 189,
+      "fn": 3,
+      "fp": 8,
+      "tn": 248,
+      "positive_photos": 192,
+      "negative_photos": 256,
+      "fnr": 0.015625,
+      "fpr": 0.03125
+    },
+    "known783": {
+      "tp": 383,
+      "fn": 1,
+      "fp": 6,
+      "tn": 393,
+      "positive_photos": 384,
+      "negative_photos": 399,
+      "fnr": 0.0026041666666666665,
+      "fpr": 0.015037593984962405
+    }
+  },
+  "foreign_baseline": "reports/foreign-calibration-results.json",
+  "one_checkpoint_sha256": "362f9cab4a137419e63118f73b6b622dccfacc37c94a8f52af62f217b1491598",
+  "known_benchmarks_reused": true,
+  "all_tasks_industrial_5percent_validated": false,
+  "normal_belt_photo_labels": 0,
+  "checkpoint_selected_before_evaluation": true,
+  "foreign_CAL_resubstitution_is_not_validation": true,
+  "independent_factory_verified": false,
+  "app_default_promoted": false
+}

@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "archive_sha256": "66632cf2400df10215fc78cbd4697fca7d96b27963c1b220737c26171ca4093a",
+  "archive_bytes": 13709990,
+  "zip_crc_and_member_sha256_verified": true,
+  "local_markdown_links_closed_after_extraction": true,
+  "one_checkpoint_only": true,
+  "frozen_current_and_legacy_sources_preserved": 411,
+  "training_inputs_and_previous_artifacts_preserved": {
+    "status": "passed",
+    "actual_epochs": 20,
+    "actual_optimizer_updates": 6400,
+    "original_main_extended": true,
+    "one_shared_backbone": true,
+    "one_checkpoint": true,
+    "three_task_gradients_verified": true,
+    "five_source_preflight_gradients_verified": true,
+    "strict_CPU_GPU_all_three": true,
+    "tests_passed": 3,
+    "preflight_updates_excluded": 5,
+    "current_inputs_preserved": 31718,
+    "prior_artifacts_preserved": 61,
+    "legacy_sources_preserved": 406,
+    "new_labels": 0,
+    "app_default_promoted": false
+  },
+  "isolated_CPU_HTTP_and_actual_Qt_CPP_passed": true,
+  "actual_cpp_http_operations": 9,
+  "release_source_sha256": {
+    "safelog-cpp/ai-training/safelog_ai/unified_main_server.py": "8b0b4857bba2f189d51ba8e3049723630cbbcb9a45baa612813d16777998984a",
+    "safelog-cpp/apps/mobile-qt/adapters/ai/http_ai_safety_analyzer.cpp": "a8808df439023678f8205821ffb1901a3704af76abcfec70f57440e8880288fa",
+    "safelog-cpp/apps/mobile-qt/adapters/ai/http_ai_safety_analyzer.hpp": "5d689b65e886d38a5ee6474d2868c8d872948f02dbc8b63a34fc3e600510ef76",
+    "safelog-cpp/apps/mobile-qt/tools/unified_main_probe.cpp": "36b0804536041a298e2bbac789538c25aacc9e269d3513e5a2f060c7ac34ff93"
+  },
+  "all_tasks_5percent_goal_achieved": false,
+  "app_default_promoted": false
+}

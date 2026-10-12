@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-main-role4-handoff-2026-10-13-v1.1.zip",
+  "sha256": "9cf40237b0d795166bf90e2cfba69c17d8342f01bb992d597af583c88874bec1",
+  "bytes": 13710055,
+  "model_sha256": "362f9cab4a137419e63118f73b6b622dccfacc37c94a8f52af62f217b1491598",
+  "checkpoint_count": 1,
+  "docs_only_revision": true,
+  "source_dataset_images_included": false,
+  "runtime_model_and_CPP_byte_identical_to_tested_v1": true,
+  "actual_runtime_test_evidence": "unified-main-standalone-v1.json"
+}

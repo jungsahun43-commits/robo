@@ -4,6 +4,19 @@
 
 AI 결과는 참고 제안이며 최종 판단은 점검자가 수행합니다. 모델 서버가 없어도 Mock AI로 전체 시연 흐름을 실행할 수 있습니다.
 
+## 기존 메인에5개 출처를 통합 · 2026-10-13
+
+기존 시설 연구 메인을 확장해 **공통 MobileNet 분석부 하나·모델 파일 하나**에 시설 표면7종, 벨트 손상, 컨베이어 이물질 기능을 붙였습니다. DACL10k·DamSegment·CODEBRIM·BeltCrack·Mendeley 이물질 자료로 **실제20epoch·6,400회 업데이트**를 완료했습니다. PCB는 별도 연구 이력입니다.
+
+알려진 벨트 VAL353장 미탐은5.95%→1.42%로 줄었지만 위치 IoU는43.64%→38.02%로 낮아졌습니다. 시설 균열·박락의 최댓값 오류는22.28%→25.13%로 악화했습니다. 정상 벨트 오탐은 정답 부족으로 미측정이며 산업현장 전체5% 미만은 달성하지 않았습니다. 기존 앱 기본 모델은 보존하고 통합 모델을 연결·비교 연구 후보로 제공합니다.
+
+전달 ZIP만 별도 폴더에 풀어 CPU 서버와 실제 Qt/C++ 분석·동일 사진 비교·요약9개 호출을 확인했습니다. Git에는 코드·기록·문서를 반영하며 모델은 별도 `unified-main-role4-handoff-2026-10-13-v1.1.zip`으로 전달합니다.
+
+- [실제 학습·개선과 악화](safelog-cpp/ai-training/reports/UNIFIED_MAIN_RESULTS_KO.md)
+- [역할4 앱 연결](safelog-cpp/docs/UNIFIED_MAIN_HANDOFF_KO.md)
+- [단독 ZIP·실제 C++ 연결 확인](safelog-cpp/ai-training/reports/unified-main-standalone-v1.json)
+- [현재 데이터셋과 모델 관계](safelog-cpp/docs/DATASET_MODEL_MAP_KO.md)
+
 ## 시작 위치
 
 - 프로젝트 코드: [`safelog-cpp/`](safelog-cpp/)

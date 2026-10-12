@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "actual_modified_Qt_CPP_adapter_compiled": true,
+  "adapter_test_output": "",
+  "probe_executable": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\unified-main-qt-probe\\build\\unified_probe.exe",
+  "compiler": "Qt6.11.2 MinGW13.1 C++20",
+  "full_Android_APK_built": false
+}

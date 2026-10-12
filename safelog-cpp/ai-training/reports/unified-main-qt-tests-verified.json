@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "junit_root": {
+    "name": "HttpAiSafetyAnalyzerTests",
+    "timestamp": "2026-10-13T00:28:00",
+    "hostname": "DESKTOP-C5BTH0K",
+    "tests": "9",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "0.025"
+  },
+  "test_cases": [
+    {
+      "name": "initTestCase",
+      "classname": "HttpAiSafetyAnalyzerTests",
+      "time": "0.004"
+    },
+    {
+      "name": "parsesHazardAndBuildsImageRequest",
+      "classname": "HttpAiSafetyAnalyzerTests",
+      "time": "0.009"
+    },
+    {
+      "name": "forwardsUnifiedTaskInHazardAndComparison",
+      "classname": "HttpAiSafetyAnalyzerTests",
+      "time": "0.002"
+    },
+    {
+      "name": "rejectsUnsupportedInspectionTask",
+      "classname": "HttpAiSafetyAnalyzerTests",
+      "time": "0.000"
+    },
+    {
+      "name": "parsesComparisonAndSummary",
+      "classname": "HttpAiSafetyAnalyzerTests",
+      "time": "0.001"
+    },
+    {
+      "name": "rejectsInvalidSchema",
+      "classname": "HttpAiSafetyAnalyzerTests",
+      "time": "0.001"
+    },
+    {
+      "name": "retriesTransientFailure",
+      "classname": "HttpAiSafetyAnalyzerTests",
+      "time": "0.000"
+    },
+    {
+      "name": "distinguishesHttpAndInputErrors",
+      "classname": "HttpAiSafetyAnalyzerTests",
+      "time": "0.000"
+    },
+    {
+      "name": "cleanupTestCase",
+      "classname": "HttpAiSafetyAnalyzerTests",
+      "time": "0.000"
+    }
+  ],
+  "actual_cpp_adapter_tests": true,
+  "xml": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\unified-main-qt-probe\\adapter-junit.xml"
+}

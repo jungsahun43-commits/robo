@@ -164,6 +164,9 @@ HttpAiSafetyAnalyzer::HttpAiSafetyAnalyzer(HttpAiSafetyAnalyzerConfig config,
     throw AiProviderError(AiProviderErrorCode::InputError, "AI 서버 주소와 HTTP 클라이언트가 필요합니다.");
   config_.timeoutMs = std::max(1, config_.timeoutMs);
   config_.maxRetries = std::max(0, config_.maxRetries);
+  if (!config_.inspectionTask.empty() && config_.inspectionTask != "facility_surface" &&
+      config_.inspectionTask != "belt_damage" && config_.inspectionTask != "conveyor_foreign")
+    throw AiProviderError(AiProviderErrorCode::InputError, "지원하지 않는 AI 점검 항목입니다.");
 }
 
 void HttpAiSafetyAnalyzer::cancel() { cancelled_.store(true); }
@@ -209,6 +212,8 @@ ai::HazardSuggestion HttpAiSafetyAnalyzer::analyzeHazard(const std::string& imag
   QJsonObject payload{{"image", QString::fromStdString(imageDataUrl(imagePath))},
                       {"userMemo", QString::fromStdString(userMemo)},
                       {"promptVersion", QString::fromStdString(config_.hazardPromptVersion)}};
+  if (!config_.inspectionTask.empty())
+    payload.insert("inspectionTask", QString::fromStdString(config_.inspectionTask));
   const JsonHttpResponse response = request("/v1/analyze-hazard", compactJson(payload));
   const QJsonObject object = parseObject(response.body);
   requirePromptVersion(object, config_.hazardPromptVersion);
@@ -231,6 +236,8 @@ ai::ActionAssessment HttpAiSafetyAnalyzer::compareBeforeAfter(
                       {"afterImage", QString::fromStdString(imageDataUrl(afterImagePath))},
                       {"actionNote", QString::fromStdString(actionNote)},
                       {"promptVersion", QString::fromStdString(config_.comparisonPromptVersion)}};
+  if (!config_.inspectionTask.empty())
+    payload.insert("inspectionTask", QString::fromStdString(config_.inspectionTask));
   const JsonHttpResponse response = request("/v1/compare-action", compactJson(payload));
   const QJsonObject object = parseObject(response.body);
   requirePromptVersion(object, config_.comparisonPromptVersion);

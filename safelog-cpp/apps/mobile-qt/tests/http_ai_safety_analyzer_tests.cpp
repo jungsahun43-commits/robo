@@ -72,6 +72,41 @@ private slots:
     const QJsonObject request = QJsonDocument::fromJson(QByteArray::fromStdString(client->lastBody)).object();
     QVERIFY(request.value("image").toString().startsWith("data:image/png;base64,"));
     QCOMPARE(request.value("promptVersion").toString(), QString("safelog-hazard-v1"));
+    QVERIFY(!request.contains("inspectionTask"));
+  }
+
+  void forwardsUnifiedTaskInHazardAndComparison() {
+    auto client = std::make_shared<FakeHttpClient>();
+    client->results.push_back(JsonHttpResponse{200, json({
+      {"hazardCategory", "벨트 손상 후보"}, {"riskLevel", 3}, {"detectedHazards", QJsonArray{"벨트 손상 후보"}},
+      {"suggestedDescription", "점검 후보"}, {"suggestedAction", "점검자 확인"}, {"confidence", 0.8},
+      {"modelName", "unified-main-v1"}, {"promptVersion", "safelog-hazard-v1"}})});
+    client->results.push_back(JsonHttpResponse{200, json({
+      {"likelyResolved", false}, {"remainingRisks", QJsonArray{"벨트 손상 후보"}},
+      {"assessment", "점검자 재확인"}, {"confidence", 0.7}, {"modelName", "unified-main-v1"},
+      {"promptVersion", "safelog-comparison-v1"}})});
+    HttpAiSafetyAnalyzerConfig config;
+    config.baseUrl = "http://127.0.0.1:8775";
+    config.inspectionTask = "belt_damage";
+    HttpAiSafetyAnalyzer analyzer(config, client);
+    analyzer.analyzeHazard(imagePath_.toStdString(), "메모");
+    auto request = QJsonDocument::fromJson(QByteArray::fromStdString(client->lastBody)).object();
+    QCOMPARE(request.value("inspectionTask").toString(), QString("belt_damage"));
+    analyzer.compareBeforeAfter(imagePath_.toStdString(), imagePath_.toStdString(), "조치");
+    request = QJsonDocument::fromJson(QByteArray::fromStdString(client->lastBody)).object();
+    QCOMPARE(request.value("inspectionTask").toString(), QString("belt_damage"));
+  }
+
+  void rejectsUnsupportedInspectionTask() {
+    HttpAiSafetyAnalyzerConfig config;
+    config.baseUrl = "http://127.0.0.1:8775";
+    config.inspectionTask = "internal_motor_fault";
+    try {
+      HttpAiSafetyAnalyzer analyzer(config, std::make_shared<FakeHttpClient>());
+      QFAIL("unsupported inspection task was accepted");
+    } catch (const AiProviderError& error) {
+      QCOMPARE(error.code, AiProviderErrorCode::InputError);
+    }
   }
 
   void parsesComparisonAndSummary() {

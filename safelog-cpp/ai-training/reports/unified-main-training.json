@@ -1,0 +1,59 @@
+{
+  "status": "joint_main_trained_and_calibrated_before_TEST",
+  "architecture": "safelog-unified-facility-belt-foreign-v1",
+  "input_size": 640,
+  "facility_classes": [
+    "concrete_crack",
+    "concrete_spalling",
+    "rust_stain",
+    "exposed_rebar",
+    "wet_surface",
+    "efflorescence",
+    "surface_cavity"
+  ],
+  "tasks": [
+    "facility_surface",
+    "belt_damage",
+    "conveyor_foreign"
+  ],
+  "one_shared_backbone": true,
+  "thresholds": {
+    "facility_surface": {
+      "concrete_crack": 0.2898597717285156,
+      "concrete_spalling": 0.4649081826210022,
+      "rust_stain": 0.5,
+      "exposed_rebar": 0.5,
+      "wet_surface": 0.5,
+      "efflorescence": 0.5,
+      "surface_cavity": 0.5
+    },
+    "belt_damage": 0.5,
+    "conveyor_foreign": 0.09148399130680455
+  },
+  "epochs": 20,
+  "optimizer_updates": 6400,
+  "dataset_sources": [
+    "DACL10k",
+    "DamSegment",
+    "CODEBRIM",
+    "BeltCrack",
+    "Mendeley-s25x2bnshz"
+  ],
+  "actually_scheduled_unique": {
+    "facility_surface": 9305,
+    "belt_damage": 1397,
+    "conveyor_foreign": 4558
+  },
+  "initial_main_sha256": "0773b64f85bde27c256580be2fe36fabc0956c8b0bc3c087fc49716ba61d6c6a",
+  "initial_state_sha256": "592711561f92a665bf0ad9fba517b3cd968eec0aeb4a01ff00042142e5fd7160",
+  "final_state_sha256": "f65429ca8ed2a2832ef3b3ba4ce5b39801a871223ae3bd922f21326ea5a408b7",
+  "teacher_unchanged": true,
+  "protocol_sha256": "32d5ff5488c023e86c63e51124b7390bbed336e52dcf74b2075d39d5b453e97b",
+  "fit_protocol_commit": "b53eac384f987fd412c436f880fd3a7935f15440",
+  "elapsed_training_and_CAL_minutes": 18.019266666665985,
+  "TEST_used_for_fit_or_CAL": false,
+  "weights_sha256": "362f9cab4a137419e63118f73b6b622dccfacc37c94a8f52af62f217b1491598",
+  "strict_CPU_GPU_all_three_tasks": true,
+  "checkpoint_count": 1,
+  "backbone_count": 1
+}

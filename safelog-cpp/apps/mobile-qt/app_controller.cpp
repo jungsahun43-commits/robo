@@ -16,6 +16,7 @@ std::shared_ptr<ai::IAiSafetyAnalyzer> makeDefaultAnalyzer() {
   const int configuredTimeout = environment.value("SAFELOG_AI_TIMEOUT_MS").toInt(&timeoutOk);
   HttpAiSafetyAnalyzerConfig config;
   config.baseUrl = baseUrl.toStdString();
+  config.inspectionTask = environment.value("SAFELOG_AI_INSPECTION_TASK").trimmed().toStdString();
   if (timeoutOk && configuredTimeout > 0) config.timeoutMs = configuredTimeout;
   return std::make_shared<HttpAiSafetyAnalyzer>(std::move(config), makeQtJsonHttpClient());
 }

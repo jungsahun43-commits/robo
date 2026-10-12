@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "actual_epochs": 20,
+  "actual_optimizer_updates": 6400,
+  "original_main_extended": true,
+  "one_shared_backbone": true,
+  "one_checkpoint": true,
+  "three_task_gradients_verified": true,
+  "five_source_preflight_gradients_verified": true,
+  "strict_CPU_GPU_all_three": true,
+  "tests_passed": 3,
+  "preflight_updates_excluded": 5,
+  "current_inputs_preserved": 31718,
+  "prior_artifacts_preserved": 61,
+  "legacy_sources_preserved": 406,
+  "new_labels": 0,
+  "app_default_promoted": false
+}

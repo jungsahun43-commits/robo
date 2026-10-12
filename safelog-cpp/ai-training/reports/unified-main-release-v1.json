@@ -1,0 +1,11 @@
+{
+  "status": "packaged_pending_isolated_http_test",
+  "archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-main-role4-handoff-2026-10-13-v1.zip",
+  "sha256": "66632cf2400df10215fc78cbd4697fca7d96b27963c1b220737c26171ca4093a",
+  "bytes": 13709990,
+  "model_sha256": "362f9cab4a137419e63118f73b6b622dccfacc37c94a8f52af62f217b1491598",
+  "checkpoint_count": 1,
+  "source_dataset_images_included": false,
+  "member_count": 32,
+  "local_markdown_links_closed": true
+}

@@ -55,6 +55,8 @@ struct HttpAiSafetyAnalyzerConfig {
   std::string hazardPromptVersion{"safelog-hazard-v1"};
   std::string comparisonPromptVersion{"safelog-comparison-v1"};
   std::string summaryPromptVersion{"safelog-summary-v1"};
+  // Optional for legacy servers; required by the unified main server.
+  std::string inspectionTask;
 };
 
 class HttpAiSafetyAnalyzer final : public ai::IAiSafetyAnalyzer {
