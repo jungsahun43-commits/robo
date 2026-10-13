@@ -1,0 +1,8 @@
+{
+  "status": "excluded_numeric_guard_failure",
+  "optimizer_calls_attempted": 1,
+  "journal_committed_updates": 0,
+  "saved_checkpoint": false,
+  "selected": false,
+  "old_sources_and_protocol_preserved": true
+}
