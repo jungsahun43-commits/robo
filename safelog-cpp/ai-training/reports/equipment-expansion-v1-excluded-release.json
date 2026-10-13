@@ -1,0 +1,12 @@
+{
+  "status": "excluded",
+  "archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-equipment-prototype-role4-handoff-2026-10-14-v1.zip",
+  "archive_sha256": "26e9f3a660430047ab257dc4bf80a59f021e29fb9c68655f0316e06a756ed545",
+  "release_source_sha256": "628e352176102a00e87502cfd0c9aeddedd2114b1f95b95ec057c8e83e492380",
+  "reason": "Existing C++ adapter allowlist accepted only original3 tasks; newcategory constructor rejected before HTTP call. Python API newcategory worked.",
+  "successful_CPP_operations": 9,
+  "failed_newcategory_CPP_operations": 0,
+  "owned_server_stopped_by_finally": true,
+  "new_neural_updates": 0,
+  "model_weights_changed": false
+}

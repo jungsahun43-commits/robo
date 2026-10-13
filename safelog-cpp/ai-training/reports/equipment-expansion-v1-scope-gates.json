@@ -1,0 +1,72 @@
+{
+  "photo_target_initial": 0.2,
+  "photo_target_next": 0.15,
+  "existing_outputs": {
+    "belt_damage": {
+      "photo_FPR": null,
+      "photo_FNR": 0.0056657223796034,
+      "stage": "insufficient_normal_whole_photo_labels",
+      "pixel_FNR": 0.329588155498077
+    },
+    "conveyor_foreign": {
+      "photo_FPR": 0.015037593984962405,
+      "photo_FNR": 0.0026041666666666665,
+      "stage": "known_benchmark_within15",
+      "reused_recordings": true
+    },
+    "facility_surface": {
+      "stage": "requires_per_class_improvement",
+      "worst_crack_spalling_rate": 0.25129533678756477
+    }
+  },
+  "new_outputs": {
+    "ad_cable": {
+      "state": "needs_improvement",
+      "ready_for_next_stage": false
+    },
+    "ad_screw": {
+      "state": "needs_improvement",
+      "ready_for_next_stage": false
+    },
+    "ad_metal_nut": {
+      "state": "needs_improvement",
+      "ready_for_next_stage": false
+    },
+    "loco_splicing_connectors": {
+      "state": "needs_improvement",
+      "ready_for_next_stage": false
+    },
+    "mpdd_bracket_black": {
+      "state": "needs_improvement",
+      "ready_for_next_stage": false
+    },
+    "mpdd_bracket_brown": {
+      "state": "needs_improvement",
+      "ready_for_next_stage": false
+    },
+    "mpdd_bracket_white": {
+      "state": "needs_improvement",
+      "ready_for_next_stage": false
+    },
+    "mpdd_connector": {
+      "state": "insufficient_evaluation",
+      "ready_for_next_stage": false
+    },
+    "mpdd_metal_plate": {
+      "state": "needs_improvement",
+      "ready_for_next_stage": false
+    },
+    "mpdd_tubes": {
+      "state": "needs_improvement",
+      "ready_for_next_stage": false
+    },
+    "ksdd2_surface": {
+      "state": "target15_met",
+      "ready_for_next_stage": true
+    }
+  },
+  "pooled_rate_cannot_replace_per_category_rates": true,
+  "location_metrics_are_separate": true,
+  "field_performance_validated": false,
+  "old_default_model_unchanged": true
+}

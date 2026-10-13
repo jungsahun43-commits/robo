@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "actual_unique_optimizer_updates": 2640,
+  "actual_journal_updates": 2640,
+  "old_files_bytes_mtimes_preserved": 61073,
+  "old_sources_preserved": 476,
+  "all_old_tensors_exact": true,
+  "final_equals_progress": true,
+  "normal_only_neural_fit": true,
+  "publisher_TEST_not_used_for_fit_or_calibration": true,
+  "architecture_has_one_shared_backbone": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "actual_modified_Qt_CPP_adapter_compiled": true,
+  "adapter_test_output": "********* Start testing of HttpAiSafetyAnalyzerTests *********\nConfig: Using QtTest library 6.11.2, Qt 6.11.2 (x86_64-little_endian-llp64 shared (dynamic) release build; by GCC 13.1.0), windows 11\nPASS   : HttpAiSafetyAnalyzerTests::initTestCase()\nPASS   : HttpAiSafetyAnalyzerTests::parsesHazardAndBuildsImageRequest()\nPASS   : HttpAiSafetyAnalyzerTests::forwardsUnifiedTaskInHazardAndComparison()\nPASS   : HttpAiSafetyAnalyzerTests::rejectsUnsupportedInspectionTask()\nPASS   : HttpAiSafetyAnalyzerTests::parsesComparisonAndSummary()\nPASS   : HttpAiSafetyAnalyzerTests::rejectsInvalidSchema()\nPASS   : HttpAiSafetyAnalyzerTests::retriesTransientFailure()\nPASS   : HttpAiSafetyAnalyzerTests::distinguishesHttpAndInputErrors()\nPASS   : HttpAiSafetyAnalyzerTests::cleanupTestCase()\nTotals: 9 passed, 0 failed, 0 skipped, 0 blacklisted, 15ms\n********* Finished testing of HttpAiSafetyAnalyzerTests *********",
+  "probe_executable": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\equipment-expansion-v1\\qt-probe\\build\\unified_probe.exe",
+  "probe_sha256": "68292af44016491d62163c9190cfae1ef4c673af164a9f41912e5e13e3d65b5e",
+  "compiler": "Qt6.11.2 MinGW13.1 C++20",
+  "full_Android_APK_built": false,
+  "build_receipt_path_repaired_without_rebuild": true,
+  "QTest_explicit_output_file_verified": true
+}

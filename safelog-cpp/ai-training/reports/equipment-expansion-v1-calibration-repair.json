@@ -1,0 +1,11 @@
+{
+  "failure": "torch.quantile input tensor too large at normalCAL pixel threshold computation",
+  "stage": "after30epochs and2640 completed optimizer updates, before final checkpoint export and TEST evaluation",
+  "saved_progress_sha256": "07485d58b2743727ab836485164b9d54ed23a56ec22d084df3674a3f1d9f9a68",
+  "failed_optimizer_calls": 0,
+  "extra_optimizer_calls_for_repair": 0,
+  "same_percentile_definition": "0.995 linear interpolation on normalCAL residual pixels, NumPy supports >2**24 inputs",
+  "frozen_training_source_unchanged": true,
+  "TEST_scores_used_for_repair": false,
+  "repair_source_sha256": "62c15a492d47cebe8175bf71cbcb0d3952ba05f31bc59eab23998a7816a34706"
+}

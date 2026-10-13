@@ -15,6 +15,7 @@
 #include <QUrl>
 
 #include <algorithm>
+#include <array>
 #include <cmath>
 #include <utility>
 
@@ -164,8 +165,14 @@ HttpAiSafetyAnalyzer::HttpAiSafetyAnalyzer(HttpAiSafetyAnalyzerConfig config,
     throw AiProviderError(AiProviderErrorCode::InputError, "AI 서버 주소와 HTTP 클라이언트가 필요합니다.");
   config_.timeoutMs = std::max(1, config_.timeoutMs);
   config_.maxRetries = std::max(0, config_.maxRetries);
-  if (!config_.inspectionTask.empty() && config_.inspectionTask != "facility_surface" &&
-      config_.inspectionTask != "belt_damage" && config_.inspectionTask != "conveyor_foreign")
+  static constexpr std::array<const char*, 14> supportedTasks{
+    "facility_surface", "belt_damage", "conveyor_foreign",
+    "ad_cable", "ad_screw", "ad_metal_nut", "loco_splicing_connectors",
+    "mpdd_bracket_black", "mpdd_bracket_brown", "mpdd_bracket_white",
+    "mpdd_connector", "mpdd_metal_plate", "mpdd_tubes", "ksdd2_surface"};
+  if (!config_.inspectionTask.empty() &&
+      !std::any_of(supportedTasks.begin(), supportedTasks.end(),
+                   [&](const char* task) { return config_.inspectionTask == task; }))
     throw AiProviderError(AiProviderErrorCode::InputError, "지원하지 않는 AI 점검 항목입니다.");
 }
 
