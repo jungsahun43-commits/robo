@@ -1,0 +1,34 @@
+{
+  "status": "prepared_provisional_normal_ROIs_not_whole_photos",
+  "source": "https://universe.roboflow.com/gofaones-workspace/belt-defects/dataset/2",
+  "publisher": "Gofaones Workspace",
+  "license": "CC BY 4.0",
+  "archive_sha256": "7e85c4a23fb9f19698d50432520fe878f1ac58d938d9c170c0f8f32fb2b73a2c",
+  "v1_archive_sha256": "815152be97f7917dc9c52fb1bfdf06ce80e0cd9cb6317a96ac7c1371b479a8a8",
+  "exported_v2_images": 1548,
+  "source_parent_hints": 545,
+  "publisher_cross_split_parent_hints": 57,
+  "dedup_similarity_groups": 248,
+  "eligible_explicit_normal_groups_before_prior_source_check": 24,
+  "excluded_prior_source_overlap_groups": 0,
+  "exclusions": {
+    "v1_worn_label_parent_excluded": 10,
+    "cross_provisional_split_similarity_groups": 1
+  },
+  "split_counts": {
+    "cal": 3,
+    "fit": 14,
+    "reserved": 7
+  },
+  "sampling": "One explicit normal core per conservative parent/exactRGB/rotation-mirror pHash<=6 component; core60% of shortest bbox side, min64, excludes ANY overlap with nonnormal annotations",
+  "provisional_split": "FIT publisherTRAIN frame0..149; CAL frame180..239; reserved frame270+; remaining gaps/unknown excluded. Frame hints are NOT verified original recording IDs.",
+  "normal_whole_photo_labels_created": 0,
+  "normal_pixel_masks_created": 0,
+  "normal_roi_labels_from_publisher": 24,
+  "new_independent_factory_photos_verified": 0,
+  "original_sequence_groups_verified": false,
+  "reserved_model_predictions_performed": false,
+  "old_BeltCrack_reserved_TEST_used": false,
+  "new_source_annotations_not_ai_generated": true,
+  "source_images_redistributed_in_Git": false
+}

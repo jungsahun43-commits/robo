@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "protected_files": 50296,
+  "legacy_sources": 457,
+  "old_bytes_and_mtimes_preserved": true,
+  "final_equals_progress": true,
+  "non_belt_tensors_exact_prior": true,
+  "actual_journal_updates": 512,
+  "unique_committed_updates": 512,
+  "normal_ROI_source_images_and_sha_preserved": true,
+  "reserved_normal7_model_predictions_performed": false,
+  "old_BeltCrack_TEST_used": false
+}

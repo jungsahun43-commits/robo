@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "downloaded_exports": [
+    {
+      "version": 1,
+      "images": 497,
+      "sha256": "815152be97f7917dc9c52fb1bfdf06ce80e0cd9cb6317a96ac7c1371b479a8a8"
+    },
+    {
+      "version": 2,
+      "images": 1548,
+      "sha256": "7e85c4a23fb9f19698d50432520fe878f1ac58d938d9c170c0f8f32fb2b73a2c"
+    }
+  ],
+  "normal_ROIs": {
+    "cal": 3,
+    "fit": 14,
+    "reserved": 7
+  },
+  "performed_neural_epochs": 4,
+  "performed_unique_updates": 512,
+  "actual_journal_updates": 512,
+  "normal_whole_photo_labels": 0,
+  "dense_normal_pixel_masks": 0,
+  "normal_whole_photo_FPR": null,
+  "normal_CAL_ROI_results": {
+    "accepted": {
+      "ROIs": 3,
+      "false_alarms": 2,
+      "ROI_FPR": 0.6666666666666666
+    },
+    "normal_pilot": {
+      "ROIs": 3,
+      "false_alarms": 0,
+      "ROI_FPR": 0.0
+    }
+  },
+  "known_positive_VAL_reused": true,
+  "reserved_normal7_model_scores_computed": false,
+  "original_recording_groups_verified": false,
+  "old_BeltCrack_TEST_used": false,
+  "new_selected_checkpoint": false,
+  "retained_model_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+  "retained_policy_sha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+  "pilot_weights_sha256": "c4e70e28cd596f1bc4726fd8be617ce5fd7c598ef442076116af942ae2be103a",
+  "old_files_preserved": 50296,
+  "old_sources_preserved": 457,
+  "CPU_GPU_three_task_and_native_tiles_checked": true,
+  "new_CPP_HTTP_tests": 0,
+  "retained_handoff": "unified-main-belt-tiles-role4-handoff-2026-10-13-v1.1.zip",
+  "retained_handoff_sha256": "3e8235e8d3cc626bf0476a05a6f8686872fd90d34ed517c6d081e707cfdbd7c9",
+  "ZIP_CRC_weights_policy_and_members_checked": true,
+  "local_links_checked": 265,
+  "new_handoff": null,
+  "app_default_promoted": false,
+  "industrial_all_tasks_5percent_verified": false,
+  "raw_slice_helper_score_scope": "Actual photo scores are fused global/tile maxima over valid pixels, not calibrated; helper shorthand does not alter raw counts"
+}
