@@ -1,0 +1,11 @@
+{
+  "protected_files": 49862,
+  "legacy_sources": 445,
+  "old_bytes_and_mtimes_preserved": true,
+  "one_neural_model": true,
+  "weights_unchanged": true,
+  "new_neural_updates": 0,
+  "baseline353_pixel_counts_exact_reproduced": true,
+  "normal_photo_FPR": null,
+  "reserved_TEST_used": false
+}
