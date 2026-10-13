@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "protected_files": 50224,
+  "legacy_sources": 449,
+  "old_bytes_and_mtimes_preserved": true,
+  "non_belt_tensors_exact_prior": true,
+  "final_equals_progress": true,
+  "actual_journal_updates": 768,
+  "committed_unique_updates": 768,
+  "native_tile_CPU_GPU_close": true,
+  "reserved_TEST_used": false
+}

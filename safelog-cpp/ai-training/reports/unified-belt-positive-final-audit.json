@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "performed_neural_epochs": 6,
+  "performed_unique_optimizer_updates": 768,
+  "actual_journal_optimizer_updates": 768,
+  "performed_inference_only_candidates": 2,
+  "inference_comparison_neural_updates": 0,
+  "new_selected_checkpoint": false,
+  "research_main_checkpoint_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+  "research_main_policy": {
+    "version": "safelog-belt-uniform-tiles-v1",
+    "beltMode": "global_tile_mean",
+    "model_count": 1,
+    "geometry": "max6 squares; side=min(short,max640,ceil.4long,ceil.6short); uniform3long x2short",
+    "tiny_or_panorama_fallback": "global only if maxedge<=640 or aspect>3",
+    "stitch": "positive-floor Hann weighted mean at native coordinates then bilinear to original640 valid grid",
+    "fusion": "0.5global probability +0.5tile probability, threshold unchanged",
+    "annotations_at_inference": false,
+    "sha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66"
+  },
+  "unselected_trained_checkpoint_sha256": "e4aaec61196c51b7b2f2e76c614649f2caf327be034d50784d806aad8435c976",
+  "retained_handoff_archive": "unified-main-belt-tiles-role4-handoff-2026-10-13-v1.1.zip",
+  "retained_archive_sha256": "3e8235e8d3cc626bf0476a05a6f8686872fd90d34ed517c6d081e707cfdbd7c9",
+  "archive_weights_policy_member_SHA_and_CRC_verified": true,
+  "new_handoff_created": false,
+  "new_CPP_HTTP_tests_this_turn": 0,
+  "new_training_CPU_GPU_three_task_and_native_tile_checks": {
+    "facility_surface": {
+      "CPU_GPU_close": true,
+      "prior_CPU_exact": true
+    },
+    "belt_damage": {
+      "CPU_GPU_close": true,
+      "prior_CPU_exact": false
+    },
+    "conveyor_foreign": {
+      "CPU_GPU_close": true,
+      "prior_CPU_exact": true
+    }
+  },
+  "old_inputs_models_reports_protected_files": 50224,
+  "old_source_SHA_checked": 449,
+  "known_VAL_reused": true,
+  "known_positive_belt_photos": 353,
+  "normal_whole_photo_labels": 0,
+  "normal_photo_FPR": null,
+  "reserved_TEST_used": false,
+  "industrial_all_tasks_5percent_verified": false,
+  "new_independent_photos": 0,
+  "new_labels": 0,
+  "raw_summarizer_slice_score_definition_clarification": "Historical helper shorthand maximum sigmoid; actual scores in BOTH new studies are maximum fused global/tile probabilities over valid pixels, not calibrated. All raw counts, thresholds and scores preserved.",
+  "local_links_checked": 269,
+  "figures": {
+    "unified-belt-fine-comparison.png": [
+      2560,
+      800
+    ],
+    "unified-belt-positive-comparison.png": [
+      2560,
+      800
+    ]
+  },
+  "app_default_promoted": false
+}
