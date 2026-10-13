@@ -1,0 +1,28 @@
+{
+  "selected": "prior_native_mix",
+  "guards": {
+    "anchor_control": {
+      "background_pixel_FPR_relative_reduction_at_least_10pct": true,
+      "pixel_IoU_not_worse": true,
+      "photo_FNR_not_worse": true,
+      "pixel_FNR_not_worse": false,
+      "zero_GT_overlap_photos_not_worse": false
+    },
+    "hard_background": {
+      "background_pixel_FPR_relative_reduction_at_least_10pct": true,
+      "pixel_IoU_not_worse": true,
+      "photo_FNR_not_worse": false,
+      "pixel_FNR_not_worse": false,
+      "zero_GT_overlap_photos_not_worse": false
+    }
+  },
+  "normal_belt_photo_FPR_available": false,
+  "known_VAL_reused": true,
+  "reserved_TEST_used": false,
+  "independent_factory_verified": false,
+  "app_default_promoted": false,
+  "checkpoint_path": "runs/unified-belt-native-detail-v1/native_mix/final.pt",
+  "checkpoint_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+  "protocol_sha256": "a2d5a5b2e026586c39033bc95f02db063b8bf24688f25473bf2bb107b21e8f80",
+  "decided_utc": "2026-10-13T03:09:15.996241+00:00"
+}

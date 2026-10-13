@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "models": {
+    "anchor_control": {
+      "committed_updates": 1280,
+      "actual_journal_updates": 1280,
+      "native_crop_draws": 5120,
+      "fullframe_draws": 5120,
+      "all_non_belt_tensors_exact_prior": true,
+      "final_equals_last_progress": true,
+      "reference_unchanged_and_no_gradients": true,
+      "strict_CPU_GPU_three_tasks": {
+        "facility_surface": {
+          "strict_CPU_GPU_close": true,
+          "prior_CPU_predictions_exactly_equal": true
+        },
+        "belt_damage": {
+          "strict_CPU_GPU_close": true,
+          "prior_CPU_predictions_exactly_equal": false
+        },
+        "conveyor_foreign": {
+          "strict_CPU_GPU_close": true,
+          "prior_CPU_predictions_exactly_equal": true
+        }
+      },
+      "model_sha256": "d097038626f9566eebef64409d91932b562c99e50e603c115bd365c492edc0e8"
+    },
+    "hard_background": {
+      "committed_updates": 1280,
+      "actual_journal_updates": 1280,
+      "native_crop_draws": 5120,
+      "fullframe_draws": 5120,
+      "all_non_belt_tensors_exact_prior": true,
+      "final_equals_last_progress": true,
+      "reference_unchanged_and_no_gradients": true,
+      "strict_CPU_GPU_three_tasks": {
+        "facility_surface": {
+          "strict_CPU_GPU_close": true,
+          "prior_CPU_predictions_exactly_equal": true
+        },
+        "belt_damage": {
+          "strict_CPU_GPU_close": true,
+          "prior_CPU_predictions_exactly_equal": false
+        },
+        "conveyor_foreign": {
+          "strict_CPU_GPU_close": true,
+          "prior_CPU_predictions_exactly_equal": true
+        }
+      },
+      "model_sha256": "1d445d0eb67dc5f8cc9eae0bbe9e84b87dc3b1b903fa4faea358f489a4049b9b"
+    }
+  },
+  "total_real_updates": 2560,
+  "protected_files": 37920,
+  "legacy_sources": 430,
+  "selected": "prior_native_mix",
+  "new_photos": 0,
+  "new_labels": 0,
+  "reserved_TEST_used": false,
+  "normal_photo_FPR_available": false,
+  "app_default_promoted": false
+}

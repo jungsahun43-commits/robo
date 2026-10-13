@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "selected": "prior_native_mix",
+  "total_real_updates": 2560,
+  "protected_inputs_and_artifacts": 37920,
+  "protected_legacy_sources": 430,
+  "final_equals_last_progress_for_both": true,
+  "all_non_belt_tensors_exact_prior": true,
+  "reference_unchanged_no_gradients": true,
+  "reference_in_runtime": false,
+  "previous_native_zip_SHA_unchanged": "b2b77bfb5f1b79a1d53a5af0f4ff79ef506d90e456e97deed4d94bbaec774cb0",
+  "original_v1_1_zip_SHA_unchanged": "9cf40237b0d795166bf90e2cfba69c17d8342f01bb992d597af583c88874bec1",
+  "new_archive": null,
+  "local_links_checked": 246,
+  "figure_pixels": [
+    2250,
+    720
+  ],
+  "source_sha256": {
+    "safelog_ai/belt_background.py": "879baa67ff0ccb6057de433ee21fbcb844655c6dc7f3c966ec5e3d0139fa1bc6",
+    "scripts/study_unified_belt_background.py": "f4c316a2b459cd3466c6ab45d7b90dfa4cb2fe9ea9436e88142f2122f604960d",
+    "tests/test_belt_background.py": "b1f6b075e0014e3c8cdb7af0260d2a39d2035b38878b1d2657d6c38e73e6672e"
+  },
+  "audit_script_sha256": "f1e0296a2812d7cca6f3de296f6644d927909534bb263f7ef16145a606618979",
+  "torch_version": "2.12.0+cu126",
+  "GPU": "NVIDIA GeForce RTX 4070 SUPER",
+  "new_photos": 0,
+  "new_labels": 0,
+  "reserved_belt_TEST_used": false,
+  "new_foreign_CAL_TEST_evaluation": false,
+  "normal_belt_photo_FPR_available": false,
+  "industrial_all_tasks_5percent_verified": false,
+  "app_default_promoted": false
+}
