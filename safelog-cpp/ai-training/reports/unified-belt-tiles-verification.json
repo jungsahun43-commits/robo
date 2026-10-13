@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "real_neural_updates": 1280,
+  "actual_journal_updates": 1280,
+  "uniform_view_draws": 5120,
+  "fullframe_draws": 5120,
+  "protected_files": 49831,
+  "legacy_sources": 435,
+  "non_belt_tensors_exact_prior": true,
+  "final_equals_last_progress": true,
+  "strict_CPU_GPU_three_tasks": {
+    "facility_surface": {
+      "CPU_GPU_close": true,
+      "prior_CPU_exactly_equal": true
+    },
+    "belt_damage": {
+      "CPU_GPU_close": true,
+      "prior_CPU_exactly_equal": false
+    },
+    "conveyor_foreign": {
+      "CPU_GPU_close": true,
+      "prior_CPU_exactly_equal": true
+    }
+  },
+  "native_tile_CPU_GPU_close": true,
+  "selected": "accepted_tiles",
+  "selected_new_neural_updates": 0,
+  "new_labels": 0,
+  "new_independent_photos": 0,
+  "normal_photo_FPR_available": false,
+  "reserved_TEST_used": false,
+  "app_default_promoted": false
+}

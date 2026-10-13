@@ -1,0 +1,48 @@
+{
+  "selected": "accepted_tiles",
+  "guards": {
+    "accepted_tiles": {
+      "IoU_gain_at_least_half_percentage_point": true,
+      "background_pixel_FPR_not_worse": true,
+      "photo_FNR_not_worse": true,
+      "pixel_FNR_not_worse": true,
+      "zero_GT_overlap_photos_not_worse": true
+    },
+    "trained_global": {
+      "IoU_gain_at_least_half_percentage_point": true,
+      "background_pixel_FPR_not_worse": true,
+      "photo_FNR_not_worse": false,
+      "pixel_FNR_not_worse": false,
+      "zero_GT_overlap_photos_not_worse": false
+    },
+    "trained_tiles": {
+      "IoU_gain_at_least_half_percentage_point": true,
+      "background_pixel_FPR_not_worse": true,
+      "photo_FNR_not_worse": true,
+      "pixel_FNR_not_worse": false,
+      "zero_GT_overlap_photos_not_worse": false
+    }
+  },
+  "normal_belt_photo_FPR_available": false,
+  "known_VAL_reused": true,
+  "reserved_TEST_used": false,
+  "independent_factory_verified": false,
+  "app_default_promoted": false,
+  "checkpoint_path": "runs/unified-belt-native-detail-v1/native_mix/final.pt",
+  "checkpoint_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+  "mode": "global_tile_mean",
+  "inference_policy": {
+    "version": "safelog-belt-uniform-tiles-v1",
+    "beltMode": "global_tile_mean",
+    "model_count": 1,
+    "geometry": "max6 squares; side=min(short,max640,ceil.4long,ceil.6short); uniform3long x2short",
+    "tiny_or_panorama_fallback": "global only if maxedge<=640 or aspect>3",
+    "stitch": "positive-floor Hann weighted mean at native coordinates then bilinear to original640 valid grid",
+    "fusion": "0.5global probability +0.5tile probability, threshold unchanged",
+    "annotations_at_inference": false,
+    "sha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66"
+  },
+  "selected_new_neural_updates": 0,
+  "protocol_sha256": "139a7422d79b287ac851be23e06a4d62559f1cc14e0525159bcda38a21442049",
+  "decided_utc": "2026-10-13T09:51:21.842351+00:00"
+}

@@ -24,7 +24,7 @@
 ./.venv/Scripts/python.exe scripts/study_unified_belt_tiles.py prepare
 ./.venv/Scripts/python.exe scripts/study_unified_belt_tiles.py freeze
 # 소스·사전조건 커밋 뒤 실행
-./.venv/Scripts/python.exe scripts/study_unified_belt_tiles.py train
+./.venv/Scripts/python.exe scripts/run_unified_belt_tiles.py train
 ./.venv/Scripts/python.exe scripts/study_unified_belt_tiles.py evaluate
 ./.venv/Scripts/python.exe scripts/study_unified_belt_tiles.py select
 ./.venv/Scripts/python.exe scripts/study_unified_belt_tiles.py verify
@@ -34,6 +34,8 @@
 ```
 
 train은 마지막progress에서 재개하고 완료final.pt가 있으면 학습을 반복하지 않는다. 같은 실험의 실행중lock이 있으면 중복실행하지 않는다.
+
+Windows 재개 진입점은 `run_unified_belt_tiles.py`다. PID 존재 여부를 `OpenProcess`의 조회 권한과 `GetExitCodeProcess`로만 확인한다. Windows의 `os.kill(pid, 0)`은 종료 API를 호출할 수 있어서 조회 용도로 사용하지 않는다. [Python3.12 문서](https://docs.python.org/3.12/library/os.html#os.kill), [Microsoft 조회 API](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)에 맞춘 운영 보완이며 동결된 학습 소스·가중치·분석 정책은 바꾸지 않았다.
 
 ## 해석 범위
 

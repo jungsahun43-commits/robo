@@ -1,0 +1,18 @@
+{
+  "status": "passed_docs_only_revision",
+  "archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-main-belt-tiles-role4-handoff-2026-10-13-v1.1.zip",
+  "archive_sha256": "3e8235e8d3cc626bf0476a05a6f8686872fd90d34ed517c6d081e707cfdbd7c9",
+  "archive_bytes": 13994303,
+  "model_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+  "mode": "global_tile_mean",
+  "inference_policy_sha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+  "runtime_model_manifest_API_and_CPP_byte_identical_to_tested_v1": true,
+  "runtime_files_verified": 16,
+  "isolated_v1_CPU_CPP_operations_inherited": 9,
+  "new_neural_updates": 0,
+  "zip_crc_member_SHA_local_links_passed": true,
+  "original_v1_zip_sha256_preserved": "8fe2df0f898c68bcdba137047d148405f12e1c986cf92efacba7ef855fb8b06b",
+  "fresh_v1_1_API_calls_repeated": false,
+  "only_docs_and_descriptive_score_scope_changed": true,
+  "app_default_promoted": false
+}

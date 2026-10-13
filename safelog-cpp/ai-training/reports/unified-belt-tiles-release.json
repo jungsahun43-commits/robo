@@ -1,0 +1,229 @@
+{
+  "status": "passed",
+  "archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-main-belt-tiles-role4-handoff-2026-10-13-v1.zip",
+  "archive_sha256": "8fe2df0f898c68bcdba137047d148405f12e1c986cf92efacba7ef855fb8b06b",
+  "archive_bytes": 13992651,
+  "model_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+  "selected": "accepted_tiles",
+  "mode": "global_tile_mean",
+  "inference_policy_sha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+  "checkpoint_count": 1,
+  "backbone_count": 1,
+  "isolated_zip_CPU_HTTP": true,
+  "actual_CPP_http_operations": 9,
+  "cpp_proofs": [
+    {
+      "inspectionTask": "facility_surface",
+      "modelSha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "belt_damage",
+      "modelSha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "conveyor_foreign",
+      "modelSha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    }
+  ],
+  "hazard_responses": [
+    {
+      "schema": "safelog.unified-main.v1",
+      "inspectionTask": "facility_surface",
+      "neuralModelCount": 1,
+      "sharedBackboneCount": 1,
+      "modelName": "unified-main-v1",
+      "modelSha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+      "classResults": [
+        {
+          "className": "concrete_crack",
+          "score": 0.9974125027656555,
+          "threshold": 0.2898597717285156,
+          "candidateDetected": true
+        },
+        {
+          "className": "concrete_spalling",
+          "score": 0.22386842966079712,
+          "threshold": 0.4649081826210022,
+          "candidateDetected": false
+        },
+        {
+          "className": "rust_stain",
+          "score": 0.13251133263111115,
+          "threshold": 0.5,
+          "candidateDetected": false
+        },
+        {
+          "className": "exposed_rebar",
+          "score": 0.0077131157740950584,
+          "threshold": 0.5,
+          "candidateDetected": false
+        },
+        {
+          "className": "wet_surface",
+          "score": 0.07396917790174484,
+          "threshold": 0.5,
+          "candidateDetected": false
+        },
+        {
+          "className": "efflorescence",
+          "score": 0.9827989935874939,
+          "threshold": 0.5,
+          "candidateDetected": true
+        },
+        {
+          "className": "surface_cavity",
+          "score": 0.3617190718650818,
+          "threshold": 0.5,
+          "candidateDetected": false
+        }
+      ],
+      "candidateDetected": true,
+      "inputSha256": "00e2db9b0bfa6d89e461211e5e918a783d5c7343c42d9677d17946f2b2fde054",
+      "inputWidth": 800,
+      "inputHeight": 600,
+      "heatmapIsConfirmedDefectLocalization": false,
+      "scoreIsCalibratedProbability": false,
+      "otherTasksEvaluated": false,
+      "mechanicalFailureState": "not_assessed",
+      "humanConfirmationRequired": true,
+      "fieldPerformanceValidated": false,
+      "beltPhotoFprValidated": false,
+      "evidenceScope": "photo_presence",
+      "trainedDatasetSources": [
+        "DACL10k",
+        "DamSegment",
+        "CODEBRIM",
+        "BeltCrack",
+        "Mendeley-s25x2bnshz"
+      ],
+      "inferencePolicyVersion": "safelog-belt-uniform-tiles-v1",
+      "inferencePolicySha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+      "configuredBeltInferenceMode": "global_tile_mean",
+      "nativeDetailViewsEvaluated": 0,
+      "hazardCategory": "표면 균열 후보 / 백화 후보",
+      "riskLevel": 3,
+      "detectedHazards": [
+        "표면 균열 후보",
+        "백화 후보"
+      ],
+      "suggestedDescription": "사진에서 표면 균열 후보, 백화 후보가 제안되었습니다.",
+      "suggestedAction": "점검자가 사진과 현장을 확인한 뒤 담당자의 조치와 재점검 내용을 기록하세요.",
+      "confidence": 0.9974125027656555,
+      "riskLevelMethod": "rule_template_not_learned_severity",
+      "promptVersion": "belt-tiles-release-v1"
+    },
+    {
+      "schema": "safelog.unified-main.v1",
+      "inspectionTask": "belt_damage",
+      "neuralModelCount": 1,
+      "sharedBackboneCount": 1,
+      "modelName": "unified-main-v1",
+      "modelSha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+      "classResults": [
+        {
+          "className": "belt_crack",
+          "score": 0.9999159574508667,
+          "threshold": 0.5,
+          "candidateDetected": true
+        }
+      ],
+      "candidateDetected": true,
+      "inputSha256": "fac69f9f79aa3a064d3d45a79c2427c509eded303dfbbf735a37a102fd185c6c",
+      "inputWidth": 1920,
+      "inputHeight": 1080,
+      "heatmapIsConfirmedDefectLocalization": false,
+      "scoreIsCalibratedProbability": false,
+      "otherTasksEvaluated": false,
+      "mechanicalFailureState": "not_assessed",
+      "humanConfirmationRequired": true,
+      "fieldPerformanceValidated": false,
+      "beltPhotoFprValidated": false,
+      "evidenceScope": "belt_author_mask_review",
+      "trainedDatasetSources": [
+        "DACL10k",
+        "DamSegment",
+        "CODEBRIM",
+        "BeltCrack",
+        "Mendeley-s25x2bnshz"
+      ],
+      "inferencePolicyVersion": "safelog-belt-uniform-tiles-v1",
+      "inferencePolicySha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+      "configuredBeltInferenceMode": "global_tile_mean",
+      "nativeDetailViewsEvaluated": 6,
+      "hazardCategory": "벨트 손상 후보",
+      "riskLevel": 3,
+      "detectedHazards": [
+        "벨트 손상 후보"
+      ],
+      "suggestedDescription": "사진에서 벨트 손상 후보가 제안되었습니다.",
+      "suggestedAction": "점검자가 사진과 현장을 확인한 뒤 담당자의 조치와 재점검 내용을 기록하세요.",
+      "confidence": 0.9999159574508667,
+      "riskLevelMethod": "rule_template_not_learned_severity",
+      "promptVersion": "belt-tiles-release-v1"
+    },
+    {
+      "schema": "safelog.unified-main.v1",
+      "inspectionTask": "conveyor_foreign",
+      "neuralModelCount": 1,
+      "sharedBackboneCount": 1,
+      "modelName": "unified-main-v1",
+      "modelSha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+      "classResults": [
+        {
+          "className": "conveyor_foreign_object",
+          "score": 0.999994158744812,
+          "threshold": 0.09148399130680455,
+          "candidateDetected": true
+        }
+      ],
+      "candidateDetected": true,
+      "inputSha256": "b126b036b73446ed9303963d1def91af0adeed9d6172309761a7bcde9f56a2f3",
+      "inputWidth": 1280,
+      "inputHeight": 555,
+      "heatmapIsConfirmedDefectLocalization": false,
+      "scoreIsCalibratedProbability": false,
+      "otherTasksEvaluated": false,
+      "mechanicalFailureState": "not_assessed",
+      "humanConfirmationRequired": true,
+      "fieldPerformanceValidated": false,
+      "beltPhotoFprValidated": false,
+      "evidenceScope": "photo_presence",
+      "trainedDatasetSources": [
+        "DACL10k",
+        "DamSegment",
+        "CODEBRIM",
+        "BeltCrack",
+        "Mendeley-s25x2bnshz"
+      ],
+      "inferencePolicyVersion": "safelog-belt-uniform-tiles-v1",
+      "inferencePolicySha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+      "configuredBeltInferenceMode": "global_tile_mean",
+      "nativeDetailViewsEvaluated": 0,
+      "hazardCategory": "이물질 후보",
+      "riskLevel": 3,
+      "detectedHazards": [
+        "이물질 후보"
+      ],
+      "suggestedDescription": "사진에서 이물질 후보가 제안되었습니다.",
+      "suggestedAction": "점검자가 사진과 현장을 확인한 뒤 담당자의 조치와 재점검 내용을 기록하세요.",
+      "confidence": 0.999994158744812,
+      "riskLevelMethod": "rule_template_not_learned_severity",
+      "promptVersion": "belt-tiles-release-v1"
+    }
+  ],
+  "all_smoke_photos_are_TRAIN": true,
+  "zip_crc_member_SHA_and_local_links_verified": true,
+  "owned_server_stopped": true,
+  "fresh_pip_install_tested": false,
+  "all_industrial_tasks_5percent_verified": false,
+  "app_default_promoted": false
+}

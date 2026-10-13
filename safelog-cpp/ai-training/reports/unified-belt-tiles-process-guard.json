@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "Operational Windows read-only lock probe only; no neural/inference-policy change",
+  "tests_passed": 2,
+  "completed_model_resume_extra_updates": 0,
+  "completed_model_sha256_unchanged": "e91fe3ca095d3e6335796a41fa4fcf35b0355b907100a1e4132551e2d46fc270",
+  "measured_fit_duplicate_probe_branch_was_not_used": true,
+  "source_sha256": {
+    "safelog_ai/process_probe.py": "6056466915aa38c35ccfef333e211f32cb446dcde2316715c2c672b4fd850536",
+    "scripts/run_unified_belt_tiles.py": "a0080d5335ca29c5fecc9cb435ec4b8ea3f3ffddaba4aedd547579b6190366aa",
+    "tests/test_process_probe.py": "aa7eefecc657f384996951c801923463b346319f48093d90e0b2225277ad8bd3"
+  },
+  "official_references": [
+    "https://docs.python.org/3.12/library/os.html#os.kill",
+    "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess"
+  ]
+}

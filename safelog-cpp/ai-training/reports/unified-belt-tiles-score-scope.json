@@ -1,0 +1,11 @@
+{
+  "status": "descriptive_metadata_clarified_no_metric_change",
+  "all_original_counts_scores_and_thresholds_preserved": true,
+  "common_summary_photo_score_definition": "Inherited single-view shorthand; use explicit per-config policy/formula below",
+  "accepted_tiles_and_trained_tiles_actual_photo_score": "Maximum over original640 valid pixels of0.5global sigmoid probability +0.5native Hann-mean tile sigmoid probability, mapped bilinearly; not calibrated",
+  "trained_global_actual_photo_score": "Maximum global sigmoid probability over original640 valid pixels; not calibrated",
+  "selected_checkpoint_additional_uniform_training_updates": 0,
+  "performed_research_candidate_updates_not_selected": 1280,
+  "selected_policy_sha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+  "selected_model_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5"
+}

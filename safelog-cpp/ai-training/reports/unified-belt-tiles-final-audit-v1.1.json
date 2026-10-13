@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "selected": "accepted_tiles",
+  "real_neural_updates": 1280,
+  "selected_new_neural_updates": 0,
+  "selected_mode": "global_tile_mean",
+  "inference_policy_sha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+  "protected_files": 49831,
+  "legacy_sources": 435,
+  "non_belt_tensors_exact_prior": true,
+  "final_equals_progress": true,
+  "native_tile_CPU_GPU_close": true,
+  "previous_zip_SHA_preserved": {
+    "unified-main-belt-detail-role4-handoff-2026-10-13-v1.zip": "b2b77bfb5f1b79a1d53a5af0f4ff79ef506d90e456e97deed4d94bbaec774cb0",
+    "unified-main-role4-handoff-2026-10-13-v1.1.zip": "9cf40237b0d795166bf90e2cfba69c17d8342f01bb992d597af583c88874bec1"
+  },
+  "new_archive": {
+    "archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-main-belt-tiles-role4-handoff-2026-10-13-v1.1.zip",
+    "archive_sha256": "3e8235e8d3cc626bf0476a05a6f8686872fd90d34ed517c6d081e707cfdbd7c9",
+    "archive_bytes": 13994303
+  },
+  "local_links_checked": 263,
+  "figure_pixels": [
+    2400,
+    750
+  ],
+  "source_sha256": {
+    "safelog_ai/belt_tiles.py": "d4a3ef8780af1bb6c27874d28f18f9f310a2c2c656af12c18ce11b2f12d5e5f8",
+    "safelog_ai/unified_tiles_server.py": "e2cfd53bb875ef8083389e8b0f5c5e5a052a1645d72760076d8f60debbd6e386",
+    "scripts/study_unified_belt_tiles.py": "282b7205058a403e60b1458f59efc2261680b5bf4d240b045aaebdeaacd15c49",
+    "tests/test_belt_tiles.py": "00e7856ebf3a057f445c3c73077045d206b5120ba28cf61dddaf42573633ac29"
+  },
+  "audit_script_sha256": "818d79cdda645c8cb414f277a8ad640b3a32ba84c09ebbdafe694f88d4f84f3f",
+  "torch_version": "2.12.0+cu126",
+  "GPU": "NVIDIA GeForce RTX 4070 SUPER",
+  "new_independent_photos": 0,
+  "new_labels": 0,
+  "reserved_TEST_used": false,
+  "new_foreign_CAL_TEST_evaluation": false,
+  "normal_photo_FPR_available": false,
+  "industrial_all_tasks_5percent_verified": false,
+  "app_default_promoted": false,
+  "delivered_revision": "v1.1 docs only",
+  "exact_runtime_files_identical_to_actual_CPU_CPP_test": 16,
+  "original_scores_counts_thresholds_and_selection_identical": true,
+  "actual_CPP_operations_inherited": 9,
+  "fresh_revision_CPP_operations": 0,
+  "score_and_native_resolution_scope_clarified": true,
+  "operational_read_only_process_guard_tests_passed": 2,
+  "revision_audit_source_sha256": "d15e1a03b28db70c2e56d5962e81a1a298dc72311ff199f0887a88838bc47e71"
+}

@@ -1,0 +1,55 @@
+{
+  "status": "trained_fixed10",
+  "architecture": "safelog-unified-facility-belt-foreign-v1",
+  "tasks": [
+    "facility_surface",
+    "belt_damage",
+    "conveyor_foreign"
+  ],
+  "one_shared_backbone": true,
+  "input_size": 640,
+  "thresholds": {
+    "facility_surface": {
+      "concrete_crack": 0.2898597717285156,
+      "concrete_spalling": 0.4649081826210022,
+      "rust_stain": 0.5,
+      "exposed_rebar": 0.5,
+      "wet_surface": 0.5,
+      "efflorescence": 0.5,
+      "surface_cavity": 0.5
+    },
+    "belt_damage": 0.5,
+    "conveyor_foreign": 0.09148399130680455
+  },
+  "epochs": 10,
+  "optimizer_updates": 1280,
+  "training_lineage": {
+    "initial_unified_epochs": 20,
+    "accepted_native_belt_epochs": 10,
+    "additional_uniform_belt_epochs": 10
+  },
+  "initial_checkpoint_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+  "fit_protocol_commit": "87662ab2437ca6c8a96d6f5e6573e819ffb89b45",
+  "protocol_sha256": "139a7422d79b287ac851be23e06a4d62559f1cc14e0525159bcda38a21442049",
+  "non_belt_state_sha256": "79bfca55570f2c8bb2268690dd2ca37ec060a9aa1c2010a50115b1e80259daf6",
+  "strict_CPU_GPU_three_tasks": {
+    "facility_surface": {
+      "CPU_GPU_close": true,
+      "prior_CPU_exactly_equal": true
+    },
+    "belt_damage": {
+      "CPU_GPU_close": true,
+      "prior_CPU_exactly_equal": false
+    },
+    "conveyor_foreign": {
+      "CPU_GPU_close": true,
+      "prior_CPU_exactly_equal": true
+    }
+  },
+  "native_tile_CPU_GPU_close": true,
+  "elapsed_training_minutes": 2.652866666667008,
+  "actual_journal_updates_including_replay": 1280,
+  "new_labels": 0,
+  "new_independent_photos": 0,
+  "weights_sha256": "e91fe3ca095d3e6335796a41fa4fcf35b0355b907100a1e4132551e2d46fc270"
+}
