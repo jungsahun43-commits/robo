@@ -1,0 +1,75 @@
+{
+  "counts": {
+    "ad_cable": {
+      "fit": 178,
+      "cal": 45,
+      "excluded_near_test": 1,
+      "test": 150
+    },
+    "ad_screw": {
+      "excluded_near_test": 200,
+      "fit": 96,
+      "cal": 24,
+      "test": 160
+    },
+    "ad_metal_nut": {
+      "cal": 44,
+      "fit": 176,
+      "test": 115
+    },
+    "loco_splicing_connectors": {
+      "fit": 330,
+      "excluded_near_test": 36,
+      "cal": 54,
+      "test": 312
+    },
+    "mpdd_bracket_black": {
+      "fit": 211,
+      "excluded_near_test": 25,
+      "cal": 53,
+      "test": 79
+    },
+    "mpdd_bracket_brown": {
+      "fit": 129,
+      "cal": 32,
+      "excluded_near_test": 24,
+      "test": 77
+    },
+    "mpdd_bracket_white": {
+      "cal": 20,
+      "fit": 35,
+      "excluded_near_test": 55,
+      "test": 60
+    },
+    "mpdd_connector": {
+      "fit": 101,
+      "cal": 25,
+      "excluded_near_test": 2,
+      "test": 44
+    },
+    "mpdd_metal_plate": {
+      "cal": 20,
+      "fit": 34,
+      "test": 97
+    },
+    "mpdd_tubes": {
+      "fit": 98,
+      "cal": 24,
+      "test": 101
+    },
+    "ksdd2_surface": {
+      "fit": 1668,
+      "cal": 417,
+      "reserved_training_defect": 246,
+      "test": 1004
+    }
+  },
+  "source_photos": 6602,
+  "exclusions": {
+    "excluded_near_test": 343
+  },
+  "pixel_masks_from_publisher": true,
+  "mirror_extras_prompts_and_annotated_photos_excluded": true,
+  "new_independent_factory_photos_verified": 0,
+  "publisher_test_used_for_training_or_calibration": false
+}

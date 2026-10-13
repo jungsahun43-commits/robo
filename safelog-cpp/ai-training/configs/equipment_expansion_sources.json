@@ -1,0 +1,74 @@
+{
+  "mvtec_ad": {
+    "homepage": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+    "url": "https://huggingface.co/datasets/ProgrammerGnome/MVTecAD/resolve/fce0ee9e78984786c13c751b3e992885ddb225a2/mvtec_anomaly_detection.tar.xz",
+    "archive": "source.tar.xz",
+    "sha256": "cf4313b13603bec67abb49ca959488f7eedce2a9f7795ec54446c649ac98cd3d",
+    "checksum_source": "https://raw.githubusercontent.com/open-edge-platform/anomalib/main/src/anomalib/data/datamodules/image/mvtecad.py",
+    "checksum_is_publisher_provided": false,
+    "license": "CC BY-NC-SA 4.0",
+    "categories": [
+      "cable",
+      "screw",
+      "metal_nut"
+    ],
+    "normal_training_only": true,
+    "publisher_url": "https://www.mydrive.ch/shares/150996/b52ecdcbf521176e9db9c731f2304b27/download/420938113-1629960298/mvtec_anomaly_detection.tar.xz",
+    "mirror_used": true,
+    "mirror_revision": "fce0ee9e78984786c13c751b3e992885ddb225a2",
+    "mirror_equals_anomalib_reference_archive": true
+  },
+  "mvtec_loco": {
+    "homepage": "https://www.mvtec.com/research-teaching/datasets/mvtec-loco-ad",
+    "url": "https://huggingface.co/datasets/Rafa612/mvtec_loco/tree/839fee8178c10d2e50afddc671238ba85d9975d9/splicing_connectors",
+    "archive": "source.tar.xz",
+    "sha256": null,
+    "download_link_reference": "https://github.com/nelson1425/EfficientAD",
+    "checksum_is_publisher_provided": false,
+    "license": "CC BY-NC-SA 4.0",
+    "categories": [
+      "splicing_connectors"
+    ],
+    "normal_training_only": true,
+    "publisher_url": "https://www.mydrive.ch/shares/48237/1b9106ccdfbb09a0c414bd49fe44a14a/download/430647091-1646842701/mvtec_loco_anomaly_detection.tar.xz",
+    "mirror_used": true,
+    "kind": "hf_selected",
+    "hf_repo": "Rafa612/mvtec_loco",
+    "mirror_revision": "839fee8178c10d2e50afddc671238ba85d9975d9"
+  },
+  "kolektor_sdd2": {
+    "homepage": "https://www.vicos.si/resources/kolektorsdd2/",
+    "url": "https://huggingface.co/datasets/yuxinjiang11/AnomVerse/resolve/82460be8a1b6470b110b0d8146624cb9d9bf2311/KolektorSDD2.zip",
+    "archive": "source.zip",
+    "sha256": "5ed01ab0b7fd006bdca4f7fc5fd614d28b8856203b2fedd551b49fbbadc79f07",
+    "checksum_is_publisher_provided": false,
+    "license": "CC BY-NC-SA 4.0",
+    "categories": [
+      "surface"
+    ],
+    "normal_training_only": false,
+    "publisher_url": "https://data.vicos.si/datasets/KSDD/KolektorSDD2.zip",
+    "mirror_used": true,
+    "checksum_source": "HuggingFace LFS mirror object, original archive equivalence not verified"
+  },
+  "mpdd": {
+    "homepage": "https://github.com/stepanje/MPDD",
+    "publisher_download_status": "HTTP403 on public author SharePoint link, 2026-10-13",
+    "url": "https://huggingface.co/datasets/yuxinjiang11/AnomVerse/resolve/8a46a070b22ad40b71bca5adf51addc4db42e7e4/MPDD.zip",
+    "archive": "source.zip",
+    "sha256": "48bdc3475e854ebce5d0b9cfd8f6289e44b17fa0dd84b7e211ee4e9e785b0280",
+    "checksum_source": "HuggingFace LFS object, mirror revision8a46a070b22ad40b71bca5adf51addc4db42e7e4",
+    "checksum_is_publisher_provided": false,
+    "mirror_used": true,
+    "license": "CC BY-NC-SA 4.0",
+    "categories": [
+      "bracket_black",
+      "bracket_brown",
+      "bracket_white",
+      "connector",
+      "metal_plate",
+      "tubes"
+    ],
+    "normal_training_only": true
+  }
+}
