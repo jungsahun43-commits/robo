@@ -1,0 +1,33 @@
+{
+  "selected": "prior_accepted_tiles",
+  "known_metric_guards": {
+    "IoU_gain_at_least_half_percentage_point": false,
+    "background_pixel_FPR_not_worse": true,
+    "pixel_FNR_not_worse": false,
+    "photo_FNR_not_worse": false,
+    "zero_GT_overlap_not_worse": false,
+    "small_damage_IoU_not_worse": false,
+    "small_damage_pixel_FNR_not_worse": false,
+    "each_known_sequence_pixel_FNR_within_one_percentage_point": false
+  },
+  "normal_ROI_CAL_alarm_reduction": true,
+  "field_quality_gate_passed": false,
+  "research_comparison_guards_passed": false,
+  "reason": "Research selection requires knownVAL preservation plus descriptive CAL3 alarm reduction. No field5percent or normal whole-photo FPR claim.",
+  "checkpoint_path": "runs/unified-belt-native-detail-v1/native_mix/final.pt",
+  "checkpoint_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+  "policy": {
+    "version": "safelog-belt-uniform-tiles-v1",
+    "beltMode": "global_tile_mean",
+    "model_count": 1,
+    "geometry": "max6 squares; side=min(short,max640,ceil.4long,ceil.6short); uniform3long x2short",
+    "tiny_or_panorama_fallback": "global only if maxedge<=640 or aspect>3",
+    "stitch": "positive-floor Hann weighted mean at native coordinates then bilinear to original640 valid grid",
+    "fusion": "0.5global probability +0.5tile probability, threshold unchanged",
+    "annotations_at_inference": false,
+    "sha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66"
+  },
+  "new_neural_updates_performed": 512,
+  "selected_new_neural_updates": 0,
+  "app_default_promoted": false
+}
