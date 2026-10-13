@@ -1,0 +1,29 @@
+{
+  "threshold": 0.5,
+  "definition": "score>.5 is an alarm; fused valid-pixel max, uncalibrated",
+  "recovered_prior_misses": [
+    "BeltCrack14ks/json/val/data25/120.json",
+    "BeltCrack14ks/json/val/data25/121.json"
+  ],
+  "new_misses": [
+    "BeltCrack14ks/json/val/data24/99.json"
+  ],
+  "persistent_misses": [],
+  "rows": [
+    {
+      "id": "BeltCrack14ks/json/val/data24/99.json",
+      "accepted_score": 0.9595825672149658,
+      "candidate_score": 0.4976377785205841
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/120.json",
+      "accepted_score": 0.499999076128006,
+      "candidate_score": 0.6032264232635498
+    },
+    {
+      "id": "BeltCrack14ks/json/val/data25/121.json",
+      "accepted_score": 0.49999910593032837,
+      "candidate_score": 0.6633380055427551
+    }
+  ]
+}

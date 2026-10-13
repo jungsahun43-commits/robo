@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "epochs_completed": 4,
+  "completed_unique_optimizer_steps": 512,
+  "optimizer_calls_completed_this_turn": 512,
+  "excluded_failed_optimizer_calls_this_turn": 0,
+  "photo_constraints_checked": 3072,
+  "projected_steps": 496,
+  "reverted_parameter_steps": 0,
+  "all_effective_step_protection_checks_passed": true,
+  "protection_scope": "Each positive TRAIN photo loss, first-order only; not validation recall guarantee",
+  "matched_control_arrays_exact": true,
+  "new_images_or_labels_this_turn": 0,
+  "TRAIN_mask_diagnostic": {
+    "scope": "Fixed TRAIN positive draw masks only; not knownVAL-dependent sampling",
+    "positive_unique_photos": 1369,
+    "batches": 512,
+    "GT_pixels_largest_to_smallest_ratio_quantiles": {
+      "min": 2.9340228245363766,
+      "median": 47.97558321911517,
+      "p90": 190.85302390998595,
+      "max": 756.2307692307693
+    },
+    "smallest_photo_share_of_pooled_GT_quantiles": {
+      "min": 0.0008411449276534482,
+      "median": 0.011269231456712218,
+      "p90": 0.031175139668993466,
+      "max": 0.08824391673995896
+    },
+    "new_guard": "Six separate losses each normalized within its photo, not pooled across the batch",
+    "causal_explanation_established": false
+  },
+  "normal_ROI_CAL_false_alarms": 0,
+  "normal_ROI_CAL_count": 3,
+  "known_positive_VAL_misses": 1,
+  "known_positive_VAL_count": 353,
+  "photo_changes": {
+    "recovered_prior_misses": 2,
+    "new_misses": 1,
+    "persistent_misses": 0
+  },
+  "known_VAL_reused": true,
+  "whole_photo_normal_FPR": null,
+  "reserved_normal7_model_predictions_performed": false,
+  "old_BeltCrack_TEST_used": false,
+  "old_files_preserved": 50336,
+  "old_sources_preserved": 469,
+  "final_equals_progress": true,
+  "non_belt_tensors_exact_prior": true,
+  "new_selected_model": false,
+  "retained_model_sha256": "4b6d91c045cf6a33631ed5542c81d8e116166f541e97e6d745e1dfbe3f7fe5e5",
+  "retained_policy_sha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+  "unselected_trained_weights_sha256": "5ecd6ebd682d850cfb8f58c57b988365c8ae9d854a6defa572b5c95fa1061975",
+  "retained_handoff": "unified-main-belt-tiles-role4-handoff-2026-10-13-v1.1.zip",
+  "retained_handoff_sha256": "3e8235e8d3cc626bf0476a05a6f8686872fd90d34ed517c6d081e707cfdbd7c9",
+  "retained_ZIP_CRC_member_SHA_weights_and_policy_verified": true,
+  "new_CPP_HTTP_tests_this_turn": 0,
+  "new_CPU_GPU_three_tasks_and_native_tiles_checked": true,
+  "local_links_checked": 274,
+  "figure_pixels": [
+    2560,
+    800
+  ],
+  "app_default_promoted": false,
+  "industrial_all_tasks_5percent_verified": false,
+  "slice_score_scope": "Belt scores are maximum fused global/tile probabilities over valid pixels; uncalibrated"
+}
