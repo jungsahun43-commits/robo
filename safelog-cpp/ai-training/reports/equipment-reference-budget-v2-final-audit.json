@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "audited_utc": "2026-10-14T14:09:52.258321+00:00",
+  "model_sha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+  "archive_sha256": "416b0845554344f9707f391ae0c232434eec602d15072ccf562e376443bf5722",
+  "archive_bytes": 180158152,
+  "photo_rates": {
+    "ad_cable": {
+      "tp": 85,
+      "fn": 7,
+      "fp": 6,
+      "tn": 52,
+      "positive_photos": 92,
+      "negative_photos": 58,
+      "fnr": 0.07608695652173914,
+      "fpr": 0.10344827586206896
+    },
+    "ad_metal_nut": {
+      "tp": 82,
+      "fn": 11,
+      "fp": 3,
+      "tn": 19,
+      "positive_photos": 93,
+      "negative_photos": 22,
+      "fnr": 0.11827956989247312,
+      "fpr": 0.13636363636363635
+    }
+  },
+  "stage20_categories": [
+    "ad_cable",
+    "ad_metal_nut",
+    "mpdd_metal_plate",
+    "ksdd2_surface"
+  ],
+  "stage15_category_count": 3,
+  "all_11_categories_passed": false,
+  "normal_FIT_photos": 354,
+  "normal_FIT_patches": 90624,
+  "normal_CAL_counts": {
+    "ad_cable": 45,
+    "ad_metal_nut": 44
+  },
+  "new_neural_optimizer_updates": 0,
+  "normal_reference_fit_is_not_gradient_training": true,
+  "new_source_photos_or_labels": 0,
+  "all_prior_neural_tensors_exact": true,
+  "all_original_location_outputs_preserved": true,
+  "protected_files_SHA_and_mtime_preserved": 61469,
+  "legacy_python_source_SHA_preserved": 497,
+  "new_unit_tests": 3,
+  "retained_reference_unit_tests": 4,
+  "new_unit_test_optimizer_updates": 0,
+  "actual_CPP_operations_this_release": 21,
+  "isolated_ZIP_CPU_API_verified": true,
+  "first_smoke_checker_failure_excluded": true,
+  "first_smoke_CPP_operations": 0,
+  "retry_same_ZIP_SHA": true,
+  "PNG_visually_inspected": true,
+  "researchPrototype": true,
+  "known_TEST_reused_for_development_and_selection": true,
+  "independent_field_validated": false,
+  "Android_APK_built": false,
+  "fresh_pip_install_tested": false,
+  "app_default_promoted": false,
+  "next_priority": "Prespecified normal-reference photo presence on screw/connectors; keep location improvement and fresh field evaluation separate"
+}

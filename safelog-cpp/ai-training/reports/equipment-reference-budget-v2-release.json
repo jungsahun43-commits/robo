@@ -1,0 +1,635 @@
+{
+  "status": "passed",
+  "archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-equipment-reference-role4-handoff-2026-10-14-v2.zip",
+  "archive_sha256": "416b0845554344f9707f391ae0c232434eec602d15072ccf562e376443bf5722",
+  "archive_bytes": 180158152,
+  "model_sha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+  "one_checkpoint_one_shared_backbone": true,
+  "isolated_ZIP_CPU_API_checked": true,
+  "reference_policies": {
+    "ad_cable": {
+      "version": "safelog-equipment-reference-budget-v2",
+      "category": "ad_cable",
+      "referenceFITPatches": 45568,
+      "referenceStorageDtype": "float16",
+      "referenceDistance": "exact nearest cosine FP32 chunks512/2048",
+      "featureSource": "same one MobileNet low40/high960 branch normalization; avgpool3 stride1 count_include_padFalse",
+      "photoScore": "mean top1percent of bilinear256 normal-reference distances",
+      "normalCALCount": 45,
+      "normalCALAlpha": 0.05,
+      "normalCALRank": 44,
+      "neuralModelCount": 1,
+      "sharedBackboneCount": 1,
+      "backbonePassesPerPhoto": 1,
+      "neuralParametersChanged": false,
+      "photoScoreSource": "normal_reference",
+      "heatmapSource": "original_reconstruction",
+      "pixelThresholdChanged": false,
+      "originalLocalizationChanged": false,
+      "referenceHeatmapIsEvaluatedLocalization": false,
+      "TESTQuantileThresholdTuning": false,
+      "candidateSelectionUsedKnownTEST": true,
+      "adaptiveBenchmarkDevelopment": true,
+      "independentFieldValidation": false,
+      "sha256": "44ab8e088437617d770b34ea5a286845154ba871cd154c1549a8afc3b9410f2c"
+    },
+    "ad_metal_nut": {
+      "version": "safelog-equipment-reference-budget-v2",
+      "category": "ad_metal_nut",
+      "referenceFITPatches": 45056,
+      "referenceStorageDtype": "float16",
+      "referenceDistance": "exact nearest cosine FP32 chunks512/2048",
+      "featureSource": "same one MobileNet low40/high960 branch normalization; avgpool3 stride1 count_include_padFalse",
+      "photoScore": "mean top1percent of bilinear256 normal-reference distances",
+      "normalCALCount": 44,
+      "normalCALAlpha": 0.1,
+      "normalCALRank": 41,
+      "neuralModelCount": 1,
+      "sharedBackboneCount": 1,
+      "backbonePassesPerPhoto": 1,
+      "neuralParametersChanged": false,
+      "photoScoreSource": "normal_reference",
+      "heatmapSource": "original_reconstruction",
+      "pixelThresholdChanged": false,
+      "originalLocalizationChanged": false,
+      "referenceHeatmapIsEvaluatedLocalization": false,
+      "TESTQuantileThresholdTuning": false,
+      "candidateSelectionUsedKnownTEST": true,
+      "adaptiveBenchmarkDevelopment": true,
+      "independentFieldValidation": false,
+      "sha256": "a3ac1cef707c803275a44e35589a856447cad183685ca154788980c292320b32"
+    }
+  },
+  "metal_policy_SHA_preserved": true,
+  "actual_CPP_operations_this_release": 21,
+  "CPP_cases": [
+    {
+      "inspectionTask": "facility_surface",
+      "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "belt_damage",
+      "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "conveyor_foreign",
+      "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "mpdd_metal_plate",
+      "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "ksdd2_surface",
+      "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "ad_cable",
+      "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "ad_metal_nut",
+      "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    }
+  ],
+  "CPU_hazard_replies": [
+    {
+      "task": "facility_surface",
+      "source_phase": "FIT",
+      "result": {
+        "schema": "safelog.unified-main.v1",
+        "inspectionTask": "facility_surface",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-unified-equipment-expansion-v1",
+        "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+        "classResults": [
+          {
+            "className": "concrete_crack",
+            "score": 0.00879609677940607,
+            "threshold": 0.2898597717285156,
+            "candidateDetected": false
+          },
+          {
+            "className": "concrete_spalling",
+            "score": 0.09454157948493958,
+            "threshold": 0.4649081826210022,
+            "candidateDetected": false
+          },
+          {
+            "className": "rust_stain",
+            "score": 0.18741823732852936,
+            "threshold": 0.5,
+            "candidateDetected": false
+          },
+          {
+            "className": "exposed_rebar",
+            "score": 0.004510325845330954,
+            "threshold": 0.5,
+            "candidateDetected": false
+          },
+          {
+            "className": "wet_surface",
+            "score": 0.016555629670619965,
+            "threshold": 0.5,
+            "candidateDetected": false
+          },
+          {
+            "className": "efflorescence",
+            "score": 0.04013218730688095,
+            "threshold": 0.5,
+            "candidateDetected": false
+          },
+          {
+            "className": "surface_cavity",
+            "score": 0.03764882683753967,
+            "threshold": 0.5,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "ad54ca6440ad4b45afa3bd9fee871701cc3a05f3d6ad9875794ac5f04aaf899e",
+        "inputWidth": 1280,
+        "inputHeight": 960,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "otherTasksEvaluated": false,
+        "mechanicalFailureState": "not_assessed",
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "beltPhotoFprValidated": false,
+        "evidenceScope": "photo_presence",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2"
+        ],
+        "inferencePolicyVersion": "safelog-belt-uniform-tiles-v1",
+        "inferencePolicySha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+        "configuredBeltInferenceMode": "global_tile_mean",
+        "nativeDetailViewsEvaluated": 0,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.18741823732852936,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "reference-budget-v2-smoke"
+      }
+    },
+    {
+      "task": "belt_damage",
+      "source_phase": "TRAIN_embedded_sample",
+      "result": {
+        "schema": "safelog.unified-main.v1",
+        "inspectionTask": "belt_damage",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-unified-equipment-expansion-v1",
+        "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+        "classResults": [
+          {
+            "className": "belt_crack",
+            "score": 0.9999159574508667,
+            "threshold": 0.5,
+            "candidateDetected": true
+          }
+        ],
+        "candidateDetected": true,
+        "inputSha256": "fac69f9f79aa3a064d3d45a79c2427c509eded303dfbbf735a37a102fd185c6c",
+        "inputWidth": 1920,
+        "inputHeight": 1080,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "otherTasksEvaluated": false,
+        "mechanicalFailureState": "not_assessed",
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "beltPhotoFprValidated": false,
+        "evidenceScope": "belt_author_mask_review",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2"
+        ],
+        "inferencePolicyVersion": "safelog-belt-uniform-tiles-v1",
+        "inferencePolicySha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+        "configuredBeltInferenceMode": "global_tile_mean",
+        "nativeDetailViewsEvaluated": 6,
+        "researchPrototype": true,
+        "hazardCategory": "벨트 손상 후보",
+        "riskLevel": 3,
+        "detectedHazards": [
+          "벨트 손상 후보"
+        ],
+        "suggestedDescription": "사진에서 벨트 손상 후보가 제안되었습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.9999159574508667,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "reference-budget-v2-smoke"
+      }
+    },
+    {
+      "task": "conveyor_foreign",
+      "source_phase": "FIT",
+      "result": {
+        "schema": "safelog.unified-main.v1",
+        "inspectionTask": "conveyor_foreign",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-unified-equipment-expansion-v1",
+        "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+        "classResults": [
+          {
+            "className": "conveyor_foreign_object",
+            "score": 0.006212801672518253,
+            "threshold": 0.09148399130680455,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "d5cd3577c0fe4b86b5f451af693843ebc1697c3427528ae6c9e054b7bac5886e",
+        "inputWidth": 1280,
+        "inputHeight": 611,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "otherTasksEvaluated": false,
+        "mechanicalFailureState": "not_assessed",
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "beltPhotoFprValidated": false,
+        "evidenceScope": "photo_presence",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2"
+        ],
+        "inferencePolicyVersion": "safelog-belt-uniform-tiles-v1",
+        "inferencePolicySha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+        "configuredBeltInferenceMode": "global_tile_mean",
+        "nativeDetailViewsEvaluated": 0,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.006212801672518253,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "reference-budget-v2-smoke"
+      }
+    },
+    {
+      "task": "mpdd_metal_plate",
+      "source_phase": "FIT",
+      "result": {
+        "schema": "safelog.equipment-expansion.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "mpdd_metal_plate",
+        "classResults": [
+          {
+            "className": "mpdd_metal_plate",
+            "score": 0.198398619890213,
+            "threshold": 0.24159488081932068,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "c2f472aad7e01e44a6794469c1f6a8f41da0f2b68410b3effff587b3305f074c",
+        "inputWidth": 1024,
+        "inputHeight": 1024,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "evidenceScope": "coarse_component_appearance_feature_residual",
+        "inferencePolicyVersion": "safelog-metal-plate-calibration-v1",
+        "inferencePolicySha256": "cf66772131d7e8dc798d306d2a573b17d25bf8077c948236cd7413826ece8b9f",
+        "benchmarkStage": {
+          "state": "target20_met",
+          "ready_for_next_stage": true
+        },
+        "normalCALCount": 20,
+        "mechanicalFailureState": "not_assessed",
+        "normalCALAlpha": 0.2,
+        "normalCALRank": 17,
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-unified-equipment-expansion-v1",
+        "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2"
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.0991993099451065,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "reference-budget-v2-smoke"
+      }
+    },
+    {
+      "task": "ksdd2_surface",
+      "source_phase": "FIT",
+      "result": {
+        "schema": "safelog.equipment-expansion.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "ksdd2_surface",
+        "classResults": [
+          {
+            "className": "ksdd2_surface",
+            "score": 0.22153884172439575,
+            "threshold": 0.1851806491613388,
+            "candidateDetected": true
+          }
+        ],
+        "candidateDetected": true,
+        "inputSha256": "03863c70fe3c6f59c5165a5cb24611c48c5bb7e36d2e7d1cce071279afc212dc",
+        "inputWidth": 229,
+        "inputHeight": 645,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "evidenceScope": "coarse_component_appearance_feature_residual",
+        "inferencePolicyVersion": "safelog-equipment-expansion-v1",
+        "inferencePolicySha256": "4dd18b0dce0a3578c7d8ed965dab8e76f3ac81b5e51de11ea6767c8b4e2077eb",
+        "benchmarkStage": {
+          "state": "target15_met",
+          "ready_for_next_stage": true
+        },
+        "normalCALCount": 417,
+        "mechanicalFailureState": "not_assessed",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-unified-equipment-expansion-v1",
+        "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2"
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "부품 표면 이상 후보",
+        "riskLevel": 3,
+        "detectedHazards": [
+          "부품 표면 이상 후보"
+        ],
+        "suggestedDescription": "사진에서 부품 표면 이상 후보가 제안되었습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.11076942086219788,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "reference-budget-v2-smoke"
+      }
+    },
+    {
+      "task": "ad_cable",
+      "source_phase": "known_TEST_reused",
+      "result": {
+        "schema": "safelog.equipment-reference-photo.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "ad_cable",
+        "classResults": [
+          {
+            "className": "ad_cable",
+            "score": 0.12539514899253845,
+            "threshold": 0.09081234782934189,
+            "candidateDetected": true
+          }
+        ],
+        "candidateDetected": true,
+        "inputSha256": "4aa2490bd1227dce17dcccba7dcd21c1297a9a858d295f114cb72c2c0f98aa06",
+        "inputWidth": 1024,
+        "inputHeight": 1024,
+        "heatmapSource": "original_reconstruction",
+        "heatmapIsConfirmedDefectLocalization": false,
+        "referenceHeatmapIsEvaluatedLocalization": false,
+        "photoScoreSource": "normal_reference",
+        "scoreIsCalibratedProbability": false,
+        "evidenceScope": "inspected_component_external_appearance",
+        "originalLocalizationChanged": false,
+        "originalLocalizationPhotoScore": 0.29229414463043213,
+        "inferencePolicyVersion": "safelog-equipment-reference-budget-v2",
+        "inferencePolicySha256": "44ab8e088437617d770b34ea5a286845154ba871cd154c1549a8afc3b9410f2c",
+        "modelExtensionVersion": "safelog-equipment-reference-photo-v1",
+        "benchmarkStage": {
+          "state": "target15_met",
+          "ready_for_next_stage": true
+        },
+        "normalCALCount": 45,
+        "normalCALAlpha": 0.05,
+        "normalCALRank": 44,
+        "referenceFITPatches": 45568,
+        "backbonePassesPerPhoto": 1,
+        "mechanicalFailureState": "not_assessed",
+        "adaptiveBenchmarkDevelopment": true,
+        "candidateSelectionUsedKnownTEST": true,
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-unified-equipment-expansion-v1",
+        "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2"
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "케이블 외관 이상 후보",
+        "riskLevel": 3,
+        "detectedHazards": [
+          "케이블 외관 이상 후보"
+        ],
+        "suggestedDescription": "사진에서 케이블 외관 이상 후보가 제안되었습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.06269757449626923,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "reference-budget-v2-smoke"
+      }
+    },
+    {
+      "task": "ad_metal_nut",
+      "source_phase": "known_TEST_reused",
+      "result": {
+        "schema": "safelog.equipment-reference-photo.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "ad_metal_nut",
+        "classResults": [
+          {
+            "className": "ad_metal_nut",
+            "score": 0.16930143535137177,
+            "threshold": 0.08431019634008408,
+            "candidateDetected": true
+          }
+        ],
+        "candidateDetected": true,
+        "inputSha256": "602cceb099d5aa10a416f31cd6370ef9d8c810118f4ada9dbc9c28e91a889e0b",
+        "inputWidth": 700,
+        "inputHeight": 700,
+        "heatmapSource": "original_reconstruction",
+        "heatmapIsConfirmedDefectLocalization": false,
+        "referenceHeatmapIsEvaluatedLocalization": false,
+        "photoScoreSource": "normal_reference",
+        "scoreIsCalibratedProbability": false,
+        "evidenceScope": "inspected_component_external_appearance",
+        "originalLocalizationChanged": false,
+        "originalLocalizationPhotoScore": 0.32557594776153564,
+        "inferencePolicyVersion": "safelog-equipment-reference-budget-v2",
+        "inferencePolicySha256": "a3ac1cef707c803275a44e35589a856447cad183685ca154788980c292320b32",
+        "modelExtensionVersion": "safelog-equipment-reference-photo-v1",
+        "benchmarkStage": {
+          "state": "target15_met",
+          "ready_for_next_stage": true
+        },
+        "normalCALCount": 44,
+        "normalCALAlpha": 0.1,
+        "normalCALRank": 41,
+        "referenceFITPatches": 45056,
+        "backbonePassesPerPhoto": 1,
+        "mechanicalFailureState": "not_assessed",
+        "adaptiveBenchmarkDevelopment": true,
+        "candidateSelectionUsedKnownTEST": true,
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-unified-equipment-expansion-v1",
+        "modelSha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2"
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "너트 외관 이상 후보",
+        "riskLevel": 3,
+        "detectedHazards": [
+          "너트 외관 이상 후보"
+        ],
+        "suggestedDescription": "사진에서 너트 외관 이상 후보가 제안되었습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.08465071767568588,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "reference-budget-v2-smoke"
+      }
+    }
+  ],
+  "normal_FIT_explicit_category_proofs": [
+    {
+      "category": "ad_cable",
+      "source_phase": "FIT",
+      "candidate_detected": false,
+      "score": 5.014528596802847e-07
+    },
+    {
+      "category": "ad_metal_nut",
+      "source_phase": "FIT",
+      "candidate_detected": false,
+      "score": 5.567952712226543e-07
+    }
+  ],
+  "CPU_hazard_single_request_seconds_not_benchmark": {
+    "facility_surface": 0.0940000000409782,
+    "belt_damage": 0.4529999999795109,
+    "conveyor_foreign": 0.06299999996554106,
+    "mpdd_metal_plate": 0.07900000002700835,
+    "ksdd2_surface": 0.030999999959021807,
+    "ad_cable": 0.3279999999795109,
+    "ad_metal_nut": 0.21799999999348074
+  },
+  "three_invalid_requests_rejected422": true,
+  "known_TEST_examples_reused_for_integration": [
+    "ad_cable",
+    "ad_metal_nut"
+  ],
+  "same_photo_does_not_resolve": true,
+  "both_heatmap_sizes_checked": true,
+  "ZIP_CRC_member_SHA_links_verified": true,
+  "owned_server_stopped": true,
+  "fresh_pip_install_tested": false,
+  "Android_APK_built": false,
+  "independent_field_validated": false,
+  "app_default_promoted": false
+}

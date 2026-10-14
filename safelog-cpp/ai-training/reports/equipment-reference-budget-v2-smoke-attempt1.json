@@ -1,0 +1,10 @@
+{
+  "status": "excluded_checker_failure",
+  "archive_unchanged": true,
+  "failure": "Legacy facility response allows heatmapPngBase64=None; checker incorrectly decoded it as base64",
+  "actual_CPP_operations": 0,
+  "source_sha256": "37ceb80c9ff7d98f7f1682fa15c6dd6659d8c7206b273c42ac79fe6917941d4c",
+  "isolated_namespace": "isolated-zip",
+  "owned_server_terminated_by_finally": true,
+  "model_or_training_failure": false
+}
