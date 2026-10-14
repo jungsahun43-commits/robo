@@ -1,0 +1,54 @@
+{
+  "selected_per_category": {
+    "ad_cable": "prior_prototype",
+    "ad_metal_nut": "prior_prototype"
+  },
+  "checkpoint_path": "runs/equipment-reference-photo-v1/selected/final.pt",
+  "checkpoint_sha256": "5814536d6a66305f061056fd1aaa1e417377b883a97687508423eaddd51731e6",
+  "reference_counts": {},
+  "all_prior_neural_tensors_exact": true,
+  "all_original_location_predictions_exact": true,
+  "metal20_and_ksdd15_preserved": true,
+  "known_TEST_reused": true,
+  "new_neural_optimizer_updates": 0,
+  "independent_field_validated": false,
+  "app_default_promoted": false,
+  "stage20_categories": [
+    "mpdd_metal_plate",
+    "ksdd2_surface"
+  ],
+  "variant_guards": {
+    "calibration20": {
+      "ad_cable": {
+        "photo_FPR_within20": false,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_prior": true,
+        "original_location_predictions_exact": true,
+        "all_prior_neural_tensors_exact": true
+      },
+      "ad_metal_nut": {
+        "photo_FPR_within20": true,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_prior": true,
+        "original_location_predictions_exact": true,
+        "all_prior_neural_tensors_exact": true
+      }
+    },
+    "reference_photo20": {
+      "ad_cable": {
+        "photo_FPR_within20": false,
+        "photo_FNR_within20": true,
+        "photo_FNR_better_than_prior": true,
+        "original_location_predictions_exact": true,
+        "all_prior_neural_tensors_exact": true
+      },
+      "ad_metal_nut": {
+        "photo_FPR_within20": false,
+        "photo_FNR_within20": true,
+        "photo_FNR_better_than_prior": true,
+        "original_location_predictions_exact": true,
+        "all_prior_neural_tensors_exact": true
+      }
+    }
+  }
+}

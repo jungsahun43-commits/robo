@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "protected_files": 61457,
+  "legacy_sources": 493,
+  "old_bytes_and_mtimes_preserved": true,
+  "all_prior_neural_tensors_exact": true,
+  "all_11_original_CPU_location_outputs_exact": true,
+  "all_other_category_operating_points_exact": true,
+  "metal20_and_ksdd15_preserved": true,
+  "reference_contains_FIT_only": true,
+  "new_neural_optimizer_updates": 0,
+  "selected_checkpoint_sha256": "5814536d6a66305f061056fd1aaa1e417377b883a97687508423eaddd51731e6"
+}

@@ -1,0 +1,4064 @@
+{
+  "checkpoint_sha256": "b796fbf711d09cd400305e48bc0cfffb2ea1fa47697a22f2407568f139e42185",
+  "categories": {
+    "ad_cable": {
+      "photo_rates": {
+        "tp": 57,
+        "fn": 35,
+        "fp": 13,
+        "tn": 45,
+        "positive_photos": 92,
+        "negative_photos": 58,
+        "fnr": 0.3804347826086957,
+        "fpr": 0.22413793103448276
+      },
+      "photo_auroc": 0.756559220389805,
+      "normal_test": 58,
+      "defect_test": 92,
+      "pixel_counts_model256": {
+        "tp": 67661,
+        "fp": 150489,
+        "tn": 9397664,
+        "fn": 214586
+      },
+      "pixel_iou": 0.15635630037713524,
+      "pixel_fnr": 0.7602773457290954,
+      "photo_threshold": 0.2601332664489746,
+      "photo_normalCAL_rank": 37,
+      "normalCAL_count": 45,
+      "stage_gate": {
+        "state": "needs_improvement",
+        "ready_for_next_stage": false
+      },
+      "guards": {
+        "photo_FPR_within20": false,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_prior": true,
+        "original_location_predictions_exact": true,
+        "all_prior_neural_tensors_exact": true
+      },
+      "selected_eligible": false,
+      "observations": [
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/000.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.2922942042350769,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2922942042350769,
+          "pixels": {
+            "tp": 7,
+            "fp": 3916,
+            "tn": 60174,
+            "fn": 1439
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/001.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.2704395651817322,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2704395651817322,
+          "pixels": {
+            "tp": 0,
+            "fp": 1050,
+            "tn": 63530,
+            "fn": 956
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/002.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.2877388000488281,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2877388000488281,
+          "pixels": {
+            "tp": 94,
+            "fp": 2355,
+            "tn": 60874,
+            "fn": 2213
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/003.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.2220190316438675,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2220190316438675,
+          "pixels": {
+            "tp": 0,
+            "fp": 23,
+            "tn": 64702,
+            "fn": 811
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/004.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.2947906255722046,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2947906255722046,
+          "pixels": {
+            "tp": 921,
+            "fp": 5117,
+            "tn": 58351,
+            "fn": 1147
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/005.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.2816527187824249,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2816527187824249,
+          "pixels": {
+            "tp": 465,
+            "fp": 2097,
+            "tn": 61081,
+            "fn": 1893
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/006.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.269485741853714,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.269485741853714,
+          "pixels": {
+            "tp": 93,
+            "fp": 2228,
+            "tn": 60764,
+            "fn": 2451
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/007.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.2814686596393585,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2814686596393585,
+          "pixels": {
+            "tp": 431,
+            "fp": 2897,
+            "tn": 60229,
+            "fn": 1979
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/008.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.2808935344219208,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2808935344219208,
+          "pixels": {
+            "tp": 101,
+            "fp": 1238,
+            "tn": 63068,
+            "fn": 1129
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/009.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.302501380443573,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.302501380443573,
+          "pixels": {
+            "tp": 563,
+            "fp": 9826,
+            "tn": 53331,
+            "fn": 1816
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/010.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.2814770042896271,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2814770042896271,
+          "pixels": {
+            "tp": 177,
+            "fp": 2198,
+            "tn": 60949,
+            "fn": 2212
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/011.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.28713783621788025,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28713783621788025,
+          "pixels": {
+            "tp": 2009,
+            "fp": 2360,
+            "tn": 55716,
+            "fn": 5451
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/bent_wire/012.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "bent_wire",
+          "score": 0.32610929012298584,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.32610929012298584,
+          "pixels": {
+            "tp": 1721,
+            "fp": 5746,
+            "tn": 55267,
+            "fn": 2802
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/000.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.232473224401474,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.232473224401474,
+          "pixels": {
+            "tp": 0,
+            "fp": 150,
+            "tn": 61195,
+            "fn": 4191
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/001.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.23268023133277893,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23268023133277893,
+          "pixels": {
+            "tp": 0,
+            "fp": 128,
+            "tn": 61562,
+            "fn": 3846
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/002.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.23653285205364227,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23653285205364227,
+          "pixels": {
+            "tp": 13,
+            "fp": 92,
+            "tn": 61876,
+            "fn": 3555
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/003.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.2691638469696045,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2691638469696045,
+          "pixels": {
+            "tp": 535,
+            "fp": 29,
+            "tn": 61817,
+            "fn": 3155
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/004.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.26862841844558716,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26862841844558716,
+          "pixels": {
+            "tp": 317,
+            "fp": 314,
+            "tn": 61784,
+            "fn": 3121
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/005.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.24613666534423828,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24613666534423828,
+          "pixels": {
+            "tp": 40,
+            "fp": 250,
+            "tn": 61186,
+            "fn": 4060
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/006.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.26506632566452026,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26506632566452026,
+          "pixels": {
+            "tp": 0,
+            "fp": 718,
+            "tn": 60573,
+            "fn": 4245
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/007.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.2728293538093567,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2728293538093567,
+          "pixels": {
+            "tp": 0,
+            "fp": 462,
+            "tn": 61099,
+            "fn": 3975
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/008.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.24372602999210358,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24372602999210358,
+          "pixels": {
+            "tp": 0,
+            "fp": 250,
+            "tn": 61438,
+            "fn": 3848
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/009.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.25365743041038513,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.25365743041038513,
+          "pixels": {
+            "tp": 0,
+            "fp": 398,
+            "tn": 61497,
+            "fn": 3641
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/010.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.2971755266189575,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2971755266189575,
+          "pixels": {
+            "tp": 553,
+            "fp": 2312,
+            "tn": 59447,
+            "fn": 3224
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cable_swap/011.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cable_swap",
+          "score": 0.23795545101165771,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23795545101165771,
+          "pixels": {
+            "tp": 38,
+            "fp": 94,
+            "tn": 62191,
+            "fn": 3213
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/000.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.2828158438205719,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2828158438205719,
+          "pixels": {
+            "tp": 186,
+            "fp": 2223,
+            "tn": 60681,
+            "fn": 2446
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/001.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.2890792489051819,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2890792489051819,
+          "pixels": {
+            "tp": 242,
+            "fp": 2704,
+            "tn": 60258,
+            "fn": 2332
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/002.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.23977616429328918,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23977616429328918,
+          "pixels": {
+            "tp": 0,
+            "fp": 179,
+            "tn": 63863,
+            "fn": 1494
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/003.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.3092551529407501,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3092551529407501,
+          "pixels": {
+            "tp": 1443,
+            "fp": 2502,
+            "tn": 60979,
+            "fn": 612
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/004.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.27128201723098755,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27128201723098755,
+          "pixels": {
+            "tp": 0,
+            "fp": 961,
+            "tn": 61461,
+            "fn": 3114
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/005.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.30258503556251526,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.30258503556251526,
+          "pixels": {
+            "tp": 3108,
+            "fp": 223,
+            "tn": 56030,
+            "fn": 6175
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/006.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.3571155071258545,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3571155071258545,
+          "pixels": {
+            "tp": 4922,
+            "fp": 5706,
+            "tn": 53961,
+            "fn": 947
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/007.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.31637561321258545,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.31637561321258545,
+          "pixels": {
+            "tp": 2588,
+            "fp": 4684,
+            "tn": 55991,
+            "fn": 2273
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/008.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.35517069697380066,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.35517069697380066,
+          "pixels": {
+            "tp": 2180,
+            "fp": 6223,
+            "tn": 56273,
+            "fn": 860
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/009.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.24117301404476166,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24117301404476166,
+          "pixels": {
+            "tp": 39,
+            "fp": 188,
+            "tn": 59555,
+            "fn": 5754
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/combined/010.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "combined",
+          "score": 0.24748940765857697,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24748940765857697,
+          "pixels": {
+            "tp": 247,
+            "fp": 175,
+            "tn": 60475,
+            "fn": 4639
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/000.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.29506492614746094,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.29506492614746094,
+          "pixels": {
+            "tp": 763,
+            "fp": 2973,
+            "tn": 60484,
+            "fn": 1316
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/001.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.2411598563194275,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2411598563194275,
+          "pixels": {
+            "tp": 0,
+            "fp": 197,
+            "tn": 63431,
+            "fn": 1908
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/002.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.30446499586105347,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.30446499586105347,
+          "pixels": {
+            "tp": 939,
+            "fp": 2564,
+            "tn": 61297,
+            "fn": 736
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/003.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.28548964858055115,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28548964858055115,
+          "pixels": {
+            "tp": 387,
+            "fp": 1376,
+            "tn": 60238,
+            "fn": 3535
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/004.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.26729637384414673,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26729637384414673,
+          "pixels": {
+            "tp": 309,
+            "fp": 815,
+            "tn": 61947,
+            "fn": 2465
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/005.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.2659030258655548,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2659030258655548,
+          "pixels": {
+            "tp": 0,
+            "fp": 633,
+            "tn": 63192,
+            "fn": 1711
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/006.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.2756652534008026,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2756652534008026,
+          "pixels": {
+            "tp": 0,
+            "fp": 1461,
+            "tn": 62839,
+            "fn": 1236
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/007.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.31336459517478943,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.31336459517478943,
+          "pixels": {
+            "tp": 470,
+            "fp": 5821,
+            "tn": 57140,
+            "fn": 2105
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/008.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.26312869787216187,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26312869787216187,
+          "pixels": {
+            "tp": 290,
+            "fp": 674,
+            "tn": 63227,
+            "fn": 1345
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/009.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.2520599663257599,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2520599663257599,
+          "pixels": {
+            "tp": 136,
+            "fp": 374,
+            "tn": 61345,
+            "fn": 3681
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/010.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.23983752727508545,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23983752727508545,
+          "pixels": {
+            "tp": 0,
+            "fp": 246,
+            "tn": 63312,
+            "fn": 1978
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/011.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.21783876419067383,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.21783876419067383,
+          "pixels": {
+            "tp": 0,
+            "fp": 24,
+            "tn": 61997,
+            "fn": 3515
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/012.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.29510003328323364,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.29510003328323364,
+          "pixels": {
+            "tp": 1630,
+            "fp": 2438,
+            "tn": 56602,
+            "fn": 4866
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_inner_insulation/013.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_inner_insulation",
+          "score": 0.25991588830947876,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.25991588830947876,
+          "pixels": {
+            "tp": 150,
+            "fp": 397,
+            "tn": 63283,
+            "fn": 1706
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_outer_insulation/000.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_outer_insulation",
+          "score": 0.25223907828330994,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.25223907828330994,
+          "pixels": {
+            "tp": 0,
+            "fp": 347,
+            "tn": 63727,
+            "fn": 1462
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_outer_insulation/001.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_outer_insulation",
+          "score": 0.2397354543209076,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2397354543209076,
+          "pixels": {
+            "tp": 0,
+            "fp": 224,
+            "tn": 64842,
+            "fn": 470
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_outer_insulation/002.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_outer_insulation",
+          "score": 0.2811186909675598,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2811186909675598,
+          "pixels": {
+            "tp": 7,
+            "fp": 1358,
+            "tn": 63264,
+            "fn": 907
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_outer_insulation/003.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_outer_insulation",
+          "score": 0.2447943091392517,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2447943091392517,
+          "pixels": {
+            "tp": 0,
+            "fp": 321,
+            "tn": 64732,
+            "fn": 483
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_outer_insulation/004.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_outer_insulation",
+          "score": 0.24268220365047455,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24268220365047455,
+          "pixels": {
+            "tp": 0,
+            "fp": 235,
+            "tn": 63799,
+            "fn": 1502
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_outer_insulation/005.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_outer_insulation",
+          "score": 0.2134459912776947,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2134459912776947,
+          "pixels": {
+            "tp": 0,
+            "fp": 2,
+            "tn": 65238,
+            "fn": 296
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_outer_insulation/006.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_outer_insulation",
+          "score": 0.2564844787120819,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2564844787120819,
+          "pixels": {
+            "tp": 0,
+            "fp": 386,
+            "tn": 64420,
+            "fn": 730
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_outer_insulation/007.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_outer_insulation",
+          "score": 0.24296295642852783,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24296295642852783,
+          "pixels": {
+            "tp": 0,
+            "fp": 257,
+            "tn": 63903,
+            "fn": 1376
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_outer_insulation/008.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_outer_insulation",
+          "score": 0.27108675241470337,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27108675241470337,
+          "pixels": {
+            "tp": 0,
+            "fp": 897,
+            "tn": 62417,
+            "fn": 2222
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/cut_outer_insulation/009.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "cut_outer_insulation",
+          "score": 0.26537036895751953,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26537036895751953,
+          "pixels": {
+            "tp": 0,
+            "fp": 606,
+            "tn": 64285,
+            "fn": 645
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/000.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2368236482143402,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2368236482143402,
+          "pixels": {
+            "tp": 0,
+            "fp": 144,
+            "tn": 65392,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/001.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.27081313729286194,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27081313729286194,
+          "pixels": {
+            "tp": 0,
+            "fp": 646,
+            "tn": 64890,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/002.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23654493689537048,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23654493689537048,
+          "pixels": {
+            "tp": 0,
+            "fp": 171,
+            "tn": 65365,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/003.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2505341172218323,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2505341172218323,
+          "pixels": {
+            "tp": 0,
+            "fp": 421,
+            "tn": 65115,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/004.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2325931191444397,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2325931191444397,
+          "pixels": {
+            "tp": 0,
+            "fp": 106,
+            "tn": 65430,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/005.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2432253509759903,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2432253509759903,
+          "pixels": {
+            "tp": 0,
+            "fp": 241,
+            "tn": 65295,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/006.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.22859762609004974,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22859762609004974,
+          "pixels": {
+            "tp": 0,
+            "fp": 2,
+            "tn": 65534,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/007.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2416170835494995,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2416170835494995,
+          "pixels": {
+            "tp": 0,
+            "fp": 189,
+            "tn": 65347,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/008.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2549634575843811,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2549634575843811,
+          "pixels": {
+            "tp": 0,
+            "fp": 449,
+            "tn": 65087,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/009.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2624770998954773,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2624770998954773,
+          "pixels": {
+            "tp": 0,
+            "fp": 695,
+            "tn": 64841,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/010.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2727959156036377,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2727959156036377,
+          "pixels": {
+            "tp": 0,
+            "fp": 1304,
+            "tn": 64232,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/011.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24145355820655823,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24145355820655823,
+          "pixels": {
+            "tp": 0,
+            "fp": 186,
+            "tn": 65350,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/012.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2514795958995819,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2514795958995819,
+          "pixels": {
+            "tp": 0,
+            "fp": 459,
+            "tn": 65077,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/013.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23159003257751465,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23159003257751465,
+          "pixels": {
+            "tp": 0,
+            "fp": 101,
+            "tn": 65435,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/014.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.25716903805732727,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.25716903805732727,
+          "pixels": {
+            "tp": 0,
+            "fp": 934,
+            "tn": 64602,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/015.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2698265612125397,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2698265612125397,
+          "pixels": {
+            "tp": 0,
+            "fp": 1004,
+            "tn": 64532,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/016.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23625703155994415,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23625703155994415,
+          "pixels": {
+            "tp": 0,
+            "fp": 87,
+            "tn": 65449,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/017.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24637258052825928,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24637258052825928,
+          "pixels": {
+            "tp": 0,
+            "fp": 288,
+            "tn": 65248,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/018.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.26850074529647827,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26850074529647827,
+          "pixels": {
+            "tp": 0,
+            "fp": 966,
+            "tn": 64570,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/019.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24882060289382935,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24882060289382935,
+          "pixels": {
+            "tp": 0,
+            "fp": 396,
+            "tn": 65140,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/020.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2529257833957672,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2529257833957672,
+          "pixels": {
+            "tp": 0,
+            "fp": 458,
+            "tn": 65078,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/021.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.25668853521347046,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.25668853521347046,
+          "pixels": {
+            "tp": 0,
+            "fp": 568,
+            "tn": 64968,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/022.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24307623505592346,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24307623505592346,
+          "pixels": {
+            "tp": 0,
+            "fp": 262,
+            "tn": 65274,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/023.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24827897548675537,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24827897548675537,
+          "pixels": {
+            "tp": 0,
+            "fp": 381,
+            "tn": 65155,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/024.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.26019421219825745,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26019421219825745,
+          "pixels": {
+            "tp": 0,
+            "fp": 737,
+            "tn": 64799,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/025.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2510485053062439,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2510485053062439,
+          "pixels": {
+            "tp": 0,
+            "fp": 460,
+            "tn": 65076,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/026.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2563084363937378,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2563084363937378,
+          "pixels": {
+            "tp": 0,
+            "fp": 622,
+            "tn": 64914,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/027.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23894673585891724,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23894673585891724,
+          "pixels": {
+            "tp": 0,
+            "fp": 208,
+            "tn": 65328,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/028.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.25485759973526,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.25485759973526,
+          "pixels": {
+            "tp": 0,
+            "fp": 637,
+            "tn": 64899,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/029.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2282170206308365,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2282170206308365,
+          "pixels": {
+            "tp": 0,
+            "fp": 95,
+            "tn": 65441,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/030.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23257124423980713,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23257124423980713,
+          "pixels": {
+            "tp": 0,
+            "fp": 121,
+            "tn": 65415,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/031.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23322917520999908,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23322917520999908,
+          "pixels": {
+            "tp": 0,
+            "fp": 71,
+            "tn": 65465,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/032.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24291901290416718,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24291901290416718,
+          "pixels": {
+            "tp": 0,
+            "fp": 271,
+            "tn": 65265,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/033.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2616644501686096,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2616644501686096,
+          "pixels": {
+            "tp": 0,
+            "fp": 599,
+            "tn": 64937,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/034.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24535590410232544,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24535590410232544,
+          "pixels": {
+            "tp": 0,
+            "fp": 309,
+            "tn": 65227,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/035.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2692912817001343,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2692912817001343,
+          "pixels": {
+            "tp": 0,
+            "fp": 711,
+            "tn": 64825,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/036.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24689382314682007,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24689382314682007,
+          "pixels": {
+            "tp": 0,
+            "fp": 318,
+            "tn": 65218,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/037.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2778926193714142,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2778926193714142,
+          "pixels": {
+            "tp": 0,
+            "fp": 1337,
+            "tn": 64199,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/038.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23504787683486938,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23504787683486938,
+          "pixels": {
+            "tp": 0,
+            "fp": 112,
+            "tn": 65424,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/039.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2666845917701721,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2666845917701721,
+          "pixels": {
+            "tp": 0,
+            "fp": 670,
+            "tn": 64866,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/040.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2409166395664215,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2409166395664215,
+          "pixels": {
+            "tp": 0,
+            "fp": 196,
+            "tn": 65340,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/041.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24781331419944763,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24781331419944763,
+          "pixels": {
+            "tp": 0,
+            "fp": 327,
+            "tn": 65209,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/042.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.21234792470932007,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.21234792470932007,
+          "pixels": {
+            "tp": 0,
+            "fp": 11,
+            "tn": 65525,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/043.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.27478158473968506,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27478158473968506,
+          "pixels": {
+            "tp": 0,
+            "fp": 1622,
+            "tn": 63914,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/044.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.22371605038642883,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22371605038642883,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/045.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.22830137610435486,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22830137610435486,
+          "pixels": {
+            "tp": 0,
+            "fp": 71,
+            "tn": 65465,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/046.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.229961559176445,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.229961559176445,
+          "pixels": {
+            "tp": 0,
+            "fp": 108,
+            "tn": 65428,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/047.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.22987158596515656,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22987158596515656,
+          "pixels": {
+            "tp": 0,
+            "fp": 107,
+            "tn": 65429,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/048.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23838499188423157,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23838499188423157,
+          "pixels": {
+            "tp": 0,
+            "fp": 252,
+            "tn": 65284,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/049.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24752318859100342,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24752318859100342,
+          "pixels": {
+            "tp": 0,
+            "fp": 331,
+            "tn": 65205,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/050.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.26101577281951904,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26101577281951904,
+          "pixels": {
+            "tp": 0,
+            "fp": 983,
+            "tn": 64553,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/051.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.26512411236763,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26512411236763,
+          "pixels": {
+            "tp": 0,
+            "fp": 498,
+            "tn": 65038,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/052.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23239028453826904,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23239028453826904,
+          "pixels": {
+            "tp": 0,
+            "fp": 112,
+            "tn": 65424,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/053.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2313404381275177,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2313404381275177,
+          "pixels": {
+            "tp": 0,
+            "fp": 45,
+            "tn": 65491,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/054.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.248435378074646,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.248435378074646,
+          "pixels": {
+            "tp": 0,
+            "fp": 370,
+            "tn": 65166,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/055.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.22921574115753174,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22921574115753174,
+          "pixels": {
+            "tp": 0,
+            "fp": 105,
+            "tn": 65431,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/056.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2315235137939453,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2315235137939453,
+          "pixels": {
+            "tp": 0,
+            "fp": 113,
+            "tn": 65423,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/good/057.png",
+          "category": "ad_cable",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24224737286567688,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24224737286567688,
+          "pixels": {
+            "tp": 0,
+            "fp": 240,
+            "tn": 65296,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/000.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.3233492970466614,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3233492970466614,
+          "pixels": {
+            "tp": 3196,
+            "fp": 292,
+            "tn": 60593,
+            "fn": 1455
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/001.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.2883427143096924,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2883427143096924,
+          "pixels": {
+            "tp": 897,
+            "fp": 1644,
+            "tn": 59407,
+            "fn": 3588
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/002.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.24828903377056122,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24828903377056122,
+          "pixels": {
+            "tp": 94,
+            "fp": 258,
+            "tn": 60944,
+            "fn": 4240
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/003.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.27458158135414124,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27458158135414124,
+          "pixels": {
+            "tp": 1032,
+            "fp": 658,
+            "tn": 60203,
+            "fn": 3643
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/004.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.24551403522491455,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24551403522491455,
+          "pixels": {
+            "tp": 190,
+            "fp": 128,
+            "tn": 60533,
+            "fn": 4685
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/005.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.2389451414346695,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2389451414346695,
+          "pixels": {
+            "tp": 91,
+            "fp": 39,
+            "tn": 61064,
+            "fn": 4342
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/006.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.3362303674221039,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3362303674221039,
+          "pixels": {
+            "tp": 9822,
+            "fp": 6262,
+            "tn": 44471,
+            "fn": 4981
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/007.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.31663572788238525,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.31663572788238525,
+          "pixels": {
+            "tp": 6704,
+            "fp": 724,
+            "tn": 54880,
+            "fn": 3228
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/008.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.26984015107154846,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26984015107154846,
+          "pixels": {
+            "tp": 1476,
+            "fp": 805,
+            "tn": 55727,
+            "fn": 7528
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/009.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.3101232051849365,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3101232051849365,
+          "pixels": {
+            "tp": 5080,
+            "fp": 912,
+            "tn": 55167,
+            "fn": 4377
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/010.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.3194325268268585,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3194325268268585,
+          "pixels": {
+            "tp": 3441,
+            "fp": 596,
+            "tn": 59670,
+            "fn": 1829
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_cable/011.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_cable",
+          "score": 0.3067333996295929,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3067333996295929,
+          "pixels": {
+            "tp": 2725,
+            "fp": 29,
+            "tn": 60671,
+            "fn": 2111
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_wire/000.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_wire",
+          "score": 0.24712799489498138,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24712799489498138,
+          "pixels": {
+            "tp": 32,
+            "fp": 336,
+            "tn": 63636,
+            "fn": 1532
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_wire/001.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_wire",
+          "score": 0.2514893710613251,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2514893710613251,
+          "pixels": {
+            "tp": 169,
+            "fp": 343,
+            "tn": 64157,
+            "fn": 867
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_wire/002.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_wire",
+          "score": 0.23424239456653595,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23424239456653595,
+          "pixels": {
+            "tp": 0,
+            "fp": 138,
+            "tn": 64447,
+            "fn": 951
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_wire/003.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_wire",
+          "score": 0.32519739866256714,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.32519739866256714,
+          "pixels": {
+            "tp": 1936,
+            "fp": 4312,
+            "tn": 58679,
+            "fn": 609
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_wire/004.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_wire",
+          "score": 0.2710301876068115,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2710301876068115,
+          "pixels": {
+            "tp": 540,
+            "fp": 605,
+            "tn": 62519,
+            "fn": 1872
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_wire/005.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_wire",
+          "score": 0.26740163564682007,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26740163564682007,
+          "pixels": {
+            "tp": 91,
+            "fp": 1013,
+            "tn": 63346,
+            "fn": 1086
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_wire/006.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_wire",
+          "score": 0.27944377064704895,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27944377064704895,
+          "pixels": {
+            "tp": 40,
+            "fp": 559,
+            "tn": 63826,
+            "fn": 1111
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_wire/007.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_wire",
+          "score": 0.2620609402656555,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2620609402656555,
+          "pixels": {
+            "tp": 4,
+            "fp": 1152,
+            "tn": 63202,
+            "fn": 1178
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_wire/008.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_wire",
+          "score": 0.27955466508865356,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27955466508865356,
+          "pixels": {
+            "tp": 290,
+            "fp": 1613,
+            "tn": 62748,
+            "fn": 885
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/missing_wire/009.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "missing_wire",
+          "score": 0.3042173981666565,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3042173981666565,
+          "pixels": {
+            "tp": 789,
+            "fp": 961,
+            "tn": 63289,
+            "fn": 497
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/poke_insulation/000.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "poke_insulation",
+          "score": 0.2322191745042801,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2322191745042801,
+          "pixels": {
+            "tp": 13,
+            "fp": 26,
+            "tn": 64969,
+            "fn": 528
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/poke_insulation/001.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "poke_insulation",
+          "score": 0.25177082419395447,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.25177082419395447,
+          "pixels": {
+            "tp": 0,
+            "fp": 389,
+            "tn": 63177,
+            "fn": 1970
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/poke_insulation/002.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "poke_insulation",
+          "score": 0.22183579206466675,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22183579206466675,
+          "pixels": {
+            "tp": 0,
+            "fp": 16,
+            "tn": 65429,
+            "fn": 91
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/poke_insulation/003.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "poke_insulation",
+          "score": 0.2469029277563095,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2469029277563095,
+          "pixels": {
+            "tp": 1,
+            "fp": 216,
+            "tn": 64480,
+            "fn": 839
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/poke_insulation/004.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "poke_insulation",
+          "score": 0.23912353813648224,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23912353813648224,
+          "pixels": {
+            "tp": 0,
+            "fp": 204,
+            "tn": 63357,
+            "fn": 1975
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/poke_insulation/005.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "poke_insulation",
+          "score": 0.3052445650100708,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3052445650100708,
+          "pixels": {
+            "tp": 119,
+            "fp": 2780,
+            "tn": 62340,
+            "fn": 297
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/poke_insulation/006.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "poke_insulation",
+          "score": 0.27035757899284363,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27035757899284363,
+          "pixels": {
+            "tp": 271,
+            "fp": 1242,
+            "tn": 62555,
+            "fn": 1468
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/poke_insulation/007.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "poke_insulation",
+          "score": 0.26420333981513977,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26420333981513977,
+          "pixels": {
+            "tp": 499,
+            "fp": 767,
+            "tn": 61574,
+            "fn": 2696
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/poke_insulation/008.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "poke_insulation",
+          "score": 0.26953381299972534,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26953381299972534,
+          "pixels": {
+            "tp": 5,
+            "fp": 1319,
+            "tn": 61612,
+            "fn": 2600
+          }
+        },
+        {
+          "id": "mvtec_ad/cable/test/poke_insulation/009.png",
+          "category": "ad_cable",
+          "label": 1,
+          "defect": "poke_insulation",
+          "score": 0.24679192900657654,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.24679192900657654,
+          "pixels": {
+            "tp": 0,
+            "fp": 282,
+            "tn": 62942,
+            "fn": 2312
+          }
+        }
+      ],
+      "reference_heatmap_scored_as_location": false,
+      "known_TEST_reused": true
+    },
+    "ad_metal_nut": {
+      "photo_rates": {
+        "tp": 60,
+        "fn": 33,
+        "fp": 3,
+        "tn": 19,
+        "positive_photos": 93,
+        "negative_photos": 22,
+        "fnr": 0.3548387096774194,
+        "fpr": 0.13636363636363635
+      },
+      "photo_auroc": 0.7771260997067448,
+      "normal_test": 22,
+      "defect_test": 93,
+      "pixel_counts_model256": {
+        "tp": 110348,
+        "fp": 37727,
+        "tn": 6615889,
+        "fn": 772676
+      },
+      "pixel_iou": 0.11984564773755337,
+      "pixel_fnr": 0.8750339741615177,
+      "photo_threshold": 0.23955099284648895,
+      "photo_normalCAL_rank": 36,
+      "normalCAL_count": 44,
+      "stage_gate": {
+        "state": "needs_improvement",
+        "ready_for_next_stage": false
+      },
+      "guards": {
+        "photo_FPR_within20": true,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_prior": true,
+        "original_location_predictions_exact": true,
+        "all_prior_neural_tensors_exact": true
+      },
+      "selected_eligible": false,
+      "observations": [
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/000.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.32557597756385803,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.32557597756385803,
+          "pixels": {
+            "tp": 1246,
+            "fp": 111,
+            "tn": 62350,
+            "fn": 1829
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/001.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.23427467048168182,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23427467048168182,
+          "pixels": {
+            "tp": 69,
+            "fp": 33,
+            "tn": 64386,
+            "fn": 1048
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/002.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.23321256041526794,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23321256041526794,
+          "pixels": {
+            "tp": 0,
+            "fp": 88,
+            "tn": 64806,
+            "fn": 642
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/003.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.24517126381397247,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.24517126381397247,
+          "pixels": {
+            "tp": 264,
+            "fp": 64,
+            "tn": 64254,
+            "fn": 954
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/004.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.1795961856842041,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.1795961856842041,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 64511,
+            "fn": 1025
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/005.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.22311735153198242,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22311735153198242,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 64089,
+            "fn": 1447
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/006.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.216544970870018,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.216544970870018,
+          "pixels": {
+            "tp": 22,
+            "fp": 0,
+            "tn": 64623,
+            "fn": 891
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/007.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.25187060236930847,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.25187060236930847,
+          "pixels": {
+            "tp": 0,
+            "fp": 461,
+            "tn": 64620,
+            "fn": 455
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/008.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.20910541713237762,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.20910541713237762,
+          "pixels": {
+            "tp": 30,
+            "fp": 0,
+            "tn": 64220,
+            "fn": 1286
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/009.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.2124636173248291,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2124636173248291,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 64427,
+            "fn": 1109
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/010.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.24763232469558716,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.24763232469558716,
+          "pixels": {
+            "tp": 34,
+            "fp": 359,
+            "tn": 63289,
+            "fn": 1854
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/011.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.20128580927848816,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.20128580927848816,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 64576,
+            "fn": 960
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/012.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.2495708167552948,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2495708167552948,
+          "pixels": {
+            "tp": 258,
+            "fp": 212,
+            "tn": 63757,
+            "fn": 1309
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/013.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.2374953180551529,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2374953180551529,
+          "pixels": {
+            "tp": 2,
+            "fp": 191,
+            "tn": 63721,
+            "fn": 1622
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/014.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.21470431983470917,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.21470431983470917,
+          "pixels": {
+            "tp": 46,
+            "fp": 0,
+            "tn": 64836,
+            "fn": 654
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/015.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.28515172004699707,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28515172004699707,
+          "pixels": {
+            "tp": 1084,
+            "fp": 65,
+            "tn": 63125,
+            "fn": 1262
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/016.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.200081929564476,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.200081929564476,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 64422,
+            "fn": 1114
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/017.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.223890021443367,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.223890021443367,
+          "pixels": {
+            "tp": 5,
+            "fp": 0,
+            "tn": 64326,
+            "fn": 1205
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/018.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.25197505950927734,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.25197505950927734,
+          "pixels": {
+            "tp": 56,
+            "fp": 361,
+            "tn": 63582,
+            "fn": 1537
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/019.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.23294027149677277,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23294027149677277,
+          "pixels": {
+            "tp": 149,
+            "fp": 12,
+            "tn": 63661,
+            "fn": 1714
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/020.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.235748291015625,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.235748291015625,
+          "pixels": {
+            "tp": 24,
+            "fp": 60,
+            "tn": 64185,
+            "fn": 1267
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/021.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.21263892948627472,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.21263892948627472,
+          "pixels": {
+            "tp": 0,
+            "fp": 3,
+            "tn": 64220,
+            "fn": 1313
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/022.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.23212873935699463,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23212873935699463,
+          "pixels": {
+            "tp": 161,
+            "fp": 0,
+            "tn": 64624,
+            "fn": 751
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/023.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.23371048271656036,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23371048271656036,
+          "pixels": {
+            "tp": 78,
+            "fp": 40,
+            "tn": 64094,
+            "fn": 1324
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/bent/024.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "bent",
+          "score": 0.19408781826496124,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.19408781826496124,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 64309,
+            "fn": 1227
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/000.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.22255659103393555,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22255659103393555,
+          "pixels": {
+            "tp": 0,
+            "fp": 32,
+            "tn": 65220,
+            "fn": 284
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/001.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.21039561927318573,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.21039561927318573,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65165,
+            "fn": 371
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/002.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.22444550693035126,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22444550693035126,
+          "pixels": {
+            "tp": 0,
+            "fp": 11,
+            "tn": 64779,
+            "fn": 746
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/003.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.2124529629945755,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2124529629945755,
+          "pixels": {
+            "tp": 0,
+            "fp": 29,
+            "tn": 65198,
+            "fn": 309
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/004.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.20735499262809753,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.20735499262809753,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65241,
+            "fn": 295
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/005.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.23277808725833893,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23277808725833893,
+          "pixels": {
+            "tp": 0,
+            "fp": 108,
+            "tn": 64674,
+            "fn": 754
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/006.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.2472829818725586,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2472829818725586,
+          "pixels": {
+            "tp": 19,
+            "fp": 237,
+            "tn": 64788,
+            "fn": 492
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/007.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.2135985791683197,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2135985791683197,
+          "pixels": {
+            "tp": 0,
+            "fp": 17,
+            "tn": 64603,
+            "fn": 916
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/008.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.2886732816696167,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2886732816696167,
+          "pixels": {
+            "tp": 844,
+            "fp": 1811,
+            "tn": 60707,
+            "fn": 2174
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/009.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.26104897260665894,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26104897260665894,
+          "pixels": {
+            "tp": 559,
+            "fp": 202,
+            "tn": 64167,
+            "fn": 608
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/010.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.2678823471069336,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2678823471069336,
+          "pixels": {
+            "tp": 490,
+            "fp": 286,
+            "tn": 63110,
+            "fn": 1650
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/011.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.28239089250564575,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28239089250564575,
+          "pixels": {
+            "tp": 599,
+            "fp": 582,
+            "tn": 62023,
+            "fn": 2332
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/012.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.3483676612377167,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3483676612377167,
+          "pixels": {
+            "tp": 2556,
+            "fp": 393,
+            "tn": 60845,
+            "fn": 1742
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/013.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.3201952278614044,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3201952278614044,
+          "pixels": {
+            "tp": 1003,
+            "fp": 680,
+            "tn": 63347,
+            "fn": 506
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/014.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.31006041169166565,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.31006041169166565,
+          "pixels": {
+            "tp": 662,
+            "fp": 2082,
+            "tn": 62657,
+            "fn": 135
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/015.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.38578149676322937,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.38578149676322937,
+          "pixels": {
+            "tp": 1904,
+            "fp": 5079,
+            "tn": 57331,
+            "fn": 1222
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/016.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.23501023650169373,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23501023650169373,
+          "pixels": {
+            "tp": 0,
+            "fp": 108,
+            "tn": 63795,
+            "fn": 1633
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/017.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.2952655851840973,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2952655851840973,
+          "pixels": {
+            "tp": 25,
+            "fp": 2122,
+            "tn": 61234,
+            "fn": 2155
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/018.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.23417067527770996,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23417067527770996,
+          "pixels": {
+            "tp": 0,
+            "fp": 107,
+            "tn": 64185,
+            "fn": 1244
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/019.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.3664136230945587,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3664136230945587,
+          "pixels": {
+            "tp": 1146,
+            "fp": 273,
+            "tn": 63770,
+            "fn": 347
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/020.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.5316946506500244,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.5316946506500244,
+          "pixels": {
+            "tp": 2193,
+            "fp": 4038,
+            "tn": 59087,
+            "fn": 218
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/color/021.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "color",
+          "score": 0.26707547903060913,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.26707547903060913,
+          "pixels": {
+            "tp": 14,
+            "fp": 1372,
+            "tn": 62319,
+            "fn": 1831
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/000.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.266218900680542,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.266218900680542,
+          "pixels": {
+            "tp": 1683,
+            "fp": 0,
+            "tn": 33797,
+            "fn": 30056
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/001.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.30999815464019775,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.30999815464019775,
+          "pixels": {
+            "tp": 6585,
+            "fp": 3,
+            "tn": 33618,
+            "fn": 25330
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/002.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.27757173776626587,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27757173776626587,
+          "pixels": {
+            "tp": 2525,
+            "fp": 0,
+            "tn": 33930,
+            "fn": 29081
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/003.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.2873019576072693,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2873019576072693,
+          "pixels": {
+            "tp": 2826,
+            "fp": 0,
+            "tn": 33640,
+            "fn": 29070
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/004.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.32804447412490845,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.32804447412490845,
+          "pixels": {
+            "tp": 5681,
+            "fp": 1,
+            "tn": 34113,
+            "fn": 25741
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/005.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.2877075970172882,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2877075970172882,
+          "pixels": {
+            "tp": 2702,
+            "fp": 0,
+            "tn": 34059,
+            "fn": 28775
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/006.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.28290075063705444,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28290075063705444,
+          "pixels": {
+            "tp": 1897,
+            "fp": 0,
+            "tn": 34028,
+            "fn": 29611
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/007.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.2942226231098175,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2942226231098175,
+          "pixels": {
+            "tp": 4173,
+            "fp": 28,
+            "tn": 33690,
+            "fn": 27645
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/008.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.28596556186676025,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28596556186676025,
+          "pixels": {
+            "tp": 2978,
+            "fp": 0,
+            "tn": 34188,
+            "fn": 28370
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/009.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.277450293302536,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.277450293302536,
+          "pixels": {
+            "tp": 2704,
+            "fp": 0,
+            "tn": 33912,
+            "fn": 28920
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/010.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.3088162839412689,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.3088162839412689,
+          "pixels": {
+            "tp": 5594,
+            "fp": 51,
+            "tn": 33885,
+            "fn": 26006
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/011.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.2854766249656677,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2854766249656677,
+          "pixels": {
+            "tp": 4086,
+            "fp": 0,
+            "tn": 34103,
+            "fn": 27347
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/012.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.2835007607936859,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2835007607936859,
+          "pixels": {
+            "tp": 4668,
+            "fp": 20,
+            "tn": 34134,
+            "fn": 26714
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/013.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.28273072838783264,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28273072838783264,
+          "pixels": {
+            "tp": 2343,
+            "fp": 0,
+            "tn": 34159,
+            "fn": 29034
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/014.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.27014416456222534,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27014416456222534,
+          "pixels": {
+            "tp": 2883,
+            "fp": 0,
+            "tn": 34131,
+            "fn": 28522
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/015.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.2766762971878052,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2766762971878052,
+          "pixels": {
+            "tp": 1856,
+            "fp": 0,
+            "tn": 33979,
+            "fn": 29701
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/016.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.29302167892456055,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.29302167892456055,
+          "pixels": {
+            "tp": 3093,
+            "fp": 52,
+            "tn": 33604,
+            "fn": 28787
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/017.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.2888476550579071,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2888476550579071,
+          "pixels": {
+            "tp": 2939,
+            "fp": 2,
+            "tn": 33623,
+            "fn": 28972
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/018.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.27599814534187317,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.27599814534187317,
+          "pixels": {
+            "tp": 3682,
+            "fp": 1,
+            "tn": 34077,
+            "fn": 27776
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/019.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.32548102736473083,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.32548102736473083,
+          "pixels": {
+            "tp": 7498,
+            "fp": 78,
+            "tn": 33815,
+            "fn": 24145
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/020.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.2898465096950531,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2898465096950531,
+          "pixels": {
+            "tp": 3254,
+            "fp": 0,
+            "tn": 33941,
+            "fn": 28341
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/021.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.28649288415908813,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28649288415908813,
+          "pixels": {
+            "tp": 2022,
+            "fp": 0,
+            "tn": 33956,
+            "fn": 29558
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/flip/022.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "flip",
+          "score": 0.28563037514686584,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28563037514686584,
+          "pixels": {
+            "tp": 3876,
+            "fp": 0,
+            "tn": 33991,
+            "fn": 27669
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/000.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.18400347232818604,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.18400347232818604,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/001.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2012452334165573,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2012452334165573,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/002.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.20281283557415009,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.20281283557415009,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/003.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2157686948776245,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2157686948776245,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/004.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2169937789440155,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2169937789440155,
+          "pixels": {
+            "tp": 0,
+            "fp": 19,
+            "tn": 65517,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/005.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23492802679538727,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23492802679538727,
+          "pixels": {
+            "tp": 0,
+            "fp": 198,
+            "tn": 65338,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/006.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.21983206272125244,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.21983206272125244,
+          "pixels": {
+            "tp": 0,
+            "fp": 24,
+            "tn": 65512,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/007.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23012234270572662,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23012234270572662,
+          "pixels": {
+            "tp": 0,
+            "fp": 42,
+            "tn": 65494,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/008.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2310495674610138,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2310495674610138,
+          "pixels": {
+            "tp": 0,
+            "fp": 55,
+            "tn": 65481,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/009.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24199973046779633,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.24199973046779633,
+          "pixels": {
+            "tp": 0,
+            "fp": 260,
+            "tn": 65276,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/010.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23150597512722015,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23150597512722015,
+          "pixels": {
+            "tp": 0,
+            "fp": 73,
+            "tn": 65463,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/011.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.24226759374141693,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.24226759374141693,
+          "pixels": {
+            "tp": 0,
+            "fp": 260,
+            "tn": 65276,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/012.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2237689048051834,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2237689048051834,
+          "pixels": {
+            "tp": 0,
+            "fp": 6,
+            "tn": 65530,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/013.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.22134561836719513,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22134561836719513,
+          "pixels": {
+            "tp": 0,
+            "fp": 60,
+            "tn": 65476,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/014.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2278296947479248,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2278296947479248,
+          "pixels": {
+            "tp": 0,
+            "fp": 65,
+            "tn": 65471,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/015.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2314918041229248,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2314918041229248,
+          "pixels": {
+            "tp": 0,
+            "fp": 48,
+            "tn": 65488,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/016.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.22198611497879028,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22198611497879028,
+          "pixels": {
+            "tp": 0,
+            "fp": 5,
+            "tn": 65531,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/017.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2540959119796753,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2540959119796753,
+          "pixels": {
+            "tp": 0,
+            "fp": 425,
+            "tn": 65111,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/018.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.22869376838207245,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22869376838207245,
+          "pixels": {
+            "tp": 0,
+            "fp": 29,
+            "tn": 65507,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/019.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23409293591976166,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23409293591976166,
+          "pixels": {
+            "tp": 0,
+            "fp": 108,
+            "tn": 65428,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/020.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.2274206280708313,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2274206280708313,
+          "pixels": {
+            "tp": 0,
+            "fp": 30,
+            "tn": 65506,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/good/021.png",
+          "category": "ad_metal_nut",
+          "label": 0,
+          "defect": "good",
+          "score": 0.23250897228717804,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23250897228717804,
+          "pixels": {
+            "tp": 0,
+            "fp": 139,
+            "tn": 65397,
+            "fn": 0
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/000.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.21951116621494293,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.21951116621494293,
+          "pixels": {
+            "tp": 0,
+            "fp": 4,
+            "tn": 64283,
+            "fn": 1249
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/001.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2127288281917572,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.2127288281917572,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 60862,
+            "fn": 4674
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/002.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2557469606399536,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2557469606399536,
+          "pixels": {
+            "tp": 723,
+            "fp": 223,
+            "tn": 57640,
+            "fn": 6950
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/003.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2528659701347351,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2528659701347351,
+          "pixels": {
+            "tp": 294,
+            "fp": 64,
+            "tn": 62597,
+            "fn": 2581
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/004.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.24742387235164642,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.24742387235164642,
+          "pixels": {
+            "tp": 55,
+            "fp": 341,
+            "tn": 62479,
+            "fn": 2661
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/005.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.30126330256462097,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.30126330256462097,
+          "pixels": {
+            "tp": 871,
+            "fp": 1452,
+            "tn": 62165,
+            "fn": 1048
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/006.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2463361620903015,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2463361620903015,
+          "pixels": {
+            "tp": 0,
+            "fp": 402,
+            "tn": 63157,
+            "fn": 1977
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/007.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.21195389330387115,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.21195389330387115,
+          "pixels": {
+            "tp": 19,
+            "fp": 0,
+            "tn": 61878,
+            "fn": 3639
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/008.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2796408534049988,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2796408534049988,
+          "pixels": {
+            "tp": 1829,
+            "fp": 1073,
+            "tn": 59824,
+            "fn": 2810
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/009.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.28660663962364197,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28660663962364197,
+          "pixels": {
+            "tp": 1922,
+            "fp": 1123,
+            "tn": 58623,
+            "fn": 3868
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/010.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2960042953491211,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2960042953491211,
+          "pixels": {
+            "tp": 2416,
+            "fp": 967,
+            "tn": 56752,
+            "fn": 5401
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/011.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.23066149652004242,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.23066149652004242,
+          "pixels": {
+            "tp": 8,
+            "fp": 52,
+            "tn": 61616,
+            "fn": 3860
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/012.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2624085545539856,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2624085545539856,
+          "pixels": {
+            "tp": 598,
+            "fp": 8,
+            "tn": 57458,
+            "fn": 7472
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/013.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2750776708126068,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2750776708126068,
+          "pixels": {
+            "tp": 250,
+            "fp": 1144,
+            "tn": 61529,
+            "fn": 2613
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/014.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2617510259151459,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2617510259151459,
+          "pixels": {
+            "tp": 0,
+            "fp": 1211,
+            "tn": 61886,
+            "fn": 2439
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/015.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.22960272431373596,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.22960272431373596,
+          "pixels": {
+            "tp": 0,
+            "fp": 85,
+            "tn": 63306,
+            "fn": 2145
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/016.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2540682256221771,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2540682256221771,
+          "pixels": {
+            "tp": 386,
+            "fp": 383,
+            "tn": 61507,
+            "fn": 3260
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/017.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.28893980383872986,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.28893980383872986,
+          "pixels": {
+            "tp": 1213,
+            "fp": 2159,
+            "tn": 60258,
+            "fn": 1906
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/018.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2781686782836914,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2781686782836914,
+          "pixels": {
+            "tp": 0,
+            "fp": 2842,
+            "tn": 60096,
+            "fn": 2598
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/019.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.21262477338314056,
+          "candidate_detected": false,
+          "original_location_photo_score": 0.21262477338314056,
+          "pixels": {
+            "tp": 12,
+            "fp": 13,
+            "tn": 61880,
+            "fn": 3631
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/020.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.24711303412914276,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.24711303412914276,
+          "pixels": {
+            "tp": 454,
+            "fp": 87,
+            "tn": 63214,
+            "fn": 1781
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/021.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2487802952528,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2487802952528,
+          "pixels": {
+            "tp": 271,
+            "fp": 314,
+            "tn": 60676,
+            "fn": 4275
+          }
+        },
+        {
+          "id": "mvtec_ad/metal_nut/test/scratch/022.png",
+          "category": "ad_metal_nut",
+          "label": 1,
+          "defect": "scratch",
+          "score": 0.2957606911659241,
+          "candidate_detected": true,
+          "original_location_photo_score": 0.2957606911659241,
+          "pixels": {
+            "tp": 1937,
+            "fp": 69,
+            "tn": 60626,
+            "fn": 2904
+          }
+        }
+      ],
+      "reference_heatmap_scored_as_location": false,
+      "known_TEST_reused": true
+    }
+  }
+}
