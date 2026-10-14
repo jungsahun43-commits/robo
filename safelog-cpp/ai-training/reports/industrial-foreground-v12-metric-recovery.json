@@ -1,0 +1,20 @@
+{
+  "declared_utc": "2026-10-14T19:46:40.111068+00:00",
+  "failure": "evaluate-failure-20261014T194436Z.json",
+  "failure_sha256": "4a741a9b0c5a3b3b632f88e1b12a7bbd83420a8de26da5d773fa7b1a98c00e0b",
+  "source_sha256": {
+    "scripts/recover_foreground_metrics.py": "cccd1c99b58a33d7fa1b0f3042d1c98fd52ca26a3ada196b0af6ef32a80b1663",
+    "tests/test_foreground_metric_recovery.py": "5b6630eeedfa0ade411c387c63477881a2f796269c22ee831f0eccdf1cf376d5"
+  },
+  "frozen_protocol_sha256": "9df5d272e8240475be5a8bfeef405417e25b99343adec5b914a7ec7877f5e60d",
+  "normal_bank_sha256": "8b017a291c3cafb8ae5d37fb0ca5730152c36cc164c3595e4499e2cf68560feb",
+  "normal_CAL_sha256": "d11e4b3913e24d0dabdf52b013211795fd006a6e4c51aa039b9ada0144067662",
+  "repair": "count missing normal as FP and missing defect as FN directly, same preregistered worst-case rule; finite-score helper rejects symbolic infinities",
+  "old_frozen_source_edited": false,
+  "model_parameters_views_masks_weights_or_thresholds_changed": false,
+  "first_partial_TEST_inference_already_executed_before_aggregation_failure": true,
+  "partial_predictions_not_persisted_by_failed_process": true,
+  "same_fixed_inference_repeated_for_error_recovery_only": true,
+  "actual_optimizer_updates": 0,
+  "new_unit_tests_passed": 2
+}
