@@ -1,0 +1,21 @@
+{
+  "selected_categories": [],
+  "checkpoint_path": "runs/industrial-ksdd-photo-only-v11/selected/final.pt",
+  "checkpoint_sha256": "935cc6f6cb8e021714c97aa5c7225a567cda1637ba1c1876fd6de9230a0454d6",
+  "stage20_categories": [
+    "ad_cable",
+    "ad_screw",
+    "ad_metal_nut",
+    "mpdd_bracket_brown",
+    "mpdd_bracket_white",
+    "mpdd_metal_plate",
+    "ksdd2_surface",
+    "ball_screw_pitting"
+  ],
+  "parent_all_tensors_buffers_and_operating_points_exact": true,
+  "original_locations_preserved": true,
+  "new_neural_optimizer_updates": 0,
+  "known_TEST_reused_for_development": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false
+}

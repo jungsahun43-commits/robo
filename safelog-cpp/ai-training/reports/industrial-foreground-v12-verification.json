@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "protected_files": 85104,
+  "legacy_sources": 548,
+  "parent_tensors_buffers_thresholds_exact": true,
+  "all_old_equipment_location_CPU_outputs_exact": {
+    "ad_cable": true,
+    "ad_screw": true,
+    "ad_metal_nut": true,
+    "loco_splicing_connectors": true,
+    "mpdd_bracket_black": true,
+    "mpdd_bracket_brown": true,
+    "mpdd_bracket_white": true,
+    "mpdd_connector": true,
+    "mpdd_metal_plate": true,
+    "mpdd_tubes": true,
+    "ksdd2_surface": true
+  },
+  "BSClass_CPU_score_exact": true,
+  "selected_categories": [],
+  "new_optimizer_updates": 0,
+  "no_TEST_threshold_loops": true
+}

@@ -1,0 +1,1974 @@
+{
+  "status": "completed_foreground_experiment_rejected_prior_v11_retained",
+  "finished_utc": "2026-10-14T19:50:57.909982+00:00",
+  "repo": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine",
+  "active_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-ksdd-photo-only-v11\\selected\\final.pt",
+  "active_checkpoint_sha256": "935cc6f6cb8e021714c97aa5c7225a567cda1637ba1c1876fd6de9230a0454d6",
+  "role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-ksdd-photo-role4-handoff-2026-10-15-v11.zip",
+  "role4_ZIP_sha256": "e97389111f16cfed8bade43a8b28a81cf2db5fab11962772ef02e982ab205c41",
+  "existing_ZIP_unchanged": true,
+  "one_model_one_shared_backbone": true,
+  "selected_categories": [],
+  "new_neural_optimizer_updates": 0,
+  "normal_reference_FIT_photos": {
+    "mpdd_bracket_black": 87,
+    "mpdd_tubes": 76
+  },
+  "normal_reference_patches": {
+    "mpdd_bracket_black": 9067,
+    "mpdd_tubes": 8642
+  },
+  "raw_FIT_counts_after_new_group_audit": {
+    "mpdd_bracket_black": 88,
+    "mpdd_tubes": 76
+  },
+  "invalid_FIT_masks_excluded_not_called_healthy": 1,
+  "source_audit": {
+    "audited_utc": "2026-10-14T17:48:01.013647+00:00",
+    "source_manifest_sha256": "40ec891c498adc98db645e6caf979bb91bd7577c991deddc3527c12106ccfecc",
+    "counts": {
+      "mpdd_bracket_black": {
+        "fit": 88,
+        "cal": 30,
+        "excluded_orientation_near_CAL": 30,
+        "excluded_orientation_near_TEST": 102,
+        "excluded_duplicate_FIT_group": 13,
+        "excluded_duplicate_CAL_group": 1,
+        "test": 79
+      },
+      "mpdd_tubes": {
+        "fit": 76,
+        "cal": 23,
+        "excluded_duplicate_FIT_group": 8,
+        "excluded_orientation_near_CAL": 14,
+        "excluded_duplicate_CAL_group": 1,
+        "test": 101
+      }
+    },
+    "mask_prototype_sha256": "384040cd53f95f372f0d5559de96e4d5f0fc9b3cbfa6592c355293c1d8cd17fa",
+    "normal_FIT_mask_review": {
+      "mpdd_bracket_black": {
+        "FIT_photos": 88,
+        "usable_FIT": 87,
+        "usable_fraction": 0.9886363636363636,
+        "foreground_fraction_quantiles": [
+          0.016635894775390625,
+          0.03963775634765625,
+          0.07487869262695312,
+          0.10662765502929689,
+          0.12039947509765625
+        ],
+        "tokens_quantiles": [
+          27.0,
+          55.6,
+          106.0,
+          143.0,
+          172.0
+        ]
+      },
+      "mpdd_tubes": {
+        "FIT_photos": 76,
+        "usable_FIT": 76,
+        "usable_fraction": 1.0,
+        "foreground_fraction_quantiles": [
+          0.02393341064453125,
+          0.044403076171875,
+          0.07032966613769531,
+          0.0877838134765625,
+          0.11032485961914062
+        ],
+        "tokens_quantiles": [
+          29.0,
+          76.0,
+          116.0,
+          144.5,
+          183.0
+        ]
+      }
+    },
+    "appearance_near_group_links": [
+      {
+        "a": "mpdd/bracket_black/train/good/006.png",
+        "b": "mpdd/bracket_black/train/good/005.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/007.png",
+        "b": "mpdd/bracket_black/train/good/005.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/010.png",
+        "b": "mpdd/bracket_black/train/good/009.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/013.png",
+        "b": "mpdd/bracket_black/train/good/012.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/014.png",
+        "b": "mpdd/bracket_black/train/good/012.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/014.png",
+        "b": "mpdd/bracket_black/train/good/013.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/016.png",
+        "b": "mpdd/bracket_black/train/good/007.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/016.png",
+        "b": "mpdd/bracket_black/train/good/015.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/023.png",
+        "b": "mpdd/bracket_black/train/good/012.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/024.png",
+        "b": "mpdd/bracket_black/train/good/012.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/024.png",
+        "b": "mpdd/bracket_black/train/good/023.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/025.png",
+        "b": "mpdd/bracket_black/train/good/023.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/025.png",
+        "b": "mpdd/bracket_black/train/good/024.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/026.png",
+        "b": "mpdd/bracket_black/train/good/025.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/027.png",
+        "b": "mpdd/bracket_black/train/good/026.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/028.png",
+        "b": "mpdd/bracket_black/train/good/026.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/028.png",
+        "b": "mpdd/bracket_black/train/good/027.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/030.png",
+        "b": "mpdd/bracket_black/train/good/029.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/044.png",
+        "b": "mpdd/bracket_black/train/good/043.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/047.png",
+        "b": "mpdd/bracket_black/train/good/046.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/048.png",
+        "b": "mpdd/bracket_black/train/good/044.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/052.png",
+        "b": "mpdd/bracket_black/train/good/051.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/053.png",
+        "b": "mpdd/bracket_black/train/good/051.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/053.png",
+        "b": "mpdd/bracket_black/train/good/052.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/055.png",
+        "b": "mpdd/bracket_black/train/good/054.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/065.png",
+        "b": "mpdd/bracket_black/train/good/054.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/065.png",
+        "b": "mpdd/bracket_black/train/good/055.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/067.png",
+        "b": "mpdd/bracket_black/train/good/051.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/068.png",
+        "b": "mpdd/bracket_black/train/good/050.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/068.png",
+        "b": "mpdd/bracket_black/train/good/067.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/069.png",
+        "b": "mpdd/bracket_black/train/good/068.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/070.png",
+        "b": "mpdd/bracket_black/train/good/069.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/072.png",
+        "b": "mpdd/bracket_black/train/good/069.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/072.png",
+        "b": "mpdd/bracket_black/train/good/070.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/073.png",
+        "b": "mpdd/bracket_black/train/good/068.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/074.png",
+        "b": "mpdd/bracket_black/train/good/051.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/074.png",
+        "b": "mpdd/bracket_black/train/good/067.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/074.png",
+        "b": "mpdd/bracket_black/train/good/068.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/074.png",
+        "b": "mpdd/bracket_black/train/good/073.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/075.png",
+        "b": "mpdd/bracket_black/train/good/054.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/075.png",
+        "b": "mpdd/bracket_black/train/good/065.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/076.png",
+        "b": "mpdd/bracket_black/train/good/053.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/077.png",
+        "b": "mpdd/bracket_black/train/good/055.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/080.png",
+        "b": "mpdd/bracket_black/train/good/064.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/086.png",
+        "b": "mpdd/bracket_black/train/good/030.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/097.png",
+        "b": "mpdd/bracket_black/train/good/096.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/107.png",
+        "b": "mpdd/bracket_black/train/good/035.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/108.png",
+        "b": "mpdd/bracket_black/train/good/040.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/111.png",
+        "b": "mpdd/bracket_black/train/good/091.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/112.png",
+        "b": "mpdd/bracket_black/train/good/073.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/115.png",
+        "b": "mpdd/bracket_black/train/good/065.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/115.png",
+        "b": "mpdd/bracket_black/train/good/075.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/120.png",
+        "b": "mpdd/bracket_black/train/good/082.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/123.png",
+        "b": "mpdd/bracket_black/train/good/121.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/124.png",
+        "b": "mpdd/bracket_black/train/good/083.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/124.png",
+        "b": "mpdd/bracket_black/train/good/121.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/127.png",
+        "b": "mpdd/bracket_black/train/good/059.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/130.png",
+        "b": "mpdd/bracket_black/train/good/113.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/131.png",
+        "b": "mpdd/bracket_black/train/good/051.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/131.png",
+        "b": "mpdd/bracket_black/train/good/067.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/131.png",
+        "b": "mpdd/bracket_black/train/good/074.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/132.png",
+        "b": "mpdd/bracket_black/train/good/051.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/135.png",
+        "b": "mpdd/bracket_black/train/good/058.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/141.png",
+        "b": "mpdd/bracket_black/train/good/069.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/144.png",
+        "b": "mpdd/bracket_black/train/good/055.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/144.png",
+        "b": "mpdd/bracket_black/train/good/077.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/164.png",
+        "b": "mpdd/bracket_black/train/good/161.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/165.png",
+        "b": "mpdd/bracket_black/train/good/160.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/166.png",
+        "b": "mpdd/bracket_black/train/good/160.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/166.png",
+        "b": "mpdd/bracket_black/train/good/165.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/167.png",
+        "b": "mpdd/bracket_black/train/good/160.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/167.png",
+        "b": "mpdd/bracket_black/train/good/165.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/167.png",
+        "b": "mpdd/bracket_black/train/good/166.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/170.png",
+        "b": "mpdd/bracket_black/train/good/169.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/172.png",
+        "b": "mpdd/bracket_black/train/good/160.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/178.png",
+        "b": "mpdd/bracket_black/train/good/071.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/179.png",
+        "b": "mpdd/bracket_black/train/good/092.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/181.png",
+        "b": "mpdd/bracket_black/train/good/160.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/181.png",
+        "b": "mpdd/bracket_black/train/good/166.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/181.png",
+        "b": "mpdd/bracket_black/train/good/167.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/182.png",
+        "b": "mpdd/bracket_black/train/good/160.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/182.png",
+        "b": "mpdd/bracket_black/train/good/166.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/182.png",
+        "b": "mpdd/bracket_black/train/good/167.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/187.png",
+        "b": "mpdd/bracket_black/train/good/148.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/190.png",
+        "b": "mpdd/bracket_black/train/good/129.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/191.png",
+        "b": "mpdd/bracket_black/train/good/189.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/191.png",
+        "b": "mpdd/bracket_black/train/good/190.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/198.png",
+        "b": "mpdd/bracket_black/train/good/159.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/199.png",
+        "b": "mpdd/bracket_black/train/good/161.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/199.png",
+        "b": "mpdd/bracket_black/train/good/196.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/200.png",
+        "b": "mpdd/bracket_black/train/good/196.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/201.png",
+        "b": "mpdd/bracket_black/train/good/197.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/204.png",
+        "b": "mpdd/bracket_black/train/good/080.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/207.png",
+        "b": "mpdd/bracket_black/train/good/129.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/207.png",
+        "b": "mpdd/bracket_black/train/good/189.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/207.png",
+        "b": "mpdd/bracket_black/train/good/190.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/207.png",
+        "b": "mpdd/bracket_black/train/good/191.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/208.png",
+        "b": "mpdd/bracket_black/train/good/194.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/208.png",
+        "b": "mpdd/bracket_black/train/good/198.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/209.png",
+        "b": "mpdd/bracket_black/train/good/194.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/209.png",
+        "b": "mpdd/bracket_black/train/good/198.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/209.png",
+        "b": "mpdd/bracket_black/train/good/208.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/210.png",
+        "b": "mpdd/bracket_black/train/good/068.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/210.png",
+        "b": "mpdd/bracket_black/train/good/069.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/213.png",
+        "b": "mpdd/bracket_black/train/good/113.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/213.png",
+        "b": "mpdd/bracket_black/train/good/212.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/219.png",
+        "b": "mpdd/bracket_black/train/good/129.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/219.png",
+        "b": "mpdd/bracket_black/train/good/156.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/219.png",
+        "b": "mpdd/bracket_black/train/good/190.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/219.png",
+        "b": "mpdd/bracket_black/train/good/191.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/219.png",
+        "b": "mpdd/bracket_black/train/good/207.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/220.png",
+        "b": "mpdd/bracket_black/train/good/219.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/222.png",
+        "b": "mpdd/bracket_black/train/good/221.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/227.png",
+        "b": "mpdd/bracket_black/train/good/131.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/227.png",
+        "b": "mpdd/bracket_black/train/good/153.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/230.png",
+        "b": "mpdd/bracket_black/train/good/129.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/230.png",
+        "b": "mpdd/bracket_black/train/good/190.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/230.png",
+        "b": "mpdd/bracket_black/train/good/207.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/230.png",
+        "b": "mpdd/bracket_black/train/good/219.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/231.png",
+        "b": "mpdd/bracket_black/train/good/154.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/232.png",
+        "b": "mpdd/bracket_black/train/good/154.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/232.png",
+        "b": "mpdd/bracket_black/train/good/231.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/233.png",
+        "b": "mpdd/bracket_black/train/good/227.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/233.png",
+        "b": "mpdd/bracket_black/train/good/232.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/234.png",
+        "b": "mpdd/bracket_black/train/good/219.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/234.png",
+        "b": "mpdd/bracket_black/train/good/220.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/234.png",
+        "b": "mpdd/bracket_black/train/good/230.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/238.png",
+        "b": "mpdd/bracket_black/train/good/155.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/238.png",
+        "b": "mpdd/bracket_black/train/good/220.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/239.png",
+        "b": "mpdd/bracket_black/train/good/221.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/239.png",
+        "b": "mpdd/bracket_black/train/good/222.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/240.png",
+        "b": "mpdd/bracket_black/train/good/221.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/240.png",
+        "b": "mpdd/bracket_black/train/good/222.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/240.png",
+        "b": "mpdd/bracket_black/train/good/239.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/241.png",
+        "b": "mpdd/bracket_black/train/good/221.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/241.png",
+        "b": "mpdd/bracket_black/train/good/222.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/241.png",
+        "b": "mpdd/bracket_black/train/good/239.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/241.png",
+        "b": "mpdd/bracket_black/train/good/240.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/242.png",
+        "b": "mpdd/bracket_black/train/good/187.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/243.png",
+        "b": "mpdd/bracket_black/train/good/113.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/243.png",
+        "b": "mpdd/bracket_black/train/good/212.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/243.png",
+        "b": "mpdd/bracket_black/train/good/213.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/244.png",
+        "b": "mpdd/bracket_black/train/good/113.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/244.png",
+        "b": "mpdd/bracket_black/train/good/213.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/244.png",
+        "b": "mpdd/bracket_black/train/good/243.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/246.png",
+        "b": "mpdd/bracket_black/train/good/114.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/246.png",
+        "b": "mpdd/bracket_black/train/good/232.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/246.png",
+        "b": "mpdd/bracket_black/train/good/233.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/247.png",
+        "b": "mpdd/bracket_black/train/good/051.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/247.png",
+        "b": "mpdd/bracket_black/train/good/068.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/247.png",
+        "b": "mpdd/bracket_black/train/good/131.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/247.png",
+        "b": "mpdd/bracket_black/train/good/227.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/248.png",
+        "b": "mpdd/bracket_black/train/good/051.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/248.png",
+        "b": "mpdd/bracket_black/train/good/067.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/248.png",
+        "b": "mpdd/bracket_black/train/good/068.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/248.png",
+        "b": "mpdd/bracket_black/train/good/210.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/248.png",
+        "b": "mpdd/bracket_black/train/good/227.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/248.png",
+        "b": "mpdd/bracket_black/train/good/247.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/249.png",
+        "b": "mpdd/bracket_black/train/good/069.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/249.png",
+        "b": "mpdd/bracket_black/train/good/210.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/255.png",
+        "b": "mpdd/bracket_black/train/good/147.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/255.png",
+        "b": "mpdd/bracket_black/train/good/254.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/256.png",
+        "b": "mpdd/bracket_black/train/good/147.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/256.png",
+        "b": "mpdd/bracket_black/train/good/254.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/256.png",
+        "b": "mpdd/bracket_black/train/good/255.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/257.png",
+        "b": "mpdd/bracket_black/train/good/255.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/257.png",
+        "b": "mpdd/bracket_black/train/good/256.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/262.png",
+        "b": "mpdd/bracket_black/train/good/110.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/264.png",
+        "b": "mpdd/bracket_black/train/good/187.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/264.png",
+        "b": "mpdd/bracket_black/train/good/242.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/264.png",
+        "b": "mpdd/bracket_black/train/good/253.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/264.png",
+        "b": "mpdd/bracket_black/train/good/263.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/265.png",
+        "b": "mpdd/bracket_black/train/good/048.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/266.png",
+        "b": "mpdd/bracket_black/train/good/067.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/266.png",
+        "b": "mpdd/bracket_black/train/good/074.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/266.png",
+        "b": "mpdd/bracket_black/train/good/131.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/266.png",
+        "b": "mpdd/bracket_black/train/good/227.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/266.png",
+        "b": "mpdd/bracket_black/train/good/247.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/266.png",
+        "b": "mpdd/bracket_black/train/good/248.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/267.png",
+        "b": "mpdd/bracket_black/train/good/212.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/267.png",
+        "b": "mpdd/bracket_black/train/good/233.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/268.png",
+        "b": "mpdd/bracket_black/train/good/113.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/268.png",
+        "b": "mpdd/bracket_black/train/good/212.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/268.png",
+        "b": "mpdd/bracket_black/train/good/213.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/268.png",
+        "b": "mpdd/bracket_black/train/good/243.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/268.png",
+        "b": "mpdd/bracket_black/train/good/244.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/269.png",
+        "b": "mpdd/bracket_black/train/good/213.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/269.png",
+        "b": "mpdd/bracket_black/train/good/268.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/270.png",
+        "b": "mpdd/bracket_black/train/good/129.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/270.png",
+        "b": "mpdd/bracket_black/train/good/190.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/270.png",
+        "b": "mpdd/bracket_black/train/good/207.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/270.png",
+        "b": "mpdd/bracket_black/train/good/219.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/270.png",
+        "b": "mpdd/bracket_black/train/good/230.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/270.png",
+        "b": "mpdd/bracket_black/train/good/234.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/272.png",
+        "b": "mpdd/bracket_black/train/good/156.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/272.png",
+        "b": "mpdd/bracket_black/train/good/190.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/272.png",
+        "b": "mpdd/bracket_black/train/good/219.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/274.png",
+        "b": "mpdd/bracket_black/train/good/204.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/275.png",
+        "b": "mpdd/bracket_black/train/good/242.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/277.png",
+        "b": "mpdd/bracket_black/train/good/090.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/277.png",
+        "b": "mpdd/bracket_black/train/good/120.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/278.png",
+        "b": "mpdd/bracket_black/train/good/148.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/278.png",
+        "b": "mpdd/bracket_black/train/good/275.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/280.png",
+        "b": "mpdd/bracket_black/train/good/058.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/282.png",
+        "b": "mpdd/bracket_black/train/good/219.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/282.png",
+        "b": "mpdd/bracket_black/train/good/230.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/282.png",
+        "b": "mpdd/bracket_black/train/good/231.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/282.png",
+        "b": "mpdd/bracket_black/train/good/234.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/282.png",
+        "b": "mpdd/bracket_black/train/good/270.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/283.png",
+        "b": "mpdd/bracket_black/train/good/231.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/284.png",
+        "b": "mpdd/bracket_black/train/good/221.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/285.png",
+        "b": "mpdd/bracket_black/train/good/155.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/285.png",
+        "b": "mpdd/bracket_black/train/good/283.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/286.png",
+        "b": "mpdd/bracket_black/train/good/229.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/286.png",
+        "b": "mpdd/bracket_black/train/good/234.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/train/good/286.png",
+        "b": "mpdd/bracket_black/train/good/282.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/002.png",
+        "b": "mpdd/bracket_black/train/good/014.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/004.png",
+        "b": "mpdd/bracket_black/train/good/027.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/004.png",
+        "b": "mpdd/bracket_black/train/good/028.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/004.png",
+        "b": "mpdd/bracket_black/train/good/029.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/006.png",
+        "b": "mpdd/bracket_black/train/good/043.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/007.png",
+        "b": "mpdd/bracket_black/train/good/049.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/008.png",
+        "b": "mpdd/bracket_black/train/good/055.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/009.png",
+        "b": "mpdd/bracket_black/train/good/078.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/013.png",
+        "b": "mpdd/bracket_black/train/good/120.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/019.png",
+        "b": "mpdd/bracket_black/train/good/120.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/019.png",
+        "b": "mpdd/bracket_black/train/good/187.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/019.png",
+        "b": "mpdd/bracket_black/train/good/277.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/024.png",
+        "b": "mpdd/bracket_black/test/good/012.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/026.png",
+        "b": "mpdd/bracket_black/train/good/098.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/028.png",
+        "b": "mpdd/bracket_black/train/good/051.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/028.png",
+        "b": "mpdd/bracket_black/train/good/067.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/028.png",
+        "b": "mpdd/bracket_black/train/good/074.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/028.png",
+        "b": "mpdd/bracket_black/train/good/131.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/029.png",
+        "b": "mpdd/bracket_black/train/good/274.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/good/030.png",
+        "b": "mpdd/bracket_black/train/good/120.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/012.png",
+        "b": "mpdd/bracket_black/train/good/185.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/013.png",
+        "b": "mpdd/bracket_black/train/good/185.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/013.png",
+        "b": "mpdd/bracket_black/test/scratches/012.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/020.png",
+        "b": "mpdd/bracket_black/train/good/230.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/020.png",
+        "b": "mpdd/bracket_black/train/good/270.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/020.png",
+        "b": "mpdd/bracket_black/test/good/008.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/022.png",
+        "b": "mpdd/bracket_black/test/scratches/021.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/023.png",
+        "b": "mpdd/bracket_black/train/good/119.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/023.png",
+        "b": "mpdd/bracket_black/test/scratches/021.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/023.png",
+        "b": "mpdd/bracket_black/test/scratches/022.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/024.png",
+        "b": "mpdd/bracket_black/train/good/136.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/024.png",
+        "b": "mpdd/bracket_black/test/scratches/023.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/025.png",
+        "b": "mpdd/bracket_black/test/scratches/024.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/027.png",
+        "b": "mpdd/bracket_black/train/good/204.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/027.png",
+        "b": "mpdd/bracket_black/test/scratches/026.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/028.png",
+        "b": "mpdd/bracket_black/train/good/204.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/028.png",
+        "b": "mpdd/bracket_black/test/scratches/026.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/028.png",
+        "b": "mpdd/bracket_black/test/scratches/027.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/029.png",
+        "b": "mpdd/bracket_black/test/scratches/027.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/029.png",
+        "b": "mpdd/bracket_black/test/scratches/028.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/bracket_black/test/scratches/033.png",
+        "b": "mpdd/bracket_black/test/scratches/030.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/004.png",
+        "b": "mpdd/tubes/train/good/002.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/012.png",
+        "b": "mpdd/tubes/train/good/011.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/013.png",
+        "b": "mpdd/tubes/train/good/011.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/013.png",
+        "b": "mpdd/tubes/train/good/012.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/039.png",
+        "b": "mpdd/tubes/train/good/038.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/041.png",
+        "b": "mpdd/tubes/train/good/040.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/051.png",
+        "b": "mpdd/tubes/train/good/050.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/057.png",
+        "b": "mpdd/tubes/train/good/056.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/058.png",
+        "b": "mpdd/tubes/train/good/056.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/058.png",
+        "b": "mpdd/tubes/train/good/057.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/061.png",
+        "b": "mpdd/tubes/train/good/060.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/062.png",
+        "b": "mpdd/tubes/train/good/061.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/063.png",
+        "b": "mpdd/tubes/train/good/061.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/063.png",
+        "b": "mpdd/tubes/train/good/062.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/065.png",
+        "b": "mpdd/tubes/train/good/064.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/066.png",
+        "b": "mpdd/tubes/train/good/061.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/068.png",
+        "b": "mpdd/tubes/train/good/060.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/069.png",
+        "b": "mpdd/tubes/train/good/068.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/076.png",
+        "b": "mpdd/tubes/train/good/074.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/076.png",
+        "b": "mpdd/tubes/train/good/075.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/077.png",
+        "b": "mpdd/tubes/train/good/074.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/077.png",
+        "b": "mpdd/tubes/train/good/076.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/078.png",
+        "b": "mpdd/tubes/train/good/074.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/078.png",
+        "b": "mpdd/tubes/train/good/076.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/078.png",
+        "b": "mpdd/tubes/train/good/077.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/080.png",
+        "b": "mpdd/tubes/train/good/077.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/105.png",
+        "b": "mpdd/tubes/train/good/103.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/105.png",
+        "b": "mpdd/tubes/train/good/104.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/train/good/115.png",
+        "b": "mpdd/tubes/train/good/114.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/test/anomalous/044.png",
+        "b": "mpdd/tubes/test/anomalous/043.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/test/good/026.png",
+        "b": "mpdd/tubes/test/good/025.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      },
+      {
+        "a": "mpdd/tubes/test/good/030.png",
+        "b": "mpdd/tubes/test/good/029.png",
+        "exact_RGB": false,
+        "near_pHash": true
+      }
+    ],
+    "source_images_and_masks_SHA_rechecked": 566,
+    "exact_and_any8orientation_pHash2_groups_disjoint": true,
+    "physical_component_or_acquisition_groups_verified": false,
+    "publisher_TEST_or_duplicates_in_FIT_CAL": false,
+    "CAL_TEST_masks_or_model_scores_computed": false,
+    "new_optimizer_updates": 0,
+    "colour_mask_is_verified_part_ground_truth": false,
+    "independent_field_validated": false
+  },
+  "candidate_results": {
+    "mpdd_bracket_black": {
+      "photo_rates_worst_case_manual_review_as_error": {
+        "tp": 23,
+        "fn": 24,
+        "fp": 6,
+        "tn": 26,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.5106382978723404,
+        "fpr": 0.1875
+      },
+      "baseline_photo_rates": {
+        "tp": 8,
+        "fn": 39,
+        "fp": 3,
+        "tn": 29,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.8297872340425532,
+        "fpr": 0.09375
+      },
+      "photo_threshold": 0.08566929399967194,
+      "CAL": {
+        "alpha": 0.2,
+        "rank": 24,
+        "normal_CAL_photos": 29,
+        "normal_CAL_total": 30,
+        "manual_review_count": 1
+      },
+      "manual_review_TEST_count": 3,
+      "by_defect": {
+        "hole": {
+          "defect_photos": 12,
+          "fn": 1,
+          "fnr": 0.08333333333333333,
+          "manual_review": 0
+        },
+        "scratches": {
+          "defect_photos": 35,
+          "fn": 23,
+          "fnr": 0.6571428571428571,
+          "manual_review": 1
+        }
+      },
+      "guards": {
+        "classes_at_least20": true,
+        "FPR_within20": true,
+        "FNR_improvement_at_least5pp": true,
+        "no_CAL_TEST_manual_review": false,
+        "parent_tensors_exact": true
+      }
+    },
+    "mpdd_tubes": {
+      "photo_rates_worst_case_manual_review_as_error": {
+        "tp": 57,
+        "fn": 12,
+        "fp": 15,
+        "tn": 17,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.17391304347826086,
+        "fpr": 0.46875
+      },
+      "baseline_photo_rates": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "photo_threshold": 0.13239216804504395,
+      "CAL": {
+        "alpha": 0.2,
+        "rank": 20,
+        "normal_CAL_photos": 23,
+        "normal_CAL_total": 23,
+        "manual_review_count": 0
+      },
+      "manual_review_TEST_count": 0,
+      "by_defect": {
+        "anomalous": {
+          "defect_photos": 69,
+          "fn": 12,
+          "fnr": 0.17391304347826086,
+          "manual_review": 0
+        }
+      },
+      "guards": {
+        "classes_at_least20": true,
+        "FPR_within20": false,
+        "FNR_improvement_at_least5pp": true,
+        "no_CAL_TEST_manual_review": true,
+        "parent_tensors_exact": true
+      }
+    }
+  },
+  "candidate_model_or_thresholds_retuned_after_TEST": false,
+  "known_TEST_reused_for_development": true,
+  "inherited_parent_normal_FIT_had_newly_flagged_near_TEST_candidates": true,
+  "near_pHash_candidates_are_not_verified_physical_duplicates": true,
+  "new_reference_FIT_CAL_TEST_near_groups_disjoint": true,
+  "partial_TEST_inference_repeated_only_after_metric_implementation_failure": true,
+  "failure_and_calibration_bank_SHA_preserved": true,
+  "new_unit_tests_passed": 6,
+  "parent_tensors_buffers_operating_points_and_old_CPU_locations_preserved": true,
+  "protected_files_checked": 85104,
+  "legacy_source_SHA_checked": 548,
+  "KSDD_v11_photo_rates_unchanged": {
+    "tp": 105,
+    "fn": 5,
+    "fp": 110,
+    "tn": 784,
+    "positive_photos": 110,
+    "negative_photos": 894,
+    "fnr": 0.045454545454545456,
+    "fpr": 0.12304250559284116
+  },
+  "additional12_stage20_count_unchanged": 8,
+  "new_device_or_CPP_package_verification": "not needed: no candidate selected; prior verifiedZIP unchanged",
+  "new_training_created_fault_labels": false,
+  "independent_field_validated": false,
+  "app_default_promoted": false,
+  "next_priorities": [
+    "Official LOCO relations are now documented in reports/LOCO_RELATION_NEXT_STUDY_KO.md. Audit data then preregister same-backbone global-context normal-FIT reconstruction training.",
+    "Black bracket scratches remain difficult; tubes foreground removes background but increases false alerts. Do not retry thresholds until TEST rates match. Future studies require separate fixed protocols and appropriate data.",
+    "Connector14 defect TEST photos are insufficient; whole-photo healthy belt FPR remains unknown."
+  ],
+  "completed_studies_do_not_rerun": [
+    "industrial-bsclass-supervised-v8",
+    "industrial-surfaces-v9",
+    "industrial-ksdd-supervised-v10",
+    "industrial-ksdd-photo-only-v11",
+    "industrial-foreground-v12"
+  ],
+  "continuation_automation_id": "safelog",
+  "keep_existing_bounded_awake_helper_no_duplicate": true
+}

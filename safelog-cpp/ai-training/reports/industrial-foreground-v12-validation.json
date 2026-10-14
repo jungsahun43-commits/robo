@@ -1,0 +1,5104 @@
+{
+  "categories": {
+    "mpdd_bracket_black": {
+      "photo_rates_worst_case_manual_review_as_error": {
+        "tp": 23,
+        "fn": 24,
+        "fp": 6,
+        "tn": 26,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.5106382978723404,
+        "fpr": 0.1875
+      },
+      "baseline_photo_rates": {
+        "tp": 8,
+        "fn": 39,
+        "fp": 3,
+        "tn": 29,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.8297872340425532,
+        "fpr": 0.09375
+      },
+      "photo_threshold": 0.08566929399967194,
+      "CAL": {
+        "alpha": 0.2,
+        "rank": 24,
+        "normal_CAL_photos": 29,
+        "normal_CAL_total": 30,
+        "manual_review_count": 1
+      },
+      "manual_review_TEST_count": 3,
+      "by_defect": {
+        "hole": {
+          "defect_photos": 12,
+          "fn": 1,
+          "fnr": 0.08333333333333333,
+          "manual_review": 0
+        },
+        "scratches": {
+          "defect_photos": 35,
+          "fn": 23,
+          "fnr": 0.6571428571428571,
+          "manual_review": 1
+        }
+      },
+      "auroc_valid_only": 0.7065217391304348,
+      "stage_gate": {
+        "state": "needs_improvement",
+        "ready_for_next_stage": false
+      },
+      "guards": {
+        "classes_at_least20": true,
+        "FPR_within20": true,
+        "FNR_improvement_at_least5pp": true,
+        "no_CAL_TEST_manual_review": false,
+        "parent_tensors_exact": true
+      },
+      "eligible_incremental_improvement": false,
+      "observations": [
+        {
+          "id": "mpdd/bracket_black/test/good/000.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.11184196919202805,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04599761962890625,
+            "input_border_Lab_threshold": 20.862014770507812,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/001.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.06658747047185898,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.060394287109375,
+            "input_border_Lab_threshold": 20.534406661987305,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/002.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0795733630657196,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0581512451171875,
+            "input_border_Lab_threshold": 21.552709579467773,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/003.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.06479187309741974,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06376266479492188,
+            "input_border_Lab_threshold": 24.720571517944336,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/004.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0762161985039711,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07350921630859375,
+            "input_border_Lab_threshold": 24.59140968322754,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/005.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08025860786437988,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06265640258789062,
+            "input_border_Lab_threshold": 24.36899757385254,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/006.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.053193770349025726,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.049098968505859375,
+            "input_border_Lab_threshold": 23.330787658691406,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/007.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08389268815517426,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.050518035888671875,
+            "input_border_Lab_threshold": 22.514476776123047,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/008.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07769111543893814,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07779312133789062,
+            "input_border_Lab_threshold": 22.415552139282227,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/009.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0627032145857811,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0828857421875,
+            "input_border_Lab_threshold": 22.32565689086914,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/010.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0559915229678154,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.048793792724609375,
+            "input_border_Lab_threshold": 20.968563079833984,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/011.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07743644714355469,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.047039031982421875,
+            "input_border_Lab_threshold": 16.566436767578125,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/012.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.06681843101978302,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.057102203369140625,
+            "input_border_Lab_threshold": 16.406892776489258,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/013.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.06522367894649506,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04578399658203125,
+            "input_border_Lab_threshold": 19.400766372680664,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/014.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.06496842950582504,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.09237289428710938,
+            "input_border_Lab_threshold": 21.039527893066406,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/015.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.054547522217035294,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.11277008056640625,
+            "input_border_Lab_threshold": 18.010147094726562,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/016.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07501919567584991,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0584869384765625,
+            "input_border_Lab_threshold": 20.860000610351562,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/017.png",
+          "label": 0,
+          "defect": "good",
+          "score": null,
+          "manual_review": true,
+          "reason": "Foreground area outside1to75percent; manual review required",
+          "candidate_detected": null
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/018.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.05277995020151138,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.10565185546875,
+            "input_border_Lab_threshold": 12.0,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/019.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08353690803050995,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.08624649047851562,
+            "input_border_Lab_threshold": 19.000839233398438,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/020.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.041503604501485825,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.048065185546875,
+            "input_border_Lab_threshold": 20.186662673950195,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/021.png",
+          "label": 0,
+          "defect": "good",
+          "score": null,
+          "manual_review": true,
+          "reason": "Foreground area outside1to75percent; manual review required",
+          "candidate_detected": null
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/022.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08209285140037537,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.10179901123046875,
+            "input_border_Lab_threshold": 19.638612747192383,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/023.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.06325452774763107,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06830215454101562,
+            "input_border_Lab_threshold": 16.448020935058594,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/024.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07329032570123672,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07003021240234375,
+            "input_border_Lab_threshold": 17.08669662475586,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/025.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07126129418611526,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05664825439453125,
+            "input_border_Lab_threshold": 19.28608512878418,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/026.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.11662069708108902,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07580947875976562,
+            "input_border_Lab_threshold": 20.1091365814209,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/027.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.11120850592851639,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05254364013671875,
+            "input_border_Lab_threshold": 19.600662231445312,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/028.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07994125783443451,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05853271484375,
+            "input_border_Lab_threshold": 19.24741554260254,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/029.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.04529586806893349,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.10022354125976562,
+            "input_border_Lab_threshold": 19.883480072021484,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/030.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08163914084434509,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.09576034545898438,
+            "input_border_Lab_threshold": 20.027023315429688,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/good/031.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08817673474550247,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.044689178466796875,
+            "input_border_Lab_threshold": 19.60331153869629,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/000.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.1497100591659546,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.10153579711914062,
+            "input_border_Lab_threshold": 18.9312801361084,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/001.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.15010327100753784,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.08449172973632812,
+            "input_border_Lab_threshold": 18.059192657470703,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/002.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.13972215354442596,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.1024932861328125,
+            "input_border_Lab_threshold": 19.220422744750977,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/003.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.09455763548612595,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.10761642456054688,
+            "input_border_Lab_threshold": 18.02129554748535,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/004.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.08487501740455627,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.1089935302734375,
+            "input_border_Lab_threshold": 18.1049747467041,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/005.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.12232881784439087,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.1051177978515625,
+            "input_border_Lab_threshold": 18.723834991455078,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/006.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.1692192554473877,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.056148529052734375,
+            "input_border_Lab_threshold": 18.27936363220215,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/007.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.12550081312656403,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.090972900390625,
+            "input_border_Lab_threshold": 19.27120018005371,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/008.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.1245264858007431,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.026172637939453125,
+            "input_border_Lab_threshold": 18.542926788330078,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/009.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.13621924817562103,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.058349609375,
+            "input_border_Lab_threshold": 18.90760040283203,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/010.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.12735071778297424,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.10279083251953125,
+            "input_border_Lab_threshold": 18.80535888671875,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/hole/011.png",
+          "label": 1,
+          "defect": "hole",
+          "score": 0.137333944439888,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.10002517700195312,
+            "input_border_Lab_threshold": 19.371349334716797,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/000.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.06245225667953491,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0112152099609375,
+            "input_border_Lab_threshold": 18.861387252807617,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/001.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.09340263903141022,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.11718368530273438,
+            "input_border_Lab_threshold": 19.039989471435547,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/002.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.09540458768606186,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0944061279296875,
+            "input_border_Lab_threshold": 19.78124237060547,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/003.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.10926860570907593,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.056365966796875,
+            "input_border_Lab_threshold": 20.326852798461914,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/004.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.12358690053224564,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.08465576171875,
+            "input_border_Lab_threshold": 19.91330337524414,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/005.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.08109119534492493,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.09554290771484375,
+            "input_border_Lab_threshold": 20.43581771850586,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/006.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.07681770622730255,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.08212661743164062,
+            "input_border_Lab_threshold": 22.32211685180664,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/007.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.08775213360786438,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.10515975952148438,
+            "input_border_Lab_threshold": 21.322933197021484,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/008.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.06473485380411148,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07769775390625,
+            "input_border_Lab_threshold": 21.910053253173828,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/009.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.08218123018741608,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.12489700317382812,
+            "input_border_Lab_threshold": 18.918132781982422,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/010.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.07817848026752472,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.12728500366210938,
+            "input_border_Lab_threshold": 19.151681900024414,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/011.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.08190874010324478,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.11967086791992188,
+            "input_border_Lab_threshold": 19.315000534057617,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/012.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.08104288578033447,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.12592697143554688,
+            "input_border_Lab_threshold": 19.194965362548828,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/013.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.0646689236164093,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0878753662109375,
+            "input_border_Lab_threshold": 19.13602066040039,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/014.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.06558196991682053,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.010807037353515625,
+            "input_border_Lab_threshold": 20.165245056152344,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/015.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.0696963220834732,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04242706298828125,
+            "input_border_Lab_threshold": 19.49262237548828,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/016.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.08377403765916824,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.051937103271484375,
+            "input_border_Lab_threshold": 19.44340705871582,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/017.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.09680560976266861,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.051441192626953125,
+            "input_border_Lab_threshold": 19.233129501342773,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/018.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.10288038849830627,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.02754974365234375,
+            "input_border_Lab_threshold": 18.948122024536133,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/019.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.11297810077667236,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.043346405029296875,
+            "input_border_Lab_threshold": 19.155452728271484,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/020.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.08919516205787659,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.041019439697265625,
+            "input_border_Lab_threshold": 18.859516143798828,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/021.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.07413426041603088,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.067352294921875,
+            "input_border_Lab_threshold": 18.934228897094727,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/022.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.058445364236831665,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0789947509765625,
+            "input_border_Lab_threshold": 19.333072662353516,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/023.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.0915101021528244,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07885360717773438,
+            "input_border_Lab_threshold": 18.89143180847168,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/024.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.06621389836072922,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07857131958007812,
+            "input_border_Lab_threshold": 19.038671493530273,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/025.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.047388408333063126,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.09115219116210938,
+            "input_border_Lab_threshold": 18.84078598022461,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/026.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.05516032129526138,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.11507415771484375,
+            "input_border_Lab_threshold": 18.866947174072266,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/027.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.07475001364946365,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.1166839599609375,
+            "input_border_Lab_threshold": 18.62742805480957,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/028.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.07014136761426926,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.11561965942382812,
+            "input_border_Lab_threshold": 18.67601776123047,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/029.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.0667562186717987,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.11444091796875,
+            "input_border_Lab_threshold": 18.814897537231445,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/030.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.10788049548864365,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0148162841796875,
+            "input_border_Lab_threshold": 19.58926773071289,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/031.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.0711912140250206,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05538177490234375,
+            "input_border_Lab_threshold": 20.338748931884766,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/032.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.05464000999927521,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.02236175537109375,
+            "input_border_Lab_threshold": 20.270416259765625,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/033.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": 0.08682651072740555,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.016361236572265625,
+            "input_border_Lab_threshold": 20.282419204711914,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/bracket_black/test/scratches/034.png",
+          "label": 1,
+          "defect": "scratches",
+          "score": null,
+          "manual_review": true,
+          "reason": "Foreground area outside1to75percent; manual review required",
+          "candidate_detected": null
+        }
+      ]
+    },
+    "mpdd_tubes": {
+      "photo_rates_worst_case_manual_review_as_error": {
+        "tp": 57,
+        "fn": 12,
+        "fp": 15,
+        "tn": 17,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.17391304347826086,
+        "fpr": 0.46875
+      },
+      "baseline_photo_rates": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "photo_threshold": 0.13239216804504395,
+      "CAL": {
+        "alpha": 0.2,
+        "rank": 20,
+        "normal_CAL_photos": 23,
+        "normal_CAL_total": 23,
+        "manual_review_count": 0
+      },
+      "manual_review_TEST_count": 0,
+      "by_defect": {
+        "anomalous": {
+          "defect_photos": 69,
+          "fn": 12,
+          "fnr": 0.17391304347826086,
+          "manual_review": 0
+        }
+      },
+      "auroc_valid_only": 0.8528079710144928,
+      "stage_gate": {
+        "state": "needs_improvement",
+        "ready_for_next_stage": false
+      },
+      "guards": {
+        "classes_at_least20": true,
+        "FPR_within20": false,
+        "FNR_improvement_at_least5pp": true,
+        "no_CAL_TEST_manual_review": true,
+        "parent_tensors_exact": true
+      },
+      "eligible_incremental_improvement": false,
+      "observations": [
+        {
+          "id": "mpdd/tubes/test/anomalous/000.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.27052873373031616,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.09021377563476562,
+            "input_border_Lab_threshold": 12.616533279418945,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/001.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1300412267446518,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06231689453125,
+            "input_border_Lab_threshold": 13.69325065612793,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/002.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.21063163876533508,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04740142822265625,
+            "input_border_Lab_threshold": 14.863582611083984,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/003.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.21533659100532532,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0452117919921875,
+            "input_border_Lab_threshold": 12.86104679107666,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/004.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.19705405831336975,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04035186767578125,
+            "input_border_Lab_threshold": 12.43061351776123,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/005.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.14825864136219025,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04189300537109375,
+            "input_border_Lab_threshold": 14.343670845031738,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/006.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1477118283510208,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04538726806640625,
+            "input_border_Lab_threshold": 13.025056838989258,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/007.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.14812299609184265,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.03903961181640625,
+            "input_border_Lab_threshold": 16.377037048339844,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/008.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.13098189234733582,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05243682861328125,
+            "input_border_Lab_threshold": 16.17608070373535,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/009.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.14157652854919434,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04471588134765625,
+            "input_border_Lab_threshold": 14.175312042236328,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/010.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.15581519901752472,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.045196533203125,
+            "input_border_Lab_threshold": 13.814104080200195,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/011.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.22746697068214417,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0458221435546875,
+            "input_border_Lab_threshold": 13.980612754821777,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/012.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.18422283232212067,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.053661346435546875,
+            "input_border_Lab_threshold": 14.153870582580566,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/013.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.11945171654224396,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0439300537109375,
+            "input_border_Lab_threshold": 13.779386520385742,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/014.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.14545880258083344,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.056659698486328125,
+            "input_border_Lab_threshold": 13.038948059082031,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/015.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.23317228257656097,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05242919921875,
+            "input_border_Lab_threshold": 12.028995513916016,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/016.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.14195339381694794,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.047214508056640625,
+            "input_border_Lab_threshold": 12.574304580688477,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/017.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1504313349723816,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.047458648681640625,
+            "input_border_Lab_threshold": 12.0,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/018.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1778717041015625,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.049098968505859375,
+            "input_border_Lab_threshold": 14.361466407775879,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/019.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.19594302773475647,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04228973388671875,
+            "input_border_Lab_threshold": 15.242680549621582,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/020.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.12988613545894623,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.03421783447265625,
+            "input_border_Lab_threshold": 12.82618522644043,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/021.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.17295219004154205,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0467376708984375,
+            "input_border_Lab_threshold": 12.232205390930176,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/022.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.13255727291107178,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.044239044189453125,
+            "input_border_Lab_threshold": 12.72199535369873,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/023.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.12948016822338104,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06668472290039062,
+            "input_border_Lab_threshold": 14.469707489013672,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/024.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.16141077876091003,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.049976348876953125,
+            "input_border_Lab_threshold": 13.978745460510254,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/025.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1555209755897522,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.049114227294921875,
+            "input_border_Lab_threshold": 16.348188400268555,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/026.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1460620015859604,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.058719635009765625,
+            "input_border_Lab_threshold": 14.854293823242188,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/027.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.15082336962223053,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.055782318115234375,
+            "input_border_Lab_threshold": 14.12818717956543,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/028.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1439482420682907,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06024932861328125,
+            "input_border_Lab_threshold": 13.845603942871094,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/029.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.14862151443958282,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06456375122070312,
+            "input_border_Lab_threshold": 14.333466529846191,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/030.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.4133490025997162,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.061798095703125,
+            "input_border_Lab_threshold": 12.150313377380371,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/031.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.4169682264328003,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07535934448242188,
+            "input_border_Lab_threshold": 13.900961875915527,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/032.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.21851153671741486,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04988861083984375,
+            "input_border_Lab_threshold": 13.413748741149902,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/033.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.2238026112318039,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06567764282226562,
+            "input_border_Lab_threshold": 12.0,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/034.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.3941749930381775,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.058338165283203125,
+            "input_border_Lab_threshold": 12.0,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/035.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.3865301311016083,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0738677978515625,
+            "input_border_Lab_threshold": 12.0,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/036.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.3940232992172241,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.067596435546875,
+            "input_border_Lab_threshold": 12.0,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/037.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.190723717212677,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07185745239257812,
+            "input_border_Lab_threshold": 14.328824996948242,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/038.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.11587179452180862,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07477951049804688,
+            "input_border_Lab_threshold": 12.89964485168457,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/039.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1668863147497177,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06402587890625,
+            "input_border_Lab_threshold": 13.380972862243652,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/040.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1313823014497757,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.020862579345703125,
+            "input_border_Lab_threshold": 16.289630889892578,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/041.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.12810109555721283,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.058849334716796875,
+            "input_border_Lab_threshold": 12.548272132873535,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/042.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.12094542384147644,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05521392822265625,
+            "input_border_Lab_threshold": 12.712407112121582,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/043.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1469496637582779,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06479644775390625,
+            "input_border_Lab_threshold": 13.747539520263672,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/044.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1193792000412941,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06268692016601562,
+            "input_border_Lab_threshold": 13.760544776916504,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/045.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.14300037920475006,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07903289794921875,
+            "input_border_Lab_threshold": 12.637601852416992,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/046.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.12955611944198608,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.057712554931640625,
+            "input_border_Lab_threshold": 14.009051322937012,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/047.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.16387033462524414,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05281829833984375,
+            "input_border_Lab_threshold": 12.448441505432129,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/048.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.15810561180114746,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0486602783203125,
+            "input_border_Lab_threshold": 13.997467041015625,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/049.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.16713741421699524,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07938003540039062,
+            "input_border_Lab_threshold": 13.87846565246582,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/050.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.19716814160346985,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07366180419921875,
+            "input_border_Lab_threshold": 12.243871688842773,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/051.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.19510769844055176,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.054935455322265625,
+            "input_border_Lab_threshold": 16.14569854736328,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/052.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.19074945151805878,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07490158081054688,
+            "input_border_Lab_threshold": 13.8384428024292,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/053.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.20092332363128662,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.060764312744140625,
+            "input_border_Lab_threshold": 13.110488891601562,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/054.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.1301657259464264,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07137298583984375,
+            "input_border_Lab_threshold": 13.396286964416504,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/055.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.22733530402183533,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.073089599609375,
+            "input_border_Lab_threshold": 12.0,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/056.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.24509172141551971,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06301116943359375,
+            "input_border_Lab_threshold": 15.73277759552002,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/057.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.2474493533372879,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04059600830078125,
+            "input_border_Lab_threshold": 24.401077270507812,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/058.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.18752066791057587,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04642486572265625,
+            "input_border_Lab_threshold": 26.149648666381836,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/059.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.23059362173080444,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0688018798828125,
+            "input_border_Lab_threshold": 13.983186721801758,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/060.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.20925843715667725,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07285308837890625,
+            "input_border_Lab_threshold": 14.945648193359375,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/061.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.22326864302158356,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06836318969726562,
+            "input_border_Lab_threshold": 15.49390697479248,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/062.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.22212079167366028,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.070159912109375,
+            "input_border_Lab_threshold": 12.78468132019043,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/063.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.3961791396141052,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06901931762695312,
+            "input_border_Lab_threshold": 12.967230796813965,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/064.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.13892604410648346,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06547927856445312,
+            "input_border_Lab_threshold": 14.37912654876709,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/065.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.20844098925590515,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07029342651367188,
+            "input_border_Lab_threshold": 15.748200416564941,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/066.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.16372691094875336,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0685577392578125,
+            "input_border_Lab_threshold": 14.525714874267578,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/067.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.15519441664218903,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.08353424072265625,
+            "input_border_Lab_threshold": 15.971076965332031,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/anomalous/068.png",
+          "label": 1,
+          "defect": "anomalous",
+          "score": 0.19869686663150787,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07743453979492188,
+            "input_border_Lab_threshold": 16.69274139404297,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/000.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.13761621713638306,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.09587860107421875,
+            "input_border_Lab_threshold": 12.476090431213379,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/001.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.13516779243946075,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.09639739990234375,
+            "input_border_Lab_threshold": 12.258604049682617,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/002.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.11979275941848755,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.09864425659179688,
+            "input_border_Lab_threshold": 12.065413475036621,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/003.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.13238343596458435,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.10211181640625,
+            "input_border_Lab_threshold": 12.0,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/004.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.11892446130514145,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.08069992065429688,
+            "input_border_Lab_threshold": 13.349207878112793,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/005.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.13145777583122253,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.04499053955078125,
+            "input_border_Lab_threshold": 13.417534828186035,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/006.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.10849025100469589,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.039546966552734375,
+            "input_border_Lab_threshold": 15.344724655151367,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/007.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.1091400533914566,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05692291259765625,
+            "input_border_Lab_threshold": 14.011679649353027,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/008.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.10907895863056183,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06476211547851562,
+            "input_border_Lab_threshold": 13.731124877929688,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/009.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.11519258469343185,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06955337524414062,
+            "input_border_Lab_threshold": 14.56352710723877,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/010.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.1097019836306572,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.07779693603515625,
+            "input_border_Lab_threshold": 13.981311798095703,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/011.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.11647384613752365,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06824493408203125,
+            "input_border_Lab_threshold": 13.845996856689453,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/012.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.1404673308134079,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.063201904296875,
+            "input_border_Lab_threshold": 14.000812530517578,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/013.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.14633341133594513,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.058551788330078125,
+            "input_border_Lab_threshold": 13.571147918701172,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/014.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.1322878897190094,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.058567047119140625,
+            "input_border_Lab_threshold": 14.100850105285645,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/015.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.1557755023241043,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0508880615234375,
+            "input_border_Lab_threshold": 13.647001266479492,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/016.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.14676938951015472,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05603790283203125,
+            "input_border_Lab_threshold": 14.384176254272461,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/017.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.14494450390338898,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06923675537109375,
+            "input_border_Lab_threshold": 13.74538803100586,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/018.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.1221403181552887,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06583023071289062,
+            "input_border_Lab_threshold": 13.571340560913086,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/019.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.11005307734012604,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06776809692382812,
+            "input_border_Lab_threshold": 13.329707145690918,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/020.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.1149187684059143,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06903457641601562,
+            "input_border_Lab_threshold": 13.083564758300781,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/021.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.14156082272529602,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.053493499755859375,
+            "input_border_Lab_threshold": 13.485519409179688,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/022.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.15579825639724731,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.046295166015625,
+            "input_border_Lab_threshold": 13.451074600219727,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/023.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.15040430426597595,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0449371337890625,
+            "input_border_Lab_threshold": 13.583630561828613,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/024.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.14536936581134796,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.05029296875,
+            "input_border_Lab_threshold": 14.042867660522461,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/025.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.13500289618968964,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.058807373046875,
+            "input_border_Lab_threshold": 13.596966743469238,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/026.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.13630840182304382,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.060131072998046875,
+            "input_border_Lab_threshold": 14.330130577087402,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/027.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.13838835060596466,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0614471435546875,
+            "input_border_Lab_threshold": 13.848531723022461,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/028.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.14191341400146484,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06378555297851562,
+            "input_border_Lab_threshold": 13.958500862121582,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": true
+        },
+        {
+          "id": "mpdd/tubes/test/good/029.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.12871290743350983,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.0633087158203125,
+            "input_border_Lab_threshold": 13.268523216247559,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/030.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.12245792150497437,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.06577301025390625,
+            "input_border_Lab_threshold": 12.805926322937012,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        },
+        {
+          "id": "mpdd/tubes/test/good/031.png",
+          "label": 0,
+          "defect": "good",
+          "score": 0.12673088908195496,
+          "geometry": {
+            "method": "aspect512",
+            "size": [
+              512,
+              512
+            ],
+            "scale": 0.5,
+            "offset": [
+              0,
+              0
+            ],
+            "source_size": [
+              1024,
+              1024
+            ],
+            "foreground_fraction": 0.077392578125,
+            "input_border_Lab_threshold": 13.262447357177734,
+            "mask_source": "input_colour_only_not_defect_annotation",
+            "mask_quality_verified": false
+          },
+          "manual_review": false,
+          "candidate_detected": false
+        }
+      ]
+    }
+  },
+  "known_TEST_reused": true,
+  "protocol_sha256": "9df5d272e8240475be5a8bfeef405417e25b99343adec5b914a7ec7877f5e60d",
+  "optimizer_updates": 0
+}
