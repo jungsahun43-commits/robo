@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "isolated_ZIP_runtime_imported": true,
+  "model_sha256": "b3e0f1cc8c487f45795b60d4bd67e2a8a03d7095d3844c6e2f42ba14875b65b0",
+  "photos": 312,
+  "all_CPU_GPU_photo_decisions_equal": true,
+  "decision_mismatches": [],
+  "max_absolute_score_difference": 3.818875793193399e-05,
+  "CPU_photo_rates": {
+    "tp": 116,
+    "fn": 77,
+    "fp": 23,
+    "tn": 96,
+    "positive_photos": 193,
+    "negative_photos": 119,
+    "fnr": 0.39896373056994816,
+    "fpr": 0.19327731092436976
+  },
+  "GPU_photo_rates": {
+    "tp": 116,
+    "fn": 77,
+    "fp": 23,
+    "tn": 96,
+    "positive_photos": 193,
+    "negative_photos": 119,
+    "fnr": 0.39896373056994816,
+    "fpr": 0.19327731092436976
+  },
+  "actual_full_packaged_API_pipeline_invoked": true,
+  "model_and_thresholds_unchanged": true,
+  "same_known_TEST_reused_for_device_verification": true,
+  "independent_field_validated": false,
+  "total_seconds_not_latency_benchmark": 32.938000000081956
+}

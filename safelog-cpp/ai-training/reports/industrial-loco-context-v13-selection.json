@@ -1,0 +1,21 @@
+{
+  "selected": "max_context_local",
+  "checkpoint_path": "runs/industrial-loco-context-v13/selected/final.pt",
+  "checkpoint_sha256": "b3e0f1cc8c487f45795b60d4bd67e2a8a03d7095d3844c6e2f42ba14875b65b0",
+  "stage20_categories": [
+    "ad_cable",
+    "ad_screw",
+    "ad_metal_nut",
+    "mpdd_bracket_brown",
+    "mpdd_bracket_white",
+    "mpdd_metal_plate",
+    "ksdd2_surface",
+    "ball_screw_pitting"
+  ],
+  "actual_optimizer_updates": 1920,
+  "selected_epoch": 29,
+  "original_locations_and_thresholds_preserved": true,
+  "known_TEST_reused_for_development": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false
+}

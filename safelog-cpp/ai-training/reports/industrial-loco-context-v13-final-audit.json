@@ -1,0 +1,108 @@
+{
+  "status": "completed_context_training_selected_incremental_improvement",
+  "finished_utc": "2026-10-14T21:21:26.612624+00:00",
+  "repo": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine",
+  "active_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-loco-context-v13\\selected\\final.pt",
+  "active_checkpoint_sha256": "b3e0f1cc8c487f45795b60d4bd67e2a8a03d7095d3844c6e2f42ba14875b65b0",
+  "role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-loco-context-role4-handoff-2026-10-15-v13.zip",
+  "role4_ZIP_sha256": "dab8309e816b6fec10a9c94393bef482f1d6d481e85b94ae2f2bf9a66ff98205",
+  "role4_ZIP_bytes": 399306943,
+  "previous_v11_ZIP_preserved": true,
+  "one_model_one_shared_backbone": true,
+  "context_same_backbone_passes": 2,
+  "new_actual_optimizer_updates": 1920,
+  "training_epochs": 30,
+  "selected_epoch_by_normal_validation": 29,
+  "selected_epoch_updates": 1856,
+  "night_optimizer_total_across_v8_v10_v13_candidates": 8080,
+  "prior_real_label_updates_v8_v10": 6160,
+  "new_training_kind": "normal-only feature reconstruction, not real defect or explicit relation-label supervision",
+  "normal_FIT_photos": 199,
+  "normal_validation_photos": 55,
+  "normal_CAL_photos": 44,
+  "known_TEST_photos": 312,
+  "photo_method": "max_context_local",
+  "photo_rates": {
+    "tp": 116,
+    "fn": 77,
+    "fp": 23,
+    "tn": 96,
+    "positive_photos": 193,
+    "negative_photos": 119,
+    "fnr": 0.39896373056994816,
+    "fpr": 0.19327731092436976
+  },
+  "prior_photo_rates": {
+    "tp": 64,
+    "fn": 129,
+    "fp": 23,
+    "tn": 96,
+    "positive_photos": 193,
+    "negative_photos": 119,
+    "fnr": 0.6683937823834197,
+    "fpr": 0.19327731092436976
+  },
+  "by_defect": {
+    "logical_anomalies": {
+      "defect_photos": 108,
+      "fn": 36,
+      "fnr": 0.3333333333333333
+    },
+    "structural_anomalies": {
+      "defect_photos": 85,
+      "fn": 41,
+      "fnr": 0.4823529411764706
+    }
+  },
+  "prior_by_defect": {
+    "logical_anomalies": {
+      "defect_photos": 108,
+      "fn": 72,
+      "fnr": 0.6666666666666666
+    },
+    "structural_anomalies": {
+      "defect_photos": 85,
+      "fn": 57,
+      "fnr": 0.6705882352941176
+    }
+  },
+  "stage20_pass": false,
+  "additional12_stage20_count_unchanged": 8,
+  "original_LOCO_location_PNG_exact_to_v11_CPU": true,
+  "all_parent_tensors_buffers_and_operating_points_preserved": true,
+  "protected_files_checked": 85121,
+  "current_CPU_API_aliases_checked": 15,
+  "current_actual_CPP_operations": 9,
+  "prior_CPP_checks_not_counted_as_current": true,
+  "CPU_GPU_all312_photo_decisions_equal": true,
+  "new_unit_tests_passed": 3,
+  "semantic_clamp_wire_relations_verified": false,
+  "context_is_verified_pixel_localization": false,
+  "known_public_TEST_reused_for_selection": true,
+  "inherited_parent_near_training_exposure_not_undone": true,
+  "physical_acquisition_groups_locally_verified": false,
+  "mirror_original_equivalence_verified": false,
+  "independent_field_validated": false,
+  "app_default_promoted": false,
+  "Android_APK_built": false,
+  "fresh_pip_install_tested": false,
+  "sandbox_server_startup_failures_preserved": 2,
+  "host_server_recovery_passed_without_model_threshold_changes": true,
+  "exact_server_startup_root_cause_confirmed": false,
+  "owned_server_stopped": true,
+  "next_priorities": [
+    "Search publisher datasets with non-TEST connector defect TRAIN or component boxes/counts/wire-endpoint labels; verify license, split and near groups before downloading/fitting.",
+    "Use only normal publisher TRAIN to prepare object/relation annotation review material if adequate public labels cannot be found. Provisional automatic labels are not verified ground truth; do not use TEST masks.",
+    "No repeat of v8 through v13 or same TEST threshold fishing. Black bracket scratches and tubes false alerts still need appropriate labels/data. Connector14 defect evaluation and whole-photo healthy belt remain insufficient."
+  ],
+  "completed_studies_do_not_rerun": [
+    "industrial-bsclass-supervised-v8",
+    "industrial-surfaces-v9",
+    "industrial-ksdd-supervised-v10",
+    "industrial-ksdd-photo-only-v11",
+    "industrial-foreground-v12",
+    "industrial-loco-context-v13"
+  ],
+  "continuation_automation_id": "safelog",
+  "keep_existing_bounded_awake_helper_no_duplicate": true
+}
