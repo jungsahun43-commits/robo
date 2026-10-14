@@ -1,0 +1,82 @@
+{
+  "selected_per_category": {
+    "ad_screw": "prior_prototype",
+    "loco_splicing_connectors": "prior_prototype",
+    "mpdd_connector": "prior_prototype"
+  },
+  "newly_selected_categories": [],
+  "checkpoint_path": "runs/equipment-component-reference-v3/selected/final.pt",
+  "checkpoint_sha256": "594c53ca63b7220c0fcd2d611f986f6a20ddc7bd686df961ea413b196124601a",
+  "reference_counts": {
+    "ad_cable": 45568,
+    "ad_metal_nut": 45056
+  },
+  "stage20_categories": [
+    "ad_cable",
+    "ad_metal_nut",
+    "mpdd_metal_plate",
+    "ksdd2_surface"
+  ],
+  "new_neural_optimizer_updates": 0,
+  "all_original_location_outputs_preserved": true,
+  "known_TEST_reused_for_development": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false,
+  "all_parent_tensors_and_reference_buffers_exact": true,
+  "variant_guards": {
+    "ad_screw": {
+      "normalCAL10": {
+        "photo_FPR_within20": false,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_parent": true,
+        "normal_and_defect_TEST_at_least20": true,
+        "original_location_predictions_exact": true,
+        "all_parent_tensors_and_existing_reference_buffers_exact": true
+      },
+      "normalCAL05": {
+        "photo_FPR_within20": false,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_parent": true,
+        "normal_and_defect_TEST_at_least20": true,
+        "original_location_predictions_exact": true,
+        "all_parent_tensors_and_existing_reference_buffers_exact": true
+      }
+    },
+    "loco_splicing_connectors": {
+      "normalCAL10": {
+        "photo_FPR_within20": true,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_parent": true,
+        "normal_and_defect_TEST_at_least20": true,
+        "original_location_predictions_exact": true,
+        "all_parent_tensors_and_existing_reference_buffers_exact": true
+      },
+      "normalCAL05": {
+        "photo_FPR_within20": true,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_parent": true,
+        "normal_and_defect_TEST_at_least20": true,
+        "original_location_predictions_exact": true,
+        "all_parent_tensors_and_existing_reference_buffers_exact": true
+      }
+    },
+    "mpdd_connector": {
+      "normalCAL10": {
+        "photo_FPR_within20": true,
+        "photo_FNR_within20": true,
+        "photo_FNR_better_than_parent": true,
+        "normal_and_defect_TEST_at_least20": false,
+        "original_location_predictions_exact": true,
+        "all_parent_tensors_and_existing_reference_buffers_exact": true
+      },
+      "normalCAL05": {
+        "photo_FPR_within20": true,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_parent": false,
+        "normal_and_defect_TEST_at_least20": false,
+        "original_location_predictions_exact": true,
+        "all_parent_tensors_and_existing_reference_buffers_exact": true
+      }
+    }
+  }
+}
