@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "protected_files": 84719,
+  "legacy_sources": 526,
+  "old_bytes_and_mtimes_preserved": true,
+  "all_parent_tensors_and_buffers_exact": true,
+  "all_old_points_and_thresholds_exact": true,
+  "CPU_old_equipment_evidence_and_legacy_tasks_exact": {
+    "ad_cable": true,
+    "ad_screw": true,
+    "ad_metal_nut": true,
+    "loco_splicing_connectors": true,
+    "mpdd_bracket_black": true,
+    "mpdd_bracket_brown": true,
+    "mpdd_bracket_white": true,
+    "mpdd_connector": true,
+    "mpdd_metal_plate": true,
+    "mpdd_tubes": true,
+    "ksdd2_surface": true,
+    "facility_surface": true,
+    "belt_damage": true,
+    "conveyor_foreign": true
+  },
+  "selected": "supervised_wear",
+  "actual_optimizer_updates": 3600,
+  "one_model_one_backbone": true,
+  "new_data_domain_not_mislabeled_as_fastener_screw": true
+}
