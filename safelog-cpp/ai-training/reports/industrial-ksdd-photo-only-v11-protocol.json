@@ -1,0 +1,33 @@
+{
+  "schema": "safelog-ksdd-photo-only-fixed-v11",
+  "declared_utc": "2026-10-14T17:02:54.042087+00:00",
+  "declared_before_followup_composition": true,
+  "source_sha256": {
+    "safelog_ai/ksdd_photo_only.py": "9f1bf7986b087c8789c118047a3b8af8f821b593a329e8801f3134fe4ce6595e",
+    "scripts/study_ksdd_photo_only.py": "440f050af655c1e48a866f7385e603734d07d8208dab10cb270bd43bd6c49eed",
+    "tests/test_ksdd_photo_only.py": "3462169f4f0d2726d226560cf72f429a15bb3080839c8950138e7796f572663c"
+  },
+  "parent_sha256": "422b9e0453b3e125a7fe75385c016a89c2870e58e3d492c2241bded938196e2c",
+  "donor_sha256": "eb00b6b6c0a113c0c5590c8a6516406aeccae98932de598b22bfb3d592f5e4f3",
+  "validation_sha256": "48c617106e83cd2fe7bb3176d1ef63b320ccd2c0e69e3cc79bf9eda0cfbaa9c7",
+  "v10_verification_sha256": "482d1b478a640c14de979611aa97c5231c45ed6d505163f4973aded5afe6f2d4",
+  "reason": "v10 improved photo errors and locationIoU but worsened locationFNR, so full replacement rejected. Independently compose new photo presence with exact original location branch.",
+  "candidates": 1,
+  "photo_weights_and_threshold": "Exact v10 calibrated head, selected VAL epoch13 and labelled CAL threshold, no changes",
+  "primary_localization": "Exact v9 original256 reconstruction and old pixel threshold; v10 map is separate auxiliary with worseFNR26.81 explicitly exposed",
+  "guards": [
+    "photo_FPR<=parent",
+    "photo_FNR<parent",
+    "original_location_exact",
+    "original_pixel_threshold_exact",
+    "all_parent_tensors_exact"
+  ],
+  "known_TEST_results_already_seen_for_followup_design_and_selection": true,
+  "independent_field_validation": false,
+  "new_TEST_threshold_or_epoch_tuning": false,
+  "new_optimizer_updates": 0,
+  "preceding_actual_v10_optimizer_updates": 2560,
+  "same_one_shared_backbone_passes": 2,
+  "app_default_promoted": false,
+  "new_unit_tests_passed": 1
+}

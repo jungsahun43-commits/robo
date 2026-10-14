@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "protected_files": 84972,
+  "legacy_sources": 537,
+  "all_old_bytes_mtimes_tensors_buffers_and_points_preserved": true,
+  "all_old_CPU_equipment_and_legacy_paths_exact": {
+    "ad_cable": true,
+    "ad_screw": true,
+    "ad_metal_nut": true,
+    "loco_splicing_connectors": true,
+    "mpdd_bracket_black": true,
+    "mpdd_bracket_brown": true,
+    "mpdd_bracket_white": true,
+    "mpdd_connector": true,
+    "mpdd_metal_plate": true,
+    "mpdd_tubes": true,
+    "ksdd2_surface": true,
+    "facility_surface": true,
+    "belt_damage": true,
+    "conveyor_foreign": true
+  },
+  "BSClass_wear_CPU_output_exact": true,
+  "actual_optimizer_updates": 2560,
+  "selected": "prior_prototype"
+}

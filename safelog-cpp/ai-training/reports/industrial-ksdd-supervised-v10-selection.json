@@ -1,0 +1,19 @@
+{
+  "selected": "prior_prototype",
+  "checkpoint_path": "runs/industrial-surfaces-v9/selected/final.pt",
+  "checkpoint_sha256": "422b9e0453b3e125a7fe75385c016a89c2870e58e3d492c2241bded938196e2c",
+  "guards": {
+    "photo_FPR_no_worse": true,
+    "photo_FNR_no_worse": true,
+    "each_photo_class_at_least20": true,
+    "original_pixel_IoU_better": true,
+    "original_pixel_FNR_no_worse": false,
+    "original_pixel_FPR_no_worse": true,
+    "all_parent_tensors_and_buffers_exact": true
+  },
+  "actual_new_optimizer_updates": 2560,
+  "other11_equipment_categories_and_legacy_heads_preserved": true,
+  "one_model_one_shared_backbone": true,
+  "app_default_promoted": false,
+  "independent_field_validated": false
+}
