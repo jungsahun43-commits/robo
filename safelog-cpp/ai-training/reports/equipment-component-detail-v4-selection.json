@@ -1,0 +1,29 @@
+{
+  "selected_per_category": {
+    "ad_screw": "prior_prototype",
+    "loco_splicing_connectors": "prior_prototype"
+  },
+  "newly_selected_categories": [],
+  "checkpoint_path": "runs/equipment-component-detail-v4/selected/final.pt",
+  "checkpoint_sha256": "eaab7c2dd7af3571bdb6c9eedfb5824cf75d34277980893d2f01f3287bd738a7",
+  "reference_counts": {
+    "ad_cable": 45568,
+    "ad_metal_nut": 45056
+  },
+  "reference_methods": {
+    "ad_cable": "patch",
+    "ad_metal_nut": "patch"
+  },
+  "stage20_categories": [
+    "ad_cable",
+    "ad_metal_nut",
+    "mpdd_metal_plate",
+    "ksdd2_surface"
+  ],
+  "new_neural_optimizer_updates": 0,
+  "all_parent_tensors_and_reference_buffers_exact": true,
+  "all_original_location_outputs_preserved": true,
+  "known_TEST_reused_for_development": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false
+}
