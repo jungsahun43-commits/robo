@@ -1,0 +1,37 @@
+{
+  "status": "ready_for_supervised_protocol",
+  "groups": 335,
+  "orientation_near_hash_links": 0,
+  "exact_label_conflict_groups": 0,
+  "TRAIN_quarantined": 0,
+  "counts": {
+    "calibration": {
+      "0": 442,
+      "1": 48
+    },
+    "fit": {
+      "0": 1254,
+      "1": 146
+    },
+    "test": {
+      "0": 894,
+      "1": 110
+    },
+    "validation": {
+      "0": 389,
+      "1": 52
+    }
+  },
+  "source_rows": 3335,
+  "reserved_publisher_TRAIN_defects_before_quarantine": 246,
+  "group_split": "60/20/20 SHA256 group split of publisher TRAIN only; old normal FIT/CAL reassigned for this new head only",
+  "grouping": "exactRGB + any8orientation pHash distance<=2 + publisher-split-specific numeric filename blocks10",
+  "numeric_adjacency_is_proxy_only": true,
+  "physical_acquisition_groups_verified": false,
+  "independent_factory_validated": false,
+  "current_TEST_or_near_duplicates_in_fit_validation_calibration": false,
+  "group_phases_disjoint": true,
+  "source_images_and_real_masks_unmodified": true,
+  "new_model_predictions_or_training_performed": false,
+  "existing_parent_thresholds_unchanged": true
+}
