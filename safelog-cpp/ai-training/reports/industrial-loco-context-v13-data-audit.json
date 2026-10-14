@@ -1,0 +1,869 @@
+{
+  "audited_utc": "2026-10-14T20:53:25.346205+00:00",
+  "source_manifest_sha256": "40ec891c498adc98db645e6caf979bb91bd7577c991deddc3527c12106ccfecc",
+  "counts": {
+    "fit": 199,
+    "validation": 55,
+    "excluded_orientation_near_TEST": 62,
+    "excluded_orientation_near_CAL": 8,
+    "excluded_duplicate_TRAIN_group": 15,
+    "cal": 44,
+    "excluded_duplicate_CAL_group": 1,
+    "test": 312
+  },
+  "source_RGB_images_masks_SHA_rechecked": 696,
+  "group_proxy": "exactRGB or any8orientation pHash<=2 connected components",
+  "group_count": 582,
+  "near_links": [
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/069.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/000.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/074.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/065.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/120.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/024.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/123.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/060.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/132.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/098.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/140.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/127.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/144.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/001.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/145.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/018.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/150.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/065.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/169.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/091.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/174.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/055.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/183.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/000.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/198.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/042.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/200.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/070.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/207.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/076.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/208.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/024.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/216.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/127.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/221.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/008.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/235.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/127.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/235.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/200.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/235.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/216.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/238.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/017.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/245.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/203.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/249.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/149.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/268.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/185.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/273.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/262.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/283.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/071.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/291.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/093.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/293.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/124.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/293.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/206.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/295.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/164.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/312.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/127.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/312.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/216.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/312.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/235.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/313.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/278.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/321.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/226.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/337.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/291.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/344.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/198.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/348.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/298.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/352.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/198.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/train/good/352.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/344.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/001.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/262.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/001.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/263.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/001.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/273.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/006.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/085.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/010.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/127.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/010.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/140.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/010.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/200.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/010.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/216.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/010.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/235.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/010.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/312.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/016.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/198.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/016.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/344.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/016.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/352.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/024.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/165.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/025.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/150.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/029.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/164.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/029.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/185.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/032.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/127.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/032.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/355.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/036.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/162.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/039.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/291.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/039.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/337.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/050.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/067.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/054.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/065.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/054.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/355.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/057.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/211.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/validation/good/059.png",
+      "b": "mvtec_loco/splicing_connectors/validation/good/024.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/005.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/234.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/013.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/216.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/027.png",
+      "b": "mvtec_loco/splicing_connectors/validation/good/054.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/028.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/007.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/029.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/095.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/029.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/357.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/030.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/024.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/033.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/027.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/034.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/046.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/034.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/011.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/036.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/247.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/040.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/007.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/040.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/198.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/040.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/028.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/045.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/293.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/058.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/173.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/059.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/206.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/059.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/333.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/084.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/333.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/085.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/148.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/085.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/293.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/086.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/075.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/097.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/004.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/097.png",
+      "b": "mvtec_loco/splicing_connectors/validation/good/000.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/099.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/124.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/102.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/118.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/104.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/164.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/104.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/185.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/104.png",
+      "b": "mvtec_loco/splicing_connectors/validation/good/029.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/105.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/103.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/good/116.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/089.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/004.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/210.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/007.png",
+      "b": "mvtec_loco/splicing_connectors/validation/good/000.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/010.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/190.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/018.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/207.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/021.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/097.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/024.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/260.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/031.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/087.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/031.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/207.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/031.png",
+      "b": "mvtec_loco/splicing_connectors/validation/good/056.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/031.png",
+      "b": "mvtec_loco/splicing_connectors/test/logical_anomalies/018.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/047.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/190.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/047.png",
+      "b": "mvtec_loco/splicing_connectors/test/logical_anomalies/010.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/049.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/347.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/054.png",
+      "b": "mvtec_loco/splicing_connectors/test/logical_anomalies/021.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/071.png",
+      "b": "mvtec_loco/splicing_connectors/test/logical_anomalies/031.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/075.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/024.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/075.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/120.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/075.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/208.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/logical_anomalies/099.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/097.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/006.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/016.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/009.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/207.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/010.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/249.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/019.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/227.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/019.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/027.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/022.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/293.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/023.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/065.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/023.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/150.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/023.png",
+      "b": "mvtec_loco/splicing_connectors/validation/good/025.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/023.png",
+      "b": "mvtec_loco/splicing_connectors/validation/good/054.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/023.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/075.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/023.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/086.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/030.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/117.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/038.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/249.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/040.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/005.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/041.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/004.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/041.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/262.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/041.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/273.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/041.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/097.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/055.png",
+      "b": "mvtec_loco/splicing_connectors/test/good/019.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/060.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/201.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    },
+    {
+      "a": "mvtec_loco/splicing_connectors/test/structural_anomalies/060.png",
+      "b": "mvtec_loco/splicing_connectors/train/good/311.png",
+      "exact_RGB": false,
+      "near_pHash": true
+    }
+  ],
+  "TEST_near_groups_in_new_FIT_VAL_CAL": false,
+  "FIT_VAL_CAL_TEST_groups_disjoint": true,
+  "VAL": "one fifth of eligible normal publisher TRAIN appearance groups via fixedSHA256",
+  "CAL": "remaining publisher normal validation after group exclusions; no gradient or epoch selection",
+  "physical_acquisition_groups_locally_verified": false,
+  "mirror_original_equivalence_verified": false,
+  "inherited_parent_near_training_exposure_not_undone": true,
+  "pHash_similarity_does_not_prove_physical_duplicate": true,
+  "new_model_predictions_or_training_done": false,
+  "independent_field_validated": false
+}
