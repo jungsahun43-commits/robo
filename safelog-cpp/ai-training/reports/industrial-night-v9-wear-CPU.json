@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "model_sha256": "422b9e0453b3e125a7fe75385c016a89c2870e58e3d492c2241bded938196e2c",
+  "isolated_ZIP_runtime_imported": true,
+  "photos": 3236,
+  "CPU_photo_rates": {
+    "tp": 1583,
+    "fn": 10,
+    "fp": 14,
+    "tn": 1629,
+    "positive_photos": 1593,
+    "negative_photos": 1643,
+    "fnr": 0.006277463904582548,
+    "fpr": 0.00852099817407182
+  },
+  "original_GPU_photo_rates": {
+    "tp": 1583,
+    "fn": 10,
+    "fp": 14,
+    "tn": 1629,
+    "positive_photos": 1593,
+    "negative_photos": 1643,
+    "fnr": 0.006277463904582548,
+    "fpr": 0.00852099817407182
+  },
+  "all_CPU_GPU_decisions_equal": true,
+  "decision_mismatches": [],
+  "maximum_absolute_score_difference": 0.00018399953842163086,
+  "threshold_unchanged": 0.5,
+  "new_optimizer_updates": 0,
+  "feature_precision": "FP16 roundtrip matching original frozen feature cache",
+  "same_known_reserved_TEST_reused_for_cross_device_verification": true,
+  "new_independent_field_validation": false,
+  "CPU_total_seconds_not_latency_benchmark": 42.686999999918044
+}

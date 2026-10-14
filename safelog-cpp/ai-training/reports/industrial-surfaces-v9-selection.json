@@ -1,0 +1,29 @@
+{
+  "selected": {
+    "mpdd_bracket_brown": "pooled256/normalCAL15",
+    "mpdd_bracket_white": "aspect512/normalCAL15"
+  },
+  "checkpoint_path": "runs/industrial-surfaces-v9/selected/final.pt",
+  "checkpoint_sha256": "422b9e0453b3e125a7fe75385c016a89c2870e58e3d492c2241bded938196e2c",
+  "newly_selected_categories": [
+    "mpdd_bracket_brown",
+    "mpdd_bracket_white"
+  ],
+  "stage20_categories": [
+    "ad_cable",
+    "ad_screw",
+    "ad_metal_nut",
+    "mpdd_bracket_brown",
+    "mpdd_bracket_white",
+    "mpdd_metal_plate",
+    "ksdd2_surface",
+    "ball_screw_pitting"
+  ],
+  "old_neural_tensors_and_buffers_exact": true,
+  "new_normal_reference_FIT_photos_selected": 164,
+  "new_neural_optimizer_updates": 0,
+  "BSClass_supervised_head_retained": true,
+  "known_TEST_reused_for_development": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false
+}
