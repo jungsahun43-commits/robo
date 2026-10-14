@@ -1,0 +1,51 @@
+{
+  "status": "fresh_labelled_data_prepared_no_model_predictions",
+  "source": "https://publikationen.bibliothek.kit.edu/1000133819",
+  "archive_sha256": "364d3c34621ba37667becd1eac324e839f6594dd78693d78fdafd5bb42a4191a",
+  "license": "CC BY-NC4.0 per primary dataset page; preserve attribution",
+  "source_images": 21835,
+  "label_counts": {
+    "0": 11075,
+    "1": 10760
+  },
+  "split_counts": {
+    "cal": {
+      "0": 1639,
+      "1": 1627
+    },
+    "fit": {
+      "0": 7793,
+      "1": 7540
+    },
+    "reserved_test": {
+      "0": 1643,
+      "1": 1593
+    }
+  },
+  "publisher_rotation_variants": 1186,
+  "groups": 20591,
+  "near_hash_links": 30,
+  "exact_label_conflict_groups": 0,
+  "actual_size_counts": {
+    "[150, 150]": 21826,
+    "[127, 150]": 1,
+    "[116, 150]": 1,
+    "[146, 150]": 2,
+    "[119, 150]": 1,
+    "[117, 150]": 1,
+    "[144, 150]": 1,
+    "[148, 150]": 1,
+    "[143, 150]": 1
+  },
+  "not_nominal150x150": 9,
+  "initial_exact150size_check_failure_preserved": true,
+  "original_pixels_not_resized_or_modified": true,
+  "split_rule": "seeded70/15/15 group hash; publisher rotation origin, exact90degree-canonical RGB and canonicalpHash<=2 linked before splitting",
+  "group_phases_disjoint": true,
+  "new_reserved_TEST_model_predictions_run": false,
+  "new_training_performed": false,
+  "physical_spindle_or_acquisition_frame_groups_verified": false,
+  "independent_factory_or_subject_split_claimed": false,
+  "not_same_as_MVTec_fastener_screw": true,
+  "whole_factory_photo_health_labels_created": false
+}

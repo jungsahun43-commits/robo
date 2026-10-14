@@ -1,0 +1,111 @@
+{
+  "status": "passed_native_screw_improvement_packaged",
+  "audited_utc": "2026-10-14T15:41:27.411476+00:00",
+  "research_checkpoint_path": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\equipment-native-screw-budget-v7\\selected\\final.pt",
+  "research_checkpoint_sha256": "14a26d0b4c69f4d86c12cfe50daeadad6d79935ae552fc37610a9c465815097a",
+  "role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-equipment-native-screw-role4-handoff-2026-10-15-v7.zip",
+  "role4_ZIP_sha256": "2f92ab86b0a58ee49c551759b880a70da4c4656b8a95e78116fce02b8ff9a02c",
+  "role4_ZIP_bytes": 314899604,
+  "old_role4_ZIP_bytes_preserved": true,
+  "one_checkpoint_one_shared_backbone": true,
+  "native_screw_backbone_passes_per_photo": 2,
+  "screw_known_TEST_photo_rates": {
+    "tp": 104,
+    "fn": 15,
+    "fp": 2,
+    "tn": 39,
+    "positive_photos": 119,
+    "negative_photos": 41,
+    "fnr": 0.12605042016806722,
+    "fpr": 0.04878048780487805
+  },
+  "screw_known_TEST_defect_groups": {
+    "manipulated_front": {
+      "defect_photos": 24,
+      "fn": 1,
+      "fnr": 0.041666666666666664
+    },
+    "scratch_head": {
+      "defect_photos": 24,
+      "fn": 0,
+      "fnr": 0.0
+    },
+    "scratch_neck": {
+      "defect_photos": 25,
+      "fn": 0,
+      "fnr": 0.0
+    },
+    "thread_side": {
+      "defect_photos": 23,
+      "fn": 13,
+      "fnr": 0.5652173913043478
+    },
+    "thread_top": {
+      "defect_photos": 23,
+      "fn": 1,
+      "fnr": 0.043478260869565216
+    }
+  },
+  "stage20_categories": [
+    "ad_cable",
+    "ad_screw",
+    "ad_metal_nut",
+    "mpdd_metal_plate",
+    "ksdd2_surface"
+  ],
+  "stage15_categories": [
+    "ad_cable",
+    "ad_screw",
+    "ad_metal_nut",
+    "ksdd2_surface"
+  ],
+  "all_screw_defect_groups_within20": false,
+  "screw_original_pixel_FNR_unchanged": 0.9720065776893954,
+  "native_reference_heatmap_evaluated_as_segmentation": false,
+  "v6_v7_neural_optimizer_updates": 0,
+  "new_screw_normal_reference_FIT_photos": 96,
+  "selected_screw_normal_reference_patches": 73728,
+  "normalCAL_count": 24,
+  "normalCAL_alpha": 0.15,
+  "normalCAL_rank": 22,
+  "v5_actual40epoch2560update_candidate_remains_rejected": true,
+  "protected_old_files_checked_in_v7_verification": 62698,
+  "protected_legacy_sources_checked_again": 519,
+  "packaged_runtime_sources_checked_again": 18,
+  "all_parent_tensors_and_existing_reference_buffers_exact": true,
+  "other10_equipment_photo_outputs_preserved": true,
+  "actual_current_CPU_CPP_operations": 24,
+  "isolated_ZIP_CPU_API_checked": true,
+  "unassessable_input_rejected422": true,
+  "focused_unit_tests_passed_this_round": 8,
+  "focused_unit_test_modules": [
+    "test_native_component_views:4",
+    "test_native_component_server:2",
+    "test_bsclass_data:2"
+  ],
+  "new_BSClass_labelled_photos_prepared": 21835,
+  "new_BSClass_split_counts": {
+    "cal": {
+      "0": 1639,
+      "1": 1627
+    },
+    "fit": {
+      "0": 7793,
+      "1": 7540
+    },
+    "reserved_test": {
+      "0": 1643,
+      "1": 1593
+    }
+  },
+  "new_BSClass_rotations_exact_and_near_groups_disjoint": true,
+  "new_BSClass_training_performed": false,
+  "new_BSClass_reserved_TEST_model_predictions_run": false,
+  "physical_spindle_or_acquisition_groups_verified": false,
+  "known_public_TEST_reused_for_development": true,
+  "independent_field_validated": false,
+  "fresh_pip_install_tested": false,
+  "Android_APK_built": false,
+  "app_default_promoted": false,
+  "next_priority": "Preregister real labelled BSClass auxiliary wear training with frozen accepted backbone and untouched reserved_TEST; keep ball-screw domain distinct from fastener screw."
+}

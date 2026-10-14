@@ -1,0 +1,21 @@
+{
+  "selected": "normalCAL15",
+  "checkpoint_path": "runs/equipment-native-screw-budget-v7/selected/final.pt",
+  "checkpoint_sha256": "14a26d0b4c69f4d86c12cfe50daeadad6d79935ae552fc37610a9c465815097a",
+  "newly_selected_categories": [
+    "ad_screw"
+  ],
+  "stage20_categories": [
+    "ad_cable",
+    "ad_screw",
+    "ad_metal_nut",
+    "mpdd_metal_plate",
+    "ksdd2_surface"
+  ],
+  "new_neural_optimizer_updates": 0,
+  "all_original_location_outputs_preserved": true,
+  "all_parent_tensors_and_reference_buffers_exact": true,
+  "known_TEST_reused_for_development": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false
+}

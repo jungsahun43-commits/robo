@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "protected_files": 62698,
+  "legacy_sources": 519,
+  "old_bytes_and_mtimes_preserved": true,
+  "all_parent_tensors_and_reference_buffers_exact": true,
+  "category_proofs": {
+    "ad_cable": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": true
+    },
+    "ad_screw": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": false
+    },
+    "ad_metal_nut": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": true
+    },
+    "loco_splicing_connectors": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": true
+    },
+    "mpdd_bracket_black": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": true
+    },
+    "mpdd_bracket_brown": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": true
+    },
+    "mpdd_bracket_white": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": true
+    },
+    "mpdd_connector": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": true
+    },
+    "mpdd_metal_plate": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": true
+    },
+    "mpdd_tubes": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": true
+    },
+    "ksdd2_surface": {
+      "original_location_CPU_exact": true,
+      "parent_photo_output_exact": true
+    }
+  },
+  "raw_native_scores_and_bank_unchanged_since_v6": true,
+  "new_neural_optimizer_updates": 0,
+  "selected": "normalCAL15"
+}
