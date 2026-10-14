@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SafeLog 전선 연결부 구성 검수</title><link rel="stylesheet" href="review.css"></head>
+<body><header><div><small>SAFELOG · 정상 TRAIN 구성 라벨</small><h1>전선 연결부 검수</h1></div>
+<label>검수자 이름 <input id="reviewer" maxlength="80" placeholder="이름 또는 팀 내 ID"></label>
+<button id="export">JSON 저장</button><label class="button">이어서 불러오기<input id="import" type="file" accept="application/json,.json" hidden></label></header>
+<main><section class="intro"><strong>24장의 구성 정보를 확인해 주세요.</strong> 사진에 표시된 윤곽은 저자 공개 주석입니다. 좌우 묶음은 자동 제안이며, 확인 전에는 학습 정답으로 쓰지 않습니다. 이 화면에서 모델 학습은 실행되지 않습니다.</section>
+<nav><button id="prev">← 이전</button><span id="progress"></span><button id="next">다음 →</button><span id="totals"></span></nav>
+<div class="layout"><section class="photo-panel"><div class="toolbar"><button data-mode="inspect" class="active">윤곽 확인</button><button data-mode="group">클램프 좌우 변경</button><button data-mode="left">왼쪽 연결점 표시</button><button data-mode="right">오른쪽 연결점 표시</button><button id="clear-points">연결점 지우기</button></div>
+<canvas id="photo" aria-label="전선과 클램프 윤곽을 보여주는 사진"></canvas><p id="source-id" class="muted"></p><p id="mode-help"></p>
+<details><summary>사진·주석 출처</summary><p id="source-meta"></p><p><a href="https://github.com/22strongestme/LOCO-Annotations" target="_blank" rel="noreferrer">LogiCode 저자 공개 주석</a> · <a href="https://www.mvtec.com/research-teaching/datasets/mvtec-loco-ad" target="_blank" rel="noreferrer">MVTec LOCO AD 원본 사진</a></p></details></section>
+<aside><h2>1. 윤곽과 좌우 묶음</h2><p>주황 번호는 각 클램프입니다. 파란 윤곽은 왼쪽 묶음, 보라색은 오른쪽 묶음, 초록색은 전선입니다. 윤곽이 틀리면 ‘판단 불가·수정 필요’로 남겨 주세요.</p>
+<p id="group-counts" class="badge"></p><label class="check"><input id="polygons" type="checkbox"> 모든 클램프·전선 윤곽과 좌우 묶음을 확인했음</label>
+<h2>2. 실제로 보이는 구성</h2><div class="fields"><label>왼쪽 클램프 수<input id="left_count" type="number" min="1" max="16" placeholder="직접 입력"></label><label>오른쪽 클램프 수<input id="right_count" type="number" min="1" max="16" placeholder="직접 입력"></label><label>전선 수<input id="wire_count" type="number" min="1" max="16" placeholder="직접 입력"></label><label>전선 색<select id="wire_color"><option value="unknown">판단 전 / 알 수 없음</option value="yellow_green">노랑·초록</option><option value="blue">파랑</option><option value="brown">갈색</option><option value="other">기타</option></select></label></div>
+<h2>3. 전선이 꽂힌 위치</h2><p>사진 위 버튼으로 전선과 연결부가 만나는 점을 양쪽에 표시해 주세요. 각 묶음의 클램프를 사진의 위에서 아래 순서로 세어 연결된 번호를 입력합니다. 기울어져 순서를 확정하기 어려우면 판단 불가로 남깁니다.</p>
+<div class="fields"><label>왼쪽 연결 클램프 번호<input id="left_pin" type="number" min="1" max="16"></label><label>오른쪽 연결 클램프 번호<input id="right_pin" type="number" min="1" max="16"></label></div><p id="point-status" class="muted"></p>
+<label>메모<textarea id="note" maxlength="2000" rows="3" placeholder="가림, 잘못된 윤곽, 색·연결 위치가 모호한 이유 등"></textarea></label>
+<div class="actions"><button id="confirm" class="primary">관찰 내용 확인</button><button id="uncertain">판단 불가·수정 필요</button></div><p id="case-status"></p><p id="message" role="status"></p></aside></div>
+<footer>입력은 이 브라우저에 임시 저장됩니다. 작업을 마치면 JSON을 파일로 저장해 주세요. 부분 검수도 저장할 수 있습니다. 확인한 내용은 재검수 대기열로 들어가며 학습용 정답으로 자동 승인되지 않습니다.</footer></main>
+<script src="package.js"></script><script src="review.js"></script></body></html>
