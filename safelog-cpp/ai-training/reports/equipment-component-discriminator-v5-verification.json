@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "protected_files": 61683,
+  "legacy_sources": 510,
+  "old_bytes_and_mtimes_preserved": true,
+  "all_parent_tensors_and_reference_buffers_exact": true,
+  "actual_optimizer_updates": 2560,
+  "actual_epochs": 40,
+  "new_real_defect_labels": 0,
+  "normal_FIT_only_plus_synthetic_features": true,
+  "TEST_or_CAL_not_used_for_training_or_epoch_choice": true,
+  "all_original_candidate_TEST_location_predictions_exact": true,
+  "selected_per_category": {
+    "ad_screw": "prior_prototype",
+    "loco_splicing_connectors": "prior_prototype",
+    "mpdd_connector": "prior_prototype"
+  }
+}

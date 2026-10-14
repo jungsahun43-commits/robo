@@ -1,0 +1,56 @@
+{
+  "status": "passed_rejected_candidates_retained_parent",
+  "audited_utc": "2026-10-14T14:55:26.236347+00:00",
+  "active_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\equipment-reference-budget-v2\\selected\\final.pt",
+  "active_checkpoint_sha256": "bb30750a1a69146c08195e42fb7ea5dada74feaed37e554726216afa4b03b92e",
+  "retained_role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-equipment-reference-role4-handoff-2026-10-14-v2.zip",
+  "retained_role4_ZIP_sha256": "416b0845554344f9707f391ae0c232434eec602d15072ccf562e376443bf5722",
+  "new_role4_ZIP_created": false,
+  "newly_selected_categories": [],
+  "stage20_category_count_unchanged": 4,
+  "stage15_category_count_unchanged": 3,
+  "actual_neural_training_epochs": 40,
+  "actual_neural_optimizer_updates": 2560,
+  "optimizer_state_step_values": [
+    2560
+  ],
+  "normal_FIT_photos_sampled": 527,
+  "normal_patch_draws": 1966080,
+  "synthetic_patch_draws": 1966080,
+  "sampled_normal_source_counts": {
+    "ad_screw": {
+      "unique_normal_source_photos": 96,
+      "unique_normal_patches": 24576,
+      "repeated_patch_draws": 655360
+    },
+    "loco_splicing_connectors": {
+      "unique_normal_source_photos": 330,
+      "unique_normal_patches": 84433,
+      "repeated_patch_draws": 655360
+    },
+    "mpdd_connector": {
+      "unique_normal_source_photos": 101,
+      "unique_normal_patches": 25856,
+      "repeated_patch_draws": 655360
+    }
+  },
+  "initial_discriminator_SHA": "9482785aa3cdfb5f8656da587b010423cc8c9632de75f0f04aaa207d01aaa2b4",
+  "trained_discriminator_SHA": "ba710da8171736bd53dafa5e4c0726c37a91f20742067f832e071620ec6d3369",
+  "changed_discriminator_tensor_count": 7,
+  "all_parent_tensors_and_reference_buffers_exact": true,
+  "all_original_location_outputs_preserved": true,
+  "final_epoch_only_no_TEST_epoch_selection": true,
+  "normal_CAL_used_after_training_only": true,
+  "protected_files_SHA_and_mtime_preserved": 61683,
+  "legacy_Python_source_SHA_preserved": 510,
+  "unit_tests_passed": 16,
+  "new_unit_tests": 9,
+  "unit_test_optimizer_updates": 0,
+  "new_CPP_smoke_operations": 0,
+  "reason_no_new_CPP_smoke": "No candidate selected and no runtime artifact/app adapter changed; previous ZIP21operation receipt remains",
+  "new_source_photos_or_real_defect_labels": 0,
+  "known_TEST_reused_for_development_and_candidate_selection": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false,
+  "next_priority": "Native detail preservation plus actual defect training data; preregister fresh data split before a new training study"
+}

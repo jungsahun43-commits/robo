@@ -1,0 +1,22 @@
+{
+  "selected_per_category": {
+    "ad_screw": "prior_prototype",
+    "loco_splicing_connectors": "prior_prototype",
+    "mpdd_connector": "prior_prototype"
+  },
+  "newly_selected_categories": [],
+  "checkpoint_path": "runs/equipment-component-discriminator-v5/selected/final.pt",
+  "checkpoint_sha256": "ad8dd33cf43757b9f328269b089dc560bce6a066ab363d888bfa66995e16a0e8",
+  "stage20_categories": [
+    "ad_cable",
+    "ad_metal_nut",
+    "mpdd_metal_plate",
+    "ksdd2_surface"
+  ],
+  "actual_new_neural_optimizer_updates": 2560,
+  "final_epoch_only": true,
+  "all_parent_tensors_and_reference_buffers_exact": true,
+  "known_TEST_reused_for_development": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false
+}
