@@ -1,0 +1,134 @@
+{
+  "status": "completed_real_mask_training_photo_only_selected",
+  "audited_utc": "2026-10-14T17:16:57.599623+00:00",
+  "repo": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine",
+  "active_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-ksdd-photo-only-v11\\selected\\final.pt",
+  "active_checkpoint_sha256": "935cc6f6cb8e021714c97aa5c7225a567cda1637ba1c1876fd6de9230a0454d6",
+  "role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-ksdd-photo-role4-handoff-2026-10-15-v11.zip",
+  "role4_ZIP_sha256": "e97389111f16cfed8bade43a8b28a81cf2db5fab11962772ef02e982ab205c41",
+  "role4_ZIP_bytes": 394622544,
+  "previous_v9_ZIP_preserved": true,
+  "one_model_one_shared_backbone": true,
+  "KSDD_backbone_passes_per_photo": 2,
+  "real_mask_actual_training_epochs": 40,
+  "real_mask_actual_optimizer_updates": 2560,
+  "selected_epoch_by_validation": 13,
+  "selected_epoch_updates": 832,
+  "v11_composition_updates": 0,
+  "previous_v8_training_updates": 3600,
+  "night_total_actual_updates_across_candidates": 6160,
+  "source_data": {
+    "status": "ready_for_supervised_protocol",
+    "groups": 335,
+    "orientation_near_hash_links": 0,
+    "exact_label_conflict_groups": 0,
+    "TRAIN_quarantined": 0,
+    "counts": {
+      "calibration": {
+        "0": 442,
+        "1": 48
+      },
+      "fit": {
+        "0": 1254,
+        "1": 146
+      },
+      "test": {
+        "0": 894,
+        "1": 110
+      },
+      "validation": {
+        "0": 389,
+        "1": 52
+      }
+    },
+    "source_rows": 3335,
+    "reserved_publisher_TRAIN_defects_before_quarantine": 246,
+    "group_split": "60/20/20 SHA256 group split of publisher TRAIN only; old normal FIT/CAL reassigned for this new head only",
+    "grouping": "exactRGB + any8orientation pHash distance<=2 + publisher-split-specific numeric filename blocks10",
+    "numeric_adjacency_is_proxy_only": true,
+    "physical_acquisition_groups_verified": false,
+    "independent_factory_validated": false,
+    "current_TEST_or_near_duplicates_in_fit_validation_calibration": false,
+    "group_phases_disjoint": true,
+    "source_images_and_real_masks_unmodified": true,
+    "new_model_predictions_or_training_performed": false,
+    "existing_parent_thresholds_unchanged": true
+  },
+  "full_v10_location_replacement_rejected": true,
+  "reason": "new original-coordinate pixelFNR26.81percent worse than17.10percent parent",
+  "v11_photo_score_and_threshold_exactly_from_frozen_v10_CAL": true,
+  "photo_rates": {
+    "tp": 105,
+    "fn": 5,
+    "fp": 110,
+    "tn": 784,
+    "positive_photos": 110,
+    "negative_photos": 894,
+    "fnr": 0.045454545454545456,
+    "fpr": 0.12304250559284116
+  },
+  "prior_photo_rates": {
+    "tp": 98,
+    "fn": 12,
+    "fp": 113,
+    "tn": 781,
+    "positive_photos": 110,
+    "negative_photos": 894,
+    "fnr": 0.10909090909090909,
+    "fpr": 0.12639821029082773
+  },
+  "primary_original_pixel_metrics_unchanged": {
+    "counts": {
+      "tp": 403273,
+      "fp": 1260211,
+      "tn": 144664856,
+      "fn": 83188
+    },
+    "iou": 0.2308807835701265,
+    "fnr": 0.17100651439683756,
+    "fpr": 0.008636014537516026
+  },
+  "auxiliary_supervised_pixel_metrics_not_primary": {
+    "counts": {
+      "tp": 356028,
+      "fp": 253891,
+      "tn": 145671176,
+      "fn": 130433
+    },
+    "iou": 0.48089017116182575,
+    "fnr": 0.2681263246180064,
+    "fpr": 0.0017398724237008573
+  },
+  "all_old_neural_tensors_reference_buffers_and_operating_points_preserved": true,
+  "primary_KSDD_PNG_exact_to_parent_CPU": true,
+  "known_TEST_used_for_followup_design_and_selection": true,
+  "physical_acquisition_groups_verified": false,
+  "independent_field_validated": false,
+  "current_CPU_API_aliases_checked": 15,
+  "current_actual_CPP_operations": 9,
+  "prior_v9_CPP45_not_counted_as_current": true,
+  "whole_CPU_GPU_photo_decisions_equal": true,
+  "CPU_GPU_compared_photos": 1004,
+  "new_unit_tests_passed": 5,
+  "protected_files_checked": 84972,
+  "legacy_source_SHA_rechecked": 537,
+  "additional12_stage20_count_unchanged": 8,
+  "additional12_stage15_count_unchanged": 5,
+  "app_default_promoted": false,
+  "Android_APK_built": false,
+  "fresh_pip_install_tested": false,
+  "next_priorities": [
+    "NormalFIT-only foreground/background audit for black bracket and tubes; preregister input-only masking before any new TEST scoring.",
+    "Read official LOCO assembly constraints and consider relation-aware training; do not hardcode one normal image as a universal wiring rule.",
+    "Acquire additional connector defect evaluation;14 photos remain insufficient. Whole-photo healthy belt FPR remains unestablished."
+  ],
+  "next_fit_review": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\reports\\INDUSTRIAL_FOREGROUND_FIT_REVIEW_KO.md",
+  "completed_studies_do_not_rerun": [
+    "industrial-bsclass-supervised-v8",
+    "industrial-surfaces-v9",
+    "industrial-ksdd-supervised-v10",
+    "industrial-ksdd-photo-only-v11"
+  ],
+  "continuation_automation_id": "safelog",
+  "keep_existing_bounded_awake_helper_no_duplicate": true
+}

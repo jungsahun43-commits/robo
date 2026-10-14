@@ -1,0 +1,60 @@
+{
+  "selected": "supervised_photo_original_location",
+  "checkpoint_path": "runs/industrial-ksdd-photo-only-v11/selected/final.pt",
+  "checkpoint_sha256": "935cc6f6cb8e021714c97aa5c7225a567cda1637ba1c1876fd6de9230a0454d6",
+  "photo_rates": {
+    "tp": 105,
+    "fn": 5,
+    "fp": 110,
+    "tn": 784,
+    "positive_photos": 110,
+    "negative_photos": 894,
+    "fnr": 0.045454545454545456,
+    "fpr": 0.12304250559284116
+  },
+  "prior_photo_rates": {
+    "tp": 98,
+    "fn": 12,
+    "fp": 113,
+    "tn": 781,
+    "positive_photos": 110,
+    "negative_photos": 894,
+    "fnr": 0.10909090909090909,
+    "fpr": 0.12639821029082773
+  },
+  "guards": {
+    "photo_FPR_no_worse": true,
+    "photo_FNR_better": true,
+    "original_location_exact": true,
+    "original_pixel_threshold_exact": true,
+    "all_parent_tensors_exact": true
+  },
+  "primary_original_pixel_metrics_unchanged": {
+    "counts": {
+      "tp": 403273,
+      "fp": 1260211,
+      "tn": 144664856,
+      "fn": 83188
+    },
+    "iou": 0.2308807835701265,
+    "fnr": 0.17100651439683756,
+    "fpr": 0.008636014537516026
+  },
+  "auxiliary_new_mask_metrics_not_primary": {
+    "counts": {
+      "tp": 356028,
+      "fp": 253891,
+      "tn": 145671176,
+      "fn": 130433
+    },
+    "iou": 0.48089017116182575,
+    "fnr": 0.2681263246180064,
+    "fpr": 0.0017398724237008573
+  },
+  "all_v10_neural_tensors_exact": true,
+  "current_composition_optimizer_updates": 0,
+  "prior_real_mask_optimizer_updates": 2560,
+  "known_TEST_reused_for_followup_design_and_selection": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false
+}
