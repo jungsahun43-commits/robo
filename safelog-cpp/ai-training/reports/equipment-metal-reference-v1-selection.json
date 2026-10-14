@@ -1,0 +1,27 @@
+{
+  "selected": "calibration_only20",
+  "checkpoint_path": "runs/equipment-metal-reference-v1/calibration_only20/final.pt",
+  "checkpoint_sha256": "0f9b7322ae5d8e0aea8cc7a10655eff04e5f6dd2ed6c6bcf585fb05a3179c5f0",
+  "all_other_categories_preserved_exactly": true,
+  "ksdd2_surface_target15_preserved": true,
+  "new_neural_updates_performed": 0,
+  "known_TEST_reused": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false,
+  "variant_guards": {
+    "calibration_only20": {
+      "photo_FPR_within20": true,
+      "photo_FNR_within20": true,
+      "photo_FNR_better_than_prior": true,
+      "pixel_IoU_not_worse": true,
+      "pixel_FNR_not_worse": true
+    },
+    "normal_reference20": {
+      "photo_FPR_within20": true,
+      "photo_FNR_within20": true,
+      "photo_FNR_better_than_prior": true,
+      "pixel_IoU_not_worse": false,
+      "pixel_FNR_not_worse": true
+    }
+  }
+}

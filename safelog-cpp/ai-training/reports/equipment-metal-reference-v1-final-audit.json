@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "selected": "calibration_only20",
+  "new_neural_optimizer_updates": 0,
+  "normal_reference_photos_fitted_but_not_selected": 34,
+  "new_photos_or_labels": 0,
+  "metal_photo_FPR_before": 0.0,
+  "metal_photo_FPR_after": 0.038461538461538464,
+  "metal_photo_FNR_before": 0.2535211267605634,
+  "metal_photo_FNR_after": 0.18309859154929578,
+  "metal_IoU_unchanged": 0.5867569802034984,
+  "metal_pixel_FNR_unchanged": 0.2795717402946184,
+  "new_stage20_categories": [
+    "mpdd_metal_plate",
+    "ksdd2_surface"
+  ],
+  "all11_categories_within20": false,
+  "ksdd2_surface_target15_preserved_exactly": true,
+  "all_prior_neural_tensors_exact": true,
+  "all_other10_category_CPU_outputs_exact": true,
+  "all11_CPU_GPU_outputs_close": true,
+  "protected_files": 61345,
+  "protected_legacy_sources": 487,
+  "prior_bytes_and_mtimes_preserved": true,
+  "selected_model_sha256": "0f9b7322ae5d8e0aea8cc7a10655eff04e5f6dd2ed6c6bcf585fb05a3179c5f0",
+  "prototype_archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-equipment-metal20-role4-handoff-2026-10-14-v1.zip",
+  "prototype_archive_sha256": "896e28169997535c92aa87f2fe290bf7cfa3200844d74c8bd6f308c73a5135a3",
+  "metal_policy_sha256": "cf66772131d7e8dc798d306d2a573b17d25bf8077c948236cd7413826ece8b9f",
+  "actual_CPP_HTTP_operations": 15,
+  "isolated_CPU_API_verified": true,
+  "owned_server_stopped": true,
+  "retained_previous_archives": {
+    "unified-equipment-prototype-role4-handoff-2026-10-14-v1.1.zip": "8b852e4715c486912d63645efdb7566ced1ddc62c16e75caa7ef6a441c70207e",
+    "unified-main-belt-tiles-role4-handoff-2026-10-13-v1.1.zip": "3e8235e8d3cc626bf0476a05a6f8686872fd90d34ed517c6d081e707cfdbd7c9"
+  },
+  "known_TEST_reused": true,
+  "independent_field_validated": false,
+  "app_default_promoted": false,
+  "fresh_pip_install_tested": false,
+  "Android_APK_built": false,
+  "next_priority": [
+    "cable_then_nut",
+    "preserve_metal20_and_surface15",
+    "separate_photo_presence_and_location_guards"
+  ]
+}

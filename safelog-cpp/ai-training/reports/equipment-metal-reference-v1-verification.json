@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "protected_files": 61345,
+  "legacy_sources": 487,
+  "old_bytes_and_mtimes_preserved": true,
+  "all_prior_neural_tensors_exact": true,
+  "new_neural_optimizer_updates": 0,
+  "source_FIT_CAL_TEST_split_preserved": true,
+  "normal_reference_contains_FIT_only": true,
+  "selected": "calibration_only20"
+}

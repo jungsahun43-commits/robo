@@ -1,0 +1,1301 @@
+{
+  "variant": "calibration_only20",
+  "photo_rates": {
+    "tp": 58,
+    "fn": 13,
+    "fp": 1,
+    "tn": 25,
+    "positive_photos": 71,
+    "negative_photos": 26,
+    "fnr": 0.18309859154929578,
+    "fpr": 0.038461538461538464
+  },
+  "pixel_counts_model256": {
+    "tp": 540801,
+    "fp": 171012,
+    "tn": 5435314,
+    "fn": 209865
+  },
+  "pixel_iou": 0.5867569802034984,
+  "pixel_fnr": 0.2795717402946184,
+  "normal_test": 26,
+  "defect_test": 71,
+  "normalCAL_photo_threshold": 0.24159488081932068,
+  "normalCAL_pixel_threshold": 0.2365676462650299,
+  "guards": {
+    "photo_FPR_within20": true,
+    "photo_FNR_within20": true,
+    "photo_FNR_better_than_prior": true,
+    "pixel_IoU_not_worse": true,
+    "pixel_FNR_not_worse": true
+  },
+  "selected_eligible": true,
+  "stage_gate": {
+    "state": "target20_met",
+    "ready_for_next_stage": true
+  },
+  "observations": [
+    {
+      "id": "mpdd/metal_plate/test/good/000.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.21196061372756958,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/001.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.18053577840328217,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/002.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.19389288127422333,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/003.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.19252052903175354,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/004.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.2114795744419098,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 46,
+        "tn": 65490,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/005.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.19478505849838257,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/006.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.21470719575881958,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 12,
+        "tn": 65524,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/007.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.19785071909427643,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/008.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.21111945807933807,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/009.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.23138684034347534,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 68,
+        "tn": 65468,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/010.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.20734386146068573,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/011.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.23117123544216156,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 168,
+        "tn": 65368,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/012.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.21595467627048492,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 20,
+        "tn": 65516,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/013.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.23797491192817688,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 302,
+        "tn": 65234,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/014.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.20184548199176788,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 4,
+        "tn": 65532,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/015.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.21110932528972626,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/016.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.24332360923290253,
+      "candidate": true,
+      "pixels": {
+        "tp": 0,
+        "fp": 616,
+        "tn": 64920,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/017.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.23605316877365112,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 264,
+        "tn": 65272,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/018.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.20503292977809906,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/019.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.21722882986068726,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 63,
+        "tn": 65473,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/020.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.1881416290998459,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/021.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.18706218898296356,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/022.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.2080114185810089,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 40,
+        "tn": 65496,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/023.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.1888909637928009,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 65536,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/024.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.21977701783180237,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 70,
+        "tn": 65466,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/good/025.png",
+      "label": 0,
+      "defect": "good",
+      "score": 0.21303965151309967,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 16,
+        "tn": 65520,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/000.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.6464544534683228,
+      "candidate": true,
+      "pixels": {
+        "tp": 10562,
+        "fp": 2461,
+        "tn": 52508,
+        "fn": 5
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/001.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.5553231239318848,
+      "candidate": true,
+      "pixels": {
+        "tp": 9250,
+        "fp": 1759,
+        "tn": 54209,
+        "fn": 318
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/002.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.5843684673309326,
+      "candidate": true,
+      "pixels": {
+        "tp": 6874,
+        "fp": 2085,
+        "tn": 56574,
+        "fn": 3
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/003.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.5791385769844055,
+      "candidate": true,
+      "pixels": {
+        "tp": 6759,
+        "fp": 1624,
+        "tn": 57012,
+        "fn": 141
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/004.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.5163854956626892,
+      "candidate": true,
+      "pixels": {
+        "tp": 12467,
+        "fp": 1326,
+        "tn": 51162,
+        "fn": 581
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/005.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.6193177700042725,
+      "candidate": true,
+      "pixels": {
+        "tp": 13193,
+        "fp": 1966,
+        "tn": 49905,
+        "fn": 472
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/006.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.6593650579452515,
+      "candidate": true,
+      "pixels": {
+        "tp": 5828,
+        "fp": 1980,
+        "tn": 57636,
+        "fn": 92
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/007.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.5423696041107178,
+      "candidate": true,
+      "pixels": {
+        "tp": 5323,
+        "fp": 1663,
+        "tn": 58274,
+        "fn": 276
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/008.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.6161189675331116,
+      "candidate": true,
+      "pixels": {
+        "tp": 9406,
+        "fp": 2104,
+        "tn": 53921,
+        "fn": 105
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/009.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.5847022533416748,
+      "candidate": true,
+      "pixels": {
+        "tp": 7422,
+        "fp": 1247,
+        "tn": 56784,
+        "fn": 83
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/010.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.5656777620315552,
+      "candidate": true,
+      "pixels": {
+        "tp": 8618,
+        "fp": 1594,
+        "tn": 55238,
+        "fn": 86
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/011.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.6450811624526978,
+      "candidate": true,
+      "pixels": {
+        "tp": 9167,
+        "fp": 3265,
+        "tn": 53055,
+        "fn": 49
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/012.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.5958582162857056,
+      "candidate": true,
+      "pixels": {
+        "tp": 11921,
+        "fp": 2787,
+        "tn": 50771,
+        "fn": 57
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/major_rust/013.png",
+      "label": 1,
+      "defect": "major_rust",
+      "score": 0.6299522519111633,
+      "candidate": true,
+      "pixels": {
+        "tp": 12122,
+        "fp": 3417,
+        "tn": 49822,
+        "fn": 175
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/000.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.31357717514038086,
+      "candidate": true,
+      "pixels": {
+        "tp": 3186,
+        "fp": 882,
+        "tn": 57127,
+        "fn": 4341
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/001.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.2612748146057129,
+      "candidate": true,
+      "pixels": {
+        "tp": 762,
+        "fp": 1,
+        "tn": 57735,
+        "fn": 7038
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/002.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.2700608968734741,
+      "candidate": true,
+      "pixels": {
+        "tp": 1035,
+        "fp": 17,
+        "tn": 59005,
+        "fn": 5479
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/003.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.2799912691116333,
+      "candidate": true,
+      "pixels": {
+        "tp": 999,
+        "fp": 2,
+        "tn": 59847,
+        "fn": 4688
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/004.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.2560805380344391,
+      "candidate": true,
+      "pixels": {
+        "tp": 1017,
+        "fp": 5,
+        "tn": 58378,
+        "fn": 6136
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/005.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.31584566831588745,
+      "candidate": true,
+      "pixels": {
+        "tp": 3414,
+        "fp": 1634,
+        "tn": 56706,
+        "fn": 3782
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/006.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.25187948346138,
+      "candidate": true,
+      "pixels": {
+        "tp": 494,
+        "fp": 0,
+        "tn": 60234,
+        "fn": 4808
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/007.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.22135838866233826,
+      "candidate": false,
+      "pixels": {
+        "tp": 120,
+        "fp": 0,
+        "tn": 60782,
+        "fn": 4634
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/008.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.3433968722820282,
+      "candidate": true,
+      "pixels": {
+        "tp": 3042,
+        "fp": 1199,
+        "tn": 58519,
+        "fn": 2776
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/009.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.23800908029079437,
+      "candidate": false,
+      "pixels": {
+        "tp": 207,
+        "fp": 20,
+        "tn": 52804,
+        "fn": 12505
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/010.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.26601114869117737,
+      "candidate": true,
+      "pixels": {
+        "tp": 682,
+        "fp": 0,
+        "tn": 54682,
+        "fn": 10172
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/011.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.24983252584934235,
+      "candidate": true,
+      "pixels": {
+        "tp": 670,
+        "fp": 0,
+        "tn": 54830,
+        "fn": 10036
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/012.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.25815945863723755,
+      "candidate": true,
+      "pixels": {
+        "tp": 684,
+        "fp": 19,
+        "tn": 52103,
+        "fn": 12730
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/013.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.24745625257492065,
+      "candidate": true,
+      "pixels": {
+        "tp": 397,
+        "fp": 0,
+        "tn": 53379,
+        "fn": 11760
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/014.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.2212095558643341,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 55,
+        "tn": 54171,
+        "fn": 11310
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/015.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.21348680555820465,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 16,
+        "tn": 55673,
+        "fn": 9847
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/016.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.2267153412103653,
+      "candidate": false,
+      "pixels": {
+        "tp": 81,
+        "fp": 20,
+        "tn": 54221,
+        "fn": 11214
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/017.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.23008586466312408,
+      "candidate": false,
+      "pixels": {
+        "tp": 171,
+        "fp": 0,
+        "tn": 54029,
+        "fn": 11336
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/018.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.2900564968585968,
+      "candidate": true,
+      "pixels": {
+        "tp": 1528,
+        "fp": 461,
+        "tn": 59429,
+        "fn": 4118
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/019.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.29935041069984436,
+      "candidate": true,
+      "pixels": {
+        "tp": 1493,
+        "fp": 1194,
+        "tn": 59758,
+        "fn": 3091
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/020.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.24699918925762177,
+      "candidate": true,
+      "pixels": {
+        "tp": 435,
+        "fp": 0,
+        "tn": 61076,
+        "fn": 4025
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/021.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.3839559555053711,
+      "candidate": true,
+      "pixels": {
+        "tp": 2900,
+        "fp": 575,
+        "tn": 59832,
+        "fn": 2229
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/022.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.42973679304122925,
+      "candidate": true,
+      "pixels": {
+        "tp": 4849,
+        "fp": 793,
+        "tn": 58476,
+        "fn": 1418
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/023.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.4443517327308655,
+      "candidate": true,
+      "pixels": {
+        "tp": 4761,
+        "fp": 671,
+        "tn": 58438,
+        "fn": 1666
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/024.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.36183708906173706,
+      "candidate": true,
+      "pixels": {
+        "tp": 2504,
+        "fp": 269,
+        "tn": 60595,
+        "fn": 2168
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/025.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.21523423492908478,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 6,
+        "tn": 64156,
+        "fn": 1374
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/026.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.23549120128154755,
+      "candidate": false,
+      "pixels": {
+        "tp": 131,
+        "fp": 94,
+        "tn": 64087,
+        "fn": 1224
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/027.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.21399573981761932,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 3,
+        "tn": 63902,
+        "fn": 1631
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/028.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.23922871053218842,
+      "candidate": false,
+      "pixels": {
+        "tp": 0,
+        "fp": 270,
+        "tn": 63610,
+        "fn": 1656
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/029.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.21941237151622772,
+      "candidate": false,
+      "pixels": {
+        "tp": 21,
+        "fp": 4,
+        "tn": 57805,
+        "fn": 7706
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/030.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.2616276443004608,
+      "candidate": true,
+      "pixels": {
+        "tp": 833,
+        "fp": 39,
+        "tn": 57355,
+        "fn": 7309
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/031.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.22157199680805206,
+      "candidate": false,
+      "pixels": {
+        "tp": 123,
+        "fp": 0,
+        "tn": 57266,
+        "fn": 8147
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/032.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.23616820573806763,
+      "candidate": false,
+      "pixels": {
+        "tp": 209,
+        "fp": 51,
+        "tn": 58389,
+        "fn": 6887
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/scratches/033.png",
+      "label": 1,
+      "defect": "scratches",
+      "score": 0.2488841712474823,
+      "candidate": true,
+      "pixels": {
+        "tp": 483,
+        "fp": 0,
+        "tn": 57846,
+        "fn": 7207
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/000.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6197500228881836,
+      "candidate": true,
+      "pixels": {
+        "tp": 16010,
+        "fp": 4010,
+        "tn": 45312,
+        "fn": 204
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/001.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6466788053512573,
+      "candidate": true,
+      "pixels": {
+        "tp": 16015,
+        "fp": 4383,
+        "tn": 45102,
+        "fn": 36
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/002.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6466829776763916,
+      "candidate": true,
+      "pixels": {
+        "tp": 16333,
+        "fp": 6005,
+        "tn": 43154,
+        "fn": 44
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/003.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.688094437122345,
+      "candidate": true,
+      "pixels": {
+        "tp": 16352,
+        "fp": 7534,
+        "tn": 41639,
+        "fn": 11
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/004.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6131669878959656,
+      "candidate": true,
+      "pixels": {
+        "tp": 16176,
+        "fp": 4773,
+        "tn": 44554,
+        "fn": 33
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/005.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.5907204151153564,
+      "candidate": true,
+      "pixels": {
+        "tp": 15805,
+        "fp": 6405,
+        "tn": 43263,
+        "fn": 63
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/006.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.5870450139045715,
+      "candidate": true,
+      "pixels": {
+        "tp": 15643,
+        "fp": 6579,
+        "tn": 43262,
+        "fn": 52
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/007.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6277558207511902,
+      "candidate": true,
+      "pixels": {
+        "tp": 15921,
+        "fp": 7044,
+        "tn": 42563,
+        "fn": 8
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/008.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6563602089881897,
+      "candidate": true,
+      "pixels": {
+        "tp": 16801,
+        "fp": 5590,
+        "tn": 43144,
+        "fn": 1
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/009.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6671804785728455,
+      "candidate": true,
+      "pixels": {
+        "tp": 16728,
+        "fp": 6154,
+        "tn": 42643,
+        "fn": 11
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/010.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6988128423690796,
+      "candidate": true,
+      "pixels": {
+        "tp": 16334,
+        "fp": 7470,
+        "tn": 41725,
+        "fn": 7
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/011.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.678544819355011,
+      "candidate": true,
+      "pixels": {
+        "tp": 16827,
+        "fp": 5502,
+        "tn": 43201,
+        "fn": 6
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/012.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6539105176925659,
+      "candidate": true,
+      "pixels": {
+        "tp": 15566,
+        "fp": 4726,
+        "tn": 45072,
+        "fn": 172
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/013.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.630056619644165,
+      "candidate": true,
+      "pixels": {
+        "tp": 15411,
+        "fp": 5659,
+        "tn": 44430,
+        "fn": 36
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/014.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6254622936248779,
+      "candidate": true,
+      "pixels": {
+        "tp": 15177,
+        "fp": 5178,
+        "tn": 45174,
+        "fn": 7
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/015.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.614511251449585,
+      "candidate": true,
+      "pixels": {
+        "tp": 15923,
+        "fp": 2434,
+        "tn": 47021,
+        "fn": 158
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/016.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6632935404777527,
+      "candidate": true,
+      "pixels": {
+        "tp": 16788,
+        "fp": 5021,
+        "tn": 43722,
+        "fn": 5
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/017.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6325585842132568,
+      "candidate": true,
+      "pixels": {
+        "tp": 16561,
+        "fp": 5616,
+        "tn": 43353,
+        "fn": 6
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/018.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.7031387686729431,
+      "candidate": true,
+      "pixels": {
+        "tp": 16606,
+        "fp": 6713,
+        "tn": 42209,
+        "fn": 8
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/019.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6940159797668457,
+      "candidate": true,
+      "pixels": {
+        "tp": 16831,
+        "fp": 5385,
+        "tn": 43253,
+        "fn": 67
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/020.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6425629258155823,
+      "candidate": true,
+      "pixels": {
+        "tp": 16916,
+        "fp": 6814,
+        "tn": 41806,
+        "fn": 0
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/021.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.5984677076339722,
+      "candidate": true,
+      "pixels": {
+        "tp": 17298,
+        "fp": 4224,
+        "tn": 43999,
+        "fn": 15
+      }
+    },
+    {
+      "id": "mpdd/metal_plate/test/total_rust/022.png",
+      "label": 1,
+      "defect": "total_rust",
+      "score": 0.6962204575538635,
+      "candidate": true,
+      "pixels": {
+        "tp": 16636,
+        "fp": 8526,
+        "tn": 40350,
+        "fn": 24
+      }
+    }
+  ],
+  "checkpoint_sha256": "0f9b7322ae5d8e0aea8cc7a10655eff04e5f6dd2ed6c6bcf585fb05a3179c5f0"
+}
