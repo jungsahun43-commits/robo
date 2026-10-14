@@ -1,0 +1,4952 @@
+{
+  "checkpoint_sha256": "b056fdcee5c8c2275dfa0f9a24c575a9b5047562faf0329456f807b69609b0f8",
+  "category": "ad_screw",
+  "candidates": {
+    "normalCAL10": {
+      "photo_rates": {
+        "tp": 94,
+        "fn": 25,
+        "fp": 0,
+        "tn": 41,
+        "positive_photos": 119,
+        "negative_photos": 41,
+        "fnr": 0.21008403361344538,
+        "fpr": 0.0
+      },
+      "auroc": 0.9778643164582906,
+      "normal_test_photos": 41,
+      "defect_test_photos": 119,
+      "photo_threshold": 0.1144777163863182,
+      "photo_normalCAL_alpha": 0.1,
+      "photo_normalCAL_rank": 23,
+      "normal_CAL_photos": 24,
+      "pixel_counts_model256": {
+        "tp": 732,
+        "fp": 103279,
+        "tn": 10356332,
+        "fn": 25417
+      },
+      "pixel_iou": 0.005655654108848163,
+      "pixel_fnr": 0.9720065776893954,
+      "by_defect": {
+        "manipulated_front": {
+          "defect_photos": 24,
+          "fn": 5,
+          "fnr": 0.20833333333333334
+        },
+        "scratch_head": {
+          "defect_photos": 24,
+          "fn": 0,
+          "fnr": 0.0
+        },
+        "scratch_neck": {
+          "defect_photos": 25,
+          "fn": 0,
+          "fnr": 0.0
+        },
+        "thread_side": {
+          "defect_photos": 23,
+          "fn": 18,
+          "fnr": 0.782608695652174
+        },
+        "thread_top": {
+          "defect_photos": 23,
+          "fn": 2,
+          "fnr": 0.08695652173913043
+        }
+      },
+      "TEST_abstentions": 0,
+      "stage_gate": {
+        "state": "needs_improvement",
+        "ready_for_next_stage": false
+      },
+      "guards": {
+        "photo_FPR_within20": true,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_parent": true,
+        "normal_and_defect_TEST_at_least20": true,
+        "TEST_abstentions_zero": true,
+        "original_location_predictions_exact": true,
+        "all_parent_tensors_exact": true
+      },
+      "selected_eligible": false,
+      "observations": [
+        {
+          "id": "mvtec_ad/screw/test/good/000.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07149204611778259,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 130,
+            "tn": 65406,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/001.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08731295168399811,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 727,
+            "tn": 64809,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/002.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07789942622184753,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 545,
+            "tn": 64991,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/003.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07582449913024902,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 34,
+            "tn": 65502,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/004.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.10387225449085236,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3211,
+            "tn": 62325,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/005.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.11092963069677353,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 245,
+            "tn": 65291,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/006.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.10130836814641953,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 352,
+            "tn": 65184,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/007.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08321643620729446,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 5,
+            "tn": 65531,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/008.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08182026445865631,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3272,
+            "tn": 62264,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/009.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07667504251003265,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/010.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08860258758068085,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 4925,
+            "tn": 60611,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/011.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08848625421524048,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 265,
+            "tn": 65271,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/012.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08791591227054596,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/013.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08192107081413269,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 109,
+            "tn": 65427,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/014.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07757358998060226,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3760,
+            "tn": 61776,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/015.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08451061695814133,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2,
+            "tn": 65534,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/016.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07351136952638626,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 175,
+            "tn": 65361,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/017.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07356659322977066,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 502,
+            "tn": 65034,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/018.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07423500716686249,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3856,
+            "tn": 61680,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/019.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0919053852558136,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 397,
+            "tn": 65139,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/020.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0825682133436203,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 215,
+            "tn": 65321,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/021.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08446436375379562,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 118,
+            "tn": 65418,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/022.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.1005457192659378,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2806,
+            "tn": 62730,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/023.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07235988229513168,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2107,
+            "tn": 63429,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/024.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.09524484723806381,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1231,
+            "tn": 64305,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/025.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07375244796276093,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 80,
+            "tn": 65456,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/026.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07191440463066101,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1214,
+            "tn": 64322,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/027.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08254126459360123,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 17,
+            "tn": 65519,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/028.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0758993923664093,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 4,
+            "tn": 65532,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/029.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07949522882699966,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 5299,
+            "tn": 60237,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/030.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07706648111343384,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 270,
+            "tn": 65266,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/031.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07033324986696243,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3828,
+            "tn": 61708,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/032.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.09125293046236038,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 873,
+            "tn": 64663,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/033.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08591318130493164,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/034.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0763135477900505,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/035.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07352293282747269,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 672,
+            "tn": 64864,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/036.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.078371062874794,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 35,
+            "tn": 65501,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/037.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0937727764248848,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 528,
+            "tn": 65008,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/038.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08675388246774673,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 59,
+            "tn": 65477,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/039.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.09658052027225494,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1999,
+            "tn": 63537,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/040.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07645901292562485,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 18,
+            "tn": 65518,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/000.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.13382793962955475,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 32,
+            "tn": 65266,
+            "fn": 238
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/001.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.11771336197853088,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65354,
+            "fn": 182
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/002.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.1254475712776184,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1828,
+            "tn": 63546,
+            "fn": 162
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/003.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.1752341389656067,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65236,
+            "fn": 300
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/004.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.12316498905420303,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 22,
+            "fp": 87,
+            "tn": 65310,
+            "fn": 117
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/005.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.16108325123786926,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65329,
+            "fn": 207
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/006.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.14446531236171722,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 87,
+            "tn": 65227,
+            "fn": 222
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/007.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.15705224871635437,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 133,
+            "tn": 65094,
+            "fn": 309
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/008.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.14138738811016083,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 790,
+            "tn": 64512,
+            "fn": 234
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/009.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.15316130220890045,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 179,
+            "tn": 64940,
+            "fn": 417
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/010.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.16752609610557556,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2511,
+            "tn": 62792,
+            "fn": 233
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/011.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.1270185112953186,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2,
+            "tn": 65339,
+            "fn": 195
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/012.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.09969674050807953,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1577,
+            "tn": 63853,
+            "fn": 106
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/013.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.12513309717178345,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 34,
+            "tn": 65308,
+            "fn": 194
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/014.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.12806996703147888,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 26,
+            "tn": 65302,
+            "fn": 208
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/015.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.1978302150964737,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 645,
+            "tn": 64591,
+            "fn": 300
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/016.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.2705850601196289,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1604,
+            "tn": 63496,
+            "fn": 436
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/017.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.10999584943056107,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 10,
+            "fp": 25,
+            "tn": 65423,
+            "fn": 78
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/018.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.1348389983177185,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 518,
+            "tn": 64847,
+            "fn": 171
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/019.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.11347038298845291,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 768,
+            "tn": 64657,
+            "fn": 111
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/020.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.10778914391994476,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65451,
+            "fn": 85
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/021.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.11342665553092957,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65439,
+            "fn": 97
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/022.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.11823722720146179,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 44,
+            "tn": 65399,
+            "fn": 93
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/023.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.14667969942092896,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 995,
+            "tn": 64383,
+            "fn": 158
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/000.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.18373028934001923,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 79,
+            "tn": 65286,
+            "fn": 171
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/001.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.16394129395484924,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 12,
+            "tn": 65332,
+            "fn": 192
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/002.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.15283334255218506,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 107,
+            "tn": 65242,
+            "fn": 187
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/003.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.1408555507659912,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 11,
+            "fp": 2387,
+            "tn": 63039,
+            "fn": 99
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/004.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.1780051589012146,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2,
+            "tn": 65347,
+            "fn": 187
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/005.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.1640474796295166,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 106,
+            "tn": 65344,
+            "fn": 86
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/006.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.14087410271167755,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 183,
+            "tn": 65190,
+            "fn": 163
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/007.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.22874072194099426,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 85,
+            "fp": 292,
+            "tn": 65074,
+            "fn": 85
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/008.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.16753439605236053,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 37,
+            "tn": 65311,
+            "fn": 188
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/009.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.14691686630249023,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 166,
+            "fp": 1586,
+            "tn": 63749,
+            "fn": 35
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/010.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.1874219924211502,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 117,
+            "tn": 65280,
+            "fn": 139
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/011.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.2367260754108429,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 91,
+            "tn": 65272,
+            "fn": 173
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/012.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.20432665944099426,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 81,
+            "tn": 65234,
+            "fn": 221
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/013.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.18768972158432007,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 189,
+            "tn": 65222,
+            "fn": 125
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/014.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.13762453198432922,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 6,
+            "fp": 373,
+            "tn": 65011,
+            "fn": 146
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/015.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.19502140581607819,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 18,
+            "fp": 16,
+            "tn": 65297,
+            "fn": 205
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/016.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.1419515311717987,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 138,
+            "tn": 65269,
+            "fn": 129
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/017.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.16590115427970886,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 5,
+            "fp": 444,
+            "tn": 64936,
+            "fn": 151
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/018.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.15809635818004608,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 98,
+            "fp": 656,
+            "tn": 64636,
+            "fn": 146
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/019.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.2231786698102951,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 60,
+            "tn": 65312,
+            "fn": 164
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/020.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.15228165686130524,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 106,
+            "tn": 65277,
+            "fn": 153
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/021.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.14062745869159698,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 21,
+            "fp": 1041,
+            "tn": 64370,
+            "fn": 104
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/022.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.164903461933136,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 867,
+            "tn": 64580,
+            "fn": 89
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/023.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.16255956888198853,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 337,
+            "tn": 65046,
+            "fn": 153
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/000.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.18215014040470123,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 378,
+            "tn": 64983,
+            "fn": 175
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/001.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.2774483561515808,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 30,
+            "tn": 65043,
+            "fn": 463
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/002.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.1254303902387619,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 150,
+            "tn": 65203,
+            "fn": 183
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/003.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.16963964700698853,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2269,
+            "tn": 63103,
+            "fn": 164
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/004.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.23972110450267792,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 192,
+            "tn": 65108,
+            "fn": 236
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/005.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.1409239023923874,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65402,
+            "fn": 134
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/006.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.14527453482151031,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 35,
+            "fp": 2718,
+            "tn": 62519,
+            "fn": 264
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/007.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.23451566696166992,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1411,
+            "tn": 63931,
+            "fn": 194
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/008.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.26896607875823975,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 420,
+            "tn": 64832,
+            "fn": 284
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/009.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.2538412809371948,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 446,
+            "tn": 64930,
+            "fn": 160
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/010.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.23173466324806213,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 22,
+            "tn": 65224,
+            "fn": 290
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/011.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.12280889600515366,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 941,
+            "tn": 64493,
+            "fn": 102
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/012.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.1820383071899414,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 28,
+            "tn": 65286,
+            "fn": 222
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/013.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.21742677688598633,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 303,
+            "tn": 65032,
+            "fn": 201
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/014.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.2310965210199356,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 12,
+            "tn": 65337,
+            "fn": 187
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/015.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.20290081202983856,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3966,
+            "tn": 61383,
+            "fn": 187
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/016.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.21929530799388885,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 681,
+            "tn": 64610,
+            "fn": 245
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/017.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.15848223865032196,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 333,
+            "tn": 64968,
+            "fn": 235
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/018.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.13723348081111908,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 176,
+            "tn": 65155,
+            "fn": 205
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/019.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.2946123480796814,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 273,
+            "tn": 65006,
+            "fn": 257
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/020.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.25990310311317444,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 66,
+            "tn": 65005,
+            "fn": 465
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/021.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.15474767982959747,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 117,
+            "tn": 65249,
+            "fn": 170
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/022.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.12327200174331665,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 82,
+            "tn": 65389,
+            "fn": 65
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/023.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.15042021870613098,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65426,
+            "fn": 110
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/024.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.21616330742835999,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 61,
+            "tn": 65272,
+            "fn": 203
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/000.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.08810309320688248,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2497,
+            "tn": 62940,
+            "fn": 99
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/001.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.11394456773996353,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1477,
+            "tn": 63684,
+            "fn": 375
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/002.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09901777654886246,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 443,
+            "tn": 64949,
+            "fn": 144
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/003.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09083637595176697,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 4,
+            "fp": 2095,
+            "tn": 63316,
+            "fn": 121
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/004.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09209612756967545,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65443,
+            "fn": 93
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/005.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.12805519998073578,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65367,
+            "fn": 169
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/006.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.11775083839893341,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 328,
+            "tn": 64912,
+            "fn": 296
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/007.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.16735807061195374,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65292,
+            "fn": 244
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/008.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.10981550067663193,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 168,
+            "tn": 65195,
+            "fn": 173
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/009.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09770003706216812,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 5,
+            "tn": 65372,
+            "fn": 159
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/010.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.10408201813697815,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1063,
+            "tn": 64281,
+            "fn": 192
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/011.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.1171734556555748,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 267,
+            "tn": 65162,
+            "fn": 107
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/012.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09584963321685791,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 29,
+            "tn": 65240,
+            "fn": 267
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/013.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.10847081243991852,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 24,
+            "tn": 65410,
+            "fn": 102
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/014.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.13716663420200348,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 98,
+            "tn": 65269,
+            "fn": 169
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/015.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09207002818584442,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 377,
+            "tn": 64972,
+            "fn": 187
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/016.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09452179074287415,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 713,
+            "tn": 64477,
+            "fn": 346
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/017.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09891614317893982,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1580,
+            "tn": 63777,
+            "fn": 179
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/018.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.08771664649248123,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65385,
+            "fn": 151
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/019.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.0968000665307045,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 82,
+            "tn": 65377,
+            "fn": 77
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/020.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09939837455749512,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 180,
+            "tn": 65252,
+            "fn": 104
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/021.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.08710230886936188,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65324,
+            "fn": 212
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/022.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.10360758751630783,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1024,
+            "tn": 64268,
+            "fn": 244
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/000.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.16571499407291412,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65106,
+            "fn": 430
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/001.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.14525094628334045,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 95,
+            "fp": 1361,
+            "tn": 63773,
+            "fn": 307
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/002.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.1392970234155655,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 14,
+            "tn": 65148,
+            "fn": 374
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/003.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.16450583934783936,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 10,
+            "tn": 65241,
+            "fn": 285
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/004.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.16339071094989777,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 40,
+            "tn": 65075,
+            "fn": 421
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/005.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.21576157212257385,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 516,
+            "tn": 64361,
+            "fn": 659
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/006.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.2296687811613083,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65058,
+            "fn": 478
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/007.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.22058045864105225,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 519,
+            "tn": 64591,
+            "fn": 426
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/008.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.1375574767589569,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1090,
+            "tn": 64095,
+            "fn": 351
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/009.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.15289847552776337,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 10,
+            "tn": 65272,
+            "fn": 254
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/010.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.1571453958749771,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65200,
+            "fn": 336
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/011.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.16138680279254913,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 449,
+            "tn": 64768,
+            "fn": 319
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/012.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.10489430278539658,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65458,
+            "fn": 78
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/013.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.11685530096292496,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1512,
+            "tn": 63841,
+            "fn": 183
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/014.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.09504867345094681,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 52,
+            "tn": 65173,
+            "fn": 311
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/015.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.11531642824411392,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 434,
+            "tn": 64866,
+            "fn": 236
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/016.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.12268023937940598,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1040,
+            "tn": 64241,
+            "fn": 255
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/017.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.12609870731830597,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 272,
+            "tn": 65191,
+            "fn": 73
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/018.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.1855028122663498,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 25,
+            "tn": 65161,
+            "fn": 350
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/019.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.2525872588157654,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 351,
+            "tn": 64700,
+            "fn": 485
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/020.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.21199195086956024,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 156,
+            "fp": 2907,
+            "tn": 62205,
+            "fn": 268
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/021.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.12023042887449265,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 75,
+            "tn": 65128,
+            "fn": 333
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/022.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.14130395650863647,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65286,
+            "fn": 250
+          },
+          "candidate_detected": true
+        }
+      ],
+      "variant": "screw_hilo",
+      "method": "aligned_hilo"
+    },
+    "normalCAL05": {
+      "photo_rates": {
+        "tp": 93,
+        "fn": 26,
+        "fp": 0,
+        "tn": 41,
+        "positive_photos": 119,
+        "negative_photos": 41,
+        "fnr": 0.2184873949579832,
+        "fpr": 0.0
+      },
+      "auroc": 0.9778643164582906,
+      "normal_test_photos": 41,
+      "defect_test_photos": 119,
+      "photo_threshold": 0.11568745225667953,
+      "photo_normalCAL_alpha": 0.05,
+      "photo_normalCAL_rank": 24,
+      "normal_CAL_photos": 24,
+      "pixel_counts_model256": {
+        "tp": 732,
+        "fp": 103279,
+        "tn": 10356332,
+        "fn": 25417
+      },
+      "pixel_iou": 0.005655654108848163,
+      "pixel_fnr": 0.9720065776893954,
+      "by_defect": {
+        "manipulated_front": {
+          "defect_photos": 24,
+          "fn": 5,
+          "fnr": 0.20833333333333334
+        },
+        "scratch_head": {
+          "defect_photos": 24,
+          "fn": 0,
+          "fnr": 0.0
+        },
+        "scratch_neck": {
+          "defect_photos": 25,
+          "fn": 0,
+          "fnr": 0.0
+        },
+        "thread_side": {
+          "defect_photos": 23,
+          "fn": 18,
+          "fnr": 0.782608695652174
+        },
+        "thread_top": {
+          "defect_photos": 23,
+          "fn": 3,
+          "fnr": 0.13043478260869565
+        }
+      },
+      "TEST_abstentions": 0,
+      "stage_gate": {
+        "state": "needs_improvement",
+        "ready_for_next_stage": false
+      },
+      "guards": {
+        "photo_FPR_within20": true,
+        "photo_FNR_within20": false,
+        "photo_FNR_better_than_parent": true,
+        "normal_and_defect_TEST_at_least20": true,
+        "TEST_abstentions_zero": true,
+        "original_location_predictions_exact": true,
+        "all_parent_tensors_exact": true
+      },
+      "selected_eligible": false,
+      "observations": [
+        {
+          "id": "mvtec_ad/screw/test/good/000.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07149204611778259,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 130,
+            "tn": 65406,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/001.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08731295168399811,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 727,
+            "tn": 64809,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/002.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07789942622184753,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 545,
+            "tn": 64991,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/003.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07582449913024902,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 34,
+            "tn": 65502,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/004.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.10387225449085236,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3211,
+            "tn": 62325,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/005.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.11092963069677353,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 245,
+            "tn": 65291,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/006.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.10130836814641953,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 352,
+            "tn": 65184,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/007.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08321643620729446,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 5,
+            "tn": 65531,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/008.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08182026445865631,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3272,
+            "tn": 62264,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/009.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07667504251003265,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/010.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08860258758068085,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 4925,
+            "tn": 60611,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/011.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08848625421524048,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 265,
+            "tn": 65271,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/012.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08791591227054596,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/013.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08192107081413269,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 109,
+            "tn": 65427,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/014.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07757358998060226,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3760,
+            "tn": 61776,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/015.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08451061695814133,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2,
+            "tn": 65534,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/016.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07351136952638626,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 175,
+            "tn": 65361,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/017.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07356659322977066,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 502,
+            "tn": 65034,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/018.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07423500716686249,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3856,
+            "tn": 61680,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/019.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0919053852558136,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 397,
+            "tn": 65139,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/020.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0825682133436203,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 215,
+            "tn": 65321,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/021.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08446436375379562,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 118,
+            "tn": 65418,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/022.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.1005457192659378,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2806,
+            "tn": 62730,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/023.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07235988229513168,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2107,
+            "tn": 63429,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/024.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.09524484723806381,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1231,
+            "tn": 64305,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/025.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07375244796276093,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 80,
+            "tn": 65456,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/026.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07191440463066101,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1214,
+            "tn": 64322,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/027.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08254126459360123,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 17,
+            "tn": 65519,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/028.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0758993923664093,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 4,
+            "tn": 65532,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/029.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07949522882699966,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 5299,
+            "tn": 60237,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/030.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07706648111343384,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 270,
+            "tn": 65266,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/031.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07033324986696243,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3828,
+            "tn": 61708,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/032.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.09125293046236038,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 873,
+            "tn": 64663,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/033.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08591318130493164,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/034.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0763135477900505,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65536,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/035.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07352293282747269,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 672,
+            "tn": 64864,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/036.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.078371062874794,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 35,
+            "tn": 65501,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/037.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.0937727764248848,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 528,
+            "tn": 65008,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/038.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.08675388246774673,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 59,
+            "tn": 65477,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/039.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.09658052027225494,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1999,
+            "tn": 63537,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/good/040.png",
+          "category": "ad_screw",
+          "label": 0,
+          "defect": "good",
+          "score": 0.07645901292562485,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 18,
+            "tn": 65518,
+            "fn": 0
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/000.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.13382793962955475,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 32,
+            "tn": 65266,
+            "fn": 238
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/001.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.11771336197853088,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65354,
+            "fn": 182
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/002.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.1254475712776184,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1828,
+            "tn": 63546,
+            "fn": 162
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/003.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.1752341389656067,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65236,
+            "fn": 300
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/004.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.12316498905420303,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 22,
+            "fp": 87,
+            "tn": 65310,
+            "fn": 117
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/005.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.16108325123786926,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65329,
+            "fn": 207
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/006.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.14446531236171722,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 87,
+            "tn": 65227,
+            "fn": 222
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/007.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.15705224871635437,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 133,
+            "tn": 65094,
+            "fn": 309
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/008.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.14138738811016083,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 790,
+            "tn": 64512,
+            "fn": 234
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/009.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.15316130220890045,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 179,
+            "tn": 64940,
+            "fn": 417
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/010.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.16752609610557556,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2511,
+            "tn": 62792,
+            "fn": 233
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/011.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.1270185112953186,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2,
+            "tn": 65339,
+            "fn": 195
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/012.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.09969674050807953,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1577,
+            "tn": 63853,
+            "fn": 106
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/013.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.12513309717178345,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 34,
+            "tn": 65308,
+            "fn": 194
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/014.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.12806996703147888,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 26,
+            "tn": 65302,
+            "fn": 208
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/015.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.1978302150964737,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 645,
+            "tn": 64591,
+            "fn": 300
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/016.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.2705850601196289,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1604,
+            "tn": 63496,
+            "fn": 436
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/017.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.10999584943056107,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 10,
+            "fp": 25,
+            "tn": 65423,
+            "fn": 78
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/018.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.1348389983177185,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 518,
+            "tn": 64847,
+            "fn": 171
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/019.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.11347038298845291,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 768,
+            "tn": 64657,
+            "fn": 111
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/020.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.10778914391994476,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65451,
+            "fn": 85
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/021.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.11342665553092957,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65439,
+            "fn": 97
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/022.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.11823722720146179,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 44,
+            "tn": 65399,
+            "fn": 93
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/manipulated_front/023.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "manipulated_front",
+          "score": 0.14667969942092896,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 995,
+            "tn": 64383,
+            "fn": 158
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/000.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.18373028934001923,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 79,
+            "tn": 65286,
+            "fn": 171
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/001.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.16394129395484924,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 12,
+            "tn": 65332,
+            "fn": 192
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/002.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.15283334255218506,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 107,
+            "tn": 65242,
+            "fn": 187
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/003.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.1408555507659912,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 11,
+            "fp": 2387,
+            "tn": 63039,
+            "fn": 99
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/004.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.1780051589012146,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2,
+            "tn": 65347,
+            "fn": 187
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/005.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.1640474796295166,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 106,
+            "tn": 65344,
+            "fn": 86
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/006.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.14087410271167755,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 183,
+            "tn": 65190,
+            "fn": 163
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/007.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.22874072194099426,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 85,
+            "fp": 292,
+            "tn": 65074,
+            "fn": 85
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/008.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.16753439605236053,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 37,
+            "tn": 65311,
+            "fn": 188
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/009.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.14691686630249023,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 166,
+            "fp": 1586,
+            "tn": 63749,
+            "fn": 35
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/010.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.1874219924211502,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 117,
+            "tn": 65280,
+            "fn": 139
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/011.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.2367260754108429,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 91,
+            "tn": 65272,
+            "fn": 173
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/012.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.20432665944099426,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 81,
+            "tn": 65234,
+            "fn": 221
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/013.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.18768972158432007,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 189,
+            "tn": 65222,
+            "fn": 125
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/014.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.13762453198432922,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 6,
+            "fp": 373,
+            "tn": 65011,
+            "fn": 146
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/015.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.19502140581607819,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 18,
+            "fp": 16,
+            "tn": 65297,
+            "fn": 205
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/016.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.1419515311717987,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 138,
+            "tn": 65269,
+            "fn": 129
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/017.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.16590115427970886,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 5,
+            "fp": 444,
+            "tn": 64936,
+            "fn": 151
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/018.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.15809635818004608,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 98,
+            "fp": 656,
+            "tn": 64636,
+            "fn": 146
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/019.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.2231786698102951,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 60,
+            "tn": 65312,
+            "fn": 164
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/020.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.15228165686130524,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 106,
+            "tn": 65277,
+            "fn": 153
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/021.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.14062745869159698,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 21,
+            "fp": 1041,
+            "tn": 64370,
+            "fn": 104
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/022.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.164903461933136,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 867,
+            "tn": 64580,
+            "fn": 89
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_head/023.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_head",
+          "score": 0.16255956888198853,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 337,
+            "tn": 65046,
+            "fn": 153
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/000.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.18215014040470123,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 378,
+            "tn": 64983,
+            "fn": 175
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/001.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.2774483561515808,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 30,
+            "tn": 65043,
+            "fn": 463
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/002.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.1254303902387619,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 150,
+            "tn": 65203,
+            "fn": 183
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/003.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.16963964700698853,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2269,
+            "tn": 63103,
+            "fn": 164
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/004.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.23972110450267792,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 192,
+            "tn": 65108,
+            "fn": 236
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/005.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.1409239023923874,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65402,
+            "fn": 134
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/006.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.14527453482151031,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 35,
+            "fp": 2718,
+            "tn": 62519,
+            "fn": 264
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/007.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.23451566696166992,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1411,
+            "tn": 63931,
+            "fn": 194
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/008.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.26896607875823975,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 420,
+            "tn": 64832,
+            "fn": 284
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/009.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.2538412809371948,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 446,
+            "tn": 64930,
+            "fn": 160
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/010.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.23173466324806213,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 22,
+            "tn": 65224,
+            "fn": 290
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/011.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.12280889600515366,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 941,
+            "tn": 64493,
+            "fn": 102
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/012.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.1820383071899414,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 28,
+            "tn": 65286,
+            "fn": 222
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/013.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.21742677688598633,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 303,
+            "tn": 65032,
+            "fn": 201
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/014.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.2310965210199356,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 12,
+            "tn": 65337,
+            "fn": 187
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/015.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.20290081202983856,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 3966,
+            "tn": 61383,
+            "fn": 187
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/016.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.21929530799388885,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 681,
+            "tn": 64610,
+            "fn": 245
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/017.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.15848223865032196,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 333,
+            "tn": 64968,
+            "fn": 235
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/018.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.13723348081111908,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 176,
+            "tn": 65155,
+            "fn": 205
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/019.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.2946123480796814,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 273,
+            "tn": 65006,
+            "fn": 257
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/020.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.25990310311317444,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 66,
+            "tn": 65005,
+            "fn": 465
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/021.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.15474767982959747,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 117,
+            "tn": 65249,
+            "fn": 170
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/022.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.12327200174331665,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 82,
+            "tn": 65389,
+            "fn": 65
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/023.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.15042021870613098,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65426,
+            "fn": 110
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/scratch_neck/024.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "scratch_neck",
+          "score": 0.21616330742835999,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 61,
+            "tn": 65272,
+            "fn": 203
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/000.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.08810309320688248,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 2497,
+            "tn": 62940,
+            "fn": 99
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/001.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.11394456773996353,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1477,
+            "tn": 63684,
+            "fn": 375
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/002.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09901777654886246,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 443,
+            "tn": 64949,
+            "fn": 144
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/003.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09083637595176697,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 4,
+            "fp": 2095,
+            "tn": 63316,
+            "fn": 121
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/004.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09209612756967545,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65443,
+            "fn": 93
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/005.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.12805519998073578,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65367,
+            "fn": 169
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/006.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.11775083839893341,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 328,
+            "tn": 64912,
+            "fn": 296
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/007.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.16735807061195374,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65292,
+            "fn": 244
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/008.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.10981550067663193,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 168,
+            "tn": 65195,
+            "fn": 173
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/009.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09770003706216812,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 5,
+            "tn": 65372,
+            "fn": 159
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/010.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.10408201813697815,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1063,
+            "tn": 64281,
+            "fn": 192
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/011.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.1171734556555748,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 267,
+            "tn": 65162,
+            "fn": 107
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/012.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09584963321685791,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 29,
+            "tn": 65240,
+            "fn": 267
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/013.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.10847081243991852,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 24,
+            "tn": 65410,
+            "fn": 102
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/014.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.13716663420200348,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 98,
+            "tn": 65269,
+            "fn": 169
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/015.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09207002818584442,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 377,
+            "tn": 64972,
+            "fn": 187
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/016.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09452179074287415,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 713,
+            "tn": 64477,
+            "fn": 346
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/017.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09891614317893982,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1580,
+            "tn": 63777,
+            "fn": 179
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/018.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.08771664649248123,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65385,
+            "fn": 151
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/019.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.0968000665307045,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 82,
+            "tn": 65377,
+            "fn": 77
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/020.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.09939837455749512,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 180,
+            "tn": 65252,
+            "fn": 104
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/021.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.08710230886936188,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65324,
+            "fn": 212
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_side/022.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_side",
+          "score": 0.10360758751630783,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1024,
+            "tn": 64268,
+            "fn": 244
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/000.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.16571499407291412,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65106,
+            "fn": 430
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/001.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.14525094628334045,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 95,
+            "fp": 1361,
+            "tn": 63773,
+            "fn": 307
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/002.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.1392970234155655,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 14,
+            "tn": 65148,
+            "fn": 374
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/003.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.16450583934783936,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 10,
+            "tn": 65241,
+            "fn": 285
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/004.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.16339071094989777,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 40,
+            "tn": 65075,
+            "fn": 421
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/005.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.21576157212257385,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 516,
+            "tn": 64361,
+            "fn": 659
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/006.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.2296687811613083,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65058,
+            "fn": 478
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/007.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.22058045864105225,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 519,
+            "tn": 64591,
+            "fn": 426
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/008.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.1375574767589569,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1090,
+            "tn": 64095,
+            "fn": 351
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/009.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.15289847552776337,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 10,
+            "tn": 65272,
+            "fn": 254
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/010.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.1571453958749771,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65200,
+            "fn": 336
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/011.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.16138680279254913,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 449,
+            "tn": 64768,
+            "fn": 319
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/012.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.10489430278539658,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65458,
+            "fn": 78
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/013.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.11685530096292496,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1512,
+            "tn": 63841,
+            "fn": 183
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/014.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.09504867345094681,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 52,
+            "tn": 65173,
+            "fn": 311
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/015.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.11531642824411392,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 434,
+            "tn": 64866,
+            "fn": 236
+          },
+          "candidate_detected": false
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/016.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.12268023937940598,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 1040,
+            "tn": 64241,
+            "fn": 255
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/017.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.12609870731830597,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 272,
+            "tn": 65191,
+            "fn": 73
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/018.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.1855028122663498,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 25,
+            "tn": 65161,
+            "fn": 350
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/019.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.2525872588157654,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 351,
+            "tn": 64700,
+            "fn": 485
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/020.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.21199195086956024,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 156,
+            "fp": 2907,
+            "tn": 62205,
+            "fn": 268
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/021.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.12023042887449265,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 75,
+            "tn": 65128,
+            "fn": 333
+          },
+          "candidate_detected": true
+        },
+        {
+          "id": "mvtec_ad/screw/test/thread_top/022.png",
+          "category": "ad_screw",
+          "label": 1,
+          "defect": "thread_top",
+          "score": 0.14130395650863647,
+          "abstained_requires_review": false,
+          "pixels": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 65286,
+            "fn": 250
+          },
+          "candidate_detected": true
+        }
+      ],
+      "variant": "screw_hilo",
+      "method": "aligned_hilo"
+    }
+  }
+}
