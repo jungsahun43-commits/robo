@@ -1,0 +1,64 @@
+{
+  "UTC": "2026-10-15T17:06:01.703268+00:00",
+  "ready": true,
+  "policy_sha256": "1ced9608087bb2139809c41f333102b1b9ad426bc992b28beadba6e0f5693ede",
+  "counts": {
+    "fit": {
+      "good": 115,
+      "bird-nest": 12,
+      "rust": 15
+    },
+    "validation": {
+      "good": 24,
+      "bird-nest": 4,
+      "rust": 3
+    },
+    "cal": {
+      "good": 26,
+      "bird-nest": 6,
+      "rust": 1
+    },
+    "test": {
+      "good": 238,
+      "bird-nest": 23,
+      "rust": 20
+    }
+  },
+  "groups_each_condition": {
+    "fit": {
+      "good": 76,
+      "bird-nest": 10,
+      "rust": 11
+    },
+    "validation": {
+      "good": 15,
+      "bird-nest": 3,
+      "rust": 2
+    },
+    "cal": {
+      "good": 16,
+      "bird-nest": 4,
+      "rust": 1
+    },
+    "test": {
+      "good": 139,
+      "bird-nest": 21,
+      "rust": 16
+    }
+  },
+  "gate_failures": [],
+  "prior_role_conflict_excluded": 0,
+  "prior_locked_candidate_photos": 8,
+  "original_evaluation281_preserved": true,
+  "evaluation_filename_base_photos": 281,
+  "evaluation_filename_variant_photos": 0,
+  "exported_original_bytes": 15417155,
+  "reused_global_audit_sha256": "0371dc6a1b4b04195d951ece90a6152f09e4a89d2625d17b125fcd4890402119",
+  "new_pixel_decodes_or_fingerprints": 0,
+  "new_neural_features_scores_gradient_optimizer": 0,
+  "new_visual_review_performed": false,
+  "training_protocol_fixed": false,
+  "physical_part_capture_independence_verified": false,
+  "independent_field_validation": false,
+  "manifest_sha256": "fc2fe5560a94a787dc6d0866d10d3bec8ec673e625a57534b64d5d8dce1ea59b"
+}
