@@ -1,0 +1,304 @@
+{
+  "status": "v20_completed_all_candidates_rejected_v16_retained",
+  "UTC": "2026-10-15T05:59:13.826429+00:00",
+  "preregistered_commit": "0c8c709",
+  "active_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_checkpoint_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "active_role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "active_role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "v20_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-fine-targets-v20\\trained\\final.pt",
+  "v20_research_checkpoint_sha256": "f56cc6ff76dda6637010dee18b0821a699d4ae1fd9079013e02c5b6535f4609e",
+  "actual_optimizer_updates": 1920,
+  "selected_epoch": 20,
+  "retained_selected_epoch_updates": 1280,
+  "initial_VAL_loss": 1.4027806433665244,
+  "best_VAL_loss": 1.3482722509914722,
+  "new_fine_projection_changed_from_seeded_initialization": true,
+  "initially_zero_fine_fusion_weights_selected_L1": 38.43132400512695,
+  "training_labels": "reused v19 publisher normal surfaces and procedural edit masks, not natural target defect GT",
+  "data_manifest_sha256": "b24d0f8a296fd5adbacce831b95a9a02bec54b996f5456fc633a6105bb37c7de",
+  "new_natural_target_fault_GT": 0,
+  "FIT_normal": 131,
+  "FIT_synthetic": 478,
+  "VAL_normal": 33,
+  "VAL_synthetic": 129,
+  "selected_methods": {},
+  "target_results": {
+    "mpdd_bracket_black": {
+      "parent": {
+        "tp": 17,
+        "fn": 30,
+        "fp": 4,
+        "tn": 28,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.6382978723404256,
+        "fpr": 0.125
+      },
+      "parent_by_defect": {
+        "hole": {
+          "photos": 12,
+          "fn": 5,
+          "fnr": 0.4166666666666667
+        },
+        "scratches": {
+          "photos": 35,
+          "fn": 25,
+          "fnr": 0.7142857142857143
+        }
+      },
+      "methods": {
+        "fine_only": {
+          "rates": {
+            "tp": 15,
+            "fn": 32,
+            "fp": 5,
+            "tn": 27,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.6808510638297872,
+            "fpr": 0.15625
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 9,
+              "fnr": 0.75
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 23,
+              "fnr": 0.6571428571428571
+            }
+          },
+          "eligible": false,
+          "auroc": 0.7227393617021277
+        },
+        "max_fine_parent": {
+          "rates": {
+            "tp": 10,
+            "fn": 37,
+            "fp": 5,
+            "tn": 27,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.7872340425531915,
+            "fpr": 0.15625
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 8,
+              "fnr": 0.6666666666666666
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 29,
+              "fnr": 0.8285714285714286
+            }
+          },
+          "eligible": false,
+          "auroc": 0.7386968085106383
+        }
+      }
+    },
+    "mpdd_tubes": {
+      "parent": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "parent_by_defect": {
+        "anomalous": {
+          "photos": 69,
+          "fn": 47,
+          "fnr": 0.6811594202898551
+        }
+      },
+      "methods": {
+        "fine_only": {
+          "rates": {
+            "tp": 5,
+            "fn": 64,
+            "fp": 4,
+            "tn": 28,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.927536231884058,
+            "fpr": 0.125
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 64,
+              "fnr": 0.927536231884058
+            }
+          },
+          "eligible": false,
+          "auroc": 0.45018115942028986
+        },
+        "max_fine_parent": {
+          "rates": {
+            "tp": 24,
+            "fn": 45,
+            "fp": 3,
+            "tn": 29,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.6521739130434783,
+            "fpr": 0.09375
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 45,
+              "fnr": 0.6521739130434783
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6970108695652174
+        }
+      }
+    }
+  },
+  "verification": {
+    "status": "passed",
+    "parent_all_tensors_buffers_metadata_exact": true,
+    "high_projection_exact_to_v19_initialization": true,
+    "legacy_python_SHA_checked": 611,
+    "protected_stat_unchanged": 88194,
+    "changed_metadata_SHA_rechecked": 0,
+    "all_protected_SHA_reread": false,
+    "actual_optimizer_updates": 1920,
+    "new_unit_tests_passed": 3,
+    "selected": {},
+    "fine_cache_receipts": {
+      "fit-fine-receipt": {
+        "sha256": "a89587d1b5be997a9e21f08a963c36da29212401f316148c428259a95485325a",
+        "photos": 609,
+        "bytes": 478971881,
+        "alignment": {
+          "low_max_abs": 0,
+          "low_bitwise_exact": true,
+          "high_max_abs": 0,
+          "high_bitwise_exact": true,
+          "residual_max_abs": 0,
+          "residual_bitwise_exact": true
+        },
+        "atol": 0.0005,
+        "rtol": 0.001,
+        "RGB_and_coordinate_checks": true
+      },
+      "mpdd_bracket_black-cal-fine-receipt": {
+        "sha256": "a8be8927fb6433483375d3adc0c0ecc994ae72c8b6bb65fda76aa691956636a5",
+        "photos": 30,
+        "bytes": 23596009,
+        "alignment": {
+          "low_max_abs": 0,
+          "low_bitwise_exact": true,
+          "high_max_abs": 0.0078125,
+          "high_bitwise_exact": false
+        },
+        "atol": 0.0005,
+        "rtol": 0.001,
+        "RGB_and_coordinate_checks": true
+      },
+      "mpdd_bracket_black-test-fine-receipt": {
+        "sha256": "ee6a545893ddb1e3c55127f074b0fce328232f4fb5c1fc59c5cb20a8db234c8b",
+        "photos": 79,
+        "bytes": 62133417,
+        "alignment": {
+          "low_max_abs": 0,
+          "low_bitwise_exact": true,
+          "high_max_abs": 0.015625,
+          "high_bitwise_exact": false
+        },
+        "atol": 0.0005,
+        "rtol": 0.001,
+        "RGB_and_coordinate_checks": true
+      },
+      "mpdd_tubes-cal-fine-receipt": {
+        "sha256": "a6482ff1da1cfe594b11ebc9eb82655bd3719e8f7a86dbd8cb91a93756558b08",
+        "photos": 23,
+        "bytes": 18090473,
+        "alignment": {
+          "low_max_abs": 0,
+          "low_bitwise_exact": true,
+          "high_max_abs": 0.015625,
+          "high_bitwise_exact": false
+        },
+        "atol": 0.0005,
+        "rtol": 0.001,
+        "RGB_and_coordinate_checks": true
+      },
+      "mpdd_tubes-test-fine-receipt": {
+        "sha256": "1ee8612601f4c317b4d439f7734a08d8511cdac09f15af6c93053978a1ba3f2c",
+        "photos": 101,
+        "bytes": 79435241,
+        "alignment": {
+          "low_max_abs": 0,
+          "low_bitwise_exact": true,
+          "high_max_abs": 0.015625,
+          "high_bitwise_exact": false
+        },
+        "atol": 0.0005,
+        "rtol": 0.001,
+        "RGB_and_coordinate_checks": true
+      },
+      "validation-fine-receipt": {
+        "sha256": "7bb0eb438516fba71419b55e7ac4c4bee7f8092f0234fbf1b0b4aca6f28c992a",
+        "photos": 162,
+        "bytes": 127413353,
+        "alignment": {
+          "low_max_abs": 0,
+          "low_bitwise_exact": true,
+          "high_max_abs": 0,
+          "high_bitwise_exact": true,
+          "residual_max_abs": 0,
+          "residual_bitwise_exact": true
+        },
+        "atol": 0.0005,
+        "rtol": 0.001,
+        "RGB_and_coordinate_checks": true
+      }
+    },
+    "new_natural_target_fault_GT": 0,
+    "synthetic_physical_realism_verified": false,
+    "fresh_release_CPU_GPU_CPP_required": false,
+    "active_parent_still_retained": true,
+    "independent_field_validated": false
+  },
+  "new_unit_tests_passed": 3,
+  "new_API_aliases_tested": 0,
+  "new_CPP_operations": 0,
+  "new_role4_ZIP_created": false,
+  "all_parent_tensors_buffers_metadata_exact": true,
+  "primary_locations_and_thresholds_unchanged": true,
+  "tracked_v8_v10_v13_v15_v16_v17_v18_v19_v20_actual_optimizer_updates_including_failed": 20560,
+  "known_public_TEST_reused_for_adoption": true,
+  "independent_field_validated": false,
+  "natural_defect_VAL_available": false,
+  "physical_synthetic_fault_realism_verified": false,
+  "sandbox_launch_without_output_or_optimizer": {
+    "UTC": "2026-10-15T05:57:11.1762291Z",
+    "status": "sandbox_background_launch_ended_without_output",
+    "launcher_PID": 20056,
+    "confirmed_not_live": true,
+    "operation_lock_created": false,
+    "actual_optimizer_updates": 0,
+    "stdout_bytes": 0,
+    "stderr_bytes": 0,
+    "cause": "not established",
+    "original_logs_preserved": true
+  },
+  "all_original_data_failed_candidates_reports_preserved": true,
+  "awake_helper_restarted": false,
+  "v14_human_relation_review_pending": true,
+  "automation_continues_user_at_school": true,
+  "next": "Do not rerun v20 or tune current TEST thresholds; investigate FIT-only synthetic/normal separation and an appropriate next data or representation step before preregistering more training."
+}
