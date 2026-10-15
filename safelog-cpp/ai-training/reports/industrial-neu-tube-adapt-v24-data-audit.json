@@ -1,0 +1,43 @@
+{
+  "UTC": "2026-10-15T07:21:33.918130+00:00",
+  "ready": true,
+  "protocol_sha256": "28942c9235a5bfced269b3dd952a489f7be1fc4ae932b5d903ca45db2f898969",
+  "stopped_v22_manifest_sha256": "d2fcd01aa6510bb5dce88a6e622cdabb6abc1604c3843abed3e9b630c497d5d0",
+  "inherited_duplicate_audit_sha256": "7b1e99a5868169f53909073bc64f652800629739a636fb33f6ace29c4223fb1c",
+  "counts": {
+    "fit": {
+      "annotation_negative": 182,
+      "real_positive": 130,
+      "mpdd_tubes": 432
+    },
+    "validation": {
+      "annotation_negative": 37,
+      "real_positive": 51,
+      "mpdd_tubes": 135
+    }
+  },
+  "training_crops": 744,
+  "validation_crops": 223,
+  "FIT_real_mask_original_photos": 35,
+  "FIT_real_by_source": {
+    "NEU_SDI": 20,
+    "NEU_SPDI": 15
+  },
+  "VAL_real_mask_original_photos": 10,
+  "VAL_annotation_negative_original_photos": 9,
+  "tube_publisher_normal_original_photos": {
+    "fit": 48,
+    "validation": 15
+  },
+  "black_photos_in_training_or_new_evaluation": 0,
+  "new_source_normal_whole_photos": 0,
+  "inherited_retained_TEST_full_checked": 5746,
+  "inherited_reference_full_and_crops_checked": 8326,
+  "training_heldout_near_groups_remaining": 0,
+  "new_crop_coordinate_generation": 0,
+  "TEST_masks_used_for_preparation": false,
+  "new_features_scores_optimizer_updates": 0,
+  "physical_capture_groups_verified": false,
+  "annotation_negative_is_not_whole_equipment_health": true,
+  "new_unit_tests_passed": 2
+}
