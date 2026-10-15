@@ -1,0 +1,69 @@
+{
+  "UTC": "2026-10-15T18:12:10.697400+00:00",
+  "ready": true,
+  "target": "polymer-insulator-lower-shackle",
+  "counts": {
+    "fit": {
+      "0": 87
+    },
+    "validation": {
+      "0": 26
+    },
+    "cal": {
+      "0": 28
+    },
+    "test": {
+      "0": 327,
+      "1": 315
+    }
+  },
+  "groups_each_label": {
+    "fit": {
+      "0": 84,
+      "1": 0
+    },
+    "validation": {
+      "0": 25,
+      "1": 0
+    },
+    "cal": {
+      "0": 24,
+      "1": 0
+    },
+    "test": {
+      "0": 316,
+      "1": 308
+    }
+  },
+  "gate_failures": [],
+  "initial_candidate_normal_photos": 143,
+  "excluded_candidates": {
+    "excluded_TEST_connected": 2
+  },
+  "original_target_TEST642_preserved": true,
+  "new_source_rows": 27620,
+  "old_raw_exact_cached_rows": 8990,
+  "new_decoded_unique_members": 18630,
+  "actual_decode_events_including_repeats": 18630,
+  "neural_features_scores_gradient_optimizer": 0,
+  "new_photo_content_viewed": 0,
+  "training_protocol_fixed": false,
+  "independent_field_validation": false,
+  "join_counts_current_completed_scan": {
+    "cross_component_pHash_comparisons": 153938,
+    "pHash_joins": 94
+  },
+  "pixel_joining_edge_file": "data/industrial-insplad-lower-shackle-v57/pixel-joining-edges.jsonl",
+  "pixel_joining_edge_sha256": "2ffa000e484a66f0c0f60a8b7f3116b36c05566c817bc4c7f4859df9e2db47c9",
+  "proxy_grouping_not_physical_identity_proof": true,
+  "old_original_images_SHA_all_recalculated": false,
+  "oldcaches_reused_sha256": {
+    "grouped-all-source.json": "0371dc6a1b4b04195d951ece90a6152f09e4a89d2625d17b125fcd4890402119",
+    "decoded-fingerprints.json": "ae66f0e790e8f20e71d703b875fb3935f4ed36962981650796c78764537ef33a",
+    "retained-TEST-fingerprints.json": "2e865e6a64425872045c3c4d440cf3589f4a89a7a2b21888b56c7d2113ba0545"
+  },
+  "new_units_passed": 3,
+  "policy_sha256": "dd2a7aeea1999c366dacb273e9f0a7b619955b8607daeb1f5e6e65d1f2695c08",
+  "exported_original_bytes": 8312632,
+  "manifest_sha256": "5ae6838ea6acbdbd76bd2030a58feb3ca6792b63b9967f69a76861935e740cbb"
+}

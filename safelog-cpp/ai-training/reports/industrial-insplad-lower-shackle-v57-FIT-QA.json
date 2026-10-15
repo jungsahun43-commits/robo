@@ -1,0 +1,19 @@
+{
+  "UTC": "2026-10-15T18:21:41.349357+00:00",
+  "manifest_sha256": "5ae6838ea6acbdbd76bd2030a58feb3ca6792b63b9967f69a76861935e740cbb",
+  "reservation_sha256": "8f2c53bdbf2a837836c6ceffc81a1dcb9bf110b3e8dd1b6383aaf4c9286d85d8",
+  "image_contact_sheet_sha256": "a7e2ef4cbc47936f369b2b46f7572f03fd4f2e1b87cc11e02d0111b48fa6fb91",
+  "viewed_ids": [
+    "insplad-unsupervised/polymer-insulator-lower-shackle/train/good/Fotos 01-12-2020_DJI_0214_manilha_isolador_inferior_81.jpg",
+    "insplad-unsupervised/polymer-insulator-lower-shackle/train/good/Fotos 03-12-2020_DJI_0259_manilha_isolador_inferior_226.jpg",
+    "insplad-unsupervised/polymer-insulator-lower-shackle/train/good/Fotos 03-12-2020_DJI_0260_manilha_isolador_inferior_227.jpg"
+  ],
+  "viewed_only_first3_reserved_normal_FIT": true,
+  "observations": [
+    "Metal lower-link/clamp and bolts are visible in the first crop.",
+    "Other two crops are small/dark source images around121x122 and124x125. Adjacent frames DJI0259/DJI0260 resemble the same assembly; physical identity is not verified.",
+    "Frame and pHash grouping does not establish independent physical parts. Original good annotations were preserved; no full-data human review or relabelling."
+  ],
+  "VAL_CAL_TEST_content_viewed": 0,
+  "new_features_gradient_optimizer": 0
+}
