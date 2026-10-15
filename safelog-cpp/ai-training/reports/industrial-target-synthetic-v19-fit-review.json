@@ -1,0 +1,31 @@
+{
+  "UTC": "2026-10-15T04:08:57.610655+00:00",
+  "preview_manifest_sha256": "f21775255a4b675aa61dd98a2a6f4f3a429b67b7ce09728b2c642b7318e2f1c5",
+  "fixed_inputs_sha256": "7bcaa79c9a9e9f25226a53d49745a629c6013bcea29610111c8002281a624a58",
+  "source_snapshot_sha256": {
+    "preview-source-preview_target_synthetic.py": "9b503b2192fad559fd8cc01c7e21f9a6a4de08991e3ad43ddfb7f0a208871bbd",
+    "preview-source-target_synthetic.py": "dfc6bce5787da66344bd7b957dca59de7b3e8df62eec6b1ec6fa6efc38f05d22"
+  },
+  "preview_generated": 10,
+  "skipped": 2,
+  "agent_viewed_contacts": [
+    "data/industrial-target-synthetic-v19/mpdd_bracket_black-FIT-preview.png",
+    "data/industrial-target-synthetic-v19/mpdd_tubes-FIT-preview.png"
+  ],
+  "normal_FIT_photos_used": 4,
+  "real_shape_FIT_sources_used": 3,
+  "new_natural_industrial_defect_labels": 0,
+  "model_scores_or_optimizer_updates": 0,
+  "observation": "Most marks sit on the part colour regions. Some are tiny or resemble natural specular highlights; one has21changedpixels and low mean RGB contrast. Tube edge/background placement remains uncertain despite input colour overlap. These are procedural examples, not verified real industrial damage.",
+  "next_candidate_constraints": [
+    "Do not use current preview as verified natural defect labels",
+    "Before full learning protocol, make a separate r1 generator with >=32 actually changed pixels and stronger declared contrast based on FIT-only review; retain this preview/source unchanged",
+    "Reject failed placement/too-small/no-visible-change rather than convert it to normal",
+    "Use target and shape VAL groups separately from FIT; CAL/TEST never used for synthetic training",
+    "Consider frozen target-category reconstruction residual as decoder input to reduce direct synthetic-appearance overfitting; one shared backbone, not DRAEM reproduction"
+  ],
+  "v19_training_protocol_fixed": false,
+  "human_part_mask_or_real_fault_review_completed": false,
+  "existing_v12_failed_foreground_score_repeated": false,
+  "foreground_here_is_placement_heuristic_only_not_inference_or_defect_GT": true
+}

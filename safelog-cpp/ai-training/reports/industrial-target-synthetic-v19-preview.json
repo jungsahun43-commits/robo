@@ -1,0 +1,760 @@
+{
+  "schema": "safelog-target-synthetic-preview-v19",
+  "UTC": "2026-10-15T04:06:20.183585+00:00",
+  "requested": 12,
+  "generated": 10,
+  "categories": {
+    "mpdd_bracket_black": 6,
+    "mpdd_tubes": 4
+  },
+  "skipped": [
+    {
+      "normal_id": "mpdd/tubes/train/good/010.png",
+      "source_shape_id": "kolektor_sdd1/kos01/Part5.jpg",
+      "reason": "Shape too small after declared transformation"
+    },
+    {
+      "normal_id": "mpdd/tubes/train/good/010.png",
+      "source_shape_id": "kolektor_sdd1/kos03/Part2.jpg",
+      "reason": "No placement inside input-estimated foreground after256 attempts"
+    }
+  ],
+  "samples": [
+    {
+      "id": "000",
+      "category": "mpdd_bracket_black",
+      "normal_FIT_id": "mpdd/bracket_black/train/good/195.png",
+      "source_real_shape_FIT_id": "kolektor_sdd1/kos01/Part5.jpg",
+      "paths": {
+        "normal": {
+          "path": "data/industrial-target-synthetic-v19/000-normal.png",
+          "sha256": "e9bbbada8ae4386cdc1df6149cefaecd66878a4225654c8347c9da8d8d12c181"
+        },
+        "synthetic": {
+          "path": "data/industrial-target-synthetic-v19/000-synthetic.png",
+          "sha256": "f49aad25fcecb2b67a144c118237639e44cad6f5b281399ac1df71dbc0a23c2f"
+        },
+        "procedural_mask": {
+          "path": "data/industrial-target-synthetic-v19/000-procedural_mask.png",
+          "sha256": "1ace01d66b90db06103636e76ff00016f689778de112e50879641236d4ad197f"
+        }
+      },
+      "metadata": {
+        "seed": 1426608278,
+        "source_geometry": {
+          "source_crop_xyxy": [
+            222,
+            567,
+            472,
+            617
+          ],
+          "inpaint_estimate_not_clean_GT": true
+        },
+        "target_geometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ],
+          "foreground_fraction": 0.11515426635742188,
+          "input_border_Lab_threshold": 16.618106842041016,
+          "mask_source": "input_colour_only_not_defect_annotation",
+          "mask_quality_verified": false
+        },
+        "target_rect_xywh": [
+          313,
+          391,
+          68,
+          14
+        ],
+        "source_shape_extent": 68,
+        "angle_degrees": 0,
+        "amplitude": 43.30136310507221,
+        "polarity": -1.0,
+        "placement_attempts": 21,
+        "input_foreground_overlap": 1.0,
+        "input_foreground_is_ground_truth": false,
+        "actual_operation_mask_pixels": 80,
+        "mean_absolute_changed_intensity": 19.0375,
+        "mask_label_scope": "known procedural RGB modification support, not natural industrial defect annotation",
+        "new_real_industrial_faults_collected": 0,
+        "human_verified_natural_fault": false
+      },
+      "phase": "FIT_preview_only",
+      "synthetic_not_natural_ground_truth": true
+    },
+    {
+      "id": "001",
+      "category": "mpdd_bracket_black",
+      "normal_FIT_id": "mpdd/bracket_black/train/good/195.png",
+      "source_real_shape_FIT_id": "kolektor_sdd1/kos03/Part2.jpg",
+      "paths": {
+        "normal": {
+          "path": "data/industrial-target-synthetic-v19/001-normal.png",
+          "sha256": "e9bbbada8ae4386cdc1df6149cefaecd66878a4225654c8347c9da8d8d12c181"
+        },
+        "synthetic": {
+          "path": "data/industrial-target-synthetic-v19/001-synthetic.png",
+          "sha256": "22edcdcf37596974644768d937ecc6125cb92760656257ee1f6908c71cacba08"
+        },
+        "procedural_mask": {
+          "path": "data/industrial-target-synthetic-v19/001-procedural_mask.png",
+          "sha256": "bd63a736bea50aa98424ec299d1f892659aac3bac368456f659153c4aed9c001"
+        }
+      },
+      "metadata": {
+        "seed": 2685920767,
+        "source_geometry": {
+          "source_crop_xyxy": [
+            325,
+            411,
+            500,
+            437
+          ],
+          "inpaint_estimate_not_clean_GT": true
+        },
+        "target_geometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ],
+          "foreground_fraction": 0.11515426635742188,
+          "input_border_Lab_threshold": 16.618106842041016,
+          "mask_source": "input_colour_only_not_defect_annotation",
+          "mask_quality_verified": false
+        },
+        "target_rect_xywh": [
+          326,
+          393,
+          37,
+          37
+        ],
+        "source_shape_extent": 45,
+        "angle_degrees": 45,
+        "amplitude": 43.90165683317338,
+        "polarity": 1.0,
+        "placement_attempts": 8,
+        "input_foreground_overlap": 0.9861111111111112,
+        "input_foreground_is_ground_truth": false,
+        "actual_operation_mask_pixels": 72,
+        "mean_absolute_changed_intensity": 10.472222222222221,
+        "mask_label_scope": "known procedural RGB modification support, not natural industrial defect annotation",
+        "new_real_industrial_faults_collected": 0,
+        "human_verified_natural_fault": false
+      },
+      "phase": "FIT_preview_only",
+      "synthetic_not_natural_ground_truth": true
+    },
+    {
+      "id": "002",
+      "category": "mpdd_bracket_black",
+      "normal_FIT_id": "mpdd/bracket_black/train/good/195.png",
+      "source_real_shape_FIT_id": "kolektor_sdd1/kos04/Part3.jpg",
+      "paths": {
+        "normal": {
+          "path": "data/industrial-target-synthetic-v19/002-normal.png",
+          "sha256": "e9bbbada8ae4386cdc1df6149cefaecd66878a4225654c8347c9da8d8d12c181"
+        },
+        "synthetic": {
+          "path": "data/industrial-target-synthetic-v19/002-synthetic.png",
+          "sha256": "7fd95cd5405b7e8fc7c680981e1b69a83e11f3d437433276ce8e2039f9f6114b"
+        },
+        "procedural_mask": {
+          "path": "data/industrial-target-synthetic-v19/002-procedural_mask.png",
+          "sha256": "a40a39024d95ead8287c1602303e98bacfc866cc632b136e8142fc2300046da0"
+        }
+      },
+      "metadata": {
+        "seed": 1505301114,
+        "source_geometry": {
+          "source_crop_xyxy": [
+            377,
+            649,
+            500,
+            674
+          ],
+          "inpaint_estimate_not_clean_GT": true
+        },
+        "target_geometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ],
+          "foreground_fraction": 0.11515426635742188,
+          "input_border_Lab_threshold": 16.618106842041016,
+          "mask_source": "input_colour_only_not_defect_annotation",
+          "mask_quality_verified": false
+        },
+        "target_rect_xywh": [
+          198,
+          299,
+          35,
+          34
+        ],
+        "source_shape_extent": 39,
+        "angle_degrees": 45,
+        "amplitude": 24.693899955066286,
+        "polarity": -1.0,
+        "placement_attempts": 2,
+        "input_foreground_overlap": 1.0,
+        "input_foreground_is_ground_truth": false,
+        "actual_operation_mask_pixels": 79,
+        "mean_absolute_changed_intensity": 12.215189873417721,
+        "mask_label_scope": "known procedural RGB modification support, not natural industrial defect annotation",
+        "new_real_industrial_faults_collected": 0,
+        "human_verified_natural_fault": false
+      },
+      "phase": "FIT_preview_only",
+      "synthetic_not_natural_ground_truth": true
+    },
+    {
+      "id": "003",
+      "category": "mpdd_bracket_black",
+      "normal_FIT_id": "mpdd/bracket_black/train/good/251.png",
+      "source_real_shape_FIT_id": "kolektor_sdd1/kos01/Part5.jpg",
+      "paths": {
+        "normal": {
+          "path": "data/industrial-target-synthetic-v19/003-normal.png",
+          "sha256": "36ab46ccb0a62bd9582199625e836d79ff537055384b95a951cb690864fe85c4"
+        },
+        "synthetic": {
+          "path": "data/industrial-target-synthetic-v19/003-synthetic.png",
+          "sha256": "bc6de06f3f672b188c3b7cea5e4e7aef3c0fcf6987ea6a68718dbdac9dd4e07a"
+        },
+        "procedural_mask": {
+          "path": "data/industrial-target-synthetic-v19/003-procedural_mask.png",
+          "sha256": "f590fecb7f352b6a0d5634c6067aaf4f4f24bb99b87a0159a118bc37619b8f71"
+        }
+      },
+      "metadata": {
+        "seed": 3362892410,
+        "source_geometry": {
+          "source_crop_xyxy": [
+            222,
+            567,
+            472,
+            617
+          ],
+          "inpaint_estimate_not_clean_GT": true
+        },
+        "target_geometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ],
+          "foreground_fraction": 0.09068679809570312,
+          "input_border_Lab_threshold": 16.181339263916016,
+          "mask_source": "input_colour_only_not_defect_annotation",
+          "mask_quality_verified": false
+        },
+        "target_rect_xywh": [
+          380,
+          436,
+          33,
+          33
+        ],
+        "source_shape_extent": 37,
+        "angle_degrees": 45,
+        "amplitude": 37.26202966511916,
+        "polarity": 1.0,
+        "placement_attempts": 26,
+        "input_foreground_overlap": 1.0,
+        "input_foreground_is_ground_truth": false,
+        "actual_operation_mask_pixels": 21,
+        "mean_absolute_changed_intensity": 7.428571428571429,
+        "mask_label_scope": "known procedural RGB modification support, not natural industrial defect annotation",
+        "new_real_industrial_faults_collected": 0,
+        "human_verified_natural_fault": false
+      },
+      "phase": "FIT_preview_only",
+      "synthetic_not_natural_ground_truth": true
+    },
+    {
+      "id": "004",
+      "category": "mpdd_bracket_black",
+      "normal_FIT_id": "mpdd/bracket_black/train/good/251.png",
+      "source_real_shape_FIT_id": "kolektor_sdd1/kos03/Part2.jpg",
+      "paths": {
+        "normal": {
+          "path": "data/industrial-target-synthetic-v19/004-normal.png",
+          "sha256": "36ab46ccb0a62bd9582199625e836d79ff537055384b95a951cb690864fe85c4"
+        },
+        "synthetic": {
+          "path": "data/industrial-target-synthetic-v19/004-synthetic.png",
+          "sha256": "651a96b2d5c276b634840c97735747644ac70938723cb2ac4d30b607d230d00e"
+        },
+        "procedural_mask": {
+          "path": "data/industrial-target-synthetic-v19/004-procedural_mask.png",
+          "sha256": "6779326e98a5c2aa7f08c335e82f1a1fe8c1943d913e8b5ef352db225b7d4644"
+        }
+      },
+      "metadata": {
+        "seed": 692229716,
+        "source_geometry": {
+          "source_crop_xyxy": [
+            325,
+            411,
+            500,
+            437
+          ],
+          "inpaint_estimate_not_clean_GT": true
+        },
+        "target_geometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ],
+          "foreground_fraction": 0.09068679809570312,
+          "input_border_Lab_threshold": 16.181339263916016,
+          "mask_source": "input_colour_only_not_defect_annotation",
+          "mask_quality_verified": false
+        },
+        "target_rect_xywh": [
+          280,
+          338,
+          5,
+          35
+        ],
+        "source_shape_extent": 35,
+        "angle_degrees": 90,
+        "amplitude": 36.308572357166966,
+        "polarity": -1.0,
+        "placement_attempts": 7,
+        "input_foreground_overlap": 1.0,
+        "input_foreground_is_ground_truth": false,
+        "actual_operation_mask_pixels": 33,
+        "mean_absolute_changed_intensity": 15.121212121212121,
+        "mask_label_scope": "known procedural RGB modification support, not natural industrial defect annotation",
+        "new_real_industrial_faults_collected": 0,
+        "human_verified_natural_fault": false
+      },
+      "phase": "FIT_preview_only",
+      "synthetic_not_natural_ground_truth": true
+    },
+    {
+      "id": "005",
+      "category": "mpdd_bracket_black",
+      "normal_FIT_id": "mpdd/bracket_black/train/good/251.png",
+      "source_real_shape_FIT_id": "kolektor_sdd1/kos04/Part3.jpg",
+      "paths": {
+        "normal": {
+          "path": "data/industrial-target-synthetic-v19/005-normal.png",
+          "sha256": "36ab46ccb0a62bd9582199625e836d79ff537055384b95a951cb690864fe85c4"
+        },
+        "synthetic": {
+          "path": "data/industrial-target-synthetic-v19/005-synthetic.png",
+          "sha256": "b05b61443be093c02909418b16e7414ccc10b5a384b0256bef6b5241eb2920cd"
+        },
+        "procedural_mask": {
+          "path": "data/industrial-target-synthetic-v19/005-procedural_mask.png",
+          "sha256": "2e064831976f7d7a91a91d6e4bf897e501d909a39b1f5849ccbf3af1bfc87a51"
+        }
+      },
+      "metadata": {
+        "seed": 359748713,
+        "source_geometry": {
+          "source_crop_xyxy": [
+            377,
+            649,
+            500,
+            674
+          ],
+          "inpaint_estimate_not_clean_GT": true
+        },
+        "target_geometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ],
+          "foreground_fraction": 0.09068679809570312,
+          "input_border_Lab_threshold": 16.181339263916016,
+          "mask_source": "input_colour_only_not_defect_annotation",
+          "mask_quality_verified": false
+        },
+        "target_rect_xywh": [
+          190,
+          146,
+          11,
+          52
+        ],
+        "source_shape_extent": 52,
+        "angle_degrees": 90,
+        "amplitude": 42.38713733446189,
+        "polarity": 1.0,
+        "placement_attempts": 1,
+        "input_foreground_overlap": 1.0,
+        "input_foreground_is_ground_truth": false,
+        "actual_operation_mask_pixels": 139,
+        "mean_absolute_changed_intensity": 23.954436450839328,
+        "mask_label_scope": "known procedural RGB modification support, not natural industrial defect annotation",
+        "new_real_industrial_faults_collected": 0,
+        "human_verified_natural_fault": false
+      },
+      "phase": "FIT_preview_only",
+      "synthetic_not_natural_ground_truth": true
+    },
+    {
+      "id": "006",
+      "category": "mpdd_tubes",
+      "normal_FIT_id": "mpdd/tubes/train/good/010.png",
+      "source_real_shape_FIT_id": "kolektor_sdd1/kos04/Part3.jpg",
+      "paths": {
+        "normal": {
+          "path": "data/industrial-target-synthetic-v19/006-normal.png",
+          "sha256": "326fd87600782772c7d0b15b0ab08e3974015fdde29048ab9b4910cb78c5ba63"
+        },
+        "synthetic": {
+          "path": "data/industrial-target-synthetic-v19/006-synthetic.png",
+          "sha256": "e7d9df98962b3f530cba082a936e8d1a1361c547e4a47e6b9201ce3b9a571599"
+        },
+        "procedural_mask": {
+          "path": "data/industrial-target-synthetic-v19/006-procedural_mask.png",
+          "sha256": "946321b6ba4e05f516f4e03d72c09438a9dd5b19a70911b01981b8176575a95a"
+        }
+      },
+      "metadata": {
+        "seed": 2180238965,
+        "source_geometry": {
+          "source_crop_xyxy": [
+            377,
+            649,
+            500,
+            674
+          ],
+          "inpaint_estimate_not_clean_GT": true
+        },
+        "target_geometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ],
+          "foreground_fraction": 0.06690216064453125,
+          "input_border_Lab_threshold": 13.364401817321777,
+          "mask_source": "input_colour_only_not_defect_annotation",
+          "mask_quality_verified": false
+        },
+        "target_rect_xywh": [
+          182,
+          252,
+          8,
+          38
+        ],
+        "source_shape_extent": 38,
+        "angle_degrees": 90,
+        "amplitude": 24.145154306348577,
+        "polarity": 1.0,
+        "placement_attempts": 42,
+        "input_foreground_overlap": 1.0,
+        "input_foreground_is_ground_truth": false,
+        "actual_operation_mask_pixels": 75,
+        "mean_absolute_changed_intensity": 14.213333333333333,
+        "mask_label_scope": "known procedural RGB modification support, not natural industrial defect annotation",
+        "new_real_industrial_faults_collected": 0,
+        "human_verified_natural_fault": false
+      },
+      "phase": "FIT_preview_only",
+      "synthetic_not_natural_ground_truth": true
+    },
+    {
+      "id": "007",
+      "category": "mpdd_tubes",
+      "normal_FIT_id": "mpdd/tubes/train/good/022.png",
+      "source_real_shape_FIT_id": "kolektor_sdd1/kos01/Part5.jpg",
+      "paths": {
+        "normal": {
+          "path": "data/industrial-target-synthetic-v19/007-normal.png",
+          "sha256": "ea1d48ed81c4d5a6e5ac17960b5544f06f894c7b71a5694d31ad4c967bdac621"
+        },
+        "synthetic": {
+          "path": "data/industrial-target-synthetic-v19/007-synthetic.png",
+          "sha256": "9e57b087ae9ed161f6867595373997a123ab73ca9602c0113314c2c82c2453fd"
+        },
+        "procedural_mask": {
+          "path": "data/industrial-target-synthetic-v19/007-procedural_mask.png",
+          "sha256": "0fb4bc1e3f04e1477a009bdbae75d8ba776e78da62a330447bb23bfb3b86ae91"
+        }
+      },
+      "metadata": {
+        "seed": 3132805609,
+        "source_geometry": {
+          "source_crop_xyxy": [
+            222,
+            567,
+            472,
+            617
+          ],
+          "inpaint_estimate_not_clean_GT": true
+        },
+        "target_geometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ],
+          "foreground_fraction": 0.06969833374023438,
+          "input_border_Lab_threshold": 12.0,
+          "mask_source": "input_colour_only_not_defect_annotation",
+          "mask_quality_verified": false
+        },
+        "target_rect_xywh": [
+          147,
+          174,
+          41,
+          8
+        ],
+        "source_shape_extent": 41,
+        "angle_degrees": 0,
+        "amplitude": 47.64158083135668,
+        "polarity": 1.0,
+        "placement_attempts": 5,
+        "input_foreground_overlap": 1.0,
+        "input_foreground_is_ground_truth": false,
+        "actual_operation_mask_pixels": 36,
+        "mean_absolute_changed_intensity": 15.805555555555555,
+        "mask_label_scope": "known procedural RGB modification support, not natural industrial defect annotation",
+        "new_real_industrial_faults_collected": 0,
+        "human_verified_natural_fault": false
+      },
+      "phase": "FIT_preview_only",
+      "synthetic_not_natural_ground_truth": true
+    },
+    {
+      "id": "008",
+      "category": "mpdd_tubes",
+      "normal_FIT_id": "mpdd/tubes/train/good/022.png",
+      "source_real_shape_FIT_id": "kolektor_sdd1/kos03/Part2.jpg",
+      "paths": {
+        "normal": {
+          "path": "data/industrial-target-synthetic-v19/008-normal.png",
+          "sha256": "ea1d48ed81c4d5a6e5ac17960b5544f06f894c7b71a5694d31ad4c967bdac621"
+        },
+        "synthetic": {
+          "path": "data/industrial-target-synthetic-v19/008-synthetic.png",
+          "sha256": "b2a6327e664bfeed33f5bec10ecbda1c2f21f930e56b5119f30714355f642245"
+        },
+        "procedural_mask": {
+          "path": "data/industrial-target-synthetic-v19/008-procedural_mask.png",
+          "sha256": "74b8cf97e39150d83a563039faf6124ea727949487925820a4723297a306433c"
+        }
+      },
+      "metadata": {
+        "seed": 1916771834,
+        "source_geometry": {
+          "source_crop_xyxy": [
+            325,
+            411,
+            500,
+            437
+          ],
+          "inpaint_estimate_not_clean_GT": true
+        },
+        "target_geometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ],
+          "foreground_fraction": 0.06969833374023438,
+          "input_border_Lab_threshold": 12.0,
+          "mask_source": "input_colour_only_not_defect_annotation",
+          "mask_quality_verified": false
+        },
+        "target_rect_xywh": [
+          146,
+          176,
+          51,
+          8
+        ],
+        "source_shape_extent": 51,
+        "angle_degrees": 0,
+        "amplitude": 28.47051329305184,
+        "polarity": 1.0,
+        "placement_attempts": 116,
+        "input_foreground_overlap": 0.9882352941176471,
+        "input_foreground_is_ground_truth": false,
+        "actual_operation_mask_pixels": 84,
+        "mean_absolute_changed_intensity": 14.134920634920634,
+        "mask_label_scope": "known procedural RGB modification support, not natural industrial defect annotation",
+        "new_real_industrial_faults_collected": 0,
+        "human_verified_natural_fault": false
+      },
+      "phase": "FIT_preview_only",
+      "synthetic_not_natural_ground_truth": true
+    },
+    {
+      "id": "009",
+      "category": "mpdd_tubes",
+      "normal_FIT_id": "mpdd/tubes/train/good/022.png",
+      "source_real_shape_FIT_id": "kolektor_sdd1/kos04/Part3.jpg",
+      "paths": {
+        "normal": {
+          "path": "data/industrial-target-synthetic-v19/009-normal.png",
+          "sha256": "ea1d48ed81c4d5a6e5ac17960b5544f06f894c7b71a5694d31ad4c967bdac621"
+        },
+        "synthetic": {
+          "path": "data/industrial-target-synthetic-v19/009-synthetic.png",
+          "sha256": "5ccf536dc96fe3b8f13856af9a99eeccd8d59ed5b45cd87bd9be41dbab8b2053"
+        },
+        "procedural_mask": {
+          "path": "data/industrial-target-synthetic-v19/009-procedural_mask.png",
+          "sha256": "e2b25929688f655fa96f12fe99ea715e0057207db4c197199ec9375a8da71de7"
+        }
+      },
+      "metadata": {
+        "seed": 3062902795,
+        "source_geometry": {
+          "source_crop_xyxy": [
+            377,
+            649,
+            500,
+            674
+          ],
+          "inpaint_estimate_not_clean_GT": true
+        },
+        "target_geometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ],
+          "foreground_fraction": 0.06969833374023438,
+          "input_border_Lab_threshold": 12.0,
+          "mask_source": "input_colour_only_not_defect_annotation",
+          "mask_quality_verified": false
+        },
+        "target_rect_xywh": [
+          271,
+          161,
+          50,
+          50
+        ],
+        "source_shape_extent": 58,
+        "angle_degrees": 135,
+        "amplitude": 18.132142496241126,
+        "polarity": 1.0,
+        "placement_attempts": 35,
+        "input_foreground_overlap": 1.0,
+        "input_foreground_is_ground_truth": false,
+        "actual_operation_mask_pixels": 189,
+        "mean_absolute_changed_intensity": 10.523809523809524,
+        "mask_label_scope": "known procedural RGB modification support, not natural industrial defect annotation",
+        "new_real_industrial_faults_collected": 0,
+        "human_verified_natural_fault": false
+      },
+      "phase": "FIT_preview_only",
+      "synthetic_not_natural_ground_truth": true
+    }
+  ],
+  "contacts": [
+    "data/industrial-target-synthetic-v19/mpdd_bracket_black-FIT-preview.png",
+    "data/industrial-target-synthetic-v19/mpdd_tubes-FIT-preview.png"
+  ],
+  "only_target_and_shape_FIT_RGB_read": true,
+  "VAL_CAL_TEST_photos_or_masks_used": false,
+  "new_encoder_features_or_model_scores": 0,
+  "actual_optimizer_updates": 0,
+  "new_natural_defect_labels": 0,
+  "source_shapes_used": 3,
+  "synthetic_support_is_not_natural_defect_GT": true,
+  "input_foreground_is_not_defect_or_part_GT": true,
+  "clinical_or_mechanical_realism_validated": false,
+  "not_the_DRAEM_architecture_or_paper_reproduction": true,
+  "not_a_full_training_protocol": true,
+  "agent_visual_review_pending": true
+}
