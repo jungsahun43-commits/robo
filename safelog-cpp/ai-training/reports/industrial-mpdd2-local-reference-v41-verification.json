@@ -1,0 +1,13 @@
+{
+  "UTC": "2026-10-15T12:01:48.190172+00:00",
+  "parent_all_tensors_buffers_metadata_exact": true,
+  "serialized_delta_restore_exact": true,
+  "checkpoint_SHA256": "4c8e01b05463173530f3daf537931f012a8bd9a1a8fba1fd804ad700e0e168d0",
+  "checkpoint_bytes": 3763049,
+  "parent_SHA256_unchanged": true,
+  "legacy_Python_SHA256_checked": 704,
+  "protected_files_stat_checked": 315334,
+  "full_protected_SHA_recalculated": false,
+  "fresh_encoder_RGB_inputs": 304,
+  "actual_optimizer": 0
+}

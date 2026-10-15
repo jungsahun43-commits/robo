@@ -1,0 +1,866 @@
+{
+  "UTC": "2026-10-15T12:01:36.253108+00:00",
+  "tp": 22,
+  "fn": 69,
+  "fp": 6,
+  "tn": 43,
+  "positive_photos": 91,
+  "negative_photos": 49,
+  "fnr": 0.7582417582417582,
+  "fpr": 0.12244897959183673,
+  "AUROC": 0.5999102937878448,
+  "threshold": 0.15377962589263916,
+  "eligible_research_candidate": false,
+  "rows": [
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/000.png",
+      "group_id": "0",
+      "label": 1,
+      "score": 0.1411270648241043
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/001.png",
+      "group_id": "1",
+      "label": 1,
+      "score": 0.13858471810817719
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/002.png",
+      "group_id": "2",
+      "label": 1,
+      "score": 0.14537610113620758
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/003.png",
+      "group_id": "3",
+      "label": 1,
+      "score": 0.14439566433429718
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/004.png",
+      "group_id": "4",
+      "label": 1,
+      "score": 0.1508261263370514
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/005.png",
+      "group_id": "5",
+      "label": 1,
+      "score": 0.15128715336322784
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/006.png",
+      "group_id": "5",
+      "label": 1,
+      "score": 0.1412326693534851
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/007.png",
+      "group_id": "7",
+      "label": 1,
+      "score": 0.17253217101097107
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/008.png",
+      "group_id": "8",
+      "label": 1,
+      "score": 0.1429673135280609
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/009.png",
+      "group_id": "9",
+      "label": 1,
+      "score": 0.1422908753156662
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/010.png",
+      "group_id": "10",
+      "label": 1,
+      "score": 0.14835511147975922
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/011.png",
+      "group_id": "11",
+      "label": 1,
+      "score": 0.1433880478143692
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/012.png",
+      "group_id": "12",
+      "label": 1,
+      "score": 0.14624451100826263
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/013.png",
+      "group_id": "13",
+      "label": 1,
+      "score": 0.13531434535980225
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/014.png",
+      "group_id": "14",
+      "label": 1,
+      "score": 0.14325425028800964
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/015.png",
+      "group_id": "15",
+      "label": 1,
+      "score": 0.1612037718296051
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/016.png",
+      "group_id": "16",
+      "label": 1,
+      "score": 0.17534689605236053
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/017.png",
+      "group_id": "17",
+      "label": 1,
+      "score": 0.1503257006406784
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/018.png",
+      "group_id": "18",
+      "label": 1,
+      "score": 0.14339865744113922
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/019.png",
+      "group_id": "19",
+      "label": 1,
+      "score": 0.1518356204032898
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/020.png",
+      "group_id": "20",
+      "label": 1,
+      "score": 0.1570132076740265
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/021.png",
+      "group_id": "20",
+      "label": 1,
+      "score": 0.16126133501529694
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/022.png",
+      "group_id": "22",
+      "label": 1,
+      "score": 0.1419305056333542
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/023.png",
+      "group_id": "23",
+      "label": 1,
+      "score": 0.14732347428798676
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/024.png",
+      "group_id": "24",
+      "label": 1,
+      "score": 0.13764183223247528
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/025.png",
+      "group_id": "25",
+      "label": 1,
+      "score": 0.12806732952594757
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/026.png",
+      "group_id": "26",
+      "label": 1,
+      "score": 0.1603224277496338
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/027.png",
+      "group_id": "27",
+      "label": 1,
+      "score": 0.12446565926074982
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/028.png",
+      "group_id": "27",
+      "label": 1,
+      "score": 0.12573200464248657
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/029.png",
+      "group_id": "29",
+      "label": 1,
+      "score": 0.12644821405410767
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/030.png",
+      "group_id": "30",
+      "label": 1,
+      "score": 0.1273822784423828
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/031.png",
+      "group_id": "31",
+      "label": 1,
+      "score": 0.12856322526931763
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/032.png",
+      "group_id": "32",
+      "label": 1,
+      "score": 0.12470841407775879
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/033.png",
+      "group_id": "33",
+      "label": 1,
+      "score": 0.12438806146383286
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/034.png",
+      "group_id": "34",
+      "label": 1,
+      "score": 0.1274189054965973
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/035.png",
+      "group_id": "35",
+      "label": 1,
+      "score": 0.15466845035552979
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/036.png",
+      "group_id": "36",
+      "label": 1,
+      "score": 0.12701669335365295
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/037.png",
+      "group_id": "36",
+      "label": 1,
+      "score": 0.12833727896213531
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/038.png",
+      "group_id": "38",
+      "label": 1,
+      "score": 0.12973205745220184
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/039.png",
+      "group_id": "39",
+      "label": 1,
+      "score": 0.1262083500623703
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/040.png",
+      "group_id": "40",
+      "label": 1,
+      "score": 0.12388692051172256
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/041.png",
+      "group_id": "41",
+      "label": 1,
+      "score": 0.1324666440486908
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/042.png",
+      "group_id": "42",
+      "label": 1,
+      "score": 0.12663502991199493
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/043.png",
+      "group_id": "43",
+      "label": 1,
+      "score": 0.13124094903469086
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/044.png",
+      "group_id": "44",
+      "label": 1,
+      "score": 0.1283569037914276
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/045.png",
+      "group_id": "45",
+      "label": 1,
+      "score": 0.12538115680217743
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/046.png",
+      "group_id": "46",
+      "label": 1,
+      "score": 0.12841282784938812
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/047.png",
+      "group_id": "47",
+      "label": 1,
+      "score": 0.15346087515354156
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/048.png",
+      "group_id": "48",
+      "label": 1,
+      "score": 0.13103759288787842
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/049.png",
+      "group_id": "49",
+      "label": 1,
+      "score": 0.13164816796779633
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/050.png",
+      "group_id": "50",
+      "label": 1,
+      "score": 0.128192737698555
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/051.png",
+      "group_id": "51",
+      "label": 1,
+      "score": 0.1318311244249344
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/052.png",
+      "group_id": "52",
+      "label": 1,
+      "score": 0.13918542861938477
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/053.png",
+      "group_id": "53",
+      "label": 1,
+      "score": 0.12942877411842346
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/054.png",
+      "group_id": "54",
+      "label": 1,
+      "score": 0.1268601268529892
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/055.png",
+      "group_id": "55",
+      "label": 1,
+      "score": 0.12629471719264984
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/056.png",
+      "group_id": "55",
+      "label": 1,
+      "score": 0.12793563306331635
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/057.png",
+      "group_id": "55",
+      "label": 1,
+      "score": 0.12868985533714294
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/058.png",
+      "group_id": "58",
+      "label": 1,
+      "score": 0.12929663062095642
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/059.png",
+      "group_id": "59",
+      "label": 1,
+      "score": 0.13016225397586823
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/060.png",
+      "group_id": "60",
+      "label": 1,
+      "score": 0.12463299185037613
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/061.png",
+      "group_id": "61",
+      "label": 1,
+      "score": 0.1268359273672104
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/062.png",
+      "group_id": "62",
+      "label": 1,
+      "score": 0.12465819716453552
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/063.png",
+      "group_id": "63",
+      "label": 1,
+      "score": 0.1306227594614029
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/064.png",
+      "group_id": "64",
+      "label": 1,
+      "score": 0.13524924218654633
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/065.png",
+      "group_id": "65",
+      "label": 1,
+      "score": 0.14117610454559326
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/066.png",
+      "group_id": "66",
+      "label": 1,
+      "score": 0.13615161180496216
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/067.png",
+      "group_id": "67",
+      "label": 1,
+      "score": 0.14459869265556335
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/068.png",
+      "group_id": "68",
+      "label": 1,
+      "score": 0.13605651259422302
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/069.png",
+      "group_id": "69",
+      "label": 1,
+      "score": 0.13702243566513062
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/070.png",
+      "group_id": "70",
+      "label": 1,
+      "score": 0.1456926316022873
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/071.png",
+      "group_id": "71",
+      "label": 1,
+      "score": 0.13262438774108887
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/072.png",
+      "group_id": "72",
+      "label": 1,
+      "score": 0.1375093013048172
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/073.png",
+      "group_id": "73",
+      "label": 1,
+      "score": 0.13068503141403198
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/074.png",
+      "group_id": "20",
+      "label": 1,
+      "score": 0.16703438758850098
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/075.png",
+      "group_id": "75",
+      "label": 1,
+      "score": 0.1571786105632782
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/076.png",
+      "group_id": "24",
+      "label": 1,
+      "score": 0.16880185902118683
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/077.png",
+      "group_id": "77",
+      "label": 1,
+      "score": 0.15696467459201813
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/078.png",
+      "group_id": "78",
+      "label": 1,
+      "score": 0.22987300157546997
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/079.png",
+      "group_id": "79",
+      "label": 1,
+      "score": 0.23471762239933014
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/080.png",
+      "group_id": "80",
+      "label": 1,
+      "score": 0.2239299714565277
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/081.png",
+      "group_id": "81",
+      "label": 1,
+      "score": 0.22940343618392944
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/082.png",
+      "group_id": "82",
+      "label": 1,
+      "score": 0.2094474881887436
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/083.png",
+      "group_id": "20",
+      "label": 1,
+      "score": 0.22362710535526276
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/084.png",
+      "group_id": "20",
+      "label": 1,
+      "score": 0.2331485003232956
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/085.png",
+      "group_id": "20",
+      "label": 1,
+      "score": 0.22283658385276794
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/086.png",
+      "group_id": "86",
+      "label": 1,
+      "score": 0.14217866957187653
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/087.png",
+      "group_id": "87",
+      "label": 1,
+      "score": 0.15131118893623352
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/088.png",
+      "group_id": "88",
+      "label": 1,
+      "score": 0.16442909836769104
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/089.png",
+      "group_id": "89",
+      "label": 1,
+      "score": 0.1867298036813736
+    },
+    {
+      "id": "mpdd2/bracket_white/test/anomalous/090.png",
+      "group_id": "90",
+      "label": 1,
+      "score": 0.17614614963531494
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/000.png",
+      "group_id": "91",
+      "label": 0,
+      "score": 0.13090960681438446
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/001.png",
+      "group_id": "92",
+      "label": 0,
+      "score": 0.1403455287218094
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/002.png",
+      "group_id": "93",
+      "label": 0,
+      "score": 0.1415373533964157
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/003.png",
+      "group_id": "94",
+      "label": 0,
+      "score": 0.12451748549938202
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/004.png",
+      "group_id": "95",
+      "label": 0,
+      "score": 0.1236201599240303
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/005.png",
+      "group_id": "96",
+      "label": 0,
+      "score": 0.12409260869026184
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/006.png",
+      "group_id": "97",
+      "label": 0,
+      "score": 0.12909993529319763
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/007.png",
+      "group_id": "98",
+      "label": 0,
+      "score": 0.1468977928161621
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/008.png",
+      "group_id": "7",
+      "label": 0,
+      "score": 0.15598440170288086
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/009.png",
+      "group_id": "7",
+      "label": 0,
+      "score": 0.12805019319057465
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/010.png",
+      "group_id": "101",
+      "label": 0,
+      "score": 0.12784406542778015
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/011.png",
+      "group_id": "102",
+      "label": 0,
+      "score": 0.12493830919265747
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/012.png",
+      "group_id": "103",
+      "label": 0,
+      "score": 0.12585386633872986
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/013.png",
+      "group_id": "104",
+      "label": 0,
+      "score": 0.12740659713745117
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/014.png",
+      "group_id": "104",
+      "label": 0,
+      "score": 0.12619096040725708
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/015.png",
+      "group_id": "106",
+      "label": 0,
+      "score": 0.14208491146564484
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/016.png",
+      "group_id": "107",
+      "label": 0,
+      "score": 0.13532590866088867
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/017.png",
+      "group_id": "108",
+      "label": 0,
+      "score": 0.1494416445493698
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/018.png",
+      "group_id": "109",
+      "label": 0,
+      "score": 0.2038293182849884
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/019.png",
+      "group_id": "110",
+      "label": 0,
+      "score": 0.13001585006713867
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/020.png",
+      "group_id": "111",
+      "label": 0,
+      "score": 0.1373278647661209
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/021.png",
+      "group_id": "112",
+      "label": 0,
+      "score": 0.1372908055782318
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/022.png",
+      "group_id": "113",
+      "label": 0,
+      "score": 0.1370893120765686
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/023.png",
+      "group_id": "114",
+      "label": 0,
+      "score": 0.13491874933242798
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/024.png",
+      "group_id": "115",
+      "label": 0,
+      "score": 0.16463039815425873
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/025.png",
+      "group_id": "116",
+      "label": 0,
+      "score": 0.17360830307006836
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/026.png",
+      "group_id": "116",
+      "label": 0,
+      "score": 0.16244208812713623
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/027.png",
+      "group_id": "118",
+      "label": 0,
+      "score": 0.1567685902118683
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/028.png",
+      "group_id": "119",
+      "label": 0,
+      "score": 0.1520310342311859
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/029.png",
+      "group_id": "120",
+      "label": 0,
+      "score": 0.1481393724679947
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/030.png",
+      "group_id": "121",
+      "label": 0,
+      "score": 0.14363853633403778
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/031.png",
+      "group_id": "122",
+      "label": 0,
+      "score": 0.15104226768016815
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/032.png",
+      "group_id": "123",
+      "label": 0,
+      "score": 0.12608502805233002
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/033.png",
+      "group_id": "124",
+      "label": 0,
+      "score": 0.130417138338089
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/034.png",
+      "group_id": "125",
+      "label": 0,
+      "score": 0.12783093750476837
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/035.png",
+      "group_id": "125",
+      "label": 0,
+      "score": 0.12395987659692764
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/036.png",
+      "group_id": "127",
+      "label": 0,
+      "score": 0.12611638009548187
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/037.png",
+      "group_id": "128",
+      "label": 0,
+      "score": 0.14524614810943604
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/038.png",
+      "group_id": "128",
+      "label": 0,
+      "score": 0.14307156205177307
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/039.png",
+      "group_id": "128",
+      "label": 0,
+      "score": 0.13623754680156708
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/040.png",
+      "group_id": "131",
+      "label": 0,
+      "score": 0.1361657977104187
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/041.png",
+      "group_id": "132",
+      "label": 0,
+      "score": 0.12401673197746277
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/042.png",
+      "group_id": "133",
+      "label": 0,
+      "score": 0.12647958099842072
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/043.png",
+      "group_id": "134",
+      "label": 0,
+      "score": 0.1251736283302307
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/044.png",
+      "group_id": "135",
+      "label": 0,
+      "score": 0.12734392285346985
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/045.png",
+      "group_id": "136",
+      "label": 0,
+      "score": 0.12575273215770721
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/046.png",
+      "group_id": "137",
+      "label": 0,
+      "score": 0.15088143944740295
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/047.png",
+      "group_id": "138",
+      "label": 0,
+      "score": 0.1344868689775467
+    },
+    {
+      "id": "mpdd2/bracket_white/test/normal/048.png",
+      "group_id": "139",
+      "label": 0,
+      "score": 0.14105668663978577
+    }
+  ],
+  "normal_FIT_registration_photos": 113,
+  "reference_vectors": 28928,
+  "actual_optimizer": 0,
+  "source_domain_only": true,
+  "no_pixel_GT": true,
+  "v40_public_TEST_already_seen": true,
+  "independent_field_validation": false,
+  "app_adopted": false,
+  "new_API_CPP_ZIP_checks": 0,
+  "new_ZIPs": 0
+}
