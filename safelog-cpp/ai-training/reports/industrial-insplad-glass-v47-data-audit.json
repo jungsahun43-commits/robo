@@ -1,0 +1,52 @@
+{
+  "UTC": "2026-10-15T13:31:57.503848+00:00",
+  "ready": true,
+  "counts": {
+    "fit": {
+      "0": 380,
+      "1": 37
+    },
+    "validation": {
+      "0": 82,
+      "1": 9
+    },
+    "cal": {
+      "0": 85,
+      "1": 10
+    },
+    "test": {
+      "0": 29,
+      "1": 30
+    }
+  },
+  "groups_each_label": {
+    "fit": {
+      "0": 373,
+      "1": 33
+    },
+    "validation": {
+      "0": 81,
+      "1": 8
+    },
+    "cal": {
+      "0": 81,
+      "1": 8
+    },
+    "test": {
+      "0": 29,
+      "1": 30
+    }
+  },
+  "gate_failures": [],
+  "original_evaluation59_preserved": true,
+  "exported_original_bytes": 73236769,
+  "policy_sha256": "930ba6498711f371d5b8d471ccf5f177b4d4ecc63ebcd0c193487d760f2f7e1c",
+  "reused_global_audit_sha256": "0371dc6a1b4b04195d951ece90a6152f09e4a89d2625d17b125fcd4890402119",
+  "new_pixel_decodes_or_fingerprints": 0,
+  "new_neural_features_scores_gradient_optimizer": 0,
+  "new_visual_review_performed": false,
+  "training_protocol_fixed": false,
+  "physical_part_acquisition_independence_unverified": true,
+  "independent_field_validation": false,
+  "manifest_sha256": "bf2a4f0b8fce37079a96c1dba78a4cc0b61734ec5cc3137876bf9d6abf2adab1"
+}
