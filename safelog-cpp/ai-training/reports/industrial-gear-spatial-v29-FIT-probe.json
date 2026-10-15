@@ -1,0 +1,26 @@
+{
+  "UTC": "2026-10-15T08:32:34.893233+00:00",
+  "source_policy_sha256": "252458efc678158d9d70fc4f3a37d303e96a81b1c526dd428c1473341feadc5a",
+  "actual_encoder_inputs": 32,
+  "FIT_only": true,
+  "fine_shape": [
+    32,
+    24,
+    64,
+    64
+  ],
+  "fine_dtype": "torch.float16",
+  "fine_cache_sha256": "018327d783e4000833072d37c9457edcecbd160c3d137031e84aba496c65bbb6",
+  "fresh_low_high_bitwiseexact": true,
+  "all_parent_tensor_buffer_before_after_exact": true,
+  "canonical_pooledfine_atol2e3_rtol2e3_passed": true,
+  "maximum_fine_descriptor_abs_delta": 0.0,
+  "fine_spatial_std_mean": 1.132644772529602,
+  "new_VAL_CAL_TEST_model_scores": 0,
+  "actual_new_optimizer_updates": 0,
+  "full_training_protocol_fixed": false,
+  "spatial_variance_is_not_accuracy_or_localization_truth": true,
+  "weak_patch_label_is_not_pixel_mask": true,
+  "previous_v28_kept": true,
+  "independent_field_validation": false
+}

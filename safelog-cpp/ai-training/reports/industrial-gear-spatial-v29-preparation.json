@@ -1,0 +1,154 @@
+{
+  "UTC": "2026-10-15T08:33:52.403951+00:00",
+  "status": "v26_v27_v28_completed_rejected_v29_FIT_probe_only_prepared",
+  "active_model": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_model_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "active_role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "active_role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "v25_data_gate_stopped_optimizer0": true,
+  "v25_CAL_normal10_below_fixed20": true,
+  "v26_actual_optimizer": 1920,
+  "v26_selected_epoch": 0,
+  "v26_selected_initial_head_not_learned": true,
+  "v27_actual_optimizer": 1920,
+  "v27_selected_epoch": 0,
+  "v27_selected_initial_zero_head_not_learned": true,
+  "v28_actual_optimizer": 1920,
+  "v28_selected_epoch": 1,
+  "v28_selected_actual_updates": 64,
+  "v28_checkpoint_sha256": "0669d9b988aa5ab3e4bfe414a078e140f61757d9bf06828dc56538cf474bf96f",
+  "v28_VAL_initial": 0.6931471824645996,
+  "v28_VAL_selected": 0.587897002696991,
+  "v28_gear_TEST_rates": {
+    "tp": 772,
+    "fn": 470,
+    "fp": 168,
+    "tn": 769,
+    "positive_photos": 1242,
+    "negative_photos": 937,
+    "fnr": 0.3784219001610306,
+    "fpr": 0.17929562433297758
+  },
+  "v28_gear_TEST_AUROC": 0.812319442081402,
+  "v28_not_overall_gearbox_or_oldtarget_improvement": true,
+  "this_turn_actual_optimizer_v26_v27_v28": 5760,
+  "tracked_partial_research_optimizer_including_failed": 32080,
+  "tracked_partial_sum_not_entire_history": true,
+  "new_API_CPP_ZIP_checks": 0,
+  "new_ZIPs": 0,
+  "source_manifest_v26_SHA256": "ae16b4223e9d8f5101537d03db97cfc85593e3f3a26fe0d03ab3fb6b61a84396",
+  "gear_only_manifest_v28_SHA256": "fe7fce446e34002d47a24c0ad6b106468e8c128209739164d2e511705ae8779d",
+  "v28_data_audit": {
+    "UTC": "2026-10-15T08:23:23.212836+00:00",
+    "ready": true,
+    "policy_sha256": "c3ec4c570d906ac9b24e603855bd3743f3ac9183817c77963d2f0a106092d4a7",
+    "source_manifest_sha256": "ae16b4223e9d8f5101537d03db97cfc85593e3f3a26fe0d03ab3fb6b61a84396",
+    "counts": {
+      "fit": {
+        "0": 3146,
+        "1": 2320
+      },
+      "validation": {
+        "1": 751,
+        "0": 689
+      },
+      "cal": {
+        "1": 282,
+        "0": 834
+      },
+      "test": {
+        "0": 937,
+        "1": 1242
+      }
+    },
+    "groups_by_phase": {
+      "fit": [
+        "1",
+        "13",
+        "145",
+        "19",
+        "25",
+        "3",
+        "30",
+        "8"
+      ],
+      "validation": [
+        "35",
+        "54",
+        "72"
+      ],
+      "cal": [
+        "21",
+        "49",
+        "53"
+      ],
+      "test": [
+        "2",
+        "4",
+        "48",
+        "5"
+      ]
+    },
+    "previously_viewed_groups_preserved_FIT": [
+      "1",
+      "19"
+    ],
+    "original_full_source_TEST_preserved_elsewhere": 3109,
+    "new_task_TEST_gear_subset": 2179,
+    "task_subset_predeclared_not_full_source_improvement": true,
+    "new_RGB_features_model_scores_optimizer_updates": 0,
+    "same_publisher_TRAIN_development_repartitioned": true,
+    "new_training_protocol_fixed": false,
+    "new_unit_tests_passed": 2,
+    "independent_field_validation": false,
+    "source_patch_label_not_whole_gearbox_health_or_verified_localization": true
+  },
+  "v29_probe_policy_sha256": "252458efc678158d9d70fc4f3a37d303e96a81b1c526dd428c1473341feadc5a",
+  "v29_probe": {
+    "UTC": "2026-10-15T08:32:34.893233+00:00",
+    "source_policy_sha256": "252458efc678158d9d70fc4f3a37d303e96a81b1c526dd428c1473341feadc5a",
+    "actual_encoder_inputs": 32,
+    "FIT_only": true,
+    "fine_shape": [
+      32,
+      24,
+      64,
+      64
+    ],
+    "fine_dtype": "torch.float16",
+    "fine_cache_sha256": "018327d783e4000833072d37c9457edcecbd160c3d137031e84aba496c65bbb6",
+    "fresh_low_high_bitwiseexact": true,
+    "all_parent_tensor_buffer_before_after_exact": true,
+    "canonical_pooledfine_atol2e3_rtol2e3_passed": true,
+    "maximum_fine_descriptor_abs_delta": 0.0,
+    "fine_spatial_std_mean": 1.132644772529602,
+    "new_VAL_CAL_TEST_model_scores": 0,
+    "actual_new_optimizer_updates": 0,
+    "full_training_protocol_fixed": false,
+    "spatial_variance_is_not_accuracy_or_localization_truth": true,
+    "weak_patch_label_is_not_pixel_mask": true,
+    "previous_v28_kept": true,
+    "independent_field_validation": false
+  },
+  "v29_probe_declared_atol": 0.002,
+  "v29_probe_declared_rtol": 0.002,
+  "v29_training_protocol_fixed": false,
+  "v29_new_optimizer": 0,
+  "v29_new_head_or_VAL_CAL_TEST_scores": 0,
+  "next_plan": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\reports\\GEAR_SPATIAL_NEXT_KO.md",
+  "next": "Fix exactly one spatial fine24 MIL-classifier protocol/code with unchanged v28 split, actual patch class labels only. Freeze initial state/trainables/cache geometry/loss/sampling/epochs/VAL/CAL/guards and commit before full caches/gradients. Preserve current default positions and all old tasks. No threshold or split sweep.",
+  "source_category_coverage_limits": "spline OK3 across retained nonTEST; collar absent in v26/v27FIT; ring/shaft no reservedTEST. v28 is separately declared gear-only task, not fullsource pass.",
+  "original_fullTEST3109_gear_subset2179_originals_excludedTRAIN1317_unannotated103_preserved": true,
+  "new_independent_field_validation": false,
+  "same_public_TEST_previously_used_for_development": true,
+  "original_location_thresholds_and_old_KS_BS_LOCO_unchanged": true,
+  "additional12_types_pass20_percent": 8,
+  "operation_locks": {
+    "industrial-gearbox-v25": false,
+    "industrial-gearbox-v26": false,
+    "industrial-gearbox-linear-v27": false,
+    "industrial-gear-only-v28": false
+  },
+  "free_disk_bytes": 9442451456,
+  "awake_helper_restarted": false
+}
