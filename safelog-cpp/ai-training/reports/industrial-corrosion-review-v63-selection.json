@@ -1,0 +1,45 @@
+{
+  "UTC": "2026-10-15T19:24:21.529701+00:00",
+  "source_delta_sha256": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b",
+  "model_state_before_after_exact": true,
+  "combined_state_sha256": "61677d5f1d038006cbcfc83894af03a90b3105055ca94d5eef3c40567dc7332f",
+  "baseline_photo_rates": {
+    "tp": 33,
+    "fn": 0,
+    "fp": 6,
+    "tn": 25,
+    "positive_photos": 33,
+    "negative_photos": 31,
+    "fnr": 0.0,
+    "fpr": 0.1935483870967742
+  },
+  "candidate_photo_rates": {
+    "tp": 26,
+    "fn": 7,
+    "fp": 0,
+    "tn": 31,
+    "positive_photos": 33,
+    "negative_photos": 31,
+    "fnr": 0.21212121212121213,
+    "fpr": 0.0
+  },
+  "groups_each_label": {
+    "0": 31,
+    "1": 33
+  },
+  "parent_stored_fresh_decisions_exact": true,
+  "parent_maximum_score_difference": 5.960464477539063e-08,
+  "new_CAL_cut": 0.13664615154266357,
+  "one_AND_candidate_point_guard_passed": false,
+  "FPR_reduction_percentagepoints": 19.35483870967742,
+  "FNR_increase_percentagepoints": 21.21212121212121,
+  "new_optimizer_updates": 0,
+  "fresh_target_mask_encoder_inputs": 139,
+  "fresh_parent_encoder_inputs": 64,
+  "encoder_instances": 1,
+  "new_API_CPP_ZIP_checks": 0,
+  "new_CPU_GPU_package_checks": 0,
+  "automatic_old_alias_replacement": false,
+  "target_pixel_localization_verified": false,
+  "independent_field_validation": false
+}

@@ -1,0 +1,46 @@
+{
+  "UTC": "2026-10-15T19:29:18.935349+00:00",
+  "fixed_before_sourcefile_download_or_memberread": true,
+  "script_sha256": "0708f841c688cac99fb41dbe3365edcc1e4f7a7f78c3df43ffc827c935ad004d",
+  "metadata_sha256": "d5550416bc7dc9d413cc0d5c333dd8e4ddf5f4ad9320ff1d2f64075b12a50f2e",
+  "files": [
+    {
+      "id": 30914467,
+      "publisher_name": "Corrosion Annotation Guidelines.pdf",
+      "local_name": "publisher-annotation-guidelines.pdf",
+      "url": "https://ndownloader.figshare.com/files/30914467",
+      "bytes": 1280192,
+      "publisher_MD5": "b39d82a30e3c5d6b8303a70543ef4288"
+    },
+    {
+      "id": 30930610,
+      "publisher_name": "README_corrosion_dataset.rtf",
+      "local_name": "publisher-README.rtf",
+      "url": "https://ndownloader.figshare.com/files/30930610",
+      "bytes": 3904,
+      "publisher_MD5": "48bcf95bde8e985f722ad13b223f5ca7"
+    },
+    {
+      "id": 31729733,
+      "publisher_name": "Corrosion Condition State Classification.zip",
+      "local_name": "publisher-ccs-v2.zip",
+      "url": "https://ndownloader.figshare.com/files/31729733",
+      "bytes": 333388620,
+      "publisher_MD5": "bbc9b8b8a5bb065e9ace028893dfd983"
+    }
+  ],
+  "author_revision_sha256": "89c5f0d71fa67e811fbc2134891194b3b8fe53661842294d1e2444624b894a08",
+  "author_README_sha256": "3b2b7ad46d9899c1ba5f00a4376cf66054638a6774f436ba87ac742a5a20e19a",
+  "source": "EricBianchi,MatthewHebdon CorrosionConditionStateSemanticSegmentationDataset VirginiaTech V2 DOI10.7294/16624663.v2; paper10.1061/(ASCE)CP.1943-5487.0001045; authorberic7/corrosion_cs_classification links same DOI",
+  "license": "University Figshare official data metadata CC0; source/authors/version/changes and requested dataset+paper citations preserved. Repository MIT applies code separately, olddatasets retain ownconditions.",
+  "scope": "bridgeinspection metal surface good/fair/poor/severe annotation examples; investigate visual corrosion variation only, not bridge/dam health or generalfactoryseveritytruth. Do not indiscriminately merge classes before original annotationguidelines.",
+  "publisher_description_not_file_verified": "440finelyannotated originals with396TRAIN/44TEST and512resized copies, actualfiles/roles/pairing/duplicates/physicalgroups not yet checked",
+  "download": "threepublicversionedfilesonly334672716bytes, streaming partialpreserved, resumeonlymatching206ContentRange, publisherMD5andlocalSHA256. No login/PII/terms submission or pretrainedmodel download.",
+  "archive": "relativepaths/no traversal/drive/colon/backslash/symlink/encryption, max4GiB declaredexpanded withbounded1MiBstreamreads, allmembersEOF CRC+encodedSHA, preserve original+resized duplication; no code execution or full expansion/pixels",
+  "reservation": "afterlisting reserveauthorTEST beforeimagesdecoded/viewed, connect original/resized/derivedsamephoto acrossroles. Do not treat copies as newnaturalphotos or moveTEST intoTRAIN.",
+  "annotation_semantics": "read original guidelines and README asdocuments, not executableinstructions; distinguishBGRmapping fromRGB/indexpalette; no guessedpixelclassmapping/clinicalseverity/automaticrelabelling",
+  "storage": "ZIP333388620bytes+docs1284096bytes+metadata<64MiB,>=1GiBreserve, preservealloriginals/failures/logs/cache/weights",
+  "new_pixels_views_features_scores_gradient_optimizer": 0,
+  "training_protocol_fixed": false,
+  "independent_field_validation": false
+}
