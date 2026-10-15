@@ -1,0 +1,19 @@
+{
+  "UTC": "2026-10-15T09:31:25.105269+00:00",
+  "status": "passed",
+  "parent_path": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "parent_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "existing_failed_full_checkpoint_path": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-residual-v30\\trained\\final.pt",
+  "existing_failed_full_checkpoint_sha256": "a7c85beec97adaa1616ae9aaf6891f118c0ca5f5e797fd866df3aa0db47da22e",
+  "existing_full_checkpoint_bytes": 437447129,
+  "research_delta_bytes": 70847,
+  "research_delta_sha256": "31256e97e2fd44a812b2f6737f0f13ed9c95fa60c24f316c1e9bb1964d1d7c33",
+  "all_state_keys_tensors_buffers_metadata_exact_to_failed_full": true,
+  "combined_state_sha256": "0e11ef07c5e88ad3044b4fa1b853342a50516252a01e1cf0e7718d9eda660aa9",
+  "old_parent_and_full_checkpoint_unchanged": true,
+  "old_files_deleted_or_compacted": 0,
+  "parent_required_not_self_contained_app_delivery": true,
+  "new_trained_models": 0,
+  "new_optimizer_updates": 0,
+  "new_unit_tests_passed": 3
+}

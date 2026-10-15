@@ -1,0 +1,23 @@
+{
+  "UTC": "2026-10-15T09:31:27.257442+00:00",
+  "status": "passed",
+  "FIT_RGB_inputs": 32,
+  "old_cachedfine_FP16_exact": true,
+  "freshFP32_tail_zero_adapter_bitwiseexact": true,
+  "old_forward_after_probe_bitwiseexact": true,
+  "all_parent_tensors_buffers_before_after_exact": true,
+  "same_original_later_modules_reused_no_extra_encoder": true,
+  "prototype_new_adapter_parameters": 220,
+  "cachedfine_to_tail_descriptor_atol": 0.02,
+  "cachedfine_to_tail_descriptor_rtol": 0.01,
+  "cachedfine_to_tail_descriptor_tolerance_passed": true,
+  "descriptor_max_abs_delta": 0.015625,
+  "descriptor_mean_abs_delta": 0.0001947796408785507,
+  "new_patch_classifier_scores": 0,
+  "new_VAL_CAL_TEST_features_scores": 0,
+  "actual_new_optimizer_updates": 0,
+  "new_unit_tests_passed": 2,
+  "new_training_protocol_fixed": false,
+  "no_accuracy_improvement_claimed": true,
+  "independent_field_validated": false
+}
