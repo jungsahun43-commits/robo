@@ -1,0 +1,247 @@
+{
+  "selected": {},
+  "categories": {
+    "ksdd1_commutator_surface": {
+      "candidate": {
+        "rates": {
+          "tp": 18,
+          "fn": 0,
+          "fp": 13,
+          "tn": 104,
+          "positive_photos": 18,
+          "negative_photos": 117,
+          "fnr": 0.0,
+          "fpr": 0.1111111111111111
+        },
+        "photo_FPR_Wilson95": [
+          0.06609320162681151,
+          0.18085398944420336
+        ],
+        "photo_FNR_Wilson95": [
+          0,
+          0.17587922364665765
+        ],
+        "auroc": 0.9990503323836657,
+        "pixel_counts_at_half_original": {
+          "tp": 41269,
+          "fp": 38341,
+          "tn": 84789351,
+          "fn": 23539
+        },
+        "pixel_fnr": 0.3632113319343291,
+        "pixel_fpr": 0.0004519868346765818,
+        "pixel_IoU": 0.4000911303066438,
+        "photo_threshold": 0.0035473324824124575,
+        "eligible_app_category": false,
+        "reason": "TEST18defects<20minimum, surface view only; limited-sample research"
+      },
+      "unadapted_ksdd_head": {
+        "rates": {
+          "tp": 10,
+          "fn": 8,
+          "fp": 45,
+          "tn": 72,
+          "positive_photos": 18,
+          "negative_photos": 117,
+          "fnr": 0.4444444444444444,
+          "fpr": 0.38461538461538464
+        },
+        "photo_FPR_Wilson95": [
+          0.30146439061091146,
+          0.47510235838818093
+        ],
+        "photo_FNR_Wilson95": [
+          0.24559518127005633,
+          0.6628358435795723
+        ],
+        "auroc": 0.6168091168091168,
+        "pixel_counts_at_half_original": {
+          "tp": 36712,
+          "fp": 24230689,
+          "tn": 60597003,
+          "fn": 28096
+        },
+        "pixel_fnr": 0.4335267250956672,
+        "pixel_fpr": 0.2856459774951793,
+        "pixel_IoU": 0.0015110619058338259,
+        "photo_threshold": 0.9999642372131348,
+        "eligible_app_category": false,
+        "reason": "TEST18defects<20minimum, surface view only; limited-sample research"
+      }
+    },
+    "mpdd_bracket_black": {
+      "parent": {
+        "tp": 17,
+        "fn": 30,
+        "fp": 4,
+        "tn": 28,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.6382978723404256,
+        "fpr": 0.125
+      },
+      "parent_by_defect": {
+        "hole": {
+          "photos": 12,
+          "fn": 5,
+          "fnr": 0.4166666666666667
+        },
+        "scratches": {
+          "photos": 35,
+          "fn": 25,
+          "fnr": 0.7142857142857143
+        }
+      },
+      "methods": {
+        "commutator_only": {
+          "rates": {
+            "tp": 6,
+            "fn": 41,
+            "fp": 0,
+            "tn": 32,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.8723404255319149,
+            "fpr": 0.0
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 12,
+              "fnr": 1.0
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 29,
+              "fnr": 0.8285714285714286
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6230053191489362
+        },
+        "max_commutator_parent": {
+          "rates": {
+            "tp": 12,
+            "fn": 35,
+            "fp": 4,
+            "tn": 28,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.7446808510638298,
+            "fpr": 0.125
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 7,
+              "fnr": 0.5833333333333334
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 28,
+              "fnr": 0.8
+            }
+          },
+          "eligible": false,
+          "auroc": 0.7047872340425532
+        }
+      }
+    },
+    "mpdd_tubes": {
+      "parent": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "parent_by_defect": {
+        "anomalous": {
+          "photos": 69,
+          "fn": 47,
+          "fnr": 0.6811594202898551
+        }
+      },
+      "methods": {
+        "commutator_only": {
+          "rates": {
+            "tp": 5,
+            "fn": 64,
+            "fp": 4,
+            "tn": 28,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.927536231884058,
+            "fpr": 0.125
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 64,
+              "fnr": 0.927536231884058
+            }
+          },
+          "eligible": false,
+          "auroc": 0.3292572463768116
+        },
+        "max_commutator_parent": {
+          "rates": {
+            "tp": 23,
+            "fn": 46,
+            "fp": 4,
+            "tn": 28,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.6666666666666666,
+            "fpr": 0.125
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 46,
+              "fnr": 0.6666666666666666
+            }
+          },
+          "eligible": false,
+          "auroc": 0.5620471014492754
+        }
+      }
+    }
+  },
+  "training": {
+    "actual_optimizer_updates": 1920,
+    "scheduled_unique_updates": 1920,
+    "selected_epoch": 27,
+    "selected_epoch_updates": 1728,
+    "completed_epochs": 30,
+    "VAL_balanced_loss": 0.5718600643399571,
+    "source_counts": {
+      "fit": {
+        "normal": 147,
+        "defect": 21
+      },
+      "validation": {
+        "normal": 35,
+        "defect": 5
+      },
+      "cal": {
+        "normal": 35,
+        "defect": 5
+      },
+      "test": {
+        "normal": 117,
+        "defect": 18
+      }
+    },
+    "positive_weight": 40.99472694487793,
+    "parent_all_tensors_exact": true,
+    "new_projection_frozen": true
+  },
+  "CAL_sha256": "751069ced9e8d0bd5dc5bade22ea65a99a91cae149dfd7935619e1f99a95b1b0",
+  "source_reserved_TEST_first_model_scoring": true,
+  "known_MPDD_TEST_reused": true,
+  "independent_field_validated": false
+}

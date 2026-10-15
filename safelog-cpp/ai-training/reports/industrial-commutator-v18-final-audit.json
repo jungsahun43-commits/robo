@@ -1,0 +1,268 @@
+{
+  "status": "completed_v18_source_improved_limited_sample_targets_rejected_v16_retained",
+  "UTC": "2026-10-15T04:03:40.747979+00:00",
+  "active_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_checkpoint_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "v18_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-ksdd1-v18\\trained\\final.pt",
+  "v18_research_checkpoint_sha256": "b2616342b511d143b3bf5f06eedbc03bd3cba650c98573b47d5d384160ec641b",
+  "v18_actual_optimizer_updates": 1920,
+  "selected_epoch_by_VAL": 27,
+  "retained_selected_epoch_updates": 1728,
+  "initial_VAL_loss": 4.2628718818937035,
+  "best_VAL_loss": 0.5718600643399571,
+  "source_research_results": {
+    "candidate": {
+      "rates": {
+        "tp": 18,
+        "fn": 0,
+        "fp": 13,
+        "tn": 104,
+        "positive_photos": 18,
+        "negative_photos": 117,
+        "fnr": 0.0,
+        "fpr": 0.1111111111111111
+      },
+      "photo_FPR_Wilson95": [
+        0.06609320162681151,
+        0.18085398944420336
+      ],
+      "photo_FNR_Wilson95": [
+        0,
+        0.17587922364665765
+      ],
+      "auroc": 0.9990503323836657,
+      "pixel_counts_at_half_original": {
+        "tp": 41269,
+        "fp": 38341,
+        "tn": 84789351,
+        "fn": 23539
+      },
+      "pixel_fnr": 0.3632113319343291,
+      "pixel_fpr": 0.0004519868346765818,
+      "pixel_IoU": 0.4000911303066438,
+      "photo_threshold": 0.0035473324824124575,
+      "eligible_app_category": false,
+      "reason": "TEST18defects<20minimum, surface view only; limited-sample research"
+    },
+    "unadapted_ksdd_head": {
+      "rates": {
+        "tp": 10,
+        "fn": 8,
+        "fp": 45,
+        "tn": 72,
+        "positive_photos": 18,
+        "negative_photos": 117,
+        "fnr": 0.4444444444444444,
+        "fpr": 0.38461538461538464
+      },
+      "photo_FPR_Wilson95": [
+        0.30146439061091146,
+        0.47510235838818093
+      ],
+      "photo_FNR_Wilson95": [
+        0.24559518127005633,
+        0.6628358435795723
+      ],
+      "auroc": 0.6168091168091168,
+      "pixel_counts_at_half_original": {
+        "tp": 36712,
+        "fp": 24230689,
+        "tn": 60597003,
+        "fn": 28096
+      },
+      "pixel_fnr": 0.4335267250956672,
+      "pixel_fpr": 0.2856459774951793,
+      "pixel_IoU": 0.0015110619058338259,
+      "photo_threshold": 0.9999642372131348,
+      "eligible_app_category": false,
+      "reason": "TEST18defects<20minimum, surface view only; limited-sample research"
+    }
+  },
+  "target_results": {
+    "mpdd_bracket_black": {
+      "parent": {
+        "tp": 17,
+        "fn": 30,
+        "fp": 4,
+        "tn": 28,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.6382978723404256,
+        "fpr": 0.125
+      },
+      "parent_by_defect": {
+        "hole": {
+          "photos": 12,
+          "fn": 5,
+          "fnr": 0.4166666666666667
+        },
+        "scratches": {
+          "photos": 35,
+          "fn": 25,
+          "fnr": 0.7142857142857143
+        }
+      },
+      "methods": {
+        "commutator_only": {
+          "rates": {
+            "tp": 6,
+            "fn": 41,
+            "fp": 0,
+            "tn": 32,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.8723404255319149,
+            "fpr": 0.0
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 12,
+              "fnr": 1.0
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 29,
+              "fnr": 0.8285714285714286
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6230053191489362
+        },
+        "max_commutator_parent": {
+          "rates": {
+            "tp": 12,
+            "fn": 35,
+            "fp": 4,
+            "tn": 28,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.7446808510638298,
+            "fpr": 0.125
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 7,
+              "fnr": 0.5833333333333334
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 28,
+              "fnr": 0.8
+            }
+          },
+          "eligible": false,
+          "auroc": 0.7047872340425532
+        }
+      }
+    },
+    "mpdd_tubes": {
+      "parent": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "parent_by_defect": {
+        "anomalous": {
+          "photos": 69,
+          "fn": 47,
+          "fnr": 0.6811594202898551
+        }
+      },
+      "methods": {
+        "commutator_only": {
+          "rates": {
+            "tp": 5,
+            "fn": 64,
+            "fp": 4,
+            "tn": 28,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.927536231884058,
+            "fpr": 0.125
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 64,
+              "fnr": 0.927536231884058
+            }
+          },
+          "eligible": false,
+          "auroc": 0.3292572463768116
+        },
+        "max_commutator_parent": {
+          "rates": {
+            "tp": 23,
+            "fn": 46,
+            "fp": 4,
+            "tn": 28,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.6666666666666666,
+            "fpr": 0.125
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 46,
+              "fnr": 0.6666666666666666
+            }
+          },
+          "eligible": false,
+          "auroc": 0.5620471014492754
+        }
+      }
+    }
+  },
+  "target_methods_selected": {},
+  "source_not_registered_as_app_category": true,
+  "source_TEST_positive_views": 18,
+  "source_TEST_positive_views_below20": true,
+  "source_photo20percent_PASS_claimed": false,
+  "source_photo_FNR_zero_not_pixel_FNR_zero": true,
+  "Wilson_photo_intervals_assume_independent_views_not_capture_cluster_adjusted": true,
+  "source_negative_means_surface_view_not_whole_healthy_commutator": true,
+  "all_parent_tensors_buffers_metadata_exact": true,
+  "CPU_fresh_GPU_cached_GPU_photos_checked": 135,
+  "max_CPU_GPU_photo_difference": 2.205371856689453e-05,
+  "CPU_GPU_decisions_all_equal": true,
+  "new_API_aliases_tested": 0,
+  "new_CPP_operations": 0,
+  "new_role4_ZIP_created": false,
+  "verification": {
+    "status": "passed",
+    "parent_all_tensors_buffers_metadata_exact": true,
+    "new_projection_frozen": true,
+    "legacy_python_SHA_checked": 597,
+    "protected_stat_unchanged": 86544,
+    "changed_metadata_SHA_rechecked": 0,
+    "all_protected_SHA_reread": false,
+    "actual_optimizer_updates": 1920,
+    "new_unit_tests_passed": 3,
+    "selected": {},
+    "new_source_not_app_registered": true,
+    "new_CPU_CPP_release_required_if_selected": false,
+    "active_parent_still_retained": true,
+    "independent_field_validated": false
+  },
+  "new_unit_tests_passed": 3,
+  "actual_current_training_runtime_errors": 0,
+  "tracked_v8_v10_v13_v15_v16_v17_v18_actual_optimizer_updates_including_failed": 16720,
+  "known_MPDD_TEST_reused_for_target_selection": true,
+  "source_TEST_first_scoring_by_this_study": true,
+  "independent_field_validated": false,
+  "all_original_data_failed_candidates_reports_preserved": true,
+  "automation_continues_user_at_school": true,
+  "awake_helper_restarted": false,
+  "v14_human_relations_still_pending": true,
+  "next": "FIT-only target-domain synthetic-defect feasibility review using already licensed normal MPDD FIT and real-mask FIT assets. Do not treat synthetic masks as natural defect GT, do not rerun completed TEST calibration or v18, preregister before any later learning."
+}

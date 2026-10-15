@@ -1,0 +1,1104 @@
+{
+  "status": "passed",
+  "UTC": "2026-10-15T03:59:33.863809+00:00",
+  "checkpoint_sha256": "b2616342b511d143b3bf5f06eedbc03bd3cba650c98573b47d5d384160ec641b",
+  "actual_current_photos": 135,
+  "all_CPU_fresh_GPU_cached_GPU_decisions_equal": true,
+  "max_CPU_GPU_photo_difference": 2.205371856689453e-05,
+  "max_fresh_GPU_cached_photo_difference": 6.139278411865234e-06,
+  "max_native_probability_CPU_GPU_difference": 0.00013977289199829102,
+  "elapsed_both_devices_whole_benchmark_seconds": 16.78100000000086,
+  "fresh_original_RGB_native512x1408_preprocessing": true,
+  "cached_features_not_used_for_either_device_forward": true,
+  "source_research_head_only": true,
+  "new_API_aliases_tested": 0,
+  "new_CPP_operations": 0,
+  "app_category_registered": false,
+  "photo_threshold_unchanged": 0.0035473324824124575,
+  "TEST_defect_views": 18,
+  "photo20percent_PASS_claimed": false,
+  "independent_field_validated": false,
+  "Wilson_photo_intervals_assume_independent_views_not_cluster_adjusted": true,
+  "observations": [
+    {
+      "id": "kolektor_sdd1/kos02/Part0.jpg",
+      "label": 0,
+      "CPU_score": 3.3591935789445415e-05,
+      "fresh_GPU_score": 3.358948015375063e-05,
+      "cached_GPU_score": 3.359048787388019e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos02/Part1.jpg",
+      "label": 0,
+      "CPU_score": 0.0001301318989135325,
+      "fresh_GPU_score": 0.00013013699208386242,
+      "cached_GPU_score": 0.00013013418356422335,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos02/Part2.jpg",
+      "label": 0,
+      "CPU_score": 1.140817767009139e-05,
+      "fresh_GPU_score": 1.1408432328607887e-05,
+      "cached_GPU_score": 1.1408349564590026e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos02/Part3.jpg",
+      "label": 0,
+      "CPU_score": 0.00297810067422688,
+      "fresh_GPU_score": 0.002978243865072727,
+      "cached_GPU_score": 0.0029785041697323322,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos02/Part4.jpg",
+      "label": 0,
+      "CPU_score": 4.693330993177369e-05,
+      "fresh_GPU_score": 4.6931290853535756e-05,
+      "cached_GPU_score": 4.693158552981913e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos02/Part5.jpg",
+      "label": 0,
+      "CPU_score": 0.00013569991278927773,
+      "fresh_GPU_score": 0.00013570149894803762,
+      "cached_GPU_score": 0.00013570435112342238,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos02/Part6.jpg",
+      "label": 1,
+      "CPU_score": 0.9988641142845154,
+      "fresh_GPU_score": 0.9988640546798706,
+      "cached_GPU_score": 0.9988640546798706,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos02/Part7.jpg",
+      "label": 0,
+      "CPU_score": 1.4065746654523537e-05,
+      "fresh_GPU_score": 1.4066499716136605e-05,
+      "cached_GPU_score": 1.4066243238630705e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos08/Part0.jpg",
+      "label": 0,
+      "CPU_score": 0.0011334385490044951,
+      "fresh_GPU_score": 0.0011334478622302413,
+      "cached_GPU_score": 0.0011334298178553581,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos08/Part1.jpg",
+      "label": 0,
+      "CPU_score": 0.0009548018570058048,
+      "fresh_GPU_score": 0.0009545977227389812,
+      "cached_GPU_score": 0.0009546118089929223,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos08/Part2.jpg",
+      "label": 1,
+      "CPU_score": 0.9939091205596924,
+      "fresh_GPU_score": 0.9939092993736267,
+      "cached_GPU_score": 0.9939092397689819,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos08/Part3.jpg",
+      "label": 0,
+      "CPU_score": 6.794835644541308e-05,
+      "fresh_GPU_score": 6.792947533540428e-05,
+      "cached_GPU_score": 6.793883221689612e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos08/Part4.jpg",
+      "label": 0,
+      "CPU_score": 3.3724872992024757e-06,
+      "fresh_GPU_score": 3.372175569893443e-06,
+      "cached_GPU_score": 3.3720548344717827e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos08/Part5.jpg",
+      "label": 0,
+      "CPU_score": 1.033424268825911e-05,
+      "fresh_GPU_score": 1.0334558282920625e-05,
+      "cached_GPU_score": 1.0334696526115295e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos08/Part6.jpg",
+      "label": 0,
+      "CPU_score": 0.00014579937851522118,
+      "fresh_GPU_score": 0.00014581797586288303,
+      "cached_GPU_score": 0.00014581720461137593,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos08/Part7.jpg",
+      "label": 0,
+      "CPU_score": 0.012564252130687237,
+      "fresh_GPU_score": 0.01256391778588295,
+      "cached_GPU_score": 0.012562328949570656,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos09/Part0.jpg",
+      "label": 0,
+      "CPU_score": 3.110486886725994e-06,
+      "fresh_GPU_score": 3.1108077109820442e-06,
+      "cached_GPU_score": 3.1106678761716466e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos09/Part1.jpg",
+      "label": 0,
+      "CPU_score": 3.7818528653588146e-05,
+      "fresh_GPU_score": 3.7817630072822794e-05,
+      "cached_GPU_score": 3.781769555644132e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos09/Part2.jpg",
+      "label": 0,
+      "CPU_score": 6.0436427702370565e-06,
+      "fresh_GPU_score": 6.043957000656519e-06,
+      "cached_GPU_score": 6.043935627531027e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos09/Part3.jpg",
+      "label": 0,
+      "CPU_score": 1.4111011296336073e-05,
+      "fresh_GPU_score": 1.4109497897152323e-05,
+      "cached_GPU_score": 1.4109489711700007e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos09/Part4.jpg",
+      "label": 0,
+      "CPU_score": 1.3331202353583649e-05,
+      "fresh_GPU_score": 1.3330330148164649e-05,
+      "cached_GPU_score": 1.3330631190910935e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos09/Part5.jpg",
+      "label": 0,
+      "CPU_score": 0.00025308705517090857,
+      "fresh_GPU_score": 0.00025312905199825764,
+      "cached_GPU_score": 0.00025313865626230836,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos09/Part6.jpg",
+      "label": 1,
+      "CPU_score": 0.9981725811958313,
+      "fresh_GPU_score": 0.9981726408004761,
+      "cached_GPU_score": 0.9981725811958313,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos09/Part7.jpg",
+      "label": 0,
+      "CPU_score": 6.310520802799147e-06,
+      "fresh_GPU_score": 6.3107136156759225e-06,
+      "cached_GPU_score": 6.31092780167819e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos10/Part0.jpg",
+      "label": 0,
+      "CPU_score": 0.000134162517497316,
+      "fresh_GPU_score": 0.00013421321636997163,
+      "cached_GPU_score": 0.00013421164476312697,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos10/Part1.jpg",
+      "label": 0,
+      "CPU_score": 0.0002140697615686804,
+      "fresh_GPU_score": 0.00021410250337794423,
+      "cached_GPU_score": 0.00021407923486549407,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos10/Part2.jpg",
+      "label": 0,
+      "CPU_score": 0.0002098855038639158,
+      "fresh_GPU_score": 0.0002098826371366158,
+      "cached_GPU_score": 0.0002098728873534128,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos10/Part3.jpg",
+      "label": 1,
+      "CPU_score": 0.9999270439147949,
+      "fresh_GPU_score": 0.9999270439147949,
+      "cached_GPU_score": 0.9999270439147949,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos10/Part4.jpg",
+      "label": 0,
+      "CPU_score": 0.0010037327883765101,
+      "fresh_GPU_score": 0.0010037283645942807,
+      "cached_GPU_score": 0.0010037285974249244,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos10/Part5.jpg",
+      "label": 0,
+      "CPU_score": 0.0002319471095688641,
+      "fresh_GPU_score": 0.00023196493566501886,
+      "cached_GPU_score": 0.00023196933034341782,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos10/Part6.jpg",
+      "label": 0,
+      "CPU_score": 0.9518357515335083,
+      "fresh_GPU_score": 0.9518359899520874,
+      "cached_GPU_score": 0.9518359303474426,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos10/Part7.jpg",
+      "label": 0,
+      "CPU_score": 0.5966017842292786,
+      "fresh_GPU_score": 0.5966078639030457,
+      "cached_GPU_score": 0.5966017246246338,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos15/Part0.jpg",
+      "label": 0,
+      "CPU_score": 7.158087100833654e-05,
+      "fresh_GPU_score": 7.158094376791269e-05,
+      "cached_GPU_score": 7.158047083066776e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos15/Part1.jpg",
+      "label": 0,
+      "CPU_score": 5.2700997912324965e-06,
+      "fresh_GPU_score": 5.269877874525264e-06,
+      "cached_GPU_score": 5.270118435873883e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos15/Part2.jpg",
+      "label": 0,
+      "CPU_score": 1.338827860308811e-05,
+      "fresh_GPU_score": 1.3389269042818341e-05,
+      "cached_GPU_score": 1.3389592822932173e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos15/Part3.jpg",
+      "label": 1,
+      "CPU_score": 0.999893307685852,
+      "fresh_GPU_score": 0.999893307685852,
+      "cached_GPU_score": 0.999893307685852,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos15/Part4.jpg",
+      "label": 0,
+      "CPU_score": 0.0001273282541660592,
+      "fresh_GPU_score": 0.0001273260568268597,
+      "cached_GPU_score": 0.0001273212255910039,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos15/Part5.jpg",
+      "label": 0,
+      "CPU_score": 5.697633605450392e-05,
+      "fresh_GPU_score": 5.6972497986862436e-05,
+      "cached_GPU_score": 5.6972399761434644e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos15/Part6.jpg",
+      "label": 0,
+      "CPU_score": 2.6464203983778134e-06,
+      "fresh_GPU_score": 2.6463224003236974e-06,
+      "cached_GPU_score": 2.6462230380275287e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos15/Part7.jpg",
+      "label": 0,
+      "CPU_score": 0.0005379484500735998,
+      "fresh_GPU_score": 0.0005379025824368,
+      "cached_GPU_score": 0.0005378982168622315,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos19/Part0.jpg",
+      "label": 0,
+      "CPU_score": 4.642240674002096e-05,
+      "fresh_GPU_score": 4.642718704417348e-05,
+      "cached_GPU_score": 4.642568819690496e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos19/Part1.jpg",
+      "label": 0,
+      "CPU_score": 6.985697109485045e-05,
+      "fresh_GPU_score": 6.986417429288849e-05,
+      "cached_GPU_score": 6.986390508245677e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos19/Part2.jpg",
+      "label": 0,
+      "CPU_score": 0.983352541923523,
+      "fresh_GPU_score": 0.9833528995513916,
+      "cached_GPU_score": 0.9833526611328125,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos19/Part3.jpg",
+      "label": 0,
+      "CPU_score": 9.993984804168576e-07,
+      "fresh_GPU_score": 9.994525953516131e-07,
+      "cached_GPU_score": 9.996039125326206e-07,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos19/Part4.jpg",
+      "label": 0,
+      "CPU_score": 5.325939127942547e-05,
+      "fresh_GPU_score": 5.325855818227865e-05,
+      "cached_GPU_score": 5.3259023843565956e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos19/Part5.jpg",
+      "label": 1,
+      "CPU_score": 0.9999018311500549,
+      "fresh_GPU_score": 0.9999018311500549,
+      "cached_GPU_score": 0.9999018311500549,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos19/Part6.jpg",
+      "label": 0,
+      "CPU_score": 4.715185423265211e-05,
+      "fresh_GPU_score": 4.715150862466544e-05,
+      "cached_GPU_score": 4.71529747301247e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos19/Part7.jpg",
+      "label": 0,
+      "CPU_score": 1.0520659998292103e-05,
+      "fresh_GPU_score": 1.052144853019854e-05,
+      "cached_GPU_score": 1.052016614266904e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos21/Part0.jpg",
+      "label": 0,
+      "CPU_score": 0.00044773108675144613,
+      "fresh_GPU_score": 0.0004477380425669253,
+      "cached_GPU_score": 0.0004477229085750878,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos21/Part1.jpg",
+      "label": 0,
+      "CPU_score": 1.5421825082739815e-05,
+      "fresh_GPU_score": 1.5422003343701363e-05,
+      "cached_GPU_score": 1.54219706018921e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos21/Part2.jpg",
+      "label": 0,
+      "CPU_score": 7.13244080543518e-05,
+      "fresh_GPU_score": 7.132913015084341e-05,
+      "cached_GPU_score": 7.132777682272717e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos21/Part3.jpg",
+      "label": 0,
+      "CPU_score": 0.00041090516606345773,
+      "fresh_GPU_score": 0.0004109007422812283,
+      "cached_GPU_score": 0.00041092754690907896,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos21/Part4.jpg",
+      "label": 0,
+      "CPU_score": 3.881029988406226e-05,
+      "fresh_GPU_score": 3.881136217387393e-05,
+      "cached_GPU_score": 3.88101652788464e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos21/Part5.jpg",
+      "label": 1,
+      "CPU_score": 0.9999099969863892,
+      "fresh_GPU_score": 0.9999099969863892,
+      "cached_GPU_score": 0.9999099969863892,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos21/Part6.jpg",
+      "label": 0,
+      "CPU_score": 4.597274528350681e-05,
+      "fresh_GPU_score": 4.5979642891325057e-05,
+      "cached_GPU_score": 4.59756120108068e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos25/Part0.jpg",
+      "label": 0,
+      "CPU_score": 0.0021237379405647516,
+      "fresh_GPU_score": 0.0021234583109617233,
+      "cached_GPU_score": 0.0021236310712993145,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos25/Part1.jpg",
+      "label": 0,
+      "CPU_score": 1.1192754755029455e-05,
+      "fresh_GPU_score": 1.1192638339707628e-05,
+      "cached_GPU_score": 1.1192568308615591e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos25/Part2.jpg",
+      "label": 0,
+      "CPU_score": 4.403344519232633e-06,
+      "fresh_GPU_score": 4.40285566583043e-06,
+      "cached_GPU_score": 4.403082130011171e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos25/Part3.jpg",
+      "label": 0,
+      "CPU_score": 1.197849451273214e-05,
+      "fresh_GPU_score": 1.1981256648141425e-05,
+      "cached_GPU_score": 1.1980220733676106e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos25/Part4.jpg",
+      "label": 1,
+      "CPU_score": 0.9990765452384949,
+      "fresh_GPU_score": 0.9990765452384949,
+      "cached_GPU_score": 0.9990765452384949,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos25/Part5.jpg",
+      "label": 0,
+      "CPU_score": 0.00014770911366213113,
+      "fresh_GPU_score": 0.00014769761764910072,
+      "cached_GPU_score": 0.00014769613335374743,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos25/Part6.jpg",
+      "label": 0,
+      "CPU_score": 0.000804454437457025,
+      "fresh_GPU_score": 0.0008043962880037725,
+      "cached_GPU_score": 0.00080439931480214,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos25/Part7.jpg",
+      "label": 0,
+      "CPU_score": 6.566841648236732e-07,
+      "fresh_GPU_score": 6.56689564948465e-07,
+      "cached_GPU_score": 6.56683027955296e-07,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos27/Part0.jpg",
+      "label": 1,
+      "CPU_score": 0.9982842803001404,
+      "fresh_GPU_score": 0.9982842803001404,
+      "cached_GPU_score": 0.9982842803001404,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos27/Part1.jpg",
+      "label": 0,
+      "CPU_score": 5.549617867472989e-07,
+      "fresh_GPU_score": 5.549504180635267e-07,
+      "cached_GPU_score": 5.549827051254397e-07,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos27/Part2.jpg",
+      "label": 0,
+      "CPU_score": 1.1054313517888659e-06,
+      "fresh_GPU_score": 1.1053783737224876e-06,
+      "cached_GPU_score": 1.1053682555939304e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos27/Part3.jpg",
+      "label": 0,
+      "CPU_score": 2.5587482923583593e-06,
+      "fresh_GPU_score": 2.558547521402943e-06,
+      "cached_GPU_score": 2.558605501690181e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos27/Part4.jpg",
+      "label": 0,
+      "CPU_score": 2.3771632186253555e-05,
+      "fresh_GPU_score": 2.3772725398885086e-05,
+      "cached_GPU_score": 2.3772232452756725e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos27/Part5.jpg",
+      "label": 0,
+      "CPU_score": 3.8110840250737965e-05,
+      "fresh_GPU_score": 3.8111676985863596e-05,
+      "cached_GPU_score": 3.811074566328898e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos27/Part6.jpg",
+      "label": 0,
+      "CPU_score": 4.623265795089537e-06,
+      "fresh_GPU_score": 4.623548647941789e-06,
+      "cached_GPU_score": 4.623409495252417e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos27/Part7.jpg",
+      "label": 0,
+      "CPU_score": 1.574732414155733e-05,
+      "fresh_GPU_score": 1.5748097212053835e-05,
+      "cached_GPU_score": 1.574735506437719e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos28/Part0.jpg",
+      "label": 0,
+      "CPU_score": 4.6049455704633147e-05,
+      "fresh_GPU_score": 4.604657806339674e-05,
+      "cached_GPU_score": 4.6046505303820595e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos28/Part1.jpg",
+      "label": 0,
+      "CPU_score": 1.9094454728474375e-06,
+      "fresh_GPU_score": 1.909337925098953e-06,
+      "cached_GPU_score": 1.9093065475317417e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos28/Part2.jpg",
+      "label": 0,
+      "CPU_score": 0.008540778420865536,
+      "fresh_GPU_score": 0.00854240357875824,
+      "cached_GPU_score": 0.008542489260435104,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos28/Part3.jpg",
+      "label": 1,
+      "CPU_score": 0.999432384967804,
+      "fresh_GPU_score": 0.999432384967804,
+      "cached_GPU_score": 0.999432384967804,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos28/Part4.jpg",
+      "label": 0,
+      "CPU_score": 0.0002089877671096474,
+      "fresh_GPU_score": 0.00020899021183140576,
+      "cached_GPU_score": 0.00020899635273963213,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos28/Part5.jpg",
+      "label": 0,
+      "CPU_score": 5.149671414983459e-05,
+      "fresh_GPU_score": 5.150167635292746e-05,
+      "cached_GPU_score": 5.1501523557817563e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos28/Part6.jpg",
+      "label": 0,
+      "CPU_score": 2.068154026346747e-05,
+      "fresh_GPU_score": 2.0680485249613412e-05,
+      "cached_GPU_score": 2.0681172827607952e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos28/Part7.jpg",
+      "label": 0,
+      "CPU_score": 4.091531445737928e-05,
+      "fresh_GPU_score": 4.0909781091613695e-05,
+      "cached_GPU_score": 4.0910956158768386e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos30/Part0.jpg",
+      "label": 1,
+      "CPU_score": 0.9998494386672974,
+      "fresh_GPU_score": 0.9998494386672974,
+      "cached_GPU_score": 0.9998494386672974,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos30/Part1.jpg",
+      "label": 0,
+      "CPU_score": 2.6188932679360732e-05,
+      "fresh_GPU_score": 2.6190453354502097e-05,
+      "cached_GPU_score": 2.6190433345618658e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos30/Part2.jpg",
+      "label": 0,
+      "CPU_score": 2.2332562366500497e-05,
+      "fresh_GPU_score": 2.2333859305945225e-05,
+      "cached_GPU_score": 2.233396480733063e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos30/Part3.jpg",
+      "label": 0,
+      "CPU_score": 1.5072174619490397e-06,
+      "fresh_GPU_score": 1.5071926782184164e-06,
+      "cached_GPU_score": 1.5071735788296792e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos30/Part4.jpg",
+      "label": 0,
+      "CPU_score": 0.0013968917774036527,
+      "fresh_GPU_score": 0.0013969797873869538,
+      "cached_GPU_score": 0.0013970071449875832,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos30/Part5.jpg",
+      "label": 0,
+      "CPU_score": 0.0102583272382617,
+      "fresh_GPU_score": 0.010257569141685963,
+      "cached_GPU_score": 0.010258163325488567,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos30/Part6.jpg",
+      "label": 0,
+      "CPU_score": 0.004436981864273548,
+      "fresh_GPU_score": 0.004436793737113476,
+      "cached_GPU_score": 0.004436979070305824,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos30/Part7.jpg",
+      "label": 0,
+      "CPU_score": 0.06677866727113724,
+      "fresh_GPU_score": 0.06678572297096252,
+      "cached_GPU_score": 0.06678885966539383,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos37/Part0.jpg",
+      "label": 1,
+      "CPU_score": 0.9999528527259827,
+      "fresh_GPU_score": 0.9999528527259827,
+      "cached_GPU_score": 0.9999528527259827,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos37/Part1.jpg",
+      "label": 0,
+      "CPU_score": 2.0076032569704694e-07,
+      "fresh_GPU_score": 2.0075809459285665e-07,
+      "cached_GPU_score": 2.007522539315687e-07,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos37/Part2.jpg",
+      "label": 0,
+      "CPU_score": 6.213052256498486e-05,
+      "fresh_GPU_score": 6.213795131770894e-05,
+      "cached_GPU_score": 6.213261076482013e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos37/Part3.jpg",
+      "label": 0,
+      "CPU_score": 6.0026727624062914e-06,
+      "fresh_GPU_score": 6.001697784085991e-06,
+      "cached_GPU_score": 6.001484507578425e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos37/Part4.jpg",
+      "label": 0,
+      "CPU_score": 2.707224848563783e-05,
+      "fresh_GPU_score": 2.7072050215792842e-05,
+      "cached_GPU_score": 2.7072319426224567e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos37/Part5.jpg",
+      "label": 0,
+      "CPU_score": 4.990679826732958e-06,
+      "fresh_GPU_score": 4.989488388673635e-06,
+      "cached_GPU_score": 4.990437901142286e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos37/Part6.jpg",
+      "label": 0,
+      "CPU_score": 3.6907625400317556e-08,
+      "fresh_GPU_score": 3.690800554068119e-08,
+      "cached_GPU_score": 3.69077355344416e-08,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos37/Part7.jpg",
+      "label": 0,
+      "CPU_score": 4.319838353694649e-06,
+      "fresh_GPU_score": 4.319294021115638e-06,
+      "cached_GPU_score": 4.319380423112307e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos38/Part0.jpg",
+      "label": 1,
+      "CPU_score": 0.9958285689353943,
+      "fresh_GPU_score": 0.9958285093307495,
+      "cached_GPU_score": 0.9958285093307495,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos38/Part1.jpg",
+      "label": 1,
+      "CPU_score": 0.9968268871307373,
+      "fresh_GPU_score": 0.9968268275260925,
+      "cached_GPU_score": 0.9968268275260925,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos38/Part2.jpg",
+      "label": 0,
+      "CPU_score": 2.372428525632131e-06,
+      "fresh_GPU_score": 2.3725986011413625e-06,
+      "cached_GPU_score": 2.372446942899842e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos38/Part3.jpg",
+      "label": 0,
+      "CPU_score": 5.923060598433949e-06,
+      "fresh_GPU_score": 5.923806838836754e-06,
+      "cached_GPU_score": 5.923894150328124e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos38/Part4.jpg",
+      "label": 0,
+      "CPU_score": 2.6763498226500815e-06,
+      "fresh_GPU_score": 2.676313670235686e-06,
+      "cached_GPU_score": 2.676343456187169e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos38/Part5.jpg",
+      "label": 0,
+      "CPU_score": 2.811052127071889e-06,
+      "fresh_GPU_score": 2.8110994207963813e-06,
+      "cached_GPU_score": 2.811002786984318e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos38/Part6.jpg",
+      "label": 0,
+      "CPU_score": 6.158649193821475e-05,
+      "fresh_GPU_score": 6.158379255793989e-05,
+      "cached_GPU_score": 6.158522592158988e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos38/Part7.jpg",
+      "label": 0,
+      "CPU_score": 3.931807441404089e-05,
+      "fresh_GPU_score": 3.930769889848307e-05,
+      "cached_GPU_score": 3.9310842112172395e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos41/Part0.jpg",
+      "label": 0,
+      "CPU_score": 6.456971277657431e-06,
+      "fresh_GPU_score": 6.457103609136539e-06,
+      "cached_GPU_score": 6.457213203248102e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos41/Part1.jpg",
+      "label": 0,
+      "CPU_score": 1.607360718480777e-05,
+      "fresh_GPU_score": 1.6073639926617034e-05,
+      "cached_GPU_score": 1.6073672668426298e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos41/Part2.jpg",
+      "label": 0,
+      "CPU_score": 6.764553859284206e-07,
+      "fresh_GPU_score": 6.764557838323526e-07,
+      "cached_GPU_score": 6.76455613302096e-07,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos41/Part3.jpg",
+      "label": 0,
+      "CPU_score": 6.250518822525919e-07,
+      "fresh_GPU_score": 6.250798492146714e-07,
+      "cached_GPU_score": 6.250827482290333e-07,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos41/Part4.jpg",
+      "label": 0,
+      "CPU_score": 8.781958626968844e-07,
+      "fresh_GPU_score": 8.781832434578973e-07,
+      "cached_GPU_score": 8.782051281741587e-07,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos41/Part5.jpg",
+      "label": 0,
+      "CPU_score": 8.06154275778681e-06,
+      "fresh_GPU_score": 8.06112166173989e-06,
+      "cached_GPU_score": 8.061154403549153e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos41/Part6.jpg",
+      "label": 0,
+      "CPU_score": 1.9888660972355865e-05,
+      "fresh_GPU_score": 1.9888833776349202e-05,
+      "cached_GPU_score": 1.988925396290142e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos41/Part7.jpg",
+      "label": 1,
+      "CPU_score": 0.9994713664054871,
+      "fresh_GPU_score": 0.9994713664054871,
+      "cached_GPU_score": 0.9994713664054871,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos43/Part0.jpg",
+      "label": 0,
+      "CPU_score": 6.870150536997244e-05,
+      "fresh_GPU_score": 6.869490607641637e-05,
+      "cached_GPU_score": 6.870146899018437e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos43/Part1.jpg",
+      "label": 1,
+      "CPU_score": 0.9998881220817566,
+      "fresh_GPU_score": 0.9998881220817566,
+      "cached_GPU_score": 0.9998881220817566,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos43/Part2.jpg",
+      "label": 0,
+      "CPU_score": 1.5075112287377124e-06,
+      "fresh_GPU_score": 1.5075589772095555e-06,
+      "cached_GPU_score": 1.5074742805154528e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos43/Part3.jpg",
+      "label": 0,
+      "CPU_score": 8.294492204186099e-07,
+      "fresh_GPU_score": 8.294221061078133e-07,
+      "cached_GPU_score": 8.294342137560307e-07,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos43/Part4.jpg",
+      "label": 0,
+      "CPU_score": 6.76133424803993e-07,
+      "fresh_GPU_score": 6.76093407037115e-07,
+      "cached_GPU_score": 6.761165423085913e-07,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos43/Part5.jpg",
+      "label": 0,
+      "CPU_score": 1.8966499055750319e-06,
+      "fresh_GPU_score": 1.8967562027683016e-06,
+      "cached_GPU_score": 1.8965439494422753e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos43/Part6.jpg",
+      "label": 0,
+      "CPU_score": 0.0001919883070513606,
+      "fresh_GPU_score": 0.00019197131041437387,
+      "cached_GPU_score": 0.00019197083020117134,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos43/Part7.jpg",
+      "label": 0,
+      "CPU_score": 1.3270136150822509e-05,
+      "fresh_GPU_score": 1.3269705050333869e-05,
+      "cached_GPU_score": 1.3269518603920005e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos46/Part0.jpg",
+      "label": 0,
+      "CPU_score": 0.0070215859450399876,
+      "fresh_GPU_score": 0.007022624835371971,
+      "cached_GPU_score": 0.0070219445042312145,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos46/Part1.jpg",
+      "label": 0,
+      "CPU_score": 7.575693598482758e-05,
+      "fresh_GPU_score": 7.575641939183697e-05,
+      "cached_GPU_score": 7.57588422857225e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos46/Part2.jpg",
+      "label": 0,
+      "CPU_score": 0.00040333738434128463,
+      "fresh_GPU_score": 0.0004033329023513943,
+      "cached_GPU_score": 0.00040333287324756384,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos46/Part3.jpg",
+      "label": 0,
+      "CPU_score": 7.512977390433662e-06,
+      "fresh_GPU_score": 7.513734544772888e-06,
+      "cached_GPU_score": 7.513427590311039e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos46/Part4.jpg",
+      "label": 0,
+      "CPU_score": 0.9434467554092407,
+      "fresh_GPU_score": 0.9434462189674377,
+      "cached_GPU_score": 0.9434446096420288,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos46/Part5.jpg",
+      "label": 0,
+      "CPU_score": 0.31515246629714966,
+      "fresh_GPU_score": 0.31517452001571655,
+      "cached_GPU_score": 0.31517863273620605,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos46/Part6.jpg",
+      "label": 0,
+      "CPU_score": 0.9966142773628235,
+      "fresh_GPU_score": 0.9966144561767578,
+      "cached_GPU_score": 0.9966143369674683,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos46/Part7.jpg",
+      "label": 1,
+      "CPU_score": 0.9971185326576233,
+      "fresh_GPU_score": 0.9971185326576233,
+      "cached_GPU_score": 0.9971186518669128,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos47/Part0.jpg",
+      "label": 0,
+      "CPU_score": 2.431492248433642e-06,
+      "fresh_GPU_score": 2.4315186237799935e-06,
+      "cached_GPU_score": 2.4314995243912563e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos47/Part1.jpg",
+      "label": 0,
+      "CPU_score": 0.008075243793427944,
+      "fresh_GPU_score": 0.008073372766375542,
+      "cached_GPU_score": 0.00807334017008543,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos47/Part2.jpg",
+      "label": 1,
+      "CPU_score": 0.9996910095214844,
+      "fresh_GPU_score": 0.9996910095214844,
+      "cached_GPU_score": 0.9996910095214844,
+      "detected": true
+    },
+    {
+      "id": "kolektor_sdd1/kos47/Part3.jpg",
+      "label": 0,
+      "CPU_score": 0.0005678005982190371,
+      "fresh_GPU_score": 0.0005678812158294022,
+      "cached_GPU_score": 0.0005677249282598495,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos47/Part4.jpg",
+      "label": 0,
+      "CPU_score": 1.4717811609443743e-05,
+      "fresh_GPU_score": 1.4718547390657477e-05,
+      "cached_GPU_score": 1.4718652892042883e-05,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos47/Part5.jpg",
+      "label": 0,
+      "CPU_score": 3.1493138976657065e-06,
+      "fresh_GPU_score": 3.149042186123552e-06,
+      "cached_GPU_score": 3.1489585126109887e-06,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos47/Part6.jpg",
+      "label": 0,
+      "CPU_score": 3.3733584814399364e-08,
+      "fresh_GPU_score": 3.3732604265424015e-08,
+      "cached_GPU_score": 3.3733289939164024e-08,
+      "detected": false
+    },
+    {
+      "id": "kolektor_sdd1/kos47/Part7.jpg",
+      "label": 0,
+      "CPU_score": 4.507683479459956e-05,
+      "fresh_GPU_score": 4.507740231929347e-05,
+      "cached_GPU_score": 4.507646008278243e-05,
+      "detected": false
+    }
+  ]
+}
