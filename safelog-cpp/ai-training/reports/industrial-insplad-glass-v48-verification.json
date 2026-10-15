@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "parent_all_tensor_buffer_metadata_exact": true,
+  "approved_corrosion_all_tensor_buffer_metadata_exact": true,
+  "disk_delta_restore_exact": true,
+  "legacy_Python_SHA_files": 728,
+  "protected_stat_files": 326669,
+  "whole_protected_source_SHA_recalculated": false,
+  "actual_optimizer_updates": 1920,
+  "new_units_passed": 3,
+  "new_API_CPP_ZIP_checks": 0,
+  "accepted_v16_unchanged": true,
+  "delta_not_standalone_app_model": true
+}
