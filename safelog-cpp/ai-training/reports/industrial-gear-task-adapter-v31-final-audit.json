@@ -1,0 +1,214 @@
+{
+  "UTC": "2026-10-15T09:47:41.820502+00:00",
+  "status": "v31_complete_rejected_v16_retained",
+  "preregistered_commit": "805ac1de165efa67c21f79fe2b99f76ffc759fe6",
+  "active_model": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_model_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "active_role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "active_role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "research_delta": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-task-adapter-v31\\trained\\final-delta.pt",
+  "research_delta_sha256": "ade3a49d3bc2df4dd31f369ed3bc36068b3d8499984e4aae9403015f3b054953",
+  "delta_verification": {
+    "all_state_and_metadata_exact": true,
+    "delta_sha256": "ade3a49d3bc2df4dd31f369ed3bc36068b3d8499984e4aae9403015f3b054953",
+    "delta_bytes": 42125,
+    "parent_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+    "combined_state_sha256": "f30f99362765361fd444705cfb9c621c66a383dbb1008004fc92bd181b1ad6b2",
+    "old_files_deleted": 0
+  },
+  "research_delta_needs_parent_not_standalone_app": true,
+  "training": {
+    "completed_epochs": 30,
+    "actual_optimizer_updates": 1920,
+    "selected_epoch": 0,
+    "selected_actual_updates": 0,
+    "VAL_macro_group_BCE": 0.5879039764404297,
+    "initial_VAL_macro_group_BCE": 0.5879039764404297,
+    "FIT_patches": 5466,
+    "VAL_patches": 1440,
+    "replayed_partial_epoch_updates": 0,
+    "trainable_parameters": 3293
+  },
+  "selection": {
+    "UTC": "2026-10-15T09:41:35.304034+00:00",
+    "research_delta_sha256": "ade3a49d3bc2df4dd31f369ed3bc36068b3d8499984e4aae9403015f3b054953",
+    "training": {
+      "completed_epochs": 30,
+      "actual_optimizer_updates": 1920,
+      "selected_epoch": 0,
+      "selected_actual_updates": 0,
+      "VAL_macro_group_BCE": 0.5879039764404297,
+      "initial_VAL_macro_group_BCE": 0.5879039764404297,
+      "FIT_patches": 5466,
+      "VAL_patches": 1440,
+      "replayed_partial_epoch_updates": 0,
+      "trainable_parameters": 3293
+    },
+    "threshold": 0.6202917695045471,
+    "rates": {
+      "tp": 772,
+      "fn": 470,
+      "fp": 168,
+      "tn": 769,
+      "positive_photos": 1242,
+      "negative_photos": 937,
+      "fnr": 0.3784219001610306,
+      "fpr": 0.17929562433297758
+    },
+    "AUROC": 0.8123125677763514,
+    "by": {
+      "physical_part_id": {
+        "1": {
+          "tp": 258,
+          "fn": 136,
+          "fp": 1,
+          "tn": 1,
+          "positive_photos": 394,
+          "negative_photos": 2,
+          "fnr": 0.34517766497461927,
+          "fpr": 0.5
+        },
+        "2": {
+          "tp": 228,
+          "fn": 161,
+          "fp": 0,
+          "tn": 7,
+          "positive_photos": 389,
+          "negative_photos": 7,
+          "fnr": 0.4138817480719794,
+          "fpr": 0.0
+        },
+        "21": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 19,
+          "tn": 241,
+          "positive_photos": 52,
+          "negative_photos": 260,
+          "fnr": 0.0,
+          "fpr": 0.07307692307692308
+        },
+        "23": {
+          "tp": 0,
+          "fn": 6,
+          "fp": 55,
+          "tn": 378,
+          "positive_photos": 6,
+          "negative_photos": 433,
+          "fnr": 1.0,
+          "fpr": 0.12702078521939955
+        },
+        "3": {
+          "tp": 232,
+          "fn": 164,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 396,
+          "negative_photos": 0,
+          "fnr": 0.41414141414141414,
+          "fpr": null
+        },
+        "34": {
+          "tp": 2,
+          "fn": 3,
+          "fp": 93,
+          "tn": 142,
+          "positive_photos": 5,
+          "negative_photos": 235,
+          "fnr": 0.6,
+          "fpr": 0.39574468085106385
+        }
+      },
+      "group_id": {
+        "2": {
+          "tp": 2,
+          "fn": 3,
+          "fp": 93,
+          "tn": 142,
+          "positive_photos": 5,
+          "negative_photos": 235,
+          "fnr": 0.6,
+          "fpr": 0.39574468085106385
+        },
+        "4": {
+          "tp": 0,
+          "fn": 6,
+          "fp": 55,
+          "tn": 378,
+          "positive_photos": 6,
+          "negative_photos": 433,
+          "fnr": 1.0,
+          "fpr": 0.12702078521939955
+        },
+        "48": {
+          "tp": 718,
+          "fn": 461,
+          "fp": 1,
+          "tn": 8,
+          "positive_photos": 1179,
+          "negative_photos": 9,
+          "fnr": 0.39100932994062765,
+          "fpr": 0.1111111111111111
+        },
+        "5": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 19,
+          "tn": 241,
+          "positive_photos": 52,
+          "negative_photos": 260,
+          "fnr": 0.0,
+          "fpr": 0.07307692307692308
+        }
+      }
+    },
+    "eligible_pending_package_checks": false,
+    "TEST_patches": 2179,
+    "TEST_connected_groups": 4,
+    "group_bootstrap_95percent": [
+      [
+        0.07434944237918216,
+        0.037037037037037035
+      ],
+      [
+        0.39215686274509803,
+        0.8181818181818182
+      ]
+    ],
+    "bootstrap_valid_draws": 1000,
+    "new_independent_field_validation": false,
+    "whole_equipment_health_or_verified_location": false,
+    "existing_bracket_tube_transferred_or_replaced": false
+  },
+  "verification": {
+    "status": "passed",
+    "accepted_v16_all_tensor_buffer_metadata_exact": true,
+    "v28_FIT_mean_std_exact": true,
+    "legacy_python_SHA_checked": 674,
+    "protected_stat_unchanged": 104257,
+    "changed_metadata_SHA_rechecked": 0,
+    "all_protected_SHA_reread": false,
+    "actual_optimizer_updates": 1920,
+    "new_unit_tests_passed": 3,
+    "research_delta_bytes": 42125,
+    "research_delta_restore_exact": true,
+    "new_RGB_encoderfeatures": 0,
+    "eligible_pending_package_checks": false,
+    "new_API_CPP_ZIP_checks": 0,
+    "active_v16_retained_pending_release": true
+  },
+  "selected_epoch0_means_no_new_learned_improvement": true,
+  "v29_actual_optimizer": 1920,
+  "v30_actual_optimizer": 1920,
+  "this_turn_v29_v30_v31_actual_optimizer": 5760,
+  "tracked_partial_research_optimizer_including_failed": 37840,
+  "tracked_sum_not_entire_history": true,
+  "new_RGB_encoder_features_in_v31": 0,
+  "new_API_CPP_ZIP_checks": 0,
+  "new_ZIPs": 0,
+  "new_independent_field_validation": false,
+  "old_app_tasks_positions_current8of12_targets_unchanged": true,
+  "awake_helper_restarted": false,
+  "free_disk_bytes": 3906351104,
+  "next": "Preregister VAL-only selected-versus-last-checkpoint ranking/calibration diagnostic and development-only label/group consistency audit; no new optimizer or TEST scoring, no repeated architecture/threshold variants until the source of stagnation is checked."
+}

@@ -1,0 +1,50 @@
+{
+  "UTC": "2026-10-15T09:49:08.214010+00:00",
+  "fixed_before_new_diagnostic_VAL_scores": true,
+  "source_sha256": {
+    "safelog_ai/group_rank_metrics.py": "71113735fcae06ea478f442e5b07cecde28e43ecc582f9fad4262a1b5561821c",
+    "scripts/diagnose_gear_selection.py": "a70f2024099fb0ba04c81762450419e4426b1353f77519c884d74fa31a53775a",
+    "tests/test_group_rank_metrics.py": "db40cca0d2d3a4ea1498095ae716a32489affa9c08667d9c675bff361f4622f0"
+  },
+  "manifest_sha256": "fe7fce446e34002d47a24c0ad6b106468e8c128209739164d2e511705ae8779d",
+  "models": {
+    "v28": {
+      "selected": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-only-v28\\trained\\final.pt",
+      "selected_sha256": "0669d9b988aa5ab3e4bfe414a078e140f61757d9bf06828dc56538cf474bf96f",
+      "last": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-only-v28\\progress.pt",
+      "last_sha256": "261e0eda5618ba966141eb5f14cc820de54b197a034eaad7472811d2b3a5fcf5",
+      "training_sha256": "0a93322253e090523f598df6222ba10e10c1b13d5d96c151f149f1ee9001655e"
+    },
+    "v29": {
+      "selected": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-spatial-v29\\trained\\final.pt",
+      "selected_sha256": "208240ca2bc64c398010f3cbdbc3609ed077e3875081bcfbddedadf3770195f6",
+      "last": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-spatial-v29\\progress.pt",
+      "last_sha256": "f4a2fd1b7cf01f8aeab00287b2677b474de1a254adfabaf7318afbf6feb21e2a",
+      "training_sha256": "225ad910bdee8695d61caf3784394bcbaf3294e53a550ed596ad694824519faf"
+    },
+    "v30": {
+      "selected": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-residual-v30\\trained\\final.pt",
+      "selected_sha256": "a7c85beec97adaa1616ae9aaf6891f118c0ca5f5e797fd866df3aa0db47da22e",
+      "last": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-residual-v30\\progress.pt",
+      "last_sha256": "6315ef7aa97f4afdcb1677cb0324cf70f5f0c280986a715da3edf2160a746ac0",
+      "training_sha256": "c08b07d2dd20821408142d96f46eee6f4ac9ae2d8485747725d67d4be2990214"
+    },
+    "v31": {
+      "selected": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-task-adapter-v31\\trained\\final-delta.pt",
+      "selected_sha256": "ade3a49d3bc2df4dd31f369ed3bc36068b3d8499984e4aae9403015f3b054953",
+      "last": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-task-adapter-v31\\progress.pt",
+      "last_sha256": "54aec1707cd6e8911fb6acb162ab625bd05e2c5ec85e37aae06499140ada3ab9",
+      "training_sha256": "bcb969b0c0b5f6e6e263f43cfd1f137eab3a01a0812edaa96f4210854176547b"
+    }
+  },
+  "fine_VAL_sha256": "ead65fbfc921d27411ea66683fd4bec1461909a569d10f0c9f141a15fd0e8263",
+  "near_pairs_sha256": "ec17066b3e55b0609589b6bfb54f25e7d6bfab5050c89b6279c719c1fdb1b3b2",
+  "scope": "exact8views selected and lastcompleteepoch for v28/v29/v30/v31 on same VAL1440 only; no training,checkpointpromotion,thresholdselection,CAL/TESTscoring,newRGB,or labelchanges",
+  "metrics": "same macro perlabel/group BCE reproduce selected storedvalue abs<=2e-6; unweightedAUROC and weightedAUROC with perlabel/group inversecounts, fixed metrics no variants",
+  "label_audit": "FIT/VAL gear metadata only: exactRGB contradictorylabels, withinphase opposite-label pHash<=2 pairs, no automatic reannotation; report componentclassimbalance",
+  "source_note": "author paper https://arxiv.org/pdf/2511.15440 explicitly discusses percomponent classimbalance and componentappearance shortcuts; labels are manually assigned patchwear acceptance, not assumed labelerrors",
+  "actual_new_optimizer_updates": 0,
+  "new_TEST_scores": 0,
+  "new_unit_tests_passed": 3,
+  "future_training_protocol_fixed": false
+}
