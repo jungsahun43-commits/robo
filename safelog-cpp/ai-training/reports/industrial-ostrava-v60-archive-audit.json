@@ -1,0 +1,16 @@
+{
+  "UTC": "2026-10-15T18:39:33.567651+00:00",
+  "policy_sha256": "9ad8de76032691b6092e81943fc51d84931e675263e99f3055fa82dd2cad20d8",
+  "archive_bytes": 384363293,
+  "local_archive_sha256": "874a60cd8e9e92476c2314bd6acfcac7dc0f64eb797ea220a091a96681de50c5",
+  "publisher_MD5_matched": "e30f1f62eb85018c2faee44909e69a06",
+  "all_inner_files_CRC_and_encodedSHA_checked": true,
+  "members": 220,
+  "files": 210,
+  "declared_expanded_bytes": 389257729,
+  "member_list_sha256": "eb926bdbb45324a48d4293acabb9b99c7a2d2e9f9213623b99598bc32528659a",
+  "new_pixel_decode_contentview_features_scores_optimizer": 0,
+  "full_extraction_or_code_execution": false,
+  "training_protocol_fixed": false,
+  "independent_field_validation": false
+}
