@@ -1,0 +1,39 @@
+{
+  "UTC": "2026-10-15T13:31:22.410975+00:00",
+  "source_sha256": "0371dc6a1b4b04195d951ece90a6152f09e4a89d2625d17b125fcd4890402119",
+  "script_sha256": "2225189311ed9a14ad3080db980723e814d31ac220ac3a659e78a0bc0a7960d9",
+  "allocation_code_sha256": "da768495783a42e2a5d5a781182caf1ea275c4dbcf0492966ea4abc2ac5242ac",
+  "archive_sha256": "562e33ca768aac532569f9976c534640327d082402c0efbf140d93c8638fb4a8",
+  "scope": "publisher cropped glass insulator good vsmissing-cap; not electrical health/whole scene/defect pixelmask",
+  "reuse": "fixed all11525 source frame/exactRGB/8orientationpHash2 groups and retained8995TEST audit fromv44; no refingerprinting/redecode/redownload/relabeling",
+  "reserved": "all59original publisherVAL glass photographs evaluation only; no FIT/internalVAL/CAL use",
+  "FIT_candidates": "original filename-base glass TRAIN with phase unselected_asset_TRAIN only; all globalTEST exclusions/variants unchanged",
+  "split": "same insplad_split.allocate rule once: labelsetstrata, SHA(insplad44:+groupminmember),ceil15percent VAL,nextceil15percentCAL,restFIT, strata<3allFIT; no score-based retries",
+  "minimums": {
+    "fit": {
+      "0": 30,
+      "1": 20
+    },
+    "validation": {
+      "0": 20,
+      "1": 5
+    },
+    "cal": {
+      "0": 20
+    },
+    "test": {
+      "0": 20,
+      "1": 20
+    }
+  },
+  "groups_per_required_label": 3,
+  "disk": "export unchanged selected memberbytes only <=128MiB and>=1GiBreserve, numeric paths; sourceZIPpreserved",
+  "selection_reason": "original label support547normal/56missingcap and originalVAL29/30, TRAIN10/VAL5 dates contain bothlabels vs upper-shackle3/1; metadata only, no new photos viewed/model scores",
+  "date_caution": "bothlabeldates do not prove same physicalpart or site/flight independence; report actualdate support, not fieldvalidation",
+  "QA": "after finalsplit first3FITperlabel only, no TESTcontentviewing or GTmodification; no agent QA performed by this dataexport script",
+  "failure": "preserve and stop before features/optimizer; no relaxed minimum or repartition",
+  "training_protocol_fixed": false,
+  "new_model_features_scores_optimizer": 0,
+  "next_model_constraint": "preserve v16 allstate plus approved v45corrosionhead exactly; one sharedencoder, separate new glass classification branch only, fixedtrainingprotocol before features/gradient; no discarded head reuse",
+  "license": "InsPLAD MendeleyV1 CC BY-NC3.0 DOI10.17632/5n3fjgvfyz.1 paper10.1080/01431161.2023.2283900, noncommercial academic citation/source/version/change, inherited licenses unchanged"
+}
