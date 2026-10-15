@@ -1,0 +1,77 @@
+{
+  "UTC": "2026-10-15T08:06:07.657879+00:00",
+  "ready": true,
+  "policy_sha256": "9798208ea8aeb50548183a1ea9a80600ad2449b1aff2f588cbdfde7bba9691ab",
+  "v25_manifest_sha256": "ad2bf24e87455bccb3805b0d7eca5f3e55d752b72cace302ec8f1fb9bbbe2ed7",
+  "counts": {
+    "fit": {
+      "0": 4024,
+      "1": 4196
+    },
+    "validation": {
+      "1": 617,
+      "0": 787
+    },
+    "cal": {
+      "1": 693,
+      "0": 845
+    },
+    "test": {
+      "0": 1674,
+      "1": 1435
+    }
+  },
+  "groups_by_phase": {
+    "fit": [
+      "1",
+      "108",
+      "13",
+      "145",
+      "16",
+      "19",
+      "21",
+      "25",
+      "3",
+      "35",
+      "40",
+      "447",
+      "54",
+      "7",
+      "72",
+      "8",
+      "971"
+    ],
+    "validation": [
+      "0",
+      "12",
+      "162",
+      "53"
+    ],
+    "cal": [
+      "30",
+      "44",
+      "49",
+      "83"
+    ],
+    "test": [
+      "18",
+      "2",
+      "4",
+      "41",
+      "48",
+      "5",
+      "6"
+    ]
+  },
+  "existing_TEST_fingerprinted": 5746,
+  "old_TEST_matches": {},
+  "inherited_internal_near_pairs": 2691,
+  "reserved_author_TEST_ids_preserved": true,
+  "metadata_and_pixel_groups_disjoint": true,
+  "TEST_used_for_split_objective": false,
+  "new_features_scores_optimizer_updates": 0,
+  "unannotated_PNGs_excluded": 103,
+  "TRAIN_patches_excluded_by_TEST_group": 1317,
+  "publisher128patch_label_not_whole_health_or_mask": true,
+  "new_unit_tests_passed": 3
+}
