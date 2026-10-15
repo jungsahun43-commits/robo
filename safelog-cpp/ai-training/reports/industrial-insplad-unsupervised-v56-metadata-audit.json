@@ -1,0 +1,231 @@
+{
+  "UTC": "2026-10-15T17:25:14.351991+00:00",
+  "scope": "encodedbytes and frame metadata only",
+  "all_photos": 27620,
+  "all_raw_unique": 27619,
+  "all_proxy_groups": 9834,
+  "publisher_TEST_reserved": 6481,
+  "all_source_raw_exact": 8990,
+  "old8995TEST_raw_exact_matches": 0,
+  "by_asset": {
+    "damper-preformed": {
+      "TRAIN": 816,
+      "TEST": 204,
+      "TRAIN_TEST_connected_excluded": 136,
+      "unassigned_TRAIN_needs_pixel_audit": 680,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 680,
+      "TEST_conditions": {
+        "good": 204
+      }
+    },
+    "damper-stockbridge": {
+      "TRAIN": 5215,
+      "TEST": 1756,
+      "TRAIN_TEST_connected_excluded": 5070,
+      "unassigned_TRAIN_needs_pixel_audit": 145,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 145,
+      "TEST_conditions": {
+        "good": 1738,
+        "rust": 18
+      }
+    },
+    "glass-insulator": {
+      "TRAIN": 2298,
+      "TEST": 671,
+      "TRAIN_TEST_connected_excluded": 732,
+      "unassigned_TRAIN_needs_pixel_audit": 1566,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 1182,
+      "TEST_conditions": {
+        "good": 581,
+        "missingcap": 90
+      }
+    },
+    "glass-insulator-big-shackle": {
+      "TRAIN": 207,
+      "TEST": 62,
+      "TRAIN_TEST_connected_excluded": 100,
+      "unassigned_TRAIN_needs_pixel_audit": 107,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 107,
+      "TEST_conditions": {
+        "good": 52,
+        "rust": 10
+      }
+    },
+    "glass-insulator-small-shackle": {
+      "TRAIN": 210,
+      "TEST": 54,
+      "TRAIN_TEST_connected_excluded": 118,
+      "unassigned_TRAIN_needs_pixel_audit": 92,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 92,
+      "TEST_conditions": {
+        "good": 53,
+        "nest": 1
+      }
+    },
+    "glass-insulator-tower-shackle": {
+      "TRAIN": 165,
+      "TEST": 37,
+      "TRAIN_TEST_connected_excluded": 90,
+      "unassigned_TRAIN_needs_pixel_audit": 75,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 75,
+      "TEST_conditions": {
+        "good": 30,
+        "rust": 7
+      }
+    },
+    "lightning-rod-shackle": {
+      "TRAIN": 165,
+      "TEST": 34,
+      "TRAIN_TEST_connected_excluded": 25,
+      "unassigned_TRAIN_needs_pixel_audit": 140,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 140,
+      "TEST_conditions": {
+        "good": 30,
+        "rust": 4
+      }
+    },
+    "lightning-rod-suspension": {
+      "TRAIN": 462,
+      "TEST": 167,
+      "TRAIN_TEST_connected_excluded": 215,
+      "unassigned_TRAIN_needs_pixel_audit": 247,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 0,
+      "TEST_conditions": {
+        "good": 117,
+        "rust": 50
+      }
+    },
+    "plate": {
+      "TRAIN": 182,
+      "TEST": 36,
+      "TRAIN_TEST_connected_excluded": 0,
+      "unassigned_TRAIN_needs_pixel_audit": 182,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 182,
+      "TEST_conditions": {
+        "good": 32,
+        "peeling-paint": 4
+      }
+    },
+    "polymer-insulator": {
+      "TRAIN": 2421,
+      "TEST": 627,
+      "TRAIN_TEST_connected_excluded": 791,
+      "unassigned_TRAIN_needs_pixel_audit": 1630,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 1630,
+      "TEST_conditions": {
+        "good": 605,
+        "torned-up": 22
+      }
+    },
+    "polymer-insulator-lower-shackle": {
+      "TRAIN": 1306,
+      "TEST": 642,
+      "TRAIN_TEST_connected_excluded": 1163,
+      "unassigned_TRAIN_needs_pixel_audit": 143,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 143,
+      "TEST_conditions": {
+        "good": 327,
+        "rust": 315
+      }
+    },
+    "polymer-insulator-tower-shackle": {
+      "TRAIN": 42,
+      "TEST": 22,
+      "TRAIN_TEST_connected_excluded": 5,
+      "unassigned_TRAIN_needs_pixel_audit": 37,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 37,
+      "TEST_conditions": {
+        "good": 10,
+        "rust": 12
+      }
+    },
+    "polymer-insulator-upper-shackle": {
+      "TRAIN": 935,
+      "TEST": 337,
+      "TRAIN_TEST_connected_excluded": 152,
+      "unassigned_TRAIN_needs_pixel_audit": 783,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 265,
+      "TEST_conditions": {
+        "good": 235,
+        "rust": 102
+      }
+    },
+    "spacer": {
+      "TRAIN": 75,
+      "TEST": 19,
+      "TRAIN_TEST_connected_excluded": 15,
+      "unassigned_TRAIN_needs_pixel_audit": 60,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 60,
+      "TEST_conditions": {
+        "good": 19
+      }
+    },
+    "vari-grip": {
+      "TRAIN": 477,
+      "TEST": 225,
+      "TRAIN_TEST_connected_excluded": 382,
+      "unassigned_TRAIN_needs_pixel_audit": 95,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 0,
+      "TEST_conditions": {
+        "good": 114,
+        "nest": 63,
+        "rust": 48
+      }
+    },
+    "yoke": {
+      "TRAIN": 1329,
+      "TEST": 332,
+      "TRAIN_TEST_connected_excluded": 1295,
+      "unassigned_TRAIN_needs_pixel_audit": 34,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 34,
+      "TEST_conditions": {
+        "good": 332
+      }
+    },
+    "yoke-suspension": {
+      "TRAIN": 4834,
+      "TEST": 1256,
+      "TRAIN_TEST_connected_excluded": 4829,
+      "unassigned_TRAIN_needs_pixel_audit": 5,
+      "rawnovel_unassigned_TRAIN_needs_pixel_audit": 0,
+      "TEST_conditions": {
+        "good": 1207,
+        "rust": 49
+      }
+    }
+  },
+  "newTEST_prior_development_connected_photos": {
+    "v45_approved": {
+      "fit": 204,
+      "cal": 47,
+      "validation": 45
+    },
+    "v48_approved": {
+      "fit": 171,
+      "validation": 33,
+      "cal": 45
+    },
+    "v51_approved": {
+      "cal": 22,
+      "fit": 77,
+      "validation": 24
+    },
+    "v54_rejected": {
+      "fit": 60,
+      "validation": 13,
+      "cal": 13
+    }
+  },
+  "TRAIN_excluded": 15118,
+  "unassigned_TRAIN_needs_pixel_audit": 6021,
+  "rawnovel_unassigned_TRAIN_needs_pixel_audit": 4772,
+  "rawexact_and_frame_match_do_not_prove_physicalidentity": true,
+  "pixel_near_independence_audit_completed": false,
+  "source_and_previous_TEST_not_used_for_new_training": true,
+  "new_pixel_decodes_features_scores_optimizer": 0,
+  "existing_weights_splits_and_GT_unchanged": true,
+  "independent_field_validation": false,
+  "policy_sha256": "92729a1564b9dfdbe456b45364c133234e6d070d3cc4b99e71f2024b34988466",
+  "archive_sha256": "baab1d227b408ec6bbe5831cbcae5ea049a9b5132a74bf36f4e3d6051b0cb7e3",
+  "rows_sha256": "a98aa6eb783473f7f6af3f2a9f88d2afd14269448915542180516a9787b83889"
+}
