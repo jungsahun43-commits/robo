@@ -1,0 +1,26 @@
+{
+  "UTC": "2026-10-15T10:10:04.412067+00:00",
+  "research_delta_sha256": "f4083c491bff963ad8c57143e0bd66f2c772b77e25bed2aa1f787aded3967bb9",
+  "training": {
+    "completed_epochs": 30,
+    "actual_optimizer_updates": 1920,
+    "selected_epoch": 0,
+    "selected_actual_updates": 0,
+    "VAL_macro_group_BCE": 0.5879039764404297,
+    "initial_VAL_macro_group_BCE": 0.5879039764404297,
+    "FIT_patches": 5466,
+    "VAL_patches": 1440,
+    "replayed_partial_epoch_updates": 0,
+    "trainable_parameters": 3293,
+    "temperature": 0.2,
+    "auxiliary_weight": 0.1
+  },
+  "eligible_pending_package_checks": false,
+  "CAL_TEST_skipped": true,
+  "reason": "selectedepoch0_ineligible_before_CAL_TEST",
+  "new_CAL_scores": 0,
+  "new_TEST_scores": 0,
+  "TEST_patches": 0,
+  "new_independent_field_validation": false,
+  "existing_bracket_tube_transferred_or_replaced": false
+}
