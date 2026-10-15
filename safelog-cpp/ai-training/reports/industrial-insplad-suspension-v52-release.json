@@ -1,0 +1,170 @@
+{
+  "status": "passed",
+  "overlay_archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\insplad-three-tasks-role4-research-overlay-2026-10-16-v51.zip",
+  "archive_sha256": "551b66ca3adb02d9b67f3449077f5e7e9b1e991dc24a11e0cbd3972ed1045ff4",
+  "archive_bytes": 9134056,
+  "effective_combined_tensor_state_sha256": "bb388200af167ffde35f6281a5e4626be904f9026411c401151e9bc3b4d7c45a",
+  "parent_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "delta_sha256": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc",
+  "fresh_packaged_RGB_CPU_GPU_cached_decisions_exact": 251,
+  "all_old_CPU_aliases_checked": 17,
+  "new_CPU_aliases_checked": 1,
+  "explicit_new_equipment_category_checked": true,
+  "old_classResults_and_policy_exact": true,
+  "old_PNG_strings_exact": 24,
+  "current_real_CPP_operations": 21,
+  "CPP_cases": [
+    {
+      "inspectionTask": "ksdd2_surface",
+      "modelSha256": "bb388200af167ffde35f6281a5e4626be904f9026411c401151e9bc3b4d7c45a",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "ball_screw_pitting",
+      "modelSha256": "bb388200af167ffde35f6281a5e4626be904f9026411c401151e9bc3b4d7c45a",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "loco_splicing_connectors",
+      "modelSha256": "bb388200af167ffde35f6281a5e4626be904f9026411c401151e9bc3b4d7c45a",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "mpdd_bracket_black",
+      "modelSha256": "bb388200af167ffde35f6281a5e4626be904f9026411c401151e9bc3b4d7c45a",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "insplad_upper_shackle_rust",
+      "modelSha256": "bb388200af167ffde35f6281a5e4626be904f9026411c401151e9bc3b4d7c45a",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "insplad_glass_missing_cap",
+      "modelSha256": "bb388200af167ffde35f6281a5e4626be904f9026411c401151e9bc3b4d7c45a",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "insplad_lightning_suspension_rust",
+      "modelSha256": "bb388200af167ffde35f6281a5e4626be904f9026411c401151e9bc3b4d7c45a",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    }
+  ],
+  "old_alias_proofs": [
+    {
+      "task": "facility_surface",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "belt_damage",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "conveyor_foreign",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "ad_cable",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "ad_screw",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "ad_metal_nut",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "loco_splicing_connectors",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_bracket_black",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_bracket_brown",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_bracket_white",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_connector",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_metal_plate",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_tubes",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "ksdd2_surface",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "ball_screw_pitting",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "insplad_upper_shackle_rust",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "insplad_glass_missing_cap",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    }
+  ],
+  "unknown_or_mismatched_inputs_rejected422": true,
+  "owned_server_stopped": true,
+  "previous_v46_and_v49_proofs_preserved_not_recounted": true,
+  "fresh_Qt_unit_tests": {
+    "status": "passed",
+    "test_functions_including_init_cleanup": 12,
+    "actual_tests": 10,
+    "fresh_build": true
+  },
+  "new_optimizer": 0,
+  "one_shared_encoder": true,
+  "parent_checkpoint_duplicated": false,
+  "default_v16_automatically_replaced": false,
+  "independent_field_validation": false,
+  "APK_built": false,
+  "fresh_pip_install_tested": false
+}
