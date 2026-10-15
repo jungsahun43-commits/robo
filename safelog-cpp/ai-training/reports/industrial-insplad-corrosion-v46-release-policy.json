@@ -1,0 +1,28 @@
+{
+  "UTC": "2026-10-15T13:22:39.985934+00:00",
+  "fixed_before_packaged_CPU_GPU_or_API_checks": true,
+  "sources": {
+    "safelog_ai/insplad_server.py": "d6670688648f23163ed4192c88a6f311e5bc3301f7d44f9ea84c163eff240900",
+    "scripts/release_insplad_corrosion.py": "3b0724c9e19aee23d0be1a7d8034d0357dd258f417a51754fa49cdfcb7a4fcd4",
+    "scripts/verify_insplad_bundle.py": "f8fdfea2c516c88d6d101e73aa3c64826d89917377e7882f144cea43f569bfc3",
+    "tests/test_insplad_server_contract.py": "bec59b230df5cf498bbbd9b6449b735c085bd541bfe6e28f771b73672535e949"
+  },
+  "training_protocol_sha256": "b0426e47642ea6bdd1901656c3648b0d25bfc5d0ed8de2598ee5a9c0e4ef0ea9",
+  "delta_sha256": "6c1fec4fd86cfcd9ac42f8196c449879ad090b2bafdee045fd9269542e25124d",
+  "parent_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "selection_sha256": "644483bf7411dce4e128a6b1c87f00d23290227ef6d22142b0fc154843c170ec",
+  "calibration_sha256": "f3d81aeb311446f8164a6df94e1ed4352b0a98f78e544f3bf13c110e9cd15fc9",
+  "overlay_only": "small delta+Python+calibration+source evaluation; originalv16-r1 model.pt/evaluation.json required, no duplicate435MBmodel/densecache",
+  "identity": "API modelSha256 is delta-bound combinedtensorstateSHA, NOT model.pt fileSHA; parentCheckpointSha256 anddeltaSha256 separate; still one active sharedencoder/model",
+  "device_guard": "all64originalRGB freshCPU/freshGPU/cachedGPU decisions exact; probability atol5e-4 rtol1e-3 fixed before newCPU/GPU comparisons; unchanged threshold",
+  "old_aliases": "all15 existingtaskaliases one firstFIT each CPU; exact classResults,policySHA andallprimary/auxiliaryPNG strings compared with unchangedparentCPU; no claim these are15accuracy evaluations",
+  "CPP": "existing compiledQtprobe, currentoldKS2/BS/LOCO/blackbracket andnewupper-shackle cases,3operations each=15newoperations; outputfiles andexit0 required; no pastchecks reused",
+  "input_guard": "explicitnewtaskalias or matched equipment_surface/category; genericunknown/mismatchedcategory422; cropminside64. Domain manuallyselected, not automaticallyverified.",
+  "scope": "sourcephoto20percent benchmark only; date-labelcorrelation/physicalparts unverified; no overallmachinehealth/location/independentfieldclaim",
+  "location": "newclassifier no map; allold exposedmap outputs preserved; no synthetic/CAM/mask promotion",
+  "release_guard": "ZIPCRC/memberSHA,sourceCPU_GPU,currentCPU16aliases,CPP15operations andoldPNGexact allpass before researchhandoff; existingdefaultv16-r1 not automaticallyswitched",
+  "storage": "newoverlayZIP/isolatedcode each<32MiB,sourceproofs<8MiB,existingparentusedread-only,>=1GiBfree; no deletions",
+  "new_optimizer": 0,
+  "new_units_passed": 3,
+  "APK_or_fresh_pip_install_tested": false
+}
