@@ -1,0 +1,62 @@
+{
+  "UTC": "2026-10-15T17:05:21.131690+00:00",
+  "fixed_before_new_split_or_content_view": true,
+  "script_sha256": "9cff068692465655c4b3e1e6d7e2455a6f267b4a825fe48d7376232e181a4894",
+  "source_sha256": "0371dc6a1b4b04195d951ece90a6152f09e4a89d2625d17b125fcd4890402119",
+  "allocation_code_sha256": "da768495783a42e2a5d5a781182caf1ea275c4dbcf0492966ea4abc2ac5242ac",
+  "archive_sha256": "562e33ca768aac532569f9976c534640327d082402c0efbf140d93c8638fb4a8",
+  "prior_development_manifests": {
+    "data/industrial-insplad-grouped-v44/manifest.json": "e7d3d95b09d90913897bf2524af8dcc6a42b473d04a290d0862466ac3213f476",
+    "data/industrial-insplad-glass-v47/manifest.json": "bf2a4f0b8fce37079a96c1dba78a4cc0b61734ec5cc3137876bf9d6abf2adab1",
+    "data/industrial-insplad-lightning-v50/manifest.json": "308e19f2352e48302f6bd5826fd6102c5029440b92f8e9df82db8cb142f19d87"
+  },
+  "scope": "publisher vari-grip cropped photographs with original good/bird-nest/rust condition names; no pixelGT/internal or whole equipment health labels",
+  "label_contract": "source binary label0 meansgood and1 meansbird-nest ORrust. Keep original condition separate; original multiclass numeric1=good, notdamage. No automatic relabeling.",
+  "source_audit_reused": "all11525 source frame/exactRGB/eightorientationpHash2 groups, global publisherVAL6417 reservation, TEST-linkedTRAIN1045 exclusions and original filename-base policy; no new fingerprint/decode/download",
+  "FIT_candidates": "vari-grip phase unselected_asset_TRAIN only, publisher train and filename-base required, original good165/bird-nest22/rust19 before prior-role exclusions",
+  "TEST": "every original publisherVAL vari-grip member unchanged, good238/bird-nest23/rust20=281; report filename-base/variant counts and do not count known variants as independent natural parts",
+  "allocation": "collect prior v45/v48/v51 group developmentroles. One priorrole locks thatrole, conflictingroles exclude. Remaining groups once with unchanged insplad_split.allocate labelsetstrata SHA15/15/70, no score/content-driven retries.",
+  "minimum_photos": {
+    "fit": {
+      "good": 30,
+      "bird-nest": 10,
+      "rust": 10
+    },
+    "validation": {
+      "good": 20,
+      "bird-nest": 2,
+      "rust": 2
+    },
+    "cal": {
+      "good": 20
+    },
+    "test": {
+      "good": 20,
+      "bird-nest": 20,
+      "rust": 20
+    }
+  },
+  "minimum_groups": {
+    "fit": {
+      "good": 3,
+      "bird-nest": 3,
+      "rust": 3
+    },
+    "validation": {
+      "bird-nest": 2,
+      "rust": 2
+    },
+    "test": {
+      "good": 3,
+      "bird-nest": 3,
+      "rust": 3
+    }
+  },
+  "failure": "preserve manifest/exclusions/audit and stop before imageexport/features/gradient if anyminimum fails. Do not lower conditions, repartition, add CAL/TEST toFIT, or report a trained model.",
+  "export": "only successful rows unchanged ZIPmemberbytes to numeric safe filenames, <=128MiB; perfile originalSHA/ZIPCRC checked, >=1GiBdiskreserve; originalZIP preserved",
+  "QA": "after successful finalsplit, fixedfirst3FIT sorted bymember percondition only. No selectedVAL_CAL_TEST contentview, originalGT edits or humanreview claim.",
+  "next_model": "NOT fixed. New singlebranch only after QA and exactcode/protocol preregistration; preserve v16+approvedv45/v48/v51 alltensor/buffer/meta; one encoder, no newcategory/source/date embedding, no classmask conversion.",
+  "license": "InsPLAD MendeleyV1 DOI10.17632/5n3fjgvfyz.1 CC BY-NC3.0 noncommercialacademic author/source/version/change attribution, paper10.1080/01431161.2023.2283900, other data licenses unchanged",
+  "physical_part_capture_independence_verified": false,
+  "new_neural_features_scores_gradient_optimizer": 0
+}
