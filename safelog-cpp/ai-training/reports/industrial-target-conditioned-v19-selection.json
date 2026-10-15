@@ -1,0 +1,165 @@
+{
+  "selected": {},
+  "categories": {
+    "mpdd_bracket_black": {
+      "parent": {
+        "tp": 17,
+        "fn": 30,
+        "fp": 4,
+        "tn": 28,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.6382978723404256,
+        "fpr": 0.125
+      },
+      "parent_by_defect": {
+        "hole": {
+          "photos": 12,
+          "fn": 5,
+          "fnr": 0.4166666666666667
+        },
+        "scratches": {
+          "photos": 35,
+          "fn": 25,
+          "fnr": 0.7142857142857143
+        }
+      },
+      "methods": {
+        "conditioned_only": {
+          "rates": {
+            "tp": 41,
+            "fn": 6,
+            "fp": 14,
+            "tn": 18,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.1276595744680851,
+            "fpr": 0.4375
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 3,
+              "fnr": 0.25
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 3,
+              "fnr": 0.08571428571428572
+            }
+          },
+          "eligible": false,
+          "auroc": 0.7746010638297872
+        },
+        "max_conditioned_parent": {
+          "rates": {
+            "tp": 37,
+            "fn": 10,
+            "fp": 12,
+            "tn": 20,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.2127659574468085,
+            "fpr": 0.375
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 2,
+              "fnr": 0.16666666666666666
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 8,
+              "fnr": 0.22857142857142856
+            }
+          },
+          "eligible": false,
+          "auroc": 0.800531914893617
+        }
+      }
+    },
+    "mpdd_tubes": {
+      "parent": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "parent_by_defect": {
+        "anomalous": {
+          "photos": 69,
+          "fn": 47,
+          "fnr": 0.6811594202898551
+        }
+      },
+      "methods": {
+        "conditioned_only": {
+          "rates": {
+            "tp": 11,
+            "fn": 58,
+            "fp": 5,
+            "tn": 27,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.8405797101449275,
+            "fpr": 0.15625
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 58,
+              "fnr": 0.8405797101449275
+            }
+          },
+          "eligible": false,
+          "auroc": 0.4533514492753623
+        },
+        "max_conditioned_parent": {
+          "rates": {
+            "tp": 12,
+            "fn": 57,
+            "fp": 3,
+            "tn": 29,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.8260869565217391,
+            "fpr": 0.09375
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 57,
+              "fnr": 0.8260869565217391
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6173007246376812
+        }
+      }
+    }
+  },
+  "training": {
+    "actual_optimizer_updates": 1920,
+    "scheduled_unique_updates": 1920,
+    "completed_epochs": 30,
+    "selected_epoch": 24,
+    "selected_epoch_updates": 1536,
+    "VAL_balanced_loss": 1.3763589165290622,
+    "positive_weight": 50.201717986019254,
+    "FIT_photos_including_procedural_variants": 609,
+    "VAL_photos_including_procedural_variants": 162,
+    "new_natural_target_fault_GT": 0,
+    "all_parent_tensors_exact": true,
+    "data_manifest_sha256": "b24d0f8a296fd5adbacce831b95a9a02bec54b996f5456fc633a6105bb37c7de"
+  },
+  "CAL_sha256": "95923dc2e3262ef32a3d89ebfc19627dcd0ca9409f56123a3f1ea290089f30ed",
+  "known_public_TEST_reused": true,
+  "independent_field_validated": false,
+  "new_natural_target_fault_GT": 0,
+  "primary_location_unchanged": true
+}

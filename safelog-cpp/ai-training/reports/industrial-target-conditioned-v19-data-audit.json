@@ -1,0 +1,42 @@
+{
+  "UTC": "2026-10-15T04:55:02.716898+00:00",
+  "counts": {
+    "fit": {
+      "mpdd_bracket_black": {
+        "normal": 70,
+        "synthetic": 258,
+        "positive_background_groups": 69,
+        "ready": true
+      },
+      "mpdd_tubes": {
+        "normal": 61,
+        "synthetic": 220,
+        "positive_background_groups": 60,
+        "ready": true
+      }
+    },
+    "validation": {
+      "mpdd_bracket_black": {
+        "normal": 18,
+        "synthetic": 71,
+        "positive_background_groups": 18,
+        "ready": true
+      },
+      "mpdd_tubes": {
+        "normal": 15,
+        "synthetic": 58,
+        "positive_background_groups": 15,
+        "ready": true
+      }
+    }
+  },
+  "ready": true,
+  "synthetic_failure_attempts": 1147,
+  "source_asset_failures": [],
+  "new_natural_target_fault_labels": 0,
+  "CAL_TEST_images_or_masks_used": false,
+  "source_and_target_FIT_VAL_groups_disjoint": true,
+  "input_foreground_is_part_or_defect_GT": false,
+  "physical_synthetic_fault_realism_verified": false,
+  "protocol_sha256": "b72a48f0d6f49a196ccc7a313b2b032bd6ec9af9c0d2dd7985e826dafda14882"
+}

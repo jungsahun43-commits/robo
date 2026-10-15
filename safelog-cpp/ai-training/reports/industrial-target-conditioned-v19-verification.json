@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "parent_all_tensors_buffers_metadata_exact": true,
+  "projection_exact_to_v18_warm_start": true,
+  "legacy_python_SHA_checked": 604,
+  "protected_stat_unchanged": 86616,
+  "changed_metadata_SHA_rechecked": 0,
+  "all_protected_SHA_reread": false,
+  "actual_optimizer_updates": 1920,
+  "new_unit_tests_passed": 3,
+  "selected": {},
+  "new_natural_target_fault_GT": 0,
+  "synthetic_physical_realism_verified": false,
+  "new_CPU_CPP_release_required_if_selected": false,
+  "active_parent_still_retained": true,
+  "independent_field_validated": false
+}

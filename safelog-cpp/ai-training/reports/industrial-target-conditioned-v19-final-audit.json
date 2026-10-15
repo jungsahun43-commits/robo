@@ -1,0 +1,228 @@
+{
+  "status": "completed_v19_all_candidates_rejected_v16_retained",
+  "UTC": "2026-10-15T04:59:13.583620+00:00",
+  "preregistered_commit": "b1284b8",
+  "active_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_checkpoint_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "v19_rejected_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-target-conditioned-v19\\trained\\final.pt",
+  "v19_rejected_checkpoint_sha256": "ae0654d54e4f465e1d3826eade7173fa82d3dfb46fab4287b0c27766afe75255",
+  "v19_actual_optimizer_updates": 1920,
+  "selected_epoch_by_synthetic_VAL": 24,
+  "retained_selected_epoch_updates": 1536,
+  "initial_VAL_loss": 2.4743773816378862,
+  "best_VAL_loss": 1.3763589165290622,
+  "training_labels": "publisher normal surfaces plus procedural RGB edit support, not natural target defect GT",
+  "new_natural_target_fault_GT": 0,
+  "data_counts": {
+    "fit": {
+      "mpdd_bracket_black": {
+        "normal": 70,
+        "synthetic": 258,
+        "positive_background_groups": 69,
+        "ready": true
+      },
+      "mpdd_tubes": {
+        "normal": 61,
+        "synthetic": 220,
+        "positive_background_groups": 60,
+        "ready": true
+      }
+    },
+    "validation": {
+      "mpdd_bracket_black": {
+        "normal": 18,
+        "synthetic": 71,
+        "positive_background_groups": 18,
+        "ready": true
+      },
+      "mpdd_tubes": {
+        "normal": 15,
+        "synthetic": 58,
+        "positive_background_groups": 15,
+        "ready": true
+      }
+    }
+  },
+  "synthetic_failure_attempts": 1147,
+  "source_asset_failures": [],
+  "target_results": {
+    "mpdd_bracket_black": {
+      "parent": {
+        "tp": 17,
+        "fn": 30,
+        "fp": 4,
+        "tn": 28,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.6382978723404256,
+        "fpr": 0.125
+      },
+      "parent_by_defect": {
+        "hole": {
+          "photos": 12,
+          "fn": 5,
+          "fnr": 0.4166666666666667
+        },
+        "scratches": {
+          "photos": 35,
+          "fn": 25,
+          "fnr": 0.7142857142857143
+        }
+      },
+      "methods": {
+        "conditioned_only": {
+          "rates": {
+            "tp": 41,
+            "fn": 6,
+            "fp": 14,
+            "tn": 18,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.1276595744680851,
+            "fpr": 0.4375
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 3,
+              "fnr": 0.25
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 3,
+              "fnr": 0.08571428571428572
+            }
+          },
+          "eligible": false,
+          "auroc": 0.7746010638297872
+        },
+        "max_conditioned_parent": {
+          "rates": {
+            "tp": 37,
+            "fn": 10,
+            "fp": 12,
+            "tn": 20,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.2127659574468085,
+            "fpr": 0.375
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 2,
+              "fnr": 0.16666666666666666
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 8,
+              "fnr": 0.22857142857142856
+            }
+          },
+          "eligible": false,
+          "auroc": 0.800531914893617
+        }
+      }
+    },
+    "mpdd_tubes": {
+      "parent": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "parent_by_defect": {
+        "anomalous": {
+          "photos": 69,
+          "fn": 47,
+          "fnr": 0.6811594202898551
+        }
+      },
+      "methods": {
+        "conditioned_only": {
+          "rates": {
+            "tp": 11,
+            "fn": 58,
+            "fp": 5,
+            "tn": 27,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.8405797101449275,
+            "fpr": 0.15625
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 58,
+              "fnr": 0.8405797101449275
+            }
+          },
+          "eligible": false,
+          "auroc": 0.4533514492753623
+        },
+        "max_conditioned_parent": {
+          "rates": {
+            "tp": 12,
+            "fn": 57,
+            "fp": 3,
+            "tn": 29,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.8260869565217391,
+            "fpr": 0.09375
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 57,
+              "fnr": 0.8260869565217391
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6173007246376812
+        }
+      }
+    }
+  },
+  "selected_methods": {},
+  "initially_zero_residual_channel_weight_L1_after_training": 2.847651481628418,
+  "verification": {
+    "status": "passed",
+    "parent_all_tensors_buffers_metadata_exact": true,
+    "projection_exact_to_v18_warm_start": true,
+    "legacy_python_SHA_checked": 604,
+    "protected_stat_unchanged": 86616,
+    "changed_metadata_SHA_rechecked": 0,
+    "all_protected_SHA_reread": false,
+    "actual_optimizer_updates": 1920,
+    "new_unit_tests_passed": 3,
+    "selected": {},
+    "new_natural_target_fault_GT": 0,
+    "synthetic_physical_realism_verified": false,
+    "new_CPU_CPP_release_required_if_selected": false,
+    "active_parent_still_retained": true,
+    "independent_field_validated": false
+  },
+  "new_unit_tests_passed": 3,
+  "new_API_aliases_tested": 0,
+  "new_CPP_operations": 0,
+  "new_role4_ZIP_created": false,
+  "all_parent_tensors_buffers_metadata_exact": true,
+  "old_primary_locations_and_thresholds_unchanged": true,
+  "tracked_v8_v10_v13_v15_v16_v17_v18_v19_actual_optimizer_updates_including_failed": 18640,
+  "known_public_TEST_reused_for_adoption": true,
+  "independent_field_validated": false,
+  "physical_synthetic_fault_realism_verified": false,
+  "training_runtime_errors": 0,
+  "all_original_data_failed_candidates_reports_preserved": true,
+  "awake_helper_restarted": false,
+  "v14_human_relation_review_still_pending": true,
+  "automation_continues_user_at_school": true,
+  "next": "FIT-only fine-feature tap equivalence and paired procedural-edit response study. Do not change thresholds or rerun v19. Use v19 FIT/VAL only for later design; preregister any new decoder before new learning/CAL/TEST scores."
+}
