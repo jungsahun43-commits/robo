@@ -1,0 +1,54 @@
+{
+  "UTC": "2026-10-15T13:58:26.126356+00:00",
+  "ready": true,
+  "counts": {
+    "fit": {
+      "0": 235,
+      "1": 21
+    },
+    "validation": {
+      "0": 51,
+      "1": 5
+    },
+    "cal": {
+      "0": 51,
+      "1": 5
+    },
+    "test": {
+      "0": 231,
+      "1": 20
+    }
+  },
+  "groups_each_label": {
+    "fit": {
+      "0": 232,
+      "1": 21
+    },
+    "validation": {
+      "0": 51,
+      "1": 5
+    },
+    "cal": {
+      "0": 51,
+      "1": 5
+    },
+    "test": {
+      "0": 226,
+      "1": 20
+    }
+  },
+  "prior_role_conflict_excluded": 0,
+  "prior_locked_candidate_photos": 0,
+  "gate_failures": [],
+  "original_evaluation251_preserved": true,
+  "exported_original_bytes": 23699578,
+  "policy_sha256": "d433a9beea5d7f94fd477b37ddf5285762592736e0f4d48e18102d9a024091de",
+  "reused_global_audit_sha256": "0371dc6a1b4b04195d951ece90a6152f09e4a89d2625d17b125fcd4890402119",
+  "new_pixel_decodes_or_fingerprints": 0,
+  "new_neural_features_scores_gradient_optimizer": 0,
+  "new_visual_review_performed": false,
+  "training_protocol_fixed": false,
+  "physical_part_acquisition_independence_unverified": true,
+  "independent_field_validation": false,
+  "manifest_sha256": "308e19f2352e48302f6bd5826fd6102c5029440b92f8e9df82db8cb142f19d87"
+}
