@@ -1,0 +1,116 @@
+{
+  "UTC": "2026-10-15T07:37:05.821720+00:00",
+  "status": "v24_completed_rejected_v25_download_and_metadata_only_prepared",
+  "active_model": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_model_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "active_role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "active_role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "v22_stopped_before_features_scores_optimizer": true,
+  "v22_reason": "duplicate audit left 29 black normal FIT photos, below preregistered minimum30",
+  "v23_v24_completed_actual_optimizer_updates": [
+    1920,
+    1920
+  ],
+  "this_turn_actual_optimizer_updates": 3840,
+  "v23_v24_selected_methods": {},
+  "v24_checkpoint_sha256": "f94de18c2cbe129c3442b65aacee5073c8d0ee5d0f1530a98d21e1be6962be3c",
+  "tracked_partial_research_optimizer_updates_including_failed": 26320,
+  "tracked_updates_are_not_entire_training_history": true,
+  "new_package_API_CPP_checks": 0,
+  "new_ZIPs": 0,
+  "operation_locks_present": {
+    "industrial-neu-detail-v22": false,
+    "industrial-neu-source-detail-v23": false,
+    "industrial-neu-tube-adapt-v24": false
+  },
+  "v25_metadata_audit": {
+    "UTC": "2026-10-15T07:32:11.169396+00:00",
+    "status": "metadata_checked_pixel_duplicates_and_final_split_pending",
+    "publisher_ref": "jhnnsbr/gearbox-components-remanufacturing-inspection",
+    "publisher_version": 1,
+    "publisher_license": "Attribution 4.0 International (CC BY 4.0)",
+    "archive_sha256_local": "4c01475a48a8b2fa28a9bd8e0f11ccacf14cc8dc2651b5b72df21f072a241775",
+    "author_json_consistency": {
+      "gbc_annotations_v20_acq_id.json": {
+        "folds": 5,
+        "all_records_labels_metadata_identical": true,
+        "sha256": "fb4be05a1c121a802a2c581793a8c6dbaac16b0a18635e03304c31588269a96e"
+      },
+      "gbc_annotations_v20_functional_component_category.json": {
+        "folds": 4,
+        "all_records_labels_metadata_identical": true,
+        "sha256": "6d39682da3b946d974b6f3541894602df410ea2e322cbeb12557a0a57c70e5ec"
+      },
+      "gbc_annotations_v20_functional_component_id.json": {
+        "folds": 5,
+        "all_records_labels_metadata_identical": true,
+        "sha256": "ff4fd2ae30cf30cdd96854eb8482b1316d78a5c73dd6ee722b86f4e1e85a1a10"
+      },
+      "gbc_annotations_v20_random.json": {
+        "folds": 5,
+        "all_records_labels_metadata_identical": true,
+        "sha256": "3f085f69f96bc41826b196382f9d806d8c41d243240871b6b17d9aedd597fdf6"
+      }
+    },
+    "annotated_unique_patches": 15588,
+    "annotated_label_counts": {
+      "nOK": 7254,
+      "OK": 8334
+    },
+    "archive_PNGs": 15691,
+    "unannotated_PNGs_excluded": 103,
+    "publisher_physical_parts": 46,
+    "publisher_functional_component_ids": 44,
+    "publisher_acquisition_ids": 97,
+    "primary_holdout_reserved_before_image_viewing": "author functional_component_id fold0(S3)",
+    "reserved_author_TEST_patches": 3109,
+    "reserved_TEST_labels": {
+      "OK": 1674,
+      "nOK": 1435
+    },
+    "original_author_TRAIN_patches": 12479,
+    "original_TRAIN_TEST_metadata_overlap": {
+      "physical_part_id": [
+        16,
+        18,
+        21,
+        23
+      ],
+      "functional_component_id": [],
+      "acq_id": []
+    },
+    "connected_physical_functional_acquisition_groups": 35,
+    "TRAIN_patches_linked_to_reserved_TEST_groups_must_be_excluded": 813,
+    "remaining_TRAIN_candidate_patches_before_pixel_audit": 11666,
+    "remaining_TRAIN_candidate_groups_before_pixel_audit": 28,
+    "path_mapping": "exact ../data/patched/ prefix interpreted as data/data/patched/ archive member; no unsafe filesystem parent traversal",
+    "source_normal_label_scope": "OK/nOK are source visible-wear acceptance labels; light scratches/pitting may still be OK, not every visible mark is a defect and not whole gearbox health",
+    "mask_or_bbox_ground_truth_available": false,
+    "new_independent_field_validation": false,
+    "RGB_pixel_exact_orientation_near_audit_done": false,
+    "current_retained_TEST_cross_duplicate_audit_done": false,
+    "final_FIT_VAL_CAL_manifest_fixed": false,
+    "model_features_scores_optimizer_updates": 0,
+    "image_content_viewed_by_agent": false,
+    "author_or_archive_code_executed": false
+  },
+  "v25_archive_path": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\data\\industrial-gearbox-source-v25\\publisher-v1.zip",
+  "v25_archive_sha256_local": "4c01475a48a8b2fa28a9bd8e0f11ccacf14cc8dc2651b5b72df21f072a241775",
+  "v25_archive_bytes": 414277443,
+  "v25_download_CRC_safe_paths_checked": true,
+  "v25_JSON_only_extracted_and_read_as_data": true,
+  "v25_PNGs_decoded_or_viewed": false,
+  "v25_split_intent_sha256": "5521bfaad20105c049244989f9b028913e1f4037cf067caca8ff9623b61d0db9",
+  "v25_reserved_ids_sha256": "f1104c7f9c85899457608720162ea1bf5ef9d077dda9d26c28b7b2ae5f44e0a5",
+  "v25_final_FIT_VAL_CAL_manifest_fixed": false,
+  "v25_pixel_duplicate_audit_done": false,
+  "v25_features_scores_optimizer_updates": 0,
+  "v25_training_protocol_fixed": false,
+  "next_plan": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\reports\\GEARBOX_NEXT_STUDY_KO.md",
+  "next": "Audit annotated RGB exact/orientation-near links internally and against retained5746 TEST; merge author physical/functional/acquisition groups with duplicates; exclude TRAIN groups linked to reserved S3 fold0 TEST; fix grouped FIT/VAL/CAL and one shared-encoder training protocol before features/gradients.",
+  "source_patch_acceptance_is_not_whole_gearbox_health_or_pixel_GT": true,
+  "new_independent_field_validation": false,
+  "free_disk_bytes": 12014915584,
+  "awake_helper_restarted": false,
+  "all_originals_failed_candidates_reports_preserved": true
+}

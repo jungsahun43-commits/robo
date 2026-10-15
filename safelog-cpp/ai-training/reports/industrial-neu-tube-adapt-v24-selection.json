@@ -1,0 +1,85 @@
+{
+  "selected": {},
+  "categories": {
+    "mpdd_tubes": {
+      "parent": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "parent_by_defect": {
+        "anomalous": {
+          "photos": 69,
+          "fn": 47,
+          "fnr": 0.6811594202898551
+        }
+      },
+      "methods": {
+        "detail_only": {
+          "rates": {
+            "tp": 18,
+            "fn": 51,
+            "fp": 12,
+            "tn": 20,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.7391304347826086,
+            "fpr": 0.375
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 51,
+              "fnr": 0.7391304347826086
+            }
+          },
+          "eligible": false,
+          "auroc": 0.42391304347826086
+        },
+        "max_detail_parent": {
+          "rates": {
+            "tp": 24,
+            "fn": 45,
+            "fp": 10,
+            "tn": 22,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.6521739130434783,
+            "fpr": 0.3125
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 45,
+              "fnr": 0.6521739130434783
+            }
+          },
+          "eligible": false,
+          "auroc": 0.5855978260869565
+        }
+      }
+    }
+  },
+  "training": {
+    "actual_optimizer_updates": 1920,
+    "scheduled_unique_updates": 1920,
+    "completed_epochs": 30,
+    "selected_epoch": 6,
+    "selected_epoch_updates": 384,
+    "VAL_balanced_loss": 1.5657976974430792,
+    "FIT_crops": 744,
+    "VAL_crops": 223,
+    "FIT_real_original_photos": 35,
+    "manifest_sha256": "3d4ebe33c2f5ede1d119027ce64fa24c794a07cac87ef6ffcd36529d0ed02999"
+  },
+  "CAL_sha256": "9fa8783073aa168d8372c08adc6ead2dcae831aeffaf98a68d91d348bbe32a37",
+  "known_public_TEST_reused": true,
+  "independent_field_validated": false,
+  "original_photos_not_crops_counted": true,
+  "primary_location_unchanged": true
+}
