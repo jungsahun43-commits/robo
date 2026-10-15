@@ -1,0 +1,277 @@
+{
+  "UTC": "2026-10-15T08:30:42.689262+00:00",
+  "status": "v28_gear_only_complete_rejected_v16_retained",
+  "preregistered_commit": "ec4dfd7",
+  "active_model": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_model_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "active_role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "active_role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-only-v28\\trained\\final.pt",
+  "research_checkpoint_sha256": "0669d9b988aa5ab3e4bfe414a078e140f61757d9bf06828dc56538cf474bf96f",
+  "training": {
+    "completed_epochs": 30,
+    "actual_optimizer_updates": 1920,
+    "selected_epoch": 1,
+    "selected_actual_updates": 64,
+    "VAL_macro_group_BCE": 0.587897002696991,
+    "FIT_patches": 5466,
+    "VAL_patches": 1440
+  },
+  "selection": {
+    "UTC": "2026-10-15T08:26:54.079613+00:00",
+    "checkpoint_sha256": "0669d9b988aa5ab3e4bfe414a078e140f61757d9bf06828dc56538cf474bf96f",
+    "training": {
+      "completed_epochs": 30,
+      "actual_optimizer_updates": 1920,
+      "selected_epoch": 1,
+      "selected_actual_updates": 64,
+      "VAL_macro_group_BCE": 0.587897002696991,
+      "FIT_patches": 5466,
+      "VAL_patches": 1440
+    },
+    "threshold": 0.6203120946884155,
+    "rates": {
+      "tp": 772,
+      "fn": 470,
+      "fp": 168,
+      "tn": 769,
+      "positive_photos": 1242,
+      "negative_photos": 937,
+      "fnr": 0.3784219001610306,
+      "fpr": 0.17929562433297758
+    },
+    "AUROC": 0.812319442081402,
+    "by": {
+      "functional_component_category": {
+        "gear": {
+          "tp": 772,
+          "fn": 470,
+          "fp": 168,
+          "tn": 769,
+          "positive_photos": 1242,
+          "negative_photos": 937,
+          "fnr": 0.3784219001610306,
+          "fpr": 0.17929562433297758
+        }
+      },
+      "physical_part_id": {
+        "1": {
+          "tp": 258,
+          "fn": 136,
+          "fp": 1,
+          "tn": 1,
+          "positive_photos": 394,
+          "negative_photos": 2,
+          "fnr": 0.34517766497461927,
+          "fpr": 0.5
+        },
+        "2": {
+          "tp": 228,
+          "fn": 161,
+          "fp": 0,
+          "tn": 7,
+          "positive_photos": 389,
+          "negative_photos": 7,
+          "fnr": 0.4138817480719794,
+          "fpr": 0.0
+        },
+        "21": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 19,
+          "tn": 241,
+          "positive_photos": 52,
+          "negative_photos": 260,
+          "fnr": 0.0,
+          "fpr": 0.07307692307692308
+        },
+        "23": {
+          "tp": 0,
+          "fn": 6,
+          "fp": 55,
+          "tn": 378,
+          "positive_photos": 6,
+          "negative_photos": 433,
+          "fnr": 1.0,
+          "fpr": 0.12702078521939955
+        },
+        "3": {
+          "tp": 232,
+          "fn": 164,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 396,
+          "negative_photos": 0,
+          "fnr": 0.41414141414141414,
+          "fpr": null
+        },
+        "34": {
+          "tp": 2,
+          "fn": 3,
+          "fp": 93,
+          "tn": 142,
+          "positive_photos": 5,
+          "negative_photos": 235,
+          "fnr": 0.6,
+          "fpr": 0.39574468085106385
+        }
+      },
+      "group_id": {
+        "2": {
+          "tp": 2,
+          "fn": 3,
+          "fp": 93,
+          "tn": 142,
+          "positive_photos": 5,
+          "negative_photos": 235,
+          "fnr": 0.6,
+          "fpr": 0.39574468085106385
+        },
+        "4": {
+          "tp": 0,
+          "fn": 6,
+          "fp": 55,
+          "tn": 378,
+          "positive_photos": 6,
+          "negative_photos": 433,
+          "fnr": 1.0,
+          "fpr": 0.12702078521939955
+        },
+        "48": {
+          "tp": 718,
+          "fn": 461,
+          "fp": 1,
+          "tn": 8,
+          "positive_photos": 1179,
+          "negative_photos": 9,
+          "fnr": 0.39100932994062765,
+          "fpr": 0.1111111111111111
+        },
+        "5": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 19,
+          "tn": 241,
+          "positive_photos": 52,
+          "negative_photos": 260,
+          "fnr": 0.0,
+          "fpr": 0.07307692307692308
+        }
+      }
+    },
+    "eligible_pending_package_checks": false,
+    "TEST_patches": 2179,
+    "TEST_connected_groups": 4,
+    "group_bootstrap_95percent": [
+      [
+        0.07434944237918216,
+        0.037037037037037035
+      ],
+      [
+        0.38524590163934425,
+        0.8181818181818182
+      ]
+    ],
+    "bootstrap_valid_draws": 1000,
+    "new_independent_field_validation": false,
+    "whole_equipment_health_or_verified_location": false,
+    "existing_bracket_tube_transferred_or_replaced": false
+  },
+  "verification": {
+    "status": "passed",
+    "parent_all_tensor_buffer_metadata_exact": true,
+    "legacy_python_SHA_checked": 655,
+    "protected_stat_unchanged": 104113,
+    "changed_metadata_SHA_rechecked": 0,
+    "all_protected_SHA_reread": false,
+    "actual_optimizer_updates": 1920,
+    "new_unit_tests_passed": 2,
+    "new_RGB_encoder_features": 0,
+    "eligible_pending_package_checks": false,
+    "new_API_CPP_ZIP_checks": 0,
+    "active_v16_retained_pending_release": true
+  },
+  "source_manifest_sha256": "fe7fce446e34002d47a24c0ad6b106468e8c128209739164d2e511705ae8779d",
+  "data_audit": {
+    "UTC": "2026-10-15T08:23:23.212836+00:00",
+    "ready": true,
+    "policy_sha256": "c3ec4c570d906ac9b24e603855bd3743f3ac9183817c77963d2f0a106092d4a7",
+    "source_manifest_sha256": "ae16b4223e9d8f5101537d03db97cfc85593e3f3a26fe0d03ab3fb6b61a84396",
+    "counts": {
+      "fit": {
+        "0": 3146,
+        "1": 2320
+      },
+      "validation": {
+        "1": 751,
+        "0": 689
+      },
+      "cal": {
+        "1": 282,
+        "0": 834
+      },
+      "test": {
+        "0": 937,
+        "1": 1242
+      }
+    },
+    "groups_by_phase": {
+      "fit": [
+        "1",
+        "13",
+        "145",
+        "19",
+        "25",
+        "3",
+        "30",
+        "8"
+      ],
+      "validation": [
+        "35",
+        "54",
+        "72"
+      ],
+      "cal": [
+        "21",
+        "49",
+        "53"
+      ],
+      "test": [
+        "2",
+        "4",
+        "48",
+        "5"
+      ]
+    },
+    "previously_viewed_groups_preserved_FIT": [
+      "1",
+      "19"
+    ],
+    "original_full_source_TEST_preserved_elsewhere": 3109,
+    "new_task_TEST_gear_subset": 2179,
+    "task_subset_predeclared_not_full_source_improvement": true,
+    "new_RGB_features_model_scores_optimizer_updates": 0,
+    "same_publisher_TRAIN_development_repartitioned": true,
+    "new_training_protocol_fixed": false,
+    "new_unit_tests_passed": 2,
+    "independent_field_validation": false,
+    "source_patch_label_not_whole_gearbox_health_or_verified_localization": true
+  },
+  "v25_stopped_data_gate_optimizer0": true,
+  "v26_v27_optimizer_completed_each": 1920,
+  "v26_v27_selected_epoch0_initial_not_learned_checkpoint": true,
+  "this_turn_actual_optimizer_updates_v26_v27_v28": 5760,
+  "tracked_partial_research_optimizer_including_failed": 32080,
+  "tracked_updates_not_entire_history": true,
+  "unique_photos_not_multiplied_across_reused_studies": true,
+  "old_full_source_TEST3109_and_failures_preserved": true,
+  "new_gear_subset_TEST2179_not_overall_source_improvement": true,
+  "new_API_CPP_ZIP_checks": 0,
+  "new_ZIPs": 0,
+  "existing_additional_types_within20percent": 8,
+  "existing_additional_types_total": 12,
+  "old_bracket_tube_KS_BS_LOCO_and_primary_outputs_unchanged": true,
+  "new_independent_field_validation": false,
+  "awake_helper_restarted": false,
+  "next": "FIT-only spatial fine-feature feasibility probe, separately preregistered before reading features; do not repeat pooling/threshold variants. Actual weak class labels are not pixel masks. Full new training protocol remains to be fixed after probe."
+}
