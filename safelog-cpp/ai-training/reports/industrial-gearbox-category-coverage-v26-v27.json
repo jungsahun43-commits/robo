@@ -1,0 +1,99 @@
+{
+  "manifest_sha256": "ae16b4223e9d8f5101537d03db97cfc85593e3f3a26fe0d03ab3fb6b61a84396",
+  "counts_by_functional_category_and_label": {
+    "fit": {
+      "gear": {
+        "0": 3829,
+        "1": 3127
+      },
+      "spline": {
+        "0": 3,
+        "1": 110
+      },
+      "synchronizer_collar": {
+        "0": 0,
+        "1": 0
+      },
+      "synchronizer_ring": {
+        "0": 61,
+        "1": 222
+      },
+      "synchronizer_shaft": {
+        "0": 131,
+        "1": 737
+      }
+    },
+    "validation": {
+      "gear": {
+        "0": 523,
+        "1": 5
+      },
+      "spline": {
+        "0": 0,
+        "1": 0
+      },
+      "synchronizer_collar": {
+        "0": 230,
+        "1": 346
+      },
+      "synchronizer_ring": {
+        "0": 33,
+        "1": 27
+      },
+      "synchronizer_shaft": {
+        "0": 1,
+        "1": 239
+      }
+    },
+    "cal": {
+      "gear": {
+        "0": 317,
+        "1": 221
+      },
+      "spline": {
+        "0": 0,
+        "1": 0
+      },
+      "synchronizer_collar": {
+        "0": 198,
+        "1": 340
+      },
+      "synchronizer_ring": {
+        "0": 0,
+        "1": 0
+      },
+      "synchronizer_shaft": {
+        "0": 330,
+        "1": 132
+      }
+    },
+    "test": {
+      "gear": {
+        "0": 937,
+        "1": 1242
+      },
+      "spline": {
+        "0": 601,
+        "1": 89
+      },
+      "synchronizer_collar": {
+        "0": 136,
+        "1": 104
+      },
+      "synchronizer_ring": {
+        "0": 0,
+        "1": 0
+      },
+      "synchronizer_shaft": {
+        "0": 0,
+        "1": 0
+      }
+    }
+  },
+  "FIT_has_no_synchronizer_collar": true,
+  "remaining_nonTEST_spline_OK_total": 3,
+  "interpretation": "Binary-label balance does not ensure category coverage. v26/v27 VAL/CAL/TEST include collar absent in FIT. Spline has only3 OK in all retained nonTEST. Preserve primary fullTEST and strict guards; do not silently omit unsupported types to claim broad pass.",
+  "next_data_design": "Before another training, preregister category-by-label coverage gate and group allocation using only original eligible TRAIN labels; broad fivecategory training may be impossible with spline OK3. A separately declared gear-only task must retain original failure and report its narrower scope; no reassignment of TEST.",
+  "model_or_threshold_changed": false,
+  "TEST_scoring_used_for_counts": false
+}
