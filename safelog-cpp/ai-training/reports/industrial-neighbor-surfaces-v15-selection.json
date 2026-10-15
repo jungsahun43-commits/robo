@@ -1,0 +1,123 @@
+{
+  "selected": {},
+  "categories": {
+    "mpdd_bracket_black": {
+      "neighbor_only": {
+        "rates": {
+          "tp": 17,
+          "fn": 30,
+          "fp": 11,
+          "tn": 21,
+          "positive_photos": 47,
+          "negative_photos": 32,
+          "fnr": 0.6382978723404256,
+          "fpr": 0.34375
+        },
+        "by_defect": {
+          "hole": {
+            "photos": 12,
+            "fn": 2,
+            "fnr": 0.16666666666666666
+          },
+          "scratches": {
+            "photos": 35,
+            "fn": 28,
+            "fnr": 0.8
+          }
+        },
+        "eligible_incremental": false,
+        "stage20": {
+          "state": "needs_improvement",
+          "ready_for_next_stage": false
+        },
+        "auroc": 0.5638297872340425
+      },
+      "max_neighbor_local": {
+        "rates": {
+          "tp": 13,
+          "fn": 34,
+          "fp": 8,
+          "tn": 24,
+          "positive_photos": 47,
+          "negative_photos": 32,
+          "fnr": 0.723404255319149,
+          "fpr": 0.25
+        },
+        "by_defect": {
+          "hole": {
+            "photos": 12,
+            "fn": 4,
+            "fnr": 0.3333333333333333
+          },
+          "scratches": {
+            "photos": 35,
+            "fn": 30,
+            "fnr": 0.8571428571428571
+          }
+        },
+        "eligible_incremental": false,
+        "stage20": {
+          "state": "needs_improvement",
+          "ready_for_next_stage": false
+        },
+        "auroc": 0.5638297872340425
+      }
+    },
+    "mpdd_tubes": {
+      "neighbor_only": {
+        "rates": {
+          "tp": 32,
+          "fn": 37,
+          "fp": 5,
+          "tn": 27,
+          "positive_photos": 69,
+          "negative_photos": 32,
+          "fnr": 0.5362318840579711,
+          "fpr": 0.15625
+        },
+        "by_defect": {
+          "anomalous": {
+            "photos": 69,
+            "fn": 37,
+            "fnr": 0.5362318840579711
+          }
+        },
+        "eligible_incremental": false,
+        "stage20": {
+          "state": "needs_improvement",
+          "ready_for_next_stage": false
+        },
+        "auroc": 0.7160326086956522
+      },
+      "max_neighbor_local": {
+        "rates": {
+          "tp": 38,
+          "fn": 31,
+          "fp": 3,
+          "tn": 29,
+          "positive_photos": 69,
+          "negative_photos": 32,
+          "fnr": 0.4492753623188406,
+          "fpr": 0.09375
+        },
+        "by_defect": {
+          "anomalous": {
+            "photos": 69,
+            "fn": 31,
+            "fnr": 0.4492753623188406
+          }
+        },
+        "eligible_incremental": false,
+        "stage20": {
+          "state": "needs_improvement",
+          "ready_for_next_stage": false
+        },
+        "auroc": 0.7626811594202898
+      }
+    }
+  },
+  "actual_optimizer_updates": 2880,
+  "CAL_sha256": "9539fd5bccf86cd2fa3953f70495a99c755fd17e942103c43fcc90b1e881f8ab",
+  "one_model_one_backbone": true,
+  "TEST_threshold_retuning": false
+}

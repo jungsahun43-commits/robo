@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "parent_tensors_buffers_and_operating_points_exact": true,
+  "legacy_source_SHA_checked": 571,
+  "protected_files_stat_unchanged": 85420,
+  "protected_files_changed_metadata_SHA_rechecked": 0,
+  "full_SHA_of_every_protected_file_repeated": false,
+  "actual_optimizer_updates_journal_verified": 2880,
+  "new_unit_tests_passed": 3,
+  "selected": {},
+  "new_location_or_field_performance_claimed": false
+}
