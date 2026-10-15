@@ -1,0 +1,21 @@
+{
+  "UTC": "2026-10-15T08:23:08.028116+00:00",
+  "fixed_before_new_partition_or_model_features_scores_optimizer": true,
+  "source_manifest_sha256": "ae16b4223e9d8f5101537d03db97cfc85593e3f3a26fe0d03ab3fb6b61a84396",
+  "coverage_report_sha256": "75cbbb632e52e29babb3ae29321408fc1a995e88e7a072dd3ccae03ec0ad9b22",
+  "FIT_example_reservation_sha256": "b2cd7db2128661db3c678f83574da50d6575cb78427132bc6035ee4fbaddd8e6",
+  "source_sha256": {
+    "safelog_ai/gear_only_groups.py": "90dd5769be627013d70d423b6a377f515ce709113cd89871369694902b1a0ff6",
+    "scripts/prepare_gear_only.py": "d08dd6954faeb6c6ae3c0306a7416441b0450578da015644cc53717e0e16fdad",
+    "tests/test_gear_only_groups.py": "a28b81f27fdd94e1acc1de6ecadfea592543fb8250a7c87bbebb74b54c5ec849"
+  },
+  "reason": "original eligible TRAIN has only3 splineOK and no ring/shaftTEST; full-source label balance did not ensure supported-category coverage. Select gear task by TRAIN label/group availability, not a new full-source pass claim.",
+  "task": "ONLY publisher128x128 gear visible-surface acceptance OK/nOK. Exclude other functionalcategories from this separately declared task; preserve full-source v26/v27 failures unchanged.",
+  "TEST": "fixed original S3fold0 gear subset2179, no moving TEST/near or excluded1317TRAIN back into development; keep original fullTEST3109 elsewhere",
+  "partition": "same original TRAIN eligible gear-only groups; force previously AI-viewed FIT-example groups toFIT; rest decreasing size then SHA256(gear28:+group), greedy normalized binarylabel .70/.15/.15 objective with groupcounts ceil15percentVAL/CAL/restFIT. No retry/seed sweep.",
+  "data_gate": "FIT labels>=100/groups>=8, VAL/CAL labels>=20/groups>=3, TEST labels>=20/groups>=3; all groups disjoint, viewed examples remain FIT",
+  "development_reuse": "previous FIT/VAL/CAL union regrouped from original TRAIN; raw image features may be reused byID only after fixing future learning protocol. New training must start from unchanged acceptedv16 and a fresh head, not old failed fitted heads.",
+  "training_protocol_fixed": false,
+  "new_features_gradients_optimizer_updates": 0,
+  "new_unit_tests_passed": 2
+}

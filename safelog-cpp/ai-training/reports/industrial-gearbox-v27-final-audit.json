@@ -1,0 +1,366 @@
+{
+  "UTC": "2026-10-15T08:22:29.904773+00:00",
+  "status": "v27_completed_rejected_active_v16_retained",
+  "active_model": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_model_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "active_role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "active_role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gearbox-linear-v27\\trained\\final.pt",
+  "checkpoint_sha256": "d48b90cfda5b1cb3036afed69b43227e0218a4a6e3483f07c0e32309171d8b97",
+  "training": {
+    "completed_epochs": 30,
+    "actual_optimizer_updates": 1920,
+    "selected_epoch": 0,
+    "selected_actual_updates": 0,
+    "VAL_macro_group_BCE": 0.6931471824645996,
+    "FIT_patches": 8220,
+    "VAL_patches": 1404
+  },
+  "selection": {
+    "UTC": "2026-10-15T08:19:35.811207+00:00",
+    "checkpoint_sha256": "d48b90cfda5b1cb3036afed69b43227e0218a4a6e3483f07c0e32309171d8b97",
+    "training": {
+      "completed_epochs": 30,
+      "actual_optimizer_updates": 1920,
+      "selected_epoch": 0,
+      "selected_actual_updates": 0,
+      "VAL_macro_group_BCE": 0.6931471824645996,
+      "FIT_patches": 8220,
+      "VAL_patches": 1404
+    },
+    "threshold": 0.5,
+    "rates": {
+      "tp": 0,
+      "fn": 1435,
+      "fp": 0,
+      "tn": 1674,
+      "positive_photos": 1435,
+      "negative_photos": 1674,
+      "fnr": 1.0,
+      "fpr": 0.0
+    },
+    "AUROC": 0.5,
+    "by": {
+      "functional_component_category": {
+        "gear": {
+          "tp": 0,
+          "fn": 1242,
+          "fp": 0,
+          "tn": 937,
+          "positive_photos": 1242,
+          "negative_photos": 937,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "spline": {
+          "tp": 0,
+          "fn": 89,
+          "fp": 0,
+          "tn": 601,
+          "positive_photos": 89,
+          "negative_photos": 601,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "synchronizer_collar": {
+          "tp": 0,
+          "fn": 104,
+          "fp": 0,
+          "tn": 136,
+          "positive_photos": 104,
+          "negative_photos": 136,
+          "fnr": 1.0,
+          "fpr": 0.0
+        }
+      },
+      "physical_part_id": {
+        "1": {
+          "tp": 0,
+          "fn": 394,
+          "fp": 0,
+          "tn": 2,
+          "positive_photos": 394,
+          "negative_photos": 2,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "16": {
+          "tp": 0,
+          "fn": 17,
+          "fp": 0,
+          "tn": 403,
+          "positive_photos": 17,
+          "negative_photos": 403,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "18": {
+          "tp": 0,
+          "fn": 72,
+          "fp": 0,
+          "tn": 198,
+          "positive_photos": 72,
+          "negative_photos": 198,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "2": {
+          "tp": 0,
+          "fn": 389,
+          "fp": 0,
+          "tn": 7,
+          "positive_photos": 389,
+          "negative_photos": 7,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "21": {
+          "tp": 0,
+          "fn": 52,
+          "fp": 0,
+          "tn": 260,
+          "positive_photos": 52,
+          "negative_photos": 260,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "23": {
+          "tp": 0,
+          "fn": 6,
+          "fp": 0,
+          "tn": 433,
+          "positive_photos": 6,
+          "negative_photos": 433,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "3": {
+          "tp": 0,
+          "fn": 396,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 396,
+          "negative_photos": 0,
+          "fnr": 1.0,
+          "fpr": null
+        },
+        "34": {
+          "tp": 0,
+          "fn": 5,
+          "fp": 0,
+          "tn": 235,
+          "positive_photos": 5,
+          "negative_photos": 235,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "45": {
+          "tp": 0,
+          "fn": 104,
+          "fp": 0,
+          "tn": 136,
+          "positive_photos": 104,
+          "negative_photos": 136,
+          "fnr": 1.0,
+          "fpr": 0.0
+        }
+      },
+      "group_id": {
+        "18": {
+          "tp": 0,
+          "fn": 104,
+          "fp": 0,
+          "tn": 136,
+          "positive_photos": 104,
+          "negative_photos": 136,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "2": {
+          "tp": 0,
+          "fn": 5,
+          "fp": 0,
+          "tn": 235,
+          "positive_photos": 5,
+          "negative_photos": 235,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "4": {
+          "tp": 0,
+          "fn": 6,
+          "fp": 0,
+          "tn": 433,
+          "positive_photos": 6,
+          "negative_photos": 433,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "41": {
+          "tp": 0,
+          "fn": 72,
+          "fp": 0,
+          "tn": 198,
+          "positive_photos": 72,
+          "negative_photos": 198,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "48": {
+          "tp": 0,
+          "fn": 1179,
+          "fp": 0,
+          "tn": 9,
+          "positive_photos": 1179,
+          "negative_photos": 9,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "5": {
+          "tp": 0,
+          "fn": 52,
+          "fp": 0,
+          "tn": 260,
+          "positive_photos": 52,
+          "negative_photos": 260,
+          "fnr": 1.0,
+          "fpr": 0.0
+        },
+        "6": {
+          "tp": 0,
+          "fn": 17,
+          "fp": 0,
+          "tn": 403,
+          "positive_photos": 17,
+          "negative_photos": 403,
+          "fnr": 1.0,
+          "fpr": 0.0
+        }
+      }
+    },
+    "eligible_pending_package_checks": false,
+    "TEST_patches": 3109,
+    "TEST_connected_groups": 7,
+    "group_bootstrap_95percent": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "bootstrap_valid_draws": 1000,
+    "new_independent_field_validation": false,
+    "whole_equipment_health_or_verified_location": false,
+    "existing_bracket_tube_transferred_or_replaced": false
+  },
+  "verification": {
+    "status": "passed",
+    "parent_all_tensor_buffer_metadata_exact": true,
+    "legacy_python_SHA_checked": 648,
+    "protected_stat_unchanged": 104070,
+    "changed_metadata_SHA_rechecked": 0,
+    "all_protected_SHA_reread": false,
+    "actual_optimizer_updates": 1920,
+    "new_unit_tests_passed": 2,
+    "new_RGB_encoder_features": 0,
+    "eligible_pending_package_checks": false,
+    "new_API_CPP_ZIP_checks": 0,
+    "active_v16_retained_pending_release": true
+  },
+  "epoch0_means_initial_new_head_not_learned_head": true,
+  "source_labels_not_whole_gearbox_health_or_verified_location": true,
+  "source_split": {
+    "UTC": "2026-10-15T08:06:07.657879+00:00",
+    "ready": true,
+    "policy_sha256": "9798208ea8aeb50548183a1ea9a80600ad2449b1aff2f588cbdfde7bba9691ab",
+    "v25_manifest_sha256": "ad2bf24e87455bccb3805b0d7eca5f3e55d752b72cace302ec8f1fb9bbbe2ed7",
+    "counts": {
+      "fit": {
+        "0": 4024,
+        "1": 4196
+      },
+      "validation": {
+        "1": 617,
+        "0": 787
+      },
+      "cal": {
+        "1": 693,
+        "0": 845
+      },
+      "test": {
+        "0": 1674,
+        "1": 1435
+      }
+    },
+    "groups_by_phase": {
+      "fit": [
+        "1",
+        "108",
+        "13",
+        "145",
+        "16",
+        "19",
+        "21",
+        "25",
+        "3",
+        "35",
+        "40",
+        "447",
+        "54",
+        "7",
+        "72",
+        "8",
+        "971"
+      ],
+      "validation": [
+        "0",
+        "12",
+        "162",
+        "53"
+      ],
+      "cal": [
+        "30",
+        "44",
+        "49",
+        "83"
+      ],
+      "test": [
+        "18",
+        "2",
+        "4",
+        "41",
+        "48",
+        "5",
+        "6"
+      ]
+    },
+    "existing_TEST_fingerprinted": 5746,
+    "old_TEST_matches": {},
+    "inherited_internal_near_pairs": 2691,
+    "reserved_author_TEST_ids_preserved": true,
+    "metadata_and_pixel_groups_disjoint": true,
+    "TEST_used_for_split_objective": false,
+    "new_features_scores_optimizer_updates": 0,
+    "unannotated_PNGs_excluded": 103,
+    "TRAIN_patches_excluded_by_TEST_group": 1317,
+    "publisher128patch_label_not_whole_health_or_mask": true,
+    "new_unit_tests_passed": 3
+  },
+  "source_manifest_sha256": "ae16b4223e9d8f5101537d03db97cfc85593e3f3a26fe0d03ab3fb6b61a84396",
+  "same8220FIT_and1404VAL_reused_not_new_photos": true,
+  "v25_stopped_before_model_features_optimizer": true,
+  "v25_reason": "CALnormal10<fixed20, original failedmanifest preserved",
+  "v26_actual_optimizer_updates": 1920,
+  "this_turn_actual_optimizer_updates": 3840,
+  "tracked_partial_research_optimizer_updates_including_failed": 30160,
+  "tracked_total_is_not_entire_training_history": true,
+  "new_API_CPP_ZIP_checks": 0,
+  "new_ZIPs": 0,
+  "active_v16_unchanged": true,
+  "new_independent_field_validation": false,
+  "awake_helper_restarted": false,
+  "next": "Preserve failed candidate. Use FIT/VAL diagnosis and source-specific label/capture limitations to preregister the next independent candidate; no TEST threshold or split fishing."
+}
