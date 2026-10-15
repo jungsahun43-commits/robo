@@ -1,0 +1,139 @@
+{
+  "file_entries": 11525,
+  "TRAIN_entries": 5108,
+  "publisher_VAL_reserved_entries": 6417,
+  "unknown_frame_names": [],
+  "val_frame_proxies": 3159,
+  "counts_by_asset_phase": {
+    "glass-insulator": {
+      "eligible_TRAIN_unallocated": {
+        "0": 548,
+        "1": 560
+      },
+      "excluded_shared_VAL_frame": {
+        "0": 143,
+        "1": 130
+      },
+      "excluded_unknown_frame": {},
+      "reserved_publisher_VAL": {
+        "0": 29,
+        "1": 30
+      }
+    },
+    "lightning-rod-suspension": {
+      "eligible_TRAIN_unallocated": {
+        "1": 310,
+        "0": 345
+      },
+      "excluded_shared_VAL_frame": {
+        "0": 3
+      },
+      "excluded_unknown_frame": {},
+      "reserved_publisher_VAL": {
+        "1": 20,
+        "0": 231
+      }
+    },
+    "polymer-insulator-upper-shackle": {
+      "eligible_TRAIN_unallocated": {
+        "0": 728,
+        "1": 730
+      },
+      "excluded_shared_VAL_frame": {
+        "0": 14,
+        "1": 10
+      },
+      "excluded_unknown_frame": {},
+      "reserved_publisher_VAL": {
+        "0": 31,
+        "1": 33
+      }
+    },
+    "vari-grip": {
+      "eligible_TRAIN_unallocated": {
+        "1": 450,
+        "0": 243
+      },
+      "excluded_shared_VAL_frame": {
+        "1": 190,
+        "0": 115
+      },
+      "excluded_unknown_frame": {},
+      "reserved_publisher_VAL": {
+        "1": 43,
+        "0": 238
+      }
+    },
+    "yoke-suspension": {
+      "eligible_TRAIN_unallocated": {
+        "1": 260,
+        "0": 21
+      },
+      "excluded_shared_VAL_frame": {
+        "1": 30,
+        "0": 278
+      },
+      "excluded_unknown_frame": {},
+      "reserved_publisher_VAL": {
+        "1": 20,
+        "0": 5742
+      }
+    }
+  },
+  "annotation_class_index_mapping": {
+    "yoke-suspension": {
+      "good": [
+        0
+      ],
+      "rust": [
+        1
+      ]
+    },
+    "glass-insulator": {
+      "missing-cap": [
+        1
+      ],
+      "good": [
+        0
+      ]
+    },
+    "polymer-insulator-upper-shackle": {
+      "good": [
+        0
+      ],
+      "rust": [
+        1
+      ]
+    },
+    "lightning-rod-suspension": {
+      "good": [
+        0
+      ],
+      "rust": [
+        1
+      ]
+    },
+    "vari-grip": {
+      "good": [
+        1
+      ],
+      "bird-nest": [
+        0
+      ],
+      "rust": [
+        2
+      ]
+    }
+  },
+  "annotation_paths_missing_from_archive": [],
+  "VAL_members_not_in_annotation_list": 0,
+  "training_suffix_with_existing_base_candidates": 2403,
+  "suffix_candidate_not_independent_natural_photo_count": true,
+  "no_source_class_id_to_binary_label_shortcut": true,
+  "all_publisher_VAL_never_training_or_CAL": true,
+  "frame_proxy_not_verified_physical_part_id": true,
+  "pixel_near_duplicate_and_visual_audit_pending": true,
+  "FIT_VAL_CAL_training_protocol_not_fixed": true,
+  "new_image_pixel_decodes_features_scores_optimizer": 0,
+  "metadata_frame_audit_SHA256": "61868d388c5a83738a875a1f9f11a320b843733591e62d5fcd82b07501fc52f2"
+}
