@@ -1,0 +1,30 @@
+{
+  "UTC": "2026-10-15T18:28:36.591364+00:00",
+  "fixed_before_new_coverage_computation": true,
+  "script_sha256": "271ca833dde87c68ce04a35ddb2539bb73dabce04b0a72bcf5cbf20e21fe2b9d",
+  "group_code_sha256": "3ba68ca1a658948a6e1b996f5b4eee543b491d7deae70cbec404fa33bfdd2260",
+  "files_sha256": {
+    "data/industrial-insplad-grouped-v44/grouped-all-source.json": "0371dc6a1b4b04195d951ece90a6152f09e4a89d2625d17b125fcd4890402119",
+    "data/industrial-insplad-unsupervised-v56-metadata/all-rows.json": "a98aa6eb783473f7f6af3f2a9f88d2afd14269448915542180516a9787b83889",
+    "data/industrial-insplad-grouped-v44/retained-TEST-fingerprints.json": "2e865e6a64425872045c3c4d440cf3589f4a89a7a2b21888b56c7d2113ba0545",
+    "data/industrial-insplad-lower-shackle-v57/pixel-joining-edges.jsonl": "2ffa000e484a66f0c0f60a8b7f3116b36c05566c817bc4c7f4859df9e2db47c9",
+    "data/industrial-insplad-lower-shackle-v57/manifest.json": "5ae6838ea6acbdbd76bd2030a58feb3ca6792b63b9967f69a76861935e740cbb",
+    "reports/industrial-insplad-lower-shackle-v57-data-audit.json": "ba5342fa94411621007c3fa511cadd074fc9b5d5b4319dc42c05d674db4cd9fd",
+    "data/industrial-insplad-grouped-v44/manifest.json": "e7d3d95b09d90913897bf2524af8dcc6a42b473d04a290d0862466ac3213f476",
+    "data/industrial-insplad-glass-v47/manifest.json": "bf2a4f0b8fce37079a96c1dba78a4cc0b61734ec5cc3137876bf9d6abf2adab1",
+    "data/industrial-insplad-lightning-v50/manifest.json": "308e19f2352e48302f6bd5826fd6102c5029440b92f8e9df82db8cb142f19d87",
+    "data/industrial-insplad-varigrip-v53/manifest.json": "fc2fe5560a94a787dc6d0866d10d3bec8ec673e625a57534b64d5d8dce1ea59b"
+  },
+  "graph_replay": "same ordered27620metadata+11525oldsource+8995oldTEST; seed oldgroup/v56group/oldsource links then94saved pixeljoiningedges. Reuse connectivity, no decode or pHash distance rerun.",
+  "checks": "canonical labels must match all783 completedv57manifest rows; sourceindices/edge ranges fixed; compare held allnew6481TEST/old6417publisherVAL/old8995TEST",
+  "actual_label_candidates": "all six oldsupervised assets, original filename-base publisherTRAIN only. Exclude any group connected to current heldout sets. Keep original good/rust/birdnest/missingcap labels; not automatically relabel.",
+  "normal_support_candidates": "v56rawnovel_unassigned_TRAIN normal good rows only, exclude held connections. Counts are potential support, not fixedFIT or verified independent photos.",
+  "prior_roles": "old approvedandfailed v45/v48/v51/v54 developmentrole single retained; conflictinggroups report excluded. No existing weights/splits changed retroactively.",
+  "report": "counts perasset/condition/photo/group/developmentrole, datecoverage and existingnewTEST-linked exclusions; no modelperformance or finalFIT assignment",
+  "minimum_before_future_split": "FITnormal30+VALnormal20+CALnormal20 andFITactualdefect10/VALactualdefect2, TESTeachcondition20/groups3; if pool insufficient no attempt to move TEST or weaken counts",
+  "new_pixels_features_scores_gradient_optimizer": 0,
+  "new_content_viewing": 0,
+  "training_protocol_fixed": false,
+  "license": "InsPLAD MendeleyV1 DOI10.17632/5n3fjgvfyz.1 CC BY-NC3.0 noncommercialacademic withauthor/source/version/change attribution",
+  "independent_field_validation": false
+}
