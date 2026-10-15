@@ -1,0 +1,70 @@
+{
+  "UTC": "2026-10-15T18:10:36.442448+00:00",
+  "fixed_before_new_pixel_decode_or_split": true,
+  "sources": {
+    "scripts/prepare_insplad_lower_shackle.py": "eeaaea1b00b3ce05187832cec56e75ca5b54b3a6054c211853e59fbf8b624058",
+    "safelog_ai/insplad_pixel_groups.py": "3ba68ca1a658948a6e1b996f5b4eee543b491d7deae70cbec404fa33bfdd2260",
+    "tests/test_insplad_pixel_groups.py": "c4c9ea497b4d2f2cac445911fd159b7254862b331c897f145726ef1b6bba903c"
+  },
+  "metadata_sha256": "a98aa6eb783473f7f6af3f2a9f88d2afd14269448915542180516a9787b83889",
+  "archive_sha256": "baab1d227b408ec6bbe5831cbcae5ea049a9b5132a74bf36f4e3d6051b0cb7e3",
+  "old_caches_sha256": {
+    "grouped-all-source.json": "0371dc6a1b4b04195d951ece90a6152f09e4a89d2625d17b125fcd4890402119",
+    "decoded-fingerprints.json": "ae66f0e790e8f20e71d703b875fb3935f4ed36962981650796c78764537ef33a",
+    "retained-TEST-fingerprints.json": "2e865e6a64425872045c3c4d440cf3589f4a89a7a2b21888b56c7d2113ba0545"
+  },
+  "old_TEST_manifests": {
+    "data/equipment-expansion-v1/manifest.json": "40ec891c498adc98db645e6caf979bb91bd7577c991deddc3527c12106ccfecc",
+    "data/industrial-ksdd-supervised-v10/manifest.json": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+    "data/industrial-bsclass-v1/manifest.json": "e577da6548747dddd67026b9f829a8223f7f770d3de7d710dcefefbf47eb0104",
+    "data/industrial-magnetic-tiles-v16/manifest.json": "cad485a8d93082f69e2c28f10c3d36fafc9714d1ec994baa74b3af30f289e27f",
+    "data/industrial-ksdd1-v18/manifest-r1.json": "aa506252c5842aef5869a4982e4b10cc746ee3ddc713cc29d33e0a9e76126736",
+    "data/industrial-gearbox-source-v25/manifest.json": "ad2bf24e87455bccb3805b0d7eca5f3e55d752b72cace302ec8f1fb9bbbe2ed7",
+    "data/industrial-mpdd2-white-v39/manifest.json": "c4c99f21bfd3decb2c05e7d2b2dc87a0831052bf5d0f884069751805d12a3560"
+  },
+  "prior_development_manifests": {
+    "data/industrial-insplad-grouped-v44/manifest.json": "e7d3d95b09d90913897bf2524af8dcc6a42b473d04a290d0862466ac3213f476",
+    "data/industrial-insplad-glass-v47/manifest.json": "bf2a4f0b8fce37079a96c1dba78a4cc0b61734ec5cc3137876bf9d6abf2adab1",
+    "data/industrial-insplad-lightning-v50/manifest.json": "308e19f2352e48302f6bd5826fd6102c5029440b92f8e9df82db8cb142f19d87",
+    "data/industrial-insplad-varigrip-v53/manifest.json": "fc2fe5560a94a787dc6d0866d10d3bec8ec673e625a57534b64d5d8dce1ea59b"
+  },
+  "target": "polymer-insulator-lower-shackle",
+  "target_initial_normal_candidates": 143,
+  "target_publisher_TEST": {
+    "good": 327,
+    "rust": 315
+  },
+  "reuse": "all27620 newrows,8990 rawbyteexact oldsupervised rows reuse verified size/RGB/8orientationpHash;remaining18630 rows ZIPtoRAM. Never rerun oldsource audit/download.",
+  "decode": "JPEG/PNG <=32MiB encoded,positive<=40MP,EXIF None/1,4workers,500-row resumable shards;originalsha perdecoded member,decoder events counted. No pixelview or neuralfeatures.",
+  "group": "seed v56 frame/raw/oldsourcegroups; union same size+RGB exact or any8orientationpHash Hamming<=2 new-new/new-oldsource/new-old8995TEST. Old-oldsource groups reused. Only joins across distinct currentcomponents logged; intra-component distances skipped without changing connectivity. Pixel similarity not verifiedphysicalidentity.",
+  "held": "all6481newpublisherTEST plus all6417oldpublisherVAL and8995oldTEST nodes; anyconnected newTRAIN excluded. OriginalTEST kept evenif pastoldFITexposure, limits reported.",
+  "candidates": "ONLY v56rawnovel_unassigned_TRAIN good TARGET143. No compensation by otherTRAIN afterpixel exclusions.",
+  "split": "oldv45/v48/v51/rejectedv54 developmentrole one preserved, conflicts excluded. Unlocked targetgroups sortSHA256(insplad57:+smalleststablememberID),firstceil20percentVAL,nextceil20CAL,restFIT,onceonly.",
+  "minimums": {
+    "fit": {
+      "0": 30
+    },
+    "validation": {
+      "0": 20
+    },
+    "cal": {
+      "0": 20
+    },
+    "test": {
+      "0": 20,
+      "1": 20
+    }
+  },
+  "minimum_groups_per_required_label": 3,
+  "failure": "ifminimum fails preserve andstop beforeimagesexport/features/optimizer, no threshold/split/minimum orcandidate adjustment",
+  "export": "onlysuccessful targetselectedTRAIN plusall642originaltargetTEST unchanged bytes, numericfilename<=128MiB. No entireZIPextraction, no photoGT edits or classificationlabel masks.",
+  "visual_review": "onlyafter successful finalsplit first3sortedFITnormal fixed. No choosingTESTcontent/VAL_CAL orclaiminghumanreview.",
+  "cache": "bind rawSHA/member/order/metadata/archive/policySHA;500rowshards saved via unique partialfile then atomicrename, verifysha andids onresume. Incomplete partialfiles preserved; events record repeateddecodes. Interrupted graph scans can rerun only fromcached fingerprints into a new edgefile, no pixel/optimizer repetition claimed as newphotos.",
+  "storage": "metadata<=256MiB andexport<=128MiB,plannedworkingbudget512MiB+1GiBreserve; original/failed models/log/cache/ZIP allpreserved",
+  "source_scope": "original cropped lower-shackle visiblegood/rust, TRAINnormalonly. NoactualrustTRAIN/pixelGT/internalhealth labels; no oldbracket/tubeimprovement claim.",
+  "license": "InsPLAD MendeleyV1 DOI10.17632/5n3fjgvfyz.1 CC BY-NC3.0 noncommercialacademic author/source/version/change attribution paper10.1080/01431161.2023.2283900; oldlicensesunchanged",
+  "model_protocol_fixed": false,
+  "new_encoder_features_scores_gradient_optimizer": 0,
+  "new_units_passed": 3,
+  "independent_field_validation": false
+}
