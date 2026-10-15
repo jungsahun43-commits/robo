@@ -1,0 +1,69 @@
+{
+  "UTC": "2026-10-15T10:34:15.252694+00:00",
+  "fixed_before_new_RGB_comparison_or_viewing": true,
+  "source_sha256": {
+    "scripts/probe_glinks_train_collisions.py": "b98e1f12eb97e6412a09edb951c483206388c45b94ec4a473131419df9dec3d1",
+    "safelog_ai/image_pair_probe.py": "a2f6b724761160552fc3f37f17f96d8c6a05475ebe9fdeb982826c5f828ea8e4",
+    "tests/test_image_pair_probe.py": "2145e9414261ffc9193f27e3a85eef39fb8bbb5a3b2a8d073351d258d5b6271d"
+  },
+  "manifest_sha256": "ced860d6b8c2a1084a5bdf4516e79e997e8a2d870e77a76308ff037db508e086",
+  "near_pairs_sha256": "4c430d21a67cd2919e2add83d7130fc0f040d303adda0387e6e64ed0c6baa6be",
+  "permanently_development_only_uuid_proxies_not_future_VAL_CAL_TEST": [
+    "6a93f157-7dad-4887-a492-03cd985aa7ea",
+    "5dd20bc5-3eea-4e4b-9f3c-3be40fc06ad3"
+  ],
+  "row_indices": [
+    1525,
+    1526,
+    1527,
+    1528,
+    1529,
+    1930,
+    1931,
+    1932,
+    1933
+  ],
+  "pair_indices": [
+    [
+      1930,
+      1525
+    ],
+    [
+      1931,
+      1526
+    ],
+    [
+      1931,
+      1527
+    ],
+    [
+      1931,
+      1528
+    ],
+    [
+      1932,
+      1526
+    ],
+    [
+      1932,
+      1527
+    ],
+    [
+      1932,
+      1528
+    ],
+    [
+      1933,
+      1529
+    ]
+  ],
+  "selection": "two publisherTRAIN UUIDs by fixedSHA(glinks36:+UUID), first8 lexicographic pHash-near cross-UUID pairs. No TEST pictures or model scores select examples.",
+  "comparison": "unaltered sourceRGB read then fixed256square bilinear diagnostic thumbnail; minMAD over8orientations, report sameorientationRMSE/p95. No foreground mask or selected ROI.",
+  "positive_controls": "first selected original thumbnail: exact dihedral duplicate and JPEGquality90 roundtrip. Known edited-photo controls only, not newly collected natural images.",
+  "visual_review": "first2 fixed pairs, four TRAINinput views, thumbnails marked originalpublisher labels; AI QA only",
+  "do_not_change": "v35 failure/manifest/exclusions/pHashthreshold2/publisherTEST/GT remain. No duplicate confirmation threshold or new training split chosen here.",
+  "features_gradients_optimizer_CAL_TEST_model_scores": 0,
+  "new_units_passed": 2,
+  "next_rule_requires_separate_protocol": true,
+  "limitation": "UUID is acquisition proxy, not verified distinct physical objects; RGB disagreement alone does not prove independence or a label error."
+}

@@ -1,0 +1,46 @@
+{
+  "UTC": "2026-10-15T10:29:56.916886+00:00",
+  "ready": false,
+  "counts": {
+    "fit": {},
+    "validation": {},
+    "cal": {},
+    "test": {
+      "1": 165,
+      "0": 403
+    },
+    "excluded_TEST_group": {
+      "0": 3424
+    },
+    "excluded_old_TEST_group": {}
+  },
+  "groups_by_phase": {
+    "fit": [],
+    "validation": [],
+    "cal": [],
+    "test": [
+      "0"
+    ],
+    "excluded_TEST_group": [
+      "0"
+    ],
+    "excluded_old_TEST_group": []
+  },
+  "TEST_groups_by_label": {
+    "0": 1,
+    "1": 1
+  },
+  "retained_previous_TEST_photos_checked": 8855,
+  "old_TEST_direct_matches": {},
+  "internal_orientation_near_pairs": 202666,
+  "connected_groups": 1,
+  "publisher_TEST_all568_preserved": true,
+  "actual_mask_files": 0,
+  "metadata_UUID_not_confirmed_physical_id": true,
+  "near_hash_not_identity_proof": true,
+  "agent_image_content_viewing": false,
+  "new_encoder_features_scores_optimizer": 0,
+  "training_protocol_fixed": false,
+  "independent_field_validation": false,
+  "policy_SHA256": "97bd4fddd0671ab684e91e1c12d161192a0c82baa7e144e38f8f046b424e9bb0"
+}
