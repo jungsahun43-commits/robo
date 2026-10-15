@@ -1,0 +1,22 @@
+{
+  "UTC": "2026-10-15T19:35:02.343753+00:00",
+  "fixed_before_source_JSON_read_or_pixels": true,
+  "script_sha256": "a76375c31252f9dd5baaf6a2a8b20cfba2d4f4bc8f66ff808cccabce14bbb636",
+  "archive_sha256": "45f0ec8b26f1c09d707f3010af359a28e0985d385d2bf6d98b5d4dd308e9dbe5",
+  "archive_audit_sha256": "45919163372c9ae8a196d2fd1f66313ef7dde631d536358eb34ac13b3c0bb7e2",
+  "allpairs_sha256": "209ac81618ee5f02a27b224e34ed12f52ce171c11c548e24cbde872755293375",
+  "reserved_TEST_sha256": "d5325e1f9f9b2c96d9e7b1ffd2fd03d740e51799a5591d2ae78970176c5df396",
+  "fixed_first3_TRAIN_JSON": [
+    "Corrosion Condition State Classification/original/Train/json/0.json",
+    "Corrosion Condition State Classification/original/Train/json/1.json",
+    "Corrosion Condition State Classification/original/Train/json/10.json"
+  ],
+  "inspect": "datajson.loads only<=32MiB, preserve exact labels,shape_types,dimensions,imagePath asuntrustedtext; no imageData base64decode/pixels/geometryrender/codeexecution",
+  "copy_identity": "group samepublisherrole+stem original/resized/JSON/masks. Same numericstem inTrainandTest alone is not physicalidentity or grounds to merge; inspect actualimagePath/pixels inlaterprotocol.",
+  "label_semantics": "officialguideline textreadonly: Good includes no OR minimal corrosion; peelingpaintalone notcorrosion; fair/poor/severe visiblecorrosion severityannotations. Good/background is NOT verifiedabsence of allrust. Do not useallGood asbinaryrustnegative.",
+  "mapping": "authorREADME BGRmapping is not anRGB/palette declaration foractualfiles; keep raw labelnames/colors, verify nativePNGmode/palette/JSONmapping before any maskconversion",
+  "future": "no finalFIT_VAL_CAL orlearnprotocol. Original396TRAIN/44TESTfixed; pixel/physicalgroups/currentTESTexclusions before onefixedsplit, firstFIT QAonlyafterdatagate.",
+  "new_source_pixeldecode_contentview_features_scores_gradient_optimizer": 0,
+  "license": "sourceuniversityCC0,codeMITseparate, cite bothdatasetDOI10.7294/16624663.v2 andpaper10.1061/(ASCE)CP.1943-5487.0001045",
+  "independent_field_validation": false
+}

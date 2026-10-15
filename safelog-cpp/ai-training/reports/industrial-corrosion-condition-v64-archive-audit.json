@@ -1,0 +1,38 @@
+{
+  "UTC": "2026-10-15T19:31:04.157415+00:00",
+  "files": [
+    {
+      "file_id": 30914467,
+      "local_name": "publisher-annotation-guidelines.pdf",
+      "bytes": 1280192,
+      "publisher_MD5_matched": "b39d82a30e3c5d6b8303a70543ef4288",
+      "local_SHA256": "93ee156cd704bfe0cd9d015401c82a8bb4b21cc7e9dd5461889070f22c8a1c46"
+    },
+    {
+      "file_id": 30930610,
+      "local_name": "publisher-README.rtf",
+      "bytes": 3904,
+      "publisher_MD5_matched": "48bcf95bde8e985f722ad13b223f5ca7",
+      "local_SHA256": "ac736b46541c10f1a3ace02e61d61ca332dc130df7d6187d28675db572b6b928"
+    },
+    {
+      "file_id": 31729733,
+      "local_name": "publisher-ccs-v2.zip",
+      "bytes": 333388620,
+      "publisher_MD5_matched": "bbc9b8b8a5bb065e9ace028893dfd983",
+      "local_SHA256": "45f0ec8b26f1c09d707f3010af359a28e0985d385d2bf6d98b5d4dd308e9dbe5"
+    }
+  ],
+  "members": 2217,
+  "files_in_archive": 2201,
+  "declared_expanded_bytes": 392784690,
+  "all_inner_CRC_and_encodedSHA_checked": true,
+  "safe_paths": true,
+  "file_list_sha256": "fa5c890808078e257293c68b0c2f6d5523ac56ff47e18ccdddb637f8d63b716e",
+  "policy_sha256": "a515ce1267810eb36eef6495ffb971ac5356ba8eca07a98a99addf235b6ace85",
+  "new_source_pixels_views_features_scores_gradient_optimizer": 0,
+  "full_extraction_or_code_execution": false,
+  "guideline_contents_read": false,
+  "source_data_split_and_class_semantics_not_finalized": true,
+  "independent_field_validation": false
+}
