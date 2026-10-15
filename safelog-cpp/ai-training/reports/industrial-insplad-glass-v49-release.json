@@ -1,0 +1,152 @@
+{
+  "status": "passed",
+  "overlay_archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\insplad-glass-corrosion-role4-research-overlay-2026-10-15-v48.zip",
+  "archive_sha256": "b99e21c184895f3efeba52be527ede784df91a7d5f9e32291ba7e8b505ff7619",
+  "archive_bytes": 4696193,
+  "effective_combined_tensor_state_sha256": "b9dd301bb20ad144d220c88dfdf2e44aaf2e04f28efcde6ab41702c6c8e6b1be",
+  "parent_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "delta_sha256": "520b010585708f2bbf008ab6354a8dde53a64f3a2db9721b6475ea599022dafb",
+  "fresh_packaged_RGB_CPU_GPU_cached_decisions_exact": 59,
+  "all_old_CPU_aliases_checked": 16,
+  "new_CPU_aliases_checked": 1,
+  "explicit_new_equipment_category_checked": true,
+  "old_classResults_and_policy_exact": true,
+  "old_PNG_strings_exact": 24,
+  "current_real_CPP_operations": 18,
+  "CPP_cases": [
+    {
+      "inspectionTask": "ksdd2_surface",
+      "modelSha256": "b9dd301bb20ad144d220c88dfdf2e44aaf2e04f28efcde6ab41702c6c8e6b1be",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "ball_screw_pitting",
+      "modelSha256": "b9dd301bb20ad144d220c88dfdf2e44aaf2e04f28efcde6ab41702c6c8e6b1be",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "loco_splicing_connectors",
+      "modelSha256": "b9dd301bb20ad144d220c88dfdf2e44aaf2e04f28efcde6ab41702c6c8e6b1be",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "mpdd_bracket_black",
+      "modelSha256": "b9dd301bb20ad144d220c88dfdf2e44aaf2e04f28efcde6ab41702c6c8e6b1be",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "insplad_upper_shackle_rust",
+      "modelSha256": "b9dd301bb20ad144d220c88dfdf2e44aaf2e04f28efcde6ab41702c6c8e6b1be",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "insplad_glass_missing_cap",
+      "modelSha256": "b9dd301bb20ad144d220c88dfdf2e44aaf2e04f28efcde6ab41702c6c8e6b1be",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    }
+  ],
+  "old_alias_proofs": [
+    {
+      "task": "facility_surface",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "belt_damage",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "conveyor_foreign",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "ad_cable",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "ad_screw",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "ad_metal_nut",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "loco_splicing_connectors",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_bracket_black",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_bracket_brown",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_bracket_white",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_connector",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_metal_plate",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "mpdd_tubes",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "ksdd2_surface",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "ball_screw_pitting",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    },
+    {
+      "task": "insplad_upper_shackle_rust",
+      "classResults_and_policy_exact": true,
+      "original_PNG_exact": true
+    }
+  ],
+  "unknown_or_mismatched_inputs_rejected422": true,
+  "owned_server_stopped": true,
+  "previous_v46_failure_preserved": true,
+  "new_optimizer": 0,
+  "one_shared_encoder": true,
+  "parent_checkpoint_duplicated": false,
+  "default_v16_automatically_replaced": false,
+  "independent_field_validation": false,
+  "APK_built": false,
+  "fresh_pip_install_tested": false
+}
