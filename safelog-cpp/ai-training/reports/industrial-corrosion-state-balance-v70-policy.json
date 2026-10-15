@@ -1,0 +1,26 @@
+{
+  "UTC": "2026-10-15T23:25:51.840525+00:00",
+  "fixed_before_new_FIT_resize_or_VAL_forward_diagnosis": true,
+  "script_sha256": "c81553d151ae355405f3f60f21ba52ede5f8f616cddddd16502e24ac965c4ee7",
+  "files_sha256": {
+    "reports/industrial-corrosion-state-v69-protocol.json": "137ee4c9943b2f0ebf151096ff7ce2e243acb6a29c3729e8f577114951a8fa6f",
+    "data/industrial-corrosion-json-pairs-v68/manifest.json": "af40f9f6a0cc91709c0006ec5c9e21c9d7dd94a93f079fe2401dc1dab56888ce",
+    "runs/industrial-corrosion-state-v69/head-epoch-06.pt": "74c1316a5884e7bcf44c9a15a2af863c6eebcdc188fa6e59f90fd971e778ee3b",
+    "runs/industrial-corrosion-state-v69/head-epoch-30.pt": "2a861dd19df9c11b17f4888256fb770a66bb480e2cab73233ac4f293cb49c0b0",
+    "runs/industrial-corrosion-state-v69/fit-input-binding.json": "2423260eff94d4f71b0a78cbd9c21022c1f1c9d4b170379856f7fc5090e063af",
+    "runs/industrial-corrosion-state-v69/draws.npy": "3d5d9f3d3fd6c29bbf4f3f3ebbe400fb303c6b939cd101afd3f7049f859a0016",
+    "runs/industrial-corrosion-state-v69/trained/final-delta.pt": "6989f555dffe17718236f996a6044aa77b9214b3a788a9f51d8ade3660419060",
+    "runs/industrial-corrosion-state-v69/verification.json": "1e24fa2a5cfa1bb5018330755a59adb6f47f45bfdae61d3cf945be59afae06dd",
+    "scripts/study_corrosion_state_mask.py": "bd7bbc491276b4b2988875d31ffd3909dff5376ee9096ea520dffcf0e6362ff5",
+    "safelog_ai/corrosion_state_mask.py": "bcd36c165d50a79639a71852ad30dddd65509331b3eec34e0fe566802ed51dc5",
+    "safelog_ai/corrosion_json_pairs.py": "27ee57189e568e46f275c05c75279bd982c0a7ddacb79d919cc6955f4fa7db2f"
+  },
+  "FIT": "Recreate onlyfixed276FIT uint8letterbox inputs/targets; SHA must equal originalv69FIT inputbinding. Count native-vs512classpresence and actual7680draw exposures. Compute originalperphoto1/n_present coefficient sum byclass; this is coefficientbudget, not gradientimportance or causalproof. NoGT relabel.",
+  "VAL": "Only60internalVAL, oneencoder forward perphoto shared by2fixedheadviews: selectedepoch6 andfinalepoch30. Compute native4stateconfusion and512Severe_GTmeanprob/logitmargin. NoCAL_TESTnewforward/scores, no epochpromotion or conditionchange.",
+  "reference": "Reset selectedhead6 aftertwo views and require fullmodeltensor/buffer SHAexact beforeafter. Allparents unchanged. No new optimizer or weightupdate.",
+  "future": "If VALandFITdiagnosis supportclassunderweighting, preregister onlyone lossweight candidate fromFIT expectedpresentclasscoefficients; no multiple weights/samplers/architecture/TESTthreshold sweep. Do not claim this proves a cause.",
+  "storage": "Metadata only<8MiB andstreamnativeRAM; no newdensefeatures/fullmodels or imagecontentviews; >=1GiBreserve",
+  "new_optimizer": 0,
+  "new_CAL_TEST_scores": 0,
+  "independent_field_validation": false
+}
