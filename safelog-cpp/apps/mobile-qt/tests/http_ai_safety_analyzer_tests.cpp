@@ -97,6 +97,21 @@ private slots:
     QCOMPARE(request.value("inspectionTask").toString(), QString("belt_damage"));
   }
 
+  void forwardsUpperShackleResearchTask() {
+    auto client = std::make_shared<FakeHttpClient>();
+    client->results.push_back(JsonHttpResponse{200, json({
+      {"hazardCategory", "부식 후보"}, {"riskLevel", 3}, {"detectedHazards", QJsonArray{"부식 후보"}},
+      {"suggestedDescription", "연결고리 확인"}, {"suggestedAction", "점검자 확인"}, {"confidence", 0.8},
+      {"modelName", "insplad-research"}, {"promptVersion", "safelog-hazard-v1"}})});
+    HttpAiSafetyAnalyzerConfig config;
+    config.baseUrl = "http://127.0.0.1:8775";
+    config.inspectionTask = "insplad_upper_shackle_rust";
+    HttpAiSafetyAnalyzer analyzer(config, client);
+    analyzer.analyzeHazard(imagePath_.toStdString(), "사진상 부식 확인");
+    const auto request = QJsonDocument::fromJson(QByteArray::fromStdString(client->lastBody)).object();
+    QCOMPARE(request.value("inspectionTask").toString(), QString("insplad_upper_shackle_rust"));
+  }
+
   void rejectsUnsupportedInspectionTask() {
     HttpAiSafetyAnalyzerConfig config;
     config.baseUrl = "http://127.0.0.1:8775";
