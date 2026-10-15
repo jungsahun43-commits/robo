@@ -1,0 +1,28 @@
+{
+  "UTC": "2026-10-15T17:15:54.622946+00:00",
+  "fixed_before_subarchive_download": true,
+  "script_SHA256": "0b61d95a574889cb087e979a36a58b2d10f04e4c283690d002a2e7a03ac0f435",
+  "source_outer_metadata_SHA256": "1899792350c7da3651f2c527755f76c3e78e9646ec15febda86fde43c955d0ce",
+  "public_file_list_SHA256": "054cfc324e0bd1f9360e0a267296ca5023e82339300f110572d0c0a8b69f0fad",
+  "member": {
+    "name": "unsupervised_anomaly_detection.zip",
+    "bytes": 1170967719,
+    "packed": 1166006282,
+    "compression": 8,
+    "CRC32": "94d7f2b0",
+    "header_offset": 4361848927,
+    "flags": 8
+  },
+  "source": "author andreluizbvs/InsPLAD links Mendeley5n3fjgvfyz V1 DOI10.17632/5n3fjgvfyz.1",
+  "license": "Mendeley V1 and pinned author LICENSE both CC BY-NC3.0, noncommercial academic research/citation. Old project page separately says NC-SA4.0; do not silently relabel original distribution or other sources.",
+  "paper": "DOI10.1080/01431161.2023.2283900; author/source/version/change attribution retained",
+  "scope": "publisher unsupervised cropped powerline asset normalTRAIN candidate and untouched publisher evaluation; archive names/counts/overlap not yet inspected. Do not assume new realdefects inTRAIN or subtype annotations. No pixelGT or whole equipment health.",
+  "original_TEST": "reserve all publisherTEST and corresponding full-frame/crop/near duplicates BEFORE pixel viewing or train split; no anomaly/detection archive combined as new photos",
+  "download": "public author distribution URL, verify206 exactContentRange, stream original outer member rawdeflate into innerZIP directly; no packed copy or full outer ZIP",
+  "checksums": "verify original inner uncompressed size+outer-member CRC32, save compressed-range and inner local SHA256; outer publisherSHA remains unverified without all6.4GB",
+  "storage": "1170967719bytes innerZIP plus metadata; require innerbytes+1.25GiB reserve before network. Inspect expanded bytes before extracting any photos, no old source/cache deletion.",
+  "reason": "v54 fixed vari-grip candidate rejected with FPR12.61/FNR20.93 and bird-nest typedFN21.74percent. Seek actualauthorTRAIN support, not TESTcut adjustment. No newdata/learning efficacy promised.",
+  "reservation": "all publisherTEST orVAL and near/frame groups across source and existing6417InsPLAD plus8995oldTEST must remain evaluation-only; no newdata added before separate audit/split policy.",
+  "new_photos_pixel_decodes_features_scores_optimizer": 0,
+  "training_protocol_fixed": false
+}
