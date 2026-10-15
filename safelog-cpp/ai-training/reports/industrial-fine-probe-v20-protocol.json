@@ -1,0 +1,82 @@
+{
+  "schema": "safelog-fine-tap-FIT-probe-v20",
+  "UTC": "2026-10-15T05:01:39.902222+00:00",
+  "source_sha256": {
+    "safelog_ai/fine_feature_probe.py": "a62103c40c7b9cf36ea6459f69c23ae08a0b2a2391ebedd20785ac5d7da31f24",
+    "scripts/probe_fine_targets.py": "c6bb04352985849f22e8ead2699fada489ccfd8bc51eae4f7277e7fb67e3d238"
+  },
+  "checkpoint_sha256": "ae0654d54e4f465e1d3826eade7173fa82d3dfb46fab4287b0c27766afe75255",
+  "manifest_sha256": "b24d0f8a296fd5adbacce831b95a9a02bec54b996f5456fc633a6105bb37c7de",
+  "pairs": [
+    {
+      "category": "mpdd_bracket_black",
+      "base_id": "mpdd_bracket_black/fit/14cebf7989efc2f4/normal",
+      "synthetic_id": "mpdd_bracket_black/fit/14cebf7989efc2f4/synthetic0"
+    },
+    {
+      "category": "mpdd_bracket_black",
+      "base_id": "mpdd_bracket_black/fit/b64739986932caaf/normal",
+      "synthetic_id": "mpdd_bracket_black/fit/b64739986932caaf/synthetic2"
+    },
+    {
+      "category": "mpdd_bracket_black",
+      "base_id": "mpdd_bracket_black/fit/c502884652d78c13/normal",
+      "synthetic_id": "mpdd_bracket_black/fit/c502884652d78c13/synthetic0"
+    },
+    {
+      "category": "mpdd_bracket_black",
+      "base_id": "mpdd_bracket_black/fit/b75d9737d170fb22/normal",
+      "synthetic_id": "mpdd_bracket_black/fit/b75d9737d170fb22/synthetic0"
+    },
+    {
+      "category": "mpdd_bracket_black",
+      "base_id": "mpdd_bracket_black/fit/a1ff673e20247dac/normal",
+      "synthetic_id": "mpdd_bracket_black/fit/a1ff673e20247dac/synthetic0"
+    },
+    {
+      "category": "mpdd_bracket_black",
+      "base_id": "mpdd_bracket_black/fit/72bcf5d6ac13dc5a/normal",
+      "synthetic_id": "mpdd_bracket_black/fit/72bcf5d6ac13dc5a/synthetic1"
+    },
+    {
+      "category": "mpdd_tubes",
+      "base_id": "mpdd_tubes/fit/b7d61382413d5d4a/normal",
+      "synthetic_id": "mpdd_tubes/fit/b7d61382413d5d4a/synthetic0"
+    },
+    {
+      "category": "mpdd_tubes",
+      "base_id": "mpdd_tubes/fit/b48cf14b6b6be912/normal",
+      "synthetic_id": "mpdd_tubes/fit/b48cf14b6b6be912/synthetic0"
+    },
+    {
+      "category": "mpdd_tubes",
+      "base_id": "mpdd_tubes/fit/0f786f1c7ddf91bb/normal",
+      "synthetic_id": "mpdd_tubes/fit/0f786f1c7ddf91bb/synthetic0"
+    },
+    {
+      "category": "mpdd_tubes",
+      "base_id": "mpdd_tubes/fit/f3669647bf153e48/normal",
+      "synthetic_id": "mpdd_tubes/fit/f3669647bf153e48/synthetic0"
+    },
+    {
+      "category": "mpdd_tubes",
+      "base_id": "mpdd_tubes/fit/bef105a838169e86/normal",
+      "synthetic_id": "mpdd_tubes/fit/bef105a838169e86/synthetic0"
+    },
+    {
+      "category": "mpdd_tubes",
+      "base_id": "mpdd_tubes/fit/cb516ac268905211/normal",
+      "synthetic_id": "mpdd_tubes/fit/cb516ac268905211/synthetic0"
+    }
+  ],
+  "selection_rule": "six FIT positive-background groups per target by SHA(fineprobe20:+group), first synthetic id; no model-score-based pair selection",
+  "tap": "existing backbone numeric stage3,24channels,stride4; no hooks/weights/return_layers mutation; existing low/high must be bitwise exact",
+  "metrics": "raw per-cell feature difference RMS in pooled edit-support cells, relative to base RMS; descriptive cross-representation statistics, not detection accuracy",
+  "head_scores": "current frozen v19 head paired top32 sigmoid scores, no new calibration or target TEST scores",
+  "actual_RGB_inputs": 24,
+  "comparison_backbone_traversals": 48,
+  "optimizer_updates": 0,
+  "VAL_CAL_TEST_photos_used": false,
+  "not_a_new_training_protocol": true,
+  "independent_field_validated": false
+}
