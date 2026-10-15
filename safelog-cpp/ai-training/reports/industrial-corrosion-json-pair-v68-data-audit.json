@@ -1,0 +1,94 @@
+{
+  "UTC": "2026-10-15T23:10:40.904065+00:00",
+  "ready": true,
+  "policy_sha256": "e11f494f03c18a31d8286683bdd9815ca7aba6683b6c8720e2a4e0b7e67550a4",
+  "counts": {
+    "fit": {
+      "entries": 276,
+      "groups": 276,
+      "photos_per_class": {
+        "0": 276,
+        "1": 271,
+        "2": 207,
+        "3": 66
+      },
+      "class_pixels": {
+        "0": 707696870,
+        "1": 97965200,
+        "2": 50631033,
+        "3": 10740916
+      }
+    },
+    "validation": {
+      "entries": 60,
+      "groups": 60,
+      "photos_per_class": {
+        "0": 60,
+        "1": 59,
+        "2": 47,
+        "3": 14
+      },
+      "class_pixels": {
+        "0": 140731933,
+        "1": 25079720,
+        "2": 10817072,
+        "3": 2399078
+      }
+    },
+    "cal": {
+      "entries": 60,
+      "groups": 60,
+      "photos_per_class": {
+        "0": 60,
+        "1": 59,
+        "2": 43,
+        "3": 12
+      },
+      "class_pixels": {
+        "0": 118615923,
+        "1": 17289758,
+        "2": 5854725,
+        "3": 1748475
+      }
+    },
+    "test": {
+      "entries": 44,
+      "groups": 44,
+      "photos_per_class": {
+        "0": 44,
+        "1": 43,
+        "2": 40,
+        "3": 12
+      },
+      "class_pixels": {
+        "0": 129692032,
+        "1": 15557431,
+        "2": 8004460,
+        "3": 1894856
+      }
+    }
+  },
+  "failures": [],
+  "exclusions": {},
+  "new_pixel_joins": {
+    "new_cross_component_pHash_comparisons": 2701
+  },
+  "canonical_v57_783_Ostrava105_v66_440_exact": true,
+  "new_embedded_RGB_views": 440,
+  "new_polygon_rasters": 440,
+  "same_size_RGB_exact_to_supplied_original": 0,
+  "new_raster_exact_to_preserved_nativePNG": 0,
+  "outside_canvas_vertex_photos": 18,
+  "original_TEST44_and220files_preserved": true,
+  "v66_native_contract_still_failed": true,
+  "new_source_visual_content_views": 0,
+  "new_encoder_features_scores_gradient_optimizer": 0,
+  "training_protocol_fixed": false,
+  "physical_part_capture_independence_verified": false,
+  "independent_field_validation": false,
+  "wholehealthy_photoGT": 0,
+  "wholephoto_app20percent_gate_passed": false,
+  "new_units_passed": 3,
+  "disk_free_bytes": 3818983424,
+  "manifest_sha256": "af40f9f6a0cc91709c0006ec5c9e21c9d7dd94a93f079fe2401dc1dab56888ce"
+}

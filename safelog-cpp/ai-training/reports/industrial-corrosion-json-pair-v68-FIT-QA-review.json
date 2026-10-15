@@ -1,0 +1,15 @@
+{
+  "UTC": "2026-10-15T23:17:33.811250+00:00",
+  "AI_visual_contact_sheet_reviewed": true,
+  "fixed_FIT_ids": [
+    "ccs/Train/1",
+    "ccs/Train/10",
+    "ccs/Train/101"
+  ],
+  "notes": "Visible corrosion on painted metal beams, bearing/base and fasteners; supplied polygons broadly cover visible annotated areas. Some regions are broad and boundaries/severity are not exhaustively verified. Burned-in date text is visible; no removal or GT modification. These are metal surface appearance photos, not whole bridge safety labels. Good may contain minimal corrosion.",
+  "source_RGB_images_viewed": 3,
+  "VAL_CAL_TEST_images_viewed": 0,
+  "expert_annotation_verification": false,
+  "native_PNG_contract_v66_still_failed": true,
+  "new_encoder_features_scores_optimizer": 0
+}

@@ -1,0 +1,15 @@
+{
+  "UTC": "2026-10-15T23:11:58.233325+00:00",
+  "manifest_sha256": "af40f9f6a0cc91709c0006ec5c9e21c9d7dd94a93f079fe2401dc1dab56888ce",
+  "fixed_first3FIT_ids": [
+    "ccs/Train/1",
+    "ccs/Train/10",
+    "ccs/Train/101"
+  ],
+  "contact_sha256": "b4059f9b1819f7d51c945ad043a012cd33969ec3cb2bbd02bb2bcc3f87cfc6ed",
+  "extra_embedded_RGB_and_polygon_raster_decodes": 3,
+  "new_natural_photos": 0,
+  "new_model_features_optimizer": 0,
+  "TEST_VAL_CAL_visual_content_views": 0,
+  "expert_label_verification": false
+}
