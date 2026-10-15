@@ -1,0 +1,58 @@
+{
+  "UTC": "2026-10-15T22:17:09.713267+00:00",
+  "policy_sha256": "7fa35ffdfd55b2e826579c62d14d86789b607788ab7faea9b1a0e2f478466c07",
+  "original_entries": 440,
+  "header_files_read_no_pixel_decode": 1760,
+  "header_problem_entries": 9,
+  "header_problem_types": {
+    "coordinate_size": 8,
+    "format": 1
+  },
+  "fixed_TRAIN_mask_reference_comparisons": [
+    {
+      "id": "ccs/Train/0",
+      "JSON_version": "4.5.2",
+      "original_mask_mode": "P",
+      "native_vs_v66_mode1_mismatch": 2564,
+      "native_vs_official_L_canvas_mismatch": 2564,
+      "v66_vs_official_canvas_mismatch": 0,
+      "native_class_counts": {
+        "0": 1590297,
+        "1": 329703
+      }
+    },
+    {
+      "id": "ccs/Train/1",
+      "JSON_version": "4.5.2",
+      "original_mask_mode": "P",
+      "native_vs_v66_mode1_mismatch": 1499,
+      "native_vs_official_L_canvas_mismatch": 1499,
+      "v66_vs_official_canvas_mismatch": 0,
+      "native_class_counts": {
+        "0": 1850238,
+        "1": 69762
+      }
+    },
+    {
+      "id": "ccs/Train/10",
+      "JSON_version": "4.5.2",
+      "original_mask_mode": "P",
+      "native_vs_v66_mode1_mismatch": 5375,
+      "native_vs_official_L_canvas_mismatch": 5375,
+      "v66_vs_official_canvas_mismatch": 0,
+      "native_class_counts": {
+        "0": 8581524,
+        "1": 763726,
+        "2": 635678
+      }
+    }
+  ],
+  "new_RGB_pixel_decodes_or_image_views": 0,
+  "new_TRAIN_native_mask_decodes": 3,
+  "new_TEST_mask_pixel_or_polygon_comparisons": 0,
+  "new_neural_features_scores_gradient_optimizer": 0,
+  "v66_minimum_or_TEST_policy_changes": 0,
+  "can_claim_full_data_ready": false,
+  "training_protocol_fixed": false,
+  "independent_field_validation": false
+}

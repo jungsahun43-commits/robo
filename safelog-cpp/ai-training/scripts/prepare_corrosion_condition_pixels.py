@@ -30,6 +30,7 @@ OUT = ROOT/'data/industrial-corrosion-condition-v66'
 RUN = ROOT/'runs/industrial-corrosion-condition-data-v66'
 POLICY = ROOT/'reports/industrial-corrosion-condition-v66-data-policy.json'
 RECOVERY = ROOT/'reports/industrial-corrosion-condition-v66-r1-recovery-policy.json'
+RECOVERY2 = ROOT/'reports/industrial-corrosion-condition-v66-r2-inventory-policy.json'
 OLD = ROOT/'data/industrial-insplad-grouped-v44'
 V57 = ROOT/'data/industrial-insplad-lower-shackle-v57'
 OST = ROOT/'data/industrial-ostrava-masks-v61'
@@ -40,6 +41,10 @@ SOURCES = ('scripts/prepare_corrosion_condition_pixels.py', 'safelog_ai/corrosio
 
 
 def utc(): return datetime.now(timezone.utc).isoformat()
+
+
+def active_policy():
+    return RECOVERY2 if RECOVERY2.exists() else RECOVERY if RECOVERY.exists() else POLICY
 
 
 def freeze():
@@ -80,10 +85,10 @@ def freeze():
 
 
 def validate():
-    p = read(RECOVERY if RECOVERY.exists() else POLICY)
+    p = read(active_policy())
     for n,h in {**p['source_sha256'], **p['inputs_sha256']}.items(): assert sha(ROOT/n) == h, n
     git = ['C:/Program Files/Git/cmd/git.exe','-c','safe.directory='+ROOT.parents[1].as_posix(),'-C',str(ROOT.parents[1])]
-    active = RECOVERY if RECOVERY.exists() else POLICY
+    active = active_policy()
     for n in (*SOURCES, active.relative_to(ROOT).as_posix()):
         assert hashlib.sha256(subprocess.check_output(git+['show','HEAD:safelog-cpp/ai-training/'+n])).hexdigest() == sha(ROOT/n), n
     for n,h in p.get('completed_decode_receipts_sha256', {}).items(): assert sha(ROOT/n) == h, n
@@ -107,6 +112,24 @@ def freeze_recovery():
     new(RECOVERY,p); print({'recovery_policy_sha256':sha(RECOVERY),'completed_decoded_entries':len(p['completed_decode_receipts_sha256'])},flush=True)
 
 
+def freeze_inventory():
+    """Finish a FAILED study's exclusion inventory without accepting mismatched GT."""
+    assert not RECOVERY2.exists() and not (OUT/'decoded-pairs.json').exists() and not (RUN/'operation.lock').exists()
+    diagnosis=ROOT/'runs/industrial-corrosion-condition-geometry-v67/diagnosis.json'
+    headers=ROOT/'runs/industrial-corrosion-condition-geometry-v67/headers.json'
+    assert read(diagnosis)['header_problem_types']=={'coordinate_size':8,'format':1}
+    p=read(RECOVERY)
+    p.update(UTC=utc(),source_sha256={n:sha(ROOT/n) for n in SOURCES},inventory_only_failed_study=True,
+             previous_recovery_policy_sha256=sha(RECOVERY),
+             completed_decode_receipts_sha256={v.relative_to(ROOT).as_posix():sha(v) for v in sorted(OUT.glob('decoded-*-*.json'))},
+             failure_artifacts_sha256={v.relative_to(ROOT).as_posix():sha(v) for v in list(RUN.glob('failure-*.json'))+[RUN/'stderr.log',RUN/'stderr-r1.log',RUN/'decode-events.jsonl',RUN/'decode-events-r1.jsonl']},
+             recovery='v67 all1760header inventory found8native image/mask size mismatches andoneMPO original. v66 exact annotation gate remains failed; complete duplicate inventory only, permanently not ready for learning. Permit that metadata-confirmed MPO to decode all1..4frames for EXCLUSION fingerprints, never assume frame0 is a verified annotation correspondence. All frames and supplied copy share the entry group. No resizing/cropping/GT fix, no maskGT acceptance, no class/polygon/size tolerance changes.',
+             runtime_audit_failures_preserved=2)
+    p['inputs_sha256'][diagnosis.relative_to(ROOT).as_posix()]=sha(diagnosis)
+    p['inputs_sha256'][headers.relative_to(ROOT).as_posix()]=sha(headers)
+    new(RECOVERY2,p);print({'inventory_policy_sha256':sha(RECOVERY2),'completed_decoded_entries':len(p['completed_decode_receipts_sha256'])},flush=True)
+
+
 def member_bytes(archive, item):
     assert item['bytes'] <= 32*1024**2
     raw = archive.read(item['member'])
@@ -116,22 +139,22 @@ def member_bytes(archive, item):
 
 def image(raw, fmt):
     im = Image.open(io.BytesIO(raw))
-    assert im.format == fmt and im.width*im.height <= 40_000_000 and im.getexif().get(274) in (None,1)
+    assert (im.format == fmt or RECOVERY2.exists() and fmt=='JPEG' and im.format=='MPO') and im.width*im.height <= 40_000_000 and im.getexif().get(274) in (None,1)
     im.load(); return im
 
 
 def decode():
     rows = []; pairs = read(META/'all-pairs-before-json-or-pixels.json')['rows']
-    logname = 'decode-events-r1.jsonl' if RECOVERY.exists() else 'decode-events.jsonl'
+    logname = 'decode-events-r2.jsonl' if RECOVERY2.exists() else 'decode-events-r1.jsonl' if RECOVERY.exists() else 'decode-events.jsonl'
     with zipfile.ZipFile(SOURCE/'publisher-ccs-v2.zip') as archive, (RUN/logname).open('x',encoding='utf-8',buffering=1) as log:
         for r in pairs:
             receipt = OUT/('decoded-'+r['publisher_role']+'-'+r['stem']+'.json')
             if receipt.exists():
-                assert RECOVERY.exists() and receipt.relative_to(ROOT).as_posix() in read(RECOVERY)['completed_decode_receipts_sha256']
+                assert RECOVERY.exists() and receipt.relative_to(ROOT).as_posix() in read(active_policy())['completed_decode_receipts_sha256']
                 saved = read(receipt)
                 assert saved['id']==r['id'] and saved['members']==r['members']
                 rows.append(saved); continue
-            views = []; masks = []; problems = []; annotation = json.loads(member_bytes(archive, r['members']['original/json']))
+            views = []; masks = []; problems = []; extra = []; annotation = json.loads(member_bytes(archive, r['members']['original/json']))
             for key in ('original/images','512x512/images_512'):
                 im = image(member_bytes(archive, r['members'][key]), 'JPEG'); rgb = im.convert('RGB')
                 if key.startswith('512'): assert rgb.size == (512,512)
@@ -139,7 +162,17 @@ def decode():
                 capture = str(camera)+'|'+stamp if camera and isinstance(stamp,str) and re.fullmatch(r'\d{4}:\d{2}:\d{2} \d{2}:\d{2}:\d{2}',stamp) else None
                 views.append({'id': r['id']+'/'+key, 'entry_id': r['id'], 'variant': key, 'member': r['members'][key]['member'],
                     'size': list(rgb.size), 'rgb_sha256': hashlib.sha256(rgb.tobytes()).hexdigest(), 'orientation_phashes': fingerprints(rgb), 'capture_second_proxy': capture})
+                if im.format=='MPO':
+                    assert key=='original/images' and 1<=im.n_frames<=4
+                    problems.append({'kind':'MPO_frame_correspondence_unverified','frame_count':im.n_frames,'not_accepted_as_training_GT':True})
+                    for frame in range(1,im.n_frames):
+                        im.seek(frame);assert im.width*im.height<=40_000_000 and im.getexif().get(274) in (None,1)
+                        more=im.convert('RGB')
+                        extra.append({'id':r['id']+'/MPO/frame'+str(frame),'entry_id':r['id'],'variant':'MPO_extra_frame',
+                                      'member':r['members'][key]['member'],'frame_index':frame,'size':list(more.size),
+                                      'rgb_sha256':hashlib.sha256(more.tobytes()).hexdigest(),'orientation_phashes':fingerprints(more),'capture_second_proxy':None})
                 im.close()
+            views.extend(extra)
             for key in ('original/masks','512x512/mask_512'):
                 mask = image(member_bytes(archive, r['members'][key]), 'PNG')
                 expected = views[0 if key.startswith('original') else 1]['size']
@@ -219,7 +252,10 @@ def graph(rows):
     canon = canonical(d); ostmember = {r['member']:c+i for i,r in enumerate(ost)}
     for r in read(OST/'manifest.json')['rows']: assert canon[g.find(ostmember[r['member']])] == r['group_id']
     keys += ['ccs66:'+v['id'] for v in views]
-    for i in range(0,len(views),2): assert views[i]['entry_id'] == views[i+1]['entry_id']; g.union(d+i,d+i+1)
+    entry_nodes={}
+    for i,v in enumerate(views,d):
+        if v['entry_id'] in entry_nodes:g.union(i,entry_nodes[v['entry_id']])
+        else:entry_nodes[v['entry_id']]=i
     index = Bands(); exact = defaultdict(list); counts = Counter(); links = []
     for i,r in enumerate(allrows[:d]): index.add(r['orientation_phashes'],i); exact[(r['rgb_sha256'],tuple(r['size']))].append(i)
     # Reuse existing capture proxies only where provided; never infer absent physical identities.
@@ -248,7 +284,7 @@ def graph(rows):
         if r['phase'] in ('fit','validation','cal'): roles[canon[g.find(unsupmember[r['member']])]].add(r['phase'])
     for r in read(OST/'manifest.json')['rows']:
         if r['phase'] in ('fit','validation','cal'): roles[canon[g.find(ostmember[r['member']])]].add(r['phase'])
-    grouped = [{**r,'group_id':canon[g.find(d+2*i)]} for i,r in enumerate(rows)]
+    grouped = [{**r,'group_id':canon[g.find(entry_nodes[r['id']])]} for r in rows]
     sourceheld = {r['group_id'] for r in grouped if r['publisher_role']=='Test'}
     assignments = allocate([r['group_id'] for r in grouped],external|sourceheld,roles)
     result = [{**r,'phase':'test' if r['publisher_role']=='Test' else assignments[r['group_id']],
@@ -261,6 +297,7 @@ def audit():
     p = validate(); assert not (OUT/'decoded-pairs.json').exists() and not (OUT/'manifest.json').exists()
     rows = decode(); values,counts = graph(rows); failures = []
     invalid = [r for r in values if r['annotation_problems']]
+    if p.get('inventory_only_failed_study'):failures.append({'kind':'inventory_only_failed_study_no_GT_promotion','reason':'Original strict gate remains failed; completed exclusion fingerprints do not authorize learning.'})
     if invalid: failures.append({'kind':'annotation_contract_failed','entries':len(invalid),'ids':[r['id'] for r in invalid]})
     summaries = {}
     for phase in p['minimum_entries']:
@@ -280,22 +317,25 @@ def audit():
                'native_mask_modes':dict(Counter(r['native_mask']['mode'] for r in values)),
                'raw_JSON_labels':dict(sum((Counter(r['JSON_raw_labels']) for r in values),Counter())),
                'pixel_comparisons_and_joins':counts,'replayed_old_pixel_edges':94,'v57_783_and_v61_105_canonical_groups_exact':True,
-               'new_original_entries_decoded':440,'new_RGB_decodes_including_supplied_copies':880,'new_mask_decodes_including_supplied_copies':880,
+               'new_original_entries_decoded':440,'unique_RGB_views_including_supplied_copies_and_MPO_frames':sum(len(r['views']) for r in values),
+               'completed_native_and_copy_mask_pairs':440,'reused_completed_entries_without_redecode':len(p.get('completed_decode_receipts_sha256',{})),
+               'additional_failed_attempt_RGB_decodes':2,'additional_failed_attempt_mask_decodes':1,'v67_reference_TRAIN_mask_redecodes_not_new_photos':3,
                'original_TEST44_all220associatedfiles_preserved':True,'new_source_images_viewed_features_scores_gradient_optimizer':0,
                'Good_includes_minimal_corrosion_not_binary_zero_rust':True,'training_protocol_fixed':False,
                'physical_part_capture_groups_verified':False,'independent_field_validation':False,
-               'policy_sha256':sha(RECOVERY if RECOVERY.exists() else POLICY),'original_policy_sha256':sha(POLICY),
+               'policy_sha256':sha(active_policy()),'original_policy_sha256':sha(POLICY),
                'reserved_TEST_sha256':sha(META/'reserved-original-and-resized-TEST-before-pixels.json'),
-               'audit_runtime_failures_preserved':1 if RECOVERY.exists() else 0,
+               'audit_runtime_failures_preserved':p.get('runtime_audit_failures_preserved',0),
                'new_units_passed':3,'old_models_outputs_maps_unchanged':True,'disk_free_bytes':shutil.disk_usage(ROOT).free}
     new(OUT/'manifest.json',{'rows':values,'audit':summary}); summary['manifest_sha256'] = sha(OUT/'manifest.json')
     new(ROOT/'reports/industrial-corrosion-condition-v66-data-audit.json',summary); print(summary,flush=True)
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(); parser.add_argument('stage',choices=('freeze','freeze-recovery','audit')); args = parser.parse_args()
+    parser = argparse.ArgumentParser(); parser.add_argument('stage',choices=('freeze','freeze-recovery','freeze-inventory','audit')); args = parser.parse_args()
     if args.stage == 'freeze': freeze()
     elif args.stage == 'freeze-recovery': freeze_recovery()
+    elif args.stage == 'freeze-inventory': freeze_inventory()
     else:
         for path in (ROOT/'runs').glob('**/*.lock'):
             if process_exists(int(path.read_text(encoding='utf-8').strip())): raise RuntimeError('Live job '+str(path))
