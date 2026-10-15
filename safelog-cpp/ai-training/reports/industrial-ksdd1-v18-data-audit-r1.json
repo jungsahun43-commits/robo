@@ -1,0 +1,237 @@
+{
+  "UTC": "2026-10-15T03:46:43.589936+00:00",
+  "status": "ready_for_small_sample_research_protocol",
+  "source_download_receipt_sha256": "a72fdaa42067c72a09403e36c5598203c16dc92de9411ee094a68c40a457681f",
+  "source_images": 399,
+  "annotated_surface_defect_views": 52,
+  "no_visible_defect_views": 347,
+  "publisher_object_folders": 50,
+  "object_identity_basis": "author paper: eight nonoverlapping surface views per electrical commutator; one missing view in archive",
+  "cross_source_physical_identity_verified": false,
+  "official_fold0_TEST_objects": [
+    "kos02",
+    "kos08",
+    "kos09",
+    "kos10",
+    "kos15",
+    "kos19",
+    "kos21",
+    "kos25",
+    "kos27",
+    "kos28",
+    "kos30",
+    "kos37",
+    "kos38",
+    "kos41",
+    "kos43",
+    "kos46",
+    "kos47"
+  ],
+  "original_author_3fold_TEST_sizes": [
+    17,
+    17,
+    16
+  ],
+  "FIT_VAL_CAL_rule": "NonTEST active groups sortedSHA(ksdd1-v18-minimum-groups:+group); first5VAL next5CAL restFIT",
+  "source_groups": 47,
+  "counts": {
+    "cal": {
+      "normal": 35,
+      "defect": 5
+    },
+    "excluded_author_TEST_near_group": {
+      "defect": 3,
+      "normal": 13
+    },
+    "fit": {
+      "normal": 147,
+      "defect": 21
+    },
+    "test": {
+      "normal": 117,
+      "defect": 18
+    },
+    "validation": {
+      "normal": 35,
+      "defect": 5
+    }
+  },
+  "within_source_near_links": [
+    {
+      "a": "kolektor_sdd1/kos26/Part0.jpg",
+      "b": "kolektor_sdd1/kos01/Part0.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos26/Part1.jpg",
+      "b": "kolektor_sdd1/kos01/Part1.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos26/Part2.jpg",
+      "b": "kolektor_sdd1/kos01/Part2.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos26/Part3.jpg",
+      "b": "kolektor_sdd1/kos01/Part3.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos26/Part4.jpg",
+      "b": "kolektor_sdd1/kos01/Part4.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos26/Part5.jpg",
+      "b": "kolektor_sdd1/kos01/Part5.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos26/Part6.jpg",
+      "b": "kolektor_sdd1/kos01/Part6.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos26/Part7.jpg",
+      "b": "kolektor_sdd1/kos01/Part7.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos34/Part0.jpg",
+      "b": "kolektor_sdd1/kos27/Part0.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos34/Part1.jpg",
+      "b": "kolektor_sdd1/kos27/Part1.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos34/Part2.jpg",
+      "b": "kolektor_sdd1/kos27/Part2.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos34/Part3.jpg",
+      "b": "kolektor_sdd1/kos27/Part3.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos34/Part4.jpg",
+      "b": "kolektor_sdd1/kos27/Part4.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos34/Part5.jpg",
+      "b": "kolektor_sdd1/kos27/Part5.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos34/Part6.jpg",
+      "b": "kolektor_sdd1/kos27/Part6.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos34/Part7.jpg",
+      "b": "kolektor_sdd1/kos27/Part7.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos39/Part0.jpg",
+      "b": "kolektor_sdd1/kos38/Part2.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos39/Part1.jpg",
+      "b": "kolektor_sdd1/kos38/Part3.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos39/Part2.jpg",
+      "b": "kolektor_sdd1/kos38/Part4.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos39/Part3.jpg",
+      "b": "kolektor_sdd1/kos38/Part5.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos39/Part4.jpg",
+      "b": "kolektor_sdd1/kos38/Part6.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos39/Part5.jpg",
+      "b": "kolektor_sdd1/kos38/Part7.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos39/Part6.jpg",
+      "b": "kolektor_sdd1/kos38/Part0.jpg"
+    },
+    {
+      "a": "kolektor_sdd1/kos39/Part7.jpg",
+      "b": "kolektor_sdd1/kos38/Part1.jpg"
+    }
+  ],
+  "existing_TEST_photos_checked": 5611,
+  "existing_TEST_matches": {},
+  "excluded_views": [
+    "kolektor_sdd1/kos34/Part0.jpg",
+    "kolektor_sdd1/kos34/Part1.jpg",
+    "kolektor_sdd1/kos34/Part2.jpg",
+    "kolektor_sdd1/kos34/Part3.jpg",
+    "kolektor_sdd1/kos34/Part4.jpg",
+    "kolektor_sdd1/kos34/Part5.jpg",
+    "kolektor_sdd1/kos34/Part6.jpg",
+    "kolektor_sdd1/kos34/Part7.jpg",
+    "kolektor_sdd1/kos39/Part0.jpg",
+    "kolektor_sdd1/kos39/Part1.jpg",
+    "kolektor_sdd1/kos39/Part2.jpg",
+    "kolektor_sdd1/kos39/Part3.jpg",
+    "kolektor_sdd1/kos39/Part4.jpg",
+    "kolektor_sdd1/kos39/Part5.jpg",
+    "kolektor_sdd1/kos39/Part6.jpg",
+    "kolektor_sdd1/kos39/Part7.jpg"
+  ],
+  "existing_TEST_manifest_sha256": {
+    "data/equipment-expansion-v1/manifest.json": "40ec891c498adc98db645e6caf979bb91bd7577c991deddc3527c12106ccfecc",
+    "data/industrial-ksdd-supervised-v10/manifest.json": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+    "data/industrial-bsclass-v1/manifest.json": "e577da6548747dddd67026b9f829a8223f7f770d3de7d710dcefefbf47eb0104",
+    "data/industrial-magnetic-tiles-v16/manifest.json": "cad485a8d93082f69e2c28f10c3d36fafc9714d1ec994baa74b3af30f289e27f"
+  },
+  "normal_views_do_not_mean_whole_object_is_healthy": true,
+  "native_view_preparation_check": "width512 height1408 aspect preserving, grey127 letterbox, nearest real mask>0; no defective mask vanishes",
+  "license": "CC BY-NC-SA 4.0 per author page, noncommercial academic research, attribution/share-alike",
+  "citation": "Tabernik et al., DOI10.1007/s10845-019-01476-x",
+  "split_decoded": "strict container-only opcode allowlist with all globals/persistent references rejected; no archive code executed",
+  "source_image_content_viewed_by_agent": false,
+  "new_model_scores_or_optimizer_updates": 0,
+  "public_benchmark_not_independent_field_validation": true,
+  "photo20percent_PASS_requires_each_TEST_label_at_least20": true,
+  "current_eligible_for_app_category": false,
+  "parent_manifest_sha256": "b6ae800be943f2fcf9759b72334fda986306a03de237fc1efdc75e6970c79377",
+  "parent_audit_sha256": "70689bc06e491277c85e45a3c6bcd77177e0c210dc0162f9d932840e7ecb5dce",
+  "split_repair_reason": "Initial SHA70/15/15 gives only one validation defect. Before all model scores, reserve five complete groups for VAL and five for CAL by a single fixed SHA order; rest FIT. Do not reroll seeds or alter publisher TEST.",
+  "fixed_source_group_allocation": {
+    "validation": [
+      "kolektor_sdd1/kos36/Part0.jpg",
+      "kolektor_sdd1/kos48/Part0.jpg",
+      "kolektor_sdd1/kos12/Part0.jpg",
+      "kolektor_sdd1/kos18/Part0.jpg",
+      "kolektor_sdd1/kos05/Part0.jpg"
+    ],
+    "cal": [
+      "kolektor_sdd1/kos11/Part0.jpg",
+      "kolektor_sdd1/kos07/Part0.jpg",
+      "kolektor_sdd1/kos44/Part0.jpg",
+      "kolektor_sdd1/kos14/Part0.jpg",
+      "kolektor_sdd1/kos20/Part0.jpg"
+    ],
+    "fit": [
+      "kolektor_sdd1/kos45/Part0.jpg",
+      "kolektor_sdd1/kos13/Part0.jpg",
+      "kolektor_sdd1/kos32/Part0.jpg",
+      "kolektor_sdd1/kos04/Part0.jpg",
+      "kolektor_sdd1/kos31/Part0.jpg",
+      "kolektor_sdd1/kos17/Part0.jpg",
+      "kolektor_sdd1/kos06/Part0.jpg",
+      "kolektor_sdd1/kos29/Part0.jpg",
+      "kolektor_sdd1/kos50/Part0.jpg",
+      "kolektor_sdd1/kos40/Part0.jpg",
+      "kolektor_sdd1/kos49/Part0.jpg",
+      "kolektor_sdd1/kos03/Part0.jpg",
+      "kolektor_sdd1/kos33/Part0.jpg",
+      "kolektor_sdd1/kos42/Part0.jpg",
+      "kolektor_sdd1/kos23/Part0.jpg",
+      "kolektor_sdd1/kos24/Part0.jpg",
+      "kolektor_sdd1/kos35/Part0.jpg",
+      "kolektor_sdd1/kos16/Part0.jpg",
+      "kolektor_sdd1/kos01/Part0.jpg",
+      "kolektor_sdd1/kos22/Part0.jpg"
+    ]
+  },
+  "source_holdout_TEST_unchanged": true,
+  "source_TEST_defect_count": 18,
+  "insufficient_TEST_defect_count_for_20percent_PASS": true
+}
