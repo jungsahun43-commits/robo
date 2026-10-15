@@ -1,0 +1,24 @@
+{
+  "UTC": "2026-10-15T08:03:07.597481+00:00",
+  "fixed_before_PNG_decoding_model_features_scores_optimizer": true,
+  "archive_sha256": "4c01475a48a8b2fa28a9bd8e0f11ccacf14cc8dc2651b5b72df21f072a241775",
+  "reservation_sha256": "f1104c7f9c85899457608720162ea1bf5ef9d077dda9d26c28b7b2ae5f44e0a5",
+  "metadata_audit_sha256": "231e08759f030a212f722777148ed73fe0bf98d1620db8698191d7ed61c5bc52",
+  "script_sha256": "8c8124c9da120f50d99982a1877ed945e0e09c3e7a95a9d8b952f968ff418581",
+  "existing_TEST_manifest_SHA256": {
+    "data/equipment-expansion-v1/manifest.json": "40ec891c498adc98db645e6caf979bb91bd7577c991deddc3527c12106ccfecc",
+    "data/industrial-ksdd-supervised-v10/manifest.json": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+    "data/industrial-bsclass-v1/manifest.json": "e577da6548747dddd67026b9f829a8223f7f770d3de7d710dcefefbf47eb0104",
+    "data/industrial-magnetic-tiles-v16/manifest.json": "cad485a8d93082f69e2c28f10c3d36fafc9714d1ec994baa74b3af30f289e27f",
+    "data/industrial-ksdd1-v18/manifest-r1.json": "aa506252c5842aef5869a4982e4b10cc746ee3ddc713cc29d33e0a9e76126736"
+  },
+  "holdout": "exact author functional-component-id fold0(S3) TEST3109 remains TEST; never switch fold",
+  "group_rule": "union publisher physical_part_id, functional_component_id, acq_id and exact RGB or any8orientation pHash<=2",
+  "exclusion": "all nonTEST in TEST-connected group excluded; any group matching retained old5746TEST excluded from nonTEST; original TEST list retained and any oldTEST matches explicitly flagged",
+  "split_rule": "remaining connected group sorted SHA256(gearbox25:+str(min_idx)); first ceil(.15*N) validation, next ceil(.15*N) calibration, rest FIT; no redraw based on labels or scores",
+  "data_gate": "FIT each label>=100 and>=8groups; VAL/CAL each label>=20 and>=3groups; TEST each label>=20 and>=3groups; no reservedTEST/oldTEST-near group in FIT/VAL/CAL",
+  "unannotated_PNGs_excluded": 103,
+  "label_scope": "publisher128x128 visible-wear acceptance patch OK/nOK, not whole equipment functioning or location mask",
+  "new_features_scores_optimizer_updates": 0,
+  "training_protocol_fixed": false
+}
