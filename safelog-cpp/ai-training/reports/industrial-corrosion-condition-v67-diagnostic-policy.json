@@ -1,0 +1,29 @@
+{
+  "UTC": "2026-10-15T22:16:41.027010+00:00",
+  "fixed_before_new_header_inventory_or_TRAIN_reference_comparison": true,
+  "script_sha256": "c834c2c7a51708043dee01a0f54f12f3bc6637d30578d9aa4a712f1014ae70d9",
+  "inputs_sha256": {
+    "data/industrial-corrosion-condition-v64-source/publisher-ccs-v2.zip": "45f0ec8b26f1c09d707f3010af359a28e0985d385d2bf6d98b5d4dd308e9dbe5",
+    "data/industrial-corrosion-condition-v64-source/author-labelme2voc-static.py.txt": "97c9e97e8753355ae1187e3f1bc56d500325df62c6f5fcb004db7c9f8804c42a",
+    "data/industrial-corrosion-condition-v64-source/labelme-v3.16.7-shape-static.py.txt": "4de701972daafd01eba845bc34bb36a965681de5595926123264e3df737de577",
+    "data/industrial-corrosion-condition-v65-metadata/all-pairs-before-json-or-pixels.json": "209ac81618ee5f02a27b224e34ed12f52ce171c11c548e24cbde872755293375",
+    "safelog_ai/corrosion_condition_data.py": "0a77c6b73a4953c953d8cfcdbe11b0c4bbf1f5e2bbc16b76dbd5c33bc33946bf",
+    "reports/industrial-corrosion-condition-v66-data-policy.json": "7ea315331fc0cb29888fe84af89d841781cb4579e894a3573714e754fda9a843",
+    "reports/industrial-corrosion-condition-v66-r1-recovery-policy.json": "eca504aa0565641155f54fcf558dc96650f3bfc6018dea087ff5704a9d4bfb77",
+    "runs/industrial-corrosion-condition-data-v66/failure-20261015T221220Z.json": "253dd87e55079eae7a9a4e7496eba65a4641e69bbc67d2374135cdbc6c5f5115",
+    "runs/industrial-corrosion-condition-data-v66/failure-20261015T221419Z.json": "3d79e94e033c21e63ca082a816415c9619651a281d79e4f8a0486cfe13fd2244"
+  },
+  "header_inventory": "all440 original/copy image/mask encodedSHA checked; PIL open/getexif/size/mode/format only, no image.load/convert/autorotate or pixels for headers. Preserve actual format, EXIF orientation and coordinate mismatch; do not fix extensions, masks, or orientation.",
+  "fixed_TRAIN_only_reference_ids": [
+    "ccs/Train/0",
+    "ccs/Train/1",
+    "ccs/Train/10"
+  ],
+  "reference": "Author converter calls labelme shapes_to_label. Official labelme v3.16.7 static source uses uint8 zeros -> PIL L canvas, then ordered draw.polygon outline1/fill1. Independently implement this exact canvas; original v66 used PIL mode1. Compare existing native PNG to both without choosing algorithms from TEST. Representative version is not proof of the publisher installed version. No source code execution.",
+  "geometry": "Native mask/JSON dimensions and exact classmapping preserved, unknownshape or invalidcoordinate stops TRAIN reference. No GT replacement, no tolerance sweep, no learning/thresholds/TEST polygon comparisons.",
+  "scope": "Header metadata for reservedTEST is exclusion/format diagnosis only; decode three fixed originalTRAIN PNG masks and reference rasters, sourceRGB content views0, neuralfeatures/score/gradient/optimizer0. No new split or relaxation of original v66 minimums/gate.",
+  "future": "If auditor defect independently confirmed, fix code in a new preregistered recovery while preserving failures; remaining unsupported originals must not silently become valid. Coordinate mismatch needs separate evidence, not forced resizing.",
+  "storage": "smallmetadata <8MiB, >=1GiBreserve, no full archive extraction/cache/modelcopy",
+  "independent_field_validation": false,
+  "new_optimizer_updates": 0
+}
