@@ -1,0 +1,168 @@
+{
+  "selected": {
+    "mpdd_bracket_black": "max_transfer_local"
+  },
+  "categories": {
+    "magnetic_tile_surface": {
+      "photo_rates": {
+        "tp": 38,
+        "fn": 15,
+        "fp": 40,
+        "tn": 83,
+        "positive_photos": 53,
+        "negative_photos": 123,
+        "fnr": 0.2830188679245283,
+        "fpr": 0.3252032520325203
+      },
+      "by_defect": {
+        "MT_Blowhole": {
+          "photos": 9,
+          "fn": 1,
+          "fnr": 0.1111111111111111
+        },
+        "MT_Break": {
+          "photos": 17,
+          "fn": 7,
+          "fnr": 0.4117647058823529
+        },
+        "MT_Crack": {
+          "photos": 9,
+          "fn": 4,
+          "fnr": 0.4444444444444444
+        },
+        "MT_Fray": {
+          "photos": 2,
+          "fn": 0,
+          "fnr": 0.0
+        },
+        "MT_Uneven": {
+          "photos": 16,
+          "fn": 3,
+          "fnr": 0.1875
+        }
+      },
+      "stage_gate": {
+        "state": "needs_improvement",
+        "ready_for_next_stage": false
+      },
+      "eligible": false,
+      "auroc": 0.7677557907654549,
+      "source_pixel_counts": {
+        "tp": 102842,
+        "fn": 537309,
+        "fp": 138588,
+        "tn": 17813745
+      },
+      "source_pixel_fnr": 0.8393472790013606,
+      "source_pixel_fpr": 0.007719776588368765,
+      "source_pixel_IoU": 0.1320622185353501,
+      "pixel_threshold": 0.5,
+      "photo_threshold": 0.5021964907646179,
+      "normal_CAL_photos": 129,
+      "defect_CAL_photos": 42
+    },
+    "mpdd_bracket_black": {
+      "transfer_only": {
+        "rates": {
+          "tp": 10,
+          "fn": 37,
+          "fp": 3,
+          "tn": 29,
+          "positive_photos": 47,
+          "negative_photos": 32,
+          "fnr": 0.7872340425531915,
+          "fpr": 0.09375
+        },
+        "by_defect": {
+          "hole": {
+            "photos": 12,
+            "fn": 7,
+            "fnr": 0.5833333333333334
+          },
+          "scratches": {
+            "photos": 35,
+            "fn": 30,
+            "fnr": 0.8571428571428571
+          }
+        },
+        "eligible_incremental": false,
+        "auroc": 0.6868351063829787
+      },
+      "max_transfer_local": {
+        "rates": {
+          "tp": 17,
+          "fn": 30,
+          "fp": 4,
+          "tn": 28,
+          "positive_photos": 47,
+          "negative_photos": 32,
+          "fnr": 0.6382978723404256,
+          "fpr": 0.125
+        },
+        "by_defect": {
+          "hole": {
+            "photos": 12,
+            "fn": 5,
+            "fnr": 0.4166666666666667
+          },
+          "scratches": {
+            "photos": 35,
+            "fn": 25,
+            "fnr": 0.7142857142857143
+          }
+        },
+        "eligible_incremental": true,
+        "auroc": 0.7480053191489362
+      }
+    },
+    "mpdd_tubes": {
+      "transfer_only": {
+        "rates": {
+          "tp": 29,
+          "fn": 40,
+          "fp": 3,
+          "tn": 29,
+          "positive_photos": 69,
+          "negative_photos": 32,
+          "fnr": 0.5797101449275363,
+          "fpr": 0.09375
+        },
+        "by_defect": {
+          "anomalous": {
+            "photos": 69,
+            "fn": 40,
+            "fnr": 0.5797101449275363
+          }
+        },
+        "eligible_incremental": false,
+        "auroc": 0.7128623188405797
+      },
+      "max_transfer_local": {
+        "rates": {
+          "tp": 41,
+          "fn": 28,
+          "fp": 4,
+          "tn": 28,
+          "positive_photos": 69,
+          "negative_photos": 32,
+          "fnr": 0.4057971014492754,
+          "fpr": 0.125
+        },
+        "by_defect": {
+          "anomalous": {
+            "photos": 69,
+            "fn": 28,
+            "fnr": 0.4057971014492754
+          }
+        },
+        "eligible_incremental": false,
+        "auroc": 0.7780797101449275
+      }
+    }
+  },
+  "new_source_holdout_first_model_scoring": true,
+  "known_MPDD_TEST_reused": true,
+  "independent_field_validated": false,
+  "actual_optimizer_updates": 1920,
+  "CAL_sha256": "7af12af1a9fc859e7fdc7214569ca0bb212a8f166b142f59cd0d6e38432ba190"
+}

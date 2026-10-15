@@ -1,0 +1,86 @@
+{
+  "status": "completed_verified_partial_black_bracket_improvement",
+  "UTC": "2026-10-15T02:58:20.646040+00:00",
+  "repo": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine",
+  "active_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_checkpoint_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "role4_ZIP_bytes": 399543382,
+  "runtime_revision": "r1",
+  "previous_v13_checkpoint_and_ZIP_preserved": true,
+  "initial_failed_v16_ZIP_and_logs_preserved": true,
+  "runtime_recovery": "restore original forward_surface(original,view,category), new forward_real_mask(native) alias; no weights, cut or evaluation changes",
+  "black_bracket_photo_before": {
+    "fpr": 0.09375,
+    "fnr": 0.8297872340425532
+  },
+  "black_bracket_photo_after": {
+    "fpr": 0.125,
+    "fnr": 0.6382978723404256
+  },
+  "black_bracket_by_defect": {
+    "hole": {
+      "fn": 5,
+      "photos": 12
+    },
+    "scratches": {
+      "fn": 25,
+      "photos": 35
+    }
+  },
+  "black_bracket_stage20_pass": false,
+  "additional12_photo_stage20_count": 8,
+  "one_model_one_backbone": true,
+  "target_backbone_passes": 2,
+  "v15_actual_optimizer_updates": 2880,
+  "v15_candidates_all_rejected": true,
+  "v16_actual_optimizer_updates": 1920,
+  "this_work_actual_updates_total": 4800,
+  "tracked_v8_v10_v13_v15_v16_updates_including_failed_candidates": 12880,
+  "v16_selected_epoch_by_labelled_VAL": 1,
+  "v16_selected_epoch_retained_updates": 64,
+  "new_actual_defect_mask_FIT_photos": 217,
+  "new_normal_FIT_photos": 499,
+  "publisher_source_total_photos": 1344,
+  "source_masks_empty_or_vanishing": 5,
+  "entire_source_groups_excluded_photos": 17,
+  "empty_defect_masks_relabelled_normal": false,
+  "source_research_permission": "author permits academic research only, no commercial use, citation required; no invented SPDX license",
+  "new_source_self_heldout_photo_rates": {
+    "fpr": 0.3252032520325203,
+    "fnr": 0.2830188679245283
+  },
+  "new_source_self_heldout_stage20_pass": false,
+  "new_source_pixel_fnr_at_half": 0.8393472790013606,
+  "new_source_registered_as_app_task": false,
+  "original_black_location_PNG_exact_current79": true,
+  "original_parent_all_tensors_buffers_and_points_preserved": true,
+  "current_CPU_GPU_photos_checked": 79,
+  "fresh_GPU_cached_classifications_equal": true,
+  "max_CPU_GPU_score_difference": 2.2242594568400165e-06,
+  "current_CPU_API_aliases": 15,
+  "current_actual_CPP_operations": 12,
+  "previous_CPP_or_initial_failed_partial_checks_counted_as_current": false,
+  "new_unit_tests": {
+    "neighbor": 3,
+    "real_mask_geometry_and_group_index": 3,
+    "runtime_method_contract": 2
+  },
+  "owned_server_stopped": true,
+  "fresh_pip_install_tested": false,
+  "Android_APK_built": false,
+  "known_MPDD_TEST_used_for_selection": true,
+  "source_split_fixed_before_model_scores": true,
+  "physical_acquisition_groups_verified": false,
+  "independent_field_validated": false,
+  "app_default_promoted": false,
+  "v14_human_relation_labels_still_pending": true,
+  "v17_cross_source_preparation_complete": true,
+  "v17_KS_FIT_VAL_vs_source_TEST_near_matches": 0,
+  "v17_optimizer_updates": 0,
+  "next": "Preregister FIT/VAL-derived small-learning-rate regularized mixed real-mask candidate using KS FIT1254normal146defect and magnetic FIT499normal217defect; protect all current points and outputs, do not rerun completed studies.",
+  "automation_id": "safelog",
+  "automation_continues_for_user_authorized_work": true,
+  "old_awake_helper_restored_not_restarted": true
+}

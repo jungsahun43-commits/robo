@@ -1,0 +1,646 @@
+{
+  "status": "passed",
+  "actual_photos": 79,
+  "CPU_actual_analyze_path": true,
+  "fresh_GPU_full_preprocess_forward": true,
+  "all_photo_decisions_equal_to_frozen_evaluation": true,
+  "all79_original_location_PNG_exact_to_parent_CPU": true,
+  "max_CPU_GPU_score_difference": 2.2242594568400165e-06,
+  "max_fresh_GPU_cached_score_difference": 1.2023024098528623e-07,
+  "total_benchmark_seconds_not_single_photo_latency": 20.375,
+  "independent_field_validated": false,
+  "records": [
+    {
+      "id": "mpdd/bracket_black/test/good/000.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.97197096439682,
+      "GPU_score": 0.9719711447421813,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/001.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9948718195344084,
+      "GPU_score": 0.9948716993041675,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/002.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9710925021416011,
+      "GPU_score": 0.9710924420264807,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/003.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.95282718405747,
+      "GPU_score": 0.9528269435969883,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/004.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9795250304332798,
+      "GPU_score": 0.9795251506635206,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/005.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9663382377252439,
+      "GPU_score": 0.9663378169194007,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/006.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0032618464359249,
+      "GPU_score": 1.0032617863208044,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/007.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9937925126617473,
+      "GPU_score": 0.9937925126617473,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/008.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.980262402500789,
+      "GPU_score": 0.9802619816949458,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/009.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9737227190068982,
+      "GPU_score": 0.9737223583161755,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/010.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9966324110671937,
+      "GPU_score": 0.9966322307218323,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/011.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9707788214430635,
+      "GPU_score": 0.9707785208674612,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/012.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9708507792422489,
+      "GPU_score": 0.9708509595876103,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/013.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9952422489066562,
+      "GPU_score": 0.9952420084461744,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/014.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.984654894122244,
+      "GPU_score": 0.9846548340071236,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/015.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9739889688753964,
+      "GPU_score": 0.9739890289905169,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/016.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9939425600024046,
+      "GPU_score": 0.9939423796570432,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/017.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 1.0003319556951562,
+      "GPU_score": 1.0003318354649153,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/018.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9896494987901832,
+      "GPU_score": 0.989649198214581,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/019.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9947978178211274,
+      "GPU_score": 0.994797877936248,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/020.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9597222681434948,
+      "GPU_score": 0.9597244924029517,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/021.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 1.000176017072694,
+      "GPU_score": 1.000176017072694,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/022.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.989868858864726,
+      "GPU_score": 0.9898689189798464,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/023.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0408994407663927,
+      "GPU_score": 1.0408993763051388,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/024.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9793318805512556,
+      "GPU_score": 0.9793318204361352,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/025.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.995886803228182,
+      "GPU_score": 0.995886803228182,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/026.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.1354772501731591,
+      "GPU_score": 1.1354768634056362,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/027.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9522833304164616,
+      "GPU_score": 0.9522829436489388,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/028.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.997108703166564,
+      "GPU_score": 0.9971086430514435,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/029.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9842048723305129,
+      "GPU_score": 0.9842048723305129,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/030.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9895611896782338,
+      "GPU_score": 0.9895610093328725,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/good/031.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0741856206925782,
+      "GPU_score": 1.0741854273088167,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/000.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9995478741790529,
+      "GPU_score": 0.9995479342941733,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/001.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0549375547719215,
+      "GPU_score": 1.0549369746206374,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/002.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.000941042095613,
+      "GPU_score": 1.0009412224409744,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/003.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.002731390613024,
+      "GPU_score": 1.0027316310735057,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/004.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0022365830565534,
+      "GPU_score": 1.0022367634019147,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/005.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9990234298681976,
+      "GPU_score": 0.999023610213559,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/006.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0449786778287773,
+      "GPU_score": 1.0449782910612546,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/007.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9942576625898146,
+      "GPU_score": 0.9942583716636064,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/008.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0007324426276318,
+      "GPU_score": 1.000732562857873,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/009.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9956987030162762,
+      "GPU_score": 0.9956986429011557,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/010.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9980795623619231,
+      "GPU_score": 0.9980795623619231,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/hole/011.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0012231623559116,
+      "GPU_score": 1.0012231623559116,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/000.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9943513428215032,
+      "GPU_score": 0.9943511023610213,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/001.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9835546671876644,
+      "GPU_score": 0.9835547273027848,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/002.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9179577772341545,
+      "GPU_score": 0.9179582929241848,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/003.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0008320014026768,
+      "GPU_score": 1.0008318080189156,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/004.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0352920852216452,
+      "GPU_score": 1.035291569531615,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/005.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0655976412338013,
+      "GPU_score": 1.0655990593813847,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/006.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9961400081155413,
+      "GPU_score": 0.9961398878853004,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/007.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9876770615729121,
+      "GPU_score": 0.9876776026089962,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/008.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9993200378725259,
+      "GPU_score": 0.9993200979876463,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/009.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0020166819459264,
+      "GPU_score": 1.0020167420610469,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/010.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9912138144546807,
+      "GPU_score": 0.9912139948000421,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/011.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.99379155081982,
+      "GPU_score": 0.9937914907046995,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/012.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.001030854085574,
+      "GPU_score": 1.0010309142006943,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/013.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9973374411998978,
+      "GPU_score": 0.9973366597033319,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/014.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9899432212687296,
+      "GPU_score": 0.9899429808082478,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/015.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0275000088634223,
+      "GPU_score": 1.027499493173392,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/016.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.996977411809753,
+      "GPU_score": 0.9969772184259915,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/017.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9916616721020755,
+      "GPU_score": 0.9916615518718346,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/018.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.029004856833167,
+      "GPU_score": 1.0290055014457047,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/019.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.034869864009316,
+      "GPU_score": 1.0348681235554635,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/020.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9905221298787178,
+      "GPU_score": 0.9905233922962473,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/021.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9945644509235185,
+      "GPU_score": 0.9945644509235185,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/022.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9949254422218549,
+      "GPU_score": 0.9949253821067344,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/023.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9967616585761734,
+      "GPU_score": 0.9967617788064143,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/024.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9977987045191542,
+      "GPU_score": 0.997798944979636,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/025.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9988808368024767,
+      "GPU_score": 0.9988807766873563,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/026.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9962771307053007,
+      "GPU_score": 0.996277311050662,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/027.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9984312959317092,
+      "GPU_score": 0.9984313560468296,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/028.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0008202708186176,
+      "GPU_score": 1.000820330933738,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/029.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 1.0004429282075173,
+      "GPU_score": 1.0004430484377582,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/030.png",
+      "CPU_detected": true,
+      "GPU_detected": true,
+      "CPU_score": 1.0025217090728746,
+      "GPU_score": 1.002521769187995,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/031.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9899308976690362,
+      "GPU_score": 0.9899310178992771,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/032.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.990654743834443,
+      "GPU_score": 0.9906545033739611,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/033.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9991045251656923,
+      "GPU_score": 0.9991045251656923,
+      "primary_heatmap_exact_to_parent": true
+    },
+    {
+      "id": "mpdd/bracket_black/test/scratches/034.png",
+      "CPU_detected": false,
+      "GPU_detected": false,
+      "CPU_score": 0.9940227535730924,
+      "GPU_score": 0.9940228738033334,
+      "primary_heatmap_exact_to_parent": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "parent_all_tensors_buffers_and_operating_points_exact": true,
+  "legacy_python_source_SHA_checked": 575,
+  "protected_files_stat_unchanged": 85455,
+  "changed_metadata_files_SHA_rechecked": 0,
+  "all_protected_file_SHA_repeated": false,
+  "actual_optimizer_updates_journal_verified": 1920,
+  "new_unit_tests_passed": 3,
+  "selected": {
+    "mpdd_bracket_black": "max_transfer_local"
+  },
+  "independent_field_performance_claimed": false
+}

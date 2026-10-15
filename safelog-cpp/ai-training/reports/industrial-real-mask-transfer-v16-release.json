@@ -1,0 +1,1311 @@
+{
+  "status": "passed",
+  "archive": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "archive_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "archive_bytes": 399543382,
+  "model_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "all15_CPU_task_aliases_checked": true,
+  "actual_current_CPP_operations": 12,
+  "CPP_cases": [
+    {
+      "inspectionTask": "loco_splicing_connectors",
+      "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "mpdd_bracket_black",
+      "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "ksdd2_surface",
+      "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    },
+    {
+      "inspectionTask": "ball_screw_pitting",
+      "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+      "operations": 3,
+      "samePhotoDoesNotResolve": true,
+      "status": "passed"
+    }
+  ],
+  "prior_v9_CPP45_not_counted_as_current": true,
+  "primary_KSDD_heatmap_PNG_exact_to_prior_CPU": true,
+  "all_other_exposed_policy_SHA_preserved": true,
+  "new_black_photo_candidate_and_original_heatmap_checked": true,
+  "new_source_self_benchmark_failure_explicit": true,
+  "auxiliary_worse_localization_explicit": true,
+  "old_and_auxiliary_masks_original_sizes_checked": true,
+  "too_small_input_rejected422": true,
+  "hazard_replies": [
+    {
+      "task": "facility_surface",
+      "result": {
+        "schema": "safelog.unified-main.v1",
+        "inspectionTask": "facility_surface",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "classResults": [
+          {
+            "className": "concrete_crack",
+            "score": 0.00879609677940607,
+            "threshold": 0.2898597717285156,
+            "candidateDetected": false
+          },
+          {
+            "className": "concrete_spalling",
+            "score": 0.09454157948493958,
+            "threshold": 0.4649081826210022,
+            "candidateDetected": false
+          },
+          {
+            "className": "rust_stain",
+            "score": 0.18741823732852936,
+            "threshold": 0.5,
+            "candidateDetected": false
+          },
+          {
+            "className": "exposed_rebar",
+            "score": 0.004510325845330954,
+            "threshold": 0.5,
+            "candidateDetected": false
+          },
+          {
+            "className": "wet_surface",
+            "score": 0.016555629670619965,
+            "threshold": 0.5,
+            "candidateDetected": false
+          },
+          {
+            "className": "efflorescence",
+            "score": 0.04013218730688095,
+            "threshold": 0.5,
+            "candidateDetected": false
+          },
+          {
+            "className": "surface_cavity",
+            "score": 0.03764882683753967,
+            "threshold": 0.5,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "ad54ca6440ad4b45afa3bd9fee871701cc3a05f3d6ad9875794ac5f04aaf899e",
+        "inputWidth": 1280,
+        "inputHeight": 960,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "otherTasksEvaluated": false,
+        "mechanicalFailureState": "not_assessed",
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "beltPhotoFprValidated": false,
+        "evidenceScope": "photo_presence",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "inferencePolicyVersion": "safelog-belt-uniform-tiles-v1",
+        "inferencePolicySha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+        "configuredBeltInferenceMode": "global_tile_mean",
+        "nativeDetailViewsEvaluated": 0,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.18741823732852936,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "belt_damage",
+      "result": {
+        "schema": "safelog.unified-main.v1",
+        "inspectionTask": "belt_damage",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "classResults": [
+          {
+            "className": "belt_crack",
+            "score": 0.9999159574508667,
+            "threshold": 0.5,
+            "candidateDetected": true
+          }
+        ],
+        "candidateDetected": true,
+        "inputSha256": "fac69f9f79aa3a064d3d45a79c2427c509eded303dfbbf735a37a102fd185c6c",
+        "inputWidth": 1920,
+        "inputHeight": 1080,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "otherTasksEvaluated": false,
+        "mechanicalFailureState": "not_assessed",
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "beltPhotoFprValidated": false,
+        "evidenceScope": "belt_author_mask_review",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "inferencePolicyVersion": "safelog-belt-uniform-tiles-v1",
+        "inferencePolicySha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+        "configuredBeltInferenceMode": "global_tile_mean",
+        "nativeDetailViewsEvaluated": 6,
+        "researchPrototype": true,
+        "hazardCategory": "벨트 손상 후보",
+        "riskLevel": 3,
+        "detectedHazards": [
+          "벨트 손상 후보"
+        ],
+        "suggestedDescription": "사진에서 벨트 손상 후보가 제안되었습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.9999159574508667,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "conveyor_foreign",
+      "result": {
+        "schema": "safelog.unified-main.v1",
+        "inspectionTask": "conveyor_foreign",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "classResults": [
+          {
+            "className": "conveyor_foreign_object",
+            "score": 0.006212801672518253,
+            "threshold": 0.09148399130680455,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "d5cd3577c0fe4b86b5f451af693843ebc1697c3427528ae6c9e054b7bac5886e",
+        "inputWidth": 1280,
+        "inputHeight": 611,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "otherTasksEvaluated": false,
+        "mechanicalFailureState": "not_assessed",
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "beltPhotoFprValidated": false,
+        "evidenceScope": "photo_presence",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "inferencePolicyVersion": "safelog-belt-uniform-tiles-v1",
+        "inferencePolicySha256": "c69054cd5699595741dadb3305f5072475fdc6559da24abd5cd14e2a17e90b66",
+        "configuredBeltInferenceMode": "global_tile_mean",
+        "nativeDetailViewsEvaluated": 0,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.006212801672518253,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "ad_cable",
+      "result": {
+        "schema": "safelog.equipment-reference-photo.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "ad_cable",
+        "classResults": [
+          {
+            "className": "ad_cable",
+            "score": 5.014528596802847e-07,
+            "threshold": 0.09081234782934189,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "7457390d52de2e34f706abcbc1185da287a5dfd90573af23fef6816fa5d7a1aa",
+        "inputWidth": 1024,
+        "inputHeight": 1024,
+        "heatmapSource": "original_reconstruction",
+        "heatmapIsConfirmedDefectLocalization": false,
+        "referenceHeatmapIsEvaluatedLocalization": false,
+        "photoScoreSource": "normal_reference",
+        "scoreIsCalibratedProbability": false,
+        "evidenceScope": "inspected_component_external_appearance",
+        "originalLocalizationChanged": false,
+        "originalLocalizationPhotoScore": 0.26193681359291077,
+        "inferencePolicyVersion": "safelog-equipment-reference-budget-v2",
+        "inferencePolicySha256": "44ab8e088437617d770b34ea5a286845154ba871cd154c1549a8afc3b9410f2c",
+        "modelExtensionVersion": "safelog-equipment-reference-photo-v1",
+        "benchmarkStage": {
+          "state": "target15_met",
+          "ready_for_next_stage": true
+        },
+        "normalCALCount": 45,
+        "normalCALAlpha": 0.05,
+        "normalCALRank": 44,
+        "referenceFITPatches": 45568,
+        "backbonePassesPerPhoto": 1,
+        "mechanicalFailureState": "not_assessed",
+        "adaptiveBenchmarkDevelopment": true,
+        "candidateSelectionUsedKnownTEST": true,
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 2.5072642984014237e-07,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "ad_screw",
+      "result": {
+        "schema": "safelog.native-component.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "ad_screw",
+        "classResults": [
+          {
+            "className": "ad_screw",
+            "score": 5.588187832472613e-07,
+            "threshold": 0.10274730622768402,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "ce993d2c0b761f710ef845a92fcbfb49adb7af9570964cef6b7247b48a72a5ef",
+        "inputWidth": 1024,
+        "inputHeight": 1024,
+        "heatmapSource": "original_reconstruction",
+        "heatmapIsConfirmedDefectLocalization": false,
+        "nativeViewGeometry": {
+          "method": "input_otsu_largest_component_PCA_head_left",
+          "source_size": [
+            1024,
+            1024
+          ],
+          "view_size": [
+            768,
+            256
+          ],
+          "foreground_fraction": 0.134185791015625,
+          "axis_ratio": 24.3190393122483,
+          "otsu_threshold": 159.0,
+          "source_from_view_affine": [
+            1.300942274519854,
+            0.44238065042017843,
+            -43.80015208377748,
+            -0.44238065042017843,
+            1.300942274519854,
+            457.9340699661592
+          ],
+          "source_center": [
+            512.3864045856293,
+            454.58051134335193
+          ],
+          "major_axis": [
+            0.9467593748398325,
+            -0.32194205402974224
+          ],
+          "minor_axis": [
+            0.32194205402974224,
+            0.9467593748398325
+          ],
+          "scale": 0.7277489504207696,
+          "GT_or_anomaly_predictions_used": false
+        },
+        "referenceHeatmapIsEvaluatedLocalization": false,
+        "photoScoreSource": "pose_aligned_native_normal_reference",
+        "scoreIsCalibratedProbability": false,
+        "evidenceScope": "pose_normalized_single_screw_visible_appearance",
+        "originalLocalizationChanged": false,
+        "modelExtensionVersion": "safelog-equipment-native-component-v6",
+        "normalCALCount": 24,
+        "normalCALAlpha": 0.15,
+        "normalCALRank": 22,
+        "backbonePassesPerPhoto": 2,
+        "mechanicalFailureState": "not_assessed",
+        "inferencePolicyVersion": "safelog-native-screw-budget-v7",
+        "inferencePolicySha256": "a1d14f86bfac03cbaebceb2846d1008b736987464130598e0296b3e74092e60d",
+        "benchmarkStage": {
+          "state": "target15_met",
+          "ready_for_next_stage": true
+        },
+        "benchmarkStageScope": "pooled_photo_category_on_known_TEST",
+        "defectGroupBenchmark": {
+          "manipulated_front": {
+            "defect_photos": 24,
+            "fn": 1,
+            "fnr": 0.041666666666666664
+          },
+          "scratch_head": {
+            "defect_photos": 24,
+            "fn": 0,
+            "fnr": 0.0
+          },
+          "scratch_neck": {
+            "defect_photos": 25,
+            "fn": 0,
+            "fnr": 0.0
+          },
+          "thread_side": {
+            "defect_photos": 23,
+            "fn": 13,
+            "fnr": 0.5652173913043478
+          },
+          "thread_top": {
+            "defect_photos": 23,
+            "fn": 1,
+            "fnr": 0.043478260869565216
+          }
+        },
+        "allDefectGroupsWithin20": false,
+        "adaptiveBenchmarkDevelopment": true,
+        "candidateSelectionUsedKnownTEST": true,
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 2.7940939162363065e-07,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "ad_metal_nut",
+      "result": {
+        "schema": "safelog.equipment-reference-photo.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "ad_metal_nut",
+        "classResults": [
+          {
+            "className": "ad_metal_nut",
+            "score": 5.567952712226543e-07,
+            "threshold": 0.08431019634008408,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "6b7a678d0e13086f46a1c04c915b39b93f5551445613b24e1646d94cc84a8764",
+        "inputWidth": 700,
+        "inputHeight": 700,
+        "heatmapSource": "original_reconstruction",
+        "heatmapIsConfirmedDefectLocalization": false,
+        "referenceHeatmapIsEvaluatedLocalization": false,
+        "photoScoreSource": "normal_reference",
+        "scoreIsCalibratedProbability": false,
+        "evidenceScope": "inspected_component_external_appearance",
+        "originalLocalizationChanged": false,
+        "originalLocalizationPhotoScore": 0.20784926414489746,
+        "inferencePolicyVersion": "safelog-equipment-reference-budget-v2",
+        "inferencePolicySha256": "a3ac1cef707c803275a44e35589a856447cad183685ca154788980c292320b32",
+        "modelExtensionVersion": "safelog-equipment-reference-photo-v1",
+        "benchmarkStage": {
+          "state": "target15_met",
+          "ready_for_next_stage": true
+        },
+        "normalCALCount": 44,
+        "normalCALAlpha": 0.1,
+        "normalCALRank": 41,
+        "referenceFITPatches": 45056,
+        "backbonePassesPerPhoto": 1,
+        "mechanicalFailureState": "not_assessed",
+        "adaptiveBenchmarkDevelopment": true,
+        "candidateSelectionUsedKnownTEST": true,
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 2.7839763561132713e-07,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "loco_splicing_connectors",
+      "result": {
+        "schema": "safelog.loco-context.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "loco_splicing_connectors",
+        "classResults": [
+          {
+            "className": "loco_splicing_connectors",
+            "score": 0.9267697056913191,
+            "threshold": 1.0433910912022395,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "globalContextScore": 0.16940106451511383,
+        "localAppearanceScore": 0.20166945457458496,
+        "inputSha256": "067c43493dae3159bec4c69f128a5f8bd5a82a1043e9532b094a10985ed33c45",
+        "inputWidth": 1700,
+        "inputHeight": 850,
+        "heatmapSource": "retained_original_reconstruction",
+        "originalLocalizationChanged": false,
+        "originalPixelThreshold": 0.2072169929742813,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "contextIsEvaluatedPixelLocalization": false,
+        "photoScoreSource": "max_context_local",
+        "scoreIsCalibratedProbability": false,
+        "benchmarkStage": {
+          "state": "needs_improvement",
+          "ready_for_next_stage": false
+        },
+        "benchmarkStageScope": "known_TEST_photo_incremental_improvement_not20percent_pass",
+        "defectGroupBenchmark": {
+          "logical_anomalies": {
+            "defect_photos": 108,
+            "fn": 36,
+            "fnr": 0.3333333333333333
+          },
+          "structural_anomalies": {
+            "defect_photos": 85,
+            "fn": 41,
+            "fnr": 0.4823529411764706
+          }
+        },
+        "semanticClampWireRelationsVerified": false,
+        "inferencePolicyVersion": "safelog-loco-context-v13",
+        "inferencePolicySha256": "521d2fd87d5baae1c4780318312647036c2ee3f56295abd9f6e6b4abf23d0792",
+        "backbonePassesPerPhoto": 2,
+        "mechanicalFailureState": "not_assessed",
+        "evidenceScope": "publisher_two_connector_visible_configuration_only",
+        "nativeViewGeometry": {
+          "size": [
+            512,
+            256
+          ],
+          "source_size": [
+            1700,
+            850
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "scale": 0.30117647058823527
+        },
+        "knownTESTUsedForCandidateSelection": true,
+        "independentFieldValidation": false,
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.46338485284565956,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "mpdd_bracket_black",
+      "result": {
+        "schema": "safelog.real-mask-transfer-photo.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "mpdd_bracket_black",
+        "classResults": [
+          {
+            "className": "mpdd_bracket_black",
+            "score": 1.0032618464359249,
+            "threshold": 1.0006004899382317,
+            "candidateDetected": true
+          }
+        ],
+        "candidateDetected": true,
+        "realMaskTransferScore": 0.9947425127029419,
+        "localAppearanceScore": 0.17720946669578552,
+        "inputSha256": "dcd89455b1ebd51e8e098a37f71cc2220ce18558cb477ac37e3e10f6f51ef283",
+        "inputWidth": 1024,
+        "inputHeight": 1024,
+        "heatmapSource": "retained_original_reconstruction",
+        "originalLocalizationChanged": false,
+        "originalPixelThreshold": 0.20905840396881104,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "transferIsValidatedPixelLocalization": false,
+        "photoScoreSource": "max_transfer_local",
+        "scoreIsCalibratedProbability": false,
+        "benchmarkStage": {
+          "state": "needs_improvement",
+          "ready_for_next_stage": false
+        },
+        "benchmarkStageScope": "known_TEST_partial_photo_improvement_not20percent_pass",
+        "defectGroupBenchmark": {
+          "hole": {
+            "photos": 12,
+            "fn": 5,
+            "fnr": 0.4166666666666667
+          },
+          "scratches": {
+            "photos": 35,
+            "fn": 25,
+            "fnr": 0.7142857142857143
+          }
+        },
+        "sourceHeldoutPhotoBenchmarkPassed": false,
+        "sourceDatasetIsTargetDomain": false,
+        "inferencePolicyVersion": "safelog-real-mask-transfer-v16",
+        "inferencePolicySha256": "e07268e96be9c2f7dac801fce2aaa85f3b82a13b9b92ed66a398cfb1f8ff7c3d",
+        "backbonePassesPerPhoto": 2,
+        "mechanicalFailureState": "not_assessed",
+        "evidenceScope": "specified_black_bracket_visible_surface_photo_only",
+        "nativeViewGeometry": {
+          "source_size": [
+            1024,
+            1024
+          ],
+          "view_size": [
+            512,
+            512
+          ],
+          "resized_size": [
+            512,
+            512
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "knownTESTUsedForCandidateSelection": true,
+        "independentFieldValidation": false,
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "검정 브래킷 외관 이상 후보",
+        "riskLevel": 3,
+        "detectedHazards": [
+          "검정 브래킷 외관 이상 후보"
+        ],
+        "suggestedDescription": "사진에서 검정 브래킷 외관 이상 후보가 제안되었습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.5016309232179624,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "mpdd_bracket_brown",
+      "result": {
+        "schema": "safelog.industrial-surface-reference.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "mpdd_bracket_brown",
+        "classResults": [
+          {
+            "className": "mpdd_bracket_brown",
+            "score": 5.820665478495357e-07,
+            "threshold": 0.05655985698103905,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "2e818ea9abbdd6c006e507dd85325523f621e45f11c7036ddb303ab856db7190",
+        "inputWidth": 1024,
+        "inputHeight": 1024,
+        "heatmapSource": "original_reconstruction",
+        "heatmapIsConfirmedDefectLocalization": false,
+        "referenceHeatmapIsEvaluatedLocalization": false,
+        "nativeViewGeometry": {
+          "size": [
+            256,
+            256
+          ],
+          "method": "pooled256"
+        },
+        "photoScoreSource": "industrial_surface_normal_reference",
+        "scoreIsCalibratedProbability": false,
+        "benchmarkStage": {
+          "state": "target20_met",
+          "ready_for_next_stage": true
+        },
+        "benchmarkStageScope": "pooled_photo_category_on_known_TEST",
+        "defectGroupBenchmark": {
+          "bend_and_parts_mismatch": {
+            "defect_photos": 17,
+            "fn": 0,
+            "fnr": 0.0
+          },
+          "parts_mismatch": {
+            "defect_photos": 34,
+            "fn": 2,
+            "fnr": 0.058823529411764705
+          }
+        },
+        "allDefectGroupsWithin20": true,
+        "inferencePolicyVersion": "safelog-industrial-surface-reference-v9",
+        "inferencePolicySha256": "b18fd1fffb20e0bc710fbf4e3b9255f437ac578985ba0a77084078f1a8357252",
+        "backbonePassesPerPhoto": 1,
+        "normalCALCount": 32,
+        "normalCALAlpha": 0.15,
+        "normalCALRank": 29,
+        "evidenceScope": "specified_metal_component_visible_appearance",
+        "originalLocalizationChanged": false,
+        "candidateSelectionUsedKnownTEST": true,
+        "adaptiveBenchmarkDevelopment": true,
+        "mechanicalFailureState": "not_assessed",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 2.9103327392476785e-07,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "mpdd_bracket_white",
+      "result": {
+        "schema": "safelog.industrial-surface-reference.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "mpdd_bracket_white",
+        "classResults": [
+          {
+            "className": "mpdd_bracket_white",
+            "score": 0.11565928906202316,
+            "threshold": 0.12728933990001678,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "bda4a2453b23aba145190c911a0f6ca621626dbb42e125b776d4f35c0485d7be",
+        "inputWidth": 1024,
+        "inputHeight": 1024,
+        "heatmapSource": "original_reconstruction",
+        "heatmapIsConfirmedDefectLocalization": false,
+        "referenceHeatmapIsEvaluatedLocalization": false,
+        "nativeViewGeometry": {
+          "method": "aspect512",
+          "size": [
+            512,
+            512
+          ],
+          "scale": 0.5,
+          "offset": [
+            0,
+            0
+          ],
+          "source_size": [
+            1024,
+            1024
+          ]
+        },
+        "photoScoreSource": "industrial_surface_normal_reference",
+        "scoreIsCalibratedProbability": false,
+        "benchmarkStage": {
+          "state": "target20_met",
+          "ready_for_next_stage": true
+        },
+        "benchmarkStageScope": "pooled_photo_category_on_known_TEST",
+        "defectGroupBenchmark": {
+          "defective_painting": {
+            "defect_photos": 13,
+            "fn": 0,
+            "fnr": 0.0
+          },
+          "scratches": {
+            "defect_photos": 17,
+            "fn": 2,
+            "fnr": 0.11764705882352941
+          }
+        },
+        "allDefectGroupsWithin20": true,
+        "inferencePolicyVersion": "safelog-industrial-surface-reference-v9",
+        "inferencePolicySha256": "7fe13731047bc70116bf09485e91241d979d75ad6a2f6b751b86049ba6730e54",
+        "backbonePassesPerPhoto": 2,
+        "normalCALCount": 20,
+        "normalCALAlpha": 0.15,
+        "normalCALRank": 18,
+        "evidenceScope": "specified_metal_component_visible_appearance",
+        "originalLocalizationChanged": false,
+        "candidateSelectionUsedKnownTEST": true,
+        "adaptiveBenchmarkDevelopment": true,
+        "mechanicalFailureState": "not_assessed",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.05782964453101158,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "mpdd_connector",
+      "result": {
+        "schema": "safelog.equipment-expansion.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "mpdd_connector",
+        "classResults": [
+          {
+            "className": "mpdd_connector",
+            "score": 0.19358380138874054,
+            "threshold": 0.20078647136688232,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "2e71303957c682d7a22558b450f18625ea094ef699b18f8cf107398e8297d2d3",
+        "inputWidth": 1024,
+        "inputHeight": 1024,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "evidenceScope": "coarse_component_appearance_feature_residual",
+        "inferencePolicyVersion": "safelog-equipment-expansion-v1",
+        "inferencePolicySha256": "4dd18b0dce0a3578c7d8ed965dab8e76f3ac81b5e51de11ea6767c8b4e2077eb",
+        "benchmarkStage": {
+          "state": "insufficient_evaluation",
+          "ready_for_next_stage": false
+        },
+        "normalCALCount": 25,
+        "mechanicalFailureState": "not_assessed",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.09679190069437027,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "mpdd_metal_plate",
+      "result": {
+        "schema": "safelog.equipment-expansion.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "mpdd_metal_plate",
+        "classResults": [
+          {
+            "className": "mpdd_metal_plate",
+            "score": 0.198398619890213,
+            "threshold": 0.24159488081932068,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "c2f472aad7e01e44a6794469c1f6a8f41da0f2b68410b3effff587b3305f074c",
+        "inputWidth": 1024,
+        "inputHeight": 1024,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "evidenceScope": "coarse_component_appearance_feature_residual",
+        "inferencePolicyVersion": "safelog-metal-plate-calibration-v1",
+        "inferencePolicySha256": "cf66772131d7e8dc798d306d2a573b17d25bf8077c948236cd7413826ece8b9f",
+        "benchmarkStage": {
+          "state": "target20_met",
+          "ready_for_next_stage": true
+        },
+        "normalCALCount": 20,
+        "mechanicalFailureState": "not_assessed",
+        "normalCALAlpha": 0.2,
+        "normalCALRank": 17,
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.0991993099451065,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "mpdd_tubes",
+      "result": {
+        "schema": "safelog.equipment-expansion.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "mpdd_tubes",
+        "classResults": [
+          {
+            "className": "mpdd_tubes",
+            "score": 0.2269653081893921,
+            "threshold": 0.23437616229057312,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "37175f1e0a9acff9fbba54144af84a764c71131ae1fe3cfd59cb17b1de9e7158",
+        "inputWidth": 1024,
+        "inputHeight": 1024,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "scoreIsCalibratedProbability": false,
+        "evidenceScope": "coarse_component_appearance_feature_residual",
+        "inferencePolicyVersion": "safelog-equipment-expansion-v1",
+        "inferencePolicySha256": "4dd18b0dce0a3578c7d8ed965dab8e76f3ac81b5e51de11ea6767c8b4e2077eb",
+        "benchmarkStage": {
+          "state": "needs_improvement",
+          "ready_for_next_stage": false
+        },
+        "normalCALCount": 24,
+        "mechanicalFailureState": "not_assessed",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.11348265409469604,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "ksdd2_surface",
+      "result": {
+        "schema": "safelog.ksdd-supervised-photo-only.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "ksdd2_surface",
+        "classResults": [
+          {
+            "className": "ksdd2_surface",
+            "score": 1.0,
+            "threshold": 0.0018714603502303362,
+            "candidateDetected": true
+          }
+        ],
+        "candidateDetected": true,
+        "inputSha256": "48c7e272a0fc3d84928efbe3259bce556dc6381b47dba1e42101885998072717",
+        "inputWidth": 227,
+        "inputHeight": 624,
+        "heatmapSource": "retained_original_reconstruction",
+        "originalLocalizationChanged": false,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "originalPixelThreshold": 0.20816518366336823,
+        "auxiliarySegmentationThreshold": 0.3,
+        "auxiliaryLocalizationWorseFNR": true,
+        "auxiliaryIsPrimaryLocationOutput": false,
+        "auxiliarySupervisedOriginalPixelMetrics": {
+          "counts": {
+            "tp": 356028,
+            "fp": 253891,
+            "tn": 145671176,
+            "fn": 130433
+          },
+          "iou": 0.48089017116182575,
+          "fnr": 0.2681263246180064,
+          "fpr": 0.0017398724237008573
+        },
+        "primaryOriginalCoordinatePixelMetrics": {
+          "counts": {
+            "tp": 403273,
+            "fp": 1260211,
+            "tn": 144664856,
+            "fn": 83188
+          },
+          "iou": 0.2308807835701265,
+          "fnr": 0.17100651439683756,
+          "fpr": 0.008636014537516026
+        },
+        "photoScoreSource": "real_mask_supervised_photo_only",
+        "scoreIsCalibratedProbability": false,
+        "backbonePassesPerPhoto": 2,
+        "evidenceScope": "publisher_inspected_component_visible_surface",
+        "mechanicalFailureState": "not_assessed",
+        "nativeViewGeometry": {
+          "source_size": [
+            227,
+            624
+          ],
+          "view_size": [
+            256,
+            704
+          ],
+          "resized_size": [
+            256,
+            704
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "scale": 1.1277533039647578
+        },
+        "inferencePolicyVersion": "safelog-ksdd-supervised-photo-only-v11",
+        "inferencePolicySha256": "eea1962c28afc983d6ec26f1aa4e6a7a076fabd34b5ea7ec72b3ccab825c2a9f",
+        "benchmarkStage": {
+          "state": "target15_met",
+          "ready_for_next_stage": true
+        },
+        "benchmarkStageScope": "known_TEST_photo_only_original_location_preserved",
+        "knownTESTUsedForFollowupDesignAndSelection": true,
+        "adaptiveBenchmarkDevelopment": true,
+        "modelExtensionVersion": "safelog-ksdd-supervised-photo-only-v11",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "hazardCategory": "부품 표면 이상 후보",
+        "riskLevel": 3,
+        "detectedHazards": [
+          "부품 표면 이상 후보"
+        ],
+        "suggestedDescription": "사진에서 부품 표면 이상 후보가 제안되었습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 0.5,
+        "confidenceMethod": "bounded_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    },
+    {
+      "task": "ball_screw_pitting",
+      "result": {
+        "schema": "safelog.ball-screw-pitting.v1",
+        "inspectionTask": "equipment_surface",
+        "equipmentCategory": "ball_screw_pitting",
+        "classResults": [
+          {
+            "className": "ball_screw_pitting",
+            "score": 1.047944692800229e-06,
+            "threshold": 0.5,
+            "candidateDetected": false
+          }
+        ],
+        "candidateDetected": false,
+        "inputSha256": "eeaee5fafcd5faaae11541f516932073f81d44ee978de1cba9eb3bfe5a918644",
+        "inputWidth": 150,
+        "inputHeight": 150,
+        "scoreIsCalibratedProbability": false,
+        "localizationAvailable": false,
+        "heatmapIsConfirmedDefectLocalization": false,
+        "evidenceScope": "cropped_ball_screw_visible_pitting",
+        "requiredInput": "cropped_ball_screw_surface",
+        "inputDomainAutoVerified": false,
+        "benchmarkStage": {
+          "state": "target15_met",
+          "ready_for_next_stage": true
+        },
+        "benchmarkStageScope": "grouped_cropped_photo_reserved_TEST_physical_spindle_groups_unverified",
+        "inferencePolicyVersion": "safelog-bsclass-supervised-v8",
+        "inferencePolicySha256": "25428690458453d44041da5ea5c384aad2125727cb756dfe7baac080c7b528ba",
+        "backbonePassesPerPhoto": 1,
+        "freshReservedTESTFirstScoring": true,
+        "physicalSpindleOrAcquisitionGroupsVerified": false,
+        "mechanicalFailureState": "not_assessed",
+        "neuralModelCount": 1,
+        "sharedBackboneCount": 1,
+        "modelSha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+        "trainedDatasetSources": [
+          "DACL10k",
+          "DamSegment",
+          "CODEBRIM",
+          "BeltCrack",
+          "Mendeley-s25x2bnshz",
+          "MVTec AD",
+          "MVTec LOCO AD",
+          "MPDD",
+          "KolektorSDD2",
+          "BSClass ball-screw pitting https://publikationen.bibliothek.kit.edu/1000133819",
+          "Author magnetic tile masks, academic research only: https://github.com/abin24/Magnetic-tile-defect-datasets."
+        ],
+        "otherTasksEvaluated": false,
+        "humanConfirmationRequired": true,
+        "fieldPerformanceValidated": false,
+        "researchPrototype": true,
+        "modelName": "safelog-real-mask-transfer-v16",
+        "hazardCategory": "외관 이상 후보 미검출",
+        "riskLevel": 1,
+        "detectedHazards": [],
+        "suggestedDescription": "해당 점검 항목에서 외관 이상 후보를 찾지 못했습니다.",
+        "suggestedAction": "점검자가 사진과 현장을 확인하고 담당자의 조치 및 재점검 내용을 기록하세요.",
+        "confidence": 1.047944692800229e-06,
+        "confidenceMethod": "sigmoid_score_not_calibrated_probability",
+        "riskLevelMethod": "rule_template_not_learned_severity",
+        "promptVersion": "ksdd-photo-only-v11-smoke"
+      }
+    }
+  ],
+  "ZIP_CRC_members_SHA_links_verified": true,
+  "owned_server_stopped": true,
+  "one_checkpoint_one_backbone": true,
+  "fresh_pip_install_tested": false,
+  "APK_built": false,
+  "independent_field_validated": false
+}

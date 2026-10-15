@@ -1,0 +1,22 @@
+{
+  "UTC": "2026-10-15T02:57:07.363340+00:00",
+  "magnetic_manifest_SHA256": "cad485a8d93082f69e2c28f10c3d36fafc9714d1ec994baa74b3af30f289e27f",
+  "KS_manifest_SHA256": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+  "magnetic_reserved_TEST_photos": 176,
+  "KS_FIT_VAL_near_matches": [],
+  "KS_groups_to_exclude": [],
+  "remaining_KS_candidates": {
+    "fit": {
+      "normal": 1254,
+      "defect": 146
+    },
+    "validation": {
+      "normal": 389,
+      "defect": 52
+    }
+  },
+  "distance_rule": "exactRGB or any8orientation pHash<=2, conservative candidate exclusion, not physical identity proof",
+  "new_training_or_CAL_TEST_scores_computed": false,
+  "new_optimizer_updates": 0,
+  "purpose": "prepare next mixed real-mask candidate without new FIT leakage into existing held-out source"
+}
