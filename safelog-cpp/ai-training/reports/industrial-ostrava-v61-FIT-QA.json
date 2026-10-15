@@ -1,0 +1,23 @@
+{
+  "UTC": "2026-10-15T19:09:02.109843+00:00",
+  "manifest_sha256": "90ab369b28d8ad6955ca0f3114e04c1fd87f7fc464c66a28fbccc763407e4f8c",
+  "reservation_sha256": "cc19bc6114ee9926b520c8214bc358ff52adef042977e85f7af4bf4a4a4f2df5",
+  "contact_sheet_sha256": "e2633ad9c8dea0cee2a1d2768daeffcbb3e2a3c922da5d9a7b9e15fdb77e6d2e",
+  "viewed_ids": [
+    "ostrava/train/01",
+    "ostrava/train/02",
+    "ostrava/train/03"
+  ],
+  "observations": [
+    "First photo shows rusted nuts/bolts around a metal mounting base; mask broadly covers their corroded surfaces.",
+    "Second shows a rusty horizontal metal bar/pipe; mask broadly follows its visible surface.",
+    "Third shows corrosion on a handle/metal panel; the supplied mask follows major visible areas but boundaries and small markings are not a pixel-perfect manual audit.",
+    "All three are fixed firstFIT examples. No original annotation was changed, and no VAL/CAL/TEST content was viewed. Physical identity/site independence remains unverified."
+  ],
+  "new_feature_gradient_optimizer": 0,
+  "reviewer": "AI visual QA only, not human natural-label certification",
+  "original_L_mask_values": [
+    0,
+    169
+  ]
+}

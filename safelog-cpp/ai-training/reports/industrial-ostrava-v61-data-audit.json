@@ -1,0 +1,70 @@
+{
+  "UTC": "2026-10-15T19:05:19.182610+00:00",
+  "ready": true,
+  "counts": {
+    "fit": {
+      "1": 58,
+      "0": 2
+    },
+    "validation": {
+      "1": 15
+    },
+    "cal": {
+      "1": 14,
+      "0": 1
+    },
+    "test": {
+      "1": 15
+    }
+  },
+  "groups": {
+    "fit": 60,
+    "validation": 15,
+    "cal": 15,
+    "test": 15
+  },
+  "native_pixel_counts": {
+    "fit": {
+      "positive_pixels": 72951380,
+      "background_pixels": 178706860
+    },
+    "validation": {
+      "positive_pixels": 15750037,
+      "background_pixels": 47164523
+    },
+    "cal": {
+      "positive_pixels": 13237469,
+      "background_pixels": 49677091
+    },
+    "test": {
+      "positive_pixels": 13226512,
+      "background_pixels": 49688048
+    }
+  },
+  "failures": [],
+  "excluded_photos": {},
+  "pixel_comparisons_and_joins": {
+    "new_cross_component_pHash_comparisons": 678
+  },
+  "new_image_and_mask_pairs_decoded": 105,
+  "replayed_old_edges": 94,
+  "old783canonical_groups_exact": true,
+  "external_TEST_connected_source_photos": 0,
+  "capture_second_proxy_photos": 105,
+  "all_source_mask_L_values": [
+    0,
+    169
+  ],
+  "sourceTEST15_preserved": true,
+  "new_neural_features_scores_gradient_optimizer": 0,
+  "new_photo_content_viewed": 0,
+  "training_protocol_fixed": false,
+  "no_original_expansion_or_source_code_execution": true,
+  "independent_field_validation": false,
+  "physical_part_capture_groups_verified": false,
+  "new_units_passed": 2,
+  "policy_sha256": "6c66fb65b64b83a6992a20e86f5bef7964db82d5d02d23ae6f9c058bff028650",
+  "reserved_TEST_sha256": "68a39883e0d0b999134f04690a3a46811a08721bd97d38f230e910d7c519fcb0",
+  "archive_sha256": "874a60cd8e9e92476c2314bd6acfcac7dc0f64eb797ea220a091a96681de50c5",
+  "manifest_sha256": "90ab369b28d8ad6955ca0f3114e04c1fd87f7fc464c66a28fbccc763407e4f8c"
+}
