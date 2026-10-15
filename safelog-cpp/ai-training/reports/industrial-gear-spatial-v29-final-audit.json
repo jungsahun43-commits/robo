@@ -1,0 +1,257 @@
+{
+  "UTC": "2026-10-15T09:15:24.052023+00:00",
+  "status": "v29_completed_rejected_v16_retained",
+  "preregistered_commit": "8d9db0836ec972c2e91a4dbbf00f1aed7143f26c",
+  "active_model": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_model_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "active_role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "active_role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-gear-spatial-v29\\trained\\final.pt",
+  "research_checkpoint_sha256": "208240ca2bc64c398010f3cbdbc3609ed077e3875081bcfbddedadf3770195f6",
+  "training": {
+    "completed_epochs": 30,
+    "actual_optimizer_updates": 1920,
+    "selected_epoch": 10,
+    "selected_actual_updates": 640,
+    "VAL_macro_group_BCE": 0.6539419293403625,
+    "FIT_patches": 5466,
+    "VAL_patches": 1440,
+    "replayed_partial_epoch_updates": 0
+  },
+  "selection": {
+    "UTC": "2026-10-15T09:11:32.746935+00:00",
+    "checkpoint_sha256": "208240ca2bc64c398010f3cbdbc3609ed077e3875081bcfbddedadf3770195f6",
+    "training": {
+      "completed_epochs": 30,
+      "actual_optimizer_updates": 1920,
+      "selected_epoch": 10,
+      "selected_actual_updates": 640,
+      "VAL_macro_group_BCE": 0.6539419293403625,
+      "FIT_patches": 5466,
+      "VAL_patches": 1440,
+      "replayed_partial_epoch_updates": 0
+    },
+    "threshold": 0.5964049696922302,
+    "rates": {
+      "tp": 909,
+      "fn": 333,
+      "fp": 239,
+      "tn": 698,
+      "positive_photos": 1242,
+      "negative_photos": 937,
+      "fnr": 0.26811594202898553,
+      "fpr": 0.2550693703308431
+    },
+    "AUROC": 0.7970765299195535,
+    "by": {
+      "physical_part_id": {
+        "1": {
+          "tp": 295,
+          "fn": 99,
+          "fp": 2,
+          "tn": 0,
+          "positive_photos": 394,
+          "negative_photos": 2,
+          "fnr": 0.2512690355329949,
+          "fpr": 1.0
+        },
+        "2": {
+          "tp": 266,
+          "fn": 123,
+          "fp": 5,
+          "tn": 2,
+          "positive_photos": 389,
+          "negative_photos": 7,
+          "fnr": 0.3161953727506427,
+          "fpr": 0.7142857142857143
+        },
+        "21": {
+          "tp": 21,
+          "fn": 31,
+          "fp": 70,
+          "tn": 190,
+          "positive_photos": 52,
+          "negative_photos": 260,
+          "fnr": 0.5961538461538461,
+          "fpr": 0.2692307692307692
+        },
+        "23": {
+          "tp": 1,
+          "fn": 5,
+          "fp": 0,
+          "tn": 433,
+          "positive_photos": 6,
+          "negative_photos": 433,
+          "fnr": 0.8333333333333334,
+          "fpr": 0.0
+        },
+        "3": {
+          "tp": 324,
+          "fn": 72,
+          "fp": 0,
+          "tn": 0,
+          "positive_photos": 396,
+          "negative_photos": 0,
+          "fnr": 0.18181818181818182,
+          "fpr": null
+        },
+        "34": {
+          "tp": 2,
+          "fn": 3,
+          "fp": 162,
+          "tn": 73,
+          "positive_photos": 5,
+          "negative_photos": 235,
+          "fnr": 0.6,
+          "fpr": 0.6893617021276596
+        }
+      },
+      "group_id": {
+        "2": {
+          "tp": 2,
+          "fn": 3,
+          "fp": 162,
+          "tn": 73,
+          "positive_photos": 5,
+          "negative_photos": 235,
+          "fnr": 0.6,
+          "fpr": 0.6893617021276596
+        },
+        "4": {
+          "tp": 1,
+          "fn": 5,
+          "fp": 0,
+          "tn": 433,
+          "positive_photos": 6,
+          "negative_photos": 433,
+          "fnr": 0.8333333333333334,
+          "fpr": 0.0
+        },
+        "48": {
+          "tp": 885,
+          "fn": 294,
+          "fp": 7,
+          "tn": 2,
+          "positive_photos": 1179,
+          "negative_photos": 9,
+          "fnr": 0.24936386768447838,
+          "fpr": 0.7777777777777778
+        },
+        "5": {
+          "tp": 21,
+          "fn": 31,
+          "fp": 70,
+          "tn": 190,
+          "positive_photos": 52,
+          "negative_photos": 260,
+          "fnr": 0.5961538461538461,
+          "fpr": 0.2692307692307692
+        }
+      }
+    },
+    "eligible_pending_package_checks": false,
+    "TEST_patches": 2179,
+    "TEST_connected_groups": 4,
+    "group_bootstrap_95percent": [
+      [
+        0.01583710407239819,
+        0.25035280835450185
+      ],
+      [
+        0.6926229508196722,
+        0.7272727272727273
+      ]
+    ],
+    "bootstrap_valid_draws": 1000,
+    "new_independent_field_validation": false,
+    "whole_equipment_health_or_verified_location": false,
+    "existing_bracket_tube_transferred_or_replaced": false
+  },
+  "verification": {
+    "status": "passed",
+    "parent_all_tensor_buffer_metadata_exact": true,
+    "legacy_python_SHA_checked": 661,
+    "protected_stat_unchanged": 104159,
+    "changed_metadata_SHA_rechecked": 0,
+    "all_protected_SHA_reread": false,
+    "actual_optimizer_updates": 1920,
+    "new_unit_tests_passed": 3,
+    "eligible_pending_package_checks": false,
+    "new_API_CPP_ZIP_checks": 0,
+    "active_v16_retained_pending_release": true,
+    "new_spatial_maps_are_not_verified_defect_location": true
+  },
+  "manifest_sha256": "fe7fce446e34002d47a24c0ad6b106468e8c128209739164d2e511705ae8779d",
+  "fresh_RGB_fine_cache_inputs": 10201,
+  "first_FIT_extra_ordinary_encoder_inputs_for_exact_check": 32,
+  "fine_cache_tensor_bytes": 2005598208,
+  "fine_cache_compatibility": {
+    "fit": {
+      "sha256": "a96ccc9e33204420cdbb26d386105534de7b5da68930463f34617dc457eeefe8",
+      "bytes": 1075186985,
+      "patches": 5466,
+      "shape": [
+        5466,
+        24,
+        64,
+        64
+      ],
+      "maximum_fine_descriptor_abs_delta": 0.0,
+      "canonical_descriptor_tolerance_passed": true,
+      "firstFIT_low_high_bitwiseexact": true
+    },
+    "validation": {
+      "sha256": "ead65fbfc921d27411ea66683fd4bec1461909a569d10f0c9f141a15fd0e8263",
+      "bytes": 283255465,
+      "patches": 1440,
+      "shape": [
+        1440,
+        24,
+        64,
+        64
+      ],
+      "maximum_fine_descriptor_abs_delta": 0.0,
+      "canonical_descriptor_tolerance_passed": true,
+      "firstFIT_low_high_bitwiseexact": null
+    },
+    "cal": {
+      "sha256": "dfff0c69969c050a36990c07418920c808dd489694b407565a533a9e4405212f",
+      "bytes": 219523305,
+      "patches": 1116,
+      "shape": [
+        1116,
+        24,
+        64,
+        64
+      ],
+      "maximum_fine_descriptor_abs_delta": 0.0,
+      "canonical_descriptor_tolerance_passed": true,
+      "firstFIT_low_high_bitwiseexact": null
+    },
+    "test": {
+      "sha256": "fcbd7cda63c071b5dbafa78b98ea3f01883466f1bbb2fc2e1060980a3106aa2c",
+      "bytes": 428619945,
+      "patches": 2179,
+      "shape": [
+        2179,
+        24,
+        64,
+        64
+      ],
+      "maximum_fine_descriptor_abs_delta": 0.0,
+      "canonical_descriptor_tolerance_passed": true,
+      "firstFIT_low_high_bitwiseexact": null
+    }
+  },
+  "new_pixel_GT_masks_created": 0,
+  "same_actual_patch_labels_and_v28_split_preserved": true,
+  "this_turn_actual_optimizer": 1920,
+  "tracked_partial_research_optimizer_including_failed": 34000,
+  "tracked_sum_not_entire_history": true,
+  "new_API_CPP_ZIP_checks": 0,
+  "new_ZIPs": 0,
+  "old_app_v16_original_position_and_other_tasks_retained": true,
+  "independent_field_validated": false,
+  "awake_helper_restarted": false,
+  "next": "Preregister one bounded spatial residual on the frozen v28 global patch classifier based on VAL context versus local losses, with unchanged v28 split and fixed existing caches. Do not sweep TEST thresholds/fusion weights or adopt photo metric halves separately."
+}

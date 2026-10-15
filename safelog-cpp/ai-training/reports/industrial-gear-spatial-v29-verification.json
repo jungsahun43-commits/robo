@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "parent_all_tensor_buffer_metadata_exact": true,
+  "legacy_python_SHA_checked": 661,
+  "protected_stat_unchanged": 104159,
+  "changed_metadata_SHA_rechecked": 0,
+  "all_protected_SHA_reread": false,
+  "actual_optimizer_updates": 1920,
+  "new_unit_tests_passed": 3,
+  "eligible_pending_package_checks": false,
+  "new_API_CPP_ZIP_checks": 0,
+  "active_v16_retained_pending_release": true,
+  "new_spatial_maps_are_not_verified_defect_location": true
+}

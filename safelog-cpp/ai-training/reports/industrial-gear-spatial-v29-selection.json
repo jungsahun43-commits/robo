@@ -1,0 +1,149 @@
+{
+  "UTC": "2026-10-15T09:11:32.746935+00:00",
+  "checkpoint_sha256": "208240ca2bc64c398010f3cbdbc3609ed077e3875081bcfbddedadf3770195f6",
+  "training": {
+    "completed_epochs": 30,
+    "actual_optimizer_updates": 1920,
+    "selected_epoch": 10,
+    "selected_actual_updates": 640,
+    "VAL_macro_group_BCE": 0.6539419293403625,
+    "FIT_patches": 5466,
+    "VAL_patches": 1440,
+    "replayed_partial_epoch_updates": 0
+  },
+  "threshold": 0.5964049696922302,
+  "rates": {
+    "tp": 909,
+    "fn": 333,
+    "fp": 239,
+    "tn": 698,
+    "positive_photos": 1242,
+    "negative_photos": 937,
+    "fnr": 0.26811594202898553,
+    "fpr": 0.2550693703308431
+  },
+  "AUROC": 0.7970765299195535,
+  "by": {
+    "physical_part_id": {
+      "1": {
+        "tp": 295,
+        "fn": 99,
+        "fp": 2,
+        "tn": 0,
+        "positive_photos": 394,
+        "negative_photos": 2,
+        "fnr": 0.2512690355329949,
+        "fpr": 1.0
+      },
+      "2": {
+        "tp": 266,
+        "fn": 123,
+        "fp": 5,
+        "tn": 2,
+        "positive_photos": 389,
+        "negative_photos": 7,
+        "fnr": 0.3161953727506427,
+        "fpr": 0.7142857142857143
+      },
+      "21": {
+        "tp": 21,
+        "fn": 31,
+        "fp": 70,
+        "tn": 190,
+        "positive_photos": 52,
+        "negative_photos": 260,
+        "fnr": 0.5961538461538461,
+        "fpr": 0.2692307692307692
+      },
+      "23": {
+        "tp": 1,
+        "fn": 5,
+        "fp": 0,
+        "tn": 433,
+        "positive_photos": 6,
+        "negative_photos": 433,
+        "fnr": 0.8333333333333334,
+        "fpr": 0.0
+      },
+      "3": {
+        "tp": 324,
+        "fn": 72,
+        "fp": 0,
+        "tn": 0,
+        "positive_photos": 396,
+        "negative_photos": 0,
+        "fnr": 0.18181818181818182,
+        "fpr": null
+      },
+      "34": {
+        "tp": 2,
+        "fn": 3,
+        "fp": 162,
+        "tn": 73,
+        "positive_photos": 5,
+        "negative_photos": 235,
+        "fnr": 0.6,
+        "fpr": 0.6893617021276596
+      }
+    },
+    "group_id": {
+      "2": {
+        "tp": 2,
+        "fn": 3,
+        "fp": 162,
+        "tn": 73,
+        "positive_photos": 5,
+        "negative_photos": 235,
+        "fnr": 0.6,
+        "fpr": 0.6893617021276596
+      },
+      "4": {
+        "tp": 1,
+        "fn": 5,
+        "fp": 0,
+        "tn": 433,
+        "positive_photos": 6,
+        "negative_photos": 433,
+        "fnr": 0.8333333333333334,
+        "fpr": 0.0
+      },
+      "48": {
+        "tp": 885,
+        "fn": 294,
+        "fp": 7,
+        "tn": 2,
+        "positive_photos": 1179,
+        "negative_photos": 9,
+        "fnr": 0.24936386768447838,
+        "fpr": 0.7777777777777778
+      },
+      "5": {
+        "tp": 21,
+        "fn": 31,
+        "fp": 70,
+        "tn": 190,
+        "positive_photos": 52,
+        "negative_photos": 260,
+        "fnr": 0.5961538461538461,
+        "fpr": 0.2692307692307692
+      }
+    }
+  },
+  "eligible_pending_package_checks": false,
+  "TEST_patches": 2179,
+  "TEST_connected_groups": 4,
+  "group_bootstrap_95percent": [
+    [
+      0.01583710407239819,
+      0.25035280835450185
+    ],
+    [
+      0.6926229508196722,
+      0.7272727272727273
+    ]
+  ],
+  "bootstrap_valid_draws": 1000,
+  "new_independent_field_validation": false,
+  "whole_equipment_health_or_verified_location": false,
+  "existing_bracket_tube_transferred_or_replaced": false
+}
