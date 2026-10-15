@@ -29,6 +29,7 @@ META = ROOT/'data/industrial-corrosion-condition-v65-metadata'
 OUT = ROOT/'data/industrial-corrosion-condition-v66'
 RUN = ROOT/'runs/industrial-corrosion-condition-data-v66'
 POLICY = ROOT/'reports/industrial-corrosion-condition-v66-data-policy.json'
+RECOVERY = ROOT/'reports/industrial-corrosion-condition-v66-r1-recovery-policy.json'
 OLD = ROOT/'data/industrial-insplad-grouped-v44'
 V57 = ROOT/'data/industrial-insplad-lower-shackle-v57'
 OST = ROOT/'data/industrial-ostrava-masks-v61'
@@ -79,12 +80,31 @@ def freeze():
 
 
 def validate():
-    p = read(POLICY)
+    p = read(RECOVERY if RECOVERY.exists() else POLICY)
     for n,h in {**p['source_sha256'], **p['inputs_sha256']}.items(): assert sha(ROOT/n) == h, n
     git = ['C:/Program Files/Git/cmd/git.exe','-c','safe.directory='+ROOT.parents[1].as_posix(),'-C',str(ROOT.parents[1])]
-    for n in (*SOURCES, POLICY.relative_to(ROOT).as_posix()):
+    active = RECOVERY if RECOVERY.exists() else POLICY
+    for n in (*SOURCES, active.relative_to(ROOT).as_posix()):
         assert hashlib.sha256(subprocess.check_output(git+['show','HEAD:safelog-cpp/ai-training/'+n])).hexdigest() == sha(ROOT/n), n
+    for n,h in p.get('completed_decode_receipts_sha256', {}).items(): assert sha(ROOT/n) == h, n
+    for n,h in p.get('failure_artifacts_sha256', {}).items(): assert sha(ROOT/n) == h, n
     return p
+
+
+def freeze_recovery():
+    """Keep the exact gate; resume old decoded rows and record geometry failures."""
+    assert not RECOVERY.exists() and not (OUT/'decoded-pairs.json').exists()
+    assert (RUN/'failure-20261015T221220Z.json').exists() and not (RUN/'operation.lock').exists()
+    p = read(POLICY)
+    assert sha(POLICY) == '7ea315331fc0cb29888fe84af89d841781cb4579e894a3573714e754fda9a843'
+    p.update(UTC=utc(), fixed_before_remaining_source_pixel_decode=True,
+             source_sha256={n:sha(ROOT/n) for n in SOURCES},
+             original_policy_sha256=sha(POLICY),
+             completed_decode_receipts_sha256={v.relative_to(ROOT).as_posix():sha(v) for v in sorted(OUT.glob('decoded-*-*.json'))},
+             failure_artifacts_sha256={v.relative_to(ROOT).as_posix():sha(v) for v in (RUN/'failure-20261015T221220Z.json',RUN/'stderr.log',RUN/'decode-events.jsonl')},
+             recovery='Original image/mask size assertion stopped at the next entry after Train232. A size mismatch is an annotation discrepancy: record it and preserve original pixels, never resize or repair to pass. Resume only saved SHA-bound decoded entries, log remaining decode events in a separate file. Exact coordinate/class gate, minimums, split and heldout policy unchanged; no learning can pass any annotation discrepancy.',
+             runtime_audit_failures_preserved=1, new_optimizer_updates=0)
+    new(RECOVERY,p); print({'recovery_policy_sha256':sha(RECOVERY),'completed_decoded_entries':len(p['completed_decode_receipts_sha256'])},flush=True)
 
 
 def member_bytes(archive, item):
@@ -102,8 +122,15 @@ def image(raw, fmt):
 
 def decode():
     rows = []; pairs = read(META/'all-pairs-before-json-or-pixels.json')['rows']
-    with zipfile.ZipFile(SOURCE/'publisher-ccs-v2.zip') as archive, (RUN/'decode-events.jsonl').open('x',encoding='utf-8',buffering=1) as log:
+    logname = 'decode-events-r1.jsonl' if RECOVERY.exists() else 'decode-events.jsonl'
+    with zipfile.ZipFile(SOURCE/'publisher-ccs-v2.zip') as archive, (RUN/logname).open('x',encoding='utf-8',buffering=1) as log:
         for r in pairs:
+            receipt = OUT/('decoded-'+r['publisher_role']+'-'+r['stem']+'.json')
+            if receipt.exists():
+                assert RECOVERY.exists() and receipt.relative_to(ROOT).as_posix() in read(RECOVERY)['completed_decode_receipts_sha256']
+                saved = read(receipt)
+                assert saved['id']==r['id'] and saved['members']==r['members']
+                rows.append(saved); continue
             views = []; masks = []; problems = []; annotation = json.loads(member_bytes(archive, r['members']['original/json']))
             for key in ('original/images','512x512/images_512'):
                 im = image(member_bytes(archive, r['members'][key]), 'JPEG'); rgb = im.convert('RGB')
@@ -115,7 +142,9 @@ def decode():
                 im.close()
             for key in ('original/masks','512x512/mask_512'):
                 mask = image(member_bytes(archive, r['members'][key]), 'PNG')
-                expected = views[0 if key.startswith('original') else 1]['size']; assert list(mask.size) == expected
+                expected = views[0 if key.startswith('original') else 1]['size']
+                if list(mask.size) != expected:
+                    problems.append({'kind':'image_mask_native_size_mismatch','variant':key,'mask_size':list(mask.size),'image_size':expected})
                 try: m = native_classes(mask)
                 except ValueError as error:
                     problems.append({'kind': 'mask_class_contract', 'variant': key, 'error': str(error)}); m = None
@@ -123,19 +152,19 @@ def decode():
                 mode = mask.mode
                 if m is not None:
                     unique, counts = np.unique(m, return_counts=True)
-                    info = {'mode': mode, 'class_counts': dict(zip(map(str,unique.tolist()),counts.tolist())), 'class_sha256': hashlib.sha256(m.tobytes()).hexdigest()}
+                    info = {'mode': mode, 'size':list(mask.size), 'class_counts': dict(zip(map(str,unique.tolist()),counts.tolist())), 'class_sha256': hashlib.sha256(m.tobytes()).hexdigest()}
                 else: info = {'mode': mode, 'class_counts': None, 'unmapped_colors_or_indices': True}
                 if key.startswith('original'): native_info = info
                 else: copy_info = info
                 mask.close()
             try:
                 reconstructed = polygon_classes(annotation, tuple(views[0]['size']))
-                mismatch = None if masks[0] is None else int(np.count_nonzero(reconstructed != masks[0]))
+                mismatch = None if masks[0] is None or reconstructed.shape != masks[0].shape else int(np.count_nonzero(reconstructed != masks[0]))
                 if mismatch: problems.append({'kind': 'native_JSON_pixel_mismatch', 'pixels': mismatch, 'total': reconstructed.size})
             except (ValueError, KeyError, TypeError) as error:
                 problems.append({'kind':'JSON_geometry_or_labels', 'error':str(error)}); mismatch = None
             copy_agreement = None
-            if all(m is not None for m in masks):
+            if all(m is not None for m in masks) and masks[1].shape == (512,512):
                 resized = np.asarray(Image.fromarray(masks[0]).resize((512,512),Image.Resampling.NEAREST))
                 copy_agreement = float(np.mean(resized == masks[1]))
             value = {**r, 'views':views, 'native_mask':native_info, 'copy_mask':copy_info,
@@ -255,15 +284,18 @@ def audit():
                'original_TEST44_all220associatedfiles_preserved':True,'new_source_images_viewed_features_scores_gradient_optimizer':0,
                'Good_includes_minimal_corrosion_not_binary_zero_rust':True,'training_protocol_fixed':False,
                'physical_part_capture_groups_verified':False,'independent_field_validation':False,
-               'policy_sha256':sha(POLICY),'reserved_TEST_sha256':sha(META/'reserved-original-and-resized-TEST-before-pixels.json'),
+               'policy_sha256':sha(RECOVERY if RECOVERY.exists() else POLICY),'original_policy_sha256':sha(POLICY),
+               'reserved_TEST_sha256':sha(META/'reserved-original-and-resized-TEST-before-pixels.json'),
+               'audit_runtime_failures_preserved':1 if RECOVERY.exists() else 0,
                'new_units_passed':3,'old_models_outputs_maps_unchanged':True,'disk_free_bytes':shutil.disk_usage(ROOT).free}
     new(OUT/'manifest.json',{'rows':values,'audit':summary}); summary['manifest_sha256'] = sha(OUT/'manifest.json')
     new(ROOT/'reports/industrial-corrosion-condition-v66-data-audit.json',summary); print(summary,flush=True)
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(); parser.add_argument('stage',choices=('freeze','audit')); args = parser.parse_args()
+    parser = argparse.ArgumentParser(); parser.add_argument('stage',choices=('freeze','freeze-recovery','audit')); args = parser.parse_args()
     if args.stage == 'freeze': freeze()
+    elif args.stage == 'freeze-recovery': freeze_recovery()
     else:
         for path in (ROOT/'runs').glob('**/*.lock'):
             if process_exists(int(path.read_text(encoding='utf-8').strip())): raise RuntimeError('Live job '+str(path))
