@@ -1,0 +1,51 @@
+{
+  "UTC": "2026-10-15T19:23:26.299833+00:00",
+  "fixed_before_new_target_features_scores": true,
+  "source_sha256": {
+    "scripts/study_corrosion_review_gate.py": "b5093ff4e539ee91f363313ea76356cadda360a2dcc8bfdbb5afb7f02da6a701",
+    "safelog_ai/corrosion_review_gate.py": "3a6ecb6ca378bf53397cc956dd25945e87c681f3ac378ef0214f39fc3ebe7bcd",
+    "tests/test_corrosion_review_gate.py": "cecdd46e2ec9ddab91fc7264c80d87e67559b088884ec788817afd1dbaa72c7d"
+  },
+  "files_sha256": {
+    "runs/industrial-insplad-remaining-labels-v59/retained-supervised-originals.json": "a211742a83573a6825ee133774195e60e69097a1efdf65fe9b796f624f7474d1",
+    "data/industrial-insplad-grouped-v44/manifest.json": "e7d3d95b09d90913897bf2524af8dcc6a42b473d04a290d0862466ac3213f476",
+    "data/industrial-insplad-grouped-v44/grouped-all-source.json": "0371dc6a1b4b04195d951ece90a6152f09e4a89d2625d17b125fcd4890402119",
+    "data/industrial-insplad-grouped-v44/retained-TEST-fingerprints.json": "2e865e6a64425872045c3c4d440cf3589f4a89a7a2b21888b56c7d2113ba0545",
+    "data/industrial-insplad-unsupervised-v56-metadata/all-rows.json": "a98aa6eb783473f7f6af3f2a9f88d2afd14269448915542180516a9787b83889",
+    "data/industrial-insplad-lower-shackle-v57/pixel-joining-edges.jsonl": "2ffa000e484a66f0c0f60a8b7f3116b36c05566c817bc4c7f4859df9e2db47c9",
+    "runs/industrial-insplad-corrosion-v45/test-scores.json": "74d73518875999845c5cd3f149f995fd6c695edc8578344665876596a6bdc7f5",
+    "runs/industrial-insplad-corrosion-v45/calibration.json": "f3d81aeb311446f8164a6df94e1ed4352b0a98f78e544f3bf13c110e9cd15fc9",
+    "reports/industrial-ostrava-v62-protocol.json": "8460792f43fa92297d5a418dc2a048264f370bec211468fa9ba956009418d121",
+    "runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b",
+    "runs/industrial-ostrava-rust-mask-v62/verification.json": "ef648e3579bbd80561ee0149abad4f3599adce3edd100febe300023b95f9a868",
+    "runs/industrial-ostrava-rust-mask-v62/device-compatibility.json": "744f2667340c35adfb1368642d8056aaf378eda562febd939f34cfb7200f4b0b"
+  },
+  "manifest_sha256": "b93a732cc27e46bbbb23c042a6de00e5c61b5c1819e297bfc92c49d0c4331b4e",
+  "trained_source_delta_sha256": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b",
+  "selected_source_epoch": 12,
+  "target": "only original cropped InsPLAD polymer-insulator-upper-shackle visible normal/rust, no genericmachine/electricalhealth or targetpixelGT",
+  "source": "v62 actualcorrosionmask58positiveFITphotos, selectedbyOstravaVAL, no new target training/optimizer or normalizationrefit",
+  "data": "alloriginal64publisherVAL TEST(31normal/33rust) kept. CurrentnewTEST/oldVAL/old8995TEST-linkedcal excluded percompletedv59graph;only75currenteligible originalnormalCAL, no rolechanges or finalFIT",
+  "input": "newmask fullRGB bicubic512square ImageNet, frozenv62 normalization; oldparent freshRGBbicubic256 ImageNet. Two views/encoderpasses share ONE encoder instance/model, no newbackbone/embedding/crop fromGT.",
+  "mask_score": "mean topceil(.02*512*512)=5243 sigmoid512pixels; no sourcecut reusedasphoto cut, no targetmaskGT, no new defaultlocationmap",
+  "CAL": "normal75 only alpha.15 rankceil((75+1)*.85)=65 strictscore>cut savedbeforeTESTphotos/features/scores; no other quantile/pooling trial",
+  "one_candidate": "ONLY AND(parentoriginalsigmoid>originalcut.015575625002384186,maskscore>newCALcut). Existingparentalias/cut/weights/outputs stay available. No standalone newmask or multiple combination TEST search.",
+  "parent_validation": "fresh64parent256scores must match storedv45scores atol5e-4/rtol1e-3 and decisions exact, baseline6FP/31normal and0FN/33rust; stop onmismatch, not retune",
+  "guards": [
+    "source selectedepoch>0",
+    "TESTeachlabel>=20 andcurrentgroups>=3",
+    "candidatephotoFPandFN<=20percent",
+    "FPR decrease>=5percentagepoints vsparent",
+    "FNR increase<=5percentagepoints vsparent"
+  ],
+  "nondefault": "even ifpointguardpasses, no automaticoldaliasreplacement; optionalresearchalias onlyafter ownnewZIP CPU_freshGPU_alloldalias_oldPNG_actualCPP checks",
+  "location": "sourceRustmap maycorroboratevisualevidence but targetlocationGTabsent; no validatedtargetlocation or defaultprimaryPNG replacement",
+  "preservation": "v62allstateSHA before/aftertargetinference exact; originalv16+approvedthreehead buffers/meta remainexact, modelparameter updates0; allsource andoldhandoffZIP preserved",
+  "storage": "scorejson/manifest only<8MiB, no targetdensecache/fullmodelduplicate,>=1GiBreserve",
+  "license": "InsPLADMendeleyV1 CC BY-NC3.0 author/source/version/changes plusOstravaZenodoV2 CC BY4.0, otherparentlicensesunchanged",
+  "limits": "publishedTEST seenbefore forparent andpublicdevelopment; newTEST priorFITproxyexposure unresolved, date/background correlation, no independentphysical/siteproof or0FNguarantee",
+  "new_units_passed": 3,
+  "new_optimizer_updates": 0,
+  "independent_field_validation": false,
+  "automatic_app_adoption": false
+}

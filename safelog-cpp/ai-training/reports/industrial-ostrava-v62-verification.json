@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "base_and_approved_three_head_tensor_buffer_metadata_exact": true,
+  "serialized_delta_restore_exact": true,
+  "legacy_Python_SHA_files": 760,
+  "protected_stat_files": 329428,
+  "all_protected_raw_SHA_recalculated": false,
+  "actual_optimizer_updates": 1920,
+  "cached_original_photos": 105,
+  "new_cache_bytes": 350974132,
+  "ordinary_encoder_comparison_inputs": 4,
+  "new_units_passed": 3,
+  "new_API_CPP_ZIP_checks": 0,
+  "default_and_approved_overlay_unchanged": true
+}

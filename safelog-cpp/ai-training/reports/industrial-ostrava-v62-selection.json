@@ -1,0 +1,237 @@
+{
+  "UTC": "2026-10-15T19:17:41.203265+00:00",
+  "native_pixel_rates": {
+    "tp": 12735094,
+    "fn": 491418,
+    "fp": 4760152,
+    "tn": 44927896,
+    "fnr": 0.03715401309128211,
+    "fpr": 0.09580074467807631,
+    "IoU": 0.7080297936293245,
+    "Dice": 0.8290602380241391
+  },
+  "macro_photo_IoU": 0.7167563023070153,
+  "per_photo": [
+    {
+      "id": "ostrava/test/01",
+      "native_pixel_rates": {
+        "tp": 507389,
+        "fn": 346,
+        "fp": 628756,
+        "tn": 3057813,
+        "fnr": 0.0006814578471052813,
+        "fpr": 0.17055316203223106,
+        "IoU": 0.4464522816282751,
+        "Dice": 0.6173066160546998
+      }
+    },
+    {
+      "id": "ostrava/test/02",
+      "native_pixel_rates": {
+        "tp": 2995514,
+        "fn": 1989,
+        "fp": 639728,
+        "tn": 557073,
+        "fnr": 0.0006635522966949491,
+        "fpr": 0.5345316389274407,
+        "IoU": 0.8235699079876972,
+        "Dice": 0.9032501626400532
+      }
+    },
+    {
+      "id": "ostrava/test/03",
+      "native_pixel_rates": {
+        "tp": 1484625,
+        "fn": 147956,
+        "fp": 294671,
+        "tn": 2267052,
+        "fnr": 0.09062705005142165,
+        "fpr": 0.11502843984302752,
+        "IoU": 0.7703325771616789,
+        "Dice": 0.870268769946865
+      }
+    },
+    {
+      "id": "ostrava/test/04",
+      "native_pixel_rates": {
+        "tp": 2623573,
+        "fn": 59085,
+        "fp": 721543,
+        "tn": 790103,
+        "fnr": 0.02202479779382985,
+        "fpr": 0.47732273296790384,
+        "IoU": 0.770686866022306,
+        "Dice": 0.8704948128446753
+      }
+    },
+    {
+      "id": "ostrava/test/05",
+      "native_pixel_rates": {
+        "tp": 364659,
+        "fn": 24026,
+        "fp": 36374,
+        "tn": 3769245,
+        "fnr": 0.06181355081878642,
+        "fpr": 0.009557972040816487,
+        "IoU": 0.8579020794760257,
+        "Dice": 0.923517002271697
+      }
+    },
+    {
+      "id": "ostrava/test/06",
+      "native_pixel_rates": {
+        "tp": 776020,
+        "fn": 6781,
+        "fp": 165719,
+        "tn": 3245784,
+        "fnr": 0.008662482546649787,
+        "fpr": 0.04857653650018775,
+        "IoU": 0.8181377303588748,
+        "Dice": 0.8999733262203254
+      }
+    },
+    {
+      "id": "ostrava/test/07",
+      "native_pixel_rates": {
+        "tp": 165992,
+        "fn": 172893,
+        "fp": 369132,
+        "tn": 3486287,
+        "fnr": 0.5101819201203949,
+        "fpr": 0.09574367922137646,
+        "IoU": 0.23444634803966571,
+        "Dice": 0.379840482191831
+      }
+    },
+    {
+      "id": "ostrava/test/08",
+      "native_pixel_rates": {
+        "tp": 894017,
+        "fn": 28165,
+        "fp": 928704,
+        "tn": 2343418,
+        "fnr": 0.030541693505186613,
+        "fpr": 0.28382315818297726,
+        "IoU": 0.4830211044872564,
+        "Dice": 0.6514015249354895
+      }
+    },
+    {
+      "id": "ostrava/test/09",
+      "native_pixel_rates": {
+        "tp": 423604,
+        "fn": 3510,
+        "fp": 415636,
+        "tn": 3351554,
+        "fnr": 0.008217946496719846,
+        "fpr": 0.11033051160148545,
+        "IoU": 0.5026449124888757,
+        "Dice": 0.6690135617686681
+      }
+    },
+    {
+      "id": "ostrava/test/10",
+      "native_pixel_rates": {
+        "tp": 438355,
+        "fn": 11961,
+        "fp": 402190,
+        "tn": 3341798,
+        "fnr": 0.02656134803116034,
+        "fpr": 0.10742288703916786,
+        "IoU": 0.5141957945164022,
+        "Dice": 0.679166850652394
+      }
+    },
+    {
+      "id": "ostrava/test/11",
+      "native_pixel_rates": {
+        "tp": 527251,
+        "fn": 5024,
+        "fp": 34692,
+        "tn": 3627337,
+        "fnr": 0.009438729979803672,
+        "fpr": 0.00947343672046289,
+        "IoU": 0.929950067640621,
+        "Dice": 0.963703759214343
+      }
+    },
+    {
+      "id": "ostrava/test/12",
+      "native_pixel_rates": {
+        "tp": 570779,
+        "fn": 10329,
+        "fp": 30619,
+        "tn": 3582577,
+        "fnr": 0.017774664950405087,
+        "fpr": 0.008474215071642944,
+        "IoU": 0.9330616435109126,
+        "Dice": 0.9653718458933823
+      }
+    },
+    {
+      "id": "ostrava/test/13",
+      "native_pixel_rates": {
+        "tp": 295842,
+        "fn": 18557,
+        "fp": 30541,
+        "tn": 3849364,
+        "fnr": 0.0590237246301674,
+        "fpr": 0.007871584484671661,
+        "IoU": 0.8576622021221082,
+        "Dice": 0.9233779975092933
+      }
+    },
+    {
+      "id": "ostrava/test/14",
+      "native_pixel_rates": {
+        "tp": 90273,
+        "fn": 671,
+        "fp": 10326,
+        "tn": 4093034,
+        "fnr": 0.007378166783954961,
+        "fpr": 0.0025164743039850267,
+        "IoU": 0.8914091043744445,
+        "Dice": 0.9425873041562469
+      }
+    },
+    {
+      "id": "ostrava/test/15",
+      "native_pixel_rates": {
+        "tp": 577201,
+        "fn": 125,
+        "fp": 51521,
+        "tn": 3565457,
+        "fnr": 0.00021651545227479796,
+        "fpr": 0.01424421160427296,
+        "IoU": 0.9178719147900841,
+        "Dice": 0.9571774921064502
+      }
+    }
+  ],
+  "source_research_gate_passed": true,
+  "app_photo_gate_passed": false,
+  "reason_no_app_gate": "TESTnormal0/positive15<20",
+  "original_TEST_photos": 15,
+  "whole_photo_FPR": null,
+  "whole_photo_FNR": null,
+  "threshold": 0.2,
+  "training": {
+    "completed_epochs": 30,
+    "actual_optimizer_updates": 1920,
+    "selected_epoch": 12,
+    "selected_actual_updates": 768,
+    "VAL_group_mean_mask_loss": 0.38802385330200195,
+    "FIT_photos": 60,
+    "actual_FIT_corrosion_photos": 58,
+    "actual_FIT_annotated_fullnegative_photos": 2,
+    "VAL_photos": 15,
+    "serialized_delta_restore_exact": true
+  },
+  "delta_sha256": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b",
+  "probability512_sha256": "f39bbe0a0930385afdda3622785dac71c208c1f1ffda83ec474a9ac64b6e97c2",
+  "old_tasks_unchanged": true,
+  "new_API_CPP_ZIP_checks": 0,
+  "new_device_compatibility_photos": 0,
+  "independent_field_validation": false,
+  "target_transfer_or_target_localization_tested": false
+}
