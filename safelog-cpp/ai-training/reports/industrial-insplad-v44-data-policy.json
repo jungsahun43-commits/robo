@@ -1,0 +1,54 @@
+{
+  "UTC": "2026-10-15T13:07:43.771328+00:00",
+  "frozen_before_source_pixel_decode_or_view": true,
+  "sources": {
+    "scripts/prepare_insplad_grouped.py": "1937940dd839b5bb4697a77f8a6ec26b30c7a578489fa9d64bd4bb0c28abb71a",
+    "safelog_ai/insplad_split.py": "da768495783a42e2a5d5a781182caf1ea275c4dbcf0492966ea4abc2ac5242ac",
+    "tests/test_insplad_split.py": "06a1a2b40063e226e06c402cdf405adc071f0cdde8845286e902b6d0b1d95893"
+  },
+  "metadata_sha256": "61868d388c5a83738a875a1f9f11a320b843733591e62d5fcd82b07501fc52f2",
+  "archive_sha256": "562e33ca768aac532569f9976c534640327d082402c0efbf140d93c8638fb4a8",
+  "old_TEST_manifests": {
+    "data/equipment-expansion-v1/manifest.json": "40ec891c498adc98db645e6caf979bb91bd7577c991deddc3527c12106ccfecc",
+    "data/industrial-ksdd-supervised-v10/manifest.json": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+    "data/industrial-bsclass-v1/manifest.json": "e577da6548747dddd67026b9f829a8223f7f770d3de7d710dcefefbf47eb0104",
+    "data/industrial-magnetic-tiles-v16/manifest.json": "cad485a8d93082f69e2c28f10c3d36fafc9714d1ec994baa74b3af30f289e27f",
+    "data/industrial-ksdd1-v18/manifest-r1.json": "aa506252c5842aef5869a4982e4b10cc746ee3ddc713cc29d33e0a9e76126736",
+    "data/industrial-gearbox-source-v25/manifest.json": "ad2bf24e87455bccb3805b0d7eca5f3e55d752b72cace302ec8f1fb9bbbe2ed7",
+    "data/industrial-mpdd2-white-v39/manifest.json": "c4c99f21bfd3decb2c05e7d2b2dc87a0831052bf5d0f884069751805d12a3560"
+  },
+  "target": "polymer-insulator-upper-shackle",
+  "reason": "priority chosen using original filename-base label support, no model scores",
+  "reserved_evaluation": "ALL original publisherVAL6417 across all5assets; target originalVAL31normal/33rust. Never FIT/internalVAL/CAL.",
+  "audit": "all11525 photos decode directly ZIP in RAM, no reencode. rawSHA, RGBSHA, dimensions, EXIF None/1,8orientationpHash;4workers; max40millionpixels/32MiBmember; failure stops entire gate",
+  "grouping": "union global same date+DJI frame across all assets/variants, exactRGB+size or any8orientationpHash<=2; similarity not physicalidentity proof",
+  "exclude": "TRAIN in any source publisherVAL group or linked to retained8995TEST; no relaxation; originalVAL retained even if oldTEST match, reported",
+  "candidates": "upper-shackle TRAIN original filename-base only; suffix strip only when base stem exists in samefolder; variants remain grouped but excluded from all development samples",
+  "split": "stratify eligible connected groups by set of original target labels; within each stratum sortSHA256(insplad44:+groupminmember),firstceil15percent internalVAL,nextceil15percentCAL,restFIT; strata<3groups allFIT; once only",
+  "minimums": {
+    "fit": {
+      "0": 30,
+      "1": 20
+    },
+    "validation": {
+      "0": 20,
+      "1": 5
+    },
+    "cal": {
+      "0": 20
+    },
+    "test": {
+      "0": 20,
+      "1": 20
+    },
+    "groups_per_required_label": 3
+  },
+  "export": "only target selected original TRAIN and all64publisherVAL originals, numeric filenames, unchanged memberbytes; max256MiBexports/64MiBmetadata and>=1GiBfree afterwards; no full877MBexpansion",
+  "gate_failure": "preserve records; no new encoder/features/model/optimizer; do not change split or minimums",
+  "scope": "cropped visible surface normal/rust, no pixel masks/whole-equipment mechanical or electrical health; no original natural-photo independence claim",
+  "license": "InsPLAD Mendeley5n3fjgvfyzV1 DOI10.17632/5n3fjgvfyz.1 and pinned authorLICENSE CC BY-NC3.0; cite paper10.1080/01431161.2023.2283900/version/change; other licenses unchanged",
+  "visual_review": "only after split, first3 sorted FIT perlabel; never VAL/TEST content viewing",
+  "training_protocol_fixed": false,
+  "new_encoder_features_scores_optimizer": 0,
+  "units_passed": 3
+}
