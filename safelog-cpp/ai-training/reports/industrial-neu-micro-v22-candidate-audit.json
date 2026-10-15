@@ -1,0 +1,41 @@
+{
+  "UTC": "2026-10-15T06:09:22.769215+00:00",
+  "status": "candidate_only_split_and_mask_visual_QA_pending",
+  "source_sha256": "2add452d545984d6e9b6cf1c77c8019a60f7f702c17a551352858d6797c932f6",
+  "download_receipt_sha256": "fc95979c5a4091ff20c8db9f1b9981cfd1373cb12312b4ede0a581f7675fdbdd",
+  "image_mask_pairs": 51,
+  "source_folder_counts": {
+    "NEU_Oil": 16,
+    "NEU_SDI": 20,
+    "NEU_SPDI": 15
+  },
+  "mask_value_sets": [
+    [
+      0,
+      255
+    ]
+  ],
+  "empty_bright_masks": 0,
+  "retained_TEST_images_checked": 5746,
+  "retained_TEST_manifests_sha256": {
+    "data/equipment-expansion-v1/manifest.json": "40ec891c498adc98db645e6caf979bb91bd7577c991deddc3527c12106ccfecc",
+    "data/industrial-ksdd-supervised-v10/manifest.json": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+    "data/industrial-bsclass-v1/manifest.json": "e577da6548747dddd67026b9f829a8223f7f770d3de7d710dcefefbf47eb0104",
+    "data/industrial-magnetic-tiles-v16/manifest.json": "cad485a8d93082f69e2c28f10c3d36fafc9714d1ec994baa74b3af30f289e27f",
+    "data/industrial-ksdd1-v18/manifest-r1.json": "aa506252c5842aef5869a4982e4b10cc746ee3ddc713cc29d33e0a9e76126736"
+  },
+  "exact_RGB_or_any8orientation_pHash2_TEST_matches": [],
+  "within_source_exact_or_near_links": [],
+  "physical_capture_groups_verified": false,
+  "source_near_groups_are_not_physical_identity_proof": true,
+  "train_VAL_CAL_split_fixed": false,
+  "new_encoder_features": 0,
+  "new_model_scores": 0,
+  "new_optimizer_updates": 0,
+  "archive_code_executed": false,
+  "raw_data_or_masks_uploaded_to_Git": false,
+  "mask_polarity_and_image_quality_visual_QA_done": false,
+  "not_the_1800image_NEU_CLS_or_SDsaliency900": true,
+  "citation_and_use": "NEU original images and abin24 added masks; publisher explicitly academic research only/no commercial/cite original provider; no invented SPDX",
+  "next": "Audit source filename/capture/near groups, fix FIT/VAL/CAL and reserve heldout or source-only study before model scores; all TEST-linked groups excluded; visual mask polarity QA only predesignated FIT; do not label backgrounds as healthy machinery"
+}

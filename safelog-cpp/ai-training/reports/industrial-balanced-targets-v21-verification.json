@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "parent_all_tensors_buffers_metadata_exact": true,
+  "high_projection_exact_to_v20_initialization": true,
+  "legacy_python_SHA_checked": 615,
+  "protected_stat_unchanged": 88230,
+  "changed_metadata_SHA_rechecked": 0,
+  "all_protected_SHA_reread": false,
+  "actual_optimizer_updates": 1920,
+  "new_unit_tests_passed": 3,
+  "selected": {},
+  "reused_v20_fine_cache_receipts": {
+    "fit-fine-receipt": {
+      "sha256": "a89587d1b5be997a9e21f08a963c36da29212401f316148c428259a95485325a",
+      "photos": 609,
+      "bytes": 478971881,
+      "alignment": {
+        "low_max_abs": 0,
+        "low_bitwise_exact": true,
+        "high_max_abs": 0,
+        "high_bitwise_exact": true,
+        "residual_max_abs": 0,
+        "residual_bitwise_exact": true
+      },
+      "atol": 0.0005,
+      "rtol": 0.001,
+      "RGB_and_coordinate_checks": true
+    },
+    "mpdd_bracket_black-cal-fine-receipt": {
+      "sha256": "a8be8927fb6433483375d3adc0c0ecc994ae72c8b6bb65fda76aa691956636a5",
+      "photos": 30,
+      "bytes": 23596009,
+      "alignment": {
+        "low_max_abs": 0,
+        "low_bitwise_exact": true,
+        "high_max_abs": 0.0078125,
+        "high_bitwise_exact": false
+      },
+      "atol": 0.0005,
+      "rtol": 0.001,
+      "RGB_and_coordinate_checks": true
+    },
+    "mpdd_bracket_black-test-fine-receipt": {
+      "sha256": "ee6a545893ddb1e3c55127f074b0fce328232f4fb5c1fc59c5cb20a8db234c8b",
+      "photos": 79,
+      "bytes": 62133417,
+      "alignment": {
+        "low_max_abs": 0,
+        "low_bitwise_exact": true,
+        "high_max_abs": 0.015625,
+        "high_bitwise_exact": false
+      },
+      "atol": 0.0005,
+      "rtol": 0.001,
+      "RGB_and_coordinate_checks": true
+    },
+    "mpdd_tubes-cal-fine-receipt": {
+      "sha256": "a6482ff1da1cfe594b11ebc9eb82655bd3719e8f7a86dbd8cb91a93756558b08",
+      "photos": 23,
+      "bytes": 18090473,
+      "alignment": {
+        "low_max_abs": 0,
+        "low_bitwise_exact": true,
+        "high_max_abs": 0.015625,
+        "high_bitwise_exact": false
+      },
+      "atol": 0.0005,
+      "rtol": 0.001,
+      "RGB_and_coordinate_checks": true
+    },
+    "mpdd_tubes-test-fine-receipt": {
+      "sha256": "1ee8612601f4c317b4d439f7734a08d8511cdac09f15af6c93053978a1ba3f2c",
+      "photos": 101,
+      "bytes": 79435241,
+      "alignment": {
+        "low_max_abs": 0,
+        "low_bitwise_exact": true,
+        "high_max_abs": 0.015625,
+        "high_bitwise_exact": false
+      },
+      "atol": 0.0005,
+      "rtol": 0.001,
+      "RGB_and_coordinate_checks": true
+    },
+    "validation-fine-receipt": {
+      "sha256": "7bb0eb438516fba71419b55e7ac4c4bee7f8092f0234fbf1b0b4aca6f28c992a",
+      "photos": 162,
+      "bytes": 127413353,
+      "alignment": {
+        "low_max_abs": 0,
+        "low_bitwise_exact": true,
+        "high_max_abs": 0,
+        "high_bitwise_exact": true,
+        "residual_max_abs": 0,
+        "residual_bitwise_exact": true
+      },
+      "atol": 0.0005,
+      "rtol": 0.001,
+      "RGB_and_coordinate_checks": true
+    }
+  },
+  "new_natural_target_fault_GT": 0,
+  "synthetic_physical_realism_verified": false,
+  "fresh_release_CPU_GPU_CPP_required": false,
+  "active_parent_still_retained": true,
+  "independent_field_validated": false
+}

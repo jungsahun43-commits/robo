@@ -1,0 +1,166 @@
+{
+  "selected": {},
+  "categories": {
+    "mpdd_bracket_black": {
+      "parent": {
+        "tp": 17,
+        "fn": 30,
+        "fp": 4,
+        "tn": 28,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.6382978723404256,
+        "fpr": 0.125
+      },
+      "parent_by_defect": {
+        "hole": {
+          "photos": 12,
+          "fn": 5,
+          "fnr": 0.4166666666666667
+        },
+        "scratches": {
+          "photos": 35,
+          "fn": 25,
+          "fnr": 0.7142857142857143
+        }
+      },
+      "methods": {
+        "fine_only": {
+          "rates": {
+            "tp": 13,
+            "fn": 34,
+            "fp": 6,
+            "tn": 26,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.723404255319149,
+            "fpr": 0.1875
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 8,
+              "fnr": 0.6666666666666666
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 26,
+              "fnr": 0.7428571428571429
+            }
+          },
+          "eligible": false,
+          "auroc": 0.730718085106383
+        },
+        "max_fine_parent": {
+          "rates": {
+            "tp": 14,
+            "fn": 33,
+            "fp": 7,
+            "tn": 25,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.7021276595744681,
+            "fpr": 0.21875
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 8,
+              "fnr": 0.6666666666666666
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 25,
+              "fnr": 0.7142857142857143
+            }
+          },
+          "eligible": false,
+          "auroc": 0.7027925531914894
+        }
+      }
+    },
+    "mpdd_tubes": {
+      "parent": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "parent_by_defect": {
+        "anomalous": {
+          "photos": 69,
+          "fn": 47,
+          "fnr": 0.6811594202898551
+        }
+      },
+      "methods": {
+        "fine_only": {
+          "rates": {
+            "tp": 4,
+            "fn": 65,
+            "fp": 0,
+            "tn": 32,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.9420289855072463,
+            "fpr": 0.0
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 65,
+              "fnr": 0.9420289855072463
+            }
+          },
+          "eligible": false,
+          "auroc": 0.4483695652173913
+        },
+        "max_fine_parent": {
+          "rates": {
+            "tp": 21,
+            "fn": 48,
+            "fp": 1,
+            "tn": 31,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.6956521739130435,
+            "fpr": 0.03125
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 48,
+              "fnr": 0.6956521739130435
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6014492753623188
+        }
+      }
+    }
+  },
+  "training": {
+    "actual_optimizer_updates": 1920,
+    "scheduled_unique_updates": 1920,
+    "completed_epochs": 30,
+    "selected_epoch": 21,
+    "selected_epoch_updates": 1344,
+    "VAL_balanced_loss": 1.5581720503752825,
+    "legacy_positive_weight_diagnostic_not_used": 50.201717986019254,
+    "loss": "per-photo balanced BCE +dice+.5photo",
+    "FIT_photos_including_procedural_variants": 609,
+    "VAL_photos_including_procedural_variants": 162,
+    "new_natural_target_fault_GT": 0,
+    "all_parent_tensors_exact": true,
+    "data_manifest_sha256": "b24d0f8a296fd5adbacce831b95a9a02bec54b996f5456fc633a6105bb37c7de"
+  },
+  "CAL_sha256": "9494c4699337463347cf32b68fbb3b99dfd8636bf5ccf76441d66c61c1ab11cf",
+  "known_public_TEST_reused": true,
+  "independent_field_validated": false,
+  "new_natural_target_fault_GT": 0,
+  "primary_location_unchanged": true
+}
