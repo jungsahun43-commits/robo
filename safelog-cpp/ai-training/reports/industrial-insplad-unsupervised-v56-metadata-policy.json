@@ -1,0 +1,45 @@
+{
+  "UTC": "2026-10-15T17:24:20.217664+00:00",
+  "fixed_before_new_metadata_reservation_and_encoded_byte_hashes": true,
+  "script_sha256": "b445fab68334dde31909500d0b8177f746d01236303cad95977f82986f8684f6",
+  "archive_sha256": "baab1d227b408ec6bbe5831cbcae5ea049a9b5132a74bf36f4e3d6051b0cb7e3",
+  "members_sha256": "38e71fc883a525859448f913dcc88187937213996a5721cc8574cdcf50defce8",
+  "old_source_groups_sha256": "0371dc6a1b4b04195d951ece90a6152f09e4a89d2625d17b125fcd4890402119",
+  "old_TEST_manifests": {
+    "data/equipment-expansion-v1/manifest.json": "40ec891c498adc98db645e6caf979bb91bd7577c991deddc3527c12106ccfecc",
+    "data/industrial-ksdd-supervised-v10/manifest.json": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+    "data/industrial-bsclass-v1/manifest.json": "e577da6548747dddd67026b9f829a8223f7f770d3de7d710dcefefbf47eb0104",
+    "data/industrial-magnetic-tiles-v16/manifest.json": "cad485a8d93082f69e2c28f10c3d36fafc9714d1ec994baa74b3af30f289e27f",
+    "data/industrial-ksdd1-v18/manifest-r1.json": "aa506252c5842aef5869a4982e4b10cc746ee3ddc713cc29d33e0a9e76126736",
+    "data/industrial-gearbox-source-v25/manifest.json": "ad2bf24e87455bccb3805b0d7eca5f3e55d752b72cace302ec8f1fb9bbbe2ed7",
+    "data/industrial-mpdd2-white-v39/manifest.json": "c4c99f21bfd3decb2c05e7d2b2dc87a0831052bf5d0f884069751805d12a3560"
+  },
+  "prior_development_manifests": {
+    "v45_approved": {
+      "path": "data/industrial-insplad-grouped-v44/manifest.json",
+      "sha256": "e7d3d95b09d90913897bf2524af8dcc6a42b473d04a290d0862466ac3213f476"
+    },
+    "v48_approved": {
+      "path": "data/industrial-insplad-glass-v47/manifest.json",
+      "sha256": "bf2a4f0b8fce37079a96c1dba78a4cc0b61734ec5cc3137876bf9d6abf2adab1"
+    },
+    "v51_approved": {
+      "path": "data/industrial-insplad-lightning-v50/manifest.json",
+      "sha256": "308e19f2352e48302f6bd5826fd6102c5029440b92f8e9df82db8cb142f19d87"
+    },
+    "v54_rejected": {
+      "path": "data/industrial-insplad-varigrip-v53/manifest.json",
+      "sha256": "fc2fe5560a94a787dc6d0866d10d3bec8ec673e625a57534b64d5d8dce1ea59b"
+    }
+  },
+  "scope": "metadata/encodedbyteSHA/frameproxy only. No JPEG/PNG pixeldecode, visualview, RGB/phash recompute, neuralfeature/score/gradient oroptimizer.",
+  "role_contract": "strict fourpathparts asset/(train|test)/condition/photo, TRAINcondition mustgood. OriginalTEST remainsreserved regardless priorroles. Unexpected path/date/role stops rather than inventsGT.",
+  "reservation": "save allnew publisherTEST memberlist before reading anyencodedphoto bytes. Connect newrows by same date+DJIframe or rawSHA, and to oldsource connectedgroups through oldrawSHA/frame. Groups connectedto any newTEST, oldoriginalpublisherVALgroup or old8995TESTrawSHA exclude newTRAIN.",
+  "prior_exposure": "report newTEST connectionto each priorFIT/VAL/CAL group; do not call these unseen. Existing approved weights/data/splits are preserved, no retroactive relabel or retrain.",
+  "novelty": "rawexact oldsource/duplicates are not new naturalphotos; counts onlydiagnostic. Remaining rawnovel/frame-unlinked rows are NOTreadyFIT until separate fullRGB/eightorientationpHash2/physicalgroupaudit.",
+  "no_training_split": "no FIT/VAL/CAL allocation/export/feature/modelprotocol fixed here. Allolddevelopmentroles held for anylaterstudy, no currentTEST inFIT.",
+  "limits": "frame/group linkage notverifiedphysicalpart identity. ByteSHA nonmatch does not establish pixelindependence. No classmask/wholeequipmenthealthlabels.",
+  "storage": "stream oneencodedmember<=32MiB intoRAM; save onlysmallJSONmetadata<=64MiB, no newphotos/fullZIPcopies. >=1GiBreserve, alloriginals/failedmodels/cache/ZIP preserved.",
+  "license": "InsPLAD MendeleyV1 DOI10.17632/5n3fjgvfyz.1 CC BY-NC3.0 noncommercialacademic author/source/version/change attribution paper10.1080/01431161.2023.2283900; inherited licenses unchanged",
+  "new_pixel_features_scores_optimizer": 0
+}
