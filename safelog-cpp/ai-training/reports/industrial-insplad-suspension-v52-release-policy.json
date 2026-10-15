@@ -1,0 +1,33 @@
+{
+  "UTC": "2026-10-15T16:42:45.171194+00:00",
+  "fixed_before_packaged_CPU_GPU_or_API_checks": true,
+  "sources": {
+    "safelog_ai/insplad_suspension_server.py": "b5dacceff2d2669b6b3ea2a5694d4f6bb8534220dab5cea075a90555ca1d933e",
+    "scripts/release_insplad_suspension.py": "7c4c9e9af72cc20925f3b7199896c3c6a8bc394448c20ce02fddbf19cccbea17",
+    "scripts/verify_insplad_suspension_bundle.py": "417ffbd50a47fb07a571b762b6eb989387409984fda0429959f402db3f4c04e6",
+    "tests/test_insplad_suspension_server.py": "eb9a527baade90770dd888dc2bee9f3f5324f69015ffdddf1e0a00cc8b560b94",
+    "../apps/mobile-qt/adapters/ai/http_ai_safety_analyzer.cpp": "9e2f04285e068f969918b8b5999cdd9246ebac90ba26d4f442861938dddfb614",
+    "../apps/mobile-qt/adapters/ai/http_ai_safety_analyzer.hpp": "5d689b65e886d38a5ee6474d2868c8d872948f02dbc8b63a34fc3e600510ef76",
+    "../apps/mobile-qt/tests/http_ai_safety_analyzer_tests.cpp": "a67e6553abed7521c673a85031da28a4ed085791887cea2471f4838ff2084998",
+    "../apps/mobile-qt/tools/unified_main_probe.cpp": "36b0804536041a298e2bbac789538c25aacc9e269d3513e5a2f060c7ac34ff93"
+  },
+  "training_protocol_sha256": "fe562bceb2f3d0060c7ffee02c89716854ff209e647e6bc4e5f9ce4b801dc4de",
+  "delta_sha256": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc",
+  "parent_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "selection_sha256": "a62917fbcbf116be3fb7f5950011d74c0a87d46480a50af5f2d52147321df1e9",
+  "calibration_sha256": "0edaac4b637c0ffb7252fbdd7fd0a023fff368286bec3d21769b7dda5bd2f590",
+  "overlay_only": "small delta+Python+calibration+source evaluation; originalv16-r1 model.pt/evaluation.json required, no duplicate435MBmodel/densecache",
+  "identity": "API modelSha256 is delta-bound combinedtensorstateSHA, NOT model.pt fileSHA; parentCheckpointSha256 anddeltaSha256 separate; still one active sharedencoder/model",
+  "device_guard": "all251originalRGB freshCPU/freshGPU/cachedGPU decisions exact; probability atol5e-4 rtol1e-3 fixed before newCPU/GPU comparisons; unchanged threshold",
+  "old_aliases": "all17 existingtaskaliases one firstFIT each CPU; exact classResults,policySHA andallprimary/auxiliaryPNG strings compared with approved glass+corrosion parentCPU; no claim these are15accuracy evaluations",
+  "CPP": "fresh separately compiledQtprobe with explicit suspension+glass+upper-shackle allowlist, currentoldKS2/BS/LOCO/blackbracket andpreservedcorrosion andpreservedglass andnewsuspension cases,3operations each=21newoperations; outputfiles andexit0 required; no pastchecks reused",
+  "input_guard": "explicitnewtaskalias or matched equipment_surface/category; genericunknown/mismatchedcategory422; cropminside64. Domain manuallyselected, not automaticallyverified.",
+  "scope": "sourcephoto20percent benchmark only; date-labelcorrelation/physicalparts unverified; no overallmachinehealth/location/independentfieldclaim",
+  "location": "newclassifier no map; allold exposedmap outputs preserved; no synthetic/CAM/mask promotion",
+  "release_guard": "ZIPCRC/memberSHA,sourceCPU_GPU,currentCPU18aliases,CPP21operations andoldPNGexact allpass before researchhandoff; existingdefaultv16-r1 not automaticallyswitched",
+  "storage": "newoverlayZIP/isolatedcode each<32MiB,sourceproofs<8MiB,existingparentusedread-only,>=1GiBfree; no deletions",
+  "new_optimizer": 0,
+  "new_units_passed": 3,
+  "Qt_unit_gate": "freshbuild all10actualtests including suspension forward, plusinitcleanup12functions, allpass required",
+  "APK_or_fresh_pip_install_tested": false
+}

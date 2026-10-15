@@ -1,0 +1,379 @@
+{
+  "UTC": "2026-10-15T16:37:24.992661+00:00",
+  "rates": {
+    "tp": 20,
+    "fn": 0,
+    "fp": 24,
+    "tn": 207,
+    "positive_photos": 20,
+    "negative_photos": 231,
+    "fnr": 0.0,
+    "fpr": 0.1038961038961039
+  },
+  "AUROC": 0.9971861471861472,
+  "groups_each_label": {
+    "0": 226,
+    "1": 20
+  },
+  "threshold": 0.04536491632461548,
+  "training": {
+    "completed_epochs": 30,
+    "actual_optimizer_updates": 1920,
+    "selected_epoch": 2,
+    "selected_actual_updates": 128,
+    "VAL_macro_group_BCE": 0.2869375944137573,
+    "FIT_photos": 256,
+    "actual_FIT_defect_photos": 21,
+    "VAL_photos": 56,
+    "serialized_delta_restore_exact": true
+  },
+  "delta_sha256": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc",
+  "source_candidate_eligible_pending_package_checks": true,
+  "by_capture_date": {
+    "01-06-2021": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 3,
+      "negative_photos": 0,
+      "fnr": 0.0,
+      "fpr": null
+    },
+    "01-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 8,
+      "positive_photos": 0,
+      "negative_photos": 8,
+      "fnr": null,
+      "fpr": 0.0
+    },
+    "02-06-2021": {
+      "tp": 5,
+      "fn": 0,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 5,
+      "negative_photos": 0,
+      "fnr": 0.0,
+      "fpr": null
+    },
+    "02-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 6,
+      "positive_photos": 0,
+      "negative_photos": 6,
+      "fnr": null,
+      "fpr": 0.0
+    },
+    "03-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 8,
+      "positive_photos": 0,
+      "negative_photos": 9,
+      "fnr": null,
+      "fpr": 0.1111111111111111
+    },
+    "04-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 10,
+      "positive_photos": 0,
+      "negative_photos": 11,
+      "fnr": null,
+      "fpr": 0.09090909090909091
+    },
+    "07-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 2,
+      "tn": 3,
+      "positive_photos": 0,
+      "negative_photos": 5,
+      "fnr": null,
+      "fpr": 0.4
+    },
+    "08-06-2021": {
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 2,
+      "negative_photos": 0,
+      "fnr": 0.0,
+      "fpr": null
+    },
+    "08-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 2,
+      "tn": 5,
+      "positive_photos": 0,
+      "negative_photos": 7,
+      "fnr": null,
+      "fpr": 0.2857142857142857
+    },
+    "09-06-2021": {
+      "tp": 5,
+      "fn": 0,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 5,
+      "negative_photos": 0,
+      "fnr": 0.0,
+      "fpr": null
+    },
+    "09-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 8,
+      "positive_photos": 0,
+      "negative_photos": 8,
+      "fnr": null,
+      "fpr": 0.0
+    },
+    "10-06-2021": {
+      "tp": 3,
+      "fn": 0,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 3,
+      "negative_photos": 0,
+      "fnr": 0.0,
+      "fpr": null
+    },
+    "10-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 2,
+      "tn": 6,
+      "positive_photos": 0,
+      "negative_photos": 8,
+      "fnr": null,
+      "fpr": 0.25
+    },
+    "11-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 1,
+      "positive_photos": 0,
+      "negative_photos": 2,
+      "fnr": null,
+      "fpr": 0.5
+    },
+    "14-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 2,
+      "positive_photos": 0,
+      "negative_photos": 3,
+      "fnr": null,
+      "fpr": 0.3333333333333333
+    },
+    "15-06-2021": {
+      "tp": 2,
+      "fn": 0,
+      "fp": 0,
+      "tn": 0,
+      "positive_photos": 2,
+      "negative_photos": 0,
+      "fnr": 0.0,
+      "fpr": null
+    },
+    "16-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 7,
+      "positive_photos": 0,
+      "negative_photos": 8,
+      "fnr": null,
+      "fpr": 0.125
+    },
+    "16-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 3,
+      "positive_photos": 0,
+      "negative_photos": 4,
+      "fnr": null,
+      "fpr": 0.25
+    },
+    "17-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 14,
+      "positive_photos": 0,
+      "negative_photos": 15,
+      "fnr": null,
+      "fpr": 0.06666666666666667
+    },
+    "17-12-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2,
+      "positive_photos": 0,
+      "negative_photos": 2,
+      "fnr": null,
+      "fpr": 0.0
+    },
+    "18-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 30,
+      "positive_photos": 0,
+      "negative_photos": 31,
+      "fnr": null,
+      "fpr": 0.03225806451612903
+    },
+    "19-10-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2,
+      "positive_photos": 0,
+      "negative_photos": 2,
+      "fnr": null,
+      "fpr": 0.0
+    },
+    "19-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 19,
+      "positive_photos": 0,
+      "negative_photos": 19,
+      "fnr": null,
+      "fpr": 0.0
+    },
+    "20-10-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 3,
+      "tn": 7,
+      "positive_photos": 0,
+      "negative_photos": 10,
+      "fnr": null,
+      "fpr": 0.3
+    },
+    "20-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 26,
+      "positive_photos": 0,
+      "negative_photos": 27,
+      "fnr": null,
+      "fpr": 0.037037037037037035
+    },
+    "21-10-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 1,
+      "positive_photos": 0,
+      "negative_photos": 2,
+      "fnr": null,
+      "fpr": 0.5
+    },
+    "22-10-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2,
+      "positive_photos": 0,
+      "negative_photos": 2,
+      "fnr": null,
+      "fpr": 0.0
+    },
+    "23-10-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 1,
+      "positive_photos": 0,
+      "negative_photos": 2,
+      "fnr": null,
+      "fpr": 0.5
+    },
+    "23-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 7,
+      "positive_photos": 0,
+      "negative_photos": 7,
+      "fnr": null,
+      "fpr": 0.0
+    },
+    "24-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 3,
+      "tn": 5,
+      "positive_photos": 0,
+      "negative_photos": 8,
+      "fnr": null,
+      "fpr": 0.375
+    },
+    "25-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 4,
+      "positive_photos": 0,
+      "negative_photos": 4,
+      "fnr": null,
+      "fpr": 0.0
+    },
+    "26-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "tn": 2,
+      "positive_photos": 0,
+      "negative_photos": 3,
+      "fnr": null,
+      "fpr": 0.3333333333333333
+    },
+    "27-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 14,
+      "positive_photos": 0,
+      "negative_photos": 14,
+      "fnr": null,
+      "fpr": 0.0
+    },
+    "30-11-2020": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 4,
+      "positive_photos": 0,
+      "negative_photos": 4,
+      "fnr": null,
+      "fpr": 0.0
+    }
+  },
+  "independent_field_validation": false,
+  "whole_machine_health_or_verified_pixel_localization": false,
+  "old_bracket_tube_improvement_tested": false,
+  "new_API_CPP_ZIP_checks": 0,
+  "accepted_v16_unchanged": true
+}

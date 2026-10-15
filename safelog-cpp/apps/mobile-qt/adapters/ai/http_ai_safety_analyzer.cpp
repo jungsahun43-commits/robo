@@ -165,12 +165,13 @@ HttpAiSafetyAnalyzer::HttpAiSafetyAnalyzer(HttpAiSafetyAnalyzerConfig config,
     throw AiProviderError(AiProviderErrorCode::InputError, "AI 서버 주소와 HTTP 클라이언트가 필요합니다.");
   config_.timeoutMs = std::max(1, config_.timeoutMs);
   config_.maxRetries = std::max(0, config_.maxRetries);
-  static constexpr std::array<const char*, 17> supportedTasks{
+  static constexpr std::array<const char*, 18> supportedTasks{
     "facility_surface", "belt_damage", "conveyor_foreign",
     "ad_cable", "ad_screw", "ad_metal_nut", "loco_splicing_connectors",
     "mpdd_bracket_black", "mpdd_bracket_brown", "mpdd_bracket_white",
     "mpdd_connector", "mpdd_metal_plate", "mpdd_tubes", "ksdd2_surface",
-    "ball_screw_pitting", "insplad_upper_shackle_rust", "insplad_glass_missing_cap"};
+    "ball_screw_pitting", "insplad_upper_shackle_rust", "insplad_glass_missing_cap",
+    "insplad_lightning_suspension_rust"};
   if (!config_.inspectionTask.empty() &&
       !std::any_of(supportedTasks.begin(), supportedTasks.end(),
                    [&](const char* task) { return config_.inspectionTask == task; }))

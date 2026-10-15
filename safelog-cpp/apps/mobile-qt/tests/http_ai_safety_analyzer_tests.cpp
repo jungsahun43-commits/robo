@@ -127,6 +127,21 @@ private slots:
     QCOMPARE(request.value("inspectionTask").toString(), QString("insplad_glass_missing_cap"));
   }
 
+  void forwardsSuspensionResearchTask() {
+    auto client = std::make_shared<FakeHttpClient>();
+    client->results.push_back(JsonHttpResponse{200, json({
+      {"hazardCategory", "현수 연결구 부식 후보"}, {"riskLevel", 3}, {"detectedHazards", QJsonArray{"부식 후보"}},
+      {"suggestedDescription", "현수 연결구 확인"}, {"suggestedAction", "점검자 확인"}, {"confidence", 0.8},
+      {"modelName", "suspension-research"}, {"promptVersion", "safelog-hazard-v1"}})});
+    HttpAiSafetyAnalyzerConfig config;
+    config.baseUrl = "http://127.0.0.1:8775";
+    config.inspectionTask = "insplad_lightning_suspension_rust";
+    HttpAiSafetyAnalyzer analyzer(config, client);
+    analyzer.analyzeHazard(imagePath_.toStdString(), "사진상 현수 연결구 확인");
+    const auto request = QJsonDocument::fromJson(QByteArray::fromStdString(client->lastBody)).object();
+    QCOMPARE(request.value("inspectionTask").toString(), QString("insplad_lightning_suspension_rust"));
+  }
+
   void rejectsUnsupportedInspectionTask() {
     HttpAiSafetyAnalyzerConfig config;
     config.baseUrl = "http://127.0.0.1:8775";
