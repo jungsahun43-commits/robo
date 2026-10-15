@@ -1,0 +1,20 @@
+{
+  "UTC": "2026-10-15T10:28:05.560624+00:00",
+  "original_archive_SHA256": "f838533cf779a20af519f61f56b5bfd2f4df0c951c79f36f95d230d0b884793a",
+  "photographs": 3992,
+  "normal_TRAIN": 3424,
+  "normal_TEST": 403,
+  "defect_TEST": 165,
+  "actual_mask_files_in_original_archive": 0,
+  "image_decoding": 0,
+  "TRAIN_uuid_proxies": 25,
+  "TEST_uuid_proxies": 50,
+  "TRAIN_TEST_uuid_intersection": [],
+  "uuid_is_filename_acquisition_proxy_not_verified_physical_identity": true,
+  "publisher_web_page_normal_TEST_464_disagrees_with_actual_original_403": true,
+  "source_description_mask_claim_not_local_mask_availability": true,
+  "initial_prefix_counter_included_filenames_not_directory_counts": true,
+  "publisher_TEST_reserved_before_pixel_viewing": true,
+  "current_new_features_scores_optimizer": 0,
+  "no_other_variants_as_extra_photos": true
+}

@@ -1,0 +1,26 @@
+{
+  "UTC": "2026-10-15T10:24:10.392719+00:00",
+  "local_archive_SHA256": "f838533cf779a20af519f61f56b5bfd2f4df0c951c79f36f95d230d0b884793a",
+  "publisher_MD5_verified_at_download": "7faf736f2da8e3fb98b12f73bbf35889",
+  "CRC_all_members_passed": true,
+  "safe_paths_no_symlinks_or_duplicates": true,
+  "files": 3992,
+  "uncompressed_bytes": 307172730,
+  "extensions": {
+    ".jpg": 3992
+  },
+  "no_archive_code_executed": true,
+  "image_decoding_or_viewing": 0,
+  "pixel_duplicate_audit": false,
+  "training_features_scores_optimizer": 0,
+  "publisher_TEST_reserved_before_image_viewing": true,
+  "directory_counts": {
+    "train/good": 3424,
+    "test/good": 403,
+    "test/defect": 165
+  },
+  "actual_mask_files": 0,
+  "initial_full_prefix_report_preserved": "data/industrial-glinks-source-v35/initial-archive-audit-full-prefixes.json",
+  "initial_full_report_sha256": "282762768bf3a1543bf1fb542a4f46c69a7df34e6495565d0885ad62d5d16e8b",
+  "summary_only_no_archive_retest_or_pixel_decode": true
+}
