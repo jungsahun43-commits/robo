@@ -1,0 +1,34 @@
+{
+  "UTC": "2026-10-15T11:38:11.390955+00:00",
+  "paths_by_parent": {
+    "bracket_brown/test/anomalous": 81,
+    "bracket_brown/test/normal": 15,
+    "bracket_brown/train/normal": 44,
+    "bracket_grey/test/missing_label": 27,
+    "bracket_grey/test/normal": 19,
+    "bracket_grey/test/parts_mismatch": 38,
+    "bracket_grey/train/normal": 64,
+    "bracket_white/test/anomalous": 91,
+    "bracket_white/test/normal": 49,
+    "bracket_white/train/normal": 195,
+    "rosette/test/anomalous": 27,
+    "rosette/test/normal": 13,
+    "rosette/train/normal": 82
+  },
+  "listed_public_files": 745,
+  "earlier_partial_files_all_retained": true,
+  "old_partial_files": 224,
+  "newly_listed_metadata_not_new_photos": 521,
+  "normal_TEST_below20_by_category": [
+    "bracket_brown",
+    "bracket_grey",
+    "rosette"
+  ],
+  "images_downloaded_decoded_viewed": 0,
+  "new_model_features_gradients_optimizer": 0,
+  "account_personal_information_or_cookies_used": false,
+  "whole_publisher_hidden_assets_not_asserted": true,
+  "original_TEST_reserved": true,
+  "license": "author MPDD2 CC BY-NC-SA4.0, DOI10.1109/ICUMT57764.2022.9943437",
+  "inventory_SHA256": "e3beff9e6e3615c973d4f8a3073856e1485ab106f5479d80c70d392a5365492b"
+}

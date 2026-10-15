@@ -1,0 +1,45 @@
+{
+  "UTC": "2026-10-15T11:45:17.892373+00:00",
+  "frozen_before_MPDD2_image_download_or_decoding": true,
+  "source_code_SHA256": {
+    "scripts/prepare_mpdd2_white.py": "b3128790a8a7ffced4eae3d2e6d01696d882e6dd16aa65e680430d3c5999d84a",
+    "tests/test_mpdd2_white_data.py": "43f090d0b7f0aa67cb8a5509c0f12c89562f45d2e99540d8fafa4963fb529524"
+  },
+  "reservation_SHA256": "b770b4f011a06cd6b2bc32b3b9045ba56df3c3dd94e99eb90019baab521891b3",
+  "retained_TEST_manifest_SHA256": {
+    "data/equipment-expansion-v1/manifest.json": "40ec891c498adc98db645e6caf979bb91bd7577c991deddc3527c12106ccfecc",
+    "data/industrial-ksdd-supervised-v10/manifest.json": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+    "data/industrial-bsclass-v1/manifest.json": "e577da6548747dddd67026b9f829a8223f7f770d3de7d710dcefefbf47eb0104",
+    "data/industrial-magnetic-tiles-v16/manifest.json": "cad485a8d93082f69e2c28f10c3d36fafc9714d1ec994baa74b3af30f289e27f",
+    "data/industrial-ksdd1-v18/manifest-r1.json": "aa506252c5842aef5869a4982e4b10cc746ee3ddc713cc29d33e0a9e76126736",
+    "data/industrial-gearbox-source-v25/manifest.json": "ad2bf24e87455bccb3805b0d7eca5f3e55d752b72cace302ec8f1fb9bbbe2ed7"
+  },
+  "source": "author stepanje/MPDD2 public Drive, white bracket only; DOI10.1109/ICUMT57764.2022.9943437",
+  "license": "CC BY-NC-SA4.0, noncommercial academic research, author/source/version/change attribution, sharealike; other source licenses unchanged",
+  "download": {
+    "workers": 4,
+    "max_file_bytes": 16777216,
+    "max_total_bytes": 536870912,
+    "required_reserve_bytes": 1073741824,
+    "attempts": 3,
+    "access": "public uc download without accounts, cookies, private keys, personal information or access bypass"
+  },
+  "image_audit": "raw bytes local SHA256, PNG signature/format, RGB pixels/size/orientation hashes; no original reencode; no mask labels available",
+  "groups": "union exactRGB or any8orientation pHash<=2; unknown physical/capture groups, numeric filenames not physical IDs. Similarity is conservative exclusion, not identity proof.",
+  "exclusion": "original publisherTEST140 remains TEST; TRAIN in a newTEST group or linked to any retained8855TEST excluded. Never move TEST or near-TEST to FIT.",
+  "split": "eligible normal TRAIN connected groups sorted SHA256(mpdd2white39:+groupminindex); firstceil15percent VAL,nextceil15percent CAL,restFIT, once only",
+  "minimums": {
+    "normal_FIT": 30,
+    "normal_VAL": 20,
+    "normal_CAL": 20,
+    "groups_each_active_split": 3,
+    "TEST_each_label": 20
+  },
+  "reason_for_minimums": "new small normal-reference candidate, not changing failed GLinks35 requirements; sufficient support does not prove field accuracy",
+  "failed_gate": "preserve all records and stop before encoder features or training; no thresholds/splits/minimums retried",
+  "semantic_scope": "publisher white-bracket visible assembly/surface anomaly, not internal failure, mechanical operation, or safety certification",
+  "other_sources": "brown/grey/rosette normalTEST below20; not combined with white to satisfy gate; GLinks quarantine unchanged",
+  "new_training_protocol_fixed": false,
+  "new_model_features_scores_optimizer": 0,
+  "agent_photo_viewing": "only after split, fixed FIT examples; no TEST selection or relabeling"
+}
