@@ -1,0 +1,68 @@
+{
+  "UTC": "2026-10-15T12:31:44.555481+00:00",
+  "annotation_files": 9239,
+  "all_original_XML_size_and_unpacked_CRC32_verified": true,
+  "counts_author_photo_labels": {
+    "eligible_TRAIN_unallocated": {
+      "1": 2178,
+      "0": 2668
+    },
+    "excluded_capture_TEST": {
+      "1": 614,
+      "0": 829
+    },
+    "reserved_test": {
+      "1": 700,
+      "0": 2250
+    }
+  },
+  "invalid_coordinate_photos_by_phase": {
+    "eligible_TRAIN_unallocated": 1263,
+    "excluded_capture_TEST": 356,
+    "reserved_test": 412
+  },
+  "invalid_coordinate_photos": 2031,
+  "invalid_boxes": 2273,
+  "box_classes": {
+    "inclusion": 1825,
+    "dent": 915,
+    "pockmarks": 156,
+    "mould_scuffing": 187,
+    "parting_line_crack": 864,
+    "cut_marks": 96,
+    "misrun": 32,
+    "stamp_collapse": 133
+  },
+  "declared_sizes": {
+    "[640, 640]": 473,
+    "[600, 600]": 6468,
+    "[350, 350]": 274,
+    "[560, 560]": 180,
+    "[580, 580]": 152,
+    "[400, 400]": 128,
+    "[460, 460]": 122,
+    "[604, 604]": 913,
+    "[480, 480]": 104,
+    "[500, 500]": 228,
+    "[360, 360]": 115,
+    "[440, 440]": 82
+  },
+  "valid_coordinate_defect_photos_by_phase": {
+    "eligible_TRAIN_unallocated": 915,
+    "excluded_capture_TEST": 258,
+    "reserved_test": 288
+  },
+  "invalid_coordinates_fixed_or_relabelled": false,
+  "invalid_TEST_removed": false,
+  "author_photo_presence_not_verified_pixel_GT_or_whole_machine_health": true,
+  "image_pixels_extracted_or_decoded": 0,
+  "new_features_scores_optimizer": 0,
+  "single_illumination_to_XML_geometry_not_verified": true,
+  "physical_part_independence_unverified": true,
+  "annotation_prefix_SHA256": "940b5239967c3ede551aeddafa3916d15749e05e94c889530a93a8e47afa590e",
+  "reserved_author_split_SHA256": "c1cde15ad3017ad24bba91186f19ad9d346c4947a8f3f8da0f5ba9fd0956ab0e",
+  "whole_original_archive_MD5_verified": false,
+  "native_decompressor": "Windows bsdtar3.8.9; new annotation-only RAR container preserving original header+compressed payload, no author code run",
+  "initial_strict_audit_failure": "first invalid XML 20240204_144153_Gige[1]d: [167,516,222,222] in600x600; no model work had started",
+  "annotation_metadata_SHA256": "bc463bdc8957ae9aa37fd6e16cb4c5da62b0a6b64e76f436e38d3e4eaea9b12d"
+}

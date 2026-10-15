@@ -1,0 +1,26 @@
+{
+  "UTC": "2026-10-15T12:41:30.305149+00:00",
+  "fixed_before_subarchive_download": true,
+  "script_SHA256": "dd5cf1e0422d98cdc063cdf9d657401b6ea84746446f1d1277b2591ec044bf1c",
+  "source_outer_metadata_SHA256": "1899792350c7da3651f2c527755f76c3e78e9646ec15febda86fde43c955d0ce",
+  "public_file_list_SHA256": "054cfc324e0bd1f9360e0a267296ca5023e82339300f110572d0c0a8b69f0fad",
+  "member": {
+    "name": "supervised_fault_classification.zip",
+    "bytes": 874753167,
+    "packed": 872637838,
+    "compression": 8,
+    "CRC32": "47c40d0a",
+    "header_offset": 5527855321,
+    "flags": 8
+  },
+  "source": "author andreluizbvs/InsPLAD links Mendeley5n3fjgvfyz V1 DOI10.17632/5n3fjgvfyz.1",
+  "license": "Mendeley V1 and pinned author LICENSE both CC BY-NC3.0, noncommercial academic research/citation. Old project page separately says NC-SA4.0; do not silently relabel original distribution or other sources.",
+  "paper": "DOI10.1080/01431161.2023.2283900; author/source/version/change attribution retained",
+  "scope": "publisher supervised cropped powerline asset image condition labels only, not defect pixel masks, whole-scene location GT or machinery/electrical health",
+  "original_TEST": "reserve all publisherTEST and corresponding full-frame/crop/near duplicates BEFORE pixel viewing or train split; no anomaly/detection archive combined as new photos",
+  "download": "public author distribution URL, verify206 exactContentRange, stream original outer member rawdeflate into innerZIP directly; no packed copy or full outer ZIP",
+  "checksums": "verify original inner uncompressed size+outer-member CRC32, save compressed-range and inner local SHA256; outer publisherSHA remains unverified without all6.4GB",
+  "storage": "874753167bytes innerZIP plus metadata; require innerbytes+1.25GiB reserve before network. Inspect expanded bytes before extracting any photos, no old source/cache deletion.",
+  "new_photos_pixel_decodes_features_scores_optimizer": 0,
+  "training_protocol_fixed": false
+}

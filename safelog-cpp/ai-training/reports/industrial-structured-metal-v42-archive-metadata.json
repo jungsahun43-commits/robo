@@ -1,0 +1,58 @@
+{
+  "UTC": "2026-10-15T12:18:00.490212+00:00",
+  "public_preview_bytes": 52809257,
+  "public_preview_SHA256": "395a2256ee34d4c1f826b1f716195f3a89c6538e2ebc0d1ca82a67891983954a",
+  "source_archive_name": "MSDD.rar",
+  "source_archive_bytes": 9785811363,
+  "publisher_archive_MD5": "26607e725c30f926945061e1bd442efa",
+  "archive_MD5_verified": false,
+  "listed_files": 157061,
+  "counts_by_root": {
+    "Annotations": 9238,
+    "ImageSets": 1,
+    "JPEGImages": 9238,
+    "OrigImages": 138584
+  },
+  "extensions": {
+    ".xml": 9238,
+    ".txt": 1,
+    ".jpg": 147822
+  },
+  "uncompressed_member_bytes_by_root": {
+    "Annotations": 4053948,
+    "ImageSets": 163514,
+    "JPEGImages": 1677365793,
+    "OrigImages": 8406199357
+  },
+  "date_proxy_file_counts": {
+    "20240204": 19088,
+    "20240205": 27319,
+    "20240206": 26129,
+    "20240207": 20519,
+    "20240208": 31705,
+    "20240209": 3094,
+    "20240220": 5763,
+    "20240306": 935,
+    "20240307": 9231,
+    "20240308": 9486,
+    "20240312": 3791
+  },
+  "unique_capture_timestamp_proxies": 1511,
+  "possible_author_split_or_description_files": [
+    {
+      "name": "train.txt",
+      "path": "ImageSets/train.txt",
+      "id": "12b2c06b8cd86d8180e7c3c0a6c35db1",
+      "size": 163514,
+      "type": "file"
+    }
+  ],
+  "author_capture_proxy_not_physical_identity_proof": true,
+  "raw_illuminations_not_independent_parts": true,
+  "photo_or_annotation_contents_downloaded": 0,
+  "new_encoder_features_scores_optimizer": 0,
+  "TEST_split_or_training_protocol_fixed": false,
+  "public_child_ids_not_proven_individual_download_support": true,
+  "source_is_multilight_and_pseudoRGB_not_smartphone_input": true,
+  "inventory_SHA256": "9d9ca98d42fdb874f49d552dd74578a6c1b3b91a86ae9bef225277209bea84a5"
+}
