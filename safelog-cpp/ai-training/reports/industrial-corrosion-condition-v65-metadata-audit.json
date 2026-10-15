@@ -1,0 +1,99 @@
+{
+  "UTC": "2026-10-15T19:35:48.226232+00:00",
+  "policy_sha256": "768898a32d2d0916169924c20d9e65966086af92fa6694551a46d1ff53430d1d",
+  "original_photo_pairs": 440,
+  "publisher_TRAIN": 396,
+  "reserved_TEST": 44,
+  "associated_TESTfiles": 220,
+  "declared_original_resized_variants_perphoto": 2,
+  "TRAIN_JSON_examples": [
+    {
+      "member": "Corrosion Condition State Classification/original/Train/json/0.json",
+      "JSON_keys": [
+        "flags",
+        "imageData",
+        "imageHeight",
+        "imagePath",
+        "imageWidth",
+        "shapes",
+        "version"
+      ],
+      "imagePath_untrusted_text": "0.jpeg",
+      "imageWidth": 1600,
+      "imageHeight": 1200,
+      "shape_labels": {
+        "2_Fair_Steel_Corrosion": 8
+      },
+      "shape_types": {
+        "polygon": 8
+      },
+      "group_ids": [
+        "None"
+      ],
+      "imageData_present_not_decoded": true,
+      "flags": {}
+    },
+    {
+      "member": "Corrosion Condition State Classification/original/Train/json/1.json",
+      "JSON_keys": [
+        "flags",
+        "imageData",
+        "imageHeight",
+        "imagePath",
+        "imageWidth",
+        "shapes",
+        "version"
+      ],
+      "imagePath_untrusted_text": "1.jpeg",
+      "imageWidth": 1600,
+      "imageHeight": 1200,
+      "shape_labels": {
+        "2_Fair_Steel_Corrosion": 6
+      },
+      "shape_types": {
+        "polygon": 6
+      },
+      "group_ids": [
+        "None"
+      ],
+      "imageData_present_not_decoded": true,
+      "flags": {}
+    },
+    {
+      "member": "Corrosion Condition State Classification/original/Train/json/10.json",
+      "JSON_keys": [
+        "flags",
+        "imageData",
+        "imageHeight",
+        "imagePath",
+        "imageWidth",
+        "shapes",
+        "version"
+      ],
+      "imagePath_untrusted_text": "10.jpeg",
+      "imageWidth": 3648,
+      "imageHeight": 2736,
+      "shape_labels": {
+        "3_Poor_Steel_Corrosion": 6,
+        "2_Fair_Steel_Corrosion": 13
+      },
+      "shape_types": {
+        "polygon": 19
+      },
+      "group_ids": [
+        "None"
+      ],
+      "imageData_present_not_decoded": true,
+      "flags": {}
+    }
+  ],
+  "TEST_JSON_contents_read": 0,
+  "new_source_images_masks_or_guideline_example_images_viewed": 0,
+  "new_pixel_decodes_features_scores_gradient_optimizer": 0,
+  "final_pixel_class_mapping_verified": false,
+  "final_development_split_fixed": false,
+  "training_protocol_fixed": false,
+  "Good_may_include_minimal_rust": true,
+  "physical_part_or_report_groups_verified": false,
+  "independent_field_validation": false
+}
