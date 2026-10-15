@@ -1,0 +1,164 @@
+{
+  "UTC": "2026-10-15T09:51:13.315454+00:00",
+  "status": "completed_VAL_only_diagnostic",
+  "policy_sha256": "ea3c393b0382de60a68652c7f82f48d4ccf17a07e97283f94e053d1ef1bb0219",
+  "results": {
+    "v28": {
+      "selected": {
+        "epoch": 1,
+        "VAL_macro_label_group_BCE": 0.587897002696991,
+        "VAL_AUROC": 0.7403809917690781,
+        "VAL_label_group_weighted_AUROC": 0.7356101379019286
+      },
+      "last": {
+        "epoch": 30,
+        "VAL_macro_label_group_BCE": 0.6911993026733398,
+        "VAL_AUROC": 0.7596103115536325,
+        "VAL_label_group_weighted_AUROC": 0.740144358172513
+      },
+      "last_minus_selected_weighted_AUROC": 0.004534220270584366
+    },
+    "v29": {
+      "selected": {
+        "epoch": 10,
+        "VAL_macro_label_group_BCE": 0.6539419293403625,
+        "VAL_AUROC": 0.5583344123655155,
+        "VAL_label_group_weighted_AUROC": 0.7390298306053268
+      },
+      "last": {
+        "epoch": 30,
+        "VAL_macro_label_group_BCE": 0.6921378374099731,
+        "VAL_AUROC": 0.5973061558947045,
+        "VAL_label_group_weighted_AUROC": 0.7468842163343017
+      },
+      "last_minus_selected_weighted_AUROC": 0.0078543857289749
+    },
+    "v30": {
+      "selected": {
+        "epoch": 0,
+        "VAL_macro_label_group_BCE": 0.587897002696991,
+        "VAL_AUROC": 0.7403809917690781,
+        "VAL_label_group_weighted_AUROC": 0.7356101379019286
+      },
+      "last": {
+        "epoch": 30,
+        "VAL_macro_label_group_BCE": 0.5942527055740356,
+        "VAL_AUROC": 0.7307991859910057,
+        "VAL_label_group_weighted_AUROC": 0.7472416016315029
+      },
+      "last_minus_selected_weighted_AUROC": 0.011631463729574243
+    },
+    "v31": {
+      "selected": {
+        "epoch": 0,
+        "VAL_macro_label_group_BCE": 0.5879039764404297,
+        "VAL_AUROC": 0.7403906547438442,
+        "VAL_label_group_weighted_AUROC": 0.7356145924123693
+      },
+      "last": {
+        "epoch": 30,
+        "VAL_macro_label_group_BCE": 0.639606773853302,
+        "VAL_AUROC": 0.7365138692676818,
+        "VAL_label_group_weighted_AUROC": 0.7337117447749919
+      },
+      "last_minus_selected_weighted_AUROC": -0.0019028476373773584
+    }
+  },
+  "VAL_patches": 1440,
+  "VAL_groups": 3,
+  "new_diagnostic_VAL_forward_inputs": 11520,
+  "FIT_VAL_group_label_counts": {
+    "fit": {
+      "1": {
+        "0": 966,
+        "1": 130
+      },
+      "13": {
+        "0": 737,
+        "1": 7
+      },
+      "145": {
+        "1": 210,
+        "0": 4
+      },
+      "19": {
+        "1": 304
+      },
+      "25": {
+        "1": 1008
+      },
+      "3": {
+        "0": 674,
+        "1": 404
+      },
+      "30": {
+        "1": 215,
+        "0": 7
+      },
+      "8": {
+        "0": 758,
+        "1": 42
+      }
+    },
+    "validation": {
+      "35": {
+        "1": 744
+      },
+      "54": {
+        "0": 497,
+        "1": 7
+      },
+      "72": {
+        "0": 192
+      }
+    }
+  },
+  "development_exact_RGB_opposite_label_groups": [],
+  "development_near_opposite_label_pairs": [
+    {
+      "left": "gearbox/8024",
+      "right": "gearbox/6746",
+      "phase": "validation"
+    },
+    {
+      "left": "gearbox/9994",
+      "right": "gearbox/8024",
+      "phase": "validation"
+    },
+    {
+      "left": "gearbox/11204",
+      "right": "gearbox/1461",
+      "phase": "fit"
+    },
+    {
+      "left": "gearbox/13139",
+      "right": "gearbox/9982",
+      "phase": "fit"
+    },
+    {
+      "left": "gearbox/13139",
+      "right": "gearbox/11522",
+      "phase": "fit"
+    },
+    {
+      "left": "gearbox/13586",
+      "right": "gearbox/13139",
+      "phase": "fit"
+    },
+    {
+      "left": "gearbox/15583",
+      "right": "gearbox/739",
+      "phase": "fit"
+    }
+  ],
+  "cross_FIT_VAL_near_pairs": [],
+  "near_opposite_labels_are_not_confirmed_label_errors": true,
+  "no_labels_changed": true,
+  "new_RGB_features": 0,
+  "actual_new_optimizer_updates": 0,
+  "new_CAL_TEST_scores": 0,
+  "checkpoint_promotions": 0,
+  "new_unit_tests_passed": 3,
+  "next_training_protocol_fixed": false,
+  "independent_field_validated": false
+}

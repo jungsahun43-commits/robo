@@ -1,0 +1,63 @@
+{
+  "UTC": "2026-10-15T09:55:30.909914+00:00",
+  "stage": "metadata_and_synthetic_loss_only_not_training_protocol",
+  "manifest_sha256": "fe7fce446e34002d47a24c0ad6b106468e8c128209739164d2e511705ae8779d",
+  "source_diagnostic_sha256": "b2fb27f9ae3d82229e78331bfc0acb430ac46e44a8f6d3fc35050ed9fb6f2275",
+  "FIT_group_support_with_atleast2patches_perlabel": {
+    "0": [
+      "1",
+      "13",
+      "145",
+      "3",
+      "30",
+      "8"
+    ],
+    "1": [
+      "1",
+      "13",
+      "145",
+      "19",
+      "25",
+      "3",
+      "30",
+      "8"
+    ]
+  },
+  "proposed_four_groups_two_distinct_patches_perlabel_feasible": true,
+  "possible_batch": "4differentFITgroups perlabel,2distinctpatches pergroup,16total; groupids used for sampling/loss only, no inference input or invented embedding",
+  "loss_prototype": "same-label different-group positives; exclude same-group pairs from all contrastive terms; normalizedcosine logsumexp soft-neighbor loss. TechnicaldefaultT.2, full lambda/temperature/optimizer/VAL/CAL protocol not yet fixed.",
+  "loss_source_sha256": "85e0601ee6b27d17691ea44b3f74a1dce74efab37cffc57d9d90ea32463d4746",
+  "new_synthetic_unit_tests_passed": 3,
+  "original_GT_unchanged": true,
+  "pending_FIT_only_near_opposite_label_pairs": [
+    {
+      "left": "gearbox/11204",
+      "right": "gearbox/1461",
+      "phase": "fit"
+    },
+    {
+      "left": "gearbox/13139",
+      "right": "gearbox/9982",
+      "phase": "fit"
+    },
+    {
+      "left": "gearbox/13139",
+      "right": "gearbox/11522",
+      "phase": "fit"
+    },
+    {
+      "left": "gearbox/13586",
+      "right": "gearbox/13139",
+      "phase": "fit"
+    },
+    {
+      "left": "gearbox/15583",
+      "right": "gearbox/739",
+      "phase": "fit"
+    }
+  ],
+  "actual_source_gradients_or_optimizer": 0,
+  "new_model_scores": 0,
+  "new_training_protocol_fixed": false,
+  "paper_motivation_only_not_method_reproduction": "https://arxiv.org/pdf/2511.15440 sectionsIII/IV discuss per-component imbalance and contrastive generalization; this is a distinct cross-group prototype, no author performance claimed"
+}
