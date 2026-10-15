@@ -1,0 +1,260 @@
+{
+  "status": "completed_v17_all_candidates_rejected_parent_v16_retained",
+  "UTC": "2026-10-15T03:40:11.833025+00:00",
+  "preregistered_commit": "460ad3f",
+  "run": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-mixed-real-mask-v17",
+  "active_research_checkpoint": "runs/industrial-magnetic-tiles-v16/released/final.pt",
+  "active_checkpoint_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "role4_zip": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "role4_zip_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "v17_actual_optimizer_updates": 1920,
+  "v17_selected_epoch_by_VAL": 6,
+  "v17_selected_epoch_updates": 384,
+  "v17_initial_VAL": 5.754264070180396,
+  "v17_best_VAL": 1.5900267553006668,
+  "new_target_candidates_selected": {},
+  "new_CPU_CPP_release_checks": 0,
+  "reason_no_release": "all preregistered incremental guards failed; no new runtime shipment",
+  "tracked_v8_v10_v13_v15_v16_v17_actual_optimizer_total_including_rejected": 14800,
+  "v17_results": {
+    "magnetic_tile_surface": {
+      "rates": {
+        "tp": 30,
+        "fn": 23,
+        "fp": 29,
+        "tn": 94,
+        "positive_photos": 53,
+        "negative_photos": 123,
+        "fnr": 0.4339622641509434,
+        "fpr": 0.23577235772357724
+      },
+      "by_defect": {
+        "MT_Blowhole": {
+          "photos": 9,
+          "fn": 0,
+          "fnr": 0.0
+        },
+        "MT_Break": {
+          "photos": 17,
+          "fn": 7,
+          "fnr": 0.4117647058823529
+        },
+        "MT_Crack": {
+          "photos": 9,
+          "fn": 7,
+          "fnr": 0.7777777777777778
+        },
+        "MT_Fray": {
+          "photos": 2,
+          "fn": 0,
+          "fnr": 0.0
+        },
+        "MT_Uneven": {
+          "photos": 16,
+          "fn": 9,
+          "fnr": 0.5625
+        }
+      },
+      "eligible": false,
+      "auroc": 0.6968860254640282,
+      "pixel_counts_at_half_original": {
+        "tp": 224109,
+        "fn": 416042,
+        "fp": 1465518,
+        "tn": 16486815
+      },
+      "pixel_fnr": 0.6499122863199464,
+      "pixel_fpr": 0.08163384669836506,
+      "pixel_IoU": 0.10643125771429413
+    },
+    "mpdd_bracket_black": {
+      "parent": {
+        "tp": 17,
+        "fn": 30,
+        "fp": 4,
+        "tn": 28,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.6382978723404256,
+        "fpr": 0.125
+      },
+      "parent_by_defect": {
+        "hole": {
+          "photos": 12,
+          "fn": 5,
+          "fnr": 0.4166666666666667
+        },
+        "scratches": {
+          "photos": 35,
+          "fn": 25,
+          "fnr": 0.7142857142857143
+        }
+      },
+      "methods": {
+        "mixed_only": {
+          "rates": {
+            "tp": 12,
+            "fn": 35,
+            "fp": 8,
+            "tn": 24,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.7446808510638298,
+            "fpr": 0.25
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 7,
+              "fnr": 0.5833333333333334
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 28,
+              "fnr": 0.8
+            }
+          },
+          "eligible": false,
+          "auroc": 0.5704787234042553
+        },
+        "max_mixed_parent": {
+          "rates": {
+            "tp": 7,
+            "fn": 40,
+            "fp": 4,
+            "tn": 28,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.851063829787234,
+            "fpr": 0.125
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 10,
+              "fnr": 0.8333333333333334
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 30,
+              "fnr": 0.8571428571428571
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6422872340425532
+        }
+      }
+    },
+    "mpdd_tubes": {
+      "parent": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "parent_by_defect": {
+        "anomalous": {
+          "photos": 69,
+          "fn": 47,
+          "fnr": 0.6811594202898551
+        }
+      },
+      "methods": {
+        "mixed_only": {
+          "rates": {
+            "tp": 14,
+            "fn": 55,
+            "fp": 6,
+            "tn": 26,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.7971014492753623,
+            "fpr": 0.1875
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 55,
+              "fnr": 0.7971014492753623
+            }
+          },
+          "eligible": false,
+          "auroc": 0.5267210144927537
+        },
+        "max_mixed_parent": {
+          "rates": {
+            "tp": 28,
+            "fn": 41,
+            "fp": 5,
+            "tn": 27,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.5942028985507246,
+            "fpr": 0.15625
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 41,
+              "fnr": 0.5942028985507246
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6580615942028986
+        }
+      }
+    }
+  },
+  "verification": {
+    "status": "passed",
+    "parent_all_tensors_buffers_and_metadata_exact": true,
+    "new_projection_frozen": true,
+    "legacy_python_SHA_checked": 590,
+    "protected_stat_unchanged": 85709,
+    "changed_metadata_SHA_rechecked": 0,
+    "all_protected_file_SHA_reread": false,
+    "actual_optimizer_updates": 1920,
+    "selected": {},
+    "runtime_CPU_CPP_release_still_required_if_selected": false,
+    "active_research_parent_still_retained": true,
+    "new_unit_tests_passed": 3,
+    "independent_field_validated": false
+  },
+  "old_parent_all_tensors_buffers_and_metadata_exact": true,
+  "FIT_VAL_source_counts": {
+    "magnetic_tile_surface": {
+      "fit": {
+        "defect": 217,
+        "normal": 499
+      },
+      "validation": {
+        "defect": 63,
+        "normal": 201
+      }
+    },
+    "ksdd2_surface": {
+      "fit": {
+        "normal": 1254,
+        "defect": 146
+      },
+      "validation": {
+        "normal": 389,
+        "defect": 52
+      }
+    }
+  },
+  "new_unit_tests_passed": 3,
+  "preparation_error_preserved": "outputs/V17_PREPARATION_FAILURE_2026-10-15.json (missing RGB fingerprint, repaired before training)",
+  "training_runtime_errors": 0,
+  "no_TEST_cut_retuning": true,
+  "known_TEST_used_for_final_selection": true,
+  "independent_field_validated": false,
+  "v14_relation_human_review_pending": true,
+  "automation_continues_user_away": true,
+  "awake_helper_restarted": false,
+  "next": "Investigate author-distributed real component surface mask data, e.g. KolektorSDD1, verify rights and disjoint source/capture-group split before any next learning; do not rerun v17."
+}
