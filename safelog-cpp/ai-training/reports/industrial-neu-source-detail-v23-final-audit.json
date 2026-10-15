@@ -1,0 +1,243 @@
+{
+  "UTC": "2026-10-15T07:17:58.930342+00:00",
+  "status": "v23_completed_all_candidates_rejected_v16_retained",
+  "preregistered_commit": "e0a06f2",
+  "data_audit_commit_before_features": "18641c7",
+  "active_model": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-magnetic-tiles-v16\\released\\final.pt",
+  "active_model_sha256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+  "active_role4_ZIP": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+  "active_role4_ZIP_sha256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+  "v23_research_checkpoint": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\work\\robo-ai-engine\\safelog-cpp\\ai-training\\runs\\industrial-neu-source-detail-v23\\trained\\final.pt",
+  "v23_checkpoint_sha256": "9b335fe33b5016ecfd9dcc911860e556e1faf23e554dc517259097233d9da3b4",
+  "warm_v21_VAL_checkpoint_sha256": "43df7c83403d65cbe0669e59c30c9c1085c0936de2e6c8b611ace436923dabdc",
+  "actual_optimizer_updates": 1920,
+  "selected_epoch": 3,
+  "retained_selected_epoch_updates": 192,
+  "initial_VAL_loss": 2.546011563757109,
+  "best_VAL_loss": 1.9591800557676131,
+  "FIT_actual_publisher_mask_original_photos": 35,
+  "VAL_actual_mask_original_photos": 10,
+  "FIT_crops": 312,
+  "VAL_crops": 88,
+  "new_synthetic_images": 0,
+  "new_source_normal_whole_photos": 0,
+  "annotation_negative_crops_are_not_whole_equipment_normal_labels": true,
+  "fine_projection_changed_from_initialization": true,
+  "all_parent_tensors_buffers_metadata_exact": true,
+  "selected_methods": {},
+  "target_results": {
+    "mpdd_bracket_black": {
+      "parent": {
+        "tp": 17,
+        "fn": 30,
+        "fp": 4,
+        "tn": 28,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.6382978723404256,
+        "fpr": 0.125
+      },
+      "parent_by_defect": {
+        "hole": {
+          "photos": 12,
+          "fn": 5,
+          "fnr": 0.4166666666666667
+        },
+        "scratches": {
+          "photos": 35,
+          "fn": 25,
+          "fnr": 0.7142857142857143
+        }
+      },
+      "methods": {
+        "detail_only": {
+          "rates": {
+            "tp": 5,
+            "fn": 42,
+            "fp": 3,
+            "tn": 29,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.8936170212765957,
+            "fpr": 0.09375
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 9,
+              "fnr": 0.75
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 33,
+              "fnr": 0.9428571428571428
+            }
+          },
+          "eligible": false,
+          "auroc": 0.59375
+        },
+        "max_detail_parent": {
+          "rates": {
+            "tp": 16,
+            "fn": 31,
+            "fp": 5,
+            "tn": 27,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.6595744680851063,
+            "fpr": 0.15625
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 5,
+              "fnr": 0.4166666666666667
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 26,
+              "fnr": 0.7428571428571429
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6309840425531915
+        }
+      }
+    },
+    "mpdd_tubes": {
+      "parent": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "parent_by_defect": {
+        "anomalous": {
+          "photos": 69,
+          "fn": 47,
+          "fnr": 0.6811594202898551
+        }
+      },
+      "methods": {
+        "detail_only": {
+          "rates": {
+            "tp": 11,
+            "fn": 58,
+            "fp": 3,
+            "tn": 29,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.8405797101449275,
+            "fpr": 0.09375
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 58,
+              "fnr": 0.8405797101449275
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6326992753623188
+        },
+        "max_detail_parent": {
+          "rates": {
+            "tp": 26,
+            "fn": 43,
+            "fp": 3,
+            "tn": 29,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.6231884057971014,
+            "fpr": 0.09375
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 43,
+              "fnr": 0.6231884057971014
+            }
+          },
+          "eligible": false,
+          "auroc": 0.7391304347826086
+        }
+      }
+    }
+  },
+  "data_audit": {
+    "UTC": "2026-10-15T07:14:33.264240+00:00",
+    "ready": true,
+    "protocol_sha256": "41a73e0235536fb4d7d577359023a739b2f9781498ac3e245476781805904351",
+    "stopped_v22_manifest_sha256": "d2fcd01aa6510bb5dce88a6e622cdabb6abc1604c3843abed3e9b630c497d5d0",
+    "stopped_v22_duplicate_audit_sha256": "7b1e99a5868169f53909073bc64f652800629739a636fb33f6ace29c4223fb1c",
+    "counts": {
+      "fit": {
+        "annotation_negative": 182,
+        "real_positive": 130
+      },
+      "validation": {
+        "annotation_negative": 37,
+        "real_positive": 51
+      }
+    },
+    "training_crops": 312,
+    "validation_crops": 88,
+    "FIT_real_mask_original_photos": 35,
+    "FIT_real_by_source": {
+      "NEU_SDI": 20,
+      "NEU_SPDI": 15
+    },
+    "VAL_real_mask_original_photos": 10,
+    "VAL_annotation_negative_original_photos": 9,
+    "target_normal_photos_in_training_or_VAL": 0,
+    "new_source_normal_whole_photos": 0,
+    "inherited_retained_TEST_full_checked": 5746,
+    "inherited_reference_full_and_crops_checked": 8326,
+    "source_training_heldout_near_groups_remaining": 0,
+    "new_crop_coordinate_generation": 0,
+    "source_only_design_not_relaxation_of_stopped_v22_normal_minimum": true,
+    "TEST_masks_used_for_preparation": false,
+    "new_features_scores_optimizer_updates": 0,
+    "physical_capture_groups_verified": false,
+    "annotation_negative_is_not_whole_equipment_health": true,
+    "new_unit_tests_passed": 2
+  },
+  "verification": {
+    "status": "passed",
+    "parent_all_tensors_buffers_metadata_exact": true,
+    "high_projection_exact_to_v21": true,
+    "legacy_python_SHA_checked": 627,
+    "protected_stat_unchanged": 88378,
+    "changed_metadata_SHA_rechecked": 0,
+    "all_protected_SHA_reread": false,
+    "actual_optimizer_updates": 1920,
+    "new_unit_tests_passed": 2,
+    "same_turn_geometry_dispatch_tests_passed": 4,
+    "selected": {},
+    "original_primary_locations_unchanged": true,
+    "CPU_GPU_CPP_release_checks_still_required_if_selected": false,
+    "active_v16_retained": true,
+    "independent_field_validated": false
+  },
+  "new_release_API_aliases_tested": 0,
+  "new_release_CPP_operations": 0,
+  "new_release_ZIP_created": false,
+  "source_only_unit_tests_passed": 2,
+  "same_turn_geometry_mask_dispatch_unit_tests_passed": 4,
+  "v22_stopped_before_features_scores_optimizer": true,
+  "v22_actual_optimizer_updates": 0,
+  "tracked_actual_optimizer_updates_v8_v10_v13_v15_through_v21_plus_v23_including_failed": 24400,
+  "original_primary_target_locations_and_pixel_thresholds_unchanged": true,
+  "known_public_TEST_reused_for_adoption": true,
+  "independent_field_validated": false,
+  "physical_capture_groups_verified": false,
+  "new_source_independent_TEST_available": false,
+  "all45_source_masks_team_exhaustively_verified": false,
+  "all_source_failed_models_reports_preserved": true,
+  "awake_helper_restarted": false,
+  "next": "Preserve failure; use FIT-only optimization/generalization diagnosis and actual source access options. Do not replay v22/v23 or retune current TEST thresholds."
+}

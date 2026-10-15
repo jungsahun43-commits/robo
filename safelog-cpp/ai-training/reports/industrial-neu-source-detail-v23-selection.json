@@ -1,0 +1,163 @@
+{
+  "selected": {},
+  "categories": {
+    "mpdd_bracket_black": {
+      "parent": {
+        "tp": 17,
+        "fn": 30,
+        "fp": 4,
+        "tn": 28,
+        "positive_photos": 47,
+        "negative_photos": 32,
+        "fnr": 0.6382978723404256,
+        "fpr": 0.125
+      },
+      "parent_by_defect": {
+        "hole": {
+          "photos": 12,
+          "fn": 5,
+          "fnr": 0.4166666666666667
+        },
+        "scratches": {
+          "photos": 35,
+          "fn": 25,
+          "fnr": 0.7142857142857143
+        }
+      },
+      "methods": {
+        "detail_only": {
+          "rates": {
+            "tp": 5,
+            "fn": 42,
+            "fp": 3,
+            "tn": 29,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.8936170212765957,
+            "fpr": 0.09375
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 9,
+              "fnr": 0.75
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 33,
+              "fnr": 0.9428571428571428
+            }
+          },
+          "eligible": false,
+          "auroc": 0.59375
+        },
+        "max_detail_parent": {
+          "rates": {
+            "tp": 16,
+            "fn": 31,
+            "fp": 5,
+            "tn": 27,
+            "positive_photos": 47,
+            "negative_photos": 32,
+            "fnr": 0.6595744680851063,
+            "fpr": 0.15625
+          },
+          "by_defect": {
+            "hole": {
+              "photos": 12,
+              "fn": 5,
+              "fnr": 0.4166666666666667
+            },
+            "scratches": {
+              "photos": 35,
+              "fn": 26,
+              "fnr": 0.7428571428571429
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6309840425531915
+        }
+      }
+    },
+    "mpdd_tubes": {
+      "parent": {
+        "tp": 22,
+        "fn": 47,
+        "fp": 1,
+        "tn": 31,
+        "positive_photos": 69,
+        "negative_photos": 32,
+        "fnr": 0.6811594202898551,
+        "fpr": 0.03125
+      },
+      "parent_by_defect": {
+        "anomalous": {
+          "photos": 69,
+          "fn": 47,
+          "fnr": 0.6811594202898551
+        }
+      },
+      "methods": {
+        "detail_only": {
+          "rates": {
+            "tp": 11,
+            "fn": 58,
+            "fp": 3,
+            "tn": 29,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.8405797101449275,
+            "fpr": 0.09375
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 58,
+              "fnr": 0.8405797101449275
+            }
+          },
+          "eligible": false,
+          "auroc": 0.6326992753623188
+        },
+        "max_detail_parent": {
+          "rates": {
+            "tp": 26,
+            "fn": 43,
+            "fp": 3,
+            "tn": 29,
+            "positive_photos": 69,
+            "negative_photos": 32,
+            "fnr": 0.6231884057971014,
+            "fpr": 0.09375
+          },
+          "by_defect": {
+            "anomalous": {
+              "photos": 69,
+              "fn": 43,
+              "fnr": 0.6231884057971014
+            }
+          },
+          "eligible": false,
+          "auroc": 0.7391304347826086
+        }
+      }
+    }
+  },
+  "training": {
+    "actual_optimizer_updates": 1920,
+    "scheduled_unique_updates": 1920,
+    "completed_epochs": 30,
+    "selected_epoch": 3,
+    "selected_epoch_updates": 192,
+    "VAL_balanced_loss": 1.9591800557676131,
+    "FIT_crops": 312,
+    "VAL_crops": 88,
+    "FIT_real_original_photos": 35,
+    "manifest_sha256": "e21cbf812cd1c644994c63955f34ce2a6265ed5ba30fc1beb043fdb5209139fa"
+  },
+  "CAL_sha256": "c51a5002d2375e62738e8ba670acd60e5be489f1ede6acdb64a0a3a18d59a3c8",
+  "known_public_TEST_reused": true,
+  "independent_field_validated": false,
+  "original_photos_not_crops_counted": true,
+  "primary_location_unchanged": true
+}
