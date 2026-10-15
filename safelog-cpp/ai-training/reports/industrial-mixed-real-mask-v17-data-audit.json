@@ -1,0 +1,22 @@
+{
+  "UTC": "2026-10-15T03:35:33.162914+00:00",
+  "input_manifests_sha256": {
+    "data/equipment-expansion-v1/manifest.json": "40ec891c498adc98db645e6caf979bb91bd7577c991deddc3527c12106ccfecc",
+    "data/industrial-ksdd-supervised-v10/manifest.json": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+    "data/industrial-bsclass-v1/manifest.json": "e577da6548747dddd67026b9f829a8223f7f770d3de7d710dcefefbf47eb0104",
+    "data/industrial-magnetic-tiles-v16/manifest.json": "cad485a8d93082f69e2c28f10c3d36fafc9714d1ec994baa74b3af30f289e27f"
+  },
+  "all_current_TEST_photos_checked": 5435,
+  "KS_FIT_VAL_checked": 1841,
+  "MT_all_active_phases_checked": 1327,
+  "KS_FIT_VAL_matches_current_TEST": [],
+  "KS_FIT_VAL_matches_MT_all_phases": [],
+  "cross_phase_matches": [],
+  "MT_vs_all_current_TEST_prior_audit": "industrial-magnetic-tiles-v16-data-audit.json (all1344 source photos,0matches)",
+  "distance_rule": "exactRGB or any8orientation pHash<=2; conservative exclusion, not proof of physical identity",
+  "ready": true,
+  "model_inference_performed": false,
+  "optimizer_updates": 0,
+  "physical_acquisition_groups_verified": false,
+  "independent_field_validation": false
+}
