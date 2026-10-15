@@ -1,0 +1,208 @@
+{
+  "UTC": "2026-10-15T18:28:52.367595+00:00",
+  "policy_sha256": "6093568b1684737eaeba2da7c5cdbd05b3b0fcef77c82984f600592d710036fb",
+  "v57_manifest783_canonical_groups_exact": true,
+  "replayed_pixel_edges": 94,
+  "by_asset": {
+    "damper-preformed": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 678,
+      "normal_support_groups": 655,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "damper-stockbridge": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 145,
+      "normal_support_groups": 55,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "glass-insulator": {
+      "retained_actual_supervised_original_TRAIN": {
+        "good": 382
+      },
+      "supervised_groups_per_condition": {
+        "good": 376
+      },
+      "supervised_prior_roles": {
+        "fit": 268,
+        "validation": 60,
+        "cal": 54
+      },
+      "retained_rawnovel_normal_support_candidates": 1174,
+      "normal_support_groups": 1122,
+      "current_held_or_role_conflict_excluded_original_supervised": {
+        "good": 309,
+        "missing-cap": 69
+      }
+    },
+    "glass-insulator-big-shackle": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 107,
+      "normal_support_groups": 65,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "glass-insulator-small-shackle": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 92,
+      "normal_support_groups": 52,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "glass-insulator-tower-shackle": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 75,
+      "normal_support_groups": 41,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "lightning-rod-shackle": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 140,
+      "normal_support_groups": 77,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "lightning-rod-suspension": {
+      "retained_actual_supervised_original_TRAIN": {
+        "good": 248
+      },
+      "supervised_groups_per_condition": {
+        "good": 247
+      },
+      "supervised_prior_roles": {
+        "cal": 36,
+        "fit": 180,
+        "validation": 32
+      },
+      "retained_rawnovel_normal_support_candidates": 0,
+      "normal_support_groups": 0,
+      "current_held_or_role_conflict_excluded_original_supervised": {
+        "good": 100,
+        "rust": 31
+      }
+    },
+    "plate": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 182,
+      "normal_support_groups": 181,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "polymer-insulator": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 1625,
+      "normal_support_groups": 1605,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "polymer-insulator-lower-shackle": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 141,
+      "normal_support_groups": 133,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "polymer-insulator-tower-shackle": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 37,
+      "normal_support_groups": 37,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "polymer-insulator-upper-shackle": {
+      "retained_actual_supervised_original_TRAIN": {
+        "corrosão": 1,
+        "normal": 516
+      },
+      "supervised_groups_per_condition": {
+        "corrosão": 1,
+        "normal": 514
+      },
+      "supervised_prior_roles": {
+        "fit": 366,
+        "cal": 75,
+        "validation": 76
+      },
+      "retained_rawnovel_normal_support_candidates": 265,
+      "normal_support_groups": 265,
+      "current_held_or_role_conflict_excluded_original_supervised": {
+        "corrosão": 73,
+        "normal": 226
+      }
+    },
+    "spacer": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 60,
+      "normal_support_groups": 59,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "vari-grip": {
+      "retained_actual_supervised_original_TRAIN": {
+        "good": 95
+      },
+      "supervised_groups_per_condition": {
+        "good": 65
+      },
+      "supervised_prior_roles": {
+        "fit": 67,
+        "validation": 12,
+        "cal": 16
+      },
+      "retained_rawnovel_normal_support_candidates": 0,
+      "normal_support_groups": 0,
+      "current_held_or_role_conflict_excluded_original_supervised": {
+        "bird-nest": 35,
+        "good": 263,
+        "rust": 29
+      }
+    },
+    "yoke": {
+      "retained_actual_supervised_original_TRAIN": {},
+      "supervised_groups_per_condition": {},
+      "supervised_prior_roles": {},
+      "retained_rawnovel_normal_support_candidates": 33,
+      "normal_support_groups": 33,
+      "current_held_or_role_conflict_excluded_original_supervised": {}
+    },
+    "yoke-suspension": {
+      "retained_actual_supervised_original_TRAIN": {
+        "good": 5
+      },
+      "supervised_groups_per_condition": {
+        "good": 5
+      },
+      "supervised_prior_roles": {
+        "None": 5
+      },
+      "retained_rawnovel_normal_support_candidates": 0,
+      "normal_support_groups": 0,
+      "current_held_or_role_conflict_excluded_original_supervised": {
+        "good": 294,
+        "rust": 29
+      }
+    }
+  },
+  "retained_actual_supervised_photos": 1247,
+  "normal_support_candidates_not_readyFIT": 4754,
+  "new_pixel_decode_pHash_comparison_features_scores_gradient_optimizer": 0,
+  "new_visual_review": 0,
+  "old_models_and_splits_unchanged": true,
+  "new_data_split_or_training_protocol": false,
+  "physical_identity_verified": false,
+  "independent_field_validation": false
+}

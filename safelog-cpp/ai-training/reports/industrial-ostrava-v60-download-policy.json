@@ -1,0 +1,20 @@
+{
+  "UTC": "2026-10-15T18:31:59.469965+00:00",
+  "fixed_before_archive_download_or_member_read": true,
+  "script_sha256": "b9ed13a74f289aa350139c7176b588196aa216b4b23724611a9670bb00838021",
+  "metadata_sha256": "31fc0b514c4c5ff7cbec06c992fb686ddf31fe3d32640682dc25af34b4bf3271",
+  "url": "https://zenodo.org/api/records/11235637/files/corrosion-in-industrial-complexes-in-ostrava.zip/content",
+  "expected_bytes": 384363293,
+  "publisher_checksum": "md5:e30f1f62eb85018c2faee44909e69a06",
+  "source": "Matej Fric, Corrosion in Industrial Complexes in Ostrava Zenodo record11235637 versionv2 DOI10.5281/zenodo.11235637; author repository https://github.com/matejfric/corrosion-segmentation links same DOI",
+  "license": "data CC BY4.0 from Zenodo official metadata; cite author/source/version/changes. Other data/code licenses unchanged.",
+  "scope": "publisher describes105 actual industrial corrosion photographs with segmentation annotations at2048square. Verify files/counts/polarity/splits, not yet checked. Do not assume allhealthybackground photos or machinehealthGT.",
+  "download": "single public384363293byte file, no login/consent/PII, streaming partial preserved; resume only matching206ContentRange, officialMD5 pluslocalSHA256",
+  "archive": "ZIP safe relative paths/no drive/colon/backslash/traversal/symlink/encryption, max2GiB declaredexpanded; read each member to EOF forCRC andencodedSHA, no originalcodeexecution or imagepixeldecode",
+  "reservation": "record originalmemberpaths/authorTRAIN_VAL_TEST roles before any imageview/pixels; keep publisherTEST unchanged. No modeltraining or finalsplit atthisstep.",
+  "storage": "download384MiB plusmetadata<64MiB,>=1GiBreserve; no fullextraction or existingfile deletion",
+  "new_source_pixels_features_scores_optimizer": 0,
+  "training_protocol_fixed": false,
+  "independent_field_validation": false,
+  "other_candidates": "BeltCrack officialdata CC BY-SA4.0 DataCiteV1 42,032,778,597bytes21files; noarchive download atthisstep. ProjectApachelicense notdatasetlicense. CableInspect website license is not datalicense; downloadpage403, notacquired."
+}
