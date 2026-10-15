@@ -1,0 +1,339 @@
+{
+  "UTC": "2026-10-15T23:27:48.450033+00:00",
+  "policy_sha256": "b84742c4a23e3c87dfda1861ce3f04a7f251d07f40404271b7b17126a568ea4d",
+  "FIT": {
+    "native_positive_photo_counts": [
+      276,
+      271,
+      207,
+      66
+    ],
+    "view512_positive_photo_counts": [
+      276,
+      271,
+      207,
+      66
+    ],
+    "view512_class_pixels": [
+      40630445,
+      7047620,
+      4987703,
+      1330264
+    ],
+    "actual_draw_photo_exposures_by_class": [
+      7680,
+      7527,
+      5744,
+      1882
+    ],
+    "actual_draw_presentclass_loss_coefficient_sums": [
+      2748.6666666667293,
+      2677.5000000000496,
+      1780.6666666665783,
+      473.16666666666646
+    ],
+    "FIT_group_uniform_expected_coefficients": [
+      0.35778985507246347,
+      0.34933574879227025,
+      0.23278985507246414,
+      0.06008454106280193
+    ],
+    "candidate_inverse_expected_coefficient_weights_not_trained": [
+      0.6987341772151905,
+      0.7156439066551432,
+      1.0739299610894926,
+      4.160804020100503
+    ],
+    "original_v69_input_bytes_recreated_exact": true,
+    "not_gradient_or_causal_importance": true
+  },
+  "VAL_head_views": {
+    "6": {
+      "metrics": {
+        "matrix_true_rows_pred_columns": [
+          [
+            123573914,
+            12390445,
+            4767574,
+            0
+          ],
+          [
+            3523790,
+            16756035,
+            4799895,
+            0
+          ],
+          [
+            1006547,
+            3041282,
+            6769206,
+            37
+          ],
+          [
+            308632,
+            415187,
+            1675259,
+            0
+          ]
+        ],
+        "per_class_IoU": [
+          0.8488915868639737,
+          0.4094163961785863,
+          0.30685708845955084,
+          0.0
+        ],
+        "per_class_Dice": [
+          0.9182708092731758,
+          0.580972943536992,
+          0.4696107801982489,
+          0.0
+        ],
+        "per_class_recall": [
+          0.8780801298309461,
+          0.6681109278731979,
+          0.6257891229715398,
+          0.0
+        ],
+        "macroIoU": 0.3912912678755277,
+        "macroDice": 0.4922136332521042,
+        "pixel_accuracy": 0.8216553660103845,
+        "at_least_Fair_pixel_FPR": 0.12191987016905395,
+        "at_least_Fair_pixel_FNR": 0.12635746361161138
+      },
+      "Severe_GT512_diagnostics": [
+        {
+          "id": "ccs/Train/133",
+          "Severe_GT512_pixels": 10964,
+          "Severe_GT_mean_probability": 0.1306806206703186,
+          "Severe_GT_mean_logit_margin": -1.884506344795227
+        },
+        {
+          "id": "ccs/Train/153",
+          "Severe_GT512_pixels": 10823,
+          "Severe_GT_mean_probability": 0.2898375988006592,
+          "Severe_GT_mean_logit_margin": -0.7206242680549622
+        },
+        {
+          "id": "ccs/Train/154",
+          "Severe_GT512_pixels": 19267,
+          "Severe_GT_mean_probability": 0.13454240560531616,
+          "Severe_GT_mean_logit_margin": -1.7079073190689087
+        },
+        {
+          "id": "ccs/Train/155",
+          "Severe_GT512_pixels": 15916,
+          "Severe_GT_mean_probability": 0.22558605670928955,
+          "Severe_GT_mean_logit_margin": -0.8579698204994202
+        },
+        {
+          "id": "ccs/Train/23",
+          "Severe_GT512_pixels": 7756,
+          "Severe_GT_mean_probability": 0.06738954782485962,
+          "Severe_GT_mean_logit_margin": -2.36189866065979
+        },
+        {
+          "id": "ccs/Train/253",
+          "Severe_GT512_pixels": 758,
+          "Severe_GT_mean_probability": 0.28826749324798584,
+          "Severe_GT_mean_logit_margin": -0.7131707668304443
+        },
+        {
+          "id": "ccs/Train/294",
+          "Severe_GT512_pixels": 1290,
+          "Severe_GT_mean_probability": 0.16168975830078125,
+          "Severe_GT_mean_logit_margin": -1.5993491411209106
+        },
+        {
+          "id": "ccs/Train/312",
+          "Severe_GT512_pixels": 24200,
+          "Severe_GT_mean_probability": 0.2796822786331177,
+          "Severe_GT_mean_logit_margin": -0.756256103515625
+        },
+        {
+          "id": "ccs/Train/327",
+          "Severe_GT512_pixels": 62843,
+          "Severe_GT_mean_probability": 0.1898754984140396,
+          "Severe_GT_mean_logit_margin": -1.258001446723938
+        },
+        {
+          "id": "ccs/Train/335",
+          "Severe_GT512_pixels": 77325,
+          "Severe_GT_mean_probability": 0.2258673757314682,
+          "Severe_GT_mean_logit_margin": -1.131822943687439
+        },
+        {
+          "id": "ccs/Train/354",
+          "Severe_GT512_pixels": 134647,
+          "Severe_GT_mean_probability": 0.1598743498325348,
+          "Severe_GT_mean_logit_margin": -1.6652146577835083
+        },
+        {
+          "id": "ccs/Train/357",
+          "Severe_GT512_pixels": 47866,
+          "Severe_GT_mean_probability": 0.17601154744625092,
+          "Severe_GT_mean_logit_margin": -1.3243452310562134
+        },
+        {
+          "id": "ccs/Train/366",
+          "Severe_GT512_pixels": 5031,
+          "Severe_GT_mean_probability": 0.2720973789691925,
+          "Severe_GT_mean_logit_margin": -0.7707537412643433
+        },
+        {
+          "id": "ccs/Train/90",
+          "Severe_GT512_pixels": 4430,
+          "Severe_GT_mean_probability": 0.2113935947418213,
+          "Severe_GT_mean_logit_margin": -1.2151724100112915
+        }
+      ]
+    },
+    "30": {
+      "metrics": {
+        "matrix_true_rows_pred_columns": [
+          [
+            125363516,
+            11858395,
+            3146770,
+            363252
+          ],
+          [
+            6301023,
+            13843263,
+            4823946,
+            111488
+          ],
+          [
+            1223210,
+            2556629,
+            6764541,
+            272692
+          ],
+          [
+            350859,
+            373364,
+            1462059,
+            212796
+          ]
+        ],
+        "per_class_IoU": [
+          0.8435907791034778,
+          0.34722648488862323,
+          0.3340539313704444,
+          0.0676292145901332
+        ],
+        "per_class_Dice": [
+          0.9151605537034728,
+          0.5154686146440015,
+          0.5008102349014902,
+          0.12669045332577622
+        ],
+        "per_class_recall": [
+          0.8907965187971943,
+          0.5519703967986883,
+          0.6253578602416624,
+          0.08869907522806678
+        ],
+        "macroIoU": 0.3981251024881697,
+        "macroDice": 0.5145324641436853,
+        "pixel_accuracy": 0.8165442101749972,
+        "at_least_Fair_pixel_FPR": 0.10920348120280562,
+        "at_least_Fair_pixel_FNR": 0.20563815367035662
+      },
+      "Severe_GT512_diagnostics": [
+        {
+          "id": "ccs/Train/133",
+          "Severe_GT512_pixels": 10964,
+          "Severe_GT_mean_probability": 0.061310913413763046,
+          "Severe_GT_mean_logit_margin": -3.4766457080841064
+        },
+        {
+          "id": "ccs/Train/153",
+          "Severe_GT512_pixels": 10823,
+          "Severe_GT_mean_probability": 0.4178324043750763,
+          "Severe_GT_mean_logit_margin": -0.24203179776668549
+        },
+        {
+          "id": "ccs/Train/154",
+          "Severe_GT512_pixels": 19267,
+          "Severe_GT_mean_probability": 0.08448680490255356,
+          "Severe_GT_mean_logit_margin": -2.7707695960998535
+        },
+        {
+          "id": "ccs/Train/155",
+          "Severe_GT512_pixels": 15916,
+          "Severe_GT_mean_probability": 0.21798865497112274,
+          "Severe_GT_mean_logit_margin": -1.2869949340820312
+        },
+        {
+          "id": "ccs/Train/23",
+          "Severe_GT512_pixels": 7756,
+          "Severe_GT_mean_probability": 0.04637295380234718,
+          "Severe_GT_mean_logit_margin": -3.7441654205322266
+        },
+        {
+          "id": "ccs/Train/253",
+          "Severe_GT512_pixels": 758,
+          "Severe_GT_mean_probability": 0.17513507604599,
+          "Severe_GT_mean_logit_margin": -1.6944692134857178
+        },
+        {
+          "id": "ccs/Train/294",
+          "Severe_GT512_pixels": 1290,
+          "Severe_GT_mean_probability": 0.4514617323875427,
+          "Severe_GT_mean_logit_margin": 0.11734415590763092
+        },
+        {
+          "id": "ccs/Train/312",
+          "Severe_GT512_pixels": 24200,
+          "Severe_GT_mean_probability": 0.34159716963768005,
+          "Severe_GT_mean_logit_margin": -0.6315850019454956
+        },
+        {
+          "id": "ccs/Train/327",
+          "Severe_GT512_pixels": 62843,
+          "Severe_GT_mean_probability": 0.17519380152225494,
+          "Severe_GT_mean_logit_margin": -1.851037621498108
+        },
+        {
+          "id": "ccs/Train/335",
+          "Severe_GT512_pixels": 77325,
+          "Severe_GT_mean_probability": 0.2557254135608673,
+          "Severe_GT_mean_logit_margin": -1.3031904697418213
+        },
+        {
+          "id": "ccs/Train/354",
+          "Severe_GT512_pixels": 134647,
+          "Severe_GT_mean_probability": 0.18947434425354004,
+          "Severe_GT_mean_logit_margin": -1.9558368921279907
+        },
+        {
+          "id": "ccs/Train/357",
+          "Severe_GT512_pixels": 47866,
+          "Severe_GT_mean_probability": 0.24747924506664276,
+          "Severe_GT_mean_logit_margin": -1.4765640497207642
+        },
+        {
+          "id": "ccs/Train/366",
+          "Severe_GT512_pixels": 5031,
+          "Severe_GT_mean_probability": 0.30109378695487976,
+          "Severe_GT_mean_logit_margin": -0.8766528367996216
+        },
+        {
+          "id": "ccs/Train/90",
+          "Severe_GT512_pixels": 4430,
+          "Severe_GT_mean_probability": 0.1853259950876236,
+          "Severe_GT_mean_logit_margin": -1.9876325130462646
+        }
+      ]
+    }
+  },
+  "new_FIT_embedded_preprocesses": 276,
+  "new_VAL_embedded_preprocesses_and_encoder_inputs": 60,
+  "head_map_forward_views": 120,
+  "new_CAL_TEST_scores": 0,
+  "new_optimizer_updates": 0,
+  "new_visual_content_views": 0,
+  "selected6_model_state_before_after_exact": true,
+  "lasthead_promoted": false,
+  "independent_field_validation": false
+}
