@@ -1,0 +1,17 @@
+{
+  "UTC": "2026-10-15T08:05:51.953939+00:00",
+  "fixed_before_new_split_features_scores_optimizer": true,
+  "parent_v25_manifest_sha256": "ad2bf24e87455bccb3805b0d7eca5f3e55d752b72cace302ec8f1fb9bbbe2ed7",
+  "source_sha256": {
+    "safelog_ai/gearbox_groups.py": "7a5d9890e90e3915e72fb700285f32f2abc795b54b57ac4ba3a5a542d4b290df",
+    "scripts/prepare_gearbox_stratified.py": "50aa0690228b0a7a64974fa1cd837eddf498cd4dae4056ba588bfa9d822021ac",
+    "tests/test_gearbox_groups.py": "82f337139d4098389f8beeddcc676d68e966204b153d16775708641da420c17c"
+  },
+  "v25_stopped_unchanged": "CAL normal10<20; features/scores/optimizer0. Do not overwrite initial manifest or relax minimum.",
+  "changes": "new study uses publisher TRAIN labels only for deterministic greedy stratified groups; same reserved authorS3fold0TEST, source exclusions and exact/near groups preserved",
+  "rule": "sort intact nonTEST groups by decreasing patches then SHA256(gearbox26:+group); fixed group capacities N-2ceil(.15N)/ceil(.15N)/ceil(.15N); greedily minimize incremental squared normalized per-label count distance to .70/.15/.15; tie fit,val,cal. No seed or partition retries.",
+  "gate": "FIT eachlabel>=100/groups>=8; VAL/CAL eachlabel>=20/groups>=3; TEST eachlabel>=20/groups>=3; no old/reserved TEST-near group in FIT/VAL/CAL",
+  "TEST_used_for_split_objective": false,
+  "new_model_features_scores_optimizer_updates": 0,
+  "new_unit_tests_passed": 3
+}

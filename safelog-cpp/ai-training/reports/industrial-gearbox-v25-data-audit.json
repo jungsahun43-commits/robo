@@ -1,0 +1,91 @@
+{
+  "UTC": "2026-10-15T08:03:58.615343+00:00",
+  "ready": false,
+  "policy_sha256": "55bae392b94ae6955504841fa7e250c83dc66580bd3d69a601cf1c1f67c8a6c0",
+  "annotated_patches": 15588,
+  "counts": {
+    "fit": {
+      "1": 3338,
+      "0": 4851
+    },
+    "validation": {
+      "1": 781,
+      "0": 795
+    },
+    "cal": {
+      "1": 1387,
+      "0": 10
+    },
+    "test": {
+      "0": 1674,
+      "1": 1435
+    },
+    "excluded_TEST_group": {
+      "0": 1004,
+      "1": 313
+    },
+    "excluded_old_TEST_group": {}
+  },
+  "groups_by_phase": {
+    "fit": [
+      "0",
+      "1",
+      "13",
+      "16",
+      "162",
+      "19",
+      "21",
+      "3",
+      "30",
+      "35",
+      "44",
+      "447",
+      "49",
+      "53",
+      "8",
+      "83",
+      "971"
+    ],
+    "validation": [
+      "12",
+      "54",
+      "7",
+      "72"
+    ],
+    "cal": [
+      "108",
+      "145",
+      "25",
+      "40"
+    ],
+    "test": [
+      "18",
+      "2",
+      "4",
+      "41",
+      "48",
+      "5",
+      "6"
+    ],
+    "excluded_TEST_group": [
+      "4",
+      "41",
+      "5",
+      "6"
+    ],
+    "excluded_old_TEST_group": []
+  },
+  "metadata_connected_groups": 35,
+  "pixel_and_metadata_connected_groups": 32,
+  "internal_exact_or_orientation_near_pairs": 2691,
+  "old_TEST_fingerprinted": 5746,
+  "old_TEST_direct_matches": {},
+  "old_TEST_matches_in_reserved_TEST": [],
+  "fixed_author_TEST_preserved": true,
+  "unannotated_PNGs_excluded": 103,
+  "no_TEST_masks_or_model_scores_used": true,
+  "model_features_scores_optimizer_updates": 0,
+  "label_scope": "publisher128x128 visible-wear acceptance patch OK/nOK, not whole equipment functioning or location mask",
+  "physical_metadata_provided_by_author_not_new_independent_field_validation": true,
+  "near_hash_is_not_physical_identity_proof": true
+}
