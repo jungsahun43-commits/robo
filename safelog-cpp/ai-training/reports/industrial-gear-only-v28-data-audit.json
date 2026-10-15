@@ -1,0 +1,65 @@
+{
+  "UTC": "2026-10-15T08:23:23.212836+00:00",
+  "ready": true,
+  "policy_sha256": "c3ec4c570d906ac9b24e603855bd3743f3ac9183817c77963d2f0a106092d4a7",
+  "source_manifest_sha256": "ae16b4223e9d8f5101537d03db97cfc85593e3f3a26fe0d03ab3fb6b61a84396",
+  "counts": {
+    "fit": {
+      "0": 3146,
+      "1": 2320
+    },
+    "validation": {
+      "1": 751,
+      "0": 689
+    },
+    "cal": {
+      "1": 282,
+      "0": 834
+    },
+    "test": {
+      "0": 937,
+      "1": 1242
+    }
+  },
+  "groups_by_phase": {
+    "fit": [
+      "1",
+      "13",
+      "145",
+      "19",
+      "25",
+      "3",
+      "30",
+      "8"
+    ],
+    "validation": [
+      "35",
+      "54",
+      "72"
+    ],
+    "cal": [
+      "21",
+      "49",
+      "53"
+    ],
+    "test": [
+      "2",
+      "4",
+      "48",
+      "5"
+    ]
+  },
+  "previously_viewed_groups_preserved_FIT": [
+    "1",
+    "19"
+  ],
+  "original_full_source_TEST_preserved_elsewhere": 3109,
+  "new_task_TEST_gear_subset": 2179,
+  "task_subset_predeclared_not_full_source_improvement": true,
+  "new_RGB_features_model_scores_optimizer_updates": 0,
+  "same_publisher_TRAIN_development_repartitioned": true,
+  "new_training_protocol_fixed": false,
+  "new_unit_tests_passed": 2,
+  "independent_field_validation": false,
+  "source_patch_label_not_whole_gearbox_health_or_verified_localization": true
+}
