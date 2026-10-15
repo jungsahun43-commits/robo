@@ -1,0 +1,20 @@
+{
+  "UTC": "2026-10-15T11:24:12.389174+00:00",
+  "images_downloaded_decoded_viewed": 0,
+  "model_features_gradients_optimizer": 0,
+  "credentials_or_personal_information_submitted": false,
+  "listed_files": 224,
+  "paths_by_parent": {
+    "bracket_grey/test/missing_label": 27,
+    "bracket_grey/test/normal": 19,
+    "bracket_grey/test/parts_mismatch": 38,
+    "bracket_grey/train/normal": 50,
+    "rosette/test/anomalous": 27,
+    "rosette/test/normal": 13,
+    "rosette/train/normal": 50
+  },
+  "all_files_visible_in_public_listing_not_guaranteed": true,
+  "metadata_not_verified_new_nonduplicate_photographs": true,
+  "original_TEST_and_ground_truth_reserved_not_training": true,
+  "source_inventory_sha256": "c24a522e951235d2168a04316f610d1f541c3d90a4200ba9caab4353189cdfd6"
+}
