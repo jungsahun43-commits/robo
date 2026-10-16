@@ -31,6 +31,7 @@ ARCHIVE=SOURCE/'publisher-labeled-images-v1.zip'
 OUT=ROOT/'data/industrial-corrosion-background-v76'
 RUN=ROOT/'runs/industrial-corrosion-background-data-v76'
 POLICY=ROOT/'reports/industrial-corrosion-background-v76-data-policy.json'
+RECOVERY=ROOT/'reports/industrial-corrosion-background-v76-r1-recovery-policy.json'
 SOURCES=('scripts/prepare_corrosion_background.py','safelog_ai/corrosion_background_roi.py','safelog_ai/corrosion_cached_graph.py','tests/test_corrosion_background_roi.py')
 
 
@@ -82,16 +83,26 @@ def freeze():
 
 
 def validate():
-    p=read(POLICY)
+    active=RECOVERY if RECOVERY.exists() else POLICY;p=read(active)
+    if RECOVERY.exists():assert sha(POLICY)==p['original_policy_sha256']
     for n,h in {**p['source_sha256'],**p['inputs_sha256']}.items():assert sha(ROOT/n)==h,n
     assert sha(OUT/'reserved-TEST-and-copies-before-pixels.json')==p['reserved_sha256']
     git=['C:/Program Files/Git/cmd/git.exe','-c','safe.directory='+ROOT.parents[1].as_posix(),'-C',str(ROOT.parents[1])]
-    for n in (*SOURCES,POLICY.relative_to(ROOT).as_posix()):assert hashlib.sha256(subprocess.check_output(git+['show','HEAD:safelog-cpp/ai-training/'+n])).hexdigest()==sha(ROOT/n),n
+    for n in (*SOURCES,active.relative_to(ROOT).as_posix()):assert hashlib.sha256(subprocess.check_output(git+['show','HEAD:safelog-cpp/ai-training/'+n])).hexdigest()==sha(ROOT/n),n
     return p
 
 
+def freeze_recovery():
+    assert not RECOVERY.exists() and not list(OUT.glob('decoded-*.json'))
+    failures=list(RUN.glob('failure-*.json'));assert len(failures)==1 and read(failures[0])['error']=="KeyError('encoded_sha256')"
+    p=read(POLICY);assert sha(POLICY)=='96afc90a81e21af22ec746c1b5c5e405fc01401b72ceaba87772fd4c8a31e002'
+    p.update(UTC=utc(),original_policy_sha256=sha(POLICY),source_sha256={n:sha(ROOT/n) for n in SOURCES},
+             recovery='Repair only outer-v75metadata key spelling encoded_SHA256. Initial failure beforeROIheader/RGB/pixels; one encodednestedZIP read, zero ROIfiles orRGB decoded. Preserve originalfailure/emptydecodejournal/Git code. Same reservedIDs/minima/coordinatecontract; newr1 journal, no data/scoring-drivenchange.')
+    new(RECOVERY,p);print({'recovery_policy_sha256':sha(RECOVERY)},flush=True)
+
+
 def boxes(archive,item):
-    raw=archive.read(item['member']);assert hashlib.sha256(raw).hexdigest()==item['encoded_sha256'] and len(raw)<=1024**2
+    raw=archive.read(item['member']);assert hashlib.sha256(raw).hexdigest()==item['encoded_SHA256'] and len(raw)<=1024**2
     result=[];seen=set()
     with zipfile.ZipFile(BytesIO(raw)) as inner:
         assert len(inner.infolist())<=16 and sum(v.file_size for v in inner.infolist())<=8*1024**2
@@ -107,12 +118,12 @@ def boxes(archive,item):
 
 def decode():
     rows=[]
-    with zipfile.ZipFile(ARCHIVE) as archive,(RUN/'decode-events.jsonl').open('x',encoding='utf-8',buffering=1) as events:
+    with zipfile.ZipFile(ARCHIVE) as archive,(RUN/('decode-events-r1.jsonl' if RECOVERY.exists() else 'decode-events.jsonl')).open('x',encoding='utf-8',buffering=1) as events:
         for r in read(OUT/'reserved-TEST-and-copies-before-pixels.json')['rows']:
             if not r['original']:continue
             positives=boxes(archive,r['positive_zip']);negatives=boxes(archive,r['negative_zip'])
             events.write(json.dumps({'UTC':utc(),'id':r['id'],'nested_ZIP_and_ROI_files_checked':10,'RGB_decoded':False})+'\n')
-            encoded=archive.read(r['original']['member']);assert hashlib.sha256(encoded).hexdigest()==r['original']['encoded_sha256'] and len(encoded)<=128*1024**2
+            encoded=archive.read(r['original']['member']);assert hashlib.sha256(encoded).hexdigest()==r['original']['encoded_SHA256'] and len(encoded)<=128*1024**2
             with Image.open(BytesIO(encoded)) as im:
                 assert im.format=='TIFF' and im.n_frames==1 and im.width*im.height<=40_000_000 and im.mode in ('RGB','L','P','RGBA')
                 exif=im.getexif();assert exif.get(274) in (None,1)
@@ -182,13 +193,14 @@ def audit():
             if a<b:assert {r['group_id'] for r in rows if r['phase']==a}.isdisjoint({r['group_id'] for r in rows if r['phase']==b})
     reserved=read(OUT/'reserved-TEST-and-copies-before-pixels.json');missing=[r for r in reserved['rows'] if not r['original']]
     assert sorted([r['id'] for r in rows if r['phase']=='test']+[r['id'] for r in missing if r['reserved_role']=='test'])==reserved['reserved_ids']
-    result={'UTC':utc(),'ready':not failures,'policy_sha256':sha(POLICY),'counts':summary,'failures':failures,'exclusions':dict(Counter(r['phase'] for r in rows if r['phase'].startswith('excluded'))),'missing_originals':[r['id'] for r in missing],'decoded_original_RGB':len(decoded),'nested_ZIPs_checked':2*len(decoded),'ROI_files_checked':10*len(decoded),'new_distance_audit':dict(distances),'new_visual_content_views':0,'new_features_scores_gradient_optimizer':0,'training_protocol_fixed':False,'wholephoto_app_gate_passed':False,'physical_part_independence_verified':False,'independent_field_validation':False,'new_units_passed':3,'disk_free_bytes':shutil.disk_usage(ROOT).free}
+    result={'UTC':utc(),'ready':not failures,'policy_sha256':sha(RECOVERY if RECOVERY.exists() else POLICY),'counts':summary,'failures':failures,'exclusions':dict(Counter(r['phase'] for r in rows if r['phase'].startswith('excluded'))),'missing_originals':[r['id'] for r in missing],'decoded_original_RGB':len(decoded),'nested_ZIPs_checked':2*len(decoded),'ROI_files_checked':10*len(decoded),'new_distance_audit':dict(distances),'new_visual_content_views':0,'new_features_scores_gradient_optimizer':0,'training_protocol_fixed':False,'wholephoto_app_gate_passed':False,'physical_part_independence_verified':False,'independent_field_validation':False,'new_units_passed':3,'disk_free_bytes':shutil.disk_usage(ROOT).free}
     new(OUT/'manifest.json',{'rows':rows,'missing_originals':missing,'audit':result});new(ROOT/'reports/industrial-corrosion-background-v76-data-audit.json',{**result,'manifest_sha256':sha(OUT/'manifest.json')});print(result,flush=True)
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('stage',choices=('freeze','audit'));args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('stage',choices=('freeze','freeze-recovery','audit'));args=parser.parse_args()
     if args.stage=='freeze':freeze()
+    elif args.stage=='freeze-recovery':freeze_recovery()
     else:
         for path in (ROOT/'runs').glob('**/*.lock'):
             if process_exists(int(path.read_text(encoding='utf-8').strip())):raise RuntimeError('Live job '+str(path))
