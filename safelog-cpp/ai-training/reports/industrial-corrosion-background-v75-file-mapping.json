@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "original": 34,
+    "visualization": 36,
+    "background": 35,
+    "corrosion": 35
+  },
+  "background_without_original": [
+    "83"
+  ],
+  "corrosion_without_original": [
+    "83"
+  ],
+  "visualization_extra_ids": [
+    "203-1",
+    "83"
+  ],
+  "new_pixels_or_annotation_coordinate_decodes": 0,
+  "raw_metadata_mapping_only": true,
+  "TEST_reserved": false,
+  "final_split_or_training_protocol_fixed": false,
+  "independent_field_validation": false
+}

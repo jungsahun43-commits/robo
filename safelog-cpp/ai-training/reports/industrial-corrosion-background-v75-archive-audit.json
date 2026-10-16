@@ -1,0 +1,15 @@
+{
+  "UTC": "2026-10-16T00:30:00.166400+00:00",
+  "archive_bytes": 262967506,
+  "archive_local_SHA256": "6fbd29524a81f4d8250a3cf978da09ad09d48f65522677792156d0bdf454fcce",
+  "publisher_SHA256_matched": true,
+  "all_inner_CRC_encodedSHA_safe_paths_checked": true,
+  "members": 151,
+  "declared_expanded_bytes": 434641796,
+  "member_list_SHA256": "aa8666e4040c6cbf3957a7f2be72515e99ed25fd899bd8bfb2fc438376a08060",
+  "source_pixel_or_annotation_content_decodes": 0,
+  "new_features_scores_gradient_optimizer": 0,
+  "whole_expansion_or_author_code_execution": false,
+  "training_protocol_fixed": false,
+  "independent_field_validation": false
+}
