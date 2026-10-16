@@ -1,0 +1,25 @@
+{
+  "UTC": "2026-10-16T01:40:00.360162+00:00",
+  "fixed_before_new_geometry_probe": true,
+  "source_sha256": {
+    "scripts/probe_corrosion_native_geometry.py": "fc2d96ee8a0749ff851ee2badd905c4e5c1a360f23425b2a31e8c8e37c284e09",
+    "safelog_ai/native_corrosion_grid.py": "19d578f4e0c65a669e11a7c46bfa915d32a2f9dcee56af0db0c8fa538ed01c37",
+    "tests/test_native_corrosion_grid.py": "89b4a6f871e13a66d53f9390732dff4b74f5ca4cb4637997ae8a861862c7fafc"
+  },
+  "inputs_sha256": {
+    "data/industrial-corrosion-subpixel-v78/manifest.json": "4b2a9a8f1f37bf4515558b1cbcfccb56aceb7fde228986545402c7fa711df6e4",
+    "safelog_ai/corrosion_subpixel_roi.py": "4c1278ffda7bb3e58edf4221240e855619195d2044da1ba9517b368f11594dbf",
+    "safelog_ai/corrosion_background_roi.py": "be2e1ee8e1b79315068fe25aa051fd69b517a559a3e51c570c70b0975a181b48",
+    "runs/industrial-corrosion-background-v79/verification.json": "0e478ca00cfe0166456adffed829b9e0f06992fa455542cced080872a3d73657",
+    "runs/industrial-corrosion-background-v79/selection.json": "9cada333bee2e82f7776db26ca3aed9bb1ff0cbea8df176afb202862761c1f68"
+  },
+  "scope": "FIT15only, reconstructprovidedGTfromcachedv78ROI/sizeandverifySHAs. No originalRGB/ZIPreads/imagecontentview/encoderfeatures/modelscore/gradient/optimizer ornewVAL_CAL_TEST calculations. No weight/threshold/loss tuning.",
+  "one_geometry": "Input-onlynative512tiles,stride384,start0regularstepsthenappendaxislength-512ifmissing; axis<=512start0 withright/bottomRGBpad124,116,104/targetunknown255. NativeRGBno resize; futureinferenceallgridtiles/overlapprobabilitymean. GTmaymarkeligibleFITtrainingtiles laterbutneverchooseCAL_TESTinferencetiles.",
+  "measure": "Onlynative/wholeletterbox512labelcounts,stride4geometricbins,andallnativegridlabelcounts/overlapmultiplicity. Stride4bin support isnotencoderresponse/receptivefield/accuracy orperformancepromise. RepeatedoverlapknownpixelsnotnewGT/naturalphotos.",
+  "contract": "Sourcecoordinates/classes/unknown/TEST/group roles/minimaexactunchanged. VerifyeachFITknownnativepixelcoveredbygridandmatchingoverlaplabels. No GTdilation/patchsize5assumption/wholebackgroundorhealthlabels.",
+  "next": "No modelprotocolfixedbythisprobe. If geometry plausible, separatelypreregisteroneexactmodelinitializer/trainparams/normalization/batch-sampling/loss/epoch/VAL/CAL/retention/sparsepointguards/device/delta beforefeatures; no multiplegrids/structures/TESTcuttrials. Existingv79failedandalloldmodels/outputsretained.",
+  "storage": "SequentialnativeGTbuffers; metadataonly<32MiB/no densefeatures/newimages/parentclone/deletion; >=1GiBreserve. Threecoordinateunitschecked.",
+  "license": "Rios/Netto/RoehlMendeleyV1CC BY4.0 DOI10.17632/kcyn4nhv2c.1/author-source-version-geometrychangesandallparenttermsretained",
+  "new_units_passed": 3,
+  "independent_field_validation": false
+}
