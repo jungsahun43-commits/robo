@@ -1,0 +1,166 @@
+{
+  "UTC": "2026-10-16T00:13:51.435065+00:00",
+  "ready": true,
+  "policy_sha256": "1ee1f319d15ff8e71d82a2a3e4097938970838c5e31005f64a62417a625cb0ea",
+  "counts": {
+    "ostrava": {
+      "fit": {
+        "entries": 60,
+        "groups": 60,
+        "positive_photos_512": 58,
+        "fullnegative_photos_512": 2,
+        "native": {
+          "positive": 72951380,
+          "known_negative": 178706860,
+          "unknown": 0,
+          "padding": 0
+        },
+        "512": {
+          "positive": 4559995,
+          "known_negative": 11168645,
+          "unknown": 0,
+          "padding": 0
+        }
+      },
+      "validation": {
+        "entries": 15,
+        "groups": 15,
+        "positive_photos_512": 15,
+        "fullnegative_photos_512": 0,
+        "native": {
+          "positive": 15750037,
+          "known_negative": 47164523,
+          "unknown": 0,
+          "padding": 0
+        },
+        "512": {
+          "positive": 984364,
+          "known_negative": 2947796,
+          "unknown": 0,
+          "padding": 0
+        }
+      },
+      "cal": {
+        "entries": 15,
+        "groups": 15,
+        "positive_photos_512": 14,
+        "fullnegative_photos_512": 1,
+        "native": {
+          "positive": 13237469,
+          "known_negative": 49677091,
+          "unknown": 0,
+          "padding": 0
+        },
+        "512": {
+          "positive": 827353,
+          "known_negative": 3104807,
+          "unknown": 0,
+          "padding": 0
+        }
+      },
+      "test": {
+        "entries": 15,
+        "groups": 15,
+        "positive_photos_512": 15,
+        "fullnegative_photos_512": 0,
+        "native": {
+          "positive": 13226512,
+          "known_negative": 49688048,
+          "unknown": 0,
+          "padding": 0
+        },
+        "512": {
+          "positive": 826540,
+          "known_negative": 3105620,
+          "unknown": 0,
+          "padding": 0
+        }
+      }
+    },
+    "vt": {
+      "fit": {
+        "entries": 276,
+        "groups": 276,
+        "positive_photos_512": 276,
+        "fullnegative_photos_512": 0,
+        "native": {
+          "positive": 159337149,
+          "known_negative": 0,
+          "unknown": 707696870,
+          "padding": 0
+        },
+        "512": {
+          "positive": 13365587,
+          "known_negative": 0,
+          "unknown": 40630445,
+          "padding": 18355712
+        }
+      },
+      "validation": {
+        "entries": 60,
+        "groups": 60,
+        "positive_photos_512": 60,
+        "fullnegative_photos_512": 0,
+        "native": {
+          "positive": 38295870,
+          "known_negative": 0,
+          "unknown": 140731933,
+          "padding": 0
+        },
+        "512": {
+          "positive": 2933956,
+          "known_negative": 0,
+          "unknown": 8713532,
+          "padding": 4081152
+        }
+      },
+      "cal": {
+        "entries": 60,
+        "groups": 60,
+        "positive_photos_512": 60,
+        "fullnegative_photos_512": 0,
+        "native": {
+          "positive": 24892958,
+          "known_negative": 0,
+          "unknown": 118615923,
+          "padding": 0
+        },
+        "512": {
+          "positive": 2659898,
+          "known_negative": 0,
+          "unknown": 9042886,
+          "padding": 4025856
+        }
+      },
+      "test": {
+        "entries": 44,
+        "groups": 44,
+        "positive_photos_512": 44,
+        "fullnegative_photos_512": 0,
+        "native": {
+          "positive": 25456747,
+          "known_negative": 0,
+          "unknown": 129692032,
+          "padding": 0
+        },
+        "512": {
+          "positive": 1806809,
+          "known_negative": 0,
+          "unknown": 6844455,
+          "padding": 2883072
+        }
+      }
+    }
+  },
+  "locked_source_roles_exact": true,
+  "new_graph_nodes_or_distances": 0,
+  "source_RGB_decodes": 0,
+  "new_encoder_features_scores_gradient_optimizer": 0,
+  "new_natural_photos": 0,
+  "wholephoto_app_gate_passed": false,
+  "training_protocol_fixed": false,
+  "independent_field_validation": false,
+  "new_units_passed": 3,
+  "disk_free_bytes": 3620802560,
+  "manifest_sha256": "e1f52bdeb9cae94408f4de474c02b814c57248a05cba94081ab5b7faeaecd69c"
+}
