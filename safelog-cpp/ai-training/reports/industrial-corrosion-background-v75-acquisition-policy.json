@@ -1,0 +1,27 @@
+{
+  "UTC": "2026-10-16T00:28:28.849954+00:00",
+  "fixed_before_labeled_archive_download_member_reads": true,
+  "source_sha256": {
+    "scripts/fetch_corrosion_background.py": "7f96ee7b69f8cad19f41d9c98076aa2198c782a3457cbfb279412b392a90f089"
+  },
+  "inputs_sha256": {
+    "data/industrial-corrosion-background-v75-source/publisher-page.html": "c79463aa559aa0e16326d3568f075cf2327cf0f0178a7f820af160cea4e11d45",
+    "data/industrial-corrosion-background-v75-source/publisher-initial-state.json": "0fe050113a5173f3f48280de9a27574c623afbe232db2404c2b730b8add65cfc",
+    "data/industrial-corrosion-background-v75-source/publisher-root-files.json": "14f323d3df2d730758fade2a64b88a5ff3f50ee0b8340270595483d61924fcd8",
+    "data/industrial-corrosion-background-v75-source/publisher-folders.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "URL": "https://data.mendeley.com/public-files/datasets/kcyn4nhv2c/files/ee33e15a-c7ba-46f8-a06d-619c69d0f950/file_downloaded",
+  "expected_bytes": 262967506,
+  "publisher_SHA256": "6fbd29524a81f4d8250a3cf978da09ad09d48f65522677792156d0bdf454fcce",
+  "dataset": "Rios, Marina; Netto, PauloIvson; Roehl, Deane (2023), Images andpixelannotations forcorrosionsegmentation, MendeleyDataV1 DOI10.17632/kcyn4nhv2c.1",
+  "license": "PublisherdatasetCC BY4.0, attribution/source/version/changes; identifiedthirdpartycontent mayneedfurtherpermission. No changingparentVTCC0/OstravaCC BY4.0/InsPLADCC BY-NC3.0 orotherterms.",
+  "scope": "Authorpage describes1024completephotos, only35selectedphotos withfive5x5positivepatches andfive5x5backgroundpatches each. These are sparseannotations notfullbinarymasks/wholehealthyphotos. Counts/formats/coordinates/backgroundmeaning/splits/physicalgroups stillunverified. No assumedreadyFIT oradditionalindependentphotos.",
+  "selection": "OnlyLabeled images.zip262967506bytes. Do notdownloadComplete database.zip2211263435bytes orsourcecode. No login/contact/consent required bypublicGET; no bypass ifblocked.",
+  "download": "Publicstream toexclusivepartial, no retry/resumeoroverwrite inthisscript. Errorpreservespartial/failure. Fullbytes+publisherSHA256 mustmatch before renametoarchive. No guessedchecksum.",
+  "archive": "Encodedonly; safe relativepaths/no drive-colon-backslash-traversal/Windowsreservedcomponents/symlinks/encryption/duplicatecasefoldedpaths; <=10000members/2GiB declaredexpanded/128MiB singlemember. ReadtoEOF CRC+encodedSHA, no sourceimages/masksdecode/annotationJSONparse orauthorcodeexecution.",
+  "next": "Before pixels/contentview, inspectonlymembernames/metadata andreserveanyauthorsplits/allcopies. Then separatecodeJSONmustfixannotationcoordinate-semanticchecks, group/heldexactRGB+8orientationpHash2audit usingcompletedoldfingerprints, roles/oneallocation/minima/errors/storage. ExcludecurrentTESTlinkedTRAIN; no relabel/GTguessing/thresholdtuning. No newstudy features/gradient untilqualifieddataandseparatepreregisteredmodel.",
+  "storage": "Archive263MB plusmetadata<=64MiB; no fullZIPexpansion/densefeaturecache/fullparentcopy/deletion; >=1GiBreserve.",
+  "new_source_pixels_features_scores_gradient_optimizer": 0,
+  "training_protocol_fixed": false,
+  "independent_field_validation": false
+}

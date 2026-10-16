@@ -1,0 +1,1653 @@
+{
+  "UTC": "2026-10-16T00:24:23.757611+00:00",
+  "VAL_inputs": 75,
+  "encoder_inputs": 75,
+  "head_views": 150,
+  "coverage": {
+    "ostrava/positive/parent": {
+      "predicted_foreground_pixels": 15100303,
+      "region_pixels": 15750037,
+      "fraction": 0.9587471445305176
+    },
+    "ostrava/positive/selected_v73": {
+      "predicted_foreground_pixels": 14446376,
+      "region_pixels": 15750037,
+      "fraction": 0.9172280674642225
+    },
+    "ostrava/known_negative/parent": {
+      "predicted_foreground_pixels": 3676446,
+      "region_pixels": 47164523,
+      "fraction": 0.07794939429367281
+    },
+    "ostrava/known_negative/selected_v73": {
+      "predicted_foreground_pixels": 4004793,
+      "region_pixels": 47164523,
+      "fraction": 0.08491113119070451
+    },
+    "ostrava/unknown/parent": {
+      "predicted_foreground_pixels": 0,
+      "region_pixels": 0,
+      "fraction": null
+    },
+    "ostrava/unknown/selected_v73": {
+      "predicted_foreground_pixels": 0,
+      "region_pixels": 0,
+      "fraction": null
+    },
+    "vt/positive/parent": {
+      "predicted_foreground_pixels": 20305487,
+      "region_pixels": 38295870,
+      "fraction": 0.530226549233638
+    },
+    "vt/positive/selected_v73": {
+      "predicted_foreground_pixels": 38292483,
+      "region_pixels": 38295870,
+      "fraction": 0.9999115570425741
+    },
+    "vt/known_negative/parent": {
+      "predicted_foreground_pixels": 0,
+      "region_pixels": 0,
+      "fraction": null
+    },
+    "vt/known_negative/selected_v73": {
+      "predicted_foreground_pixels": 0,
+      "region_pixels": 0,
+      "fraction": null
+    },
+    "vt/unknown/parent": {
+      "predicted_foreground_pixels": 8417622,
+      "region_pixels": 140731933,
+      "fraction": 0.05981316266010501
+    },
+    "vt/unknown/selected_v73": {
+      "predicted_foreground_pixels": 129333177,
+      "region_pixels": 140731933,
+      "fraction": 0.9190037700967271
+    }
+  },
+  "photos": [
+    {
+      "id": "ostrava/validation/01",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 88266,
+          "parent_predicted_foreground_fraction": 0.8939569029977568,
+          "selected_v73_predicted_foreground_fraction": 0.923651236036526
+        },
+        "known_negative": {
+          "pixels": 4106038,
+          "parent_predicted_foreground_fraction": 0.003601038275826965,
+          "selected_v73_predicted_foreground_fraction": 0.0054902073483002346
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/02",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 137759,
+          "parent_predicted_foreground_fraction": 0.9968495706269644,
+          "selected_v73_predicted_foreground_fraction": 0.9737367431528975
+        },
+        "known_negative": {
+          "pixels": 4056545,
+          "parent_predicted_foreground_fraction": 0.0064727495935580645,
+          "selected_v73_predicted_foreground_fraction": 0.0059575328265802545
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/03",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 4194304,
+          "parent_predicted_foreground_fraction": 0.9436211585998535,
+          "selected_v73_predicted_foreground_fraction": 0.8464920520782471
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/04",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 1466049,
+          "parent_predicted_foreground_fraction": 0.9998744925988149,
+          "selected_v73_predicted_foreground_fraction": 0.9978895657648551
+        },
+        "known_negative": {
+          "pixels": 2728255,
+          "parent_predicted_foreground_fraction": 0.13034558719767764,
+          "selected_v73_predicted_foreground_fraction": 0.07846004130845541
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/05",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 274597,
+          "parent_predicted_foreground_fraction": 1.0,
+          "selected_v73_predicted_foreground_fraction": 0.9997669311755044
+        },
+        "known_negative": {
+          "pixels": 3919707,
+          "parent_predicted_foreground_fraction": 0.014968720876330808,
+          "selected_v73_predicted_foreground_fraction": 0.004028872566240283
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/06",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 420733,
+          "parent_predicted_foreground_fraction": 0.9650586001098084,
+          "selected_v73_predicted_foreground_fraction": 0.9229867873449432
+        },
+        "known_negative": {
+          "pixels": 3773571,
+          "parent_predicted_foreground_fraction": 0.008868522680506077,
+          "selected_v73_predicted_foreground_fraction": 0.0017129663122808607
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/07",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 305088,
+          "parent_predicted_foreground_fraction": 0.9705625917767988,
+          "selected_v73_predicted_foreground_fraction": 0.9492343192783721
+        },
+        "known_negative": {
+          "pixels": 3889216,
+          "parent_predicted_foreground_fraction": 0.01717878359031743,
+          "selected_v73_predicted_foreground_fraction": 0.0034215122019450707
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/08",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 2061846,
+          "parent_predicted_foreground_fraction": 0.9419418327071954,
+          "selected_v73_predicted_foreground_fraction": 0.857077104691621
+        },
+        "known_negative": {
+          "pixels": 2132458,
+          "parent_predicted_foreground_fraction": 0.07183119198596175,
+          "selected_v73_predicted_foreground_fraction": 0.04453921249562711
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/09",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 1038865,
+          "parent_predicted_foreground_fraction": 0.9596992872028608,
+          "selected_v73_predicted_foreground_fraction": 0.9885355652563134
+        },
+        "known_negative": {
+          "pixels": 3155439,
+          "parent_predicted_foreground_fraction": 0.03704365699986595,
+          "selected_v73_predicted_foreground_fraction": 0.165827956110069
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/10",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 1764493,
+          "parent_predicted_foreground_fraction": 0.9529026184858767,
+          "selected_v73_predicted_foreground_fraction": 0.9336835000195524
+        },
+        "known_negative": {
+          "pixels": 2429811,
+          "parent_predicted_foreground_fraction": 0.42639365777832106,
+          "selected_v73_predicted_foreground_fraction": 0.4558037641610808
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/11",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 1800013,
+          "parent_predicted_foreground_fraction": 0.9898122958000859,
+          "selected_v73_predicted_foreground_fraction": 0.985681770076105
+        },
+        "known_negative": {
+          "pixels": 2394291,
+          "parent_predicted_foreground_fraction": 0.13869617352276728,
+          "selected_v73_predicted_foreground_fraction": 0.10507661767095144
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/12",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 639532,
+          "parent_predicted_foreground_fraction": 0.9185654509860335,
+          "selected_v73_predicted_foreground_fraction": 0.8680253685507527
+        },
+        "known_negative": {
+          "pixels": 3554772,
+          "parent_predicted_foreground_fraction": 0.1444956244732433,
+          "selected_v73_predicted_foreground_fraction": 0.16570120390281007
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/13",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 449845,
+          "parent_predicted_foreground_fraction": 0.971821405150663,
+          "selected_v73_predicted_foreground_fraction": 0.9682935233247008
+        },
+        "known_negative": {
+          "pixels": 3744459,
+          "parent_predicted_foreground_fraction": 0.08939529048121504,
+          "selected_v73_predicted_foreground_fraction": 0.09038234895882155
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/14",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 660510,
+          "parent_predicted_foreground_fraction": 0.9373953460204993,
+          "selected_v73_predicted_foreground_fraction": 0.939867678006389
+        },
+        "known_negative": {
+          "pixels": 3533794,
+          "parent_predicted_foreground_fraction": 0.10043596202834687,
+          "selected_v73_predicted_foreground_fraction": 0.10622407531395435
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ostrava/validation/15",
+      "source": "ostrava",
+      "regions": {
+        "positive": {
+          "pixels": 448137,
+          "parent_predicted_foreground_fraction": 0.9766098313685324,
+          "selected_v73_predicted_foreground_fraction": 0.9762773437587167
+        },
+        "known_negative": {
+          "pixels": 3746167,
+          "parent_predicted_foreground_fraction": 0.07456394762967054,
+          "selected_v73_predicted_foreground_fraction": 0.11432618994294702
+        },
+        "unknown": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/106",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 55108,
+          "parent_predicted_foreground_fraction": 0.0,
+          "selected_v73_predicted_foreground_fraction": 0.9905276910793351
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1864892,
+          "parent_predicted_foreground_fraction": 0.007251894479680325,
+          "selected_v73_predicted_foreground_fraction": 0.8499312560727377
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/112",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 465623,
+          "parent_predicted_foreground_fraction": 0.3550919950260189,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1454377,
+          "parent_predicted_foreground_fraction": 0.057084236068089635,
+          "selected_v73_predicted_foreground_fraction": 0.7807672976126547
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/121",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 76964,
+          "parent_predicted_foreground_fraction": 0.6233693674964919,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1843036,
+          "parent_predicted_foreground_fraction": 0.02305163870917334,
+          "selected_v73_predicted_foreground_fraction": 0.9627386551320756
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/123",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 359941,
+          "parent_predicted_foreground_fraction": 0.5795866544794841,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1560059,
+          "parent_predicted_foreground_fraction": 0.2144944518123994,
+          "selected_v73_predicted_foreground_fraction": 0.9828666736322151
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/124",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 348483,
+          "parent_predicted_foreground_fraction": 0.03676219499946913,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1571517,
+          "parent_predicted_foreground_fraction": 0.04848436256177948,
+          "selected_v73_predicted_foreground_fraction": 0.8580365341259433
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/133",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 182979,
+          "parent_predicted_foreground_fraction": 0.7349313309177556,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1737021,
+          "parent_predicted_foreground_fraction": 0.04067653758935557,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/134",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 51995,
+          "parent_predicted_foreground_fraction": 0.8181171266467929,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1868005,
+          "parent_predicted_foreground_fraction": 0.0240829119836403,
+          "selected_v73_predicted_foreground_fraction": 0.931495365376431
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/140",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 430622,
+          "parent_predicted_foreground_fraction": 0.6277106139491248,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1489378,
+          "parent_predicted_foreground_fraction": 0.1447664729840242,
+          "selected_v73_predicted_foreground_fraction": 0.9879244892834459
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/144",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 691471,
+          "parent_predicted_foreground_fraction": 0.2217316416740543,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 2454257,
+          "parent_predicted_foreground_fraction": 0.026854970771194704,
+          "selected_v73_predicted_foreground_fraction": 0.9829133623740302
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/146",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 3517,
+          "parent_predicted_foreground_fraction": 0.0,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1916483,
+          "parent_predicted_foreground_fraction": 0.01200428075803438,
+          "selected_v73_predicted_foreground_fraction": 0.999148440137481
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/147",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 13027,
+          "parent_predicted_foreground_fraction": 0.0393029861057803,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1906973,
+          "parent_predicted_foreground_fraction": 0.07422706037264293,
+          "selected_v73_predicted_foreground_fraction": 0.917180264219787
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/150",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 219707,
+          "parent_predicted_foreground_fraction": 0.1578283805249719,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1700293,
+          "parent_predicted_foreground_fraction": 0.0059413289356599125,
+          "selected_v73_predicted_foreground_fraction": 0.9960389179982508
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/153",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 743339,
+          "parent_predicted_foreground_fraction": 0.7096775495433443,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1176661,
+          "parent_predicted_foreground_fraction": 0.13911993343877294,
+          "selected_v73_predicted_foreground_fraction": 0.9907237513608422
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/154",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 504163,
+          "parent_predicted_foreground_fraction": 0.6277235735268157,
+          "selected_v73_predicted_foreground_fraction": 0.9985699069546952
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1415837,
+          "parent_predicted_foreground_fraction": 0.2560591367509113,
+          "selected_v73_predicted_foreground_fraction": 0.9814385413010114
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/155",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 585692,
+          "parent_predicted_foreground_fraction": 0.4367739357887764,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1334308,
+          "parent_predicted_foreground_fraction": 0.18954918954244449,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/163",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 204762,
+          "parent_predicted_foreground_fraction": 0.6982447915140505,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1715238,
+          "parent_predicted_foreground_fraction": 0.13533632067386567,
+          "selected_v73_predicted_foreground_fraction": 0.8907049633928352
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/185",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 603984,
+          "parent_predicted_foreground_fraction": 0.5027715965985854,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1316016,
+          "parent_predicted_foreground_fraction": 0.06772486048801839,
+          "selected_v73_predicted_foreground_fraction": 0.9807950663213821
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/186",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 147967,
+          "parent_predicted_foreground_fraction": 0.15918414241013198,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1772033,
+          "parent_predicted_foreground_fraction": 0.05342338432749277,
+          "selected_v73_predicted_foreground_fraction": 0.9931626555487397
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/190",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 19251,
+          "parent_predicted_foreground_fraction": 0.1724066282271051,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1900749,
+          "parent_predicted_foreground_fraction": 0.034101293753146786,
+          "selected_v73_predicted_foreground_fraction": 0.9410579724098237
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/200",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 99887,
+          "parent_predicted_foreground_fraction": 0.07851872616056144,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 3045841,
+          "parent_predicted_foreground_fraction": 0.004477252752195535,
+          "selected_v73_predicted_foreground_fraction": 0.9999996716834529
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/207",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 1441041,
+          "parent_predicted_foreground_fraction": 0.25568391183873324,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1704687,
+          "parent_predicted_foreground_fraction": 0.05783173098639222,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/214",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 767399,
+          "parent_predicted_foreground_fraction": 0.44861669092610235,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 2378329,
+          "parent_predicted_foreground_fraction": 0.08329966123273946,
+          "selected_v73_predicted_foreground_fraction": 0.9855734845767764
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/23",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 3570237,
+          "parent_predicted_foreground_fraction": 0.6717775318557283,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 12355011,
+          "parent_predicted_foreground_fraction": 0.07024655825883118,
+          "selected_v73_predicted_foreground_fraction": 0.9988077711950236
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/237",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 3618258,
+          "parent_predicted_foreground_fraction": 0.5525835913304137,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 14297646,
+          "parent_predicted_foreground_fraction": 0.022678208706524136,
+          "selected_v73_predicted_foreground_fraction": 0.873778592643852
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/242",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 3543383,
+          "parent_predicted_foreground_fraction": 0.6865382601880745,
+          "selected_v73_predicted_foreground_fraction": 0.9999777049221041
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 14372521,
+          "parent_predicted_foreground_fraction": 0.04484891690191303,
+          "selected_v73_predicted_foreground_fraction": 0.8561138299954476
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/243",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 4527664,
+          "parent_predicted_foreground_fraction": 0.7528365620770446,
+          "selected_v73_predicted_foreground_fraction": 0.9996260764933087
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 13388240,
+          "parent_predicted_foreground_fraction": 0.015016163438958369,
+          "selected_v73_predicted_foreground_fraction": 0.7586553572388902
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/247",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 359378,
+          "parent_predicted_foreground_fraction": 0.7785423704289077,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 293422,
+          "parent_predicted_foreground_fraction": 0.1667086994158584,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/253",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 245639,
+          "parent_predicted_foreground_fraction": 0.9313911878814032,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 607961,
+          "parent_predicted_foreground_fraction": 0.2159168104533021,
+          "selected_v73_predicted_foreground_fraction": 0.9976166234347269
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/256",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 41173,
+          "parent_predicted_foreground_fraction": 0.22930075534937944,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 266027,
+          "parent_predicted_foreground_fraction": 0.00948024072744496,
+          "selected_v73_predicted_foreground_fraction": 0.9816071301033353
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/259",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 222211,
+          "parent_predicted_foreground_fraction": 0.7995148755012128,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 631389,
+          "parent_predicted_foreground_fraction": 0.15402707364239795,
+          "selected_v73_predicted_foreground_fraction": 0.9972045759428815
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/271",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 242685,
+          "parent_predicted_foreground_fraction": 0.4523229701052805,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 509066,
+          "parent_predicted_foreground_fraction": 0.08323478684492777,
+          "selected_v73_predicted_foreground_fraction": 0.8540641095653608
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/28",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 1882831,
+          "parent_predicted_foreground_fraction": 0.21354492251296053,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 14042417,
+          "parent_predicted_foreground_fraction": 0.034335898157703194,
+          "selected_v73_predicted_foreground_fraction": 0.8891666584178493
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/280",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 157376,
+          "parent_predicted_foreground_fraction": 0.6717860410736072,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 599640,
+          "parent_predicted_foreground_fraction": 0.07784837569208192,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/293",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 193490,
+          "parent_predicted_foreground_fraction": 0.49711096180681175,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 561769,
+          "parent_predicted_foreground_fraction": 0.25919550562597793,
+          "selected_v73_predicted_foreground_fraction": 0.9960517579289708
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/294",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 273599,
+          "parent_predicted_foreground_fraction": 0.4540148173056188,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 481660,
+          "parent_predicted_foreground_fraction": 0.0650271976082714,
+          "selected_v73_predicted_foreground_fraction": 0.9952289997093385
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/302",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 155008,
+          "parent_predicted_foreground_fraction": 0.39723111065235345,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 502992,
+          "parent_predicted_foreground_fraction": 0.021171310875719693,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/309",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 145773,
+          "parent_predicted_foreground_fraction": 0.3492484890892003,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 542059,
+          "parent_predicted_foreground_fraction": 0.05606769742777078,
+          "selected_v73_predicted_foreground_fraction": 0.9993653827350897
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/312",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 295517,
+          "parent_predicted_foreground_fraction": 0.5656933442069323,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 455983,
+          "parent_predicted_foreground_fraction": 0.12742141702651194,
+          "selected_v73_predicted_foreground_fraction": 0.8945004528677605
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/318",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 147108,
+          "parent_predicted_foreground_fraction": 0.6165674198548006,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 606396,
+          "parent_predicted_foreground_fraction": 0.3777201696581112,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/325",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 276603,
+          "parent_predicted_foreground_fraction": 0.6188146910915644,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 418441,
+          "parent_predicted_foreground_fraction": 0.22251165636254575,
+          "selected_v73_predicted_foreground_fraction": 0.9970748564313726
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/327",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 338740,
+          "parent_predicted_foreground_fraction": 0.6178721143059573,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 353420,
+          "parent_predicted_foreground_fraction": 0.1481212155509026,
+          "selected_v73_predicted_foreground_fraction": 0.901663742855526
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/335",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 162081,
+          "parent_predicted_foreground_fraction": 0.8790604697651174,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 145119,
+          "parent_predicted_foreground_fraction": 0.06684858633259601,
+          "selected_v73_predicted_foreground_fraction": 0.800722165946568
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/354",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 526934,
+          "parent_predicted_foreground_fraction": 0.7963900602352477,
+          "selected_v73_predicted_foreground_fraction": 0.9997456987023042
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 223066,
+          "parent_predicted_foreground_fraction": 0.058583558229402956,
+          "selected_v73_predicted_foreground_fraction": 0.9992020298924982
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/357",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 413407,
+          "parent_predicted_foreground_fraction": 0.7329774290227307,
+          "selected_v73_predicted_foreground_fraction": 0.9994242961536693
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 336593,
+          "parent_predicted_foreground_fraction": 0.640559964110959,
+          "selected_v73_predicted_foreground_fraction": 0.9927568309501386
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/358",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 304716,
+          "parent_predicted_foreground_fraction": 0.3739974271124588,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 443034,
+          "parent_predicted_foreground_fraction": 0.03091184875201452,
+          "selected_v73_predicted_foreground_fraction": 0.9867978529864525
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/36",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 481697,
+          "parent_predicted_foreground_fraction": 0.17911674766502594,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1438303,
+          "parent_predicted_foreground_fraction": 0.006255288350229402,
+          "selected_v73_predicted_foreground_fraction": 0.907682873497448
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/366",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 114999,
+          "parent_predicted_foreground_fraction": 0.7688675553700467,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 57801,
+          "parent_predicted_foreground_fraction": 0.11607065621702047,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/381",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 384436,
+          "parent_predicted_foreground_fraction": 0.46124712565940756,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 365564,
+          "parent_predicted_foreground_fraction": 0.03426212646759528,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/387",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 111195,
+          "parent_predicted_foreground_fraction": 0.6744637798462161,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1153117,
+          "parent_predicted_foreground_fraction": 0.044600851431381205,
+          "selected_v73_predicted_foreground_fraction": 0.998252562402601
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/393",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 414099,
+          "parent_predicted_foreground_fraction": 0.216936046694148,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1505901,
+          "parent_predicted_foreground_fraction": 0.014212753693635904,
+          "selected_v73_predicted_foreground_fraction": 0.959947566274277
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/58",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 2965,
+          "parent_predicted_foreground_fraction": 0.0,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1917035,
+          "parent_predicted_foreground_fraction": 0.10931620966753346,
+          "selected_v73_predicted_foreground_fraction": 0.9996087708362132
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/69",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 830061,
+          "parent_predicted_foreground_fraction": 0.2463084038401997,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 2315667,
+          "parent_predicted_foreground_fraction": 0.011127679411590699,
+          "selected_v73_predicted_foreground_fraction": 0.962105518625951
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/81",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 1207745,
+          "parent_predicted_foreground_fraction": 0.5785136763141226,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1937983,
+          "parent_predicted_foreground_fraction": 0.07253830399957069,
+          "selected_v73_predicted_foreground_fraction": 0.8934866817717183
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/84",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 818873,
+          "parent_predicted_foreground_fraction": 0.2048510574899893,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 2326855,
+          "parent_predicted_foreground_fraction": 0.01572379886155347,
+          "selected_v73_predicted_foreground_fraction": 0.9582139841116013
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/85",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 1369782,
+          "parent_predicted_foreground_fraction": 0.5882023562873508,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1775946,
+          "parent_predicted_foreground_fraction": 0.0664901973370812,
+          "selected_v73_predicted_foreground_fraction": 0.9340250210310449
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/87",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 1382637,
+          "parent_predicted_foreground_fraction": 0.2317708841872451,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1763091,
+          "parent_predicted_foreground_fraction": 0.038233987922347744,
+          "selected_v73_predicted_foreground_fraction": 0.9893975977416934
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/90",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 865936,
+          "parent_predicted_foreground_fraction": 0.3953664012120988,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 2279792,
+          "parent_predicted_foreground_fraction": 0.1138059963365079,
+          "selected_v73_predicted_foreground_fraction": 0.9954061598601978
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/95",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 78484,
+          "parent_predicted_foreground_fraction": 0.6005937515926814,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1841516,
+          "parent_predicted_foreground_fraction": 0.11351245386952924,
+          "selected_v73_predicted_foreground_fraction": 0.9669614600144664
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/97",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 549624,
+          "parent_predicted_foreground_fraction": 0.584266698688558,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 2596104,
+          "parent_predicted_foreground_fraction": 0.03681131418463975,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        }
+      }
+    },
+    {
+      "id": "ccs/Train/98",
+      "source": "vt",
+      "regions": {
+        "positive": {
+          "pixels": 22604,
+          "parent_predicted_foreground_fraction": 0.6129003716156433,
+          "selected_v73_predicted_foreground_fraction": 1.0
+        },
+        "known_negative": {
+          "pixels": 0,
+          "parent_predicted_foreground_fraction": null,
+          "selected_v73_predicted_foreground_fraction": null
+        },
+        "unknown": {
+          "pixels": 1897396,
+          "parent_predicted_foreground_fraction": 0.35365100379678255,
+          "selected_v73_predicted_foreground_fraction": 0.978474709549298
+        }
+      }
+    }
+  ],
+  "VAL_RGB_target_binding_exact_v73": true,
+  "full_selected_v73_state_before_after_exact": true,
+  "new_CAL_TEST_features_scores": 0,
+  "new_optimizer": 0,
+  "new_visual_content_views": 0,
+  "unknown_coverage_is_not_FPR": true,
+  "causal_shortcut_proven": false,
+  "no_model_promotion": true
+}
