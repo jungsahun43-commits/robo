@@ -1,0 +1,26 @@
+{
+  "UTC": "2026-10-16T00:23:11.062996+00:00",
+  "fixed_before_new_VAL_diagnostic_forward": true,
+  "source_sha256": {
+    "scripts/diagnose_corrosion_partial.py": "5bec7a853c4fff1f2a0538c578c5031913c837de5742d4d608c3733e0590da3f"
+  },
+  "inputs_sha256": {
+    "runs/industrial-corrosion-partial-v73/trained/final-delta.pt": "d40905d720583c586a0952338b6b4d863276fbf282fbcc4d8824c554d183ab56",
+    "runs/industrial-corrosion-partial-v73/validation-input-binding.json": "21621a344e2fc9771bd7104aa4777930faaa094803cbf37888fecf58a6870056",
+    "runs/industrial-corrosion-partial-v73/calibration.json": "45d7001147d14bfdfade37cbcd62f2926b1c91e541fa2e2c0242955fa2e1ec91",
+    "data/industrial-corrosion-partial-v72/manifest.json": "e1f52bdeb9cae94408f4de474c02b814c57248a05cba94081ab5b7faeaecd69c",
+    "reports/industrial-corrosion-partial-v73-protocol.json": "869522a3eefa824375af7f8f4752594c754664a17655bec6785a1a8d0f236d7b",
+    "scripts/study_corrosion_partial.py": "29727bd0b8e41164d6f58cf1c9d95e1a069ed2c1bba8dcfd5b768d4962e86e10",
+    "safelog_ai/corrosion_partial_mask.py": "ac979866742d56034da9d3c3f305723d78b5ffcac9dea2509d61335eedb49957",
+    "safelog_ai/corrosion_partial_data.py": "4f0093e8388a5ea01214ff21f3b8724812784c0ce1515ad6915429cf3949435e"
+  },
+  "scope": "OnlyexistingVAL75(15Ostrava+60VT); frozenv62 andselectedv73head8 once onsharedfeatures. No FITnewfeatures, newCAL_TESTfeatures/scores, optimizer/gradients, relabel/visualcontentview/modeladoption.",
+  "prediction": "Use originalfixedparentcut.20 andv73CALcut.30 only. Aggregate nativepositive/knownnegative/unknown predictedforeground coverage. VTunknown coverage isNOTFPR orlabelerror. No cutoffvariation/selection.",
+  "input": "RecreateVALRGB512+derivedGT bindingexactv73. Onlineoneencoder inputperVALphoto, twoexistingheadviews. Redirecthelper journals tothisnewRUN, neverappendoldcompletedlogs. Sequentialnativebuffers/no newfeaturecache.",
+  "preservation": "Fullselectedv73tensor-buffer stateSHA before/afterexact. Oldparent/heads/meta stayexact; no lastheadpromotion. This describespredictions; itcannotprove sourcecausalshortcut orbackgroundtruth.",
+  "next": "If unknowncoverage high, do not convertunknown to negatives or tune same loss/TESTcut. Seek independentlyannotatedknownbackground in matchingphotodomain, withsource/license/groupchecks; humanlabelsneedreview.",
+  "new_optimizer": 0,
+  "new_CAL_TEST": 0,
+  "new_source_visual_views": 0,
+  "independent_field_validation": false
+}
