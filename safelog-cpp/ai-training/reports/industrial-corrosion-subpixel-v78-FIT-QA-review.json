@@ -1,0 +1,14 @@
+{
+  "AI_visual_contact_sheet_reviewed": true,
+  "fixed_FIT_ids": [
+    "rios/107",
+    "rios/115",
+    "rios/137"
+  ],
+  "notes": "CorrosionROInearvisiblebrown/darkmarks; backgroundROIongrayplate/orangepaint. Limited3FITonly, notexpertallannotations. 107and115sharecheckerplateappearance; samepart/capturepossible butunverified. NoGTcorrection, noVAL_CAL_TESTviews.",
+  "new_RGB_redecodes": 3,
+  "new_natural_photos": 0,
+  "expert_validation": false,
+  "VAL_CAL_TEST_content_views": 0,
+  "new_features_scores_gradient_optimizer": 0
+}

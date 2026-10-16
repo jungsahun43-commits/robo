@@ -1,0 +1,93 @@
+{
+  "UTC": "2026-10-16T01:27:29.392553+00:00",
+  "ready": true,
+  "policy_sha256": "edf2ce07fe8a636357305d72fd9d88f38ba647d680bc8a70348d0bcd66d93e8d",
+  "counts": {
+    "fit": {
+      "photos": 15,
+      "groups": 15,
+      "photos_both_native_classes": 15,
+      "photos_both_512_classes": 15,
+      "native_pixels": {
+        "0": 60400,
+        "1": 59600,
+        "255": 26991654
+      },
+      "pixels512": {
+        "0": 9227,
+        "1": 9047,
+        "255": 3913886
+      }
+    },
+    "validation": {
+      "photos": 6,
+      "groups": 6,
+      "photos_both_native_classes": 6,
+      "photos_both_512_classes": 6,
+      "native_pixels": {
+        "0": 24000,
+        "1": 25220,
+        "255": 5625746
+      },
+      "pixels512": {
+        "0": 4248,
+        "1": 4494,
+        "255": 1564122
+      }
+    },
+    "cal": {
+      "photos": 6,
+      "groups": 6,
+      "photos_both_native_classes": 6,
+      "photos_both_512_classes": 6,
+      "native_pixels": {
+        "0": 24000,
+        "1": 24040,
+        "255": 16862976
+      },
+      "pixels512": {
+        "0": 1577,
+        "1": 1622,
+        "255": 1569665
+      }
+    },
+    "test": {
+      "photos": 7,
+      "groups": 7,
+      "photos_both_native_classes": 7,
+      "photos_both_512_classes": 7,
+      "native_pixels": {
+        "0": 28000,
+        "1": 28020,
+        "255": 21794892
+      },
+      "pixels512": {
+        "0": 2646,
+        "1": 2645,
+        "255": 1829717
+      }
+    }
+  },
+  "failures": [],
+  "exclusions": {},
+  "missing_originals": [
+    "rios/83"
+  ],
+  "decoded_original_RGB": 34,
+  "provided_ROI_geometry_reads": 683,
+  "new_distance_audit": {
+    "new_cross_component_pHash_comparisons": 186
+  },
+  "old_graph_canonical_exact": true,
+  "v76_integer_contract_still_failed": true,
+  "publisher5x5_description_discrepancy_unresolved": true,
+  "new_visual_content_views": 0,
+  "new_features_scores_gradient_optimizer": 0,
+  "training_protocol_fixed": false,
+  "wholephoto_app_gate_passed": false,
+  "physical_part_independence_verified": false,
+  "independent_field_validation": false,
+  "new_units_passed": 3,
+  "disk_free_bytes": 3235311616,
+  "manifest_sha256": "4b2a9a8f1f37bf4515558b1cbcfccb56aceb7fde228986545402c7fa711df6e4"
+}

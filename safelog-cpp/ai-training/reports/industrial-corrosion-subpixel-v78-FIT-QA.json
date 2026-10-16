@@ -1,0 +1,34 @@
+{
+  "fixed_first3_FIT": [
+    {
+      "id": "rios/107",
+      "first_sorted_ROI_per_class": {
+        "provided corrosion": "0072-0240.roi",
+        "provided background": "0056-0073.roi"
+      },
+      "raw_RGB_redecode": 1
+    },
+    {
+      "id": "rios/115",
+      "first_sorted_ROI_per_class": {
+        "provided corrosion": "0055-0931.roi",
+        "provided background": "0048-0280.roi"
+      },
+      "raw_RGB_redecode": 1
+    },
+    {
+      "id": "rios/137",
+      "first_sorted_ROI_per_class": {
+        "provided corrosion": "0284-0324.roi",
+        "provided background": "0082-0394.roi"
+      },
+      "raw_RGB_redecode": 1
+    }
+  ],
+  "policy": "existing v78 first3FIT QA, firstsortedROI perclass/context64/displayonly",
+  "new_original_RGB_redecodes": 3,
+  "new_natural_photos": 0,
+  "VAL_CAL_TEST_content_views": 0,
+  "new_features_scores_optimizer": 0,
+  "contact_sha256": "e7d1f94137fd0a4db6ab7d0b53b065684e0ae0c4bc25f58cf3b9e5e00c9e7b17"
+}
