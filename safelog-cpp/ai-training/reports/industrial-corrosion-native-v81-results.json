@@ -1,0 +1,757 @@
+{
+  "training": {
+    "completed_epochs": 30,
+    "actual_optimizer_updates": 450,
+    "selected_epoch": 10,
+    "selected_actual_updates": 150,
+    "initial_VAL": 1.8553259298205376,
+    "selected_VAL": 0.31717791330690187,
+    "FIT_photos": 15,
+    "VAL_photos": 6,
+    "FIT_photo_exposures": 450,
+    "FIT_encoder_tile_inputs": 5340,
+    "FIT_microbatches": 1500,
+    "new_natural_photos": 0,
+    "source_sparse_ROI_not_fullmask": true,
+    "serialized_delta_restore_exact": true
+  },
+  "selection": {
+    "source_sparse_ROI_point_gate_passed": true,
+    "Ostrava_retention_attempted": true,
+    "Ostrava_retention_gate_passed": false,
+    "combined_source_research_gate_passed": false,
+    "automatic_app_adoption": false,
+    "wholephoto_app_gate_passed": false,
+    "new_API_CPP_ZIP_APK_checks": 0
+  },
+  "source": {
+    "metrics": {
+      "candidate": {
+        "tp": 22952,
+        "fn": 5068,
+        "fp": 1954,
+        "tn": 26046,
+        "fnr": 0.18087080656673804,
+        "fpr": 0.06978571428571428,
+        "IoU": 0.7657302995929806,
+        "Dice": 0.8673241884895893
+      },
+      "parent": {
+        "tp": 9611,
+        "fn": 18409,
+        "fp": 4170,
+        "tn": 23830,
+        "fnr": 0.6569950035688794,
+        "fpr": 0.14892857142857144,
+        "IoU": 0.29857098477788135,
+        "Dice": 0.4598454582426258
+      }
+    },
+    "photos": [
+      {
+        "id": "rios/134",
+        "group_id": "rios76:rios/134",
+        "candidate": {
+          "tp": 3999,
+          "fn": 1,
+          "fp": 1143,
+          "tn": 2857,
+          "fnr": 0.00025,
+          "fpr": 0.28575,
+          "IoU": 0.7775617343962667,
+          "Dice": 0.8748632684314155
+        },
+        "parent": {
+          "tp": 2144,
+          "fn": 1856,
+          "fp": 3200,
+          "tn": 800,
+          "fnr": 0.464,
+          "fpr": 0.8,
+          "IoU": 0.29777777777777775,
+          "Dice": 0.4589041095890411
+        },
+        "native_grid_encoder_inputs": 6,
+        "extra_parent_whole512_encoder_inputs": 0,
+        "unknown_positive_coverage_not_FPR": 0.43923472301541977
+      },
+      {
+        "id": "rios/144",
+        "group_id": "rios76:rios/144",
+        "candidate": {
+          "tp": 4000,
+          "fn": 0,
+          "fp": 388,
+          "tn": 3612,
+          "fnr": 0.0,
+          "fpr": 0.097,
+          "IoU": 0.9115770282588879,
+          "Dice": 0.9537434430138293
+        },
+        "parent": {
+          "tp": 1600,
+          "fn": 2400,
+          "fp": 970,
+          "tn": 3030,
+          "fnr": 0.6,
+          "fpr": 0.2425,
+          "IoU": 0.32193158953722334,
+          "Dice": 0.487062404870624
+        },
+        "native_grid_encoder_inputs": 4,
+        "extra_parent_whole512_encoder_inputs": 0,
+        "unknown_positive_coverage_not_FPR": 0.23468566227947354
+      },
+      {
+        "id": "rios/19",
+        "group_id": "rios76:rios/19",
+        "candidate": {
+          "tp": 2028,
+          "fn": 1972,
+          "fp": 18,
+          "tn": 3982,
+          "fnr": 0.493,
+          "fpr": 0.0045,
+          "IoU": 0.5047287207565954,
+          "Dice": 0.6708567648031757
+        },
+        "parent": {
+          "tp": 0,
+          "fn": 4000,
+          "fp": 0,
+          "tn": 4000,
+          "fnr": 1.0,
+          "fpr": 0.0,
+          "IoU": 0.0,
+          "Dice": 0.0
+        },
+        "native_grid_encoder_inputs": 5,
+        "extra_parent_whole512_encoder_inputs": 0,
+        "unknown_positive_coverage_not_FPR": 0.03430525751072962
+      },
+      {
+        "id": "rios/225",
+        "group_id": "rios76:rios/225",
+        "candidate": {
+          "tp": 2600,
+          "fn": 1400,
+          "fp": 0,
+          "tn": 4000,
+          "fnr": 0.35,
+          "fpr": 0.0,
+          "IoU": 0.65,
+          "Dice": 0.7878787878787878
+        },
+        "parent": {
+          "tp": 0,
+          "fn": 4000,
+          "fp": 0,
+          "tn": 4000,
+          "fnr": 1.0,
+          "fpr": 0.0,
+          "IoU": 0.0,
+          "Dice": 0.0
+        },
+        "native_grid_encoder_inputs": 54,
+        "extra_parent_whole512_encoder_inputs": 0,
+        "unknown_positive_coverage_not_FPR": 0.4518477210465673
+      },
+      {
+        "id": "rios/53",
+        "group_id": "rios76:rios/53",
+        "candidate": {
+          "tp": 3063,
+          "fn": 537,
+          "fp": 0,
+          "tn": 4000,
+          "fnr": 0.14916666666666667,
+          "fpr": 0.0,
+          "IoU": 0.8508333333333333,
+          "Dice": 0.9194056731202161
+        },
+        "parent": {
+          "tp": 471,
+          "fn": 3129,
+          "fp": 0,
+          "tn": 4000,
+          "fnr": 0.8691666666666666,
+          "fpr": 0.0,
+          "IoU": 0.13083333333333333,
+          "Dice": 0.2313927781871776
+        },
+        "native_grid_encoder_inputs": 40,
+        "extra_parent_whole512_encoder_inputs": 0,
+        "unknown_positive_coverage_not_FPR": 0.12216895380203349
+      },
+      {
+        "id": "rios/59",
+        "group_id": "rios76:rios/59",
+        "candidate": {
+          "tp": 3107,
+          "fn": 913,
+          "fp": 226,
+          "tn": 3774,
+          "fnr": 0.22711442786069652,
+          "fpr": 0.0565,
+          "IoU": 0.7317475270843147,
+          "Dice": 0.8450972392220862
+        },
+        "parent": {
+          "tp": 1691,
+          "fn": 2329,
+          "fp": 0,
+          "tn": 4000,
+          "fnr": 0.5793532338308458,
+          "fpr": 0.0,
+          "IoU": 0.42064676616915425,
+          "Dice": 0.5921905095429872
+        },
+        "native_grid_encoder_inputs": 10,
+        "extra_parent_whole512_encoder_inputs": 0,
+        "unknown_positive_coverage_not_FPR": 0.05364087479491139
+      },
+      {
+        "id": "rios/65",
+        "group_id": "rios76:rios/65",
+        "candidate": {
+          "tp": 4155,
+          "fn": 245,
+          "fp": 179,
+          "tn": 3821,
+          "fnr": 0.05568181818181818,
+          "fpr": 0.04475,
+          "IoU": 0.9074033631797336,
+          "Dice": 0.9514540874742387
+        },
+        "parent": {
+          "tp": 3705,
+          "fn": 695,
+          "fp": 0,
+          "tn": 4000,
+          "fnr": 0.15795454545454546,
+          "fpr": 0.0,
+          "IoU": 0.8420454545454545,
+          "Dice": 0.9142504626773597
+        },
+        "native_grid_encoder_inputs": 49,
+        "extra_parent_whole512_encoder_inputs": 0,
+        "unknown_positive_coverage_not_FPR": 0.041508087535680305
+      }
+    ],
+    "parent_input": "same_native_grid",
+    "candidate_input": "native512_stride384",
+    "source_sparse_ROI_point_gate_passed": true,
+    "balanced_accuracy_gain_vs_samegrid_parent": 0.2776335270724993,
+    "cut": 0.6,
+    "parent_cut": 0.2,
+    "macrophoto_FPR": 0.0697857142857143,
+    "macrophoto_FNR": 0.18217327324416877,
+    "proxygroup_bootstrap95_FPR_FNR": [
+      [
+        0.014714285714285714,
+        0.06369718309859156
+      ],
+      [
+        0.15017857142857144,
+        0.32161143448146734
+      ]
+    ],
+    "not_physical_group_independence_adjustment": true
+  },
+  "retention": {
+    "metrics": {
+      "candidate": {
+        "tp": 12420875,
+        "fn": 805637,
+        "fp": 6081475,
+        "tn": 43606573,
+        "fnr": 0.06091076770655786,
+        "fpr": 0.12239311554360115,
+        "IoU": 0.6433024323043102,
+        "Dice": 0.782938574979462
+      },
+      "parent": {
+        "tp": 12735098,
+        "fn": 491414,
+        "fp": 4760165,
+        "tn": 44927883,
+        "fnr": 0.037153710668390884,
+        "fpr": 0.0958010063104109,
+        "IoU": 0.7080295042825309,
+        "Dice": 0.8290600396624218
+      }
+    },
+    "photos": [
+      {
+        "id": "ostrava/test/01",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/01.jpg",
+        "candidate": {
+          "tp": 489558,
+          "fn": 18177,
+          "fp": 878899,
+          "tn": 2807670,
+          "fnr": 0.03580017134922745,
+          "fpr": 0.23840568289919434,
+          "IoU": 0.35305495177530627,
+          "Dice": 0.5218634340195459
+        },
+        "parent": {
+          "tp": 507389,
+          "fn": 346,
+          "fp": 628760,
+          "tn": 3057809,
+          "fnr": 0.0006814578471052813,
+          "fpr": 0.17055424705193364,
+          "IoU": 0.4464507102978896,
+          "Dice": 0.617305113986145
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/02",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/02.jpg",
+        "candidate": {
+          "tp": 2919551,
+          "fn": 77952,
+          "fp": 426905,
+          "tn": 769896,
+          "fnr": 0.026005645365492543,
+          "fpr": 0.35670508296700953,
+          "IoU": 0.8525710137343447,
+          "Dice": 0.9204192523942857
+        },
+        "parent": {
+          "tp": 2995514,
+          "fn": 1989,
+          "fp": 639727,
+          "tn": 557074,
+          "fnr": 0.0006635522966949491,
+          "fpr": 0.5345308033666416,
+          "IoU": 0.8235701344154756,
+          "Dice": 0.9032502988205183
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/03",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/03.jpg",
+        "candidate": {
+          "tp": 1499812,
+          "fn": 132769,
+          "fp": 407272,
+          "tn": 2154451,
+          "fnr": 0.08132460196461921,
+          "fpr": 0.15898362157032592,
+          "IoU": 0.7352549423904565,
+          "Dice": 0.8474316072283676
+        },
+        "parent": {
+          "tp": 1484625,
+          "fn": 147956,
+          "fp": 294672,
+          "tn": 2267051,
+          "fnr": 0.09062705005142165,
+          "fpr": 0.11502883020529542,
+          "IoU": 0.7703321774567221,
+          "Dice": 0.8702685148765578
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/04",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/04.jpg",
+        "candidate": {
+          "tp": 2262991,
+          "fn": 419667,
+          "fp": 814910,
+          "tn": 696736,
+          "fnr": 0.15643701135217386,
+          "fpr": 0.5390878552253636,
+          "IoU": 0.6470184425292088,
+          "Dice": 0.7856845142980048
+        },
+        "parent": {
+          "tp": 2623575,
+          "fn": 59083,
+          "fp": 721543,
+          "tn": 790103,
+          "fnr": 0.022024052264582365,
+          "fpr": 0.47732273296790384,
+          "IoU": 0.7706874535316804,
+          "Dice": 0.8704951876114839
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/05",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/05.jpg",
+        "candidate": {
+          "tp": 360644,
+          "fn": 28041,
+          "fp": 276181,
+          "tn": 3529438,
+          "fnr": 0.07214325224796429,
+          "fpr": 0.0725718996042431,
+          "IoU": 0.5424311064184362,
+          "Dice": 0.703345652407095
+        },
+        "parent": {
+          "tp": 364659,
+          "fn": 24026,
+          "fp": 36376,
+          "tn": 3769243,
+          "fnr": 0.06181355081878642,
+          "fpr": 0.009558497579500207,
+          "IoU": 0.8578980428691412,
+          "Dice": 0.9235146634250114
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/06",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/06.jpg",
+        "candidate": {
+          "tp": 764631,
+          "fn": 18170,
+          "fp": 185561,
+          "tn": 3225942,
+          "fnr": 0.023211518636281764,
+          "fpr": 0.05439274126389453,
+          "IoU": 0.789612768778618,
+          "Dice": 0.882439802122686
+        },
+        "parent": {
+          "tp": 776020,
+          "fn": 6781,
+          "fp": 165720,
+          "tn": 3245783,
+          "fnr": 0.008662482546649787,
+          "fpr": 0.0485768296261208,
+          "IoU": 0.8181368678184247,
+          "Dice": 0.8999728043577973
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/07",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/07.jpg",
+        "candidate": {
+          "tp": 303072,
+          "fn": 35813,
+          "fp": 1207784,
+          "tn": 2647635,
+          "fnr": 0.1056789176269236,
+          "fpr": 0.31326919330946906,
+          "IoU": 0.1959514285215518,
+          "Dice": 0.3276912821849113
+        },
+        "parent": {
+          "tp": 165992,
+          "fn": 172893,
+          "fp": 369132,
+          "tn": 3486287,
+          "fnr": 0.5101819201203949,
+          "fpr": 0.09574367922137646,
+          "IoU": 0.23444634803966571,
+          "Dice": 0.379840482191831
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/08",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/08.jpg",
+        "candidate": {
+          "tp": 851510,
+          "fn": 70672,
+          "fp": 791602,
+          "tn": 2480520,
+          "fnr": 0.07663563157814834,
+          "fpr": 0.2419231312279921,
+          "IoU": 0.4968595809040112,
+          "Dice": 0.6638693264787584
+        },
+        "parent": {
+          "tp": 894019,
+          "fn": 28163,
+          "fp": 928707,
+          "tn": 2343415,
+          "fnr": 0.03053952473589812,
+          "fpr": 0.2838240750192077,
+          "IoU": 0.48302140214783273,
+          "Dice": 0.6514017956157365
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/09",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/09.jpg",
+        "candidate": {
+          "tp": 427109,
+          "fn": 5,
+          "fp": 391005,
+          "tn": 3376185,
+          "fnr": 1.170647649105391e-05,
+          "fpr": 0.10379221647965725,
+          "IoU": 0.5220621938862194,
+          "Dice": 0.6859932478228886
+        },
+        "parent": {
+          "tp": 423604,
+          "fn": 3510,
+          "fp": 415641,
+          "tn": 3351549,
+          "fnr": 0.008217946496719846,
+          "fpr": 0.11033183885070835,
+          "IoU": 0.5026419303356254,
+          "Dice": 0.6690109202840585
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/10",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/10.jpg",
+        "candidate": {
+          "tp": 449806,
+          "fn": 510,
+          "fp": 329885,
+          "tn": 3414103,
+          "fnr": 0.0011325380399541656,
+          "fpr": 0.08811059223480418,
+          "IoU": 0.5765257927123908,
+          "Dice": 0.7313877075496318
+        },
+        "parent": {
+          "tp": 438355,
+          "fn": 11961,
+          "fp": 402189,
+          "tn": 3341799,
+          "fnr": 0.02656134803116034,
+          "fpr": 0.1074226199442947,
+          "IoU": 0.514196397675087,
+          "Dice": 0.679167376787568
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/11",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/11.jpg",
+        "candidate": {
+          "tp": 532185,
+          "fn": 90,
+          "fp": 53696,
+          "tn": 3608333,
+          "fnr": 0.00016908552909680147,
+          "fpr": 0.014662909550962049,
+          "IoU": 0.9082104745798,
+          "Dice": 0.9518975885296864
+        },
+        "parent": {
+          "tp": 527251,
+          "fn": 5024,
+          "fp": 34692,
+          "tn": 3627337,
+          "fnr": 0.009438729979803672,
+          "fpr": 0.00947343672046289,
+          "IoU": 0.929950067640621,
+          "Dice": 0.963703759214343
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/12",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/12.jpg",
+        "candidate": {
+          "tp": 580010,
+          "fn": 1098,
+          "fp": 56589,
+          "tn": 3556607,
+          "fnr": 0.00188949386344707,
+          "fpr": 0.015661757623998254,
+          "IoU": 0.9095385425993849,
+          "Dice": 0.9526265349546319
+        },
+        "parent": {
+          "tp": 570779,
+          "fn": 10329,
+          "fp": 30619,
+          "tn": 3582577,
+          "fnr": 0.017774664950405087,
+          "fpr": 0.008474215071642944,
+          "IoU": 0.9330616435109126,
+          "Dice": 0.9653718458933823
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/13",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/13.jpg",
+        "candidate": {
+          "tp": 313473,
+          "fn": 926,
+          "fp": 89830,
+          "tn": 3790075,
+          "fnr": 0.0029453019888740105,
+          "fpr": 0.02315262873704382,
+          "IoU": 0.7754836985965876,
+          "Dice": 0.8735464022672362
+        },
+        "parent": {
+          "tp": 295842,
+          "fn": 18557,
+          "fp": 30541,
+          "tn": 3849364,
+          "fnr": 0.0590237246301674,
+          "fpr": 0.007871584484671661,
+          "IoU": 0.8576622021221082,
+          "Dice": 0.9233779975092933
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/14",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/14.jpg",
+        "candidate": {
+          "tp": 89364,
+          "fn": 1580,
+          "fp": 88058,
+          "tn": 4015302,
+          "fnr": 0.01737332864180155,
+          "fpr": 0.02145997426499259,
+          "IoU": 0.49923464542295615,
+          "Dice": 0.66598600418831
+        },
+        "parent": {
+          "tp": 90273,
+          "fn": 671,
+          "fp": 10325,
+          "tn": 4093035,
+          "fnr": 0.007378166783954961,
+          "fpr": 0.002516230601263355,
+          "IoU": 0.8914179067631753,
+          "Dice": 0.9425922252038718
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      },
+      {
+        "id": "ostrava/test/15",
+        "group_id": "ostrava:corrosion-in-industrial-complexes-in-ostrava/test/images/15.jpg",
+        "candidate": {
+          "tp": 577159,
+          "fn": 167,
+          "fp": 83298,
+          "tn": 3533680,
+          "fnr": 0.00028926464423913005,
+          "fpr": 0.023029722602681022,
+          "IoU": 0.8736573300394779,
+          "Dice": 0.9325689559478519
+        },
+        "parent": {
+          "tp": 577201,
+          "fn": 125,
+          "fp": 51521,
+          "tn": 3565457,
+          "fnr": 0.00021651545227479796,
+          "fpr": 0.01424421160427296,
+          "IoU": 0.9178719147900841,
+          "Dice": 0.9571774921064502
+        },
+        "native_grid_encoder_inputs": 25,
+        "extra_parent_whole512_encoder_inputs": 1,
+        "unknown_positive_coverage_not_FPR": null
+      }
+    ],
+    "parent_input": "whole512",
+    "candidate_input": "native512_stride384",
+    "retention_gate_passed": false
+  },
+  "device": null,
+  "verification": {
+    "status": "passed",
+    "parent_v62_approvedheads_all_tensor_buffer_metadata_exact": true,
+    "normalization_clone_unchanged": true,
+    "delta_disk_restore_exact": true,
+    "legacy_Python_SHA_files": 806,
+    "protected_stat_files": 330972,
+    "all_original_raw_SHA_recalculated": false,
+    "actual_optimizer_updates": 450,
+    "FIT_photo_exposures": 450,
+    "FIT_encoder_tiles": 5340,
+    "FIT_microbatches": 1500,
+    "encoder_inputs_by_stage": {
+      "VAL_epoch_25": 47,
+      "VAL_epoch_26": 47,
+      "Ostrava_retention_test": 375,
+      "Ostrava_retention_test_parent_whole512": 15,
+      "VAL_epoch_19": 47,
+      "VAL_epoch_30": 47,
+      "FIT_contract": 4,
+      "VAL_epoch_15": 47,
+      "VAL_epoch_9": 47,
+      "VAL_epoch_24": 47,
+      "initial_VAL": 47,
+      "VAL_epoch_4": 47,
+      "VAL_epoch_28": 47,
+      "VAL_epoch_1": 47,
+      "VAL_epoch_12": 47,
+      "VAL_epoch_6": 47,
+      "VAL_epoch_2": 47,
+      "VAL_epoch_21": 47,
+      "VAL_epoch_27": 47,
+      "VAL_epoch_7": 47,
+      "VAL_epoch_3": 47,
+      "VAL_epoch_11": 47,
+      "VAL_epoch_17": 47,
+      "VAL_epoch_22": 47,
+      "VAL_epoch_29": 47,
+      "VAL_epoch_23": 47,
+      "VAL_epoch_5": 47,
+      "VAL_epoch_16": 47,
+      "VAL_epoch_14": 47,
+      "VAL_epoch_18": 47,
+      "source_test": 168,
+      "FIT_optimizer": 5340,
+      "VAL_epoch_13": 47,
+      "VAL_epoch_8": 47,
+      "cal": 125,
+      "VAL_epoch_10": 47,
+      "VAL_epoch_20": 47
+    },
+    "extra_comparison_encoder_inputs": 8,
+    "new_run_disk_bytes": 94412981,
+    "delta_sha256": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10",
+    "combined_state_SHA256": "91180ead165861bb4856e8e251843c766c2ca6890cf3067d623cb7e07724afc5",
+    "new_API_CPP_ZIP_APK_checks": 0
+  },
+  "delta_bytes": 5638581,
+  "delta_SHA256": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10",
+  "combined_tensor_state_SHA256": "91180ead165861bb4856e8e251843c766c2ca6890cf3067d623cb7e07724afc5",
+  "independent_field_validation": false
+}
