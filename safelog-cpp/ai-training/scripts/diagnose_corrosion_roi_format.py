@@ -19,6 +19,7 @@ from scripts.prepare_equipment_expansion import new
 from scripts.study_equipment_expansion import read
 RUN=ROOT/'runs/industrial-corrosion-roi-format-v77'
 POLICY=ROOT/'reports/industrial-corrosion-roi-format-v77-policy.json'
+RECOVERY=ROOT/'reports/industrial-corrosion-roi-format-v77-r1-policy.json'
 SCRIPT='scripts/diagnose_corrosion_roi_format.py'
 
 
@@ -38,10 +39,11 @@ def freeze():
 
 
 def run():
-    p=read(POLICY)
+    active=RECOVERY if RECOVERY.exists() else POLICY;p=read(active)
+    if RECOVERY.exists():assert sha(POLICY)==p['original_policy_sha256']
     for n,h in {**p['source_sha256'],**p['inputs_sha256']}.items():assert sha(ROOT/n)==h,n
     git=['C:/Program Files/Git/cmd/git.exe','-c','safe.directory='+ROOT.parents[1].as_posix(),'-C',str(ROOT.parents[1])]
-    for n in (SCRIPT,POLICY.relative_to(ROOT).as_posix()):assert hashlib.sha256(subprocess.check_output(git+['show','HEAD:safelog-cpp/ai-training/'+n])).hexdigest()==sha(ROOT/n),n
+    for n in (SCRIPT,active.relative_to(ROOT).as_posix()):assert hashlib.sha256(subprocess.check_output(git+['show','HEAD:safelog-cpp/ai-training/'+n])).hexdigest()==sha(ROOT/n),n
     records=[];headers=[]
     with zipfile.ZipFile(prior.ARCHIVE) as archive:
         for item in read(prior.SOURCE/'publisher-labeled-members.json')['rows']:
@@ -61,15 +63,26 @@ def run():
             elif '/Original images/' in name and name.endswith('.tif'):
                 raw=archive.read(name);assert hashlib.sha256(raw).hexdigest()==item['encoded_SHA256'] and len(raw)<=128*1024**2
                 with Image.open(BytesIO(raw)) as im:headers.append({'member':name,'size':list(im.size),'mode':im.mode,'frames':im.n_frames,'orientation':im.getexif().get(274),'format':im.format})
-    assert len(records)==350 and len(headers)==34
     new(RUN/'ROI-headers.json',{'rows':records});new(RUN/'TIFF-headers.json',{'rows':headers})
-    result={'UTC':utc(),'ROI_headers':350,'nestedZIPs':70,'TIFF_IFD_headers':34,'versions':dict(Counter(r['version'] for r in records)),'types':dict(Counter(r['type'] for r in records)),'options':dict(Counter(r['options'] for r in records)),'ncoords':dict(Counter(r['n_coordinates'] for r in records)),
+    result={'UTC':utc(),'ROI_headers':len(records),'expected_ROI_count_if5perclass':350,'ROI_count_matches_publisher5perclass':len(records)==350,'per_zip_ROI_counts':dict(Counter(r['outer_member'] for r in records)),'nestedZIPs':70,'TIFF_IFD_headers':len(headers),'versions':dict(Counter(r['version'] for r in records)),'types':dict(Counter(r['type'] for r in records)),'options':dict(Counter(r['options'] for r in records)),'ncoords':dict(Counter(r['n_coordinates'] for r in records)),
       'subpixel_flag':sum(bool(r['options']&128) for r in records),'nonzero_shape_size':sum(r['shape_size']!=0 for r in records),'nonzero_subtype':sum(r['subtype']!=0 for r in records),'nonzero_arc':sum(r['arc']!=0 for r in records),'float_rect_width_height_counts':dict(Counter(str(r['float32_slots_18_22_26_30'][2:]) for r in records)),
       'RGB_pixels_loaded':0,'ROI_rasters_constructed':0,'new_features_scores_gradient_optimizer':0,'visual_content_views':0,'v76_integer_contract_still_failed':True,'training_ready':False}
     new(RUN/'diagnosis.json',result);new(ROOT/'reports/industrial-corrosion-roi-format-v77-diagnosis.json',result);print(result,flush=True)
 
 
+def freeze_recovery():
+    assert not RECOVERY.exists() and not (RUN/'ROI-headers.json').exists()
+    assert sha(POLICY)=='335aea842a28a9c6c18c28e65ef057b1c3f94b9433974cd9473808f21c1dc6b4'
+    new(RUN/'failure-initial-count-assumption.json',{'UTC':utc(),'error':'AssertionError len(records)==350 and len(headers)==34 before output persistence','actual_counts_not_preserved_by_original_script':True,'all_header_reads_had_completed_before_assertion':True,'RGB_pixel_decodes':0,'ROI_rasters':0,'optimizer':0,'learning_minima_not_changed':True})
+    p=read(POLICY);p.update(UTC=utc(),original_policy_sha256=sha(POLICY),source_sha256={SCRIPT:sha(ROOT/SCRIPT)},recovery='Diagnostic output repair only: persist actual ROI/header inventory/count differences ratherthan assert publisherdescriptioncount beforewrite. Re-readheadersencodedbytes, noRGBpixels. This doesnotqualifyv76orrelax5patch learningcontract. Preservefirstscript inGit/failure; no training orGTchanges.')
+    new(RECOVERY,p);print({'recovery_policy_sha256':sha(RECOVERY)},flush=True)
+
+
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('stage',choices=('freeze','run'));args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('stage',choices=('freeze','freeze-recovery','run'));args=parser.parse_args()
     if args.stage=='freeze':freeze()
-    else:run()
+    elif args.stage=='freeze-recovery':freeze_recovery()
+    else:
+        try:run()
+        except BaseException as error:
+            new(RUN/('failure-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'.json'),{'UTC':utc(),'error':repr(error)});raise

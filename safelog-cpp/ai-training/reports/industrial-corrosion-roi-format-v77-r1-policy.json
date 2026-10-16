@@ -1,0 +1,26 @@
+{
+  "UTC": "2026-10-16T01:21:31.143902+00:00",
+  "fixed_before_new_header_diagnosis": true,
+  "source_sha256": {
+    "scripts/diagnose_corrosion_roi_format.py": "54bdf701b6e786bf47b8ed64184641e69c894a43002307860fca0a8e69318b38"
+  },
+  "inputs_sha256": {
+    "reports/industrial-corrosion-background-v76-data-policy.json": "96afc90a81e21af22ec746c1b5c5e405fc01401b72ceaba87772fd4c8a31e002",
+    "reports/industrial-corrosion-background-v76-r1-recovery-policy.json": "aecb1c161148d87002fa14f73420956899520022f773a1b0713269e02b728737",
+    "data/industrial-corrosion-background-v76/reserved-TEST-and-copies-before-pixels.json": "a30a8c0518ebcff49be6d856214903539d30cd367dec1783e9cfbb5f199a09db",
+    "data/industrial-corrosion-background-v75-source/publisher-labeled-images-v1.zip": "6fbd29524a81f4d8250a3cf978da09ad09d48f65522677792156d0bdf454fcce",
+    "data/industrial-corrosion-background-v75-source/publisher-labeled-members.json": "aa8666e4040c6cbf3957a7f2be72515e99ed25fd899bd8bfb2fc438376a08060",
+    "data/industrial-corrosion-background-v75-source/imagej-static-receipt.json": "8c82869ce0418866d837db5abce360b4921507d1e5e4162919d0cd2ae3439fb3",
+    "data/industrial-corrosion-background-v75-source/imagej-RoiDecoder.java.txt": "322c80b6b975e4a7ffaf0c8814cfdcb9a4cea135c654bedc8b64901f974f4841",
+    "data/industrial-corrosion-background-v75-source/imagej-Roi.java.txt": "3af80d3a60cd43c2871f90549018bbc1bb6fa1b5eeaf6049469cf4c2d8344ba9"
+  },
+  "scope": "All70nestedannotationZIPs/ROIheaders only, plus34originalTIFFIFDheaders. No RGBload/convert/fingerprints/model/features/scores/gradient/optimizer/visualcontent. Missing83annotations remainunpaired/nottraining.",
+  "ROI": "Read boundednestedZIP<=1MiB/16members/8MiBexpanded/ROI<=1MiB, safe paths/no symlink/encryption/duplicate; CRC+encodedSHA. Inspect64byteIoutheader fields and float32slots18..33 only as metadata, includingversion/type/ncoords/shape/subtype/options/position/hdr2. Recordnonrectangle/extensionfields; no raster/coordinateGT construction oracceptance.",
+  "TIFF": "OnlyImage.openmetadata n_frames/size/mode/orientation; no load/convert/array/EXIFrotation. VerifyencodedSHA; max128MiBencoded, noexpandedfilewriting.",
+  "preserve": "v76integer-onlycontractfailedandstaysnotready. Do notignoreactualflags, shiftcoords, changeGT, weaken minimums, moveTEST/roles orstartlearning. A separatelypreregistereddocumentedformatcontractwouldbeneededafterthisdiagnosis.",
+  "new_pixels_features_scores_gradient_optimizer": 0,
+  "new_visual_content_views": 0,
+  "independent_field_validation": false,
+  "original_policy_sha256": "335aea842a28a9c6c18c28e65ef057b1c3f94b9433974cd9473808f21c1dc6b4",
+  "recovery": "Diagnostic output repair only: persist actual ROI/header inventory/count differences ratherthan assert publisherdescriptioncount beforewrite. Re-readheadersencodedbytes, noRGBpixels. This doesnotqualifyv76orrelax5patch learningcontract. Preservefirstscript inGit/failure; no training orGTchanges."
+}
