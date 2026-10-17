@@ -1,0 +1,45 @@
+{
+  "UTC": "2026-10-17T20:18:52.7321328Z",
+  "fixed_before_local_publisher_HTTP": true,
+  "dataset_id": "6x4dzzrs2h",
+  "dataset_version": 1,
+  "expected_data_license": "CC BY 4.0",
+  "dataset_DOI": "10.17632/6x4dzzrs2h.1",
+  "authors": [
+    "Pengwei Guo",
+    "Yi Bao"
+  ],
+  "source_page": "https://data.mendeley.com/datasets/6x4dzzrs2h/1",
+  "script_sha256": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+  "requests": [
+    {
+      "name": "publisher-page",
+      "kind": "html",
+      "url": "https://data.mendeley.com/datasets/6x4dzzrs2h/1",
+      "byte_limit": 4194304
+    },
+    {
+      "name": "publisher-folders",
+      "kind": "json",
+      "url": "https://data.mendeley.com/public-api/datasets/6x4dzzrs2h/folders/1",
+      "byte_limit": 2097152
+    },
+    {
+      "name": "publisher-root-files",
+      "kind": "json",
+      "url": "https://data.mendeley.com/public-api/datasets/6x4dzzrs2h/files?folder_id=root&version=1&%24start=0&%24limit=1000",
+      "byte_limit": 2097152
+    }
+  ],
+  "aggregate_response_byte_limit": 8388608,
+  "storage_budget_bytes": 33554432,
+  "reserve_bytes": 1073741824,
+  "redirects_retries_nested_file_URLs_auth_contact_PII": false,
+  "source_photo_mask_download_or_decode_allowed": false,
+  "strict_JSON_only_no_JS_author_code_execution": true,
+  "original_TEST_photo_ids_final_roles_minima_coordinates_and_group_checks": "Not fixed; no binary content permitted until separate preregistration",
+  "protect_all_listed_root_containers_before_binary": true,
+  "old_GT_roles_graphs_models_outputs_originals_failures_preserved": true,
+  "model_protocol_fixed": false,
+  "features_gradients_optimizer_CAL_TEST": 0
+}
