@@ -1,0 +1,30 @@
+{
+  "UTC": "2026-10-17T06:15:48.301024+00:00",
+  "stage": "original split CSV metadata only",
+  "URL": "https://liaci.sintef.cloud/download_data/data.zip",
+  "ETag": "\"1726140227.0-1044750953-416943642\"",
+  "archive_bytes": 1044750953,
+  "member": {
+    "member": "LIACi_dataset_pretty/train_test_split.csv",
+    "bytes": 50824,
+    "packed": 9955,
+    "method": 8,
+    "flags": 0,
+    "CRC32_declared": "8de40ea5",
+    "local_header_offset": 973593478,
+    "directory": false
+  },
+  "index_SHA256": "9994401ddcec02ad541df97aa39e6630fb8e806ea91d202ac91efb69c249e3a6",
+  "max_total_range_bytes": 1048576,
+  "max_text_bytes": 131072,
+  "reserve_bytes": 1073741824,
+  "code_SHA256": {
+    "scripts\\fetch_liaci_split_metadata.py": "bfc23b75529278f9af3e9515a651722fe99bbf9314c541426108c78160beb1b2",
+    "safelog_ai\\public_zip_metadata.py": "f20aa4b23f9db944184bc7ee492e9b79d821f455bedac6350b48e87745d43c24",
+    "tests\\test_public_zip_text_member.py": "1f6199b6f521026431ca3365160721aad3f1dbfc71545b2e2dffcc5dd52d3a5c"
+  },
+  "checks": "Exact206/ContentRange/ETag/length/identity; local header/name/size+CRC and decoded UTF8 CSV; no full fallback/external code.",
+  "scope": "No photo/annotation JSON/mask/member contents beyond this split CSV. Original evaluation reservation will be made from verified schema before any annotation/pixel read. No split changes or TRAIN assignment yet.",
+  "new_photos_pixels_features_scores_gradients_optimizer": 0,
+  "data_license": "CC BY-NC-SA4.0, attribution/noncommercial/SA/third-party rights preserved; not standalone model."
+}

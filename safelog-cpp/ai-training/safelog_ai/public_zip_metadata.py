@@ -2,6 +2,7 @@
 from pathlib import PurePosixPath
 import stat
 import struct
+import zlib
 
 
 def check_range(status, headers, start, count, total, etag):
@@ -54,3 +55,40 @@ def parse_directory(data, expected_entries, archive_bytes):
     if len(rows) != expected_entries:
         raise ValueError('Directory member count changed')
     return rows
+
+
+def read_text_member(row, getter, max_bytes):
+    """Verify original local header, bounded inflation, CRC and UTF8; no execution."""
+    if row['directory'] or max(row['packed'], row['bytes']) > max_bytes:
+        raise ValueError('Text member budget exceeded')
+    offset = row['local_header_offset']
+    head = getter(offset, 30)
+    f = struct.unpack('<4s5H3I2H', head)
+    if f[0] != b'PK\x03\x04' or f[2] != row['flags'] or f[3] != row['method']:
+        raise ValueError('Local header identity changed')
+    local_crc, packed, size, n, extra = f[6:]
+    if f[2] & 8:
+        if (local_crc not in (0, int(row['CRC32_declared'],16)) or packed not in (0,row['packed']) or size not in (0,row['bytes'])):
+            raise ValueError('Invalid data-descriptor header')
+    elif (f'{local_crc:08x}',packed,size) != (row['CRC32_declared'],row['packed'],row['bytes']):
+        raise ValueError('Local size/CRC differs from directory')
+    names = getter(offset+30,n+extra)
+    name = names[:n].decode('utf-8' if f[2] & 0x800 else 'cp437')
+    if name != row['member']:
+        raise ValueError('Local filename differs from directory')
+    payload = getter(offset+30+n+extra,row['packed'])
+    if row['method'] == 0:
+        raw = payload
+    elif row['method'] == 8:
+        inflater = zlib.decompressobj(-15)
+        raw = inflater.decompress(payload,row['bytes']+1)
+        if not inflater.eof or inflater.unused_data or inflater.unconsumed_tail:
+            raise ValueError('Invalid or oversized deflate text')
+    else:
+        raise ValueError('Unsupported text compression')
+    if len(raw) != row['bytes'] or f'{zlib.crc32(raw):08x}' != row['CRC32_declared']:
+        raise ValueError('Text CRC/size mismatch')
+    raw.decode('utf-8-sig')
+    if b'\x00' in raw:
+        raise ValueError('Non-text member')
+    return raw

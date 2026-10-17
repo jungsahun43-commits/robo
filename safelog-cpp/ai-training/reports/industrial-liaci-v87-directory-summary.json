@@ -1,0 +1,29 @@
+{
+  "UTC": "2026-10-17T06:12:59.960245+00:00",
+  "policy_SHA256": "b5c85b67d6596a506123237b96713098dbcbda5bdbcab25fcdd56245dff00cf9",
+  "member_count": 26522,
+  "declared_expanded_bytes": 4490928334,
+  "top_level_counts": {
+    "LIACi_dataset_pretty": 26522
+  },
+  "archive_bytes_NOT_downloaded": 1044750953,
+  "actual_range_bytes": 2647370,
+  "ranges": [
+    {
+      "start": 1044685396,
+      "bytes": 65557,
+      "local_SHA256": "54186c57c264f19e12f2cab210d227e0eb3987fae29989df767fe0eac2b653e3",
+      "Content_Range": "bytes 1044685396-1044750952/1044750953"
+    },
+    {
+      "start": 1042169118,
+      "bytes": 2581813,
+      "local_SHA256": "d0e889734ae9a50ddd1f91860ddc46c4c6663443c1828dc86fc5096762b49db5",
+      "Content_Range": "bytes 1042169118-1044750930/1044750953"
+    }
+  ],
+  "full_archive_checksum_verified": false,
+  "member_CRCS_verified": false,
+  "source_photo_annotation_payloads_pixel_decodes_features_scores_gradients_optimizer": 0,
+  "ready_for_training": false
+}
