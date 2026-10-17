@@ -1,0 +1,51 @@
+{
+  "UTC": "2026-10-17T21:22:46.116029+00:00",
+  "preregistered_HEAD": "f23df76b42e0c1251f0300e1efbad0c3bb438ade",
+  "policy_SHA256": "e67780f26d9aabd0ffbc823338e1672a0d971a55854ac25d1f07b3a971c689d0",
+  "responses": [
+    {
+      "UTC": "2026-10-17T21:22:44.483410+00:00",
+      "URL": "https://data.mendeley.com/datasets/6x4dzzrs2h/2",
+      "bytes": 124011,
+      "local_SHA256": "0a03bd126cc6ea5f924f178cb8be0c87712e9aeed50213de01e22ebcee7c5dcb",
+      "metadata_only": true,
+      "source_archive_checksum_verified": false
+    },
+    {
+      "UTC": "2026-10-17T21:22:45.778864+00:00",
+      "URL": "https://data.mendeley.com/public-api/datasets/6x4dzzrs2h/folders/2",
+      "bytes": 2,
+      "local_SHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "metadata_only": true,
+      "source_archive_checksum_verified": false
+    },
+    {
+      "UTC": "2026-10-17T21:22:46.106930+00:00",
+      "URL": "https://data.mendeley.com/public-api/datasets/6x4dzzrs2h/files?folder_id=root&version=2&%24start=0&%24limit=1000",
+      "bytes": 711,
+      "local_SHA256": "0c6de49b7d7fda7072a7245f8a83c47040659861eaad09d36526f829b8aabcea",
+      "metadata_only": true,
+      "source_archive_checksum_verified": false
+    }
+  ],
+  "actual_new_V2_metadata_response_bytes": 124724,
+  "new_V1_HTTP_requests": 0,
+  "V2_root_file_count": 1,
+  "V2_declared_root_bytes": 204919973,
+  "folders_kind": "list",
+  "folders_count_if_list": 0,
+  "publisher_declared_V1_V2_identity_equal": true,
+  "source_archives_or_photos_locally_compared": false,
+  "complete_source_tree_or_native_GT_verified": false,
+  "stored_bytes_before_final_report": 136880,
+  "publisher_identity_fixture_checks": {
+    "expiry_not_content_identity": true,
+    "changed_checksum_detected": true,
+    "missing_checksum_rejected": true
+  },
+  "source_photos_masks_archives_PDF_code_weights_acquired": 0,
+  "source_pixels_visual_QA_encoder_scores_gradients_optimizer_CAL_TEST": 0,
+  "final_photo_TEST_roles_minima_groups_and_model_protocol_fixed": false,
+  "ready_for_training": false,
+  "disk_free": 2313396224
+}
