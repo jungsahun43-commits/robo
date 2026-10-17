@@ -1,0 +1,58 @@
+{
+  "UTC": "2026-10-17T08:09:17.813601+00:00",
+  "scope": "Five already-listed README static texts only; no repo/tree/prior-file/source re-download",
+  "revision": "7bd7e3ec82b3a094ce67b6141dabbbf20d099f24",
+  "rows": [
+    {
+      "path": "data/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71bd3af49b2e931140be25f6e428fb42c0542f24",
+      "size": 521,
+      "url": "https://api.github.com/repos/SINTEF/LIACI_context/git/blobs/71bd3af49b2e931140be25f6e428fb42c0542f24"
+    },
+    {
+      "path": "pipeline/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d93330903f04e395fd395d6f98fa1d38728b5ba",
+      "size": 10662,
+      "url": "https://api.github.com/repos/SINTEF/LIACI_context/git/blobs/8d93330903f04e395fd395d6f98fa1d38728b5ba"
+    },
+    {
+      "path": "pipeline/computer_vision/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dba7d2db525fad4eae97750e75c2858f62023576",
+      "size": 4431,
+      "url": "https://api.github.com/repos/SINTEF/LIACI_context/git/blobs/dba7d2db525fad4eae97750e75c2858f62023576"
+    },
+    {
+      "path": "pipeline/video_input/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d3a9a3a68939a88cc888da05430d1ef853714f4",
+      "size": 2961,
+      "url": "https://api.github.com/repos/SINTEF/LIACI_context/git/blobs/5d3a9a3a68939a88cc888da05430d1ef853714f4"
+    },
+    {
+      "path": "demonstrator/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53192ed4dc1fc7a143704c0d858c7b06daaa9f48",
+      "size": 6684,
+      "url": "https://api.github.com/repos/SINTEF/LIACI_context/git/blobs/53192ed4dc1fc7a143704c0d858c7b06daaa9f48"
+    }
+  ],
+  "code_SHA256": "5de63d00b8c15d9478f7c38c74db71a7ebfd6c682b7da20a4b307663b92bf119",
+  "prior_metadata_SHA256": "4cc02cb18b1df508e55139040d10372e5b65a801433c764132cdc5086fa167c1",
+  "prior_tree_SHA256": "a1d2c792ef928725469a8b7cbc8b0cc051a309d1cdc6830c1880f5b1ff1fbd30",
+  "max_response_bytes": 65536,
+  "max_total_network_bytes": 1048576,
+  "reserve_bytes": 1073741824,
+  "storage_bound_bytes": 2097152,
+  "contract": "Anonymous HTTPS GET exact listed gitblobSHA at pinned v94 tree; verify Git blob SHA1/size and localSHA256. Base64 transport text only. Do not execute code/Markdown/embedded scripts or follow image/model/notebook links. Preserve originals/partial/failures.",
+  "authority": "README/inference labels may establish related model use only; never inferred GT authority/version or physical capture mapping. No auto-contact/PII/login or data-license replacement.",
+  "new_source_RGB_masks_pixels_views_features_scores_gradients_optimizer": 0,
+  "ready_for_training": false
+}

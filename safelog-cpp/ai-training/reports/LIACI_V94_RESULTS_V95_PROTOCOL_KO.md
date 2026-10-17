@@ -1,0 +1,9 @@
+# v94 공식 관련 코드 결과 및 v95 연결 문서 조건
+
+v94는 `7c26eb9e6ae29fc1c6fd325def34a1e8eff23b5b`에 사전 push/원격 확인 후 익명 공식 API로 [SINTEF/LIACI_context](https://github.com/SINTEF/LIACI_context)의 commit `7bd7e3ec82b3a094ce67b6141dabbbf20d099f24`/tree113개를 고정했다. LICENSE1,063/README3,533/LIACi_segmenter.py13,306bytes의 Git blob SHA1·길이/로컬SHA256을 검사했다. 네트워크는 repo/commit/tree/blob응답 합66,845bytes이고 전체clone·이미지·모델·notebook 취득/원저자 코드 실행은0이다. 키워드 조건의 추가 미선택 후보는0이지만, README 하위경로와 키워드없는 코드는 아직 읽지 않았으므로 전체 저장소 내용 감사라고 부르지 않는다.
+
+고정 [LIACi_segmenter.py](https://github.com/SINTEF/LIACI_context/blob/7bd7e3ec82b3a094ce67b6141dabbbf20d099f24/pipeline/computer_vision/LIACi_segmenter.py)는 ONNX runtime의 예측 mask/임계값/resize/시각화를 처리한다. 이 코드를 실행하거나 예측을 새 자연GT로 바꾸지 않는다. COCO polygon→제공BMP 생산·revision·ID107 변경 이력은 확인되지 않았다. [README](https://github.com/SINTEF/LIACI_context/blob/7bd7e3ec82b3a094ce67b6141dabbbf20d099f24/README.md)는 inference 결과와 telemetry의 contextualization을 설명하며 current 배포 데이터 exporter임을 증명하지 않는다. code MIT는 LIACi data CC BY-NC-SA4.0을 대체하지 않는다.
+
+v95는 해당 고정 tree에 실제 존재하고 아직 읽지 않은 `data/README.md`, `pipeline/README.md`, `pipeline/computer_vision/README.md`, `pipeline/video_input/README.md`, `demonstrator/README.md` 5개만 추가한다. `inspect_liaci_referenced_docs.py`/`industrial-liaci-v95-referenced-docs-policy.json`을 사전 일반 push 후 실행하며 정책 SHA256은 `c2f67a4ffd75c31ca197e71655215b68e9c448a0d288ebe1a6ed7b0d4f2bb97c`이다. 원repo/commit/tree/v94 텍스트는 재취득하지 않는다. 정확 listed blob SHA1/길이와 로컬SHA256, 각응답64KiB/전체1MiB/새저장2MiB/예비1GiB를 검사한다. 읽는 것은 정적 텍스트이며 문서 내 이미지·동영상·모델·script·notebook 링크를 실행/취득하지 않는다. 공개 문서의 명시적 추가 출처만 다음 검토 대상으로 기록한다.
+
+v90/v91 실패, v92/v93 완료 수치와 여섯 source 파일·원TEST191/사본/not_used332/잠긴 역할은 보존한다. v94/v95 새source사진·mask·pixel·시각QA·특징·모델점수·gradient·optimizer/CAL_TEST/패키지0, ready=false다. 현재 공간은 전체연결/후속run 예산에 부족하며 기존 원본/실패/epoch/로그/cache/ZIP 삭제나 예비침범으로 해결하지 않는다. 실제 GT 권위·좌표·unknown, 전체sourcegraph/held제외/최소 조건이 미확정이면 학습을 시작하지 않는다.
