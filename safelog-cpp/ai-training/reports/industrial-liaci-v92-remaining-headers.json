@@ -1,0 +1,412 @@
+{
+  "UTC": "2026-10-17T07:24:30.909490+00:00",
+  "policy_SHA256": "d91d251ff782a134a58684a57945d4245549a5b8b232aea085b0be9588a577cd",
+  "headers_read": 21,
+  "rows": [
+    {
+      "image_id": 1,
+      "role": "RGB",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "ecf94d12cda74b89e99111a48be2ce8e185a9668d94519cb42d2b5fd4dbfcb4d"
+    },
+    {
+      "image_id": 1,
+      "role": "corrosion",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717"
+    },
+    {
+      "image_id": 1,
+      "role": "ship_hull",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "0f2806f911a18fe30736f04b2be22b2203510133a8e7044b17a22249aba8cab9"
+    },
+    {
+      "image_id": 1,
+      "role": "paint_peel",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "70caa663eeb6eb047e281ed141d50ecb1a167d16114137c20ea54ff6603458b9"
+    },
+    {
+      "image_id": 1,
+      "role": "marine_growth",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717"
+    },
+    {
+      "image_id": 1,
+      "role": "defect",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717"
+    },
+    {
+      "image_id": 1,
+      "role": "segmentation",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "979c5d890f74ccde0112ee67681c5fce01cf9a6bc91a5ccd3bd34b1d002d8a20"
+    },
+    {
+      "image_id": 3,
+      "role": "RGB",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "e4ffc7ddd265f055fda311f5e329ecb6f4ff789b4b70dc4aa5e176cd53c1e302"
+    },
+    {
+      "image_id": 3,
+      "role": "corrosion",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717"
+    },
+    {
+      "image_id": 3,
+      "role": "ship_hull",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "9b946bdeea8db21a131af8c3eeaeb1f75075dde912d624597e46668a7fcaab3f"
+    },
+    {
+      "image_id": 3,
+      "role": "paint_peel",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "e4496bcb7620a8b3e49b5a41a216d32e792279e5ca3c976aa6da192cae14b144"
+    },
+    {
+      "image_id": 3,
+      "role": "marine_growth",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717"
+    },
+    {
+      "image_id": 3,
+      "role": "defect",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717"
+    },
+    {
+      "image_id": 3,
+      "role": "segmentation",
+      "expected_size": [
+        1920,
+        1080
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1920,
+        1080
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "71c385778d25189fc430562150812242283585f542701f9cfaafb39821cea189"
+    },
+    {
+      "image_id": 8,
+      "role": "RGB",
+      "expected_size": [
+        640,
+        480
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size": [
+        640,
+        480
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "41df680431ecac19127ee74d15fd098ed7053dfebb9219ba53920ae31d3d193d"
+    },
+    {
+      "image_id": 8,
+      "role": "corrosion",
+      "expected_size": [
+        640,
+        480
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        640,
+        480
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf"
+    },
+    {
+      "image_id": 8,
+      "role": "ship_hull",
+      "expected_size": [
+        640,
+        480
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        640,
+        480
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "ee8000c275bb8722e654f6dede0b4f927db19dd1d2d45f8e00d90f3fd74a5949"
+    },
+    {
+      "image_id": 8,
+      "role": "paint_peel",
+      "expected_size": [
+        640,
+        480
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        640,
+        480
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "97aabdf995264b532221cf7a4d0cc8095e76811f6d2eec8852457069ec899e4f"
+    },
+    {
+      "image_id": 8,
+      "role": "marine_growth",
+      "expected_size": [
+        640,
+        480
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        640,
+        480
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf"
+    },
+    {
+      "image_id": 8,
+      "role": "defect",
+      "expected_size": [
+        640,
+        480
+      ],
+      "format": "BMP",
+      "mode": "1",
+      "size": [
+        640,
+        480
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf"
+    },
+    {
+      "image_id": 8,
+      "role": "segmentation",
+      "expected_size": [
+        640,
+        480
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        640,
+        480
+      ],
+      "n_frames": 1,
+      "orientation": null,
+      "datetime": null,
+      "native_size_matches": true,
+      "encoded_SHA256": "c9852a21f6fe452fd82bc933c729bf5cf6c34db24fa76a16ac978dde6117e65a"
+    }
+  ],
+  "new_pixel_decodes": 0,
+  "new_network_bytes": 0,
+  "new_visual_views": 0,
+  "new_features_scores_gradients_optimizer": 0,
+  "ready_for_training": false,
+  "old_failed_contracts_remain_failed": true
+}
