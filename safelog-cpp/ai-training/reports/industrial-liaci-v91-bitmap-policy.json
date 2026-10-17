@@ -1,0 +1,1062 @@
+{
+  "UTC": "2026-10-17T07:21:44.273120+00:00",
+  "scope": "Existing six presetFIT v90 files only; representation diagnosis, not corrected GT or ready data",
+  "code_SHA256": {
+    "scripts/diagnose_liaci_bitmap.py": "1a118f0dbd3c55cd77d724a6ae1dd068bbba989c40c2d4f4c9fc9521aae2d794",
+    "safelog_ai/liaci_coordinate_contract.py": "2848db34fea69dccc66951051f0922efa837759ea397c569246db1d95b78a481",
+    "safelog_ai/belt_normal_roi.py": "4fe963d0d3d01b9a14a587321e46fc0dcc2e07c752f0fcae9be71eb4646c4d90"
+  },
+  "files_SHA256": {
+    "data/industrial-liaci-v90-coordinates/0052-RGB/publisher.jpg": "756c2fe55703840f4c576991deda281fff688de95d69f806cc21e7a599209b20",
+    "data/industrial-liaci-v90-coordinates/0052-corrosion/publisher.bmp": "0b15438bb916bc3969e8a1835d95ae4b15511bda058bea90b35a08bc4c0a22ba",
+    "data/industrial-liaci-v90-coordinates/0052-ship_hull/publisher.bmp": "ff71a35467dd50d7738e6cbf353a3c701d585c0ed341cbbeefe8ccf89f690b7d",
+    "data/industrial-liaci-v90-coordinates/0052-paint_peel/publisher.bmp": "38b381811bef36b0233e765982b869dfd7f534ee1c68b662f30e78431a14bbdc",
+    "data/industrial-liaci-v90-coordinates/0052-marine_growth/publisher.bmp": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf",
+    "data/industrial-liaci-v90-coordinates/0052-defect/publisher.bmp": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf",
+    "data/industrial-liaci-v90-coordinates/0052-segmentation/publisher.png": "2999379a25f3e05cbcba8207bcdc15d684f51e19d0d0e668bd1c5f1d59867f07",
+    "data/industrial-liaci-v90-coordinates/0107-RGB/publisher.jpg": "14a78fdb83f3370c1ac72b971bf2e02c4009f9b86924fc4fb93023d20b4da4fd",
+    "data/industrial-liaci-v90-coordinates/0107-corrosion/publisher.bmp": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717",
+    "data/industrial-liaci-v90-coordinates/0107-ship_hull/publisher.bmp": "299a55ab5f545743d3ddbe1c1f331326e1fc0a5cf8c68841b53df61f6795d84e",
+    "data/industrial-liaci-v90-coordinates/0107-paint_peel/publisher.bmp": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717",
+    "data/industrial-liaci-v90-coordinates/0107-marine_growth/publisher.bmp": "ea9346d2bfbfb448423933188662a6f181373463f7498ef3b2fc6cba5ba6ba33",
+    "data/industrial-liaci-v90-coordinates/0107-defect/publisher.bmp": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717",
+    "data/industrial-liaci-v90-coordinates/0107-segmentation/publisher.png": "2630a2ee7a190f65dbbf2439490e09a2fdb1bb666e535109bcdc93bc5021381a",
+    "data/industrial-liaci-v90-coordinates/0178-RGB/publisher.jpg": "dec1d61c89985fcd61a76c0e58792c1b3f60153d69e03758fc5fc035691c7bf4",
+    "data/industrial-liaci-v90-coordinates/0178-corrosion/publisher.bmp": "c82e6ee130f911d0057c055afcebbb844cba7935b83cf2b626de2f31cba1b67f",
+    "data/industrial-liaci-v90-coordinates/0178-ship_hull/publisher.bmp": "94bdf3aa48d511f19930a9e219f0a72296469bf038a8fb563f3ff281d99ef313",
+    "data/industrial-liaci-v90-coordinates/0178-paint_peel/publisher.bmp": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf",
+    "data/industrial-liaci-v90-coordinates/0178-marine_growth/publisher.bmp": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf",
+    "data/industrial-liaci-v90-coordinates/0178-defect/publisher.bmp": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf",
+    "data/industrial-liaci-v90-coordinates/0178-segmentation/publisher.png": "463d53c7ca9d9c3da176e58ab73b53a5657a5c383ee1819ce93a0601784187b4",
+    "data/industrial-liaci-v90-coordinates/0001-RGB/publisher.jpg": "ecf94d12cda74b89e99111a48be2ce8e185a9668d94519cb42d2b5fd4dbfcb4d",
+    "data/industrial-liaci-v90-coordinates/0001-corrosion/publisher.bmp": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717",
+    "data/industrial-liaci-v90-coordinates/0001-ship_hull/publisher.bmp": "0f2806f911a18fe30736f04b2be22b2203510133a8e7044b17a22249aba8cab9",
+    "data/industrial-liaci-v90-coordinates/0001-paint_peel/publisher.bmp": "70caa663eeb6eb047e281ed141d50ecb1a167d16114137c20ea54ff6603458b9",
+    "data/industrial-liaci-v90-coordinates/0001-marine_growth/publisher.bmp": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717",
+    "data/industrial-liaci-v90-coordinates/0001-defect/publisher.bmp": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717",
+    "data/industrial-liaci-v90-coordinates/0001-segmentation/publisher.png": "979c5d890f74ccde0112ee67681c5fce01cf9a6bc91a5ccd3bd34b1d002d8a20",
+    "data/industrial-liaci-v90-coordinates/0003-RGB/publisher.jpg": "e4ffc7ddd265f055fda311f5e329ecb6f4ff789b4b70dc4aa5e176cd53c1e302",
+    "data/industrial-liaci-v90-coordinates/0003-corrosion/publisher.bmp": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717",
+    "data/industrial-liaci-v90-coordinates/0003-ship_hull/publisher.bmp": "9b946bdeea8db21a131af8c3eeaeb1f75075dde912d624597e46668a7fcaab3f",
+    "data/industrial-liaci-v90-coordinates/0003-paint_peel/publisher.bmp": "e4496bcb7620a8b3e49b5a41a216d32e792279e5ca3c976aa6da192cae14b144",
+    "data/industrial-liaci-v90-coordinates/0003-marine_growth/publisher.bmp": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717",
+    "data/industrial-liaci-v90-coordinates/0003-defect/publisher.bmp": "11e253f9733ef4aedf3b5f48f74bdb036b36a6db7d002b9a5e69c52d447ad717",
+    "data/industrial-liaci-v90-coordinates/0003-segmentation/publisher.png": "71c385778d25189fc430562150812242283585f542701f9cfaafb39821cea189",
+    "data/industrial-liaci-v90-coordinates/0008-RGB/publisher.jpg": "41df680431ecac19127ee74d15fd098ed7053dfebb9219ba53920ae31d3d193d",
+    "data/industrial-liaci-v90-coordinates/0008-corrosion/publisher.bmp": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf",
+    "data/industrial-liaci-v90-coordinates/0008-ship_hull/publisher.bmp": "ee8000c275bb8722e654f6dede0b4f927db19dd1d2d45f8e00d90f3fd74a5949",
+    "data/industrial-liaci-v90-coordinates/0008-paint_peel/publisher.bmp": "97aabdf995264b532221cf7a4d0cc8095e76811f6d2eec8852457069ec899e4f",
+    "data/industrial-liaci-v90-coordinates/0008-marine_growth/publisher.bmp": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf",
+    "data/industrial-liaci-v90-coordinates/0008-defect/publisher.bmp": "410fb02be9133ce347c75e1fb0c303aa7854b2fc0cad0befe3275811cc963ddf",
+    "data/industrial-liaci-v90-coordinates/0008-segmentation/publisher.png": "c9852a21f6fe452fd82bc933c729bf5cf6c34db24fa76a16ac978dde6117e65a"
+  },
+  "inputs_SHA256": {
+    "reports/industrial-liaci-v90-coordinate-policy.json": "4b89a9505f5491afb17afc311eb0be8a7c5d9c2ed9b5d9ebb0562087897d3954",
+    "data/industrial-liaci-v90-coordinates/member-receipts.json": "4bbd7cf0c4ac65a6619d6d8cfc99ac96bc54b0c6dc52b5892a8a275a44dcf68a",
+    "data/industrial-liaci-v89-metadata/publisher-coco-labels.json": "4acd1fd3d0498c091803d4d5f2617bffcef5427cab0bd4d209c32d72e917de94"
+  },
+  "probe_rows": [
+    {
+      "file_name": "image_0052.jpg",
+      "publisher_split": "train",
+      "role": "unassigned_TRAIN_candidate_only",
+      "original": {
+        "member": "LIACi_dataset_pretty/images/image_0052.jpg",
+        "bytes": 38343,
+        "packed": 38145,
+        "method": 8,
+        "flags": 0,
+        "CRC32_declared": "e1469d27",
+        "local_header_offset": 317279834,
+        "directory": false
+      },
+      "all_copies": [
+        {
+          "member": "LIACi_dataset_pretty/images/image_0052.jpg",
+          "bytes": 38343,
+          "packed": 38145,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "e1469d27",
+          "local_header_offset": 317279834,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/image_thumbs/image_0052.jpg",
+          "bytes": 8705,
+          "packed": 8542,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "11837d33",
+          "local_header_offset": 965379931,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/ship_hull/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 1564,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "d4b01262",
+          "local_header_offset": 1011511543,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/paint_peel/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 1517,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "e2d9ef17",
+          "local_header_offset": 1013876957,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/sea_chest_grating/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1015227134,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/segmentation/image_0052.png",
+          "bytes": 5428,
+          "packed": 5085,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "5fceb6f0",
+          "local_header_offset": 1019594129,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/bilge_keel/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1030212730,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/defect/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1030822546,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/marine_growth/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1033934896,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/anode/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 194,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "136922a3",
+          "local_header_offset": 1034883266,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/propeller/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1036600141,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/over_board_valves/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1037410661,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/saliency/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 1571,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c47a5db6",
+          "local_header_offset": 1041275641,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/corrosion/image_0052.bmp",
+          "bytes": 38462,
+          "packed": 732,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "ba1004f4",
+          "local_header_offset": 1042164283,
+          "directory": false
+        }
+      ],
+      "image_id": 52,
+      "size": [
+        640,
+        480
+      ],
+      "condition": "corrosion_annotated",
+      "hull_annotated": true,
+      "phase": "fit"
+    },
+    {
+      "file_name": "image_0107.jpg",
+      "publisher_split": "train",
+      "role": "unassigned_TRAIN_candidate_only",
+      "original": {
+        "member": "LIACi_dataset_pretty/images/image_0107.jpg",
+        "bytes": 53970,
+        "packed": 40066,
+        "method": 8,
+        "flags": 0,
+        "CRC32_declared": "f05b9384",
+        "local_header_offset": 527173713,
+        "directory": false
+      },
+      "all_copies": [
+        {
+          "member": "LIACi_dataset_pretty/images/image_0107.jpg",
+          "bytes": 53970,
+          "packed": 40066,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "f05b9384",
+          "local_header_offset": 527173713,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/image_thumbs/image_0107.jpg",
+          "bytes": 2636,
+          "packed": 2471,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "4b7f20b5",
+          "local_header_offset": 967457737,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/ship_hull/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 4637,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "df3df95f",
+          "local_header_offset": 1009148774,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/paint_peel/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1012137929,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/sea_chest_grating/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1014225282,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/segmentation/image_0107.png",
+          "bytes": 16180,
+          "packed": 12761,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "18fbb3ab",
+          "local_header_offset": 1023244762,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/bilge_keel/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1029537246,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/defect/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1030352770,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/marine_growth/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 679,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "d65d7004",
+          "local_header_offset": 1031559393,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/anode/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 1073,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "5f5cd16a",
+          "local_header_offset": 1034185565,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/propeller/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 4038,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "ef9c4de7",
+          "local_header_offset": 1035356482,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/over_board_valves/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1036779578,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/saliency/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 4637,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "df3df95f",
+          "local_header_offset": 1038371740,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/corrosion/image_0107.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1041511887,
+          "directory": false
+        }
+      ],
+      "image_id": 107,
+      "size": [
+        1920,
+        1080
+      ],
+      "condition": "corrosion_annotated",
+      "hull_annotated": true,
+      "phase": "fit"
+    },
+    {
+      "file_name": "image_0178.jpg",
+      "publisher_split": "train",
+      "role": "unassigned_TRAIN_candidate_only",
+      "original": {
+        "member": "LIACi_dataset_pretty/images/image_0178.jpg",
+        "bytes": 34717,
+        "packed": 34480,
+        "method": 8,
+        "flags": 0,
+        "CRC32_declared": "df5b1f6b",
+        "local_header_offset": 122230492,
+        "directory": false
+      },
+      "all_copies": [
+        {
+          "member": "LIACi_dataset_pretty/images/image_0178.jpg",
+          "bytes": 34717,
+          "packed": 34480,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "df5b1f6b",
+          "local_header_offset": 122230492,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/image_thumbs/image_0178.jpg",
+          "bytes": 9133,
+          "packed": 8983,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "71f592f5",
+          "local_header_offset": 963263233,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/ship_hull/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 509,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "da777ae7",
+          "local_header_offset": 1010536580,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/paint_peel/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1013172060,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/sea_chest_grating/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1014888791,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/segmentation/image_0178.png",
+          "bytes": 4072,
+          "packed": 3727,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "264fb457",
+          "local_header_offset": 1016673147,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/bilge_keel/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1029987139,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/defect/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1030644328,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/marine_growth/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1033209134,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/anode/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1034585710,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/propeller/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1036031444,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/over_board_valves/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1037184214,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/saliency/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 516,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "71c1d5ba",
+          "local_header_offset": 1040094829,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/corrosion/image_0178.bmp",
+          "bytes": 38462,
+          "packed": 1722,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "1b327957",
+          "local_header_offset": 1041916543,
+          "directory": false
+        }
+      ],
+      "image_id": 178,
+      "size": [
+        640,
+        480
+      ],
+      "condition": "corrosion_annotated",
+      "hull_annotated": true,
+      "phase": "fit"
+    },
+    {
+      "file_name": "image_0001.jpg",
+      "publisher_split": "train",
+      "role": "unassigned_TRAIN_candidate_only",
+      "original": {
+        "member": "LIACi_dataset_pretty/images/image_0001.jpg",
+        "bytes": 1282475,
+        "packed": 1282648,
+        "method": 8,
+        "flags": 0,
+        "CRC32_declared": "274984b5",
+        "local_header_offset": 851703528,
+        "directory": false
+      },
+      "all_copies": [
+        {
+          "member": "LIACi_dataset_pretty/images/image_0001.jpg",
+          "bytes": 1282475,
+          "packed": 1282648,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "274984b5",
+          "local_header_offset": 851703528,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/image_thumbs/image_0001.jpg",
+          "bytes": 4004,
+          "packed": 3858,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "943e8121",
+          "local_header_offset": 970736382,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/ship_hull/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 2162,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "008ab5e2",
+          "local_header_offset": 1009425418,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/paint_peel/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 2839,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "33baac99",
+          "local_header_offset": 1012333316,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/sea_chest_grating/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1014341068,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/segmentation/image_0001.png",
+          "bytes": 13656,
+          "packed": 9190,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "e24b0c88",
+          "local_header_offset": 1027945509,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/bilge_keel/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 1527,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "d183c7a2",
+          "local_header_offset": 1029616249,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/defect/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1030406705,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/marine_growth/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1031870331,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/anode/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 669,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "5e50fd68",
+          "local_header_offset": 1034260592,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/propeller/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 1801,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "8a5b8483",
+          "local_header_offset": 1035485516,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/over_board_valves/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1036858371,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/saliency/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 2098,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "edcea493",
+          "local_header_offset": 1038698557,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/corrosion/image_0001.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1041589576,
+          "directory": false
+        }
+      ],
+      "image_id": 1,
+      "size": [
+        1920,
+        1080
+      ],
+      "condition": "no_corrosion_annotation",
+      "hull_annotated": true,
+      "phase": "fit"
+    },
+    {
+      "file_name": "image_0003.jpg",
+      "publisher_split": "train",
+      "role": "unassigned_TRAIN_candidate_only",
+      "original": {
+        "member": "LIACi_dataset_pretty/images/image_0003.jpg",
+        "bytes": 1556452,
+        "packed": 1556137,
+        "method": 8,
+        "flags": 0,
+        "CRC32_declared": "4d7110ee",
+        "local_header_offset": 939600362,
+        "directory": false
+      },
+      "all_copies": [
+        {
+          "member": "LIACi_dataset_pretty/images/image_0003.jpg",
+          "bytes": 1556452,
+          "packed": 1556137,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "4d7110ee",
+          "local_header_offset": 939600362,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/image_thumbs/image_0003.jpg",
+          "bytes": 3511,
+          "packed": 3360,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "38782575",
+          "local_header_offset": 971549729,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/ship_hull/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 1263,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c5c982c3",
+          "local_header_offset": 1009445464,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/paint_peel/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 3671,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "2652efe0",
+          "local_header_offset": 1012349979,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/sea_chest_grating/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1014357949,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/segmentation/image_0003.png",
+          "bytes": 13171,
+          "packed": 8186,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "5c782c49",
+          "local_header_offset": 1029091317,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/bilge_keel/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 1142,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "1e7a7fc7",
+          "local_header_offset": 1029625151,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/defect/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1030410983,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/marine_growth/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1031923088,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/anode/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1034266354,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/propeller/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1035493459,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/over_board_valves/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1036864007,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/saliency/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 1333,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "dc35056c",
+          "local_header_offset": 1038722721,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/corrosion/image_0003.bmp",
+          "bytes": 259262,
+          "packed": 312,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "0b5b6715",
+          "local_header_offset": 1041598930,
+          "directory": false
+        }
+      ],
+      "image_id": 3,
+      "size": [
+        1920,
+        1080
+      ],
+      "condition": "no_corrosion_annotation",
+      "hull_annotated": true,
+      "phase": "fit"
+    },
+    {
+      "file_name": "image_0008.jpg",
+      "publisher_split": "train",
+      "role": "unassigned_TRAIN_candidate_only",
+      "original": {
+        "member": "LIACi_dataset_pretty/images/image_0008.jpg",
+        "bytes": 35238,
+        "packed": 35030,
+        "method": 8,
+        "flags": 0,
+        "CRC32_declared": "c8477363",
+        "local_header_offset": 149025476,
+        "directory": false
+      },
+      "all_copies": [
+        {
+          "member": "LIACi_dataset_pretty/images/image_0008.jpg",
+          "bytes": 35238,
+          "packed": 35030,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c8477363",
+          "local_header_offset": 149025476,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/image_thumbs/image_0008.jpg",
+          "bytes": 7502,
+          "packed": 7357,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "b0044fac",
+          "local_header_offset": 963569825,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/ship_hull/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 386,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "7f5cd471",
+          "local_header_offset": 1010105009,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/paint_peel/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 1245,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "24002b23",
+          "local_header_offset": 1012828215,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/sea_chest_grating/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1014681811,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/segmentation/image_0008.png",
+          "bytes": 4267,
+          "packed": 3715,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "defd7052",
+          "local_header_offset": 1017054266,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/bilge_keel/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1029858147,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/defect/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1030551906,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/marine_growth/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1032747393,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/anode/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 555,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "25932126",
+          "local_header_offset": 1034455343,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/propeller/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1035812522,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/over_board_valves/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1037067804,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/saliency/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 397,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "b31f4be1",
+          "local_header_offset": 1039536793,
+          "directory": false
+        },
+        {
+          "member": "LIACi_dataset_pretty/masks/corrosion/image_0008.bmp",
+          "bytes": 38462,
+          "packed": 92,
+          "method": 8,
+          "flags": 0,
+          "CRC32_declared": "c1002151",
+          "local_header_offset": 1041796898,
+          "directory": false
+        }
+      ],
+      "image_id": 8,
+      "size": [
+        640,
+        480
+      ],
+      "condition": "no_corrosion_annotation",
+      "hull_annotated": true,
+      "phase": "fit"
+    }
+  ],
+  "failure_SHA256": "1ee14fda2e537f89460edb0a6d478a7cb551ae61eb48fc8695a7873aeeae9b9b",
+  "new_downloads": 0,
+  "decode": "6RGB once each, 30BMP and6PNG numeric arrays only, <=40MP/32MiB/singleframe/EXIFNone1/exactnative COCO size; formats JPEG_RGB,BMP_1_L_P_RGB,PNG_P_L_RGB_RGBA only, no resize/flip/rewrite. Unknown format/size/coordinates stops.",
+  "diagnosis": "Record BMP header/depth/palette, native value counts, COCO/PIL geometry. Compare explicit white/black support only when exactly binary0/255; independentPIL not proven author exporter. Neither best polarity nor matching subset becomes GT. Segmentation colors are recorded without guessing a class map.",
+  "GT_and_roles": "Keep original COCO floats/category order, supplied BMP/PNG, v90 role lock and TEST191/allcopies/not_used332. v90 failed pairing remains failed. Same six files only, no replacements, no VAL_CAL_TEST content.",
+  "graph": "Cache six RGB/pHashes for future entire-source graph; oldheld join/omitted bridges remain pending, no old global decode/distance audit.",
+  "readiness": false,
+  "new_model_features_scores_gradients_optimizer": 0,
+  "new_visual_views": 0,
+  "storage_bound_bytes": 8388608,
+  "reserve_bytes": 1073741824,
+  "data_license": "LIACiCC BY-NC-SA4.0, paperCC BY4.0 separate; all parent terms retained."
+}
