@@ -1,0 +1,40 @@
+{
+  "UTC": "2026-10-17T20:21:39.6419275Z",
+  "fixed_before_recovery_or_new_API_HTTP": true,
+  "dataset_id": "6x4dzzrs2h",
+  "dataset_version": 1,
+  "expected_data_license": "CC BY 4.0",
+  "dataset_DOI": "10.17632/6x4dzzrs2h.1",
+  "script_sha256": "f3cbc6b37a16b861421773bcdfb71465c600806f64d5c4bb4fb57c257d9be7e3",
+  "preserved_inputs_sha256": {
+    "scripts/inspect_hrcds_metadata_v121.py": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+    "reports/industrial-hrcds-v121-metadata-policy.json": "2a8ba4cb2e2438f2caf6d2547d6ca82666012cc2f6d2ad94f4efd4f7dd57128c",
+    "data/industrial-hrcds-v121-metadata/publisher-page.html": "7310b421ea61c380e7a8f89eae61c4d430715d1cdc6da8a858b7d1b2de548604",
+    "data/industrial-hrcds-v121-metadata/publisher-page-receipt.json": "cb10395f176d29f3794d49b6460c3da30d75b6dc656beb3d737034d2072c54f1"
+  },
+  "preserved_page": "data/industrial-hrcds-v121-metadata/publisher-page.html",
+  "observed_suffix_only": "JSON object followed by newline and window.initialTime = decimal integer; parse data only, never execute JavaScript",
+  "requests": [
+    {
+      "name": "publisher-folders",
+      "url": "https://data.mendeley.com/public-api/datasets/6x4dzzrs2h/folders/1",
+      "byte_limit": 2097152
+    },
+    {
+      "name": "publisher-root-files",
+      "url": "https://data.mendeley.com/public-api/datasets/6x4dzzrs2h/files?folder_id=root&version=1&%24start=0&%24limit=1000",
+      "byte_limit": 2097152
+    }
+  ],
+  "aggregate_response_byte_limit": 4194304,
+  "storage_budget_bytes": 16777216,
+  "reserve_bytes": 1073741824,
+  "page_refetch_or_completed_v121_rerun_allowed": false,
+  "redirects_retries_nested_file_URLs_auth_contact_PII": false,
+  "source_photo_mask_download_or_decode_allowed": false,
+  "protect_all_listed_root_containers_before_binary": true,
+  "actual_photo_TEST_ids_roles_minima_native_GT_groups": "Not fixed; no binary content permitted",
+  "old_GT_roles_graphs_models_outputs_originals_failures_preserved": true,
+  "model_protocol_fixed": false,
+  "features_gradients_optimizer_CAL_TEST": 0
+}
