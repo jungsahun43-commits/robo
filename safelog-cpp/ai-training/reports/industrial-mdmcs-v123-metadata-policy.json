@@ -1,0 +1,51 @@
+{
+  "UTC": "2026-10-17T21:22:16.2378577Z",
+  "fixed_before_V2_metadata_HTTP": true,
+  "dataset_id": "6x4dzzrs2h",
+  "dataset_version": 2,
+  "expected_title": "MDMCS: A Benchmark Dataset for Multi-Damage Monitoring of Concrete Structures",
+  "expected_data_license": "CC BY 4.0",
+  "dataset_DOI": "10.17632/6x4dzzrs2h.2",
+  "authors": [
+    "Pengwei Guo",
+    "Yi Bao"
+  ],
+  "script_sha256": "4331ba100bb9ab5bbe53824f3b99914d92676ffe22460de8c2d8537dc04c7931",
+  "preserved_inputs_sha256": {
+    "scripts/inspect_hrcds_metadata_v121.py": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+    "scripts/continue_hrcds_metadata_v122.py": "f3cbc6b37a16b861421773bcdfb71465c600806f64d5c4bb4fb57c257d9be7e3",
+    "data/industrial-hrcds-v122-metadata/publisher-root-files.json": "760267f9147dfbaba4d55768eebca887695946b70b8b4d8eb0206b653b392854"
+  },
+  "preserved_V1_file_list": "data/industrial-hrcds-v122-metadata/publisher-root-files.json",
+  "requests": [
+    {
+      "name": "publisher-page",
+      "kind": "html",
+      "url": "https://data.mendeley.com/datasets/6x4dzzrs2h/2",
+      "byte_limit": 4194304
+    },
+    {
+      "name": "publisher-folders",
+      "kind": "json",
+      "url": "https://data.mendeley.com/public-api/datasets/6x4dzzrs2h/folders/2",
+      "byte_limit": 2097152
+    },
+    {
+      "name": "publisher-root-files",
+      "kind": "json",
+      "url": "https://data.mendeley.com/public-api/datasets/6x4dzzrs2h/files?folder_id=root&version=2&%24start=0&%24limit=1000",
+      "byte_limit": 2097152
+    }
+  ],
+  "aggregate_response_byte_limit": 8388608,
+  "storage_budget_bytes": 33554432,
+  "reserve_bytes": 1073741824,
+  "V1_HTTP_or_completed_stage_rerun_allowed": false,
+  "redirects_retries_nested_file_URLs_auth_contact_PII": false,
+  "source_photo_mask_download_or_decode_allowed": false,
+  "original_V1_and_V2_all_containers_records_protected": true,
+  "actual_photo_TEST_ids_roles_minima_native_GT_groups": "Not fixed; no binary content permitted",
+  "old_GT_roles_graphs_models_outputs_originals_failures_preserved": true,
+  "model_protocol_fixed": false,
+  "features_gradients_optimizer_CAL_TEST": 0
+}
