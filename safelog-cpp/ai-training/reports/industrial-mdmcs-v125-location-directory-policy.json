@@ -1,0 +1,45 @@
+{
+  "UTC": "2026-10-17T22:23:25.5014184Z",
+  "fixed_before_new_Location_HEAD_or_Range": true,
+  "dataset_DOI": "10.17632/6x4dzzrs2h.2",
+  "data_license": "CC BY 4.0",
+  "authors": [
+    "Pengwei Guo",
+    "Yi Bao"
+  ],
+  "script_sha256": "8ace1e7cdfdd557de14a638d689c5f3473e7f52734a03ba73d8140ecf3958c8d",
+  "preserved_inputs_sha256": {
+    "scripts/inspect_hrcds_metadata_v121.py": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+    "scripts/inspect_mdmcs_zip_directory_v124.py": "96e1d88da875f7f9b8ed07f25c68e2184d1ae46e4baab12100b21d6236abd257",
+    "data/industrial-mdmcs-v123-metadata/publisher-root-files.json": "0c6de49b7d7fda7072a7245f8a83c47040659861eaad09d36526f829b8aabcea",
+    "data/industrial-mdmcs-v123-metadata/all-listed-V2-root-files-protected-before-binary.json": "86e68810c402c63abb7aaefb234b79e7d912ab0c05754406c358016956fed270",
+    "data/industrial-mdmcs-v124-directory/publisher-HEAD-headers.json": "fbde3d80c679a75fcfc5424ba669ec8fe662a226666387392b50607a219c8f45"
+  },
+  "frozen_publisher_HEAD": "data/industrial-mdmcs-v124-directory/publisher-HEAD-headers.json",
+  "original_publisher_url": "https://data.mendeley.com/public-files/datasets/6x4dzzrs2h/files/474c3c1e-eb1f-4c2e-ae33-27bad59b5350/file_downloaded",
+  "url": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+  "expected_archive_bytes": 204919973,
+  "publisher_archive_SHA256_not_locally_verified": "0582f706a8d3d419f76021ee83a58e80a91c2b56bb4681e43a9089f0756e1bf5",
+  "limits": {
+    "max_central_directory_bytes": 4194304,
+    "max_members": 20000,
+    "max_declared_member_bytes": 134217728,
+    "max_declared_expanded_bytes": 4294967296
+  },
+  "aggregate_range_body_byte_limit": 4194326,
+  "storage_budget_bytes": 33554432,
+  "reserve_bytes": 1073741824,
+  "request_sequence": [
+    "Observed exact Location HEAD once with exact size/strong ETag/ranges/identity",
+    "EOCD final22 once after header guards",
+    "Central directory once after exact206/same ETag/If-Range guards"
+  ],
+  "original_publisher_endpoint_retry_V1_V2_metadata_or_v124_main_rerun_allowed": false,
+  "redirect_retry_alternate_endpoint_full_download_allowed": false,
+  "source_archive_member_content_pixels_QA_features_gradient_optimizer_CAL_TEST_allowed": false,
+  "all_archive_records_and_possible_copies_UNASSIGNED_protected": true,
+  "actual_photo_TEST_roles_native_GT_unknown_RGB_groups_graph_minima_verified": false,
+  "old_originals_failures_roles_GT_graphs_models_outputs_preserved": true,
+  "ready_for_training": false,
+  "model_protocol_fixed": false
+}
