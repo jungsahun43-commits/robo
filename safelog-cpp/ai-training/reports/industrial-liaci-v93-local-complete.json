@@ -1,0 +1,1024 @@
+{
+  "UTC": "2026-10-17T07:26:45.221583+00:00",
+  "policy_SHA256": "6df04e2a36142c2b2f92424ee1b8464cdda6a9767af1264c1b48d876c0e66c2e",
+  "rows": [
+    {
+      "image_id": 52,
+      "file_name": "image_0052.jpg",
+      "phase": "fit",
+      "size": [
+        640,
+        480
+      ],
+      "RGB_SHA256": "d1b11e52f4bfea3bb2f272068f01ef67754319810299b7216d63772803f98590",
+      "orientation_phashes": [
+        "0b867b369b4c2672",
+        "1d8d2693f97ca602",
+        "48253339ac56fba8",
+        "5a0c2e9ccce633d8",
+        "a52cd19c33e68cd8",
+        "b725cc3953d60ca8",
+        "e28fd9b306fc5102",
+        "f4a69436644cd972"
+      ],
+      "capture_metadata": {
+        "272": null,
+        "306": null,
+        "36867": null
+      },
+      "layers": {
+        "corrosion": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              294883
+            ],
+            [
+              [
+                255,
+                255,
+                255
+              ],
+              12317
+            ]
+          ],
+          "COCO_annotation_count": 1,
+          "PIL_reference_pixels": 12317,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 12317,
+          "black_pixels": 294883,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 307200,
+          "PIL_reference_white_intersection": 12317,
+          "PIL_reference_black_intersection": 0
+        },
+        "ship_hull": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              193236
+            ],
+            [
+              [
+                255,
+                255,
+                255
+              ],
+              113964
+            ]
+          ],
+          "COCO_annotation_count": 1,
+          "PIL_reference_pixels": 113964,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 113964,
+          "black_pixels": 193236,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 307200,
+          "PIL_reference_white_intersection": 113964,
+          "PIL_reference_black_intersection": 0
+        },
+        "paint_peel": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              279925
+            ],
+            [
+              [
+                255,
+                255,
+                255
+              ],
+              27275
+            ]
+          ],
+          "COCO_annotation_count": 1,
+          "PIL_reference_pixels": 27275,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 27275,
+          "black_pixels": 279925,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 307200,
+          "PIL_reference_white_intersection": 27275,
+          "PIL_reference_black_intersection": 0
+        },
+        "marine_growth": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              307200
+            ]
+          ],
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 0,
+          "black_pixels": 307200,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 307200,
+          "PIL_reference_white_intersection": 0,
+          "PIL_reference_black_intersection": 0
+        },
+        "defect": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              307200
+            ]
+          ],
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 0,
+          "black_pixels": 307200,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 307200,
+          "PIL_reference_white_intersection": 0,
+          "PIL_reference_black_intersection": 0
+        }
+      },
+      "segmentation_PNG": {
+        "mode": "RGB",
+        "palette": null,
+        "unique_count": 5,
+        "value_counts": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            192998
+          ],
+          [
+            [
+              0,
+              0,
+              255
+            ],
+            74832
+          ],
+          [
+            [
+              0,
+              255,
+              255
+            ],
+            960
+          ],
+          [
+            [
+              255,
+              0,
+              0
+            ],
+            26093
+          ],
+          [
+            [
+              255,
+              255,
+              0
+            ],
+            12317
+          ]
+        ],
+        "no_guessed_class_map": true
+      }
+    },
+    {
+      "image_id": 107,
+      "file_name": "image_0107.jpg",
+      "phase": "fit",
+      "size": [
+        1920,
+        1080
+      ],
+      "RGB_SHA256": "6db4cfbe83b45584468f1d41d6d7b90213ea39fd503be62893a4ef746d34df1a",
+      "orientation_phashes": [
+        "0126cd62ce618dfe",
+        "2b3d55012b6b59a6",
+        "748c9ac89bcbd854",
+        "7e9780ab7ec12c0c",
+        "8117ffab81c1d30c",
+        "be263062316172fe",
+        "d4bdaa01d46b86a6",
+        "eb8c65c864cb2754"
+      ],
+      "capture_metadata": {
+        "272": null,
+        "306": null,
+        "36867": null
+      },
+      "layers": {
+        "corrosion": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              2073600
+            ]
+          ],
+          "COCO_annotation_count": 2,
+          "PIL_reference_pixels": 29076,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 0,
+          "black_pixels": 2073600,
+          "PIL_reference_vs_white_disagreement": 29076,
+          "PIL_reference_vs_black_disagreement": 2044524,
+          "PIL_reference_white_intersection": 0,
+          "PIL_reference_black_intersection": 29076
+        },
+        "ship_hull": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              914583
+            ],
+            [
+              [
+                255,
+                255,
+                255
+              ],
+              1159017
+            ]
+          ],
+          "COCO_annotation_count": 3,
+          "PIL_reference_pixels": 1159017,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 1159017,
+          "black_pixels": 914583,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 2073600,
+          "PIL_reference_white_intersection": 1159017,
+          "PIL_reference_black_intersection": 0
+        },
+        "paint_peel": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              2073600
+            ]
+          ],
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 0,
+          "black_pixels": 2073600,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 2073600,
+          "PIL_reference_white_intersection": 0,
+          "PIL_reference_black_intersection": 0
+        },
+        "marine_growth": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              2068946
+            ],
+            [
+              [
+                255,
+                255,
+                255
+              ],
+              4654
+            ]
+          ],
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 4654,
+          "black_pixels": 2068946,
+          "PIL_reference_vs_white_disagreement": 4654,
+          "PIL_reference_vs_black_disagreement": 2068946,
+          "PIL_reference_white_intersection": 0,
+          "PIL_reference_black_intersection": 0
+        },
+        "defect": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              2073600
+            ]
+          ],
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 0,
+          "black_pixels": 2073600,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 2073600,
+          "PIL_reference_white_intersection": 0,
+          "PIL_reference_black_intersection": 0
+        }
+      },
+      "segmentation_PNG": {
+        "mode": "RGB",
+        "palette": null,
+        "unique_count": 5,
+        "value_counts": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            914583
+          ],
+          [
+            [
+              0,
+              0,
+              255
+            ],
+            995284
+          ],
+          [
+            [
+              0,
+              128,
+              0
+            ],
+            4654
+          ],
+          [
+            [
+              0,
+              255,
+              255
+            ],
+            24422
+          ],
+          [
+            [
+              128,
+              0,
+              128
+            ],
+            134657
+          ]
+        ],
+        "no_guessed_class_map": true
+      }
+    },
+    {
+      "image_id": 178,
+      "file_name": "image_0178.jpg",
+      "phase": "fit",
+      "size": [
+        640,
+        480
+      ],
+      "RGB_SHA256": "d284f68e45f6fcda2f56b7ec41acdc434195928ad81122072d0d23d69d513a9a",
+      "orientation_phashes": [
+        "07be4fa90dd47680",
+        "40fc07fc2d64b712",
+        "52d45e53587e232a",
+        "5526524678eee2b8",
+        "aa26ad4686ce1db8",
+        "ad14e103a77edc22",
+        "f8beb0a9f2d48980",
+        "ff8cf8ecd2444812"
+      ],
+      "capture_metadata": {
+        "272": null,
+        "306": null,
+        "36867": null
+      },
+      "layers": {
+        "corrosion": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              248226
+            ],
+            [
+              [
+                255,
+                255,
+                255
+              ],
+              58974
+            ]
+          ],
+          "COCO_annotation_count": 1,
+          "PIL_reference_pixels": 58974,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 58974,
+          "black_pixels": 248226,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 307200,
+          "PIL_reference_white_intersection": 58974,
+          "PIL_reference_black_intersection": 0
+        },
+        "ship_hull": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              143785
+            ],
+            [
+              [
+                255,
+                255,
+                255
+              ],
+              163415
+            ]
+          ],
+          "COCO_annotation_count": 1,
+          "PIL_reference_pixels": 163415,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 163415,
+          "black_pixels": 143785,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 307200,
+          "PIL_reference_white_intersection": 163415,
+          "PIL_reference_black_intersection": 0
+        },
+        "paint_peel": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              307200
+            ]
+          ],
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 0,
+          "black_pixels": 307200,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 307200,
+          "PIL_reference_white_intersection": 0,
+          "PIL_reference_black_intersection": 0
+        },
+        "marine_growth": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              307200
+            ]
+          ],
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 0,
+          "black_pixels": 307200,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 307200,
+          "PIL_reference_white_intersection": 0,
+          "PIL_reference_black_intersection": 0
+        },
+        "defect": {
+          "mode": "1",
+          "palette": null,
+          "BMP_signature": "BM",
+          "DIB_bytes": 40,
+          "bits_per_pixel": 1,
+          "pixel_offset": 62,
+          "native_RGB_colors_and_counts": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              307200
+            ]
+          ],
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "no_new_GT_or_original_exporter_claim": true,
+          "white_pixels": 0,
+          "black_pixels": 307200,
+          "PIL_reference_vs_white_disagreement": 0,
+          "PIL_reference_vs_black_disagreement": 307200,
+          "PIL_reference_white_intersection": 0,
+          "PIL_reference_black_intersection": 0
+        }
+      },
+      "segmentation_PNG": {
+        "mode": "RGB",
+        "palette": null,
+        "unique_count": 3,
+        "value_counts": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            143778
+          ],
+          [
+            [
+              0,
+              0,
+              255
+            ],
+            104448
+          ],
+          [
+            [
+              255,
+              255,
+              0
+            ],
+            58974
+          ]
+        ],
+        "no_guessed_class_map": true
+      }
+    },
+    {
+      "image_id": 1,
+      "file_name": "image_0001.jpg",
+      "phase": "fit",
+      "size": [
+        1920,
+        1080
+      ],
+      "actual_RGB_format": "PNG",
+      "RGB_SHA256": "af6b093b713035035d751944d66e9a48aae43146217d210dbf7787f257a0fe29",
+      "orientation_phashes": [
+        "4dddd9488988b5a6",
+        "5afa56e8ade95400",
+        "5cf65ce2dc2ae00c",
+        "6ff00362fcc301ea",
+        "a57aa9e856e9ab00",
+        "b65cf64876884aa6",
+        "e3e6a3e2232a1f0c",
+        "f0d0fc020743feaa"
+      ],
+      "layers": {
+        "corrosion": {
+          "mode": "1",
+          "white_pixels": 0,
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "ship_hull": {
+          "mode": "1",
+          "white_pixels": 1611046,
+          "COCO_annotation_count": 1,
+          "PIL_reference_pixels": 1611046,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "paint_peel": {
+          "mode": "1",
+          "white_pixels": 30820,
+          "COCO_annotation_count": 15,
+          "PIL_reference_pixels": 30820,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "marine_growth": {
+          "mode": "1",
+          "white_pixels": 0,
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "defect": {
+          "mode": "1",
+          "white_pixels": 0,
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        }
+      },
+      "segmentation_PNG": {
+        "mode": "RGB",
+        "palette": null,
+        "unique_count": 6,
+        "value_counts": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            422031
+          ],
+          [
+            [
+              0,
+              0,
+              255
+            ],
+            1253709
+          ],
+          [
+            [
+              0,
+              255,
+              255
+            ],
+            17316
+          ],
+          [
+            [
+              128,
+              0,
+              128
+            ],
+            40717
+          ],
+          [
+            [
+              255,
+              0,
+              0
+            ],
+            30820
+          ],
+          [
+            [
+              255,
+              165,
+              0
+            ],
+            309007
+          ]
+        ],
+        "no_guessed_class_map": true
+      }
+    },
+    {
+      "image_id": 3,
+      "file_name": "image_0003.jpg",
+      "phase": "fit",
+      "size": [
+        1920,
+        1080
+      ],
+      "actual_RGB_format": "PNG",
+      "RGB_SHA256": "a0d7cbaa1b15825207e4248c8cec952d05177bc2c3136a8a55220a5c6f3165af",
+      "orientation_phashes": [
+        "00000f3f7ffc2d6c",
+        "040d1f1c3f3f383a",
+        "51b54a962ad5ad54",
+        "56a54ad52a5738c6",
+        "a6b59596d5955214",
+        "a9a095d555578746",
+        "f21dc03c803f07be",
+        "fc0ac07f00fd926c"
+      ],
+      "layers": {
+        "corrosion": {
+          "mode": "1",
+          "white_pixels": 0,
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "ship_hull": {
+          "mode": "1",
+          "white_pixels": 1452754,
+          "COCO_annotation_count": 1,
+          "PIL_reference_pixels": 1452754,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "paint_peel": {
+          "mode": "1",
+          "white_pixels": 25450,
+          "COCO_annotation_count": 25,
+          "PIL_reference_pixels": 25451,
+          "PIL_reference_vs_white_disagreement": 1,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "marine_growth": {
+          "mode": "1",
+          "white_pixels": 0,
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "defect": {
+          "mode": "1",
+          "white_pixels": 0,
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        }
+      },
+      "segmentation_PNG": {
+        "mode": "RGB",
+        "palette": null,
+        "unique_count": 4,
+        "value_counts": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            614234
+          ],
+          [
+            [
+              0,
+              0,
+              255
+            ],
+            1104375
+          ],
+          [
+            [
+              255,
+              0,
+              0
+            ],
+            25450
+          ],
+          [
+            [
+              255,
+              165,
+              0
+            ],
+            329541
+          ]
+        ],
+        "no_guessed_class_map": true
+      }
+    },
+    {
+      "image_id": 8,
+      "file_name": "image_0008.jpg",
+      "phase": "fit",
+      "size": [
+        640,
+        480
+      ],
+      "actual_RGB_format": "JPEG",
+      "RGB_SHA256": "8b215dea411a41a0dde783e373fb2ae9faef604dc7965778e9c0cc998b583b15",
+      "orientation_phashes": [
+        "329a6436f9e66138",
+        "4c2ebfd94934d40a",
+        "67b3b19cac4c3492",
+        "7984ea731c9ec1e0",
+        "9a31ce9c534ccb92",
+        "b32e40d9b634ab4a",
+        "c6841571e39e7ea0",
+        "cd9a1b3606e68e38"
+      ],
+      "layers": {
+        "corrosion": {
+          "mode": "1",
+          "white_pixels": 0,
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "ship_hull": {
+          "mode": "1",
+          "white_pixels": 194428,
+          "COCO_annotation_count": 1,
+          "PIL_reference_pixels": 194428,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "paint_peel": {
+          "mode": "1",
+          "white_pixels": 28192,
+          "COCO_annotation_count": 6,
+          "PIL_reference_pixels": 28192,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "marine_growth": {
+          "mode": "1",
+          "white_pixels": 0,
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        },
+        "defect": {
+          "mode": "1",
+          "white_pixels": 0,
+          "COCO_annotation_count": 0,
+          "PIL_reference_pixels": 0,
+          "PIL_reference_vs_white_disagreement": 0,
+          "no_new_GT_or_original_exporter_claim": true
+        }
+      },
+      "segmentation_PNG": {
+        "mode": "RGB",
+        "palette": null,
+        "unique_count": 4,
+        "value_counts": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            112753
+          ],
+          [
+            [
+              0,
+              0,
+              255
+            ],
+            156587
+          ],
+          [
+            [
+              0,
+              255,
+              255
+            ],
+            9668
+          ],
+          [
+            [
+              255,
+              0,
+              0
+            ],
+            28192
+          ]
+        ],
+        "no_guessed_class_map": true
+      }
+    }
+  ],
+  "reused_numeric_RGB": 3,
+  "new_RGB_decodes": 3,
+  "new_BMP_decodes": 15,
+  "new_PNG_decodes": 3,
+  "new_visual_views": 0,
+  "new_download_bytes": 0,
+  "new_features_scores_gradients_optimizer": 0,
+  "ready_for_training": false,
+  "v90_pair_and_v91_format_failure_preserved": true,
+  "fullsource_graph_and_GT_contract_pending": true,
+  "future_budget": {
+    "free_bytes": 2041389056,
+    "remaining_RGB_members": 1887,
+    "preserve_compressed_and_header_bound_bytes": 943907623,
+    "reserve_bytes": 1073741824,
+    "graph_temp_activity_bound_bytes": 117440512,
+    "preparation_required_free_bytes": 2135089959,
+    "preparation_deficit_bytes": 93700903,
+    "preparation_plus_256MiB_run_required_free_bytes": 2403525415,
+    "with_run_deficit_bytes": 362136359,
+    "extra_mask_or_new_source_contract_not_included": true,
+    "all_fullsource_decode_and_acquisition_still_unapproved_until_separate_policy": true
+  }
+}
