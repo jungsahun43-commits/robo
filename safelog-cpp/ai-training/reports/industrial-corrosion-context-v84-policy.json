@@ -1,0 +1,41 @@
+{
+  "UTC": "2026-10-17T05:05:14.082606+00:00",
+  "fixed_before_new_FIT_context_features": true,
+  "sources": {
+    "scripts/probe_corrosion_context.py": "588d96dcb212ad524694b8383706278412078a78c5d859a8f0f2c9e9c84f8216",
+    "safelog_ai/corrosion_context_input.py": "7cde9be10b93ea00b9433061b9349627565684d11554dc1bbdca38b0448875b7",
+    "tests/test_corrosion_context_input.py": "1549ccb7fe157aef723c0753f8e0731f44cc3d6aefe511503105d16bbdd5f4e4"
+  },
+  "inputs": {
+    "data/industrial-corrosion-subpixel-v78/manifest.json": "4b2a9a8f1f37bf4515558b1cbcfccb56aceb7fde228986545402c7fa711df6e4",
+    "data/industrial-ostrava-masks-v61/manifest.json": "90ab369b28d8ad6955ca0f3114e04c1fd87f7fc464c66a28fbccc763407e4f8c",
+    "runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b",
+    "runs/industrial-ostrava-rust-mask-v62/fit-features.pt": "15822ab6d65621dce539eb9544c8eac2baf6eaec87cf6f260dffbc20ffbb7a51",
+    "runs/industrial-ostrava-rust-mask-v62/fit-cache.json": "60fb720c573e31d5c6c55bd4d59dc3c885c95af3f7ec8db4d706f2906eaf2725",
+    "reports/industrial-ostrava-v62-protocol.json": "8460792f43fa92297d5a418dc2a048264f370bec211468fa9ba956009418d121",
+    "reports/industrial-corrosion-views-v82-diagnosis.json": "e80d52d8dd504a367dc34e456611ad8459c85e615c5e268eb0c8655abf3f238e",
+    "reports/industrial-corrosion-teacher-retention-v83-results.json": "87ca80373d56bf3c7115748fb879d02833a95a288385597d3b4866c3f94fc78b",
+    "scripts/study_corrosion_native.py": "51e88cde9968349a0ce9c411426fdf65d22116589f0d13c21c0cf76d05f8cd8e",
+    "safelog_ai/corrosion_partial_mask.py": "ac979866742d56034da9d3c3f305723d78b5ffcac9dea2509d61335eedb49957"
+  },
+  "fixed_FIT_ids": {
+    "rios": [
+      "rios/107",
+      "rios/115",
+      "rios/137"
+    ],
+    "ostrava": [
+      "ostrava/train/01",
+      "ostrava/train/02",
+      "ostrava/train/03"
+    ]
+  },
+  "scope": "6FIT originals only, Rios/Ostrava sortedIDs first3each. For eachimage size-only grid first/middle/last distincttiles. NoGT/capture/category chosen crop. v83excluded unchanged; no learning, labelmetric, modelselection, newVAL_CAL_TEST or visualview.",
+  "feature": "Originalfrozenv62 whole512 probability. Roundaspectresize/centerfloorletterbox geometry; remove padding, bilinearprobability to native alignFalse, clampP[1e-6,1-1e-6], logit/8, clamp[-1,1], nativecrop512 withzero/neutralcontextpad, bilineardown128 alignFalse. Responsefeature notactualGT. OriginalRGB/GT unmodified.",
+  "reuse": "CompletedOstravaFITwholecache verified ID/raw/mask/encoder/protocol/SHA; useonlyselectedFIT3cachedheadviews. RiosFIT3wholeRGBfreshforward from originalencoded/rgbSHA. No nativeencoderneededforthisgeometryprobe. Newencoder3/parenthead6views,18contexttilefields, notnewnaturalphotos.",
+  "checks": "Everyvalidnativecrop roundtripexact, finite128feature and[-1,1]range, paddingzero, modelentirestatebeforeafterexact/cacheSHAunchanged. No GT/TEST scored; no newtrainablehead/gradient/optimizer. Metadataonlyoutput<32MiB/>=1GiBreserve.",
+  "next": "If compatible, separatelyfreeze ONE context-conditioned model/code/initializer/sampling/loss/VAL/CAL/oldguards/device/delta beforegradient. Additionalcontext weightszero andoriginalinitialoutputpreservation require their own numericcheck. Thisprobe isnotperformance improvement.",
+  "licenses": "RiosCC BY4.0 DOI10.17632/kcyn4nhv2c.1/OstravaCC BY4.0 DOI10.5281/zenodo.11235637/InsPLADCC BY-NC3.0/VTCC0/allparentterms retained",
+  "synthetic_units_passed": 3,
+  "independent_field_validation": false
+}
