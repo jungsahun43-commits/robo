@@ -1,0 +1,28 @@
+{
+  "UTC": "2026-10-17T06:12:24.491639+00:00",
+  "stage": "public ZIP metadata only, no member contents",
+  "URL": "https://liaci.sintef.cloud/download_data/data.zip",
+  "archive_bytes": 1044750953,
+  "ETag": "\"1726140227.0-1044750953-416943642\"",
+  "expected_Last_Modified": "Thu, 12 Sep 2024 11:23:47 GMT",
+  "source": "SINTEF LIACi official project -> public Dash layout Download data link",
+  "data_license": "CC BY-NC-SA4.0; noncommercial research/author/source/distribution/changes/SA, preserve third-party rights; not paper/code license",
+  "max_total_range_bytes": 16777216,
+  "max_directory_bytes": 8388608,
+  "reserve_bytes": 1073741824,
+  "HTTP": "Exact206 ContentRange/ContentLength/ETag/identity encoding; 200/redirect identity changes stop before body; no full fallback",
+  "ZIP": "Single disk, nonZIP64, stored/deflate only, <=50000 entries; safe unique paths/no symlink/encryption; directory metadata CRC declarations are not member CRC verification",
+  "TEST": "No image or annotation member payload in v87; identify original split before a separate acquisition/reservation/split/minimum/duplicate policy. All original evaluation images/copies remain held. No automatic TRAIN assignment.",
+  "new_photos_pixels_features_scores_gradients_optimizer": 0,
+  "model_protocol_fixed": false,
+  "code_SHA256": {
+    "scripts\\index_liaci_public.py": "dfaff741202e65b3d715292fdfb86dd3e95197d69eeb6ef56874d760920c6478",
+    "safelog_ai\\public_zip_metadata.py": "87f31914bd5bbbe3d99c7b3b0fdef09d849ffd9c79d222ee66c2633be6e3dcb8",
+    "tests\\test_public_zip_metadata.py": "37a39a78ddc9ee8efe02046928effc7941f0c5861287855e9fd593db86bb6592"
+  },
+  "evidence_SHA256": {
+    "liaci-layout.txt": "e6702ee06b80496f248abc0546980abafbdbe6b2abc0490b32809ab1fafafc66",
+    "liaci-download-HEAD.json": "a89c33b9036b8b19057d66f898a82db2e51042eab13273a932775f2b3e38cbf2",
+    "linked-metadata-receipts.json": "243566d5dd4ff01755df29872dcfe985309571b5ff68149c54e0864d5d215ff8"
+  }
+}
