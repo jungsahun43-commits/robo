@@ -1,0 +1,5836 @@
+{
+  "UTC": "2026-10-17T03:58:58.784212+00:00",
+  "FIT_aggregates": {
+    "rios": {
+      "photos": 15,
+      "mean_photo_balanced_BCE": {
+        "v62_whole": 1.5479545901922658,
+        "v62_native": 1.6784532517952802,
+        "v81_whole": 0.38047717229289346,
+        "v81_native": 0.06715166316543933
+      },
+      "mean_balanced_probability_MAE": {
+        "v62_input_MAE": 0.11611567147386571,
+        "v81_input_MAE": 0.16520991182575623,
+        "whole_head_MAE": 0.42766410938153665,
+        "native_head_MAE": 0.4363518524294098
+      },
+      "native_encoder_inputs": 200
+    },
+    "ostrava": {
+      "photos": 60,
+      "mean_photo_balanced_BCE": {
+        "v62_whole": 0.05225560958971541,
+        "v62_native": 0.2551751795686459,
+        "v81_whole": 0.16099166861105318,
+        "v81_native": 0.3321974661894611
+      },
+      "mean_balanced_probability_MAE": {
+        "v62_input_MAE": 0.1054033103166148,
+        "v81_input_MAE": 0.10861680986902987,
+        "whole_head_MAE": 0.0691962230601348,
+        "native_head_MAE": 0.1016092775738798
+      },
+      "native_encoder_inputs": 1500
+    }
+  },
+  "rows": [
+    {
+      "source": "rios",
+      "id": "rios/107",
+      "group": "rios76:rios/107",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 1.3097432302633782,
+          "classes": {
+            "0": {
+              "pixels": 4400,
+              "mean_probability": 0.008002778267413801,
+              "BCE": 0.008037387332874044
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.15193994024931454,
+              "BCE": 2.6114490731938824
+            }
+          },
+          "unknown_pixels": 1025600
+        },
+        "v62_native": {
+          "balanced_known_BCE": 1.4337529611164013,
+          "classes": {
+            "0": {
+              "pixels": 4400,
+              "mean_probability": 0.009047267790672116,
+              "BCE": 0.00908985075897707
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.1974528806505259,
+              "BCE": 2.8584160714738256
+            }
+          },
+          "unknown_pixels": 1025600
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.10518930070879823,
+          "classes": {
+            "0": {
+              "pixels": 4400,
+              "mean_probability": 0.10740618403503586,
+              "BCE": 0.13349718415829454
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9325076092556119,
+              "BCE": 0.07688141725930193
+            }
+          },
+          "unknown_pixels": 1025600
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.06320840366511546,
+          "classes": {
+            "0": {
+              "pixels": 4400,
+              "mean_probability": 0.042174740790347144,
+              "BCE": 0.04697191793110079
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.952314496587962,
+              "BCE": 0.07944488939913012
+            }
+          },
+          "unknown_pixels": 1025600
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.12751640693750232,
+        "v81_input_MAE": 0.07161834090948105,
+        "whole_head_MAE": 0.43998558446764946,
+        "native_head_MAE": 0.3942804019898176
+      },
+      "native_tiles": 9
+    },
+    {
+      "source": "rios",
+      "id": "rios/115",
+      "group": "rios76:rios/115",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.8372868387964636,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.006169296808191575,
+              "BCE": 0.006191129761235384
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.41704114749177823,
+              "BCE": 1.6683825478316918
+            }
+          },
+          "unknown_pixels": 990064
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.8538138031250245,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.005694928743847413,
+              "BCE": 0.00571290603033545
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.4415333421663381,
+              "BCE": 1.7019147002197137
+            }
+          },
+          "unknown_pixels": 990064
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.08660371544431335,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.10669498120364733,
+              "BCE": 0.11873487312439285
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9489051968455314,
+              "BCE": 0.054472557764233855
+            }
+          },
+          "unknown_pixels": 990064
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.05525221004952192,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.047882842865772546,
+              "BCE": 0.049945623509339
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9449700949713588,
+              "BCE": 0.06055879658970483
+            }
+          },
+          "unknown_pixels": 990064
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.15545564168132842,
+        "v81_input_MAE": 0.046070026233792305,
+        "whole_head_MAE": 0.3161948621273041,
+        "native_head_MAE": 0.27281232737004757
+      },
+      "native_tiles": 9
+    },
+    {
+      "source": "rios",
+      "id": "rios/137",
+      "group": "rios76:rios/137",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.6070672233419601,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.22956977576343343,
+              "BCE": 0.5778222653709479
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.7238904295954853,
+              "BCE": 0.6363121813129722
+            }
+          },
+          "unknown_pixels": 1991648
+        },
+        "v62_native": {
+          "balanced_known_BCE": 1.6515071591665182,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.2797416507175658,
+              "BCE": 0.39383954737525595
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.32217161739320727,
+              "BCE": 2.9091747709577804
+            }
+          },
+          "unknown_pixels": 1991648
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.2148756536822807,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.23997395550692455,
+              "BCE": 0.42115777945494687
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9914621060192585,
+              "BCE": 0.00859352790961452
+            }
+          },
+          "unknown_pixels": 1991648
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.02794193558523944,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.024691968079656363,
+              "BCE": 0.02521294547040627
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9702756599336863,
+              "BCE": 0.03067092570007261
+            }
+          },
+          "unknown_pixels": 1991648
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.36452940106391907,
+        "v81_input_MAE": 0.12318307720124722,
+        "whole_head_MAE": 0.23028108477592468,
+        "native_head_MAE": 0.4540860503911972
+      },
+      "native_tiles": 18
+    },
+    {
+      "source": "rios",
+      "id": "rios/195",
+      "group": "rios76:rios/195",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 1.846400372621302,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.12174642728082835,
+              "BCE": 0.3452882843405685
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.12961198486399372,
+              "BCE": 3.3475124609020357
+            }
+          },
+          "unknown_pixels": 1160884
+        },
+        "v62_native": {
+          "balanced_known_BCE": 2.277127463490457,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.1999978670917917,
+              "BCE": 0.38725387946819007
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.0463706603240571,
+              "BCE": 4.1670010475127235
+            }
+          },
+          "unknown_pixels": 1160884
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.13535675401400404,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.15714293846487998,
+              "BCE": 0.17652597760514793
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.915392579510808,
+              "BCE": 0.09418753042286014
+            }
+          },
+          "unknown_pixels": 1160884
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.0362361897232938,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.04574297332228162,
+              "BCE": 0.04829946436914117
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9769129148423672,
+              "BCE": 0.024172915077446434
+            }
+          },
+          "unknown_pixels": 1160884
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.16230929642915726,
+        "v81_input_MAE": 0.0904647670686245,
+        "whole_head_MAE": 0.4814374968409538,
+        "native_head_MAE": 0.5618387535214424
+      },
+      "native_tiles": 8
+    },
+    {
+      "source": "rios",
+      "id": "rios/199",
+      "group": "rios76:rios/199",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 2.0889955722910023,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.33048527886741796,
+              "BCE": 0.6662759153205409
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.14250360118958633,
+              "BCE": 3.5117152292614637
+            }
+          },
+          "unknown_pixels": 343536
+        },
+        "v62_native": {
+          "balanced_known_BCE": 2.30430525897844,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.32061518698738656,
+              "BCE": 0.7041604600762567
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.13830657771794358,
+              "BCE": 3.904450057880623
+            }
+          },
+          "unknown_pixels": 343536
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.2208479166121635,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.22763910519704222,
+              "BCE": 0.33507049270587475
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9054645261242986,
+              "BCE": 0.10662534051845222
+            }
+          },
+          "unknown_pixels": 343536
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.09144843558654298,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.06184055116982199,
+              "BCE": 0.07122743934682058
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9035492680966855,
+              "BCE": 0.11166943182626536
+            }
+          },
+          "unknown_pixels": 343536
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.07253539189696312,
+        "v81_input_MAE": 0.10100079700350761,
+        "whole_head_MAE": 0.49476028978824615,
+        "native_head_MAE": 0.5171262472867966
+      },
+      "native_tiles": 2
+    },
+    {
+      "source": "rios",
+      "id": "rios/205",
+      "group": "rios76:rios/205",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 1.3244853994040446,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.011051831951830536,
+              "BCE": 0.01111703011880644
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.13135328074917196,
+              "BCE": 2.6378537686892827
+            }
+          },
+          "unknown_pixels": 6805248
+        },
+        "v62_native": {
+          "balanced_known_BCE": 1.085655405477524,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.010805734106223099,
+              "BCE": 0.010866769085598988
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.23468712994968519,
+              "BCE": 2.1604440418694493
+            }
+          },
+          "unknown_pixels": 6805248
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.047392566314080446,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.06068299516569823,
+              "BCE": 0.06378018822990429
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9699324128776788,
+              "BCE": 0.031004944398256604
+            }
+          },
+          "unknown_pixels": 6805248
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.04088521049445823,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.03156654357246589,
+              "BCE": 0.03300123100689104
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9548012988120318,
+              "BCE": 0.048769189982025424
+            }
+          },
+          "unknown_pixels": 6805248
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.10697903938125819,
+        "v81_input_MAE": 0.04230272024869919,
+        "whole_head_MAE": 0.4441051408648491,
+        "native_head_MAE": 0.3708584224805236
+      },
+      "native_tiles": 50
+    },
+    {
+      "source": "rios",
+      "id": "rios/215",
+      "group": "rios76:rios/215",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 1.6298523823571958,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.007099884423310868,
+              "BCE": 0.007126101988214162
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.10075297912815585,
+              "BCE": 3.2525786627261772
+            }
+          },
+          "unknown_pixels": 1942048
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.9428186080418591,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.011986521816346794,
+              "BCE": 0.012071229677633969
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.32559455176233315,
+              "BCE": 1.8735659864060843
+            }
+          },
+          "unknown_pixels": 1942048
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.4044310712774893,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.29827298091724513,
+              "BCE": 0.37942978406561384
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.689321521639824,
+              "BCE": 0.42943235848936473
+            }
+          },
+          "unknown_pixels": 1942048
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.0409067399249126,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.03175987810397055,
+              "BCE": 0.033014029796890235
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9598517691101879,
+              "BCE": 0.04879945005293497
+            }
+          },
+          "unknown_pixels": 1942048
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.14367688889615238,
+        "v81_input_MAE": 0.27058035135269165,
+        "whole_head_MAE": 0.43987083435058594,
+        "native_head_MAE": 0.32809145003557205
+      },
+      "native_tiles": 12
+    },
+    {
+      "source": "rios",
+      "id": "rios/217",
+      "group": "rios76:rios/217",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 1.4453056933127093,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.008125133095425554,
+              "BCE": 0.008160208880801493
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.10802713249786756,
+              "BCE": 2.882451177744617
+            }
+          },
+          "unknown_pixels": 340336
+        },
+        "v62_native": {
+          "balanced_known_BCE": 1.7325617744968334,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.008910057633649557,
+              "BCE": 0.008953995677274226
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.059021597203915005,
+              "BCE": 3.4561695533163923
+            }
+          },
+          "unknown_pixels": 340336
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.08535221918725713,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.0913542682249099,
+              "BCE": 0.10975297619426186
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9464540316835046,
+              "BCE": 0.060951462180252415
+            }
+          },
+          "unknown_pixels": 340336
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.037732039686132854,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.031430380646372214,
+              "BCE": 0.034005517013722356
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9629463078528643,
+              "BCE": 0.041458562358543345
+            }
+          },
+          "unknown_pixels": 340336
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.03160562505945563,
+        "v81_input_MAE": 0.05544350482523441,
+        "whole_head_MAE": 0.4608280099928379,
+        "native_head_MAE": 0.46348461229354143
+      },
+      "native_tiles": 2
+    },
+    {
+      "source": "rios",
+      "id": "rios/220",
+      "group": "rios76:rios/220",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 2.428401427632884,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.2594548284325283,
+              "BCE": 0.40936198139417534
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.013333229969837703,
+              "BCE": 4.447440873871592
+            }
+          },
+          "unknown_pixels": 169936
+        },
+        "v62_native": {
+          "balanced_known_BCE": 2.362469827790121,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.05822672325081658,
+              "BCE": 0.06459824973347414
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.009688597131287679,
+              "BCE": 4.660341405846768
+            }
+          },
+          "unknown_pixels": 169936
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.9633989593790226,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.4796114597627893,
+              "BCE": 1.2749601585287127
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.5508532988876105,
+              "BCE": 0.6518377602293326
+            }
+          },
+          "unknown_pixels": 169936
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.24075748468608943,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.1757621439099312,
+              "BCE": 0.20696287125524027
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.7650007054656744,
+              "BCE": 0.2745520981169386
+            }
+          },
+          "unknown_pixels": 169936
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.10888498625718057,
+        "v81_input_MAE": 0.28429918736219406,
+        "whole_head_MAE": 0.37883830070495605,
+        "native_head_MAE": 0.4364387020468712
+      },
+      "native_tiles": 4
+    },
+    {
+      "source": "rios",
+      "id": "rios/246",
+      "group": "rios76:rios/246",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.9927418326149487,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.032800012756837534,
+              "BCE": 0.03371943022815717
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.20183542981790378,
+              "BCE": 1.9517642350017403
+            }
+          },
+          "unknown_pixels": 712000
+        },
+        "v62_native": {
+          "balanced_known_BCE": 2.08942125123033,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.012927991427015513,
+              "BCE": 0.013017172700727483
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.023891050339560023,
+              "BCE": 4.165825329759933
+            }
+          },
+          "unknown_pixels": 712000
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.5940180495797382,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.4789156967923045,
+              "BCE": 1.169639379611391
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9818377805650235,
+              "BCE": 0.01839671954808546
+            }
+          },
+          "unknown_pixels": 712000
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.07043242683301137,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.08971151889138855,
+              "BCE": 0.10286153210144323
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9632023139595985,
+              "BCE": 0.03800332156457952
+            }
+          },
+          "unknown_pixels": 712000
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.10271785221993923,
+        "v81_input_MAE": 0.20756992511451244,
+        "whole_head_MAE": 0.6130589991807938,
+        "native_head_MAE": 0.508050974458456
+      },
+      "native_tiles": 6
+    },
+    {
+      "source": "rios",
+      "id": "rios/249",
+      "group": "rios76:rios/249",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 1.6380113742311293,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.012855287483194843,
+              "BCE": 0.012940655490019654
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.11066338534257375,
+              "BCE": 3.263082092972239
+            }
+          },
+          "unknown_pixels": 1723680
+        },
+        "v62_native": {
+          "balanced_known_BCE": 1.759664909274996,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.010075996318482794,
+              "BCE": 0.010127732073927953
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.051298332283971834,
+              "BCE": 3.5092020864760642
+            }
+          },
+          "unknown_pixels": 1723680
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.3687194165346697,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.1418140001455322,
+              "BCE": 0.1579865371881979
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.6683285145387053,
+              "BCE": 0.5794522958811416
+            }
+          },
+          "unknown_pixels": 1723680
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.018011099993887926,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.024610260893183293,
+              "BCE": 0.025084852588076283
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9893741776198148,
+              "BCE": 0.010937347399699567
+            }
+          },
+          "unknown_pixels": 1723680
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.05989743920508772,
+        "v81_input_MAE": 0.2191610224545002,
+        "whole_head_MAE": 0.34331194311380386,
+        "native_head_MAE": 0.47732379101216793
+      },
+      "native_tiles": 14
+    },
+    {
+      "source": "rios",
+      "id": "rios/26",
+      "group": "rios76:rios/26",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 1.980494113765262,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.010829479113803246,
+              "BCE": 0.01089270874699358
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.026052217569202184,
+              "BCE": 3.9500955187835305
+            }
+          },
+          "unknown_pixels": 2884736
+        },
+        "v62_native": {
+          "balanced_known_BCE": 2.0463016192745487,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.009412456559948624,
+              "BCE": 0.009459641932393703
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.027690045296330935,
+              "BCE": 4.083143596616703
+            }
+          },
+          "unknown_pixels": 2884736
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.4283611054222508,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.27859339389018717,
+              "BCE": 0.47626900642179826
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.7318161072656513,
+              "BCE": 0.3804532044227033
+            }
+          },
+          "unknown_pixels": 2884736
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.12577869189019722,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.09371416941029019,
+              "BCE": 0.15425675009012063
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9197504077591002,
+              "BCE": 0.09730063369027382
+            }
+          },
+          "unknown_pixels": 2884736
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.014697280363179743,
+        "v81_input_MAE": 0.2339547649025917,
+        "whole_head_MAE": 0.4867638945579529,
+        "native_head_MAE": 0.48907872289419174
+      },
+      "native_tiles": 18
+    },
+    {
+      "source": "rios",
+      "id": "rios/268",
+      "group": "rios76:rios/268",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 1.4072446682763422,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.0949831608501263,
+              "BCE": 0.12048137895766628
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.14321131817926652,
+              "BCE": 2.694007957595018
+            }
+          },
+          "unknown_pixels": 1403280
+        },
+        "v62_native": {
+          "balanced_known_BCE": 1.8171750489179208,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.009238039166608359,
+              "BCE": 0.00928540306409812
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.05306128824967891,
+              "BCE": 3.6250646947717433
+            }
+          },
+          "unknown_pixels": 1403280
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 1.0661294237531984,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.5666302517838776,
+              "BCE": 2.090215058339114
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9598429264128208,
+              "BCE": 0.04204378916728288
+            }
+          },
+          "unknown_pixels": 1403280
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.054347575903075596,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.07019823676114902,
+              "BCE": 0.07517596045775672
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9678872159719467,
+              "BCE": 0.03351919134839447
+            }
+          },
+          "unknown_pixels": 1403280
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.09425431862473488,
+        "v81_input_MAE": 0.26808546110987663,
+        "whole_head_MAE": 0.6441393494606018,
+        "native_head_MAE": 0.48790764808654785
+      },
+      "native_tiles": 8
+    },
+    {
+      "source": "rios",
+      "id": "rios/48",
+      "group": "rios76:rios/48",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 2.193986785767746,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.011758403279585763,
+              "BCE": 0.011832002781517269
+            },
+            "1": {
+              "pixels": 3600,
+              "mean_probability": 0.012979971245707322,
+              "BCE": 4.376141568753975
+            }
+          },
+          "unknown_pixels": 4159202
+        },
+        "v62_native": {
+          "balanced_known_BCE": 1.3534302991738416,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.011137311728554778,
+              "BCE": 0.01120172706371444
+            },
+            "1": {
+              "pixels": 3600,
+              "mean_probability": 0.23917119654451705,
+              "BCE": 2.695658871283969
+            }
+          },
+          "unknown_pixels": 4159202
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.8114768100481186,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.04226061366102658,
+              "BCE": 0.04348830920764347
+            },
+            "1": {
+              "pixels": 3600,
+              "mean_probability": 0.30514187748440436,
+              "BCE": 1.5794653108885937
+            }
+          },
+          "unknown_pixels": 4159202
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.05406822166584066,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.02997250032686861,
+              "BCE": 0.031137041916359513
+            },
+            "1": {
+              "pixels": 3600,
+              "mean_probability": 0.9473542438550956,
+              "BCE": 0.07699940141532181
+            }
+          },
+          "unknown_pixels": 4159202
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.115095583954826,
+        "v81_input_MAE": 0.33768359664827585,
+        "whole_head_MAE": 0.161332075484097,
+        "native_head_MAE": 0.36557671893388033
+      },
+      "native_tiles": 28
+    },
+    {
+      "source": "rios",
+      "id": "rios/93",
+      "group": "rios76:rios/93",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 1.4893019382076245,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.009913373294402845,
+              "BCE": 0.009967227472142345
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.0897114461736055,
+              "BCE": 2.9686366489431064
+            }
+          },
+          "unknown_pixels": 1339456
+        },
+        "v62_native": {
+          "balanced_known_BCE": 1.4667933873743864,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.00973207576747518,
+              "BCE": 0.009782523072497376
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.1798835872845957,
+              "BCE": 2.9238042516762754
+            }
+          },
+          "unknown_pixels": 1339456
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.1750046224360166,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.18007765437988565,
+              "BCE": 0.2096577742463205
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.879654758863151,
+              "BCE": 0.14035147062571268
+            }
+          },
+          "unknown_pixels": 1339456
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.05026828179427027,
+          "classes": {
+            "0": {
+              "pixels": 4000,
+              "mean_probability": 0.05143635606672615,
+              "BCE": 0.0666322040208179
+            },
+            "1": {
+              "pixels": 4000,
+              "mean_probability": 0.9712690475434065,
+              "BCE": 0.03390435956772264
+            }
+          },
+          "unknown_pixels": 1339456
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.08157992013730109,
+        "v81_input_MAE": 0.12673113495111465,
+        "whole_head_MAE": 0.48005377501249313,
+        "native_head_MAE": 0.4183229636400938
+      },
+      "native_tiles": 12
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/01",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/01.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.026762024808516624,
+          "classes": {
+            "0": {
+              "pixels": 4022814,
+              "mean_probability": 0.02197562770330436,
+              "BCE": 0.03263930706978931
+            },
+            "1": {
+              "pixels": 171490,
+              "mean_probability": 0.9800654881552737,
+              "BCE": 0.020884742547243935
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.08017142237463892,
+          "classes": {
+            "0": {
+              "pixels": 4022814,
+              "mean_probability": 0.05244425706346091,
+              "BCE": 0.09301404519150652
+            },
+            "1": {
+              "pixels": 171490,
+              "mean_probability": 0.9519139750051447,
+              "BCE": 0.06732879955777134
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.08488804772098192,
+          "classes": {
+            "0": {
+              "pixels": 4022814,
+              "mean_probability": 0.09049577747605712,
+              "BCE": 0.16673862968165723
+            },
+            "1": {
+              "pixels": 171490,
+              "mean_probability": 0.9969878291435871,
+              "BCE": 0.0030374657603066003
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.2787624588518416,
+          "classes": {
+            "0": {
+              "pixels": 4022814,
+              "mean_probability": 0.21371630604788677,
+              "BCE": 0.5353726563566082
+            },
+            "1": {
+              "pixels": 171490,
+              "mean_probability": 0.9798432567876699,
+              "BCE": 0.022152261347074886
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.04228280857205391,
+        "v81_input_MAE": 0.09490820299834013,
+        "whole_head_MAE": 0.04351767152547836,
+        "native_head_MAE": 0.09805546514689922
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/02",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/02.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.03312421512391159,
+          "classes": {
+            "0": {
+              "pixels": 2792430,
+              "mean_probability": 0.028133652381912014,
+              "BCE": 0.03241903209614271
+            },
+            "1": {
+              "pixels": 1401874,
+              "mean_probability": 0.9677121499450523,
+              "BCE": 0.033829398151680456
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.10843118337765786,
+          "classes": {
+            "0": {
+              "pixels": 2792430,
+              "mean_probability": 0.05073597582020295,
+              "BCE": 0.08203466257831431
+            },
+            "1": {
+              "pixels": 1401874,
+              "mean_probability": 0.8986658937007503,
+              "BCE": 0.13482770417700143
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.07519158175494109,
+          "classes": {
+            "0": {
+              "pixels": 2792430,
+              "mean_probability": 0.08301789213480827,
+              "BCE": 0.1251577643647514
+            },
+            "1": {
+              "pixels": 1401874,
+              "mean_probability": 0.9752220855253518,
+              "BCE": 0.02522539914513079
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.08199126418690651,
+          "classes": {
+            "0": {
+              "pixels": 2792430,
+              "mean_probability": 0.04280256368491802,
+              "BCE": 0.05536340234501912
+            },
+            "1": {
+              "pixels": 1401874,
+              "mean_probability": 0.911096685220063,
+              "BCE": 0.1086191260287939
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.061754440888762474,
+        "v81_input_MAE": 0.06652463600039482,
+        "whole_head_MAE": 0.03458933439105749,
+        "native_head_MAE": 0.035331654362380505
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/03",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/03.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.07304576074300834,
+          "classes": {
+            "0": {
+              "pixels": 3453759,
+              "mean_probability": 0.05223395959996065,
+              "BCE": 0.0817313584234701
+            },
+            "1": {
+              "pixels": 740545,
+              "mean_probability": 0.9486578245420006,
+              "BCE": 0.06436016306254656
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.3608346694337791,
+          "classes": {
+            "0": {
+              "pixels": 3453759,
+              "mean_probability": 0.02446914841023135,
+              "BCE": 0.03364929794759796
+            },
+            "1": {
+              "pixels": 740545,
+              "mean_probability": 0.7148676182570779,
+              "BCE": 0.6880200409199603
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.317977587041532,
+          "classes": {
+            "0": {
+              "pixels": 3453759,
+              "mean_probability": 0.2777266296351873,
+              "BCE": 0.6175163104782936
+            },
+            "1": {
+              "pixels": 740545,
+              "mean_probability": 0.9823600904319584,
+              "BCE": 0.018438863604770386
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.1961620029796619,
+          "classes": {
+            "0": {
+              "pixels": 3453759,
+              "mean_probability": 0.11604076689092375,
+              "BCE": 0.23972702900141923
+            },
+            "1": {
+              "pixels": 740545,
+              "mean_probability": 0.8970787672958361,
+              "BCE": 0.15259697695790456
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.1402349229902029,
+        "v81_input_MAE": 0.13720965012907982,
+        "whole_head_MAE": 0.13273900374770164,
+        "native_head_MAE": 0.15073993429541588
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/04",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/04.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.05486175258956687,
+          "classes": {
+            "1": {
+              "pixels": 4194304,
+              "mean_probability": 0.9467677800809469,
+              "BCE": 0.05486175258956687
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.07808564020302014,
+          "classes": {
+            "1": {
+              "pixels": 4194304,
+              "mean_probability": 0.9298280219032318,
+              "BCE": 0.07808564020302014
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.07014265183361024,
+          "classes": {
+            "1": {
+              "pixels": 4194304,
+              "mean_probability": 0.9340870952916092,
+              "BCE": 0.07014265183361024
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.06434003832083052,
+          "classes": {
+            "1": {
+              "pixels": 4194304,
+              "mean_probability": 0.9388567051935883,
+              "BCE": 0.06434003832083052
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.029683589935302734,
+        "v81_input_MAE": 0.03764311969280243,
+        "whole_head_MAE": 0.02758430317044258,
+        "native_head_MAE": 0.024389198049902916
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/05",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/05.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.034362724774303625,
+          "classes": {
+            "0": {
+              "pixels": 3412085,
+              "mean_probability": 0.03175536682946983,
+              "BCE": 0.04159095734583353
+            },
+            "1": {
+              "pixels": 782219,
+              "mean_probability": 0.9750841408721181,
+              "BCE": 0.02713449220277372
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.1886059715232702,
+          "classes": {
+            "0": {
+              "pixels": 3412085,
+              "mean_probability": 0.019879528151564567,
+              "BCE": 0.02634618959578158
+            },
+            "1": {
+              "pixels": 782219,
+              "mean_probability": 0.8075390715849948,
+              "BCE": 0.3508657534507588
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.09916258334651563,
+          "classes": {
+            "0": {
+              "pixels": 3412085,
+              "mean_probability": 0.09746746314503514,
+              "BCE": 0.18765352947806135
+            },
+            "1": {
+              "pixels": 782219,
+              "mean_probability": 0.9894134080266185,
+              "BCE": 0.010671637214969927
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.10831794025199103,
+          "classes": {
+            "0": {
+              "pixels": 3412085,
+              "mean_probability": 0.09030881005138836,
+              "BCE": 0.16631568366000446
+            },
+            "1": {
+              "pixels": 782219,
+              "mean_probability": 0.9542073034363873,
+              "BCE": 0.05032019684397759
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.09699666313827038,
+        "v81_input_MAE": 0.05306861363351345,
+        "whole_head_MAE": 0.04089248413220048,
+        "native_head_MAE": 0.11145702749490738
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/06",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/06.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.060277545200972615,
+          "classes": {
+            "0": {
+              "pixels": 3246039,
+              "mean_probability": 0.04085580283160269,
+              "BCE": 0.05646543396170773
+            },
+            "1": {
+              "pixels": 948265,
+              "mean_probability": 0.9576567037233089,
+              "BCE": 0.06408965644023751
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.23623781996229076,
+          "classes": {
+            "0": {
+              "pixels": 3246039,
+              "mean_probability": 0.0337461983549291,
+              "BCE": 0.05127987907472503
+            },
+            "1": {
+              "pixels": 948265,
+              "mean_probability": 0.7943677173516446,
+              "BCE": 0.4211957608498565
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.18225598850694025,
+          "classes": {
+            "0": {
+              "pixels": 3246039,
+              "mean_probability": 0.16205956368318516,
+              "BCE": 0.3391483835143402
+            },
+            "1": {
+              "pixels": 948265,
+              "mean_probability": 0.9789805745739836,
+              "BCE": 0.025363593499540312
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.2708217821721077,
+          "classes": {
+            "0": {
+              "pixels": 3246039,
+              "mean_probability": 0.15075083831324096,
+              "BCE": 0.3547406872931622
+            },
+            "1": {
+              "pixels": 948265,
+              "mean_probability": 0.8735034533701087,
+              "BCE": 0.18690287705105313
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.10971519723534584,
+        "v81_input_MAE": 0.1146094985306263,
+        "whole_head_MAE": 0.07310912013053894,
+        "native_head_MAE": 0.11346372961997986
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/07",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/07.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.048210970593762933,
+          "classes": {
+            "0": {
+              "pixels": 33010,
+              "mean_probability": 0.02866748913104644,
+              "BCE": 0.03659657112723072
+            },
+            "1": {
+              "pixels": 4161294,
+              "mean_probability": 0.9433111558936955,
+              "BCE": 0.05982537006029515
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.15919346439905097,
+          "classes": {
+            "0": {
+              "pixels": 33010,
+              "mean_probability": 0.06355608683327053,
+              "BCE": 0.10532449518205711
+            },
+            "1": {
+              "pixels": 4161294,
+              "mean_probability": 0.8582588442416141,
+              "BCE": 0.21306243361604485
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.3883708651818923,
+          "classes": {
+            "0": {
+              "pixels": 33010,
+              "mean_probability": 0.3388714346309328,
+              "BCE": 0.6912987056275965
+            },
+            "1": {
+              "pixels": 4161294,
+              "mean_probability": 0.9208486316042924,
+              "BCE": 0.08544302473618808
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.3929189823496359,
+          "classes": {
+            "0": {
+              "pixels": 33010,
+              "mean_probability": 0.35428159040521906,
+              "BCE": 0.6959252694127713
+            },
+            "1": {
+              "pixels": 4161294,
+              "mean_probability": 0.920065486719054,
+              "BCE": 0.0899126952865005
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.07347838394343853,
+        "v81_input_MAE": 0.11123702675104141,
+        "whole_head_MAE": 0.1785679031163454,
+        "native_head_MAE": 0.1932997740805149
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/08",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/08.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.06954986476431745,
+          "classes": {
+            "0": {
+              "pixels": 2321213,
+              "mean_probability": 0.05435500207914129,
+              "BCE": 0.0739020163460151
+            },
+            "1": {
+              "pixels": 1873091,
+              "mean_probability": 0.9433721200189061,
+              "BCE": 0.06519771318261978
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.2434517112540711,
+          "classes": {
+            "0": {
+              "pixels": 2321213,
+              "mean_probability": 0.049073488754074475,
+              "BCE": 0.07852196006566316
+            },
+            "1": {
+              "pixels": 1873091,
+              "mean_probability": 0.7924402674357628,
+              "BCE": 0.4083814624424791
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.1601670742529377,
+          "classes": {
+            "0": {
+              "pixels": 2321213,
+              "mean_probability": 0.17489303016585042,
+              "BCE": 0.2833272763666479
+            },
+            "1": {
+              "pixels": 1873091,
+              "mean_probability": 0.9643482898443898,
+              "BCE": 0.03700687213922747
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.24164701222437085,
+          "classes": {
+            "0": {
+              "pixels": 2321213,
+              "mean_probability": 0.15344507022579082,
+              "BCE": 0.3178423824730992
+            },
+            "1": {
+              "pixels": 1873091,
+              "mean_probability": 0.887316384530177,
+              "BCE": 0.1654516419756425
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.10743370838463306,
+        "v81_input_MAE": 0.10077256336808205,
+        "whole_head_MAE": 0.07355096284300089,
+        "native_head_MAE": 0.10743691772222519
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/09",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/09.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.04807096324325213,
+          "classes": {
+            "0": {
+              "pixels": 2575026,
+              "mean_probability": 0.04349366136520325,
+              "BCE": 0.056877749665177044
+            },
+            "1": {
+              "pixels": 1619278,
+              "mean_probability": 0.9633078132898742,
+              "BCE": 0.03926417682132721
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.3805253707821469,
+          "classes": {
+            "0": {
+              "pixels": 2575026,
+              "mean_probability": 0.04342758384040301,
+              "BCE": 0.07952628608877768
+            },
+            "1": {
+              "pixels": 1619278,
+              "mean_probability": 0.7233979511535371,
+              "BCE": 0.6815244554755161
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.15146896958368244,
+          "classes": {
+            "0": {
+              "pixels": 2575026,
+              "mean_probability": 0.14378469364426014,
+              "BCE": 0.2736912139905523
+            },
+            "1": {
+              "pixels": 1619278,
+              "mean_probability": 0.9717066854413134,
+              "BCE": 0.02924672517681261
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.31371791708665364,
+          "classes": {
+            "0": {
+              "pixels": 2575026,
+              "mean_probability": 0.12361616585147416,
+              "BCE": 0.33188111522236285
+            },
+            "1": {
+              "pixels": 1619278,
+              "mean_probability": 0.8340220918878585,
+              "BCE": 0.2955547189509444
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.14493155479431152,
+        "v81_input_MAE": 0.10535987094044685,
+        "whole_head_MAE": 0.05835630698129535,
+        "native_head_MAE": 0.10555236041545868
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/10",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/10.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.07098219613945356,
+          "classes": {
+            "0": {
+              "pixels": 1567895,
+              "mean_probability": 0.053359883672338834,
+              "BCE": 0.08297991586123334
+            },
+            "1": {
+              "pixels": 2626409,
+              "mean_probability": 0.9462228775747904,
+              "BCE": 0.05898447641767377
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.3867825198861482,
+          "classes": {
+            "0": {
+              "pixels": 1567895,
+              "mean_probability": 0.12149474936498621,
+              "BCE": 0.2078154802789958
+            },
+            "1": {
+              "pixels": 2626409,
+              "mean_probability": 0.7448716383987223,
+              "BCE": 0.5657495594933006
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.14425535501719453,
+          "classes": {
+            "0": {
+              "pixels": 1567895,
+              "mean_probability": 0.133269925241169,
+              "BCE": 0.2401714333997108
+            },
+            "1": {
+              "pixels": 2626409,
+              "mean_probability": 0.9533974200205375,
+              "BCE": 0.04833927663467823
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.22354323839832108,
+          "classes": {
+            "0": {
+              "pixels": 1567895,
+              "mean_probability": 0.10125046346570844,
+              "BCE": 0.18327636743399958
+            },
+            "1": {
+              "pixels": 2626409,
+              "mean_probability": 0.8335824487607092,
+              "BCE": 0.2638101093626426
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.16259726136922836,
+        "v81_input_MAE": 0.10627681389451027,
+        "whole_head_MAE": 0.054176745004951954,
+        "native_head_MAE": 0.09993526712059975
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/11",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/11.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.06907388163909427,
+          "classes": {
+            "0": {
+              "pixels": 3096508,
+              "mean_probability": 0.05144089528378336,
+              "BCE": 0.07219571696680685
+            },
+            "1": {
+              "pixels": 1097796,
+              "mean_probability": 0.9476328631566107,
+              "BCE": 0.06595204631138168
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.26849079760425415,
+          "classes": {
+            "0": {
+              "pixels": 3096508,
+              "mean_probability": 0.08013413545201639,
+              "BCE": 0.14265117610873143
+            },
+            "1": {
+              "pixels": 1097796,
+              "mean_probability": 0.8035089968681189,
+              "BCE": 0.3943304190997769
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.15738051540647746,
+          "classes": {
+            "0": {
+              "pixels": 3096508,
+              "mean_probability": 0.16912730579485266,
+              "BCE": 0.2883509086080313
+            },
+            "1": {
+              "pixels": 1097796,
+              "mean_probability": 0.9765221299380192,
+              "BCE": 0.02641012220492362
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.4073732787698848,
+          "classes": {
+            "0": {
+              "pixels": 3096508,
+              "mean_probability": 0.24148613434440555,
+              "BCE": 0.5905454400930513
+            },
+            "1": {
+              "pixels": 1097796,
+              "mean_probability": 0.86425115431587,
+              "BCE": 0.2242011174467182
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.11712134256958961,
+        "v81_input_MAE": 0.14437047019600868,
+        "whole_head_MAE": 0.07488871086388826,
+        "native_head_MAE": 0.14918668568134308
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/12",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/12.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.10917991044567388,
+          "classes": {
+            "0": {
+              "pixels": 3210341,
+              "mean_probability": 0.08520092979138387,
+              "BCE": 0.1643215474403017
+            },
+            "1": {
+              "pixels": 983963,
+              "mean_probability": 0.9540049404388297,
+              "BCE": 0.054038273451046066
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.6181946790061325,
+          "classes": {
+            "0": {
+              "pixels": 3210341,
+              "mean_probability": 0.29878264421257544,
+              "BCE": 0.7286059053903955
+            },
+            "1": {
+              "pixels": 983963,
+              "mean_probability": 0.7555418675799072,
+              "BCE": 0.5077834526218694
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.30064051310377093,
+          "classes": {
+            "0": {
+              "pixels": 3210341,
+              "mean_probability": 0.2609212444345037,
+              "BCE": 0.5750622002062555
+            },
+            "1": {
+              "pixels": 983963,
+              "mean_probability": 0.9755774847479186,
+              "BCE": 0.026218826001286336
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.7010802311678023,
+          "classes": {
+            "0": {
+              "pixels": 3210341,
+              "mean_probability": 0.37467656087106893,
+              "BCE": 0.9892705226561955
+            },
+            "1": {
+              "pixels": 983963,
+              "mean_probability": 0.7950864280010747,
+              "BCE": 0.412889939679409
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.2462991699576378,
+        "v81_input_MAE": 0.2101529985666275,
+        "whole_head_MAE": 0.10365599393844604,
+        "native_head_MAE": 0.1589624024927616
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/13",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/13.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.040563075281438675,
+          "classes": {
+            "0": {
+              "pixels": 2684304,
+              "mean_probability": 0.03084229795410295,
+              "BCE": 0.03526548151952039
+            },
+            "1": {
+              "pixels": 1510000,
+              "mean_probability": 0.9581638089737553,
+              "BCE": 0.04586066904335696
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.3427339913272067,
+          "classes": {
+            "0": {
+              "pixels": 2684304,
+              "mean_probability": 0.1670369143520535,
+              "BCE": 0.40204054036250253
+            },
+            "1": {
+              "pixels": 1510000,
+              "mean_probability": 0.8325020566350555,
+              "BCE": 0.28342744229191086
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.07565547193148801,
+          "classes": {
+            "0": {
+              "pixels": 2684304,
+              "mean_probability": 0.08949237623400239,
+              "BCE": 0.1188760356039668
+            },
+            "1": {
+              "pixels": 1510000,
+              "mean_probability": 0.9691485722117077,
+              "BCE": 0.03243490825900923
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.2701746946805489,
+          "classes": {
+            "0": {
+              "pixels": 2684304,
+              "mean_probability": 0.10527154004601512,
+              "BCE": 0.2356184939420941
+            },
+            "1": {
+              "pixels": 1510000,
+              "mean_probability": 0.834058073701328,
+              "BCE": 0.30473089541900367
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.15071989595890045,
+        "v81_input_MAE": 0.12208538129925728,
+        "whole_head_MAE": 0.038574161008000374,
+        "native_head_MAE": 0.09473453089594841
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/15",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/15.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.05495581902600842,
+          "classes": {
+            "0": {
+              "pixels": 3173903,
+              "mean_probability": 0.04023561745507268,
+              "BCE": 0.05952414975949459
+            },
+            "1": {
+              "pixels": 1020401,
+              "mean_probability": 0.9550432045541054,
+              "BCE": 0.050387488292522244
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.40694552379107474,
+          "classes": {
+            "0": {
+              "pixels": 3173903,
+              "mean_probability": 0.06822905451406296,
+              "BCE": 0.14331201693182935
+            },
+            "1": {
+              "pixels": 1020401,
+              "mean_probability": 0.6967890080502113,
+              "BCE": 0.6705790306503201
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.14765859158516398,
+          "classes": {
+            "0": {
+              "pixels": 3173903,
+              "mean_probability": 0.14035104245839114,
+              "BCE": 0.2730126130389147
+            },
+            "1": {
+              "pixels": 1020401,
+              "mean_probability": 0.9784269323429852,
+              "BCE": 0.022304570131413265
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.25938135927069506,
+          "classes": {
+            "0": {
+              "pixels": 3173903,
+              "mean_probability": 0.11049288890414809,
+              "BCE": 0.2598086641242412
+            },
+            "1": {
+              "pixels": 1020401,
+              "mean_probability": 0.8409315046300373,
+              "BCE": 0.25895405441714886
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.16537928208708763,
+        "v81_input_MAE": 0.11955947801470757,
+        "whole_head_MAE": 0.06393781676888466,
+        "native_head_MAE": 0.11876058578491211
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/16",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/16.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.0410688867004097,
+          "classes": {
+            "0": {
+              "pixels": 2510325,
+              "mean_probability": 0.03402310296432249,
+              "BCE": 0.04211947973076631
+            },
+            "1": {
+              "pixels": 1683979,
+              "mean_probability": 0.9624611322019324,
+              "BCE": 0.04001829367005309
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.3121334817708734,
+          "classes": {
+            "0": {
+              "pixels": 2510325,
+              "mean_probability": 0.11848321320614638,
+              "BCE": 0.24423871572457417
+            },
+            "1": {
+              "pixels": 1683979,
+              "mean_probability": 0.8295901414689351,
+              "BCE": 0.3800282478171727
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.10745837851787574,
+          "classes": {
+            "0": {
+              "pixels": 2510325,
+              "mean_probability": 0.11340788136574469,
+              "BCE": 0.18936871323692622
+            },
+            "1": {
+              "pixels": 1683979,
+              "mean_probability": 0.9750486912665621,
+              "BCE": 0.025548043798825235
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.7886765985064149,
+          "classes": {
+            "0": {
+              "pixels": 2510325,
+              "mean_probability": 0.4383319067561747,
+              "BCE": 1.2298272644140444
+            },
+            "1": {
+              "pixels": 1683979,
+              "mean_probability": 0.8122792023868075,
+              "BCE": 0.34752593259878534
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.1230076216161251,
+        "v81_input_MAE": 0.25191061198711395,
+        "whole_head_MAE": 0.048786649480462074,
+        "native_head_MAE": 0.2063257433474064
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/18",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/18.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.02522184836343197,
+          "classes": {
+            "0": {
+              "pixels": 4089761,
+              "mean_probability": 0.019549461871071473,
+              "BCE": 0.026737556132835204
+            },
+            "1": {
+              "pixels": 104543,
+              "mean_probability": 0.9797188677407198,
+              "BCE": 0.023706140594028733
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.06911735353842119,
+          "classes": {
+            "0": {
+              "pixels": 4089761,
+              "mean_probability": 0.037605905961924355,
+              "BCE": 0.05921793409845344
+            },
+            "1": {
+              "pixels": 104543,
+              "mean_probability": 0.9492854593971218,
+              "BCE": 0.07901677297838892
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.07900553453495571,
+          "classes": {
+            "0": {
+              "pixels": 4089761,
+              "mean_probability": 0.07524432972698047,
+              "BCE": 0.15475278531011985
+            },
+            "1": {
+              "pixels": 104543,
+              "mean_probability": 0.996771270487853,
+              "BCE": 0.003258283759791572
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.2579568052927766,
+          "classes": {
+            "0": {
+              "pixels": 4089761,
+              "mean_probability": 0.20178285693881112,
+              "BCE": 0.5024388058625675
+            },
+            "1": {
+              "pixels": 104543,
+              "mean_probability": 0.9868127516294309,
+              "BCE": 0.013474804722985649
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.036797817796468735,
+        "v81_input_MAE": 0.09043020522221923,
+        "whole_head_MAE": 0.037313513457775116,
+        "native_head_MAE": 0.10313611850142479
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/21",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/21.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.04191287400534493,
+          "classes": {
+            "0": {
+              "pixels": 3667841,
+              "mean_probability": 0.03330047156495148,
+              "BCE": 0.05018922060232705
+            },
+            "1": {
+              "pixels": 526463,
+              "mean_probability": 0.971124204102311,
+              "BCE": 0.03363652740836281
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.23417375798589246,
+          "classes": {
+            "0": {
+              "pixels": 3667841,
+              "mean_probability": 0.03132074396804854,
+              "BCE": 0.051527785158243807
+            },
+            "1": {
+              "pixels": 526463,
+              "mean_probability": 0.7860499918019467,
+              "BCE": 0.4168197308135411
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.11278061014879827,
+          "classes": {
+            "0": {
+              "pixels": 3667841,
+              "mean_probability": 0.09948536709303372,
+              "BCE": 0.21337177843928629
+            },
+            "1": {
+              "pixels": 526463,
+              "mean_probability": 0.9885647889884347,
+              "BCE": 0.012189441858310245
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.15927052710639364,
+          "classes": {
+            "0": {
+              "pixels": 3667841,
+              "mean_probability": 0.054581717722389345,
+              "BCE": 0.11106975276355846
+            },
+            "1": {
+              "pixels": 526463,
+              "mean_probability": 0.8617716169494171,
+              "BCE": 0.20747130144922882
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.11194637697190046,
+        "v81_input_MAE": 0.09799503907561302,
+        "whole_head_MAE": 0.04363625310361385,
+        "native_head_MAE": 0.07734280917793512
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/22",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/22.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.04040545460045585,
+          "classes": {
+            "0": {
+              "pixels": 2758272,
+              "mean_probability": 0.03451851489534531,
+              "BCE": 0.045266941562923754
+            },
+            "1": {
+              "pixels": 1436032,
+              "mean_probability": 0.9660418683358809,
+              "BCE": 0.03554396763798795
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.4365451622389088,
+          "classes": {
+            "0": {
+              "pixels": 2758272,
+              "mean_probability": 0.05414567168161324,
+              "BCE": 0.08219524205528733
+            },
+            "1": {
+              "pixels": 1436032,
+              "mean_probability": 0.6750907642716965,
+              "BCE": 0.7908950824225303
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.11727004979025256,
+          "classes": {
+            "0": {
+              "pixels": 2758272,
+              "mean_probability": 0.12861000927721333,
+              "BCE": 0.21012868342074295
+            },
+            "1": {
+              "pixels": 1436032,
+              "mean_probability": 0.9762082273394652,
+              "BCE": 0.02441141615976217
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.24576148192633449,
+          "classes": {
+            "0": {
+              "pixels": 2758272,
+              "mean_probability": 0.058852684517236534,
+              "BCE": 0.09641973555450169
+            },
+            "1": {
+              "pixels": 1436032,
+              "mean_probability": 0.7810407872708278,
+              "BCE": 0.3951032282981673
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.17487087100744247,
+        "v81_input_MAE": 0.1465323120355606,
+        "whole_head_MAE": 0.057341549545526505,
+        "native_head_MAE": 0.10201577842235565
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/23",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/23.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.03872881314902613,
+          "classes": {
+            "0": {
+              "pixels": 2911287,
+              "mean_probability": 0.03106949764130298,
+              "BCE": 0.03934786088333806
+            },
+            "1": {
+              "pixels": 1283017,
+              "mean_probability": 0.9639585212464669,
+              "BCE": 0.038109765414714204
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.12046996122264739,
+          "classes": {
+            "0": {
+              "pixels": 2911287,
+              "mean_probability": 0.03885002358546103,
+              "BCE": 0.05800327942231519
+            },
+            "1": {
+              "pixels": 1283017,
+              "mean_probability": 0.874972675634835,
+              "BCE": 0.1829366430229796
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.07810936008983724,
+          "classes": {
+            "0": {
+              "pixels": 2911287,
+              "mean_probability": 0.08261220996152181,
+              "BCE": 0.13612963268436418
+            },
+            "1": {
+              "pixels": 1283017,
+              "mean_probability": 0.9802205456239785,
+              "BCE": 0.020089087495310298
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.34902682610882046,
+          "classes": {
+            "0": {
+              "pixels": 2911287,
+              "mean_probability": 0.2204436032782682,
+              "BCE": 0.5105229682279534
+            },
+            "1": {
+              "pixels": 1283017,
+              "mean_probability": 0.8734806057272467,
+              "BCE": 0.1875306839896875
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.06601424794644117,
+        "v81_input_MAE": 0.1470053419470787,
+        "whole_head_MAE": 0.034890138544142246,
+        "native_head_MAE": 0.12522926181554794
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/24",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/24.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.035510842499509115,
+          "classes": {
+            "0": {
+              "pixels": 2876939,
+              "mean_probability": 0.029060208225760886,
+              "BCE": 0.033957073474035745
+            },
+            "1": {
+              "pixels": 1317365,
+              "mean_probability": 0.9654144314700897,
+              "BCE": 0.037064611524982485
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.07236873870659626,
+          "classes": {
+            "0": {
+              "pixels": 2876939,
+              "mean_probability": 0.033846593846851424,
+              "BCE": 0.05366969815080872
+            },
+            "1": {
+              "pixels": 1317365,
+              "mean_probability": 0.9242044475883743,
+              "BCE": 0.09106777926238378
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.061957399538768394,
+          "classes": {
+            "0": {
+              "pixels": 2876939,
+              "mean_probability": 0.07571767163277505,
+              "BCE": 0.10394475344345806
+            },
+            "1": {
+              "pixels": 1317365,
+              "mean_probability": 0.9808370339007759,
+              "BCE": 0.01997004563407873
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.20249146698475778,
+          "classes": {
+            "0": {
+              "pixels": 2876939,
+              "mean_probability": 0.12516705778171056,
+              "BCE": 0.31472448985732454
+            },
+            "1": {
+              "pixels": 1317365,
+              "mean_probability": 0.9244183491984096,
+              "BCE": 0.09025844411219104
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.042372300289571285,
+        "v81_input_MAE": 0.08580523729324341,
+        "whole_head_MAE": 0.031485592015087605,
+        "native_head_MAE": 0.0672317910939455
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/25",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/25.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.12422756681231592,
+          "classes": {
+            "0": {
+              "pixels": 1123228,
+              "mean_probability": 0.12495465000666924,
+              "BCE": 0.16966402126548866
+            },
+            "1": {
+              "pixels": 3071076,
+              "mean_probability": 0.9341257944311603,
+              "BCE": 0.07879111235914317
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 1.2076544326059313,
+          "classes": {
+            "0": {
+              "pixels": 1123228,
+              "mean_probability": 0.3664992018860447,
+              "BCE": 0.8890949523929771
+            },
+            "1": {
+              "pixels": 3071076,
+              "mean_probability": 0.5059030180584663,
+              "BCE": 1.5262139128188856
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.6732379829395957,
+          "classes": {
+            "0": {
+              "pixels": 1123228,
+              "mean_probability": 0.6020636563878101,
+              "BCE": 1.2893509792658757
+            },
+            "1": {
+              "pixels": 3071076,
+              "mean_probability": 0.9461966681929347,
+              "BCE": 0.057124986613315734
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 1.1500267082659996,
+          "classes": {
+            "0": {
+              "pixels": 1123228,
+              "mean_probability": 0.609276878170518,
+              "BCE": 1.7279477910927563
+            },
+            "1": {
+              "pixels": 3071076,
+              "mean_probability": 0.7218196411462062,
+              "BCE": 0.5721056254392427
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.383609339594841,
+        "v81_input_MAE": 0.21589697152376175,
+        "whole_head_MAE": 0.25550171732902527,
+        "native_head_MAE": 0.25248105078935623
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/26",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/26.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.04903325181183556,
+          "classes": {
+            "0": {
+              "pixels": 304236,
+              "mean_probability": 0.02189708397266917,
+              "BCE": 0.023137487891696677
+            },
+            "1": {
+              "pixels": 3890068,
+              "mean_probability": 0.933238942303625,
+              "BCE": 0.07492901573197444
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.3754351166626299,
+          "classes": {
+            "0": {
+              "pixels": 304236,
+              "mean_probability": 0.1387926808554389,
+              "BCE": 0.19716465978827682
+            },
+            "1": {
+              "pixels": 3890068,
+              "mean_probability": 0.7472807787455963,
+              "BCE": 0.553705573536983
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.176752556831828,
+          "classes": {
+            "0": {
+              "pixels": 304236,
+              "mean_probability": 0.19382344884356048,
+              "BCE": 0.27936474621595364
+            },
+            "1": {
+              "pixels": 3890068,
+              "mean_probability": 0.931294466572754,
+              "BCE": 0.07414036744770237
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.2063365571327025,
+          "classes": {
+            "0": {
+              "pixels": 304236,
+              "mean_probability": 0.1536403852490678,
+              "BCE": 0.20930547983732872
+            },
+            "1": {
+              "pixels": 3890068,
+              "mean_probability": 0.8618484644525333,
+              "BCE": 0.20336763442807623
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.1673610508441925,
+        "v81_input_MAE": 0.1051921583712101,
+        "whole_head_MAE": 0.10049003176391125,
+        "native_head_MAE": 0.10490085929632187
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/27",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/27.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.036108371571925695,
+          "classes": {
+            "0": {
+              "pixels": 3555774,
+              "mean_probability": 0.03142873407337035,
+              "BCE": 0.045817966584302115
+            },
+            "1": {
+              "pixels": 638530,
+              "mean_probability": 0.9757155138368725,
+              "BCE": 0.02639877655954927
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.1002830308132194,
+          "classes": {
+            "0": {
+              "pixels": 3555774,
+              "mean_probability": 0.05452223391397433,
+              "BCE": 0.10580124111071036
+            },
+            "1": {
+              "pixels": 638530,
+              "mean_probability": 0.9267555535449097,
+              "BCE": 0.09476482051572845
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.10378442163109874,
+          "classes": {
+            "0": {
+              "pixels": 3555774,
+              "mean_probability": 0.09239839833199313,
+              "BCE": 0.1926735881724588
+            },
+            "1": {
+              "pixels": 638530,
+              "mean_probability": 0.9852583903685779,
+              "BCE": 0.014895255089738688
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.21451764764846756,
+          "classes": {
+            "0": {
+              "pixels": 3555774,
+              "mean_probability": 0.13568932344711968,
+              "BCE": 0.3427952455179311
+            },
+            "1": {
+              "pixels": 638530,
+              "mean_probability": 0.9323048855772808,
+              "BCE": 0.08624004977900401
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.04952648654580116,
+        "v81_input_MAE": 0.06665171310305595,
+        "whole_head_MAE": 0.037642193492501974,
+        "native_head_MAE": 0.05936014465987682
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/28",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/28.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.05505929110979535,
+          "classes": {
+            "0": {
+              "pixels": 3239519,
+              "mean_probability": 0.04636516697733491,
+              "BCE": 0.07030354932515821
+            },
+            "1": {
+              "pixels": 954785,
+              "mean_probability": 0.965739616338406,
+              "BCE": 0.03981503289443248
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.1620250659993992,
+          "classes": {
+            "0": {
+              "pixels": 3239519,
+              "mean_probability": 0.08629571153836572,
+              "BCE": 0.19276840094795794
+            },
+            "1": {
+              "pixels": 954785,
+              "mean_probability": 0.8986210889003301,
+              "BCE": 0.13128173105084046
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.18176516480288907,
+          "classes": {
+            "0": {
+              "pixels": 3239519,
+              "mean_probability": 0.1568664843533609,
+              "BCE": 0.33867009918711194
+            },
+            "1": {
+              "pixels": 954785,
+              "mean_probability": 0.9756497793839022,
+              "BCE": 0.024860230418666224
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.3560994190717411,
+          "classes": {
+            "0": {
+              "pixels": 3239519,
+              "mean_probability": 0.18384375621542148,
+              "BCE": 0.4894033535630969
+            },
+            "1": {
+              "pixels": 954785,
+              "mean_probability": 0.8455109762523211,
+              "BCE": 0.22279548458038528
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.07689662650227547,
+        "v81_input_MAE": 0.12039901316165924,
+        "whole_head_MAE": 0.06719087809324265,
+        "native_head_MAE": 0.09996799752116203
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/30",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/30.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.09054102159364404,
+          "classes": {
+            "0": {
+              "pixels": 445505,
+              "mean_probability": 0.07485149014631728,
+              "BCE": 0.09869128561789436
+            },
+            "1": {
+              "pixels": 3748799,
+              "mean_probability": 0.9304537951700755,
+              "BCE": 0.08239075756939371
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.13899102455074708,
+          "classes": {
+            "0": {
+              "pixels": 445505,
+              "mean_probability": 0.09480115522378578,
+              "BCE": 0.15680494909604573
+            },
+            "1": {
+              "pixels": 3748799,
+              "mean_probability": 0.908271531252454,
+              "BCE": 0.1211771000054484
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.30605796954959236,
+          "classes": {
+            "0": {
+              "pixels": 445505,
+              "mean_probability": 0.22057645162856715,
+              "BCE": 0.5068598994654255
+            },
+            "1": {
+              "pixels": 3748799,
+              "mean_probability": 0.9070308062103449,
+              "BCE": 0.10525603963375921
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.295489961135301,
+          "classes": {
+            "0": {
+              "pixels": 445505,
+              "mean_probability": 0.20932478941213212,
+              "BCE": 0.48444302473503775
+            },
+            "1": {
+              "pixels": 3748799,
+              "mean_probability": 0.9098432345769899,
+              "BCE": 0.10653689753556428
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.05494116432964802,
+        "v81_input_MAE": 0.09886957332491875,
+        "whole_head_MAE": 0.11079398915171623,
+        "native_head_MAE": 0.08458681963384151
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/31",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/31.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.03400347577173953,
+          "classes": {
+            "0": {
+              "pixels": 3476187,
+              "mean_probability": 0.02710117438250337,
+              "BCE": 0.03716452100575456
+            },
+            "1": {
+              "pixels": 718117,
+              "mean_probability": 0.9717010783445145,
+              "BCE": 0.0308424305377245
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.06905804783857568,
+          "classes": {
+            "0": {
+              "pixels": 3476187,
+              "mean_probability": 0.023504377164925698,
+              "BCE": 0.0339050352760187
+            },
+            "1": {
+              "pixels": 718117,
+              "mean_probability": 0.9191443704888543,
+              "BCE": 0.10421106040113265
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.06604240624365261,
+          "classes": {
+            "0": {
+              "pixels": 3476187,
+              "mean_probability": 0.059290517170195796,
+              "BCE": 0.10955043079714634
+            },
+            "1": {
+              "pixels": 718117,
+              "mean_probability": 0.9779999862643417,
+              "BCE": 0.02253438169015889
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.08501360999683913,
+          "classes": {
+            "0": {
+              "pixels": 3476187,
+              "mean_probability": 0.04667042042605357,
+              "BCE": 0.09109705045206733
+            },
+            "1": {
+              "pixels": 718117,
+              "mean_probability": 0.9305621220028144,
+              "BCE": 0.07893016954161092
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.03876494895666838,
+        "v81_input_MAE": 0.04060615412890911,
+        "whole_head_MAE": 0.023540823720395565,
+        "native_head_MAE": 0.031641763634979725
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/32",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/32.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.03774617735268427,
+          "classes": {
+            "0": {
+              "pixels": 3643454,
+              "mean_probability": 0.02984396636851813,
+              "BCE": 0.04207730960395126
+            },
+            "1": {
+              "pixels": 550850,
+              "mean_probability": 0.9698837848077336,
+              "BCE": 0.03341504510141728
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.050832464219621364,
+          "classes": {
+            "0": {
+              "pixels": 3643454,
+              "mean_probability": 0.02796382983918278,
+              "BCE": 0.03952735434298938
+            },
+            "1": {
+              "pixels": 550850,
+              "mean_probability": 0.9471148055564422,
+              "BCE": 0.06213757409625335
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.07274699764277995,
+          "classes": {
+            "0": {
+              "pixels": 3643454,
+              "mean_probability": 0.06861737812396387,
+              "BCE": 0.1237549664898153
+            },
+            "1": {
+              "pixels": 550850,
+              "mean_probability": 0.9787531263532662,
+              "BCE": 0.021739028795744606
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.09163866428955793,
+          "classes": {
+            "0": {
+              "pixels": 3643454,
+              "mean_probability": 0.06352503327071904,
+              "BCE": 0.12851534170491102
+            },
+            "1": {
+              "pixels": 550850,
+              "mean_probability": 0.9501603667314271,
+              "BCE": 0.054761986874204825
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.0299712922424078,
+        "v81_input_MAE": 0.03636041097342968,
+        "whole_head_MAE": 0.030229940079152584,
+        "native_head_MAE": 0.035173919051885605
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/33",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/33.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.015776864204533267,
+          "classes": {
+            "0": {
+              "pixels": 4150518,
+              "mean_probability": 0.013782763025207645,
+              "BCE": 0.01747193675631419
+            },
+            "1": {
+              "pixels": 43786,
+              "mean_probability": 0.9868067601279703,
+              "BCE": 0.014081791652752345
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.04866733743622384,
+          "classes": {
+            "0": {
+              "pixels": 4150518,
+              "mean_probability": 0.012148505632088224,
+              "BCE": 0.012577057615121429
+            },
+            "1": {
+              "pixels": 43786,
+              "mean_probability": 0.9358646682048951,
+              "BCE": 0.08475761725732625
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.024627596146665695,
+          "classes": {
+            "0": {
+              "pixels": 4150518,
+              "mean_probability": 0.025478912395931214,
+              "BCE": 0.046456404571377376
+            },
+            "1": {
+              "pixels": 43786,
+              "mean_probability": 0.9972157167622243,
+              "BCE": 0.002798787721954015
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.020879538632745036,
+          "classes": {
+            "0": {
+              "pixels": 4150518,
+              "mean_probability": 0.01818057040832813,
+              "BCE": 0.02368968327727329
+            },
+            "1": {
+              "pixels": 43786,
+              "mean_probability": 0.9824067310260418,
+              "BCE": 0.018069393988216782
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.030859752791002393,
+        "v81_input_MAE": 0.014781116973608732,
+        "whole_head_MAE": 0.011455231346189976,
+        "native_head_MAE": 0.02886349754408002
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/34",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/34.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.03493408259629582,
+          "classes": {
+            "0": {
+              "pixels": 3293672,
+              "mean_probability": 0.026242607255762832,
+              "BCE": 0.03398438730352667
+            },
+            "1": {
+              "pixels": 900632,
+              "mean_probability": 0.9674199765989016,
+              "BCE": 0.03588377788906499
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.38550403036322833,
+          "classes": {
+            "0": {
+              "pixels": 3293672,
+              "mean_probability": 0.019273237953914772,
+              "BCE": 0.025850478561299454
+            },
+            "1": {
+              "pixels": 900632,
+              "mean_probability": 0.6935089250582763,
+              "BCE": 0.7451575821651573
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.06287281486844386,
+          "classes": {
+            "0": {
+              "pixels": 3293672,
+              "mean_probability": 0.06326154842527285,
+              "BCE": 0.10846284349019487
+            },
+            "1": {
+              "pixels": 900632,
+              "mean_probability": 0.9829626910792901,
+              "BCE": 0.017282786246692834
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.3115955256924632,
+          "classes": {
+            "0": {
+              "pixels": 3293672,
+              "mean_probability": 0.040518926430357254,
+              "BCE": 0.07459784347099661
+            },
+            "1": {
+              "pixels": 900632,
+              "mean_probability": 0.7242946058438807,
+              "BCE": 0.5485932079139297
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.14845633134245872,
+        "v81_input_MAE": 0.1500345841050148,
+        "whole_head_MAE": 0.02713161427527666,
+        "native_head_MAE": 0.08610357530415058
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/35",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/35.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.0896891262022736,
+          "classes": {
+            "0": {
+              "pixels": 3772941,
+              "mean_probability": 0.05693714197478397,
+              "BCE": 0.10196201339748534
+            },
+            "1": {
+              "pixels": 421363,
+              "mean_probability": 0.9471103067815423,
+              "BCE": 0.07741623900706186
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.21301170342520478,
+          "classes": {
+            "0": {
+              "pixels": 3772941,
+              "mean_probability": 0.14616495275671215,
+              "BCE": 0.34934210652516107
+            },
+            "1": {
+              "pixels": 421363,
+              "mean_probability": 0.938413783831455,
+              "BCE": 0.07668130032524849
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.31151441880694886,
+          "classes": {
+            "0": {
+              "pixels": 3772941,
+              "mean_probability": 0.2397695609621336,
+              "BCE": 0.6129209006454431
+            },
+            "1": {
+              "pixels": 421363,
+              "mean_probability": 0.9900680812720198,
+              "BCE": 0.01010793696845457
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.34077093585488166,
+          "classes": {
+            "0": {
+              "pixels": 3772941,
+              "mean_probability": 0.23613050153421705,
+              "BCE": 0.6391629050253951
+            },
+            "1": {
+              "pixels": 421363,
+              "mean_probability": 0.9599497413399969,
+              "BCE": 0.042378966684368295
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.08503399975597858,
+        "v81_input_MAE": 0.07270374335348606,
+        "whole_head_MAE": 0.11375993117690086,
+        "native_head_MAE": 0.06945621594786644
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/36",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/36.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.06979799352981227,
+          "classes": {
+            "0": {
+              "pixels": 3194438,
+              "mean_probability": 0.054505402601187504,
+              "BCE": 0.08939907772646336
+            },
+            "1": {
+              "pixels": 999866,
+              "mean_probability": 0.9558921192140847,
+              "BCE": 0.05019690933316118
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.5266538280015665,
+          "classes": {
+            "0": {
+              "pixels": 3194438,
+              "mean_probability": 0.23624814902896793,
+              "BCE": 0.5931147178695141
+            },
+            "1": {
+              "pixels": 999866,
+              "mean_probability": 0.774791739720421,
+              "BCE": 0.4601929381336189
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.2114239350715552,
+          "classes": {
+            "0": {
+              "pixels": 3194438,
+              "mean_probability": 0.19477046438899562,
+              "BCE": 0.4064189537612717
+            },
+            "1": {
+              "pixels": 999866,
+              "mean_probability": 0.9838332275166272,
+              "BCE": 0.016428916381838753
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.34725216584724106,
+          "classes": {
+            "0": {
+              "pixels": 3194438,
+              "mean_probability": 0.24566673362982605,
+              "BCE": 0.5745818165106913
+            },
+            "1": {
+              "pixels": 999866,
+              "mean_probability": 0.9038640348384396,
+              "BCE": 0.11992251518379086
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.20193593949079514,
+        "v81_input_MAE": 0.1194753535091877,
+        "whole_head_MAE": 0.08511432725936174,
+        "native_head_MAE": 0.14214495569467545
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/37",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/37.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.04283244633195271,
+          "classes": {
+            "0": {
+              "pixels": 2690748,
+              "mean_probability": 0.037909654391547185,
+              "BCE": 0.049696916532253735
+            },
+            "1": {
+              "pixels": 1503556,
+              "mean_probability": 0.9666780298031393,
+              "BCE": 0.035967976131651695
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.14072368675233077,
+          "classes": {
+            "0": {
+              "pixels": 2690748,
+              "mean_probability": 0.04139383219424646,
+              "BCE": 0.06829967605212747
+            },
+            "1": {
+              "pixels": 1503556,
+              "mean_probability": 0.8659552544066755,
+              "BCE": 0.21314769745253404
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.08968066548830375,
+          "classes": {
+            "0": {
+              "pixels": 2690748,
+              "mean_probability": 0.0861803016208033,
+              "BCE": 0.15060088399305582
+            },
+            "1": {
+              "pixels": 1503556,
+              "mean_probability": 0.9720436590241752,
+              "BCE": 0.02876044698355167
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.1932140874122435,
+          "classes": {
+            "0": {
+              "pixels": 2690748,
+              "mean_probability": 0.13681422280070796,
+              "BCE": 0.2923915193668679
+            },
+            "1": {
+              "pixels": 1503556,
+              "mean_probability": 0.9203152517445455,
+              "BCE": 0.09403665545761909
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.06949456967413425,
+        "v81_input_MAE": 0.0741899274289608,
+        "whole_head_MAE": 0.032546862959861755,
+        "native_head_MAE": 0.08377751335501671
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/38",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/38.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.07089767499629507,
+          "classes": {
+            "0": {
+              "pixels": 1975386,
+              "mean_probability": 0.056538127200257755,
+              "BCE": 0.08212015289898841
+            },
+            "1": {
+              "pixels": 2218918,
+              "mean_probability": 0.9482459508484672,
+              "BCE": 0.05967519709360174
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.5805437273272529,
+          "classes": {
+            "0": {
+              "pixels": 1975386,
+              "mean_probability": 0.3749677304765484,
+              "BCE": 0.954696180419061
+            },
+            "1": {
+              "pixels": 2218918,
+              "mean_probability": 0.8825426957959753,
+              "BCE": 0.20639127423544487
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.16332632863279234,
+          "classes": {
+            "0": {
+              "pixels": 1975386,
+              "mean_probability": 0.14310912583163155,
+              "BCE": 0.2726439506625083
+            },
+            "1": {
+              "pixels": 2218918,
+              "mean_probability": 0.9495530309299979,
+              "BCE": 0.054008706603076405
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.6626033830187646,
+          "classes": {
+            "0": {
+              "pixels": 1975386,
+              "mean_probability": 0.43205130476548625,
+              "BCE": 1.1866853754859454
+            },
+            "1": {
+              "pixels": 2218918,
+              "mean_probability": 0.9004526080864584,
+              "BCE": 0.13852139055158377
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.2164367251098156,
+        "v81_input_MAE": 0.20662306621670723,
+        "whole_head_MAE": 0.05936320498585701,
+        "native_head_MAE": 0.09412957914173603
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/39",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/39.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.027663010346526098,
+          "classes": {
+            "0": {
+              "pixels": 3972174,
+              "mean_probability": 0.019080966772980528,
+              "BCE": 0.02363340694221372
+            },
+            "1": {
+              "pixels": 222130,
+              "mean_probability": 0.9722263283367815,
+              "BCE": 0.031692613750838476
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.15128179516153595,
+          "classes": {
+            "0": {
+              "pixels": 3972174,
+              "mean_probability": 0.08120329958970249,
+              "BCE": 0.15690439019577737
+            },
+            "1": {
+              "pixels": 222130,
+              "mean_probability": 0.9065467889573323,
+              "BCE": 0.14565920012729452
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.09612680699078155,
+          "classes": {
+            "0": {
+              "pixels": 3972174,
+              "mean_probability": 0.10382245691572575,
+              "BCE": 0.1888893094104161
+            },
+            "1": {
+              "pixels": 222130,
+              "mean_probability": 0.9966548002837388,
+              "BCE": 0.003364304571147015
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.445126191997117,
+          "classes": {
+            "0": {
+              "pixels": 3972174,
+              "mean_probability": 0.3119041784411151,
+              "BCE": 0.8494709188155161
+            },
+            "1": {
+              "pixels": 222130,
+              "mean_probability": 0.9628462490027927,
+              "BCE": 0.040781465178717946
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.07487437501549721,
+        "v81_input_MAE": 0.14353002794086933,
+        "whole_head_MAE": 0.055432151071727276,
+        "native_head_MAE": 0.14729317650198936
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/40",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/40.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.04249283769977463,
+          "classes": {
+            "0": {
+              "pixels": 4166603,
+              "mean_probability": 0.013556425226396706,
+              "BCE": 0.016697529393000114
+            },
+            "1": {
+              "pixels": 27701,
+              "mean_probability": 0.9479480955150901,
+              "BCE": 0.06828814600654914
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.08447780230284055,
+          "classes": {
+            "0": {
+              "pixels": 4166603,
+              "mean_probability": 0.031002980704770408,
+              "BCE": 0.04916938645694268
+            },
+            "1": {
+              "pixels": 27701,
+              "mean_probability": 0.9309408386093317,
+              "BCE": 0.11978621814873841
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.035466225741619145,
+          "classes": {
+            "0": {
+              "pixels": 4166603,
+              "mean_probability": 0.03968570274716174,
+              "BCE": 0.064427215687452
+            },
+            "1": {
+              "pixels": 27701,
+              "mean_probability": 0.9938381065281241,
+              "BCE": 0.006505235795786296
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.06436725588943605,
+          "classes": {
+            "0": {
+              "pixels": 4166603,
+              "mean_probability": 0.05726398033292595,
+              "BCE": 0.09565507244136308
+            },
+            "1": {
+              "pixels": 27701,
+              "mean_probability": 0.9744732862370766,
+              "BCE": 0.03307943933750903
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.043575613759458065,
+        "v81_input_MAE": 0.029997654259204865,
+        "whole_head_MAE": 0.03738357685506344,
+        "native_head_MAE": 0.041073890402913094
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/41",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/41.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.034307774184907464,
+          "classes": {
+            "0": {
+              "pixels": 4011152,
+              "mean_probability": 0.02111795896160533,
+              "BCE": 0.0281124368981232
+            },
+            "1": {
+              "pixels": 183152,
+              "mean_probability": 0.9671968053195837,
+              "BCE": 0.040503111471691736
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.23017008521790278,
+          "classes": {
+            "0": {
+              "pixels": 4011152,
+              "mean_probability": 0.10435785871045902,
+              "BCE": 0.2102307150071048
+            },
+            "1": {
+              "pixels": 183152,
+              "mean_probability": 0.8777785908165741,
+              "BCE": 0.2501094554287007
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.15564558900860873,
+          "classes": {
+            "0": {
+              "pixels": 4011152,
+              "mean_probability": 0.14011508017234292,
+              "BCE": 0.30726142751355734
+            },
+            "1": {
+              "pixels": 183152,
+              "mean_probability": 0.996007285052293,
+              "BCE": 0.0040297505036601365
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.22758635360854418,
+          "classes": {
+            "0": {
+              "pixels": 4011152,
+              "mean_probability": 0.15783335731755527,
+              "BCE": 0.38911454509845755
+            },
+            "1": {
+              "pixels": 183152,
+              "mean_probability": 0.9467907231499282,
+              "BCE": 0.06605816211863078
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.10265473276376724,
+        "v81_input_MAE": 0.06810419447720051,
+        "whole_head_MAE": 0.07507693115621805,
+        "native_head_MAE": 0.09223638474941254
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/42",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/42.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.05161671189920766,
+          "classes": {
+            "0": {
+              "pixels": 3894772,
+              "mean_probability": 0.027161476546807346,
+              "BCE": 0.03970956210672031
+            },
+            "1": {
+              "pixels": 299532,
+              "mean_probability": 0.9499524943167584,
+              "BCE": 0.06352386169169501
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.15508363995731309,
+          "classes": {
+            "0": {
+              "pixels": 3894772,
+              "mean_probability": 0.03369401293123072,
+              "BCE": 0.05674372868257908
+            },
+            "1": {
+              "pixels": 299532,
+              "mean_probability": 0.8616552533296926,
+              "BCE": 0.2534235512320471
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.12669669399241557,
+          "classes": {
+            "0": {
+              "pixels": 3894772,
+              "mean_probability": 0.1245942736568115,
+              "BCE": 0.24658078873287495
+            },
+            "1": {
+              "pixels": 299532,
+              "mean_probability": 0.9933325431397931,
+              "BCE": 0.006812599251956205
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.14316676154320174,
+          "classes": {
+            "0": {
+              "pixels": 3894772,
+              "mean_probability": 0.10595004290565546,
+              "BCE": 0.24107107302575237
+            },
+            "1": {
+              "pixels": 299532,
+              "mean_probability": 0.9611739169136333,
+              "BCE": 0.045262450060651126
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.0642138822004199,
+        "v81_input_MAE": 0.05848001502454281,
+        "whole_head_MAE": 0.07130284421145916,
+        "native_head_MAE": 0.08781211823225021
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/44",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/44.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.09644124382400851,
+          "classes": {
+            "0": {
+              "pixels": 733872,
+              "mean_probability": 0.0807418888128093,
+              "BCE": 0.1092364831856146
+            },
+            "1": {
+              "pixels": 3460432,
+              "mean_probability": 0.9299492732296645,
+              "BCE": 0.08364600446240243
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.37137691890277913,
+          "classes": {
+            "0": {
+              "pixels": 733872,
+              "mean_probability": 0.2961621063136143,
+              "BCE": 0.6604527389987289
+            },
+            "1": {
+              "pixels": 3460432,
+              "mean_probability": 0.9285540996122164,
+              "BCE": 0.08230109880682934
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.3856518684736321,
+          "classes": {
+            "0": {
+              "pixels": 733872,
+              "mean_probability": 0.3462147968589822,
+              "BCE": 0.7138649665424247
+            },
+            "1": {
+              "pixels": 3460432,
+              "mean_probability": 0.9456501872127333,
+              "BCE": 0.05743877040483943
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.6108273730998756,
+          "classes": {
+            "0": {
+              "pixels": 733872,
+              "mean_probability": 0.4454206070379687,
+              "BCE": 1.1424403421779785
+            },
+            "1": {
+              "pixels": 3460432,
+              "mean_probability": 0.9281068762445748,
+              "BCE": 0.07921440402177252
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.14003480412065983,
+        "v81_input_MAE": 0.13960309140384197,
+        "whole_head_MAE": 0.15001761727035046,
+        "native_head_MAE": 0.09699567593634129
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/45",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/45.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.05213059408338743,
+          "classes": {
+            "0": {
+              "pixels": 4084868,
+              "mean_probability": 0.015918877465235477,
+              "BCE": 0.018244567206165536
+            },
+            "1": {
+              "pixels": 109436,
+              "mean_probability": 0.9382821635952703,
+              "BCE": 0.08601662096060933
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.3970291260690557,
+          "classes": {
+            "0": {
+              "pixels": 4084868,
+              "mean_probability": 0.20866928175469396,
+              "BCE": 0.6007487890726888
+            },
+            "1": {
+              "pixels": 109436,
+              "mean_probability": 0.9096566942989045,
+              "BCE": 0.19330946306542263
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.03872884492647431,
+          "classes": {
+            "0": {
+              "pixels": 4084868,
+              "mean_probability": 0.04362500766955797,
+              "BCE": 0.0634704730273127
+            },
+            "1": {
+              "pixels": 109436,
+              "mean_probability": 0.987799208281054,
+              "BCE": 0.013987216825635937
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.3184846798705081,
+          "classes": {
+            "0": {
+              "pixels": 4084868,
+              "mean_probability": 0.21158560229457202,
+              "BCE": 0.574897389421691
+            },
+            "1": {
+              "pixels": 109436,
+              "mean_probability": 0.961890991573107,
+              "BCE": 0.06207197031932526
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.13624299317598343,
+        "v81_input_MAE": 0.11011520214378834,
+        "whole_head_MAE": 0.04002507869154215,
+        "native_head_MAE": 0.05293465033173561
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/46",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/46.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.07114189899114055,
+          "classes": {
+            "0": {
+              "pixels": 1770913,
+              "mean_probability": 0.06198708896077395,
+              "BCE": 0.08632806283921124
+            },
+            "1": {
+              "pixels": 2423391,
+              "mean_probability": 0.9485406354709717,
+              "BCE": 0.05595573514306987
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.23236148947198781,
+          "classes": {
+            "0": {
+              "pixels": 1770913,
+              "mean_probability": 0.15367798148216244,
+              "BCE": 0.346185404199883
+            },
+            "1": {
+              "pixels": 2423391,
+              "mean_probability": 0.9087816179821905,
+              "BCE": 0.11853757474409267
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.2952696454149336,
+          "classes": {
+            "0": {
+              "pixels": 1770913,
+              "mean_probability": 0.2829028913742279,
+              "BCE": 0.5493879902859501
+            },
+            "1": {
+              "pixels": 2423391,
+              "mean_probability": 0.9602980042182094,
+              "BCE": 0.041151300543917184
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.47452516063801137,
+          "classes": {
+            "0": {
+              "pixels": 1770913,
+              "mean_probability": 0.31322961827285506,
+              "BCE": 0.8678936269302584
+            },
+            "1": {
+              "pixels": 2423391,
+              "mean_probability": 0.9278659603807735,
+              "BCE": 0.08115669434576432
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.08612713403999805,
+        "v81_input_MAE": 0.08818301744759083,
+        "whole_head_MAE": 0.12158508691936731,
+        "native_head_MAE": 0.10342911444604397
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/47",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/47.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.07582307403033628,
+          "classes": {
+            "0": {
+              "pixels": 1562679,
+              "mean_probability": 0.06479880934649551,
+              "BCE": 0.09020265723099427
+            },
+            "1": {
+              "pixels": 2631625,
+              "mean_probability": 0.9455310574561019,
+              "BCE": 0.0614434908296783
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.3553560756004448,
+          "classes": {
+            "0": {
+              "pixels": 1562679,
+              "mean_probability": 0.14766900163690808,
+              "BCE": 0.31539778972528426
+            },
+            "1": {
+              "pixels": 2631625,
+              "mean_probability": 0.8007561073202932,
+              "BCE": 0.3953143614756053
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.30274056487891504,
+          "classes": {
+            "0": {
+              "pixels": 1562679,
+              "mean_probability": 0.2588622923862387,
+              "BCE": 0.5512805184423881
+            },
+            "1": {
+              "pixels": 2631625,
+              "mean_probability": 0.9485257602987541,
+              "BCE": 0.054200611315442
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.4900411774395468,
+          "classes": {
+            "0": {
+              "pixels": 1562679,
+              "mean_probability": 0.2539207583419058,
+              "BCE": 0.6663052440675773
+            },
+            "1": {
+              "pixels": 2631625,
+              "mean_probability": 0.8248738558549578,
+              "BCE": 0.31377711081151627
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.14494632184505463,
+        "v81_input_MAE": 0.1606941670179367,
+        "whole_head_MAE": 0.11304120160639286,
+        "native_head_MAE": 0.10112302750349045
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/48",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/48.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.03094091943264094,
+          "classes": {
+            "0": {
+              "pixels": 3947198,
+              "mean_probability": 0.019705266367597094,
+              "BCE": 0.024043395872086724
+            },
+            "1": {
+              "pixels": 247106,
+              "mean_probability": 0.9657510993963403,
+              "BCE": 0.03783844299319516
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.07175567392285856,
+          "classes": {
+            "0": {
+              "pixels": 3947198,
+              "mean_probability": 0.03448125447940005,
+              "BCE": 0.0542648214518041
+            },
+            "1": {
+              "pixels": 247106,
+              "mean_probability": 0.9364192847052195,
+              "BCE": 0.08924652639391302
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.05056198911555572,
+          "classes": {
+            "0": {
+              "pixels": 3947198,
+              "mean_probability": 0.05219686619416574,
+              "BCE": 0.08958968331160864
+            },
+            "1": {
+              "pixels": 247106,
+              "mean_probability": 0.9887224172015693,
+              "BCE": 0.011534294919502794
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.07823123005329914,
+          "classes": {
+            "0": {
+              "pixels": 3947198,
+              "mean_probability": 0.05969565842416404,
+              "BCE": 0.11497377207287629
+            },
+            "1": {
+              "pixels": 247106,
+              "mean_probability": 0.9631716552273949,
+              "BCE": 0.041488688033722
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.039431328885257244,
+        "v81_input_MAE": 0.037065282464027405,
+        "whole_head_MAE": 0.029422439634799957,
+        "native_head_MAE": 0.03622056357562542
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/49",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/49.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.027000272502086108,
+          "classes": {
+            "0": {
+              "pixels": 3961742,
+              "mean_probability": 0.020331377652693064,
+              "BCE": 0.02543294632915332
+            },
+            "1": {
+              "pixels": 232562,
+              "mean_probability": 0.9737294428386586,
+              "BCE": 0.028567598675018895
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.11593790434579582,
+          "classes": {
+            "0": {
+              "pixels": 3961742,
+              "mean_probability": 0.05919964058736582,
+              "BCE": 0.1063659334096337
+            },
+            "1": {
+              "pixels": 232562,
+              "mean_probability": 0.9074798989382037,
+              "BCE": 0.12550987528195795
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.0936746156296127,
+          "classes": {
+            "0": {
+              "pixels": 3961742,
+              "mean_probability": 0.11664392947449566,
+              "BCE": 0.18380403119859112
+            },
+            "1": {
+              "pixels": 232562,
+              "mean_probability": 0.99647745083461,
+              "BCE": 0.0035452000606342703
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.3178606068834936,
+          "classes": {
+            "0": {
+              "pixels": 3961742,
+              "mean_probability": 0.24391869248593928,
+              "BCE": 0.5757934603952636
+            },
+            "1": {
+              "pixels": 232562,
+              "mean_probability": 0.9457729997781494,
+              "BCE": 0.05992775337172364
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.06397243216633797,
+        "v81_input_MAE": 0.13164152763783932,
+        "whole_head_MAE": 0.060514263808727264,
+        "native_head_MAE": 0.12754346430301666
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/51",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/51.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.039576642228003944,
+          "classes": {
+            "0": {
+              "pixels": 3964198,
+              "mean_probability": 0.030584243755003203,
+              "BCE": 0.04696216977268193
+            },
+            "1": {
+              "pixels": 230106,
+              "mean_probability": 0.9704796804555481,
+              "BCE": 0.03219111468332595
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.5018399515161323,
+          "classes": {
+            "0": {
+              "pixels": 3964198,
+              "mean_probability": 0.34822684057079045,
+              "BCE": 0.8975505806355161
+            },
+            "1": {
+              "pixels": 230106,
+              "mean_probability": 0.9386352820910412,
+              "BCE": 0.10612932239674851
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.18174556147527177,
+          "classes": {
+            "0": {
+              "pixels": 3964198,
+              "mean_probability": 0.17674894525651336,
+              "BCE": 0.3560482072258268
+            },
+            "1": {
+              "pixels": 230106,
+              "mean_probability": 0.9926541977454213,
+              "BCE": 0.007442915724716703
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.43383476176815516,
+          "classes": {
+            "0": {
+              "pixels": 3964198,
+              "mean_probability": 0.30790609289066606,
+              "BCE": 0.8132495579691311
+            },
+            "1": {
+              "pixels": 230106,
+              "mean_probability": 0.9567207098169582,
+              "BCE": 0.054419965567179214
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.18948475643992424,
+        "v81_input_MAE": 0.11765622906386852,
+        "whole_head_MAE": 0.08587808720767498,
+        "native_head_MAE": 0.15420448407530785
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/53",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/53.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.02836761629808139,
+          "classes": {
+            "0": {
+              "pixels": 4058214,
+              "mean_probability": 0.02083606909802785,
+              "BCE": 0.03013408262473916
+            },
+            "1": {
+              "pixels": 136090,
+              "mean_probability": 0.9761074568091119,
+              "BCE": 0.026601149971423623
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.10488400596120223,
+          "classes": {
+            "0": {
+              "pixels": 4058214,
+              "mean_probability": 0.05945138076251414,
+              "BCE": 0.12165429640829883
+            },
+            "1": {
+              "pixels": 136090,
+              "mean_probability": 0.9354251410739668,
+              "BCE": 0.08811371551410564
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.08588982239012734,
+          "classes": {
+            "0": {
+              "pixels": 4058214,
+              "mean_probability": 0.08448809166261352,
+              "BCE": 0.16639450470326725
+            },
+            "1": {
+              "pixels": 136090,
+              "mean_probability": 0.9946684471702792,
+              "BCE": 0.005385140076987422
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.1401863409876042,
+          "classes": {
+            "0": {
+              "pixels": 4058214,
+              "mean_probability": 0.1107816579912639,
+              "BCE": 0.23640462442575533
+            },
+            "1": {
+              "pixels": 136090,
+              "mean_probability": 0.9600897621234471,
+              "BCE": 0.043968057549453106
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.0491642989218235,
+        "v81_input_MAE": 0.051062311977148056,
+        "whole_head_MAE": 0.04224208276718855,
+        "native_head_MAE": 0.049907686188817024
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/54",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/54.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.03140779270851876,
+          "classes": {
+            "0": {
+              "pixels": 3890882,
+              "mean_probability": 0.01815554413851538,
+              "BCE": 0.02120851827256395
+            },
+            "1": {
+              "pixels": 303422,
+              "mean_probability": 0.964048329057785,
+              "BCE": 0.04160706714447357
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.06203569326030989,
+          "classes": {
+            "0": {
+              "pixels": 3890882,
+              "mean_probability": 0.034985553697417335,
+              "BCE": 0.049173103572199485
+            },
+            "1": {
+              "pixels": 303422,
+              "mean_probability": 0.9431780446001862,
+              "BCE": 0.0748982829484203
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.057257559354018876,
+          "classes": {
+            "0": {
+              "pixels": 3890882,
+              "mean_probability": 0.06420781074206763,
+              "BCE": 0.10942464059475777
+            },
+            "1": {
+              "pixels": 303422,
+              "mean_probability": 0.9949474880022429,
+              "BCE": 0.005090478113279982
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.07194061042692,
+          "classes": {
+            "0": {
+              "pixels": 3890882,
+              "mean_probability": 0.06322803454792769,
+              "BCE": 0.11778933104008335
+            },
+            "1": {
+              "pixels": 303422,
+              "mean_probability": 0.9747818729199863,
+              "BCE": 0.026091889813756663
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.03600209392607212,
+        "v81_input_MAE": 0.03588173445314169,
+        "whole_head_MAE": 0.03900584485381842,
+        "native_head_MAE": 0.03334164246916771
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/55",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/55.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.02838116897728442,
+          "classes": {
+            "0": {
+              "pixels": 3945699,
+              "mean_probability": 0.019334340410490057,
+              "BCE": 0.024440587570956337
+            },
+            "1": {
+              "pixels": 248605,
+              "mean_probability": 0.9714617897775335,
+              "BCE": 0.0323217503836125
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.16331191654847327,
+          "classes": {
+            "0": {
+              "pixels": 3945699,
+              "mean_probability": 0.058480028342071784,
+              "BCE": 0.10762847773039486
+            },
+            "1": {
+              "pixels": 248605,
+              "mean_probability": 0.8660541433246319,
+              "BCE": 0.21899535536655168
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.05088117390432338,
+          "classes": {
+            "0": {
+              "pixels": 3945699,
+              "mean_probability": 0.05159272846142917,
+              "BCE": 0.0897208659571441
+            },
+            "1": {
+              "pixels": 248605,
+              "mean_probability": 0.9882106202882402,
+              "BCE": 0.012041481851502665
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.1795566019624915,
+          "classes": {
+            "0": {
+              "pixels": 3945699,
+              "mean_probability": 0.11276355852853177,
+              "BCE": 0.2625090389306987
+            },
+            "1": {
+              "pixels": 248605,
+              "mean_probability": 0.9228947140736015,
+              "BCE": 0.0966041649942843
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.08551332540810108,
+        "v81_input_MAE": 0.0723736472427845,
+        "whole_head_MAE": 0.026092687621712685,
+        "native_head_MAE": 0.07227394171059132
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/56",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/56.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.035264843905962504,
+          "classes": {
+            "0": {
+              "pixels": 4041065,
+              "mean_probability": 0.025375435805451676,
+              "BCE": 0.03987995154671701
+            },
+            "1": {
+              "pixels": 153239,
+              "mean_probability": 0.9720679522202461,
+              "BCE": 0.030649736265207998
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.06536246807878301,
+          "classes": {
+            "0": {
+              "pixels": 4041065,
+              "mean_probability": 0.0472061253733982,
+              "BCE": 0.09934356894504472
+            },
+            "1": {
+              "pixels": 153239,
+              "mean_probability": 0.9725309307939052,
+              "BCE": 0.03138136721252132
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.09125754649792645,
+          "classes": {
+            "0": {
+              "pixels": 4041065,
+              "mean_probability": 0.08048341279661969,
+              "BCE": 0.1788415670477017
+            },
+            "1": {
+              "pixels": 153239,
+              "mean_probability": 0.9963418734132061,
+              "BCE": 0.0036735259481511713
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.08847636206023622,
+          "classes": {
+            "0": {
+              "pixels": 4041065,
+              "mean_probability": 0.0727301722459273,
+              "BCE": 0.16252802753631543
+            },
+            "1": {
+              "pixels": 153239,
+              "mean_probability": 0.985762616666569,
+              "BCE": 0.014424696584157022
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.02811057586222887,
+        "v81_input_MAE": 0.03053976781666279,
+        "whole_head_MAE": 0.040497662499547005,
+        "native_head_MAE": 0.02659490006044507
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/57",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/57.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.020460233034261227,
+          "classes": {
+            "0": {
+              "pixels": 4142901,
+              "mean_probability": 0.01405337240621677,
+              "BCE": 0.01823231349248139
+            },
+            "1": {
+              "pixels": 51403,
+              "mean_probability": 0.9803564014143047,
+              "BCE": 0.02268815257604107
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.04287885261837651,
+          "classes": {
+            "0": {
+              "pixels": 4142901,
+              "mean_probability": 0.021862000342659633,
+              "BCE": 0.04674313372665889
+            },
+            "1": {
+              "pixels": 51403,
+              "mean_probability": 0.9675092096853133,
+              "BCE": 0.03901457151009414
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.03142589922290983,
+          "classes": {
+            "0": {
+              "pixels": 4142901,
+              "mean_probability": 0.0326737179438017,
+              "BCE": 0.05964343592580434
+            },
+            "1": {
+              "pixels": 51403,
+              "mean_probability": 0.9968071113003253,
+              "BCE": 0.0032083625200153214
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.038274217738755834,
+          "classes": {
+            "0": {
+              "pixels": 4142901,
+              "mean_probability": 0.031981505949429015,
+              "BCE": 0.061940897253654585
+            },
+            "1": {
+              "pixels": 51403,
+              "mean_probability": 0.9855448543147638,
+              "BCE": 0.014607538223857078
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.019173690117895603,
+        "v81_input_MAE": 0.01474964153021574,
+        "whole_head_MAE": 0.01831056270748377,
+        "native_head_MAE": 0.015765110030770302
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/58",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/58.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.02374602335298035,
+          "classes": {
+            "0": {
+              "pixels": 4042888,
+              "mean_probability": 0.0134853342704494,
+              "BCE": 0.014373885703947709
+            },
+            "1": {
+              "pixels": 151416,
+              "mean_probability": 0.9719974321451521,
+              "BCE": 0.033118161002012994
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.1658791015138535,
+          "classes": {
+            "0": {
+              "pixels": 4042888,
+              "mean_probability": 0.06829149798464337,
+              "BCE": 0.13332690145974221
+            },
+            "1": {
+              "pixels": 151416,
+              "mean_probability": 0.9101956765669907,
+              "BCE": 0.1984313015679648
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.048460770858452525,
+          "classes": {
+            "0": {
+              "pixels": 4042888,
+              "mean_probability": 0.06364826863603452,
+              "BCE": 0.08881675051638951
+            },
+            "1": {
+              "pixels": 151416,
+              "mean_probability": 0.9920099697337511,
+              "BCE": 0.008104791200515531
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.31342331215546376,
+          "classes": {
+            "0": {
+              "pixels": 4042888,
+              "mean_probability": 0.18093266876548653,
+              "BCE": 0.5356451812738741
+            },
+            "1": {
+              "pixels": 151416,
+              "mean_probability": 0.9383317805822137,
+              "BCE": 0.09120144303705344
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.06379146873950958,
+        "v81_input_MAE": 0.09292230755090714,
+        "whole_head_MAE": 0.037040925584733486,
+        "native_head_MAE": 0.0745124202221632
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/59",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/59.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.08568800007990655,
+          "classes": {
+            "0": {
+              "pixels": 2911215,
+              "mean_probability": 0.05205659883102502,
+              "BCE": 0.07192148203960967
+            },
+            "1": {
+              "pixels": 1283089,
+              "mean_probability": 0.9377957299006957,
+              "BCE": 0.09945451812020344
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.07377616461476472,
+          "classes": {
+            "0": {
+              "pixels": 2911215,
+              "mean_probability": 0.04587425834534347,
+              "BCE": 0.07854989061836933
+            },
+            "1": {
+              "pixels": 1283089,
+              "mean_probability": 0.9461048525902728,
+              "BCE": 0.06900243861116011
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.17485318108354592,
+          "classes": {
+            "0": {
+              "pixels": 2911215,
+              "mean_probability": 0.16135331717283946,
+              "BCE": 0.31190317333779566
+            },
+            "1": {
+              "pixels": 1283089,
+              "mean_probability": 0.9676204134930345,
+              "BCE": 0.03780318882929618
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.1408557955551761,
+          "classes": {
+            "0": {
+              "pixels": 2911215,
+              "mean_probability": 0.1112314652532892,
+              "BCE": 0.2451689031429703
+            },
+            "1": {
+              "pixels": 1283089,
+              "mean_probability": 0.9647203573597606,
+              "BCE": 0.036542687967381915
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.03648225869983435,
+        "v81_input_MAE": 0.05107446573674679,
+        "whole_head_MAE": 0.07285803370177746,
+        "native_head_MAE": 0.0464431531727314
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/60",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/60.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.087603611692638,
+          "classes": {
+            "0": {
+              "pixels": 1081132,
+              "mean_probability": 0.07322108963407167,
+              "BCE": 0.0975052039984769
+            },
+            "1": {
+              "pixels": 3113172,
+              "mean_probability": 0.9355541149950587,
+              "BCE": 0.07770201938679912
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.12741261162837592,
+          "classes": {
+            "0": {
+              "pixels": 1081132,
+              "mean_probability": 0.08598967171054253,
+              "BCE": 0.1583907828390239
+            },
+            "1": {
+              "pixels": 3113172,
+              "mean_probability": 0.9267664024780241,
+              "BCE": 0.0964344404177279
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.23559185894931556,
+          "classes": {
+            "0": {
+              "pixels": 1081132,
+              "mean_probability": 0.22052271439830803,
+              "BCE": 0.40925755953313964
+            },
+            "1": {
+              "pixels": 3113172,
+              "mean_probability": 0.9424376594031102,
+              "BCE": 0.06192615836549151
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.21904952008803633,
+          "classes": {
+            "0": {
+              "pixels": 1081132,
+              "mean_probability": 0.18337337122984726,
+              "BCE": 0.381479773598429
+            },
+            "1": {
+              "pixels": 3113172,
+              "mean_probability": 0.9465371689240197,
+              "BCE": 0.05661926657764367
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.0506635382771492,
+        "v81_input_MAE": 0.0621318593621254,
+        "whole_head_MAE": 0.09076978266239166,
+        "native_head_MAE": 0.06454263348132372
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/64",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/64.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.1100298463456916,
+          "classes": {
+            "0": {
+              "pixels": 3664628,
+              "mean_probability": 0.068469879095421,
+              "BCE": 0.12020528994319747
+            },
+            "1": {
+              "pixels": 529676,
+              "mean_probability": 0.9338153658373117,
+              "BCE": 0.09985440274818573
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.17541574379209685,
+          "classes": {
+            "0": {
+              "pixels": 3664628,
+              "mean_probability": 0.09351649846157836,
+              "BCE": 0.18543760889802127
+            },
+            "1": {
+              "pixels": 529676,
+              "mean_probability": 0.9028572160003931,
+              "BCE": 0.16539387868617242
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.35102803318944004,
+          "classes": {
+            "0": {
+              "pixels": 3664628,
+              "mean_probability": 0.2818267086941331,
+              "BCE": 0.6874506170358189
+            },
+            "1": {
+              "pixels": 529676,
+              "mean_probability": 0.9862756476332091,
+              "BCE": 0.014605449343061174
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.39372255177985505,
+          "classes": {
+            "0": {
+              "pixels": 3664628,
+              "mean_probability": 0.3086034384876067,
+              "BCE": 0.7565782834879671
+            },
+            "1": {
+              "pixels": 529676,
+              "mean_probability": 0.9705556351357129,
+              "BCE": 0.03086682007174306
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.07986221835017204,
+        "v81_input_MAE": 0.07712449785321951,
+        "whole_head_MAE": 0.13396941497921944,
+        "native_head_MAE": 0.14430979639291763
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/65",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/65.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.010561598996592819,
+          "classes": {
+            "0": {
+              "pixels": 4165071,
+              "mean_probability": 0.012597961971493283,
+              "BCE": 0.014914447751749459
+            },
+            "1": {
+              "pixels": 29233,
+              "mean_probability": 0.9938552423547541,
+              "BCE": 0.00620875024143618
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.014092795920481248,
+          "classes": {
+            "0": {
+              "pixels": 4165071,
+              "mean_probability": 0.012979969450134392,
+              "BCE": 0.017845993065516805
+            },
+            "1": {
+              "pixels": 29233,
+              "mean_probability": 0.9898348009370613,
+              "BCE": 0.010339598775445694
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.01798213431141611,
+          "classes": {
+            "0": {
+              "pixels": 4165071,
+              "mean_probability": 0.021932147021699697,
+              "BCE": 0.035067476213869804
+            },
+            "1": {
+              "pixels": 29233,
+              "mean_probability": 0.9991040614221122,
+              "BCE": 0.0008967924089624142
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.019709560292576072,
+          "classes": {
+            "0": {
+              "pixels": 4165071,
+              "mean_probability": 0.020627466610983452,
+              "BCE": 0.030732599289278545
+            },
+            "1": {
+              "pixels": 29233,
+              "mean_probability": 0.9913580387211913,
+              "BCE": 0.008686521295873597
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.0051392794121056795,
+        "v81_input_MAE": 0.008768556406721473,
+        "whole_head_MAE": 0.008005779469385743,
+        "native_head_MAE": 0.00725373369641602
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/66",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/66.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.06768764847266975,
+          "classes": {
+            "0": {
+              "pixels": 45068,
+              "mean_probability": 0.04456520592910837,
+              "BCE": 0.049567052366806544
+            },
+            "1": {
+              "pixels": 4149236,
+              "mean_probability": 0.9239949291163465,
+              "BCE": 0.08580824457853295
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.6020526173384029,
+          "classes": {
+            "0": {
+              "pixels": 45068,
+              "mean_probability": 0.23174456787879566,
+              "BCE": 0.5667245157066553
+            },
+            "1": {
+              "pixels": 4149236,
+              "mean_probability": 0.7014562386699992,
+              "BCE": 0.6373807189701506
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.37114115874440834,
+          "classes": {
+            "0": {
+              "pixels": 45068,
+              "mean_probability": 0.36320991947699505,
+              "BCE": 0.6498292439779579
+            },
+            "1": {
+              "pixels": 4149236,
+              "mean_probability": 0.9158589212804589,
+              "BCE": 0.09245307351085873
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 1.251411287319183,
+          "classes": {
+            "0": {
+              "pixels": 45068,
+              "mean_probability": 0.5273147346695414,
+              "BCE": 1.721533383679406
+            },
+            "1": {
+              "pixels": 4149236,
+              "mean_probability": 0.6552702425989405,
+              "BCE": 0.7812891909589599
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.2235550805926323,
+        "v81_input_MAE": 0.2643446624279022,
+        "whole_head_MAE": 0.1787114366889,
+        "native_head_MAE": 0.2332955077290535
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/68",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/68.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.1037254004090001,
+          "classes": {
+            "0": {
+              "pixels": 3995246,
+              "mean_probability": 0.06989962313720725,
+              "BCE": 0.18439571513624445
+            },
+            "1": {
+              "pixels": 199058,
+              "mean_probability": 0.9796722785767943,
+              "BCE": 0.023055085681755752
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.4172947161613284,
+          "classes": {
+            "0": {
+              "pixels": 3995246,
+              "mean_probability": 0.2117690366475419,
+              "BCE": 0.5372697258975948
+            },
+            "1": {
+              "pixels": 199058,
+              "mean_probability": 0.8356884782027352,
+              "BCE": 0.29731970642506195
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.23200654306527668,
+          "classes": {
+            "0": {
+              "pixels": 3995246,
+              "mean_probability": 0.18527624968405618,
+              "BCE": 0.45999276176083076
+            },
+            "1": {
+              "pixels": 199058,
+              "mean_probability": 0.9960218411225723,
+              "BCE": 0.004020324369722628
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.5387883372165366,
+          "classes": {
+            "0": {
+              "pixels": 3995246,
+              "mean_probability": 0.3484771218681376,
+              "BCE": 0.9950058256935874
+            },
+            "1": {
+              "pixels": 199058,
+              "mean_probability": 0.934338089266578,
+              "BCE": 0.08257084873948592
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.15952233970165253,
+        "v81_input_MAE": 0.1510683037340641,
+        "whole_head_MAE": 0.06757809314876795,
+        "native_head_MAE": 0.14565593749284744
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/69",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/69.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.11635894051963253,
+          "classes": {
+            "0": {
+              "pixels": 1576455,
+              "mean_probability": 0.06775355899369442,
+              "BCE": 0.09624566795504175
+            },
+            "1": {
+              "pixels": 2617849,
+              "mean_probability": 0.9076133765840548,
+              "BCE": 0.1364722130842233
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.33232877035399766,
+          "classes": {
+            "0": {
+              "pixels": 1576455,
+              "mean_probability": 0.11988115347832258,
+              "BCE": 0.26149408551290393
+            },
+            "1": {
+              "pixels": 2617849,
+              "mean_probability": 0.8290054853112614,
+              "BCE": 0.4031634551950914
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.2411267065380246,
+          "classes": {
+            "0": {
+              "pixels": 1576455,
+              "mean_probability": 0.20987025250681474,
+              "BCE": 0.41250396736594797
+            },
+            "1": {
+              "pixels": 2617849,
+              "mean_probability": 0.9428032645517498,
+              "BCE": 0.06974944571010125
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.44141615967577874,
+          "classes": {
+            "0": {
+              "pixels": 1576455,
+              "mean_probability": 0.2807325142326561,
+              "BCE": 0.7467264907941507
+            },
+            "1": {
+              "pixels": 2617849,
+              "mean_probability": 0.9096973733191699,
+              "BCE": 0.13610582855740688
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.10090509429574013,
+        "v81_input_MAE": 0.09316681884229183,
+        "whole_head_MAE": 0.09408045932650566,
+        "native_head_MAE": 0.12678048759698868
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/72",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/72.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.044504415197551564,
+          "classes": {
+            "0": {
+              "pixels": 3418259,
+              "mean_probability": 0.03572398436135487,
+              "BCE": 0.04899134406170479
+            },
+            "1": {
+              "pixels": 776045,
+              "mean_probability": 0.9639822481427743,
+              "BCE": 0.04001748633339833
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.34369513548993674,
+          "classes": {
+            "0": {
+              "pixels": 3418259,
+              "mean_probability": 0.03473261950123601,
+              "BCE": 0.05175965759684241
+            },
+            "1": {
+              "pixels": 776045,
+              "mean_probability": 0.7213388758660393,
+              "BCE": 0.6356306133830311
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.25026041664734716,
+          "classes": {
+            "0": {
+              "pixels": 3418259,
+              "mean_probability": 0.24139069807133598,
+              "BCE": 0.4885189047321618
+            },
+            "1": {
+              "pixels": 776045,
+              "mean_probability": 0.9881110417858149,
+              "BCE": 0.01200192856253249
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.32435579422940547,
+          "classes": {
+            "0": {
+              "pixels": 3418259,
+              "mean_probability": 0.2222218390570345,
+              "BCE": 0.5190640870351129
+            },
+            "1": {
+              "pixels": 776045,
+              "mean_probability": 0.9015812263398009,
+              "BCE": 0.12964750142369805
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.14443246833980083,
+        "v81_input_MAE": 0.12131686508655548,
+        "whole_head_MAE": 0.11560364626348019,
+        "native_head_MAE": 0.18682056665420532
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/73",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/73.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.0116237162489061,
+          "classes": {
+            "0": {
+              "pixels": 4194304,
+              "mean_probability": 0.011528936076204144,
+              "BCE": 0.0116237162489061
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.17177845242464634,
+          "classes": {
+            "0": {
+              "pixels": 4194304,
+              "mean_probability": 0.09651236099464042,
+              "BCE": 0.17177845242464634
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.11902405720733734,
+          "classes": {
+            "0": {
+              "pixels": 4194304,
+              "mean_probability": 0.06434875781133387,
+              "BCE": 0.11902405720733734
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 0.6922459640693726,
+          "classes": {
+            "0": {
+              "pixels": 4194304,
+              "mean_probability": 0.24479315946995625,
+              "BCE": 0.6922459640693726
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.08847852796316147,
+        "v81_input_MAE": 0.20949622988700867,
+        "whole_head_MAE": 0.05489760637283325,
+        "native_head_MAE": 0.15107503533363342
+      },
+      "native_tiles": 25
+    },
+    {
+      "source": "ostrava",
+      "id": "ostrava/train/74",
+      "group": "ostrava:corrosion-in-industrial-complexes-in-ostrava/train/images/74.jpg",
+      "stats": {
+        "v62_whole": {
+          "balanced_known_BCE": 0.014273972344665615,
+          "classes": {
+            "0": {
+              "pixels": 4194304,
+              "mean_probability": 0.014036297698056754,
+              "BCE": 0.014273972344665615
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v62_native": {
+          "balanced_known_BCE": 0.6787645495610649,
+          "classes": {
+            "0": {
+              "pixels": 4194304,
+              "mean_probability": 0.3216105665850204,
+              "BCE": 0.6787645495610649
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_whole": {
+          "balanced_known_BCE": 0.18337446150774,
+          "classes": {
+            "0": {
+              "pixels": 4194304,
+              "mean_probability": 0.09564442122647793,
+              "BCE": 0.18337446150774
+            }
+          },
+          "unknown_pixels": 0
+        },
+        "v81_native": {
+          "balanced_known_BCE": 1.3855298923833916,
+          "classes": {
+            "0": {
+              "pixels": 4194304,
+              "mean_probability": 0.503027212064502,
+              "BCE": 1.3855298923833916
+            }
+          },
+          "unknown_pixels": 0
+        }
+      },
+      "probability_changes": {
+        "v62_input_MAE": 0.31091830134391785,
+        "v81_input_MAE": 0.4306756556034088,
+        "whole_head_MAE": 0.08607512712478638,
+        "native_head_MAE": 0.26194262504577637
+      },
+      "native_tiles": 25
+    }
+  ],
+  "model_state_before_after_exact": true,
+  "model_state_SHA256": "91180ead165861bb4856e8e251843c766c2ca6890cf3067d623cb7e07724afc5",
+  "old_FIT_cache_SHA_exact": true,
+  "new_optimizer_gradient_VAL_CAL_TEST_visual_API_CPP_ZIP": 0,
+  "new_natural_photos": 0,
+  "new_feature_cache_files": 0,
+  "not_independent_performance_or_causal_TEST_diagnosis": true
+}
