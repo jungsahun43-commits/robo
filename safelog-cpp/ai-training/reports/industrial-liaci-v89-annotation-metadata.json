@@ -1,0 +1,153 @@
+{
+  "UTC": "2026-10-17T06:19:02.830050+00:00",
+  "policy_SHA256": "cdb1daad4e1abc47fb1e8ad4e2228136573461076cd9ab61c5fc7a06e88c8b17",
+  "reservation_SHA256": "2b7bab9a88db75e1a465eac0f82ebbbf40d92813c73510e17488f191976e5706",
+  "original_COCO_JSON_SHA256": "4acd1fd3d0498c091803d4d5f2617bffcef5427cab0bd4d209c32d72e917de94",
+  "original_member_size_CRC_verified": true,
+  "whole_archive_checksum_verified": false,
+  "actual_range_bytes": 1791328,
+  "ranges": [
+    {
+      "start": 971802150,
+      "bytes": 30,
+      "local_SHA256": "ca9db12f076aee89c266a5d95526e5d093a85de2c07585730cd00c771c3e82d0"
+    },
+    {
+      "start": 971802180,
+      "bytes": 37,
+      "local_SHA256": "720ba7508c392ff489d3cd19f17900beb84375b07ce45d2a2b1acf39355edce7"
+    },
+    {
+      "start": 971802217,
+      "bytes": 1791261,
+      "local_SHA256": "2288eaeeb8ec8f4fd05ca39dfbe10818513a4482125f7b8c32e3d309b301a1cf"
+    }
+  ],
+  "top_level_keys": [
+    "info",
+    "licenses",
+    "images",
+    "annotations",
+    "categories"
+  ],
+  "images": 1893,
+  "annotations": 12727,
+  "categories": [
+    {
+      "id": 1,
+      "name": "sea_chest_grating",
+      "supercategory": ""
+    },
+    {
+      "id": 2,
+      "name": "paint_peel",
+      "supercategory": ""
+    },
+    {
+      "id": 3,
+      "name": "over_board_valve",
+      "supercategory": ""
+    },
+    {
+      "id": 4,
+      "name": "defect",
+      "supercategory": ""
+    },
+    {
+      "id": 5,
+      "name": "corrosion",
+      "supercategory": ""
+    },
+    {
+      "id": 6,
+      "name": "propeller",
+      "supercategory": ""
+    },
+    {
+      "id": 7,
+      "name": "anode",
+      "supercategory": ""
+    },
+    {
+      "id": 8,
+      "name": "bilge_keel",
+      "supercategory": ""
+    },
+    {
+      "id": 9,
+      "name": "marine_growth",
+      "supercategory": ""
+    },
+    {
+      "id": 10,
+      "name": "ship_hull",
+      "supercategory": ""
+    }
+  ],
+  "image_field_names": [
+    "coco_url",
+    "date_captured",
+    "file_name",
+    "flickr_url",
+    "height",
+    "id",
+    "license",
+    "width"
+  ],
+  "annotation_field_names": [
+    "area",
+    "attributes",
+    "bbox",
+    "category_id",
+    "id",
+    "image_id",
+    "iscrowd",
+    "segmentation"
+  ],
+  "category_photo_support": {
+    "train": {
+      "sea_chest_grating": 258,
+      "paint_peel": 637,
+      "over_board_valve": 117,
+      "defect": 58,
+      "corrosion": 155,
+      "propeller": 384,
+      "anode": 406,
+      "bilge_keel": 142,
+      "marine_growth": 586,
+      "ship_hull": 1194
+    },
+    "test": {
+      "sea_chest_grating": 38,
+      "paint_peel": 95,
+      "over_board_valve": 21,
+      "defect": 7,
+      "corrosion": 23,
+      "propeller": 48,
+      "anode": 52,
+      "bilge_keel": 23,
+      "marine_growth": 80,
+      "ship_hull": 163
+    },
+    "not_used": {
+      "sea_chest_grating": 121,
+      "paint_peel": 156,
+      "over_board_valve": 94,
+      "defect": 11,
+      "corrosion": 33,
+      "propeller": 55,
+      "anode": 58,
+      "bilge_keel": 16,
+      "marine_growth": 145,
+      "ship_hull": 299
+    }
+  },
+  "publisher_split_counts": {
+    "train": 1370,
+    "test": 191,
+    "not_used": 332
+  },
+  "capture_groups_label_completeness_and_pixel_contract_verified": false,
+  "new_source_images_pixels_features_scores_gradient_optimizer": 0,
+  "ready_for_training": false
+}
