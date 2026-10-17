@@ -1,0 +1,43 @@
+{
+  "UTC": "2026-10-18T07:21:18.191244+09:00",
+  "status": "DIRECTORY_METADATA_STOPPED",
+  "error": "ValueError('Unexpected HTTP status/URL; response body not read')",
+  "preregistered_HEAD": "a31437bf7869491abead4e02afe8e4bcda40e2df",
+  "policy_SHA256": "e7903e961e136edf7f48d8722356111d01d648520bfcfc62ce4373fe9f76922e",
+  "requests": [
+    {
+      "UTC": "2026-10-18T07:21:18.19021+09:00",
+      "method": "HEAD",
+      "requested_URL": "https://data.mendeley.com/public-files/datasets/6x4dzzrs2h/files/474c3c1e-eb1f-4c2e-ae33-27bad59b5350/file_downloaded",
+      "response_URL": "https://data.mendeley.com/public-files/datasets/6x4dzzrs2h/files/474c3c1e-eb1f-4c2e-ae33-27bad59b5350/file_downloaded",
+      "status": 302,
+      "headers": {
+        "Date": "Sat, 17 Oct 2026 22:21:18 GMT",
+        "Content-Type": "text/plain; charset=utf-8",
+        "Content-Length": "134",
+        "Connection": "close",
+        "location": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+        "Server": "cloudflare",
+        "vary": "Accept",
+        "x-powered-by": "Express",
+        "cf-cache-status": "DYNAMIC",
+        "Server-Timing": "cfEdge;dur=10,cfOrigin;dur=1242",
+        "CF-RAY": "a4c2b2062c20fd11-ICN"
+      },
+      "requested_range": null,
+      "If_Range": null,
+      "body_bytes_read_by_helper": 0
+    }
+  ],
+  "actual_range_body_bytes": 0,
+  "originals_partials_headers_preserved": true,
+  "source_pixels_gradient_optimizer_CAL_TEST": 0,
+  "training_failure": false,
+  "whole_stage_restart_retry_or_full_download_allowed": false,
+  "ready_for_training": false,
+  "metadata_guard_fixtures": {
+    "ordinary_EOCD_and_directory": true,
+    "unsafe_encrypted_duplicate_paths_rejected": true,
+    "full_response_and_changed_ETag_rejected_before_body": true
+  }
+}
