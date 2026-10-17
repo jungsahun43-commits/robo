@@ -1,0 +1,107 @@
+{
+  "UTC": "2026-10-18T07:23:51.551485+09:00",
+  "status": "DIRECTORY_METADATA_COMPLETE",
+  "preregistered_HEAD": "0dc676e039b199b76256ea47b6577c2f60af9afd",
+  "policy_SHA256": "383e9c0cb92f439c9becfe6aa904ba96c4623d1694c65121ef15b642158435c5",
+  "requests": [
+    {
+      "UTC": "2026-10-18T07:23:48.714134+09:00",
+      "method": "HEAD",
+      "requested_URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "response_URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 200,
+      "headers": {
+        "x-amz-id-2": "8jhuJ+w93YwuMuOyzQxEYy4sbzTskDYEMcWVfM4w9jXSAN1gz3FnF5BWXq/utj35u4VM9i2oAHP8Jn5x6viXmRE9f6qvBABd",
+        "x-amz-request-id": "4CQGJWGM5QWJ8X6X",
+        "Server": "AmazonS3",
+        "Date": "Sat, 17 Oct 2026 22:23:49 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "204919973",
+        "Content-Type": "application/zip",
+        "Connection": "close"
+      },
+      "requested_range": null,
+      "If_Range": null,
+      "body_bytes_read_by_helper": 0
+    },
+    {
+      "UTC": "2026-10-18T07:23:49.699776+09:00",
+      "method": "GET",
+      "requested_URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "response_URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "headers": {
+        "x-amz-id-2": "b+nqcK+u077IO8jgSBiJQ7YSPg2s4lsRn70pLEBrHcTKCyVZ6hQ0ADGqBhDPFn898IjuV6ZrsvxA35m/7GreyTR0Yy4Aksmu",
+        "x-amz-request-id": "MD8W82QQ6CZQNXRS",
+        "Server": "AmazonS3",
+        "Date": "Sat, 17 Oct 2026 22:23:50 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 204919951-204919972/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "22",
+        "Connection": "close"
+      },
+      "requested_range": [
+        204919951,
+        204919972
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "body_bytes_read_by_helper": 22
+    },
+    {
+      "UTC": "2026-10-18T07:23:50.586407+09:00",
+      "method": "GET",
+      "requested_URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "response_URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "headers": {
+        "x-amz-id-2": "6UChJJQq08UA+QO4jc+swMTUx6mv4B03ve5Nr19CtfQuWHpWQCAIiJGbfAfu6CPKgjtBXnsethGa73Z2mCTygxOqllQr1JB9",
+        "x-amz-request-id": "V7XJWCEVN197N16K",
+        "Server": "AmazonS3",
+        "Date": "Sat, 17 Oct 2026 22:23:51 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 204529385-204919950/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "390566",
+        "Connection": "close"
+      },
+      "requested_range": [
+        204529385,
+        204919950
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "body_bytes_read_by_helper": 390566
+    }
+  ],
+  "actual_range_body_bytes": 390588,
+  "strong_ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+  "directory_members": 3711,
+  "declared_expanded_bytes_not_acquired": 244856676,
+  "new_original_publisher_or_V1_V2_metadata_requests": 0,
+  "old_v124_job_or_fixtures_rerun": false,
+  "full_archive_or_member_content_acquired": false,
+  "source_pixels_QA_features_scores_gradient_optimizer_CAL_TEST_API_CPP_ZIP_APK": 0,
+  "archive_SHA_or_member_CRC_locally_verified": false,
+  "final_photo_roles_native_GT_groups_graph_minima_verified": false,
+  "ready_for_training": false,
+  "stored_bytes_before_final_report": 2973552,
+  "disk_free": 2276249600
+}
