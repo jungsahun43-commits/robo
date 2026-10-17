@@ -1,0 +1,165 @@
+{
+  "UTC": "2026-10-17T23:21:28.638683+00:00",
+  "status": "ONE_TRAIN_ANNOTATION_SCHEMA_COMPLETE",
+  "preregistered_HEAD": "4c644816c6141141890c6645c966d082e3871d37",
+  "policy_SHA256": "20aabcc3e933eb29b68d524c9b9b25323582c4a1b70ff6cee76c637c584c7712",
+  "selected_member": "HRCDS/train_annotations/train_0001.json",
+  "requests": [
+    {
+      "UTC": "2026-10-17T23:21:26.814822+00:00",
+      "URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "range": [
+        15883587,
+        15883616
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "headers": {
+        "x-amz-id-2": "QDx0L6Y2F4s+AHTCmVZO4Ofbk48JYzIVj0OBegufdMxQ30LzDPhZb+BWyTqhXRrTdf0Dfe7fW4ZMApd2NPpkBNjFKediA14S",
+        "x-amz-request-id": "EYE3C1WW0HJ5PY7W",
+        "Server": "AmazonS3",
+        "Date": "Sat, 17 Oct 2026 23:21:27 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 15883587-15883616/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "30",
+        "Connection": "close"
+      },
+      "body_bytes_read_by_helper": 30
+    },
+    {
+      "UTC": "2026-10-17T23:21:27.717067+00:00",
+      "URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "range": [
+        15883617,
+        15883687
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "headers": {
+        "x-amz-id-2": "+I7Ht6RjB9uz1L1YBMwy4yTvwMLIAfbcgCUf33iFRxHw7dwJRZroVhgbjerbhma/5r3XGxKa8ThhherHdgPx0XujA/vUPfOU",
+        "x-amz-request-id": "38G5MZ5NWS1PZY18",
+        "Server": "AmazonS3",
+        "Date": "Sat, 17 Oct 2026 23:21:28 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 15883617-15883687/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "71",
+        "Connection": "close"
+      },
+      "body_bytes_read_by_helper": 71
+    },
+    {
+      "UTC": "2026-10-17T23:21:28.625803+00:00",
+      "URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "range": [
+        15883688,
+        15899919
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "headers": {
+        "x-amz-id-2": "RSAOPzwJ1YLw3zjGGs4hAlY5XLUgLGbXUDc8U7t7dfKcLQiv5bI9kxSknC6KkYc25pkGYNzfzEIIohwGt8IILAOTGIB4PZlI",
+        "x-amz-request-id": "737T4KR21JR54YXX",
+        "Server": "AmazonS3",
+        "Date": "Sat, 17 Oct 2026 23:21:29 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 15883688-15899919/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "16232",
+        "Connection": "close"
+      },
+      "body_bytes_read_by_helper": 16232
+    }
+  ],
+  "actual_new_range_body_bytes": 16333,
+  "source_annotation_JSON_members_acquired": 1,
+  "selected_member_encoded_bytes": 16232,
+  "selected_member_expanded_bytes": 153629,
+  "selected_member_CRC32_verified": "7f8c0a15",
+  "selected_raw_JSON_SHA256": "5a7ec7c42e895126b335b114dd35d5bc901a77963b1d10add99188b2535a4a46",
+  "schema_observations": {
+    "root_keys_and_types": {
+      "version": "str",
+      "flags": "dict",
+      "shapes": "list",
+      "imagePath": "str",
+      "imageData": "NoneType",
+      "imageHeight": "int",
+      "imageWidth": "int"
+    },
+    "declared_version_if_short_string": "5.5.0",
+    "declared_image_width_height": [
+      1080,
+      720
+    ],
+    "declared_dimensions_are_positive_ints": true,
+    "imagePath_string_bytes": 31,
+    "imagePath_basename_matches_expected": true,
+    "imagePath_followed_or_used_for_filesystem_access": false,
+    "imageData_present": true,
+    "imageData_type": "NoneType",
+    "nonempty_encoded_image_payload_acquired_in_annotation": false,
+    "encoded_imageData_character_count": null,
+    "encoded_imageData_UTF8_bytes": null,
+    "encoded_imageData_string_SHA256_not_decoded_photo_SHA": null,
+    "imageData_decoded_or_displayed": false,
+    "root_flag_key_types_only": {},
+    "shape_count": 13,
+    "literal_label_shape_counts": {
+      "spalling": 2,
+      "crack": 11
+    },
+    "literal_shape_type_counts": {
+      "polygon": 13
+    },
+    "annotation_group_id_type_counts_not_physical_groups": {
+      "NoneType": 13
+    },
+    "point_count": 1432,
+    "invalid_nonfinite_or_nonpair_point_count": 0,
+    "points_outside_closed_declared_image_edges": 0,
+    "closed_edge_numeric_check_is_not_authoritative_raster_contract": true,
+    "coordinate_min_xy": [
+      0.0,
+      0.0
+    ],
+    "coordinate_max_xy": [
+      1079.0,
+      719.0
+    ],
+    "all_observed_shapes_explicit_polygon": true,
+    "explicit_background_unknown_related_root_key_names_only": [],
+    "schema_observation_issues": [],
+    "background_unknown_RGB_mask_palette_raster_and_physical_group_semantics_verified": false,
+    "GT_modified_or_unannotated_pixels_declared_negative": false,
+    "ready_for_pixels_or_training": false
+  },
+  "publisher_TEST_content_or_VAL_content_accessed": 0,
+  "original_metadata_HEAD_CD_or_completed_jobs_fixtures_rerun": false,
+  "full_archive_SHA_all_member_CRC_native_GT_RGB_mask_semantics_groups_graph_or_minima_verified": false,
+  "source_RGB_or_mask_files_downloaded_or_decoded": 0,
+  "embedded_image_payload_acquired_if_present": false,
+  "source_visual_QA_rasterization_features_scores_gradients_optimizer_CAL_TEST_API_CPP_ZIP_APK": 0,
+  "ready_for_pixels_or_training": false,
+  "stored_bytes_before_final_report": 369052,
+  "disk_free": 2279784448
+}
