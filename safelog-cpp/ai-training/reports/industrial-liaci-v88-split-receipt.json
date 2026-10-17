@@ -1,0 +1,38 @@
+{
+  "UTC": "2026-10-17T06:16:13.377051+00:00",
+  "policy_SHA256": "831a4bf31e59f7832218edf31716a1abf5fcbf89696adb750efaca244a110eb5",
+  "member": {
+    "member": "LIACi_dataset_pretty/train_test_split.csv",
+    "bytes": 50824,
+    "packed": 9955,
+    "method": 8,
+    "flags": 0,
+    "CRC32_declared": "8de40ea5",
+    "local_header_offset": 973593478,
+    "directory": false
+  },
+  "split_CSV_SHA256": "a53e08d4a666f0b0a7b1e4c38d258b82d0511f2fe7c900e789ef17ce72477ffb",
+  "actual_range_bytes": 10026,
+  "ranges": [
+    {
+      "start": 973593478,
+      "bytes": 30,
+      "local_SHA256": "6382b2c78eb70f875a5ac2057b20c0b57d120af81b5c2d383920c95f8410b551"
+    },
+    {
+      "start": 973593508,
+      "bytes": 41,
+      "local_SHA256": "a09f1f710846d8e997a50429244d219ded409efb7ffb5942a8faa8fa44c14d6a"
+    },
+    {
+      "start": 973593549,
+      "bytes": 9955,
+      "local_SHA256": "576c6af69468493d06414c4083dc8c9aea069dd150481e492573ab985905b2b1"
+    }
+  ],
+  "member_size_and_CRC_verified": true,
+  "whole_archive_checksum_verified": false,
+  "schema_and_original_evaluation_ID_reservation": "pending explicit inspection, not readyFIT",
+  "new_photos_annotations_pixels_features_scores_gradients_optimizer": 0,
+  "ready_for_training": false
+}

@@ -1,0 +1,34 @@
+{
+  "UTC": "2026-10-17T06:18:27.119395+00:00",
+  "stage": "COCO JSON metadata only after immutable original split/copy reservation",
+  "URL": "https://liaci.sintef.cloud/download_data/data.zip",
+  "ETag": "\"1726140227.0-1044750953-416943642\"",
+  "archive_bytes": 1044750953,
+  "member": {
+    "member": "LIACi_dataset_pretty/coco-labels.json",
+    "bytes": 15612447,
+    "packed": 1791261,
+    "method": 8,
+    "flags": 0,
+    "CRC32_declared": "d9eba479",
+    "local_header_offset": 971802150,
+    "directory": false
+  },
+  "reservation_SHA256": "2b7bab9a88db75e1a465eac0f82ebbbf40d92813c73510e17488f191976e5706",
+  "index_SHA256": "9994401ddcec02ad541df97aa39e6630fb8e806ea91d202ac91efb69c249e3a6",
+  "split_SHA256": "a53e08d4a666f0b0a7b1e4c38d258b82d0511f2fe7c900e789ef17ce72477ffb",
+  "max_total_range_bytes": 4194304,
+  "max_text_bytes": 20971520,
+  "reserve_bytes": 1073741824,
+  "code_SHA256": {
+    "scripts\\inspect_liaci_annotation_metadata.py": "9760006d4a33344d9e2ae9e2fa533dc3f015867cbdd5ac7e8c30cc6f44c9ce59",
+    "safelog_ai\\public_zip_metadata.py": "f20aa4b23f9db944184bc7ee492e9b79d821f455bedac6350b48e87745d43c24"
+  },
+  "checks": "Exact public206/name/header/size/CRC/UTF8, bounded deflate, strict JSON duplicate-key/nonfinite rejection; preserve raw JSON. No imageData/base64 or code execution.",
+  "roles": "All original TEST191 and14copies each reserved; publisher not_used332 excluded, not replenishment. Only original1370TRAIN remain candidates, no finalFIT_VAL_CAL or sample minimum relaxation.",
+  "semantics": "Read raw category names/image metadata/annotation counts only. No polygon raster/pixel decode/GT edits or wholephoto normal assignment from missing classes. Capture/physical groups and label completeness remain unverified.",
+  "future": "Separate data pixel/duplicate/group/minimum/split policy must be preregistered before source RGB or mask decode. Existing held graph/roles preserved; currentTEST never TRAIN.",
+  "data_license": "Official LIACi CC BY-NC-SA4.0, noncommercial/attribution/SA/third-party rights retained; other sources unchanged",
+  "new_photos_pixel_features_scores_gradients_optimizer": 0,
+  "model_protocol_fixed": false
+}
