@@ -1,0 +1,104 @@
+{
+  "UTC": "2026-10-17T08:15:14.3287100Z",
+  "Status": "Static review complete; dataset production authority remains unestablished",
+  "Repository": "SINTEF/LIACI_context",
+  "Revision": "7bd7e3ec82b3a094ce67b6141dabbbf20d099f24",
+  "TreeEntries": 113,
+  "V94MetadataSHA256": "4cc02cb18b1df508e55139040d10372e5b65a801433c764132cdc5086fa167c1",
+  "V95MetadataSHA256": "130c6ae37255ec006c529cc437f6646d7f909e62f4881a1e5f81d23be62f9bd5",
+  "StaticFiles": [
+    {
+      "path": "LICENSE",
+      "bytes": 1063,
+      "git_blob_SHA1": "49113f30821e5be9a1c975d7d8f2fccef18e1d1d",
+      "local_SHA256": "32ed6b63a0b2bf9a24eaf1de775fc4b8834bf6dd7a258ed97f760dd2680c85d1",
+      "saved_static_text": "data/industrial-liaci-v94-public-code/static-00.txt",
+      "source_url": "https://github.com/SINTEF/LIACI_context/blob/7bd7e3ec82b3a094ce67b6141dabbbf20d099f24/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3533,
+      "git_blob_SHA1": "8ddaf172da13d124847737bed4e2a5dc9de413d7",
+      "local_SHA256": "7fb654b0ade9fa47e51397c08c8336f9065337697e03b47bc4371867c5f74c7a",
+      "saved_static_text": "data/industrial-liaci-v94-public-code/static-01.txt",
+      "source_url": "https://github.com/SINTEF/LIACI_context/blob/7bd7e3ec82b3a094ce67b6141dabbbf20d099f24/README.md"
+    },
+    {
+      "path": "pipeline/computer_vision/LIACi_segmenter.py",
+      "bytes": 13306,
+      "git_blob_SHA1": "e495bccb2ca86c1c5606a8020e5f0ee95f154001",
+      "local_SHA256": "3618d591407083582defee2026e7aef05a5e0f40d13dd03fa06603e971449708",
+      "saved_static_text": "data/industrial-liaci-v94-public-code/static-02.txt",
+      "source_url": "https://github.com/SINTEF/LIACI_context/blob/7bd7e3ec82b3a094ce67b6141dabbbf20d099f24/pipeline/computer_vision/LIACi_segmenter.py"
+    },
+    {
+      "path": "data/README.md",
+      "git_blob_SHA1": "71bd3af49b2e931140be25f6e428fb42c0542f24",
+      "local_SHA256": "74b28af703de036836740dbdfc77f7ebae0da7774e5c2e72cf1d27e3a894ea3e",
+      "bytes": 521,
+      "saved_static_text": "data/industrial-liaci-v95-referenced-docs/static-00.txt",
+      "source_url": "https://github.com/SINTEF/LIACI_context/blob/7bd7e3ec82b3a094ce67b6141dabbbf20d099f24/data/README.md"
+    },
+    {
+      "path": "pipeline/README.md",
+      "git_blob_SHA1": "8d93330903f04e395fd395d6f98fa1d38728b5ba",
+      "local_SHA256": "87b175e069807a09bbae341f415b3f254cf58666146119a13e6cac2e842ac710",
+      "bytes": 10662,
+      "saved_static_text": "data/industrial-liaci-v95-referenced-docs/static-01.txt",
+      "source_url": "https://github.com/SINTEF/LIACI_context/blob/7bd7e3ec82b3a094ce67b6141dabbbf20d099f24/pipeline/README.md"
+    },
+    {
+      "path": "pipeline/computer_vision/README.md",
+      "git_blob_SHA1": "dba7d2db525fad4eae97750e75c2858f62023576",
+      "local_SHA256": "d1b98a8a31f041252f8f0593493048db5f11b1d2100358794f7ee7d4245c4e6c",
+      "bytes": 4431,
+      "saved_static_text": "data/industrial-liaci-v95-referenced-docs/static-02.txt",
+      "source_url": "https://github.com/SINTEF/LIACI_context/blob/7bd7e3ec82b3a094ce67b6141dabbbf20d099f24/pipeline/computer_vision/README.md"
+    },
+    {
+      "path": "pipeline/video_input/README.md",
+      "git_blob_SHA1": "5d3a9a3a68939a88cc888da05430d1ef853714f4",
+      "local_SHA256": "1c6a198b50a85e2c6676b7d3007f05dce8c431742ad696afddd17744fad856a5",
+      "bytes": 2961,
+      "saved_static_text": "data/industrial-liaci-v95-referenced-docs/static-03.txt",
+      "source_url": "https://github.com/SINTEF/LIACI_context/blob/7bd7e3ec82b3a094ce67b6141dabbbf20d099f24/pipeline/video_input/README.md"
+    },
+    {
+      "path": "demonstrator/README.md",
+      "git_blob_SHA1": "53192ed4dc1fc7a143704c0d858c7b06daaa9f48",
+      "local_SHA256": "0bab03a13d12a01ed7e457102fd2a4e0374b009f551f35406c54b4299c490c57",
+      "bytes": 6684,
+      "saved_static_text": "data/industrial-liaci-v95-referenced-docs/static-04.txt",
+      "source_url": "https://github.com/SINTEF/LIACI_context/blob/7bd7e3ec82b3a094ce67b6141dabbbf20d099f24/demonstrator/README.md"
+    }
+  ],
+  "StaticTextCount": 8,
+  "ActualNetworkBytes": 103081,
+  "TextBytes": 43161,
+  "Findings": [
+    "LIACi_segmenter is ONNX inference, not verified GT exporter",
+    "pycocotools2.0.4 in README is for prediction/mosaic storage, not confirmed current GT production",
+    "InspectionMetadata examples are not mapping for source1893 images",
+    "COCO/BMP/PNG authority/version and ID107 discrepancy not resolved in checked files"
+  ],
+  "AllRepositoryCodeHistoryReviewed": false,
+  "SourcePixelsFeaturesScoresGradientsOptimizer": 0,
+  "ExternalCodeExecution": false,
+  "NewCAL_TEST_API_CPP_ZIP_APK": 0,
+  "ReadyForTraining": false,
+  "PriorGTAndModelsUnchanged": true,
+  "V96": {
+    "Title": "WPI BMVC2021 Corrosion Image Data Set",
+    "DOI": "10.5244/C.35.417",
+    "Stage": "Primary web metadata preliminary screen only",
+    "PhotosAcquired": 0,
+    "OfficialMetadata": "600 laboratory images, expert ratings, classification task",
+    "NativePixelGTNormalSupportFilesChecksumsVerified": false,
+    "DataLicenseAcceptedForTraining": false,
+    "AuthorREADME_MIT_DatasetNoteObserved": true,
+    "NoClassificationToPixelGT": true,
+    "Decision": "Defer before acquisition for current location-GT priority",
+    "EvidenceNotesSHA256": "a7a759f866ef0c1f193a7fa43b8db5540ac6adceff64807d141143d7911fb1b6"
+  },
+  "Next": "reports/INDUSTRIAL_SOURCE_AFTER_V96_NEXT_KO.md; v97 proposal only"
+}
