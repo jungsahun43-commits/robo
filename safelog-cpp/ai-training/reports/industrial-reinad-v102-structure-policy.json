@@ -1,0 +1,38 @@
+{
+  "UTC": "2026-10-17T10:17:49.924361+00:00",
+  "scope": "Single smallest declared TRAIN HDF5, byte verification and structural metadata only; no RGB/mask dataset values",
+  "code_SHA256": "cb48784dd8e1ccad856fbbddf69409654d3001eb23d2dd2fe88a41a19c6dcc25",
+  "process_probe_SHA256": "6056466915aa38c35ccfef333e211f32cb446dcde2316715c2c672b4fd850536",
+  "v101_metadata_SHA256": "5ca0ff615782ff2f1775e4ae1ff4e87d2f502e11ae6e2f8f285c86d6f944bb30",
+  "TEST_reservation_SHA256": "040d237de87f5fb1b1c61c3dc4bd77b81103afe0b9e9b89e8ad4a8816fdb8cc3",
+  "PyPI_metadata_SHA256": "acf09e71f9b25db02081a260399e4e9020da7bec56d291d1f597d01b52f4b760",
+  "repository": "Tocmac/ReinAD",
+  "revision": "cfdff64a23f293bf0d32fc53ac1898c470da5bfb",
+  "source": {
+    "path": "train/cable_2.h5",
+    "bytes": 8343076,
+    "server_LFS_SHA256": "dbfde7dbcf3f01e9af85a43e6057eaf4f6b468ba007ec5ba6cf5ec4c3fabbb9b",
+    "git_blob_SHA1": "3f23371d4aa5073c19cea9e6bdc6f8b7c41c5412",
+    "role": "train"
+  },
+  "source_URL": "https://huggingface.co/datasets/Tocmac/ReinAD/resolve/cfdff64a23f293bf0d32fc53ac1898c470da5bfb/train/cable_2.h5?download=true",
+  "h5py_wheel": {
+    "filename": "h5py-3.16.0-cp312-cp312-win_amd64.whl",
+    "bytes": 3182868,
+    "URL": "https://files.pythonhosted.org/packages/03/c1/0976b235cf29ead553e22f2fb6385a8252b533715e00d0ae52ed7b900582/h5py-3.16.0-cp312-cp312-win_amd64.whl",
+    "SHA256": "96b422019a1c8975c2d5dadcf61d4ba6f01c31f92bbde6e4649607885fe502d6"
+  },
+  "reader": "Standard h5py3.16.0 compatible WindowsCPython3.12 wheel, verified PyPI SHA; install --no-deps --no-index --no-compile into this OUT/reader-runtime only. Do not change existing venv/numpy or install dataset-author code/plugins.",
+  "network": "Anonymous HTTPS, source pinned public resolve URL and server-issued redirects only to huggingface.co subdomains, cas-bridge.xethub.hf.co or documented us.aws.cdn.hf.co/us.gcp.cdn.hf.co/cdn-lfs-us-1.hf.co/cdn-lfs-eu-1.hf.co; wheel exact files.pythonhosted.org. At most5redirects; no auth/cookies/retries/range guesses. Final200 exact declared length/SHA; preserve partial/header/failure, never overwrite completed originals.",
+  "CDN_documentation": "https://huggingface.co/docs/hub/en/datasets-downloading",
+  "max_total_download_bytes": 16777216,
+  "storage_bound_bytes": 67108864,
+  "reserve_bytes": 1073741824,
+  "HDF5_read_contract": "Read-only; at most256objects/depth4, hard links only/no alias cycles, no external/virtual datasets. Names ASCII<=80, root scalar split/category values only for fixed-length strings <=256bytes; variable/unknown attributes record shape/dtype without value reads. Dataset shape/dtype/chunks/filter descriptors only. Block Dataset.__getitem__/__array__/read_direct: any value read attempt fails. No dataset-author loader/import/PIL/decoder/array slice.",
+  "metadata_limits": "Root open/file cache bounded1MiB. Unknown dtype/shape recorded, not repaired or inferred as RGB/GT. Dataset logical sizes are not expanded into RAM/disk.",
+  "future_pixel_policy_screen_only": "At least70declarednormal/50declaredanomaly rows, matching NHWCuint8C3 and NHWuint8 masks, H/W32..8192 and <=40MP. This is NOT a group/pixel-label/independence/minimum or training pass. If below, stop this smallest-file direction without selecting a larger substitute from observed values.",
+  "TEST_and_roles": "All publisher22TEST files/allcontainedrecords remain reserved by v101 LFS bytes. No TEST HDF5 acquired/opened, no roles/splits assigned or changed. Full-source123668352496byte closure/oldheld links not done, so never readyFIT/independent evaluation.",
+  "data_terms": "ReinAD author dataCC BY-NC-SA4.0; noncommercial research/author-source-version-changes/share-alike; h5py dependency terms separate",
+  "ready_for_training": false,
+  "gradient_optimizer_features_scores_CAL_TEST_API_CPP_ZIP_APK": 0
+}
