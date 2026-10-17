@@ -1,0 +1,79 @@
+{
+  "UTC": "2026-10-17T23:20:51.6424223Z",
+  "fixed_before_new_member_content": true,
+  "dataset_DOI": "10.17632/6x4dzzrs2h.2",
+  "data_license": "CC BY 4.0",
+  "authors": [
+    "Pengwei Guo",
+    "Yi Bao"
+  ],
+  "script_sha256": "a9279c9b5aa101bf5109df36c558dcf8813dc46242148dd26faa70265ebcbdac",
+  "preserved_inputs_sha256": {
+    "scripts/inspect_hrcds_metadata_v121.py": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+    "scripts/inspect_mdmcs_zip_directory_v124.py": "96e1d88da875f7f9b8ed07f25c68e2184d1ae46e4baab12100b21d6236abd257",
+    "data/industrial-mdmcs-v123-metadata/publisher-root-files.json": "0c6de49b7d7fda7072a7245f8a83c47040659861eaad09d36526f829b8aabcea",
+    "data/industrial-mdmcs-v125-location-directory/storage-central-directory.bin": "60f880aff1620766b449e73c2eddce4826feec77541db6fb39536d6cc05d9489",
+    "data/industrial-mdmcs-v125-location-directory/central-directory-declarations.json": "172962e16ea319937f66c1c7105a6c7580f82a41be5efdb378425530a579d648",
+    "data/industrial-mdmcs-v125-location-directory/storage-HEAD-headers.json": "7ed41506906a0bedf1db8ac693470e04b993aa25a6785e7387484808f68054c1",
+    "data/industrial-mdmcs-v125-location-directory/directory-path-observations-and-test-protection.json": "656e5cf7b17059457740445d6e94cc073b5362cafbc38a4c81068c8c26a81c9f",
+    "data/industrial-mdmcs-v125-location-directory/all-members-protected-before-content.json": "77ff9e7f07ae39cf15cee9bfdda196f59ec2190da28f35d056d5ae1fffb0adf0"
+  },
+  "frozen_directory_declarations": "data/industrial-mdmcs-v125-location-directory/central-directory-declarations.json",
+  "frozen_storage_HEAD": "data/industrial-mdmcs-v125-location-directory/storage-HEAD-headers.json",
+  "selected_member": {
+    "name": "HRCDS/train_annotations/train_0001.json",
+    "filename_bytes_base64": "SFJDRFMvdHJhaW5fYW5ub3RhdGlvbnMvdHJhaW5fMDAwMS5qc29u",
+    "central_record_SHA256": "56ae6b15b12758abdce33c5819c0af4dae2c7d5528d0ee496c6da10d9a4bffd3",
+    "compressed_bytes_declared": 16232,
+    "expanded_bytes_declared": 153629,
+    "CRC32_declared_not_verified": "7f8c0a15",
+    "local_header_offset_declared": 15883587,
+    "compression_method": 8,
+    "flags": 8,
+    "is_directory_name": false,
+    "explicit_lowercase_path_role_tokens_only": [],
+    "role": "UNASSIGNED_PROTECTED_NO_MEMBER_CONTENT_READ",
+    "physical_group_or_photo_TEST_id_inferred": false
+  },
+  "expected_image_basename": "train_0001.jpg",
+  "selection_rule": "Lexicographically first original train_annotations JSON path fixed before content; no photo/model/TEST choice",
+  "url": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+  "strong_ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+  "storage_version_id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+  "archive_total_bytes": 204919973,
+  "central_directory_offset": 204529385,
+  "max_local_extra_bytes": 4096,
+  "max_shapes": 50000,
+  "publisher_TEST_literal_folders": [
+    "test_annotations",
+    "test_image",
+    "test_mark_color",
+    "test_mask"
+  ],
+  "publisher_VAL_literal_folders": [
+    "val_annotations",
+    "val_image",
+    "val_mask"
+  ],
+  "original_TEST_reserved_member_count": 400,
+  "original_VAL_HELD_member_count": 300,
+  "all_3711_members_and_possible_copies_UNASSIGNED_protected": true,
+  "request_sequence": [
+    "Selected local header30 once",
+    "Selected local name+extra once within fixed bound",
+    "Selected deflate body16232 once after header/extent guards"
+  ],
+  "aggregate_response_body_limit": 65536,
+  "storage_budget_bytes": 16777216,
+  "reserve_bytes": 1073741824,
+  "header_guard": "Exact206/URL/ContentRange/length/IfRange/same strong ETag/storage version/identity before body",
+  "selected_member_CRC_and_exact_expanded_bytes_required": true,
+  "schema": "Strict UTF8 JSON object; observe shape types/labels/coordinates/flags/dimensions/imageData without GT conversion/rasterization",
+  "encoded_imageData_if_present": "Record acquired encoded payload type/length/stringSHA; no base64 image decode/display/model input",
+  "original_HEAD_CD_metadata_completed_job_fixture_rerun_redirect_retry_alternate_endpoint_full_download_allowed": false,
+  "source_RGB_mask_decode_visual_QA_rasterization_features_score_gradient_optimizer_CAL_TEST_allowed": false,
+  "final_photo_TEST_copy_identity_FIT_VAL_CAL_minima_native_GT_unknown_physical_groups_graph_verified": false,
+  "old_originals_failures_roles_GT_graphs_models_outputs_preserved": true,
+  "model_protocol_fixed": false,
+  "ready_for_pixels_or_training": false
+}
