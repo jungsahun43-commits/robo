@@ -1,0 +1,33 @@
+{
+  "UTC": "2026-10-17T03:57:32.343524+00:00",
+  "fixed_before_new_FIT_features_scores": true,
+  "sources": {
+    "scripts/diagnose_corrosion_views.py": "50b492f270be83cccbd310c936af172483966e7e67e2ffe14f2e37928a3f289d",
+    "safelog_ai/corrosion_fit_diagnosis.py": "cf73302494f86f66d259f46f8445bddd973ea1851c4351b9f539011a3e1b9052",
+    "tests/test_corrosion_fit_diagnosis.py": "359ea8eaa9f58342ed3cec7cf98c60a8f195ef06027f75cee5aaa25f5eee0b70"
+  },
+  "inputs": {
+    "runs/industrial-corrosion-native-v81/trained/final-delta.pt": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10",
+    "runs/industrial-ostrava-rust-mask-v62/fit-features.pt": "15822ab6d65621dce539eb9544c8eac2baf6eaec87cf6f260dffbc20ffbb7a51",
+    "runs/industrial-ostrava-rust-mask-v62/fit-cache.json": "60fb720c573e31d5c6c55bd4d59dc3c885c95af3f7ec8db4d706f2906eaf2725",
+    "reports/industrial-ostrava-v62-protocol.json": "8460792f43fa92297d5a418dc2a048264f370bec211468fa9ba956009418d121",
+    "runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b",
+    "data/industrial-corrosion-subpixel-v78/manifest.json": "4b2a9a8f1f37bf4515558b1cbcfccb56aceb7fde228986545402c7fa711df6e4",
+    "data/industrial-ostrava-masks-v61/manifest.json": "90ab369b28d8ad6955ca0f3114e04c1fd87f7fc464c66a28fbccc763407e4f8c",
+    "scripts/study_corrosion_native.py": "51e88cde9968349a0ce9c411426fdf65d22116589f0d13c21c0cf76d05f8cd8e",
+    "scripts/study_corrosion_partial.py": "29727bd0b8e41164d6f58cf1c9d95e1a069ed2c1bba8dcfd5b768d4962e86e10",
+    "scripts/study_ostrava_rust_mask.py": "2ec62742a87cb637b63f5a60eabab6c7b4f571bf93c91ee9eb7f6c9001096f0a",
+    "scripts/prepare_corrosion_partial.py": "b5f416f78a6f93f6918e15c7ac5a19f600573fffcac4a15d9e5188f78b1be9b3",
+    "safelog_ai/native_corrosion_grid.py": "19d578f4e0c65a669e11a7c46bfa915d32a2f9dcee56af0db0c8fa538ed01c37",
+    "safelog_ai/corrosion_native_mask.py": "cceda3c49a9ec8918682bb6448c8377b4387792bacfac8e2b30a40af83200132"
+  },
+  "scope": "All and only locked FIT: Rios15+Ostrava60; full input grids from sizes, no content/GT-selected inference tiles. Fixed 2x2 views originalv62/selectedfailedv81 x whole512/native512stride384. Same two frozen heads, no model selection or promotion. Oldv81remains rejected.",
+  "statistics": "Native known-label class-balanced BCE, probability means, class-balanced probability MAE across input/head changes; no new cut/grid/pooling search or threshold selection. Unknown255 excluded, fullnegative uses onlypresentclass. No images visually selected.",
+  "reuse": "Ostrava whole512 FIT FP16 features/IDs/rawSHA/maskSHA/order/protocol/encoder binding from completed v62 cache exact, no old whole extraction rerun. New native features online; Rioswhole view fresh. Share each encoder view across bothheads. No feature disk cache.",
+  "preserve": "All model state before/after exact; cache and bound code/file SHA unchanged. New source gradient/optimizer/VAL_CAL_TEST/visual views/API_CPP_ZIP0. Not source/test improvement/causal proof for unseen field errors. No new natural photos, no GT changes or new audit/split.",
+  "future": "If FIT view/head drift gives evidence, separately preregister ONE teacher-retention training hypothesis using existing FIT only. Teacher soft probabilities are regularization targets, not new natural annotations. No same TEST threshold or retention-guard changes.",
+  "storage": "Sequential native maps and bounded RAM, output metadata<32MiB/>=1GiBreserve; retain all models/data/failedruns/caches; no full parent file/dense feature cache/deletion.",
+  "licenses": "RiosCC BY4.0 DOI10.17632/kcyn4nhv2c.1/OstravaCC BY4.0 DOI10.5281/zenodo.11235637/InsPLADCC BY-NC3.0/VTCC0/allparentterms retained",
+  "new_units_passed": 2,
+  "independent_field_validation": false
+}
