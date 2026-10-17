@@ -1,0 +1,45 @@
+{
+  "UTC": "2026-10-17T20:22:11.089328+00:00",
+  "preregistered_HEAD": "49bd806eba340396578c5be3d6305d5473cb4c1c",
+  "policy_SHA256": "897521c4297c7257547a81fb5eb0685598fd225657d4588afbe93e69c5c45dce",
+  "responses": [
+    {
+      "UTC": "2026-10-17T20:22:05.289318+00:00",
+      "URL": "https://data.mendeley.com/public-api/datasets/6x4dzzrs2h/folders/1",
+      "bytes": 2,
+      "local_SHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "publisher_source_file_checksum_verified": false,
+      "metadata_only": true
+    },
+    {
+      "UTC": "2026-10-17T20:22:11.081231+00:00",
+      "URL": "https://data.mendeley.com/public-api/datasets/6x4dzzrs2h/files?folder_id=root&version=1&%24start=0&%24limit=1000",
+      "bytes": 711,
+      "local_SHA256": "760267f9147dfbaba4d55768eebca887695946b70b8b4d8eb0206b653b392854",
+      "publisher_source_file_checksum_verified": false,
+      "metadata_only": true
+    }
+  ],
+  "reused_v121_page_bytes": 124430,
+  "new_page_HTTP_requests": 0,
+  "actual_new_API_response_bytes": 713,
+  "actual_combined_v121_v122_metadata_response_bytes": 125143,
+  "root_file_count": 1,
+  "declared_root_file_bytes": 204919973,
+  "folders_response_kind": "list",
+  "folders_response_count_if_list": 0,
+  "stored_bytes_before_final_report": 9547,
+  "complete_tree_inventory": false,
+  "nested_folders_followed": false,
+  "source_photos_masks_archives_PDF_code_weights_acquired": 0,
+  "source_pixels_visual_QA_features_scores_gradients_optimizer_CAL_TEST": 0,
+  "full_source_checksum_CRC_native_GT_roles_physical_groups_verified": false,
+  "ready_for_training": false,
+  "metadata_recovery_fixture_checks": {
+    "observed_metadata_suffix": true,
+    "executable_suffix_rejected": true,
+    "overflow_number_rejected": true
+  },
+  "remaining_disk_free": 2320134144,
+  "v121_failure_preserved_not_reclassified_as_pass": true
+}
