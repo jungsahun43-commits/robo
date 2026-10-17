@@ -1,0 +1,22 @@
+{
+  "UTC": "2026-10-17T08:07:04.553428+00:00",
+  "scope": "Public SINTEF LIACI_context official related repository only; inspect static evidence, not assume dataset exporter",
+  "repository": "SINTEF/LIACI_context",
+  "API": "https://api.github.com/repos/SINTEF/LIACI_context",
+  "code_SHA256": "63a635fb5f3b49a4a2b3dcf1bc84682493466f9e8ca2a370bcf22691a8d7c0c8",
+  "process_probe_SHA256": "6056466915aa38c35ccfef333e211f32cb446dcde2316715c2c672b4fd850536",
+  "upstream_report_SHA256": "d38a4a9d3543a828dc949ede7410f7ce4c3929265da727a577ef5ecee82cd057",
+  "network": "Anonymous HTTPS GET repo, default-branch commit, exact recursive tree; then listed git blobs only. Pin immutable commit/tree/blob SHA; no clone/archive/model/image/notebook download. Exact Git blob SHA1/length and localSHA256. No code/import/eval/notebook output execution.",
+  "selection": "RootREADME/LICENSE plus at most10listed py/md/rst/txt blobs <=128KiB, ranked by path terms coco20/dataset16/annotat12/label12/mask10/segment8, tie lexical. Exclude ipynb and symlinks/submodules; retain skipped candidate list.",
+  "max_HTTP_response_bytes": 2097152,
+  "max_total_network_bytes": 4194304,
+  "max_text_member_bytes": 131072,
+  "max_selected_other_files": 10,
+  "reserve_bytes": 1073741824,
+  "storage_bound_bytes": 8388608,
+  "new_source_RGB_masks_pixels_views_features_scores_gradients_optimizer": 0,
+  "GT_repaired": false,
+  "ready_for_training": false,
+  "authority": "Related author-project code is not evidence of current dataset production version. Record exact provenance/limitations; codeMIT cannot replace LIACi dataCC BY-NC-SA4.0. No auto-contact/PII/authentication or access bypass.",
+  "preserve": "All v90-v93 failures, six originalRGB, masks/COCO, roles/held exclusions and original files remain; no complete-source decoding, distance replay, model/test or threshold work."
+}
