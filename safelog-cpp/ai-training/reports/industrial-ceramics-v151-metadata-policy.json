@@ -1,0 +1,50 @@
+{
+  "UTC": "2026-10-18T16:55:53.9641730Z",
+  "fixed_before_new_API_HTTP": true,
+  "dataset_id": "2bkhytgwm8",
+  "dataset_version": 1,
+  "dataset_DOI": "10.17632/2bkhytgwm8.1",
+  "expected_source_title": "Surface defect dataset for sanitary ceramics V2",
+  "title_suffix_not_publisher_version": true,
+  "source_authors": [
+    "Murat Çöpoğlu",
+    "Gürkan Öztürk",
+    "Emre Çimen"
+  ],
+  "page_data_licence": "CC BY-NC 3.0",
+  "url": "https://data.mendeley.com/public-api/datasets/2bkhytgwm8/files?folder_id=root&version=1&%24start=0&%24limit=1000",
+  "url_provenance": "Previously observed publisher public-API route pattern applied to fixed new dataset/version; current endpoint not yet requested/validated",
+  "response_limit_bytes": 524288,
+  "storage_budget_bytes": 4194304,
+  "reserve_bytes": 1073741824,
+  "maximum_new_GET_requests": 1,
+  "exact200_sameURL_JSONMIME_identity_length_cap_before_body": true,
+  "strict_JSON_and_publisher_SHA256_declarations_required": true,
+  "script_sha256": "b9c1b59c7c4189f855229de6aeaf55596857cb8b835f05acce32517b67ccec92",
+  "provenance_memo": "data/industrial-source-v150-metadata/primary-web-observations.json",
+  "provenance_memo_sha256": "3920b2d78c6903c303d8d84cb26b99ebb1bc93961e8c629324d7348f800a4206",
+  "prerequisite_files": [
+    "scripts/inspect_ceramics_metadata_v151.py",
+    "reports/industrial-ceramics-v151-metadata-policy.json",
+    "reports/CERAMICS_V151_METADATA_PROTOCOL_KO.md",
+    "reports/INDUSTRIAL_SOURCE_V150_METADATA_KO.md"
+  ],
+  "new_fixture_receipt": "C:\\Users\\c\\Documents\\Codex\\2026-09-21\\sork\\outputs\\CERAMICS_V151_NEW_FIXTURES_2026-10-19\\fixtures.json",
+  "preserved_untracked_notes": [
+    "?? safelog-cpp/ai-training/reports/SAFELOG_DATA_RETENTION_AND_CLEANUP_REVIEW_KO.md",
+    "?? safelog-cpp/ai-training/reports/industrial-dataset-retention-policy-2026-10-18.json"
+  ],
+  "preserved_untracked_notes_sha256": {
+    "reports/SAFELOG_DATA_RETENTION_AND_CLEANUP_REVIEW_KO.md": "c4af6904a58b67553f7f2b4fa03df9197b23ce793f7b9c10086fe615193adbc8",
+    "reports/industrial-dataset-retention-policy-2026-10-18.json": "acf0c4e9484316ee18212483b985b61c2f0e7891d14b46ca87c08579599e0f2a"
+  },
+  "redirects_retries_page_related_folders_pagination_file_download_fallback_allowed": false,
+  "original_potential_related_containers_records_copies_UNASSIGNED_before_request": true,
+  "photo_TEST_VALHELD_final_roles_groups_graph_nativeGT_minima_fixed": false,
+  "source_binary_pixel_model_protocol_permission": false,
+  "author_code_execution": 0,
+  "features_gradients_optimizer_CAL_TEST": 0,
+  "full_source_storage_budget_passed": false,
+  "ready_for_training": false,
+  "extra_deletion_permission": false
+}
