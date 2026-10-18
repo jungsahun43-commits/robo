@@ -1,0 +1,93 @@
+{
+  "UTC": "2026-10-18T00:21:42.7147501Z",
+  "fixed_before_new_encoded_member_content": true,
+  "dataset_DOI": "10.17632/6x4dzzrs2h.2",
+  "data_license": "CC BY 4.0",
+  "authors": [
+    "Pengwei Guo",
+    "Yi Bao"
+  ],
+  "script_sha256": "27cb9941bf5da2233ef0c9d1d1591543604d1a220b4a0978606659ac4b83f09e",
+  "preserved_inputs_sha256": {
+    "scripts/inspect_hrcds_metadata_v121.py": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+    "scripts/inspect_mdmcs_zip_directory_v124.py": "96e1d88da875f7f9b8ed07f25c68e2184d1ae46e4baab12100b21d6236abd257",
+    "scripts/inspect_mdmcs_train_json_v126.py": "a9279c9b5aa101bf5109df36c558dcf8813dc46242148dd26faa70265ebcbdac",
+    "data/industrial-mdmcs-v125-location-directory/central-directory-declarations.json": "172962e16ea319937f66c1c7105a6c7580f82a41be5efdb378425530a579d648",
+    "data/industrial-mdmcs-v125-location-directory/storage-central-directory.bin": "60f880aff1620766b449e73c2eddce4826feec77541db6fb39536d6cc05d9489",
+    "data/industrial-mdmcs-v125-location-directory/storage-HEAD-headers.json": "7ed41506906a0bedf1db8ac693470e04b993aa25a6785e7387484808f68054c1",
+    "data/industrial-mdmcs-v126-train-json/reserved-TEST-VAL-and-all-possible-copies-before-annotation-content.json": "33dcb2abe4c58cbc4844d9e846e73065f5fe184384b307bb00f16f060a83974b",
+    "data/industrial-mdmcs-v126-train-json/annotation-schema-observations.json": "40f2ca3e0c436b99db107ab3133dad3afaaae0a4b998a54cda6d0259302e3113"
+  },
+  "frozen_directory": "data/industrial-mdmcs-v125-location-directory/central-directory-declarations.json",
+  "frozen_reservation": "data/industrial-mdmcs-v126-train-json/reserved-TEST-VAL-and-all-possible-copies-before-annotation-content.json",
+  "members": [
+    {
+      "central": {
+        "name": "HRCDS/train_image/train_0001.jpg",
+        "filename_bytes_base64": "SFJDRFMvdHJhaW5faW1hZ2UvdHJhaW5fMDAwMS5qcGc=",
+        "central_record_SHA256": "d3fa79de99f9fd647b1a7c8aaab7edd9a2fd28e040cb09cc254a97615861acf4",
+        "compressed_bytes_declared": 327755,
+        "expanded_bytes_declared": 343999,
+        "CRC32_declared_not_verified": "0d530a25",
+        "local_header_offset_declared": 22596979,
+        "compression_method": 8,
+        "flags": 8,
+        "is_directory_name": false,
+        "explicit_lowercase_path_role_tokens_only": [],
+        "role": "UNASSIGNED_PROTECTED_NO_MEMBER_CONTENT_READ",
+        "physical_group_or_photo_TEST_id_inferred": false
+      },
+      "tag": "image",
+      "preserved_filename": "publisher-train_0001.jpg",
+      "expected_encoding": "JPEG"
+    },
+    {
+      "central": {
+        "name": "HRCDS/train_mask/train_0001_mask.png",
+        "filename_bytes_base64": "SFJDRFMvdHJhaW5fbWFzay90cmFpbl8wMDAxX21hc2sucG5n",
+        "central_record_SHA256": "ef14208e89f562ee8ba59cdc3a2f02334acefbd9fdbaad479a84416c0dcc63f5",
+        "compressed_bytes_declared": 8327,
+        "expanded_bytes_declared": 8550,
+        "CRC32_declared_not_verified": "2f6a46a3",
+        "local_header_offset_declared": 185964664,
+        "compression_method": 8,
+        "flags": 8,
+        "is_directory_name": false,
+        "explicit_lowercase_path_role_tokens_only": [],
+        "role": "UNASSIGNED_PROTECTED_NO_MEMBER_CONTENT_READ",
+        "physical_group_or_photo_TEST_id_inferred": false
+      },
+      "tag": "mask",
+      "preserved_filename": "publisher-train_0001_mask.png",
+      "expected_encoding": "PNG"
+    }
+  ],
+  "selection_rule": "Same first original TRAIN fixed before pixel/model content; exact central names retained; no source-score/TEST choice",
+  "url": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+  "strong_ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+  "storage_version_id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+  "archive_total_bytes": 204919973,
+  "central_directory_offset": 204529385,
+  "max_local_extra_bytes": 4096,
+  "expected_JSON_dimensions": [
+    1080,
+    720
+  ],
+  "aggregate_response_body_limit": 1048576,
+  "storage_budget_bytes": 16777216,
+  "reserve_bytes": 1073741824,
+  "request_sequence": "For each exact member: header30/name-extra/deflate body once; at most6 GETs; no HEAD or old-range requests",
+  "actual_selected_member_CRC_and_lengths_required": true,
+  "source_encoded_image_and_mask_files_to_acquire": 2,
+  "header_contract": "JPEG SOF/SOS without scan decode; PNG chunk/IHDR/PLTE/tRNS/CRC without IDAT inflate; exact expected format and1080x720; mismatch STOP",
+  "technical_primary_references": [
+    "https://www.w3.org/TR/2025/REC-png-3-20250624/",
+    "https://www.w3.org/Graphics/JPEG/itu-t81.pdf"
+  ],
+  "TEST400_VAL300HELD_all3711_possible_copies_protection_retained": true,
+  "pixel_decode_visual_QA_histogram_raster_Pillow_NumPy_loader_model_features_score_gradient_optimizer_CAL_TEST_allowed": false,
+  "old_metadata_HEAD_CD_JSON_jobs_fixtures_rerun_redirect_retry_other_URL_or_image_full_download_allowed": false,
+  "actual_RGB_GT_background_unknown_palette_class_mapping_physical_groups_graph_minima_pixel_model_protocol_verified": false,
+  "old_originals_failures_roles_GT_graphs_models_outputs_preserved": true,
+  "ready_for_pixels_or_training": false
+}
