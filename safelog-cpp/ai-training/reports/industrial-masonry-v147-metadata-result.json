@@ -1,0 +1,72 @@
+{
+  "UTC": "2026-10-18T14:04:36.3766231Z",
+  "source_DOI": "10.5281/zenodo.18458458",
+  "web_version": "v1",
+  "API_metadata_version": null,
+  "API_version_relation_index": 0,
+  "service_revision_not_dataset_version": 4,
+  "prerequisite_commit": "42def4e34c8d053fe38205e14ea54615e35840b1",
+  "policy_SHA256": "9c6d2646e9af7d38bb6f12c671f1f1ced9dd4a625bc08245a31eb4a97104ae2d",
+  "script_SHA256": "c00ae92c70dc35074282a43455bf44f5e75790f134246dce9f289da35eafb633",
+  "raw_local_SHA256": "c9228e7aed9221b2126f816b5ce1301ec735caccf46929ac84e51e4fb1ad3dcf",
+  "metadata_complete_SHA256": "fde896dd90df03606f8448c6ec9c29d27ebec0822a0323d5a3e8443bb37a575a",
+  "container_protection_SHA256": "19d91042f069b0e2858b640db2bac76cd52e69bc8c4f9aada58b47fcd70111de",
+  "new_GET": 1,
+  "actual_body_bytes": 5826,
+  "new_raw_metadata_files_acquired": 1,
+  "helper_jobs": 1,
+  "helper_exit": 0,
+  "stderr_bytes": 0,
+  "new_errors": 0,
+  "new_fixtures": 0,
+  "old_HTTP_main_fixture_reruns": 0,
+  "publisher_license_metadata": {
+    "id": "cc-by-4.0"
+  },
+  "creators_as_supplied": [
+    {
+      "name": "Storey, Katherine A",
+      "affiliation": "Northumbria University"
+    },
+    {
+      "name": "Snowball, Andrew L",
+      "affiliation": "Institution of Structural Engineers"
+    }
+  ],
+  "file_declarations": [
+    {
+      "id": "a66dccbe-a546-4f94-b204-d2c410d691cb",
+      "key": "masonry_crack_masks.zip",
+      "size": 1052176,
+      "checksum": "md5:55e28405cd2d716f79da0b5bf1dcea7c",
+      "links": {
+        "self": "https://zenodo.org/api/records/18458458/files/masonry_crack_masks.zip/content"
+      }
+    },
+    {
+      "id": "2b4d7365-5b7a-45a3-93c4-290cd147d029",
+      "key": "masonry_crack_images.zip",
+      "size": 262056968,
+      "checksum": "md5:434dd20461bc9ea5332beca8750e538e",
+      "links": {
+        "self": "https://zenodo.org/api/records/18458458/files/masonry_crack_images.zip/content"
+      }
+    }
+  ],
+  "all_containers_possible_records_copies_UNASSIGNED_protected": true,
+  "actual_photo_TEST_VALHELD_final_roles_GT_unknown_RGBcoords_physical_groups_fullgraph_minima_fullbudget_verified": false,
+  "source_photos_masks_annotations_archives_PDF_code_weights_acquired": 0,
+  "source_pixel_visualQA_raster_features_our_scores_gradient_optimizer_CAL_TEST_API_CPU_GPU_CPP_ZIP_APK": 0,
+  "new_pixel_split_model_protocol_fixed": false,
+  "ready_for_training": false,
+  "data_bytes": 10031.0,
+  "run_bytes": 205.0,
+  "metadata_storage_budget_bytes": 4194304,
+  "reserve_bytes": 1073741824,
+  "metadata_budget_not_full_archive_budget": true,
+  "all_prior_originals_partials_failures_epochs_logs_cache_reports_ZIP_GTRolesGraphsModelsApps_preserved": true,
+  "tracked_completed_partial_optimizer_including_failures": 60430,
+  "not_whole_history_optimizer_total": true,
+  "v85_actual_update": 450,
+  "v85_epoch": 30
+}
