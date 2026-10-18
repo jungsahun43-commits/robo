@@ -1,0 +1,58 @@
+{
+  "fixed_before_new_source_HTTP": true,
+  "stage": "masonry-v148-directory",
+  "source_DOI": "10.5281/zenodo.18458458",
+  "source_creators_as_supplied": ["Storey, Katherine A", "Snowball, Andrew L"],
+  "data_license": "CC BY 4.0; attribution, source, license, version and changes; third-party rights retained",
+  "web_version": "v1",
+  "API_metadata_version": null,
+  "service_revision_not_dataset_version": 4,
+  "script_sha256": "fc0b254ac7068f73ca1f0b8e7217aae8d6ff0619f41592b45ac26eaa7e476162",
+  "utility_sha256": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+  "preserved_inputs": [
+    {"path": "data/industrial-masonry-v147-metadata/publisher-record.json", "SHA256": "c9228e7aed9221b2126f816b5ce1301ec735caccf46929ac84e51e4fb1ad3dcf"},
+    {"path": "data/industrial-masonry-v147-metadata/all-listed-containers-protected-before-binary.json", "SHA256": "19d91042f069b0e2858b640db2bac76cd52e69bc8c4f9aada58b47fcd70111de"}
+  ],
+  "preserved_untracked_local_documents": {
+    "safelog-cpp/ai-training/reports/SAFELOG_DATA_RETENTION_AND_CLEANUP_REVIEW_KO.md": "c4af6904a58b67553f7f2b4fa03df9197b23ce793f7b9c10086fe615193adbc8",
+    "safelog-cpp/ai-training/reports/industrial-dataset-retention-policy-2026-10-18.json": "acf0c4e9484316ee18212483b985b61c2f0e7891d14b46ca87c08579599e0f2a"
+  },
+  "archives": [
+    {
+      "key": "masonry_crack_masks.zip",
+      "url": "https://zenodo.org/api/records/18458458/files/masonry_crack_masks.zip/content",
+      "bytes": 1052176,
+      "publisher_MD5_declaration_not_locally_verified": "55e28405cd2d716f79da0b5bf1dcea7c"
+    },
+    {
+      "key": "masonry_crack_images.zip",
+      "url": "https://zenodo.org/api/records/18458458/files/masonry_crack_images.zip/content",
+      "bytes": 262056968,
+      "publisher_MD5_declaration_not_locally_verified": "434dd20461bc9ea5332beca8750e538e"
+    }
+  ],
+  "HEAD_max": 2,
+  "GET_max": 10,
+  "network_body_cap_bytes": 4194304,
+  "central_directory_cap_bytes": 1048576,
+  "entry_count_cap": 2000,
+  "zip64_record_size_cap": 4096,
+  "storage_budget_bytes": 16777216,
+  "reserve_bytes": 1073741824,
+  "HEAD_policy": "exact200/same URL/identity/exact frozen size/explicit bytes ranges/quoted strong ETag; no HEAD body; first failure stops stage",
+  "GET_policy": "exact206/same URL/If-Range/Content-Range/exact length/same ETag/storage version checked before body; fixed metadata offsets only",
+  "EOCD_policy": "fixed final22 candidate must verify EOCD/comment0; otherwise stop without tail scan",
+  "ZIP64_policy": "new explicit locator20/fixed56/optional declared extension<=4096, single disk/count/exact boundaries and consistent ZIP32 fields; no prior-source structural assumption",
+  "central_policy": "fixed exact CD offset/length/count, ZIP64 entry extra, safe exact names; no member localheader/content extraction or renaming",
+  "new_fixture_count": 3,
+  "old_HTTP_helper_fixture_reruns_allowed": false,
+  "retry_redirect_alternate_endpoint_fullZIP_fallback_allowed": false,
+  "containers_all_members_possible_copies_protected_UNASSIGNED_before_requests": true,
+  "photo_TEST_VALHELD_final_roles_groups_fullgraph_minima_GT_unknown_verified": false,
+  "source_photos_masks_annotations_fullarchives_PDF_authorcode_weights_allowed": false,
+  "pixels_QA_raster_features_our_scores_gradient_optimizer_CAL_TEST_delivery_allowed": false,
+  "new_pixel_split_model_protocol_fixed": false,
+  "ready_for_training": false,
+  "future_deletions_require_new_exact_human_approval": true,
+  "only_previously_approved_A_duplicate_cleanup_completed_no_B_C_permission": true
+}
