@@ -1,0 +1,39 @@
+{
+  "fixed_before_new_HTTP": true,
+  "script_sha256": "e5edb58426494916b64fe531569a0a07109af9ab6cf1cc006bd639de0fdf8c56",
+  "utility_sha256": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+  "url": "https://raw.githubusercontent.com/matousc89/synthetic-corrosion-segmentation/7a63ebc763b94b918b23ab79e3eb3abef4e1b01a/segmentation/dataset.py",
+  "commit_sha": "7a63ebc763b94b918b23ab79e3eb3abef4e1b01a",
+  "author_path": "segmentation/dataset.py",
+  "previous_request_url": "https://api.github.com/repos/matousc89/synthetic-corrosion-segmentation/git/ref/heads/main",
+  "ref_internal_url": "https://api.github.com/repos/matousc89/synthetic-corrosion-segmentation/git/refs/heads/main",
+  "expected_ref_object": {
+    "sha": "7a63ebc763b94b918b23ab79e3eb3abef4e1b01a",
+    "type": "commit",
+    "url": "https://api.github.com/repos/matousc89/synthetic-corrosion-segmentation/git/commits/7a63ebc763b94b918b23ab79e3eb3abef4e1b01a"
+  },
+  "preserved_ref": "data/industrial-turboshaft-v141-revision/author-repo-ref.json",
+  "preserved_headers": "data/industrial-turboshaft-v141-revision/ref-headers.json",
+  "preserved_failure": "runs/industrial-turboshaft-v141-revision/failure.json",
+  "frozen_inputs": {
+    "data/industrial-turboshaft-v141-revision/author-repo-ref.json": "e1f3e88a1e8fdfeeb7653e54351f311dce1d0b8cdcf2c72a2dd13227f77a5c0b",
+    "data/industrial-turboshaft-v141-revision/ref-headers.json": "2f706c6ab9b2e1fa282023d6e7927c6ba367970c871c15e27e7ef9ef599bed8b",
+    "runs/industrial-turboshaft-v141-revision/failure.json": "dde879c3b3bfdcecdf6210e6ebeac8dfbd45b04f387ff160a30c5ab97b17470c",
+    "data/industrial-source-v139-metadata/primary-web-observations.json": "cbed7774e05c67703d8a4d00c8bfe9aba11140e6028902fac7ae32e5ea03be37",
+    "data/industrial-turboshaft-v140-metadata/all-listed-containers-protected-before-binary.json": "9e5c1bde76bb71259b15d54cdf9a9f326593d753dd05dbb973e6b28c9a36a2f6",
+    "data/industrial-turboshaft-v142-static-text/author-train_seg.py.txt": "cb6c060e4293a8c8c1ec0324e7c83929f836374ac5c64d43d51fcb74ea49f126"
+  },
+  "v141_status": "FAILED strict internal URL equality; retained unchanged; not retroactive pass",
+  "body_limit_bytes_note": "Exact200/sameURL/text_plain/identity before read; optional ContentLength verified; cap+1 stop",
+  "response_limit_bytes": 65536,
+  "storage_budget_bytes": 2097152,
+  "reserve_bytes": 1073741824,
+  "network_GET_max": 1,
+  "redirect_retry_old_HTTP_nested_dependencies_auth_code_execution_allowed": false,
+  "expected_author_file_SHA256_before_receipt": null,
+  "SHA_null_reason": "No author file checksum supplied; immutable commit/path fixed and actual length/local SHA256 recorded after acquisition",
+  "all_source_container_copies_UNASSIGNED_protection_preserved": true,
+  "photos_masks_archives_pixels_features_gradient_optimizer_CAL_TEST_delivery": 0,
+  "ready_for_training": false,
+  "candidate_path_provenance": "v142 line14 from dataset import PatchDataset; same segmentation directory is one exact candidate, not verified existence/import resolution/export authority"
+}

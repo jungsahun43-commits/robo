@@ -1,0 +1,11 @@
+# Turboshaft v143 — 고정 loader 후보 정적 텍스트 사전조건
+
+v142는 343ffdefa9b70b1fa25df845b65c0d5100fa3ed3 사전 push 뒤 고정 repo commit `7a63ebc763b94b918b23ab79e3eb3abef4e1b01a`의 `segmentation/train_seg.py`를 GET1/11408bytes/local SHA256 cb6c060e4293a8c8c1ec0324e7c83929f836374ac5c64d43d51fcb74ea49f126로 받았다. 원문·헤더·receipt·로그·v141 strict guard 실패는 변경하지 않는다. 파일14행 `from dataset import PatchDataset`, 145~147행 TRAIN/VAL fake=True·TEST fake=False를 정적으로 관찰했지만 fake의 실제 생성 의미/native mask·unknown·배경/원분리 권위는 아직 검증하지 않았다. 어떠한 원저자 코드도 import/실행하지 않았다.
+
+그 직접 import에 대해 같은 segmentation 디렉터리의 `dataset.py`를 단일 후보 경로로 고정한다. 존재/실제 import 해석은 아직 검증하지 않았으며 다른 디렉터리 검색·대체 파일·실행0이다. 정확 새 URL `https://raw.githubusercontent.com/matousc89/synthetic-corrosion-segmentation/7a63ebc763b94b918b23ab79e3eb3abef4e1b01a/segmentation/dataset.py` 하나만 별도 code/JSON/이 문서 일반 commit/push·원격일치 후 GET1로 받는다. v142 원문 SHA와 v141 보존 ref/headers/failure SHA·repo commit/type/ref를 사전에 고정한다. v141 실패 소급통과/완료 ref·Zenodo·README·train_seg 재요청0이다. repo commit을 dataset revision/촬영일·저자 file checksum으로 쓰지 않는다.
+
+HTTP exact200/동일URL/text_plain/identity·Content-Length(있으면 상한/실제 길이 일치)를 body 전에 확인한다. 64KiB cap+1·data+run2MiB/예비1GiB/단일 GET/redirect_retry_auth_fallback_nested-links0이다. UTF8·nonempty·NUL없음만 검사하고 실제 길이/local SHA256을 기록한다(사전 author checksum 미제공/null). 원형·headers·receipt·started/stdout_stderr·부분실패를 보존한다. 예외면 중단하고 같은 지원 실패 반복·대체 endpoint/전체archive 우회0이다.
+
+정적 파일은 Git 제외 data의 `.py.txt`에 원문바이트로 저장해 PowerShell 텍스트로만 읽는다. import/exec/eval/compile/author 함수·의존 코드·모델·사진/mask 배열 decode/PNG_IDAT inflate/시각QA/raster/실GT수정0이다. 추가 module·link는 따로 요청하지 않는다. comment와 실제 조건문을 구별하며 합성 mask/모델출력/미주석을 자연 pixel GT/무부식 음성으로 승격하지 않는다. 코드의 split/loss/회차/점수/실행조건을 SafeLog protocol로 채택0이다.
+
+새 helper 전 freshCIM 명령줄·시작시각/lock PID/실제 v85 장부·read-only process_exists를 확인한다. 자기 PID/token 임시lock만 해제/deadtraining.lock23948·다른lock·awakehelper·전원변경0. Source DOI10.5281/zenodo.17834008/v0.1/Jiří, Pavlas 및 Cejnek, Matous/data CC BY4.0/출처·버전·변경·제삼자권리와 code의 권리/원형을 유지하며 code권리로data조건 대체0이다. 모든container/가능한 record UNASSIGNED 보호·기존TEST/VALHELD·GT·역할/graph/모델/앱을 보존한다. 원사진nativeGT_unknown_RGBcoords·분리/물리그룹·source-oldheld전체graph/고정최소/full보존예산 미통과이므로 pixel/features_우리score_gradient_optimizer_CAL_TEST_delivery0/readyfalse다. 모든 invariant/부모조건·닫힌source 제한을 유지한다.
