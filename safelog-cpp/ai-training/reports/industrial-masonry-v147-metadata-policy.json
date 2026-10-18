@@ -1,0 +1,23 @@
+{
+  "fixed_before_new_HTTP": true,
+  "script_sha256": "c00ae92c70dc35074282a43455bf44f5e75790f134246dce9f289da35eafb633",
+  "utility_sha256": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+  "url": "https://zenodo.org/api/records/18458458",
+  "provenance_memo": "data/industrial-source-v146-metadata/primary-web-observations.json",
+  "provenance_memo_sha256": "e7bb81d8706105907393dc1ce25f560f6c42c3bede30fb720ed6b2e9e079c201",
+  "expected_files": {
+    "masonry_crack_images.zip": "md5:434dd20461bc9ea5332beca8750e538e",
+    "masonry_crack_masks.zip": "md5:55e28405cd2d716f79da0b5bf1dcea7c"
+  },
+  "response_limit_bytes": 262144,
+  "storage_budget_bytes": 4194304,
+  "reserve_bytes": 1073741824,
+  "network_GET_max": 1,
+  "all_container_possible_records_copies_protected_UNASSIGNED": true,
+  "actual_photo_TEST_VALHELD_final_roles_GT_unknown_coords_groups_fullgraph_minima_full_budget_fixed": false,
+  "old_main_fixture_HTTP_reruns_allowed": false,
+  "redirect_retry_latest_pagination_file_member_code_PDF_weights_allowed": false,
+  "source_pixels_features_gradient_optimizer_CAL_TEST_delivery": 0,
+  "ready_for_training": false,
+  "all_old_originals_failures_logs_GTRolesGraphsModelsApps_preserved": true
+}
