@@ -1,0 +1,19 @@
+{
+  "fixed_before_new_metadata_HTTP": true,
+  "script_sha256": "59176ad12654d8eb87c991d58f035ff6470f7b5cc37f846eba9aa7dda6570679",
+  "utility_sha256": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+  "url": "https://zenodo.org/api/records/17834008",
+  "response_limit_bytes": 262144,
+  "storage_budget_bytes": 4194304,
+  "reserve_bytes": 1073741824,
+  "expected_key": "dataset_patches.zip",
+  "expected_publisher_checksum": "md5:786d76733026b4c9732a7238bf811072",
+  "expected_file_count": 1,
+  "all_listed_containers_possible_records_protected_UNASSIGNED": true,
+  "actual_photo_TEST_final_roles_GT_unknown_coords_full_graph_minima_budget_fixed": false,
+  "old_main_fixture_HTTP_reruns_allowed": false,
+  "redirect_retry_latest_pagination_file_member_code_PDF_weight_allowed": false,
+  "source_pixels_features_gradient_optimizer_CAL_TEST_delivery": 0,
+  "ready_for_training": false,
+  "all_old_originals_failures_logs_GT_roles_graphs_models_apps_preserved": true
+}
