@@ -1,0 +1,26 @@
+{
+  "fixed_before_new_HTTP": true,
+  "script_sha256": "40371b9cfc824da2d321670d8106ebff83fd90cdeeaf54eb535502ab5bb015bf",
+  "utility_sha256": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+  "url": "https://api.github.com/repos/matousc89/synthetic-corrosion-segmentation/git/ref/heads/main",
+  "original_linked_repo": "https://github.com/matousc89/synthetic-corrosion-segmentation",
+  "provenance_memo": "data/industrial-source-v139-metadata/primary-web-observations.json",
+  "frozen_inputs": {
+    "data/industrial-source-v139-metadata/primary-web-observations.json": "cbed7774e05c67703d8a4d00c8bfe9aba11140e6028902fac7ae32e5ea03be37",
+    "data/industrial-turboshaft-v140-metadata/publisher-record.json": "b675cface32f9621d8f68124ee0ec4063d1ee62df2a5a0a9cfb0c22fd03f27d0",
+    "data/industrial-turboshaft-v140-metadata/all-listed-containers-protected-before-binary.json": "9e5c1bde76bb71259b15d54cdf9a9f326593d753dd05dbb973e6b28c9a36a2f6"
+  },
+  "response_limit_bytes": 65536,
+  "storage_budget_bytes": 2097152,
+  "reserve_bytes": 1073741824,
+  "expected_ref": "refs/heads/main",
+  "expected_object_type": "commit",
+  "expected_commit_format": "40 lowercase hex; observed ref metadata only, not dataset revision or author file checksum",
+  "network_GET_max": 1,
+  "redirect_retry_pagination_nested_links_code_or_archive_allowed": false,
+  "all_old_source_roles_copies_UNASSIGNED_protection_preserved": true,
+  "author_code_execution_allowed": false,
+  "new_pixels_features_gradient_optimizer_CAL_TEST_delivery": 0,
+  "ready_for_training": false,
+  "prerequisite_file_count": 3
+}
