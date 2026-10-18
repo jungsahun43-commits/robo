@@ -1,0 +1,11 @@
+# v137 이후 — 새 metadata 검토 계속, pixel/학습 보류 유지
+
+v8~v137의 각 완료/실패 단계를 재실행하지 않는다. RustNet DOI10.1007/s43452-025-01312-5의 공식 publisher preview/Data availability는 교신저자 요청형 자료 제공을 안내해 취득 전 보류했다. 방법명을 공개 dataset release로 쓰지 않고 related/reference 논문의 semi-supervised/patch/현미경/mean-teacher 설명·모델 출력이나 동명의 network monitor/밀 녹병 LiDAR를 이 source의 원GT/배포 계약으로 연결하지 않는다. 새 명확한 원저자 public data release 없이 같은 논문/publisher/검색/PDF/저장소를 반복하지 않는다. 연락·로그인/동의/PII/구독구매·우회0이다.
+
+직전 MCSD v136의 제1저자 문의형 보류와 Footpath v135의 동일 concept 자료군/네 파일 선언 크기·MD5 비교 완료를 보존한다. 모든 닫힌 source/부모조건은 최신 resume chain과 `outputs/SAFELOG_INVARIANT_RESTRICTIONS_AND_CLOSED_SOURCES_v134.txt`를 함께 읽어 유지한다. 그 파일의 v134 당시 인용 관계 미해소/v135미정만 v135 사실로 갱신한다. 완료 metadata/helper/fixture/HTTP실패·같은 검색·공간 알림을 반복하지 않는다. Footpath full4.5GB archive/확장·부분 선택 ready/ZIP64·Range 지원 추정/MDMCS noZIP64 정책 재사용0이다.
+
+다음 **v138은 후보·새 코드JSON/HTTP·사진/지문/분리/pixel/model protocol·features/gradient/optimizer 미정0인 제안**이다. 실제 repo report/doc/script/source의 정확명칭/확인 저자·제목/DOI/URL 이력 검색 후 아직 검토하지 않은 원저자의 자연발생 산업 RGB TRAIN native 손상 위치와 명시 배경/음성지원에 관한 작은 새 공개 primary metadata 한 후보씩 검토한다. data 고유 권리/제삼자 권리·revision·자연발생/실제 RGB·원GT/unknown·좌표/export·원분리/물리 촬영 묶음·file/checksum·작은 익명 접근/임시량·실제 예산이 미확인/미달이면 취득/학습 전에 보류한다. paper/code/mirror 권리 대체, class/bbox/등급/object mask/합성/제작 손상/QA/모델 출력/현재TEST의 자연pixel TRAIN 승격·별도 과제 자동 추가0이다.
+
+raw metadata/외부 정적 text-code 실제 취득은 별도 코드JSON/상한·길이/SHA·실패보존·예산을 사전 일반 push하고 원격 일치를 확인한 뒤만 하며 원저자 코드는 실행하지 않는다. 새 pixel 전 원TEST/사본·publisherVAL HELD/한 원TRAIN 개발역할·고정 사진_group_validpixel 최소·GT/unknown/coords/decode·오류 제외·source/oldheld graph·실제 예산을 먼저 고정 push한다. 기존 완료 지문/graph/잠긴 역할/TEST를 재사용하고 기존 전체 RGB/pHash 거리 감사0이다. source 통과 뒤에만 별도 단일 모델/공통 encoder 사전조건을 push하고 features/gradient를 실행한다. v16/승인3head/원v62 exact 보존·별도 encoder0·원forward 계약·작은delta identity/restore·평가/retention/배포 guard를 유지한다.
+
+새 Python/GPU/C++ 전 fresh CIM 명령줄/시작시각·lock PID·실제 optimizer 장부를 확인하고 읽기 실패를 process0으로 쓰지 않는다. read-only process_exists만/Windows os.kill(pid,0)금지/dead training.lock23948 보존/GPU 하나씩/중복0/awakehelper 재시작연장·전원변경0/예비1GiB/모든 원형부분실패epoch로그cache보고서ZIP삭제0/일반 feature push만 유지한다. 계속 승인/자동 후속은 유지하며 단계마다 pause·확인 요청0, 변화 없으면 조용히 유지하고 의미 있는 완료·실패·필수 사람 조치만 알린다.
