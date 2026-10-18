@@ -1,0 +1,26 @@
+{
+  "fixed_before_new_metadata_HTTP": true,
+  "script_sha256": "5efa80ef93e17ce9c331f954c8cfad8da10c98499ef9ea95580b176c04ee2383",
+  "utility_sha256": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+  "preserved_current_record": "data/industrial-footpath-v134-metadata/publisher-record.json",
+  "preserved_LICENSE": "data/industrial-footpath-v134-metadata/publisher-LICENSE.txt",
+  "preserved_inputs_sha256": {
+    "data/industrial-footpath-v134-metadata/publisher-record.json": "377e82824c82ac0437bf588cc7f434cbfa6fe6280106918c4dc6c9dee4a93ce4",
+    "data/industrial-footpath-v134-metadata/publisher-LICENSE.txt": "18364a33110cd111f47b01990aaec78de2cf8cfa6b39452467a408a32ff4653e",
+    "data/industrial-footpath-v134-metadata/metadata-complete.json": "eba1e91648c2227db49d02ef180b9aabacdfa1a61387a545b860dede166d742a"
+  },
+  "cited_record_url": "https://zenodo.org/api/records/15414238",
+  "versions_url": "https://zenodo.org/api/records/17154852/versions",
+  "per_response_limit": 524288,
+  "aggregate_response_limit": 1048576,
+  "storage_budget_bytes": 16777216,
+  "reserve_bytes": 1073741824,
+  "max_version_hits": 25,
+  "max_cited_file_entries": 32,
+  "old_HTTP_text_helper_fixture_reruns_allowed": false,
+  "redirect_retry_latest_pagination_nested_links_or_file_content_allowed": false,
+  "source_pixels_features_gradient_optimizer_CAL_TEST_delivery": 0,
+  "actual_photo_roles_minima_GT_unknown_coords_full_graph_and_model_protocol_fixed": false,
+  "all_cited_containers_records_protected_UNASSIGNED": true,
+  "all_old_originals_failures_GT_roles_graphs_models_outputs_preserved": true
+}
