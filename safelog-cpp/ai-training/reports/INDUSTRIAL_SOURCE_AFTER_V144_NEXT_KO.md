@@ -1,0 +1,13 @@
+# v144 이후 — 아직 검토하지 않은 원저자 자료 한 후보
+
+v8~v144 각각 완료·실패 중단 단계/HTTP/helper/fixture를 재실행하지 않는다. v144 CrackForest 원저자 cuilimeng/CrackForest-dataset master README는 비상업 연구 data 조건과 도시 도로 균열 주석/인용·Version1.0을 설명하지만 이번 범위에서 nativeGT/unknown/명시 배경·실제 RGB/원분리·촬영 그룹·파일별 bytes/checksum·작은 접근/임시량·실제 보존 예산을 검증하지 못해 취득 전 보류했다. 제삼자 변환 mask/코드/수량/미주석 정상 해석을 채택하지 않는다. 모든 자료의 GT/허가 부재나 mask 부재를 주장하지 않는다. 원저자 허가/출처·요청 인용/제삼자 권리를 유지하며 새 명확한 release 근거 없이 동일 source/README/논문·검색/issue/mirror/raw/archive/code를 반복하지 않는다.
+
+다음 **v145는 아직 후보·새 codeJSON/HTTP·사진/지문·분리/pixel/model protocol/features/gradient/optimizer 미정0인 제안**이다. 실제 repo report/doc/script/source에서 정확명칭·확인 저자/제목/DOI/URL을 오류 없이 이력 검색한 뒤 아직 검토하지 않은 원저자의 자연발생 산업 RGB TRAIN native 손상 위치+명시 배경/음성지원 작은 새 공개 primary metadata를 한 후보씩 검토한다. 기존 완료·실패·권리/접근 보류 source·같은 검색/HTTP실패·공간 알림 반복0이다. raw metadata/외부 정적 text-code 실제 취득은 정확파일/버전·길이/SHA/상한·실패보존·실제 예산을 별도 codeJSON 사전 일반 push/원격 일치 뒤만 수행한다. 원저자 코드 실행·자동연락/로그인·동의/PII대리제출·접근 우회0이다.
+
+data 고유 허가·제삼자 권리/원출처 revision/자연발생·원GT_unknown·RGBcoords/원분리·물리 촬영 묶음/file checksum·작은 익명 선택접근/임시량/실제 예산 미확인·미달이면 취득/학습 전 보류한다. paper/code/mirror 권리 대체·classification/bbox/등급/objectmask/합성/제작손상/QA/모델출력/현재TEST의 자연pixel TRAIN 승격·새 과제 자동추가0이다. 도로 metadata를 설비/부식/전체 건강·현장 독립 성능으로 확대하지 않는다.
+
+새 pixel 전 원TEST/사본·publisherVAL HELD·한 원TRAIN 개발역할/고정 사진_group_validpixel 최소·GT/unknown/coords/decode/오류제외·source-oldheld graph·실제 예산 codeJSON을 먼저 사전 일반 push한다. 기존 지문/graph/잠긴역할·TEST를 재사용하고 기존 전체 RGB/pHash 거리감사0이다. 현재TEST/not_used 전이연결TRAIN·역할충돌 제외/사본 같은group/개발역할 하나 유지/미달시 이동·재분리·최소완화0/고정 첫FIT QA만/VAL_CAL_TEST 내용선택·GT수정0이며 선택 밖 bridge 미검사를 전체graph·물리 독립·ready로 꾸미지 않는다.
+
+자료 통과 뒤만 별도 단일모델/공통encoder 새namespace 사전조건 push 후 features/gradient한다. v16+승인3head+원v62 모든 tensor_buffer_meta/정규화/기준/primary exact·원 forward 계약·작은delta parent/file/state/added/combinedSHA 및 serialized restore·VAL선택/CAL/고정TEST/retention·각TESTlabel20_group3_FP_FN20%/브래킷·튜브 guard·별도 고정 새 CPU_GPU_CPP_ZIP 검사 조건을 유지한다. 앱/alias/경고/primary/ZIP 자동교체0이다.
+
+최신 resume/이전 chain 및 outputs/SAFELOG_INVARIANT_RESTRICTIONS_AND_CLOSED_SOURCES_v134.txt(SHA256 5559f11a8c6c89fbcf3cab5d36f48a1a827321376400a18241fae9f56743a05e), SAFELOG_RESTRICTIONS_AND_SOURCE_HISTORY_THROUGH_v140.txt(SHA256 a0a145437efe04a3d9addd9309547a556e1af38901cc1da36f46cfadd06b52d1)를 반드시 읽어 모든 기존 제한/부모권리·닫힌source를 유지한다. v134 인용 미해소/v135미정과 과거 NEXT만 최신 완료 사실로 갱신한다. 새 Python/GPU/C++ 전 fresh CIM 명령줄/시작시각·lock PID/실제 장부·read-only process_exists/Windows os.kill금지/deadtraining.lock23948 보존/GPU하나씩중복0/awakehelper·전원변경0/예비1GiB/모든 원형부분실패epoch로그cache보고서ZIP삭제0/435MB fullparent복제·dense전체features0/후속 boundedRAM online_streaming/일반 feature push만 유지한다. 계속 승인·단계마다 pause/확인요청0·변화 없으면 조용히 유지하고 의미 있는 완료·실패·필수 사람 조치만 알린다.
