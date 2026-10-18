@@ -1,0 +1,308 @@
+{
+  "UTC": "2026-10-18T00:22:26.344117+00:00",
+  "status": "TWO_ENCODED_TRAIN_HEADERS_COMPLETE",
+  "preregistered_HEAD": "fce27b3e07ae2a72df83f6bb3a4d2b5e4dddcd01",
+  "policy_SHA256": "81867d8a056f3309a67526a821b3f6c0609e618175edc3611773ef5ffbb99121",
+  "requests": [
+    {
+      "UTC": "2026-10-18T00:22:20.697684+00:00",
+      "URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "range": [
+        22596979,
+        22597008
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "headers": {
+        "x-amz-id-2": "TB4rvEnVGUQXdfVOaBrzo3oZiJjmwCi1m9GAw+YQ1xQvGXSXb4nYBATPGMJHkAptLjnVhzGNLNlOcKo++eLfrCRIS7o1lT0R",
+        "x-amz-request-id": "RBE79ZYJCR5FZGS1",
+        "Server": "AmazonS3",
+        "Date": "Sun, 18 Oct 2026 00:22:21 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 22596979-22597008/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "30",
+        "Connection": "close"
+      },
+      "body_bytes_read_by_helper": 30
+    },
+    {
+      "UTC": "2026-10-18T00:22:21.600159+00:00",
+      "URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "range": [
+        22597009,
+        22597072
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "headers": {
+        "x-amz-id-2": "dV7sthntpYTjFyofrb68O0PlNaKa0nUSF24UUV6yuK1vTN7EKHGbUDf5hHeQv2cH/foJdRP8/lbssPbU4koLPSmEqstuLeSQ",
+        "x-amz-request-id": "7MDJWRQ9ZJFZ2P46",
+        "Server": "AmazonS3",
+        "Date": "Sun, 18 Oct 2026 00:22:22 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 22597009-22597072/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "64",
+        "Connection": "close"
+      },
+      "body_bytes_read_by_helper": 64
+    },
+    {
+      "UTC": "2026-10-18T00:22:22.536918+00:00",
+      "URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "range": [
+        22597073,
+        22924827
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "headers": {
+        "x-amz-id-2": "73cMiCsUPjK8qGudajYLglzfeiTqPYlIJbJVNgGf/6jBAPt+uFVmdxLMkADkfHmVpjAlSHYKAONIRw2MyjV2kXJgo6n26UHr",
+        "x-amz-request-id": "87HM836DPHCSXZR5",
+        "Server": "AmazonS3",
+        "Date": "Sun, 18 Oct 2026 00:22:23 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 22597073-22924827/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "327755",
+        "Connection": "close"
+      },
+      "body_bytes_read_by_helper": 327755
+    },
+    {
+      "UTC": "2026-10-18T00:22:24.433836+00:00",
+      "URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "range": [
+        185964664,
+        185964693
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "headers": {
+        "x-amz-id-2": "upILcZAnYMQao7gx0vMiv8f4KJI4NQp/AU6mz17docqn+42CLBvb/rcwfsmmMIiiM3MpJUkqaMB6Any3qztSGPUxAxuqtH0A",
+        "x-amz-request-id": "PC8WBZ64C0BVSNHY",
+        "Server": "AmazonS3",
+        "Date": "Sun, 18 Oct 2026 00:22:25 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 185964664-185964693/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "30",
+        "Connection": "close"
+      },
+      "body_bytes_read_by_helper": 30
+    },
+    {
+      "UTC": "2026-10-18T00:22:25.431075+00:00",
+      "URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "range": [
+        185964694,
+        185964761
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "headers": {
+        "x-amz-id-2": "sFQjDliT7uU7HQsO8iP0RPrTq6bQ59op+6hh4H9uQ30G1o2YEhYcndFQ40JpcKJCcrVH11M5eL3IO/JFc2t+TDiqQq0geVDR",
+        "x-amz-request-id": "G7Y2J4KACWZ7MS67",
+        "Server": "AmazonS3",
+        "Date": "Sun, 18 Oct 2026 00:22:26 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 185964694-185964761/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "68",
+        "Connection": "close"
+      },
+      "body_bytes_read_by_helper": 68
+    },
+    {
+      "UTC": "2026-10-18T00:22:26.330530+00:00",
+      "URL": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dde11f3a-ece8-4e47-a03c-9e60f91af8be",
+      "status": 206,
+      "range": [
+        185964762,
+        185973088
+      ],
+      "If_Range": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+      "headers": {
+        "x-amz-id-2": "NNSBcP2hEKAUnAMdLtZgDWn24corV9EyFu5ZjkKr07bgpBmzlbPe+YLUNWJ/NA/c+mb3/7LYrF+ClUVWbjaDyeNOxQFQF3n/",
+        "x-amz-request-id": "EJVRVVSQFWZAR90D",
+        "Server": "AmazonS3",
+        "Date": "Sun, 18 Oct 2026 00:22:27 GMT",
+        "Last-Modified": "Sat, 11 Oct 2025 11:00:37 GMT",
+        "ETag": "\"488999a12587cbb5e18a092ada0916ae-10\"",
+        "x-amz-storage-class": "INTELLIGENT_TIERING",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Disposition": "attachment; filename=\"HRCDS.zip\"",
+        "x-amz-version-id": "vOUwUGp4k60otb.vLF.6z5UxVOGaEYQh",
+        "Accept-Ranges": "bytes",
+        "Content-Range": "bytes 185964762-185973088/204919973",
+        "Content-Type": "application/zip",
+        "Content-Length": "8327",
+        "Connection": "close"
+      },
+      "body_bytes_read_by_helper": 8327
+    }
+  ],
+  "actual_new_Range_body_bytes": 336274,
+  "source_encoded_files_acquired": 2,
+  "source_encoded_image_files_acquired": 1,
+  "source_encoded_mask_files_acquired": 1,
+  "header_observations": [
+    {
+      "SOF_marker": "ffc0",
+      "width": 1080,
+      "height": 720,
+      "bit_depth": 8,
+      "component_count": 3,
+      "components": [
+        {
+          "id": 1,
+          "H": 2,
+          "V": 2,
+          "table": 0
+        },
+        {
+          "id": 2,
+          "H": 1,
+          "V": 1,
+          "table": 1
+        },
+        {
+          "id": 3,
+          "H": 1,
+          "V": 1,
+          "table": 1
+        }
+      ],
+      "format": "JPEG",
+      "pre_scan_segments": [
+        {
+          "marker": "ffe0",
+          "segment_bytes_including_length": 16
+        },
+        {
+          "marker": "ffdb",
+          "segment_bytes_including_length": 67
+        },
+        {
+          "marker": "ffdb",
+          "segment_bytes_including_length": 67
+        },
+        {
+          "marker": "ffc0",
+          "segment_bytes_including_length": 17
+        },
+        {
+          "marker": "ffc4",
+          "segment_bytes_including_length": 31
+        },
+        {
+          "marker": "ffc4",
+          "segment_bytes_including_length": 181
+        },
+        {
+          "marker": "ffc4",
+          "segment_bytes_including_length": 31
+        },
+        {
+          "marker": "ffc4",
+          "segment_bytes_including_length": 181
+        },
+        {
+          "marker": "ffda",
+          "segment_bytes_including_length": 12
+        }
+      ],
+      "bytes_after_first_SOS_header_not_interpreted": 343376,
+      "entropy_scan_decoded": false,
+      "EXIF_or_app_payload_executed_or_used_for_groups": false,
+      "RGB_color_meaning_or_GT_verified": false,
+      "member_name": "HRCDS/train_image/train_0001.jpg",
+      "encoded_bytes": 343999,
+      "encoded_file_SHA256": "b932d504e9568b79491a0a4da30bae88459520c6995609acddc52227f622e9b8",
+      "actual_member_CRC32_verified": "0d530a25",
+      "image_pixels_decoded_or_displayed": false,
+      "matches_declared_JSON_width_height": true,
+      "matches_expected_encoding": true,
+      "GT_raster_background_unknown_class_mapping_or_physical_group_verified": false
+    },
+    {
+      "width": 1080,
+      "height": 720,
+      "bit_depth": 8,
+      "color_type": 0,
+      "compression": 0,
+      "filter_method": 0,
+      "interlace": 0,
+      "format": "PNG",
+      "chunks": [
+        {
+          "type": "IHDR",
+          "bytes": 13,
+          "encoded_chunk_CRC_verified": true
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8493,
+          "encoded_chunk_CRC_verified": true
+        },
+        {
+          "type": "IEND",
+          "bytes": 0,
+          "encoded_chunk_CRC_verified": true
+        }
+      ],
+      "PLTE_RGB_entries_not_class_mapping": null,
+      "tRNS_declarations": null,
+      "IDAT_chunks": 1,
+      "IDAT_encoded_bytes": 8493,
+      "IDAT_decompressed": false,
+      "pixel_values_histogram_raster_or_palette_class_meaning_verified": false,
+      "member_name": "HRCDS/train_mask/train_0001_mask.png",
+      "encoded_bytes": 8550,
+      "encoded_file_SHA256": "0f15965b50da7f7c1637a328cbba8b7d569d51e32f4e443f347e7db2786c14dd",
+      "actual_member_CRC32_verified": "2f6a46a3",
+      "image_pixels_decoded_or_displayed": false,
+      "matches_declared_JSON_width_height": true,
+      "matches_expected_encoding": true,
+      "GT_raster_background_unknown_class_mapping_or_physical_group_verified": false
+    }
+  ],
+  "source_pixel_arrays_decoded_visual_QA_histogram_raster_features_scores_gradients_optimizer_CAL_TEST_API_CPP_ZIP_APK": 0,
+  "publisher_TEST_or_VAL_content_accessed": 0,
+  "old_metadata_HEAD_CD_JSON_jobs_or_fixtures_rerun": false,
+  "full_archive_SHA_all_member_CRC_source_GT_roles_physical_groups_graph_or_minima_verified": false,
+  "ready_for_pixel_or_training": false,
+  "stored_bytes_before_final_report": 896078,
+  "disk_free": 2283536384
+}
