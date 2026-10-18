@@ -1,0 +1,38 @@
+{
+  "fixed_before_metadata_or_static_text_HTTP": true,
+  "record_id": 17154852,
+  "title": "Indian Footpath Damage Segmentation Dataset",
+  "dataset_DOI": "10.5281/zenodo.17154852",
+  "observed_version": "v2",
+  "metadata_url": "https://zenodo.org/api/records/17154852",
+  "api_byte_limit": 524288,
+  "text_byte_limit": 16384,
+  "aggregate_network_body_limit": 1048576,
+  "storage_budget_bytes": 16777216,
+  "reserve_bytes": 1073741824,
+  "script_sha256": "75cb4106590af09b9cc87a112f86054dd8dec79df7ae6aea8620e4523b8fcd5e",
+  "utility_sha256": "e682aab2b3ddab008dea2c485b5e8cac3813778599b5f897b4e1c4d1274dd062",
+  "file_MD5": {
+    "Footpath Damage severity levels_annotations.csv": "6b58f3ffa45c5d5e71794b2579e2c6d9",
+    "Indian Footpath Damage Segmentation Dataset.md": "2dd7d4b3666cca70bab23cbd4be93ec7",
+    "Indian Footpath Damage Segmentation Dataset.zip": "edafaba9d33ba8d9c3e989a33e0affb4",
+    "LICENSE.txt": "f1df8d37c907cf13773275b8d4f29c17"
+  },
+  "selected_static_text": [
+    {
+      "key": "LICENSE.txt",
+      "output": "publisher-LICENSE.txt"
+    },
+    {
+      "key": "Indian Footpath Damage Segmentation Dataset.md",
+      "output": "publisher-README.md"
+    }
+  ],
+  "redirect_retry_alternate_archive_or_nested_links_allowed": false,
+  "source_images_masks_annotations_CSV_archive_code_PDF_weights_allowed": false,
+  "old_complete_jobs_or_fixtures_rerun_allowed": false,
+  "source_pixels_features_gradient_optimizer_CAL_TEST_delivery": 0,
+  "photo_roles_minima_unknown_coords_graph_and_model_protocol_fixed": false,
+  "all_containers_records_protected_UNASSIGNED": true,
+  "old_GT_roles_graphs_models_outputs_originals_failures_preserved": true
+}
