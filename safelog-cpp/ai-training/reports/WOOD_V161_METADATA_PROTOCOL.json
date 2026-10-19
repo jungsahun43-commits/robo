@@ -1,0 +1,80 @@
+{
+  "schema": "safelog.wood-record-metadata.v161.1",
+  "stage": "v161 proposed; HTTP not executed",
+  "url": "https://zenodo.org/api/records/4694695",
+  "method": "GET",
+  "record_id": 4694695,
+  "doi": "10.5281/zenodo.4694695",
+  "title": "Supporting data for Deep Learning and Machine Vision based approaches for automated wood defect detection and quality control.",
+  "request_limit": 1,
+  "redirects_retries_alternate_endpoints": 0,
+  "timeout_seconds": 30,
+  "max_body_bytes": 262144,
+  "max_saved_header_bytes": 32768,
+  "required_status": 200,
+  "required_same_url": true,
+  "required_content_type": "application/json",
+  "content_encoding": "absent or identity only",
+  "content_length": "required positive decimal; <=262144; exact received length",
+  "json": "UTF-8 strict; duplicate keys and nonfinite numbers rejected",
+  "expected_file_keys": [
+    "Bouding_Boxes.zip",
+    "Images1.zip",
+    "Images2.zip",
+    "Images3.zip",
+    "Images4.zip",
+    "Images5.zip",
+    "Images6.zip",
+    "Images7.zip",
+    "Images8.zip",
+    "Images9.zip",
+    "Images10.zip",
+    "Semantic Map Specification.txt",
+    "Semantic Maps.zip"
+  ],
+  "specification_publisher_declaration_only": {
+    "key": "Semantic Map Specification.txt",
+    "size": 430,
+    "checksum": "md5:045123a74ed25224737ec165328c5bb6"
+  },
+  "expected_creator_name_token_sets": [
+    ["kodytek", "pavel"],
+    ["bodzas", "alexandra"],
+    ["bilik", "petr"]
+  ],
+  "source_version": "Page v1; API version/revision fields recorded separately, never assumed capture dates or file revision",
+  "data_license": "Unresolved on read page; record raw API declaration without treating it as complete third-party rights audit",
+  "protection": "Before HTTP, whole source family and every possible container/member/record/copy UNASSIGNED; original TEST and publisher VAL reserved",
+  "allowed_local_outputs": [
+    "data/industrial-wood-v161-metadata/publisher-record.body",
+    "data/industrial-wood-v161-metadata/request-headers.json",
+    "data/industrial-wood-v161-metadata/response-headers.json",
+    "data/industrial-wood-v161-metadata/source-protection.json",
+    "runs/industrial-wood-v161-metadata/started.json",
+    "runs/industrial-wood-v161-metadata/complete.json OR failure.json"
+  ],
+  "data_run_budget_bytes": 4194304,
+  "reserve_bytes": 1073741824,
+  "preflight_max_age_seconds": 120,
+  "publication_verification_max_age_seconds": 300,
+  "required_preregistration": "Exact three approved paths only, ordinary nonforce feature/ai-engine push and remote verification receipt before run",
+  "publication_destination": "https://github.com/jungsahun43-commits/robo.git",
+  "publication_branch": "feature/ai-engine",
+  "publication_paths": [
+    "safelog-cpp/ai-training/scripts/inspect_wood_record_v161.py",
+    "safelog-cpp/ai-training/reports/WOOD_V161_METADATA_PROTOCOL.json",
+    "safelog-cpp/ai-training/reports/WOOD_V161_METADATA_PREREGISTRATION_KO.md"
+  ],
+  "execution_gate": "Fresh successful CIM command lines/start times, AI root/runs plus WORK outputs locks, PID23948 absent, v85 actual450 epoch30, storage budget and own PID-token operation.lock",
+  "failure_policy": "Stop once; preserve bounded original headers (oversize prefix plus full-header SHA/length), partial body, started/failure/exception; no retry or guard relaxation; release only exact own PID-token lock",
+  "not_authorized": [
+    "Any file/preview/download/member URL, including 430-byte specification itself",
+    "HEAD, Range, full ZIP, images, semantic maps, annotations, PDF, code or weights",
+    "Pixel decode, visual QA, feature/raster/score, gradient, optimizer, CAL/TEST or model runtime",
+    "Original role/group inference or reassignment, TEST/VAL inspection, ready-for-training promotion",
+    "Author contact, credentials, consent, PII submission or access bypass",
+    "Deletion, cache duplication, recompression, power/awakehelper or deadtraining.lock changes"
+  ],
+  "recorded_only_not_new_learning": "API metadata and publisher file/checksum/license declarations; ready=false regardless of HTTP success",
+  "prior_restrictions": "All existing SafeLog source, rights, held-role, graph, fixed-minimum, common-encoder/model, acceptance, retention, runtime, storage and exact deletion-approval conditions remain"
+}
