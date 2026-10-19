@@ -1,0 +1,13 @@
+# v155 이후 — RGB TRAIN native GT 원배포 조건을 충족할 새 후보
+
+CrackTree 원논문의 206개 실제 pavement image/수작업 curve GT와 monochromatic algorithm focus를 보존한다. curve를 면적 mask로 만들거나 평가 collection을 원TRAIN으로 승격하지 않는다. CrackTree200 이름과 실파일 release 동일성도 미검증이며 source 권리/GTunknown/원역할/촬영/전체 graph/full 예산 미통과로 보류했다. 새 명확한 원저자 RGB TRAIN native면적GT+배경/unknown·공개 release/권리 근거 없이 동일 논문/page/search/PDF/repo/변환본/code/model/다운로드를 반복하지 않는다.
+
+다음 v156은 아직 후보·새 codeJSON/HTTP/사진/지문/분리/pixel/model protocol/features/gradient/optimizer0인 제안이다. 미검토 원저자 자연산업 RGB TRAIN native 손상 위치+명시 배경/음성 지원의 작은 primary metadata를, 오류 없는 정확명칭·확인저자·제목/DOI/URL 실제 이력검색 뒤 한 후보씩 검토한다. v8~v155 완료·실패중단 source/helper/fixture/HTTP 및 닫힌 source 재실행0이다. SD900/wood defect 등 미식별 이름 토큰은 확인된 별도 데이터셋으로 취급하지 않는다.
+
+모든 부모 권리·출처/저자/version/license/change/제삼자/요청 인용, v134/v140/v144 제한 원형과 retention-confirmed/v154 전체 checkpoint를 그대로 유지한다. 실제 rawmetadata/정적textcode 취득 전 정확 URL/버전·길이/SHA/상한·오류중단/실패보존·저장임시run 예산의 별도 코드JSON 일반 사전 push/원격 확인이 필요하다. author code 실행·자동연락/login/동의/PII/우회0이다. 이번 로컬 보고서나 미래 정책 전송에 v152/v153의 소진된 2파일 승인을 재사용하지 않는다. 필요해진 새 출판은 exact payload/diff/목적지를 먼저 준비한다. 로컬 primary 검토를 과거 승인대기로 되돌리지 않는다.
+
+새 pixel 전 원TEST/사본·publisher VAL HELD·한 원TRAIN 개발역할·사진/group/validpixel 고정 최소·GTunknown/coords/decode/오류제외·source-oldheld graph·full 예산을 별도 사전 고정한다. 기존8995TEST/InsPLAD6417평가_6481TEST/v57graph94/Ostrava105/VTv66v68/Riosv78 지문/graph/잠긴역할·Ostrava15/VT44/Rios7TEST를 재사용한다. 기존 전체 RGB/pHash 감사0/새 source만 계산/held·not_used 전이 TRAIN과 역할충돌 제외/사본 같은 group/개발역할 하나/이동·재분리·최소 완화0/고정 첫 FIT만 QA/held 내용선택·GT수정0/미검사 bridge로 전체 graph·물리독립·ready 주장0이다.
+
+자료 통과 뒤만 공통 encoder 단일 모델 namespace의 구조·초기값·GTunknown·대상/loss/sampling/회차lr/VAL선택/CAL/retention/device/delta/예산을 별도 사전 push한다. v16+승인3head+원v62 모든 tensor/buffer/meta·정규화·기준·primary exact 보존, forward_surface(original,view,category)와 RuntimeRealMaskMain.forward_real_mask 계약, 별도encoder/가짜embedding 금지, 원v16-bound 작은delta parent/file/state/added/combined SHA 및 serialized restore exact/단독 앱 모델 아님을 유지한다. epoch0 제외·CAL 저장 뒤 고정TEST1회·TEST 계수/stride/구조 반복탐색·조건완화0이다. 사진 각TESTlabel20/group3/FP_FN각20% 이하·브래킷튜브 FN5%p 감소/FP증가5%p 내/FP20% 이하·n>=10 유형 FN회귀5%p 내·모든 retention·새 실제 CPU/GPU/CPP/alias/PNG/ZIP 검사·앱/alias/경고/primary/ZIP 자동교체 금지를 유지한다.
+
+freshCIM 명령줄/시작시각·lockPID·실제 v85 장부·예비1GiB+단계 예산을 먼저 확인한다. Windows os.kill(pid,0)·deadtraining.lock23948 변경·GPU 중복·awakehelper 재시작/연장·전원 변경·full 다운로드·불필요 확장·435MB 부모 복제·dense전체feature0/후속 bounded RAM online streaming이다. 모든 원형부분실패epoch로그cache보고서ZIP_GT역할graph모델앱 보존, A6파일12GiB 이전 완료/승인소진/B_C 및 추가 삭제 미승인, 실제 모든 수용 guard 통과 후 정확 TRAIN/중복압축/캐시 목록 승인 뒤 폐기/고정TEST_VAL_CAL·보호모델/최신패키지·출처라이선스·평가오류·역할그룹지문 보관을 유지한다. 계속승인 유지/단계별pause·같은질문·공간알림 반복0/변화 없는 비실행 상태는 조용히 유지한다.
