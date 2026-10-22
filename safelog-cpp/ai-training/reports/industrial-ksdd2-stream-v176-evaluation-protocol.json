@@ -1,0 +1,315 @@
+{
+  "schema": "safelog-ksdd2-stream-v176-fixed-evaluation-only",
+  "declared_UTC": "2026-10-22T14:57:52.109310+00:00",
+  "purpose": "One selected v175 head; locked CAL then saved CAL then one fixed original TEST and current parent comparison. No training, no runtime/package implementation or adoption in this stage.",
+  "script_sha256": "18768a02de2da314dd82b2e462c0669a5bbfe48ae31395db3ac7bc7df6600c1d",
+  "report_sha256": "c6858a2f98f65c3c96073293fbc73c5b3f2b6ef367ee10d0142943c798e16d11",
+  "manifest": "data/industrial-ksdd-supervised-v10/manifest.json",
+  "phase_counts": {
+    "fit": {
+      "0": 1254,
+      "1": 146
+    },
+    "validation": {
+      "0": 389,
+      "1": 52
+    },
+    "calibration": {
+      "0": 442,
+      "1": 48
+    },
+    "test": {
+      "0": 894,
+      "1": 110
+    }
+  },
+  "fixed_phase_metadata": {
+    "calibration": {
+      "photos": 490,
+      "groups": 49,
+      "positive_pixels": 142259,
+      "source_pixels": 71469763,
+      "groups_per_label": {
+        "0": 49,
+        "1": 28
+      }
+    },
+    "test": {
+      "photos": 1004,
+      "groups": 101,
+      "positive_pixels": 486461,
+      "source_pixels": 146411528,
+      "groups_per_label": {
+        "0": 101,
+        "1": 70
+      }
+    }
+  },
+  "parent_file": "runs/industrial-magnetic-tiles-v16/released/final.pt",
+  "delta_file": "runs/industrial-ksdd2-stream-v175/development-delta.pt",
+  "training_result": "runs/industrial-ksdd2-stream-v175/training-result.json",
+  "pinned_inputs": {
+    "runs/industrial-magnetic-tiles-v16/released/final.pt": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+    "../../../../outputs/unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+    "runs/industrial-insplad-suspension-v51/trained/final-delta.pt": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc",
+    "../../../../outputs/insplad-three-tasks-role4-research-overlay-2026-10-16-v51.zip": "551b66ca3adb02d9b67f3449077f5e7e9b1e991dc24a11e0cbd3972ed1045ff4",
+    "runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b",
+    "runs/industrial-corrosion-partial-v73/trained/final-delta.pt": "d40905d720583c586a0952338b6b4d863276fbf282fbcc4d8824c554d183ab56",
+    "runs/industrial-corrosion-background-v79/trained/final-delta.pt": "e7c070e6ae002cbbe0e68589f3df2aa951a571f8b062dad60cfbf67f2d375a41",
+    "runs/industrial-corrosion-native-v81/trained/final-delta.pt": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10",
+    "runs/industrial-corrosion-teacher-retention-v83/trained/final-delta.pt": "2527fb4120fa3edbd56d3ccea618658656bcb493a056b9ab0bb8148f9561b238",
+    "runs/industrial-corrosion-context-v85/trained/final-delta.pt": "d04194627df3eb1a30ea0c57990a3ef5103f883f3507e49559dc85c1b15f0c3b",
+    "data/industrial-ksdd-supervised-v10/manifest.json": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+    "reports/industrial-ksdd-supervised-v10-data-audit.json": "41afd43fefb13f85b2121a043306b145be1064f09e27c1449cf2806cd4d69318",
+    "reports/industrial-ksdd-v10-v11-final-audit.json": "3049b15bca4830e608d14c041a5177aae4547219c8870183da56ce07f12bcaa2",
+    "configs/equipment_expansion_sources.json": "9f49cef4f89045bd64f2e95dd0d31452862f571a8cd6713e6327685b9002b9b6",
+    "data/equipment-expansion-v1/kolektor_sdd2/download.json": "7debbb36efb6558625658d7458f375ed164e0d5cec2b28bf9caa3161d224fdc4",
+    "safelog_ai/ksdd_supervised.py": "a986dfff53f46e4664e1f8d89e3f92bd7be2e635b92fba746a3aed67493478e5",
+    "safelog_ai/real_mask_server.py": "048efeebeb44456738e2d4c20a8cf1feaf24772c1713b2a28d34fda6449c454f",
+    "safelog_ai/magnetic_surface.py": "6e2d508bb05e6126180b1c47aec7f52661c3495fa0225d1195437484e00ce7eb",
+    "safelog_ai/industrial_surface_reference.py": "b75684fa8681e8ac8aa1b70e825159751af5d7a533cff5d5271da51d88ee4eb8",
+    "safelog_ai/native_component_views.py": "9f9f375e316703018a56407be48ed16aa3f9886a3216f0cbdc7c318df77ff6ac",
+    "safelog_ai/belt_segmentation.py": "9e903468de6521811ee8ce22cf477e48484ec382af83492b5e5edf052735c885",
+    "scripts/train_ksdd2_stream_v173.py": "dc70968dfecbc06262556baa141b59506f17db7b9dfb1485e4852b65e263ac46",
+    "reports/industrial-ksdd2-stream-v173-protocol.json": "7ee7f3af7ef82b64eb275ff63c49b8c96202c5cf2785165c63498994dff42d55",
+    "reports/KSDD2_STREAM_V173_PREREG_KO.md": "965fbb601b3c80499bd59b7502133be2d18c15cb18fb9fdce50c786f8eb6b91e",
+    "scripts/train_ksdd2_stream_v174.py": "f22f1a5d9019ca928b059d99bd9493ee62b71c78332297f20160a0d05a22d195",
+    "reports/industrial-ksdd2-stream-v174-protocol.json": "0958f960719ea33c57925963d5139601bd500bf08b03e6ff474c623992d1d3c4",
+    "reports/KSDD2_STREAM_V174_PREREG_KO.md": "48210637c68df513f63913b3daeea479fc07ef79017f25b95a0b2999c7aa726f",
+    "reports/KSDD2_AFTER_V175_NEXT_KO.md": "5717417161328136911d5addc0a826e30dc0cd46efa12dd79790c1cb0022baa8",
+    "reports/KSDD2_STREAM_V175_PREREG_KO.md": "a0c5b074f9cb5d27181658589e8356319a2b12d0b046484d94ee67b5e3d9a1e3",
+    "reports/KSDD2_STREAM_V175_TRAINING_KO.md": "0e97d8f268e10ee794a67bbf49a6b99e19f0787a34ef4eba6d1103e505b5ebb3",
+    "reports/industrial-ksdd2-stream-v175-protocol.json": "adbefca1fa3f20e2be6a12434ac2ed66eee4c5cdad389385b07030689dee3074",
+    "runs/industrial-ksdd2-stream-v175/development-delta.pt": "444f8fbbd94bafa80f5ae777d51c86a6c84a490715f67fe0f67249143e8e06eb",
+    "runs/industrial-ksdd2-stream-v175/training-result.json": "7cf7414727c765778100e3ffb569586a3276afee0cfa17eef82b830878d545d9",
+    "safelog_ai/auxiliary_classifier.py": "55fefcd2ec94900907606d94bca1e3c32fabf812714dc00094041852331fb5e7",
+    "safelog_ai/belt_tiles.py": "d4a3ef8780af1bb6c27874d28f18f9f310a2c2c656af12c18ce11b2f12d5e5f8",
+    "safelog_ai/component_detail.py": "c3ceec7d98339b988fcdcf2a4ae9db91ca5490e7005bbd8ca9e24966df6fb06e",
+    "safelog_ai/component_reference.py": "526aca4f57aacb68deb9e60a42eb31442f442b3720da87683e29bc5f3eaadbc2",
+    "safelog_ai/equipment_expansion.py": "744c1cedc1300301c1666b064f44c924309a51ed535c731b45ee8434fc8c011a",
+    "safelog_ai/equipment_expansion_server.py": "cf0b02fefe2f441808130d8991fdae027aa8cd5a2c8f9ad660731c0fa0d5d004",
+    "safelog_ai/equipment_reference_budget_server.py": "56fe102ce6a2b230cc8a6ac7c5461d184bb15d182bbbe40e1693992ad345bd4b",
+    "safelog_ai/equipment_reference_photo.py": "5e8607ab911f17e15b04e87ff2beea01d5f2de079dd8ad247b4415a4d27f2d2b",
+    "safelog_ai/equipment_reference_server.py": "fe3b345a3ea2803fd0c914df56919881f8bbd9dffdb10bfb22b2a0599321c28c",
+    "safelog_ai/industrial_batch_server.py": "20d54ad4fd412d7d31348c6a550a3c9be163d7d768eeef564c66aca03d727939",
+    "safelog_ai/industrial_supervised.py": "0ea826146a005a2b6c520b52f57b4a5c3d1f56b24948ca6871529c2038b64219",
+    "safelog_ai/ksdd_photo_only.py": "9f1bf7986b087c8789c118047a3b8af8f821b593a329e8801f3134fe4ce6595e",
+    "safelog_ai/loco_context.py": "cee9f803ecbf2e8c7e77407f2f6280c50e6dc00099c35e4d81cb97174c6bced6",
+    "safelog_ai/loco_context_server.py": "e841fb82c01fb121d50f704391b45c80c697ee62f0ec8d3e62fb86149a8b658b",
+    "safelog_ai/metal_calibration_server.py": "af58f4c4299658de72bb777de0da85d63f8592821bd39de3af5544f67d42fc8c",
+    "safelog_ai/metal_reference.py": "59b612181bac97fee7804fd156ee1c33ca184a25e375c2409dcae0eff64b8b31",
+    "safelog_ai/native_component_server.py": "aaf55b09bb865fe388e279d73c6dfc58d668ad495bd3c9ac9f959292d3b472a5",
+    "safelog_ai/spatial_classifier.py": "5296dbee606822a4f56ef569afa9352bdf7b33c0cda98058f73f7a975ef8ac18",
+    "safelog_ai/unified_main.py": "002520b9962d9d45dbc9a259aa0387fa1349c22ac9b48c3211ee571cb303f3d7",
+    "safelog_ai/unified_main_server.py": "8b0b4857bba2f189d51ba8e3049723630cbbcb9a45baa612813d16777998984a",
+    "safelog_ai/unified_tiles_server.py": "e2cfd53bb875ef8083389e8b0f5c5e5a052a1645d72760076d8f60debbd6e386",
+    "scripts/train_ksdd2_stream_v175.py": "295b2bc7a95292e915608f1f2157469db2ee740b0830461d5478f786410b92b7"
+  },
+  "metadata_pins": [
+    "data/industrial-ksdd-supervised-v10/manifest.json",
+    "reports/KSDD2_AFTER_V175_NEXT_KO.md",
+    "reports/KSDD2_STREAM_V175_PREREG_KO.md",
+    "reports/KSDD2_STREAM_V175_TRAINING_KO.md",
+    "reports/industrial-ksdd-supervised-v10-data-audit.json",
+    "reports/industrial-ksdd-v10-v11-final-audit.json",
+    "reports/industrial-ksdd2-stream-v175-protocol.json",
+    "runs/industrial-ksdd2-stream-v175/development-delta.pt",
+    "runs/industrial-ksdd2-stream-v175/training-result.json",
+    "safelog_ai/auxiliary_classifier.py",
+    "safelog_ai/belt_segmentation.py",
+    "safelog_ai/belt_tiles.py",
+    "safelog_ai/component_detail.py",
+    "safelog_ai/component_reference.py",
+    "safelog_ai/equipment_expansion.py",
+    "safelog_ai/equipment_expansion_server.py",
+    "safelog_ai/equipment_reference_budget_server.py",
+    "safelog_ai/equipment_reference_photo.py",
+    "safelog_ai/equipment_reference_server.py",
+    "safelog_ai/industrial_batch_server.py",
+    "safelog_ai/industrial_supervised.py",
+    "safelog_ai/industrial_surface_reference.py",
+    "safelog_ai/ksdd_photo_only.py",
+    "safelog_ai/ksdd_supervised.py",
+    "safelog_ai/loco_context.py",
+    "safelog_ai/loco_context_server.py",
+    "safelog_ai/magnetic_surface.py",
+    "safelog_ai/metal_calibration_server.py",
+    "safelog_ai/metal_reference.py",
+    "safelog_ai/native_component_server.py",
+    "safelog_ai/native_component_views.py",
+    "safelog_ai/real_mask_server.py",
+    "safelog_ai/spatial_classifier.py",
+    "safelog_ai/unified_main.py",
+    "safelog_ai/unified_main_server.py",
+    "safelog_ai/unified_tiles_server.py",
+    "scripts/train_ksdd2_stream_v175.py"
+  ],
+  "preserved_sidecars": [
+    {
+      "path": "runs/industrial-magnetic-tiles-v16/released/final.pt",
+      "bytes": 437361879,
+      "SHA256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e"
+    },
+    {
+      "path": "../../../../outputs/unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+      "bytes": 399543382,
+      "SHA256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49"
+    },
+    {
+      "path": "runs/industrial-insplad-suspension-v51/trained/final-delta.pt",
+      "bytes": 4803245,
+      "SHA256": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc"
+    },
+    {
+      "path": "../../../../outputs/insplad-three-tasks-role4-research-overlay-2026-10-16-v51.zip",
+      "bytes": 9134056,
+      "SHA256": "551b66ca3adb02d9b67f3449077f5e7e9b1e991dc24a11e0cbd3972ed1045ff4"
+    },
+    {
+      "path": "runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt",
+      "bytes": 5220401,
+      "SHA256": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b"
+    },
+    {
+      "path": "runs/industrial-corrosion-partial-v73/trained/final-delta.pt",
+      "bytes": 5638517,
+      "SHA256": "d40905d720583c586a0952338b6b4d863276fbf282fbcc4d8824c554d183ab56"
+    },
+    {
+      "path": "runs/industrial-corrosion-background-v79/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "e7c070e6ae002cbbe0e68589f3df2aa951a571f8b062dad60cfbf67f2d375a41"
+    },
+    {
+      "path": "runs/industrial-corrosion-native-v81/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10"
+    },
+    {
+      "path": "runs/industrial-corrosion-teacher-retention-v83/trained/final-delta.pt",
+      "bytes": 5638709,
+      "SHA256": "2527fb4120fa3edbd56d3ccea618658656bcb493a056b9ab0bb8148f9561b238"
+    },
+    {
+      "path": "runs/industrial-corrosion-context-v85/trained/final-delta.pt",
+      "bytes": 5641398,
+      "SHA256": "d04194627df3eb1a30ea0c57990a3ef5103f883f3507e49559dc85c1b15f0c3b"
+    }
+  ],
+  "local_runtime_import_modules_pinned": [
+    "safelog_ai.auxiliary_classifier",
+    "safelog_ai.belt_segmentation",
+    "safelog_ai.belt_tiles",
+    "safelog_ai.component_detail",
+    "safelog_ai.component_reference",
+    "safelog_ai.equipment_expansion",
+    "safelog_ai.equipment_expansion_server",
+    "safelog_ai.equipment_reference_budget_server",
+    "safelog_ai.equipment_reference_photo",
+    "safelog_ai.equipment_reference_server",
+    "safelog_ai.industrial_batch_server",
+    "safelog_ai.industrial_supervised",
+    "safelog_ai.industrial_surface_reference",
+    "safelog_ai.ksdd_photo_only",
+    "safelog_ai.ksdd_supervised",
+    "safelog_ai.loco_context",
+    "safelog_ai.loco_context_server",
+    "safelog_ai.magnetic_surface",
+    "safelog_ai.metal_calibration_server",
+    "safelog_ai.metal_reference",
+    "safelog_ai.native_component_server",
+    "safelog_ai.native_component_views",
+    "safelog_ai.real_mask_server",
+    "safelog_ai.spatial_classifier",
+    "safelog_ai.unified_main",
+    "safelog_ai.unified_main_server",
+    "safelog_ai.unified_tiles_server"
+  ],
+  "local_import_pin_scope": "Relevant statically traversed local safelog_ai module closure plus prior protected pins; not whole repository/source/commit/ignored-file audit",
+  "fixed_candidate": {
+    "selected_epoch": 6,
+    "total_training_actual_optimizer_updates": 768,
+    "selected_epoch_update": 384,
+    "candidate_count": 1,
+    "retraining_or_epoch_selection": false,
+    "standalone_app_model": false
+  },
+  "preprocessing": "Exact v175 RGB bicubic isotropic256x704 letterbox127 ImageNet normalization; low40/high960 FP16 roundtrip then FP32; no augmentation; padding excluded. Fixed bilinear align_cornersFalse restoration to native coordinates; original publisher mask unchanged.",
+  "photo_score": "Valid native-view sigmoid top32 mean; score > cut; one candidate",
+  "photo_CAL_threshold": "Exact v10 minimax larger(FPR,FNR), then sum, distance from0.5, lower threshold; candidates unique CAL scores, nextafter minimum toward -inf,0.5. TEST excluded.",
+  "pixel_threshold_candidates_CAL_only": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "pixel_CAL_threshold": "Exact v10: FNR<=0.15 -> higherIoU,lowerFNR,higher threshold; else lowerFNR,higherIoU,higher threshold. No TEST threshold sweep.",
+  "CAL_before_TEST": "Exclusive calibration.json flush/fsync/readback, bound protocol/delta/parent-state SHA with CAL490 and TEST0; exclusive TEST-start; verify saved CAL SHA per TEST photo.",
+  "TEST": "Id-sorted publisherTEST1004, one candidate pass; compare current parent photo at original point and original256 primary reconstruction at original pixel point in same pass; no conditional photo-only redesign",
+  "metric_guards": {
+    "photo_labels_minimum_each": 20,
+    "proxy_groups_minimum_each_label": 3,
+    "photo_FPR_max": 0.2,
+    "photo_FNR_max": 0.2,
+    "photo_FPR_increase_vs_current_parent_max": 0.0,
+    "photo_FNR_increase_vs_current_parent_max": 0.0,
+    "native_pixel_IoU": "strictly greater than current parent",
+    "native_pixel_FNR_increase_max": 0.0,
+    "native_pixel_FPR_increase_max": 0.0,
+    "all_parent_tensors_buffers_file_meta_exact": true,
+    "native_positive_and_background_counts": "Exact fixed source metadata totals, no faulty record exclusions"
+  },
+  "data_limits": {
+    "development": "Only existing original publisher TRAIN members already assigned fit/validation. All fixed CAL and publisher TEST stay held and unopened by this program. No new split, pixel audit, label change, sample substitution or group relaxation.",
+    "GT": "Existing KSDD2 paired native masks and positive/background convention only; >0 damage inside source rectangle, padding excluded. This is not a corrosion/other-source unknown-background rule or whole mechanical-health label.",
+    "rights": "Preserve previously registered CC BY-NC-SA 4.0 noncommercial research, attribution and share-alike conditions. Original author citation/source records remain required; do not substitute this protocol or code licence for data/parent/third-party rights.",
+    "provenance_limits": "The retained acquisition used an LFS mirror fixed at 82460be8a1b6470b110b0d8146624cb9d9bf2311 with archive SHA256 5ed01ab0b7fd006bdca4f7fc5fd614d28b8856203b2fedd551b49fbbadc79f07; publisher archive equivalence and publisher-provided checksum were not verified. No fresh original release/permission/checksum verification claimed. Existing historical authorization and audit are reused; no new source acceptance.",
+    "group_limits": "Exact RGB, any8orientation pHash<=2 and filename-block proxies from original fixed audit; physical acquisition identity and independent factory validation remain unverified. Reuse existing roles/graph, no full RGB/pHash recomputation or retrospective data-audit pass.",
+    "no_new_data_or_role_override": true
+  },
+  "next_runtime_policy": "Only all metric guards passing permits separate concrete implementation/preregistration for bound candidate old-output retention, CPU/GPU, actual C++, alloldalias, oldPNG and fixedZIP. No historical check counts reused. Original photo minima20/group3/FPFN20%, bracket/tube FN5pp improvement and FP+<=5pp and<=20%, typesn>=10 FNregress<=5pp and all retention remain. This stage has no runtime/package implementation and always ready=false/deployed=false.",
+  "run_budget_bytes": 33554432,
+  "temporary_budget_bytes": 16777216,
+  "reserve_bytes": 1073741824,
+  "administrative_budget_bytes": 1048576,
+  "CPU_working_set_budget_bytes": 4294967296,
+  "GPU_tensor_budget_bytes": 4294967296,
+  "maximum_source_pixels": 40000000,
+  "maximum_seconds": 7200,
+  "resources": "One photo at a time, no full feature/map cache, parent copy, archive expansion/download/deletion/compression. Fresh read-only CIM/PID/start/argv/lock/RAM/disk/GPU inventory before actual run. Exact copied approved v175 owned-launcher guards; no signal/os.kill/process stop/foreign lock removal/power/driver/TDR/game/awake changes.",
+  "failure": "Exclusive new run only; fsynced stage journals; stop/preserve partial counts/errors. No resume/replay/retry, TEST tuning, minimum relaxation, or alternate composition after results.",
+  "publication": {
+    "destination": "https://github.com/jungsahun43-commits/robo.git",
+    "ref": "refs/heads/feature/ai-engine",
+    "base_last_verified_historical": "d69c56271d87178e019bcff2509e24fb7b1644d2",
+    "base_last_verified_UTC": "2026-10-22T13:33:42.191722Z",
+    "preparation_parent_local_HEAD": "075171c56e681baf73d3d4e49803b1b1844f8e4e",
+    "exact_paths": [
+      "safelog-cpp/ai-training/scripts/evaluate_ksdd2_stream_v176.py",
+      "safelog-cpp/ai-training/reports/industrial-ksdd2-stream-v176-evaluation-protocol.json",
+      "safelog-cpp/ai-training/reports/KSDD2_STREAM_V176_EVALUATION_PREREG_KO.md"
+    ],
+    "requires_new_specific_exact_payload_human_approval": true,
+    "normal_push_remote_exact_before_torch_pixels_features_scores": true,
+    "no_whole_HEAD_main_force_other_ref_bypass": true,
+    "no_photos_GT_models_private_two_transmitted": true
+  },
+  "preparation_only": {
+    "torch_imported": false,
+    "photos_decoded": 0,
+    "CAL_predictions": 0,
+    "TEST_predictions": 0,
+    "optimizer_updates": 0,
+    "new_source_acquisitions": 0,
+    "new_dataset_fixture": false,
+    "ready": false,
+    "deployed": false,
+    "performance_improvement_claim": false
+  },
+  "original_v173_v174_guards_failures_and_all_prior_chain_preserved": true
+}
