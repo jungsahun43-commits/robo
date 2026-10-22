@@ -1,0 +1,188 @@
+{
+  "schema": "safelog-ksdd2-stream-v175-development-only",
+  "declared_UTC": "2026-10-22T13:30:53.332922+00:00",
+  "script_sha256": "295b2bc7a95292e915608f1f2157469db2ee740b0830461d5478f786410b92b7",
+  "purpose": "Separate v175 after v173/v174 pre-model STOPs; correct exact file links and add early exact-path/report-SHA plus post-publication Git-content inspection. Scientific run body unchanged except namespace; old guards, failures and receipts preserved without replay.",
+  "manifest": "data/industrial-ksdd-supervised-v10/manifest.json",
+  "pinned_inputs": {
+    "runs/industrial-magnetic-tiles-v16/released/final.pt": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e",
+    "../../../../outputs/unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49",
+    "runs/industrial-insplad-suspension-v51/trained/final-delta.pt": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc",
+    "../../../../outputs/insplad-three-tasks-role4-research-overlay-2026-10-16-v51.zip": "551b66ca3adb02d9b67f3449077f5e7e9b1e991dc24a11e0cbd3972ed1045ff4",
+    "runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b",
+    "runs/industrial-corrosion-partial-v73/trained/final-delta.pt": "d40905d720583c586a0952338b6b4d863276fbf282fbcc4d8824c554d183ab56",
+    "runs/industrial-corrosion-background-v79/trained/final-delta.pt": "e7c070e6ae002cbbe0e68589f3df2aa951a571f8b062dad60cfbf67f2d375a41",
+    "runs/industrial-corrosion-native-v81/trained/final-delta.pt": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10",
+    "runs/industrial-corrosion-teacher-retention-v83/trained/final-delta.pt": "2527fb4120fa3edbd56d3ccea618658656bcb493a056b9ab0bb8148f9561b238",
+    "runs/industrial-corrosion-context-v85/trained/final-delta.pt": "d04194627df3eb1a30ea0c57990a3ef5103f883f3507e49559dc85c1b15f0c3b",
+    "data/industrial-ksdd-supervised-v10/manifest.json": "9d2f60b4bb9826c7a2211e69e2ff3056a3c19d83ea02173cdb71fb102df1235f",
+    "reports/industrial-ksdd-supervised-v10-data-audit.json": "41afd43fefb13f85b2121a043306b145be1064f09e27c1449cf2806cd4d69318",
+    "reports/industrial-ksdd-v10-v11-final-audit.json": "3049b15bca4830e608d14c041a5177aae4547219c8870183da56ce07f12bcaa2",
+    "configs/equipment_expansion_sources.json": "9f49cef4f89045bd64f2e95dd0d31452862f571a8cd6713e6327685b9002b9b6",
+    "data/equipment-expansion-v1/kolektor_sdd2/download.json": "7debbb36efb6558625658d7458f375ed164e0d5cec2b28bf9caa3161d224fdc4",
+    "safelog_ai/ksdd_supervised.py": "a986dfff53f46e4664e1f8d89e3f92bd7be2e635b92fba746a3aed67493478e5",
+    "safelog_ai/real_mask_server.py": "048efeebeb44456738e2d4c20a8cf1feaf24772c1713b2a28d34fda6449c454f",
+    "safelog_ai/magnetic_surface.py": "6e2d508bb05e6126180b1c47aec7f52661c3495fa0225d1195437484e00ce7eb",
+    "safelog_ai/industrial_surface_reference.py": "b75684fa8681e8ac8aa1b70e825159751af5d7a533cff5d5271da51d88ee4eb8",
+    "safelog_ai/native_component_views.py": "9f9f375e316703018a56407be48ed16aa3f9886a3216f0cbdc7c318df77ff6ac",
+    "safelog_ai/belt_segmentation.py": "9e903468de6521811ee8ce22cf477e48484ec382af83492b5e5edf052735c885",
+    "scripts/train_ksdd2_stream_v173.py": "dc70968dfecbc06262556baa141b59506f17db7b9dfb1485e4852b65e263ac46",
+    "reports/industrial-ksdd2-stream-v173-protocol.json": "7ee7f3af7ef82b64eb275ff63c49b8c96202c5cf2785165c63498994dff42d55",
+    "reports/KSDD2_STREAM_V173_PREREG_KO.md": "965fbb601b3c80499bd59b7502133be2d18c15cb18fb9fdce50c786f8eb6b91e",
+    "scripts/train_ksdd2_stream_v174.py": "f22f1a5d9019ca928b059d99bd9493ee62b71c78332297f20160a0d05a22d195",
+    "reports/industrial-ksdd2-stream-v174-protocol.json": "0958f960719ea33c57925963d5139601bd500bf08b03e6ff474c623992d1d3c4",
+    "reports/KSDD2_STREAM_V174_PREREG_KO.md": "48210637c68df513f63913b3daeea479fc07ef79017f25b95a0b2999c7aa726f"
+  },
+  "preserved_sidecars": [
+    {
+      "path": "runs/industrial-magnetic-tiles-v16/released/final.pt",
+      "bytes": 437361879,
+      "SHA256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e"
+    },
+    {
+      "path": "../../../../outputs/unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+      "bytes": 399543382,
+      "SHA256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49"
+    },
+    {
+      "path": "runs/industrial-insplad-suspension-v51/trained/final-delta.pt",
+      "bytes": 4803245,
+      "SHA256": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc"
+    },
+    {
+      "path": "../../../../outputs/insplad-three-tasks-role4-research-overlay-2026-10-16-v51.zip",
+      "bytes": 9134056,
+      "SHA256": "551b66ca3adb02d9b67f3449077f5e7e9b1e991dc24a11e0cbd3972ed1045ff4"
+    },
+    {
+      "path": "runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt",
+      "bytes": 5220401,
+      "SHA256": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b"
+    },
+    {
+      "path": "runs/industrial-corrosion-partial-v73/trained/final-delta.pt",
+      "bytes": 5638517,
+      "SHA256": "d40905d720583c586a0952338b6b4d863276fbf282fbcc4d8824c554d183ab56"
+    },
+    {
+      "path": "runs/industrial-corrosion-background-v79/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "e7c070e6ae002cbbe0e68589f3df2aa951a571f8b062dad60cfbf67f2d375a41"
+    },
+    {
+      "path": "runs/industrial-corrosion-native-v81/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10"
+    },
+    {
+      "path": "runs/industrial-corrosion-teacher-retention-v83/trained/final-delta.pt",
+      "bytes": 5638709,
+      "SHA256": "2527fb4120fa3edbd56d3ccea618658656bcb493a056b9ab0bb8148f9561b238"
+    },
+    {
+      "path": "runs/industrial-corrosion-context-v85/trained/final-delta.pt",
+      "bytes": 5641398,
+      "SHA256": "d04194627df3eb1a30ea0c57990a3ef5103f883f3507e49559dc85c1b15f0c3b"
+    }
+  ],
+  "parent_file": "runs/industrial-magnetic-tiles-v16/released/final.pt",
+  "phase_counts": {
+    "fit": {
+      "0": 1254,
+      "1": 146
+    },
+    "validation": {
+      "0": 389,
+      "1": 52
+    },
+    "calibration": {
+      "0": 442,
+      "1": 48
+    },
+    "test": {
+      "0": 894,
+      "1": 110
+    }
+  },
+  "development_group_counts": {
+    "fit": 140,
+    "validation": 45
+  },
+  "data_policy": {
+    "development": "Only existing original publisher TRAIN members already assigned fit/validation. All fixed CAL and publisher TEST stay held and unopened by this program. No new split, pixel audit, label change, sample substitution or group relaxation.",
+    "GT": "Existing KSDD2 paired native masks and positive/background convention only; >0 damage inside source rectangle, padding excluded. This is not a corrosion/other-source unknown-background rule or whole mechanical-health label.",
+    "rights": "Preserve previously registered CC BY-NC-SA 4.0 noncommercial research, attribution and share-alike conditions. Original author citation/source records remain required; do not substitute this protocol or code licence for data/parent/third-party rights.",
+    "provenance_limits": "The retained acquisition used an LFS mirror fixed at 82460be8a1b6470b110b0d8146624cb9d9bf2311 with archive SHA256 5ed01ab0b7fd006bdca4f7fc5fd614d28b8856203b2fedd551b49fbbadc79f07; publisher archive equivalence and publisher-provided checksum were not verified. No fresh original release/permission/checksum verification claimed. Existing historical authorization and audit are reused; no new source acceptance.",
+    "group_limits": "Exact RGB, any8orientation pHash<=2 and filename-block proxies from original fixed audit; physical acquisition identity and independent factory validation remain unverified. Reuse existing roles/graph, no full RGB/pHash recomputation or retrospective data-audit pass.",
+    "no_new_data_or_role_override": true
+  },
+  "architecture": "Same RuntimeRealMaskMain shared encoder. Clone accepted ksdd_head into a new ksdd_stream_v175 namespace; freeze parent entirely and cloned high_projection, train only cloned fusion. No new encoder, embedding, original API method override or app model.",
+  "preprocessing": "Existing RGB bicubic aspect-preserving width256 height704 grey127 letterbox, nearest original mask resize, valid source rectangle, ImageNet normalization, frozen low40/high960 FP16 roundtrip then FP32 head. Actual paired RGB/mask H/V flips at p=.5 each for FIT only; no GT-based crop.",
+  "loss": "Per photo balanced positive/known-background softplus BCE (.5/.5 when positive exists; background only on normal) + softDice + .5 top32-valid sigmoid photo BCE. Mean microbatch loss; no previous global pos_weight10. Padding excluded from every term.",
+  "initialization": "Exact accepted v16 ksdd_head values, not a rejected later candidate. Same parent tensor/buffer/meta and normalization, v51 approved three heads and original v62 sidecars remain exact and unmodified.",
+  "epochs": 12,
+  "steps_per_epoch": 64,
+  "planned_actual_optimizer_updates": 768,
+  "seed": 173173,
+  "microbatch": 4,
+  "accumulation_microbatches": 2,
+  "effective_batch": 8,
+  "sampling": "Each of two microbatches has2 normal and2 real-defect FIT photos, replacement with inverse group multiplicity within label. Repeated draws/augmentation are not additional independent photos.",
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "minimum_lr": 1e-06,
+  "optimizer": "AdamW, cosine12epoch, clip5, FP32, TF32off, cuDNN benchmarkoff/deterministicon. GPU kernels not promised bitwise deterministic. Record RNG/checkpoints/actual optimizer journal.",
+  "VAL_selection": "Equal mean of normal-photo and defect-photo loss over fixed VAL389/52; epoch0 baseline is ineligible. Select earliest strict minimum among completed epochs1..12. If no VAL loss improvement over initialization, retain as non-improving development artifact; no CAL/TEST or promotion.",
+  "CAL_TEST_policy": "This program performs zero CAL/TEST predictions. A later concrete preregistration must preserve CAL-save-before-fixedTEST-once, exact parent retention and all existing minima/FP/FN/pixel/runtime gates before any adoption. No new TEST threshold/stride/structure/coefficient sweep or score on held content.",
+  "delta": "Bounded v16 parent_file/fileSHA/stateSHA + added/combined-stateSHA and serializedrestoreexact; record unchanged approved v51/v62 protected sidecars. No standalone full model, copied parent/cache, primary ZIP or runtime replacement.",
+  "run_budget_bytes": 134217728,
+  "temporary_budget_bytes": 33554432,
+  "delta_budget_bytes": 4194304,
+  "reserve_bytes": 1073741824,
+  "administrative_budget_bytes": 1048576,
+  "CPU_working_set_budget_bytes": 4294967296,
+  "GPU_tensor_budget_bytes": 4294967296,
+  "maximum_source_pixels": 40000000,
+  "maximum_seconds": 7200,
+  "resources": "Per microbatch RGB streaming and frozen encoder; no feature cache, archive expansion/download or parent-file copy. Keep every epoch head+optimizer+RNG checkpoint and original files. Fresh scoped CIM/process/lock/GPU-context inventory and available RAM before run; WDDM desktop contexts are not assumed duplicate learning.",
+  "failure": "Stop on changed input SHA/count/role, malformed decode/mask, nonfinite loss/gradient, resource cap, conflicting job/lock or any error. Preserve confirmed actual operations, partial state and failures. Exclusive new run path; no automatic resume/replay/minimum relaxation/cleanup.",
+  "publication": {
+    "required_before_torch_dataset_pixels_features_gradient": "Exact script+protocol+report normal commit/push to feature/ai-engine and remote exact verification after new specific human authorization. Training request is not reuse of consumed prior publication approvals.",
+    "base_last_verified_historical": "4747151367495762adead46f602443984a61d972",
+    "base_last_verified_UTC": "2026-10-22T13:26:42.155908Z",
+    "destination": "https://github.com/jungsahun43-commits/robo.git",
+    "ref": "refs/heads/feature/ai-engine",
+    "no_whole_HEAD_main_force_other_ref_bypass": true,
+    "preparation_parent_local_HEAD": "ffbcff711e99ef64af4bf7b45afb8d3205382b46",
+    "exact_paths": [
+      "safelog-cpp/ai-training/scripts/train_ksdd2_stream_v175.py",
+      "safelog-cpp/ai-training/reports/industrial-ksdd2-stream-v175-protocol.json",
+      "safelog-cpp/ai-training/reports/KSDD2_STREAM_V175_PREREG_KO.md"
+    ]
+  },
+  "closed_sources_and_all_prior_failures_gates_preserved": true,
+  "ready_for_training_before_new_exact_publication": false,
+  "source_acquisitions_new": 0,
+  "photos_decoded_so_far": 0,
+  "optimizer_updates_so_far": 0,
+  "performance_improvement_claim": false,
+  "deployment_authorized": false,
+  "control_plane_revision": {
+    "v173_preflight_STOP_receipt": "outputs/KSDD2_V173_PROCESS_PREFLIGHT_2026-10-22-STOP.json",
+    "v173_torch_model_dataset_pixels_optimizer": 0,
+    "v173_exact_publication_approval_consumed": true,
+    "old_guard_and_all_original_artifacts_unmodified": true,
+    "allow_owned_venv_launcher_only_if": "Immediate actual OS parent; exact venv and base executable paths; current PID/parent PID consistent; exact parsed Windows argv suffix equals actual sys.orig_argv suffix; parent start0..5sec before current child. Missing identity fails closed; every other scoped process remains rejected. No os.kill, signal, process stop or foreign lock modification.",
+    "administrative_unit_checks": "One matching-own-launcher case accepted; six wrong PID/argv/path/start/missing argv/parent-link cases rejected. No dataset fixture, model import or gradient.",
+    "real_read_only_preflight_pass_UTC": "2026-10-22T13:22:51.8876888Z",
+    "scientific_run_function_equal_after_namespace_only_replacement": true,
+    "new_namespace_and_run": "ksdd_stream_v175 / runs/industrial-ksdd2-stream-v175",
+    "same_seed_optimizer_loss_data_roles_epochs_steps_as_v173": true,
+    "no_new_exact_publication_approval_yet": true,
+    "v174_STOP_receipt": "outputs/KSDD2_V174_PUBLICATION_GATE_2026-10-22-STOP.json",
+    "v174_torch_model_dataset_pixels_optimizer": 0,
+    "v174_report_constant_failure_original_preserved": true,
+    "inspection_addition": "Before publication: assert PACKET exact paths and report SHA. After exact publication: --inspect-publication verifies approved receipt paths and all3 Git blobs before separate scientific run. No false receipt or gate bypass."
+  },
+  "report_sha256": "a0c5b074f9cb5d27181658589e8356319a2b12d0b046484d94ee67b5e3d9a1e3"
+}
