@@ -1,0 +1,99 @@
+{
+  "schema": "safelog-bounded-original-author-HF-file-metadata",
+  "version": "v232",
+  "title": "Cracks in the Foundation: A Civil Infrastructure Dataset to Challenge Vision Foundation Models",
+  "repo_id": "ibm-research/cif-dataset",
+  "primary_project": "https://ibm.github.io/cracks-in-the-foundation-dataset/?trk=public_post_comment-text",
+  "primary_card": "https://huggingface.co/datasets/ibm-research/cif-dataset",
+  "observed_short_revision": "75057c6",
+  "metadata_url": "https://huggingface.co/api/datasets/ibm-research/cif-dataset/revision/75057c6?blobs=true",
+  "URL_basis": "Exact original repository and verified displayed short Git revision from original HF root Files page. Public dataset-info/revision and blobs=true routes are already implemented in preserved inspect_reinad_public_metadata.py lines136-143/fetch_robustad_pcb.py line52; old helpers not executed. Official HfApi.dataset_info reference confirms revision and files_metadata(size/LFS) semantics. No file URL/version/bytes inferred. Response must return full40hex SHA beginning75057c6.",
+  "request_limit": 1,
+  "max_metadata_body_bytes": 1048576,
+  "max_inventory_jsonl_bytes": 1048576,
+  "max_files": 2048,
+  "max_declared_shard_bytes": 4294967296,
+  "min_total_declared_bytes": 85899345920,
+  "max_total_declared_bytes": 171798691840,
+  "declared_size_bound_basis": "Official record displays approximately123GB total, not actual observed exactbytes/checksum or a full acquisition budget. Bounds only validate metadata declarations. Individual parquet bytes are not fetched.",
+  "timeout_seconds": 30,
+  "metadata_job_budget_bytes": 4194304,
+  "preregistration_storage_temp_git_objects_cap_bytes": 4194304,
+  "reserve_bytes": 1073741824,
+  "RAM_budget_bytes": 67108864,
+  "RAM_reserve_bytes": 1073741824,
+  "budget_basis": "One JSON body<=1MiB, streamed inventory<=1MiB, bounded receipt/logs<4MiB. Standard library/pinned existing core, no package installs. RAM stage64MiB with1GiB reserve, metadata JSON and2048 file entries bounded; not a measured peak or123GB fullsource/extraction/training budget.",
+  "protected10": [
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-magnetic-tiles-v16/released/final.pt",
+      "bytes": 437361879,
+      "SHA256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e"
+    },
+    {
+      "path": "outputs/unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+      "bytes": 399543382,
+      "SHA256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-insplad-suspension-v51/trained/final-delta.pt",
+      "bytes": 4803245,
+      "SHA256": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc"
+    },
+    {
+      "path": "outputs/insplad-three-tasks-role4-research-overlay-2026-10-16-v51.zip",
+      "bytes": 9134056,
+      "SHA256": "551b66ca3adb02d9b67f3449077f5e7e9b1e991dc24a11e0cbd3972ed1045ff4"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt",
+      "bytes": 5220401,
+      "SHA256": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-partial-v73/trained/final-delta.pt",
+      "bytes": 5638517,
+      "SHA256": "d40905d720583c586a0952338b6b4d863276fbf282fbcc4d8824c554d183ab56"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-background-v79/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "e7c070e6ae002cbbe0e68589f3df2aa951a571f8b062dad60cfbf67f2d375a41"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-native-v81/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-teacher-retention-v83/trained/final-delta.pt",
+      "bytes": 5638709,
+      "SHA256": "2527fb4120fa3edbd56d3ccea618658656bcb493a056b9ab0bb8148f9561b238"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-context-v85/trained/final-delta.pt",
+      "bytes": 5641398,
+      "SHA256": "d04194627df3eb1a30ea0c57990a3ef5103f883f3507e49559dc85c1b15f0c3b"
+    }
+  ],
+  "destination": "https://github.com/jungsahun43-commits/robo.git",
+  "ref": "refs/heads/feature/ai-engine",
+  "publication_paths": [
+    "safelog-cpp/ai-training/scripts/inspect_cif_metadata_v232.py",
+    "safelog-cpp/ai-training/reports/CIF_V232_METADATA_PROTOCOL.json",
+    "safelog-cpp/ai-training/reports/CIF_V232_METADATA_PREREG_KO.md"
+  ],
+  "helper_dependency_SHA256": "f72eb1deea38ac4f615e2b6c53d30fc67a5d7a9b3b7f3f708bb839d0140be999",
+  "fresh_guard": "Launch base Python directly from PowerShell; no outer Python subprocess wrapper or venv redirector. Same pinned v227 exact publication/local-Git blobs/fresh ordinary remote receipt, successful CIM process command lines/start times, scoped foreign locks, protected10 bytesSHA, actual v85 ledger450/epoch30, disk and RAM reserve checks. Own exclusive lock only; no guard changes.",
+  "schema_guard": "Exact public/ungated/active repository, full40hex revision matching observed prefix, primary CDLA Permissive2.0 declaration, complete six full/tiled train/val/test file families, contiguous shard indices, safe unique paths, actual declared sizes/Git blob IDs/LFS SHA256. Reject unknown paths/unresolved pagination/schema mismatch; no guessed filenames or extra requests.",
+  "family_history": "Known v188 index-only nicolaaaaa/cif_dataset_toy is not an independent family and remains unchanged/unopened. New evidence is the original IBM Research/ETH project and explicitly linked full original ibm-research release, dataset-specific license, collection/dissemination acknowledgments, COCO polygons, original roles and tile-parent schema. First primary reads of this full release only, not a reopening/retry of the toy/card/parents via alias.",
+  "primary_observation": "Official site: about150000 original images/250000 masks, six real defect classes, five-year collection, partners Sund & Baelt/Trafikverket/Canton of Zurich. Card: original full/train/val/test and derived1024 tiles, parentfilename/coordinates fields, top-left COCO polygons, CDLA Permissive2.0 and partner permission acknowledgment. Counts about150k/300708rows/default162k are separate display declarations, not silently reconciled into independent photos/groups.",
+  "rights_limit": "Named institutions/authors/acknowledged partners do not prove each photographer/all third-party parent rights. Dataset license declaration and permission acknowledgment are preserved without broad legal clearance claims.",
+  "source_limit": "NaturalRGB actual bytes/nativeGT/explicit background and unknown/coords/export, original role and physical inspection/capture group/source-oldheld full graph/fixed minima and full acquisition-run budget remain unverified. Original polygon names do not prove all unannotated pixels are normal.",
+  "roles": "All possible full/tile/member/copies UNASSIGNED; originalTEST and publisherVAL HELD. Full/tile copies share parent groups; displayed dataframe rows are metadata only. No photo rendering, held selection or GT edits.",
+  "failure": "One request only; exact200 JSON/identity MIME/bounded body, no redirect/token/cookie/proxy/login/consent/contact. First403/404/429/challenge/timeout/size/encoding/revision/schema/pagination failure stops with original partials/error preserved. No retry/alternate API/version/header/mirror/fullsource fallback.",
+  "next": "After actual successful file metadata review, prepare only justified exact TRAIN acquisition/audit codeJSON/full stagebudget separately. All commonencoder parentexact/GT/roles/fullgraph/minima/VAL-CAL-fixedTESTonce/retention/actualCPP-CPU-GPU-alias-runtime and preservation/delete gates unchanged. No automatic app/model replacement.",
+  "source_accepted": false,
+  "ready": false,
+  "parquet_image_annotation_features_optimizer_CAL_TEST": 0,
+  "v227_v228_v230_v231_exact_approvals_consumed_not_reused": true
+}
