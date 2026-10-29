@@ -1,0 +1,88 @@
+{
+  "schema": "safelog-bounded-publisher-record-metadata",
+  "version": "v230",
+  "title": "PAGG-Net: Physically Aligned High-Resolution Concrete Crack Dataset",
+  "record_id": 18010179,
+  "DOI": "10.5281/zenodo.18010179",
+  "metadata_url": "https://zenodo.org/api/records/18010179",
+  "metadata_url_basis": "Observed original Zenodo record18010179 and DOI; same documented public /api/records/{id} route used by the previously preserved v161 reader. No file URL is requested.",
+  "publisher_archive_checksum": "md5:5f83eb3edab301920bb8cc2989fb5c6c",
+  "declared_archive_min_bytes": 21474836480,
+  "declared_archive_max_bytes": 42949672960,
+  "archive_declaration_bound_basis": "Primary record displays rounded30.6GB, one Zenodo.zip and this MD5. Bounds are not an exact acquired byte count or full-source budget.",
+  "max_metadata_body_bytes": 131072,
+  "request_limit": 1,
+  "timeout_seconds": 30,
+  "metadata_job_budget_bytes": 1048576,
+  "preregistration_storage_temp_git_objects_cap_bytes": 4194304,
+  "reserve_bytes": 1073741824,
+  "protected10": [
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-magnetic-tiles-v16/released/final.pt",
+      "bytes": 437361879,
+      "SHA256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e"
+    },
+    {
+      "path": "outputs/unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+      "bytes": 399543382,
+      "SHA256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-insplad-suspension-v51/trained/final-delta.pt",
+      "bytes": 4803245,
+      "SHA256": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc"
+    },
+    {
+      "path": "outputs/insplad-three-tasks-role4-research-overlay-2026-10-16-v51.zip",
+      "bytes": 9134056,
+      "SHA256": "551b66ca3adb02d9b67f3449077f5e7e9b1e991dc24a11e0cbd3972ed1045ff4"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt",
+      "bytes": 5220401,
+      "SHA256": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-partial-v73/trained/final-delta.pt",
+      "bytes": 5638517,
+      "SHA256": "d40905d720583c586a0952338b6b4d863276fbf282fbcc4d8824c554d183ab56"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-background-v79/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "e7c070e6ae002cbbe0e68589f3df2aa951a571f8b062dad60cfbf67f2d375a41"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-native-v81/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-teacher-retention-v83/trained/final-delta.pt",
+      "bytes": 5638709,
+      "SHA256": "2527fb4120fa3edbd56d3ccea618658656bcb493a056b9ab0bb8148f9561b238"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-context-v85/trained/final-delta.pt",
+      "bytes": 5641398,
+      "SHA256": "d04194627df3eb1a30ea0c57990a3ef5103f883f3507e49559dc85c1b15f0c3b"
+    }
+  ],
+  "destination": "https://github.com/jungsahun43-commits/robo.git",
+  "ref": "refs/heads/feature/ai-engine",
+  "publication_paths": [
+    "safelog-cpp/ai-training/scripts/inspect_pagg_record_v230.py",
+    "safelog-cpp/ai-training/reports/PAGG_V230_METADATA_PROTOCOL.json",
+    "safelog-cpp/ai-training/reports/PAGG_V230_METADATA_PREREG_KO.md"
+  ],
+  "helper_dependency_SHA256": "f72eb1deea38ac4f615e2b6c53d30fc67a5d7a9b3b7f3f708bb839d0140be999",
+  "source_observation": "Original page declares binary crack masks paired with high-resolution originals, derived multi-scale tiles, CSV/MD5 mappings and image-level splits. Curator/copyright name is observed; no individual photographer/parent rights, natural RGB, TRAIN-native mask/unknown/background/physicalgroups/wholegraph/minima/bytes verified.",
+  "license_observation": "Original primary page's rights/license text was blank except copyright; NLM search index claims CC BY4.0, which is not substituted for an original license declaration. Inspect only what the actual JSON record says; no training rights inferred from an open record.",
+  "runtime": "Use installed base Python directly; reuse pinned v227 standard-library publication/preflight routines. Preserve original v227 venv self-process stop and separate successful base-runtime first GET, no guard change.",
+  "failure": "First redirect/auth/challenge/403/404/429/timeout/type/encoding/size/JSON/identity/checksum failure stops with raw partial/error preserved. No retry/mirror/alternate API/PDF/file/code/archive request.",
+  "roles": "All possible source records/containers/members/copies UNASSIGNED; originalTEST and publisherVAL HELD. Tiles/crops are not independent original photos or new TRAIN roles.",
+  "next": "Actual record metadata only. Any later archive/directory/document acquisition and actual pixel/training job requires its own exact codeJSON/diff/full storage/temp/run budget/preregistration and applicable specific approval, with all source/nativeGT/role/group/fullgraph/minimum/model/evaluation/runtime gates unchanged.",
+  "source_accepted": false,
+  "ready": false,
+  "photos_masks_archives_features_optimizer_CAL_TEST": 0
+}
