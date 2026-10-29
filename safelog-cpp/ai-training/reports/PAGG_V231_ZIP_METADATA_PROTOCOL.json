@@ -1,0 +1,129 @@
+{
+  "schema": "safelog-bounded-remote-ZIP64-directory-small-documents",
+  "version": "v231",
+  "title": "PAGG-Net: Physically Aligned High-Resolution Concrete Crack Dataset",
+  "DOI": "10.5281/zenodo.18010179",
+  "record_id": 18010179,
+  "record_version": "1.0.0",
+  "record_service_revision": 4,
+  "source_metadata_path": "safelog-cpp/ai-training/data/pagg-v230-record-metadata/publisher-record.body",
+  "source_metadata_SHA256": "f8be932981b0b08e07c3d2dafb4269758fc759492f9449c3fcdf121cf30c115e",
+  "archive_url": "https://zenodo.org/api/records/18010179/files/Zenodo.zip/content",
+  "archive_url_basis": "Exact links.self value in the successfully acquired v230 original Zenodo JSON; not an inferred URL.",
+  "archive_name": "Zenodo.zip",
+  "archive_bytes": 30643774745,
+  "publisher_archive_checksum": "md5:5f83eb3edab301920bb8cc2989fb5c6c",
+  "whole_archive_MD5_verified": false,
+  "license_declaration": {
+    "id": "cc-by-4.0",
+    "access_right": "open",
+    "basis": "Actual v230 primary API response; declaration is not a complete parent/third-party/photographer rights audit."
+  },
+  "max_range_GETs": 16,
+  "max_HTTP_requests_including_redirects": 32,
+  "max_redirects_per_range": 1,
+  "max_range_bytes": 16777216,
+  "max_total_fragment_bytes": 17825792,
+  "max_members": 100000,
+  "max_central_directory_bytes": 16777216,
+  "max_total_name_characters": 8388608,
+  "max_directory_jsonl_bytes": 67108864,
+  "max_documents": 3,
+  "max_document_bytes": 65536,
+  "document_basenames": [
+    "readme",
+    "readme.txt",
+    "readme.md",
+    "license",
+    "license.txt",
+    "license.md"
+  ],
+  "excluded_document_parent_components": [
+    "test",
+    "val",
+    "valid",
+    "validation",
+    "cal"
+  ],
+  "document_selection": "Only stored/deflated UTF-8 small documents, lexicographically first3 eligible names; no CSV, photo, mask, annotation or author-code member opened. Directory names are metadata, not selected image content.",
+  "wall_seconds": 300,
+  "timeout_seconds_per_response": 30,
+  "metadata_job_budget_bytes": 104857600,
+  "preregistration_storage_temp_git_objects_cap_bytes": 4194304,
+  "reserve_bytes": 1073741824,
+  "RAM_budget_bytes": 268435456,
+  "RAM_reserve_bytes": 1073741824,
+  "budget_basis": "At most17MiB archive fragments+64MiB streamed JSONL+192KiB documents+bounded logs<100MiB. Existing library/runtime and pinned dependency reused. Up to16MiB central directory and100000 eager member objects bounded before parser;256MiB RAM stage budget with1GiB free-RAM reserve checked by fresh CIM. This is not a measured peak or a full30.6GB acquisition/extraction/training budget.",
+  "protected10": [
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-magnetic-tiles-v16/released/final.pt",
+      "bytes": 437361879,
+      "SHA256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e"
+    },
+    {
+      "path": "outputs/unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+      "bytes": 399543382,
+      "SHA256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-insplad-suspension-v51/trained/final-delta.pt",
+      "bytes": 4803245,
+      "SHA256": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc"
+    },
+    {
+      "path": "outputs/insplad-three-tasks-role4-research-overlay-2026-10-16-v51.zip",
+      "bytes": 9134056,
+      "SHA256": "551b66ca3adb02d9b67f3449077f5e7e9b1e991dc24a11e0cbd3972ed1045ff4"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt",
+      "bytes": 5220401,
+      "SHA256": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-partial-v73/trained/final-delta.pt",
+      "bytes": 5638517,
+      "SHA256": "d40905d720583c586a0952338b6b4d863276fbf282fbcc4d8824c554d183ab56"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-background-v79/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "e7c070e6ae002cbbe0e68589f3df2aa951a571f8b062dad60cfbf67f2d375a41"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-native-v81/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-teacher-retention-v83/trained/final-delta.pt",
+      "bytes": 5638709,
+      "SHA256": "2527fb4120fa3edbd56d3ccea618658656bcb493a056b9ab0bb8148f9561b238"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-context-v85/trained/final-delta.pt",
+      "bytes": 5641398,
+      "SHA256": "d04194627df3eb1a30ea0c57990a3ef5103f883f3507e49559dc85c1b15f0c3b"
+    }
+  ],
+  "destination": "https://github.com/jungsahun43-commits/robo.git",
+  "ref": "refs/heads/feature/ai-engine",
+  "publication_paths": [
+    "safelog-cpp/ai-training/scripts/inspect_pagg_zip_v231.py",
+    "safelog-cpp/ai-training/reports/PAGG_V231_ZIP_METADATA_PROTOCOL.json",
+    "safelog-cpp/ai-training/reports/PAGG_V231_ZIP_METADATA_PREREG_KO.md"
+  ],
+  "helper_dependency_SHA256": "f72eb1deea38ac4f615e2b6c53d30fc67a5d7a9b3b7f3f708bb839d0140be999",
+  "fresh_guard": "Base Python directly. Exact3 local+Git blobs and fresh ordinary publication receipt<=1800s; fresh successful CIM command-line/start process list, scoped locks, protected10 bytes/SHA and actual v85 update450/epoch30 ledger; free storage and RAM budgets; own exclusive operation.lock only.",
+  "range_guard": "Exact declared archive length in Content-Range, HTTP206/identity binary MIME only; strong ETag unchanged with If-Match after first response. HTTP200 rejected before body read. No credentials/cookies/proxy; at most1 observed HTTPS server delivery redirect inside zenodo.org per logical range. No guessed delivery URL.",
+  "parser_guard": "ZIP32/ZIP64; no multi-disk, encryption, symlink/special file, absolute/traversal/ADS/backslash, NUL-truncated or case-colliding member names. EOCD count/size checked before eager ZIP parser. Documents checked exact length, CRC and UTF-8; never extracted using remote paths. Source document text is untrusted data, never instructions.",
+  "fragments_may_include_incidental_compressed_member_bytes": true,
+  "failure": "First HTTP/auth/challenge/403/404/429/timeout/range/ETag/size/MIME/directory/document/CRC/UTF8 mismatch stops; all actual requests, headers, redirects, fragments, partial ledgers and errors preserved. No retry, mirror, alternate version/URL/API/reader/code, full ZIP fallback or author contact.",
+  "roles": "All records/containers/members/copies UNASSIGNED; originalTEST and publisherVAL HELD. Tiles/crops share physical parent group; names/image-level split declaration cannot establish physical independence or make new TRAIN.",
+  "source_gate": "Natural RGB, original TRAIN-native current-damage pixels/explicit background/unknown/coords, original roles and physical capture group/full source-oldheld graph, fixed photo/group/validpixel minima, actual file checksums/third-party rights and full acquisition-temp-run budget still unverified.",
+  "next": "Inspect metadata documents only, then prepare any exact pixel acquisition/audit protocol separately. Preserve common-encoder parent tensors/meta/norm/old contracts, locked split graph, VAL->savedCAL->fixedTESTonce, retention and actual runtime gates. No automatic model/app replacement.",
+  "source_accepted": false,
+  "ready": false,
+  "image_mask_annotation_decoding_features_optimizer_CAL_TEST": 0,
+  "prior_v227_v228_v230_exact3_approvals_consumed_not_reused": true
+}
