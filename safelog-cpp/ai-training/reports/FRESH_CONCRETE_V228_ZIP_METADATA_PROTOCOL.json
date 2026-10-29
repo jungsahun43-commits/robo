@@ -1,0 +1,98 @@
+{
+  "schema": "safelog-bounded-zip-document-metadata-preregistration",
+  "version": "v228",
+  "source_page": "https://data.mendeley.com/datasets/r8zrzk5w8j/2",
+  "archive_url": "https://data.mendeley.com/public-files/datasets/r8zrzk5w8j/files/438cd786-eb22-4f49-82eb-15107724ffb6/file_downloaded",
+  "archive_name": "Fresh_Concrete_Crack_Dataset_v2.zip",
+  "archive_bytes": 163839068,
+  "publisher_whole_archive_SHA256": "0c8272767e4d64d17f0927e8e032eb79bd2e91fcd87a44354d111d9ea4628bd5",
+  "source_metadata_SHA256": "857aa11c3affab7dc824aeac4f9477b9ad4bc0f9b2769407c7019e7635e612b0",
+  "dependency_SHA256": "f72eb1deea38ac4f615e2b6c53d30fc67a5d7a9b3b7f3f708bb839d0140be999",
+  "dependency_already_published_commit": "e3c26eb3f1575acc203c83d2418a3fc3418d0887",
+  "max_range_GETs": 4,
+  "max_HTTP_requests_with_delivery_redirects": 8,
+  "timeout_seconds_per_GET": 30,
+  "max_range_bytes": 524288,
+  "max_directory_bytes": 524288,
+  "max_members": 5000,
+  "max_readme_bytes": 65536,
+  "max_readme_payload_bytes": 131072,
+  "max_total_fragment_bytes": 786432,
+  "metadata_job_budget_bytes": 8388608,
+  "preregistration_storage_temp_git_object_cap_bytes": 4194304,
+  "reserve_bytes": 1073741824,
+  "ranges": "First exact tail [163773511,163839067]; central-directory interval derived only from its validated non-ZIP64 EOCD, max512KiB; exact30-byte README.txt local header; exact name/extra/compressed README payload max128KiB. No image/mask/annotation member opened or decoded; no full ZIP GET.",
+  "delivery": "Each range begins at the one observed publisher URL. At most one ordinary public HTTPS delivery redirect per range, supplied by that server, only data.mendeley.com or prod-dcd-datasets-public-files*.s3*.amazonaws.com as validated in code. No constructed CDN URL, cookies, credentials, proxy, login, account or alternate mirror/API. All observed redirects saved locally as data; no source instructions executed.",
+  "range_integrity": "HTTP206 only with exact Content-Range/Content-Length/identity MIME; strong ETag from first response, If-Match and unchanged ETag on every later range. Each saved fragment gets actual bytes/SHA. README gets bounded decompression/length/CRC/UTF8 readback. Partial ranges never prove whole-archive SHA256.",
+  "failure": "Any unapproved redirect, denial/challenge/403/429/timeout, HTTP200/no-range, missing/changed ETag, size/type/path/CRC/parser mismatch stops with first failure and fragments preserved; no retry/fallback/full download/extraction.",
+  "purpose": "Read exact central-directory filenames/roles and original-author README documentation to establish acquisition/annotation/capture-group policy before requesting full source bytes or opening pixels. Rounded metadata counts and file names do not prove physical independence or real GT.",
+  "runtime": "Installed base Python directly, not venv redirector; keep the already published strict fresh CIM process guard unchanged. Only standard library plus pinned v227 helper; no author code or ML library execution.",
+  "protected10": [
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-magnetic-tiles-v16/released/final.pt",
+      "bytes": 437361879,
+      "SHA256": "5285353bfd6f0d11684e1684f5a0128049a923804035081ed7fa67d0632f3f3e"
+    },
+    {
+      "path": "outputs/unified-real-mask-transfer-role4-handoff-2026-10-15-v16-r1.zip",
+      "bytes": 399543382,
+      "SHA256": "40109dd30dc1778abc780a53e2aa502ac895fce45f66e9b9a9f46af60dd80a49"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-insplad-suspension-v51/trained/final-delta.pt",
+      "bytes": 4803245,
+      "SHA256": "b91b6578eccd1886c5be18805a9475875ff319f77bda019cd0b3f518d84f46dc"
+    },
+    {
+      "path": "outputs/insplad-three-tasks-role4-research-overlay-2026-10-16-v51.zip",
+      "bytes": 9134056,
+      "SHA256": "551b66ca3adb02d9b67f3449077f5e7e9b1e991dc24a11e0cbd3972ed1045ff4"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-ostrava-rust-mask-v62/trained/final-delta.pt",
+      "bytes": 5220401,
+      "SHA256": "26c26bc5739930f153d1553b9b22840f4e83ba925cddeca5f46eee4f9f25a01b"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-partial-v73/trained/final-delta.pt",
+      "bytes": 5638517,
+      "SHA256": "d40905d720583c586a0952338b6b4d863276fbf282fbcc4d8824c554d183ab56"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-background-v79/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "e7c070e6ae002cbbe0e68589f3df2aa951a571f8b062dad60cfbf67f2d375a41"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-native-v81/trained/final-delta.pt",
+      "bytes": 5638581,
+      "SHA256": "f5938468e7acb4b5dfbb7025b0c986c8e5a2cfc90bfe3c0f5ec6431fa983cf10"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-teacher-retention-v83/trained/final-delta.pt",
+      "bytes": 5638709,
+      "SHA256": "2527fb4120fa3edbd56d3ccea618658656bcb493a056b9ab0bb8148f9561b238"
+    },
+    {
+      "path": "work/robo-ai-engine/safelog-cpp/ai-training/runs/industrial-corrosion-context-v85/trained/final-delta.pt",
+      "bytes": 5641398,
+      "SHA256": "d04194627df3eb1a30ea0c57990a3ef5103f883f3507e49559dc85c1b15f0c3b"
+    }
+  ],
+  "destination": "https://github.com/jungsahun43-commits/robo.git",
+  "ref": "refs/heads/feature/ai-engine",
+  "publication_paths": [
+    "safelog-cpp/ai-training/scripts/inspect_fresh_concrete_zip_v228.py",
+    "safelog-cpp/ai-training/reports/FRESH_CONCRETE_V228_ZIP_METADATA_PROTOCOL.json",
+    "safelog-cpp/ai-training/reports/FRESH_CONCRETE_V228_ZIP_METADATA_PREREG_KO.md"
+  ],
+  "roles": "All possible source/container/member copies UNASSIGNED; originalTEST and publisherVAL HELD. Directory role names are metadata only; do not read HELD pixels, change split, invent capture groups, infer unknown-as-background or normality.",
+  "unchanged_gates": [
+    "This is not full-source acquisition approval, native pixel QA, source acceptance or a training packet.",
+    "Before full data acquisition and any training: source/parent thirdparty rights, naturalRGB task-native originalTRAIN GT unknown/background/coordinates, original roles/physicalcapture/full oldheld graph policy/fixed independent photo/group/validpixel minima, exact bytes/SHA/URL and full storage/temp/run budget; exact preregistration and applicable specific approval/remote verification.",
+    "v16+approved3heads+originalv62/common encoder/contracts/norm retained; no extraencoder or fake source/date/category embedding.",
+    "VAL selection then CAL saved then fixedTEST once, fixed FP/FN/minima/retention/runtime unchanged; failedKSDD2/normalROI and closed sources not replayed.",
+    "Fragments may contain incidental compressed member bytes in ZIP tail; count them as actual source-archive fragments, never claim whole source HTTP/bytes zero. No image/mask/annotation decoder or model call.",
+    "No deletion/compression/power/driver/awake changes; preserve initial v227 guard failure, separate successful base-runtime GET, all earlier chain and actual raw evidence."
+  ]
+}
