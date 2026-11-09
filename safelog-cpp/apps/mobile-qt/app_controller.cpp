@@ -10,7 +10,8 @@ AppController::AppController(QObject* parent)
   : QObject(parent),
     photoStore_((QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/photos").toStdString()),
     capture_(repository_, clock_, ids_, photoStore_),
-    workflow_(repository_, clock_, ids_, photoStore_) {
+    workflow_(repository_, clock_, ids_, photoStore_),
+    ai_(repository_, clock_, ids_, mockAi_) {
   repository_.saveSite({"site-1", "세이프 금속 가공공장", "서울시 가상구 산업로 10"});
   repository_.saveProfile({"inspector-1", "김안전", UserRole::Inspector});
   repository_.saveProfile({"assignee-1", "이조치", UserRole::Assignee});

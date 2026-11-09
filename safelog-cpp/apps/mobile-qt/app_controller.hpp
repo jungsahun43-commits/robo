@@ -5,6 +5,8 @@
 #include "safelog/storage/in_memory_repository.hpp"
 #include "safelog/storage/system_services.hpp"
 #include "safelog/workflow/workflow_service.hpp"
+#include "controllers/capture/capture_mock_ai_analyzer.hpp"
+#include "safelog/ai/ai_safety_service.hpp"
 
 #include <QObject>
 #include <QString>
@@ -17,6 +19,16 @@ class AppController final : public QObject {
 public:
   explicit AppController(QObject* parent = nullptr);
   QString statusMessage() const { return statusMessage_; }
+
+  capture::CaptureService& captureService()
+  {
+      return capture_;
+  }
+
+  ai::AiSafetyService& aiService()
+  {
+      return ai_;
+  }
 
   Q_INVOKABLE void runDemoScenario();
 
@@ -31,7 +43,10 @@ private:
   storage::LocalPhotoStore photoStore_;
   capture::CaptureService capture_;
   workflow::WorkflowService workflow_;
+  CaptureMockAiAnalyzer mockAi_;
+  ai::AiSafetyService ai_;
   QString statusMessage_{QStringLiteral("준비됨")};
+
 };
 
 } // namespace safelog::qtapp

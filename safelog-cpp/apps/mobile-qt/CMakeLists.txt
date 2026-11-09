@@ -5,7 +5,13 @@ qt_add_executable(safelog_mobile main.cpp app_controller.cpp)
 qt_add_qml_module(safelog_mobile
   URI SafeLog
   VERSION 1.0
-  QML_FILES qml/Main.qml
+  QML_FILES
+    qml/Main.qml
+    qml/capture/FindingCapturePage.qml
+    qml/capture/AiHazardReviewPage.qml
+    qml/capture/FindingSavedPage.qml
+    SOURCES controllers/capture/capture_controller.hpp controllers/capture/capture_controller.cpp
+    SOURCES controllers/capture/capture_mock_ai_analyzer.hpp
 )
 target_include_directories(safelog_mobile PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(safelog_mobile PRIVATE
