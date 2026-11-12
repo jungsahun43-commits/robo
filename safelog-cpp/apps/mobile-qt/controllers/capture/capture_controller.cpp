@@ -1,4 +1,5 @@
 #include "capture_controller.hpp"
+#include "capture_mock_ai_analyzer.hpp"
 
 #include <QFileInfo>
 #include <QImage>
@@ -262,6 +263,13 @@ void CaptureController::startAnalysis()
             outcome->suggestion = object.toVariantMap();
             outcome->state = "success";
         }
+        catch (const CaptureMockUnreadableError&) {
+            outcome->state = "unreadable";
+            outcome->error = QStringLiteral(
+                "사진을 판독할 수 없습니다. (Mock 테스트)\n"
+                "대상 표면이 선명하게 보이는 사진으로 다시 등록하거나 "
+                "수동 입력을 이용해 주세요.");
+        }
         catch (const std::exception& error) {
             outcome->state = "error";
             outcome->error = QStringLiteral("AI 분석 실패: ")
@@ -462,7 +470,8 @@ void CaptureController::saveManual(
         || analysisState_ == "jsonError"
         || analysisState_ == "connectionError"
         || analysisState_ == "timeout"
-        || analysisState_ == "cancelled";
+        || analysisState_ == "cancelled"
+        || analysisState_ == "unreadable";
 
     if (findingId_.isEmpty() || !canUseManual) {
         fail(QStringLiteral(

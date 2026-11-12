@@ -14,6 +14,16 @@
 #include <cmath>
 #include <stdexcept>
 
+// 실제 서버 응답과 구분되는 Mock 테스트 전용 예외.
+class CaptureMockUnreadableError final : public std::runtime_error
+{
+public:
+    CaptureMockUnreadableError()
+        : std::runtime_error("Mock image is unreadable")
+    {
+    }
+};
+
 class CaptureMockAiAnalyzer final
     : public safelog::ai::IAiSafetyAnalyzer
 {
@@ -22,6 +32,10 @@ public:
         const std::string& imagePath,
         const std::string& userMemo) override
     {
+        // 사진 내용과 관계없이 판독 불가 화면을 테스트한다.
+        if (testArguments_.contains("--capture-ai-unreadable")) {
+            throw CaptureMockUnreadableError{};
+        }
         // 실행 옵션이 있을 때만 실패를 재현한다.
         if (testArguments_.contains("--capture-ai-fail")) {
             throw std::runtime_error(

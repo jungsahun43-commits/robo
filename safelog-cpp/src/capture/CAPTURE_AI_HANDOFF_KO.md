@@ -173,3 +173,73 @@ Git 공유 전 확인:
 - build, .qtcreator, 생성된 DB·사진·모델, API 키를 커밋하지 않는다.
 - 현재 보이는 build와 .qtcreator는 Git의 로컬 제외 목록에 추가한다.
 - 이 보고서는 `C:\dev\robo\safelog-cpp\src\capture\CAPTURE_AI_HANDOFF_KO.md`에 복사하여 역할 1 문서로 포함할 수 있다.
+
+## 2026-11-12 README 대응 추가 작업
+
+### 구현 내용
+
+- AI 검토 화면에 "Mock 모드 · 시연용 결과"를 표시했다.
+- 사진 등록 화면에 볼스크루 시연용 사진 안내와 입력 예시를 추가했다.
+- 앱의 ID 생성기를 CaptureIdGenerator로 변경했다.
+  - QUuid로 고유 ID를 생성한다.
+  - 앱 재실행 시 이전 기록 ID가 재사용되어 사진 경로가 겹치는 문제를 방지한다.
+  - 저장소 영구 저장이나 재실행 후 기록 복원 기능을 추가한 것은 아니다.
+- 분석 실패 후 "다른 사진으로 새 기록 시작" 기능을 추가했다.
+  - 기존 기록과 사진을 덮어쓰지 않는다.
+  - 새 사진은 별도의 finding ID로 저장한다.
+  - 사진 선택을 취소하면 기존 화면을 유지한다.
+  - 새 사진을 선택해도 장소와 원래 메모는 유지한다.
+- Mock 판독 불가 테스트 옵션을 추가했다.
+  - 실행 옵션: --capture-ai-unreadable
+  - 사진 내용과 관계없이 판독 불가 상태를 재현한다.
+  - CaptureMockUnreadableError를 컨트롤러에서 unreadable 상태로 처리한다.
+  - 판독 불가 상태에서도 다른 사진 등록과 수동 입력을 사용할 수 있다.
+  - 실제 서버의 판독 불가 응답 규격을 구현한 것은 아니다.
+- 사진 등록 화면의 내용 너비를 스크롤 영역에 맞췄다.
+- 사진 등록 및 AI 검토 화면 제목에 줄바꿈을 적용했다.
+
+### 변경 파일
+
+프로젝트 루트 기준 경로:
+
+- apps/mobile-qt/controllers/capture/capture_id_generator.hpp
+- apps/mobile-qt/controllers/capture/capture_mock_ai_analyzer.hpp
+- apps/mobile-qt/controllers/capture/capture_controller.cpp
+- apps/mobile-qt/app_controller.hpp
+- apps/mobile-qt/qml/capture/FindingCapturePage.qml
+- apps/mobile-qt/qml/capture/AiHazardReviewPage.qml
+- src/capture/CAPTURE_AI_HANDOFF_KO.md
+
+app_controller.hpp는 공용 연결 파일이다.
+통합 시 CaptureIdGenerator 연결을 다른 팀원의 변경과 함께 검토해야 한다.
+
+### 수동 확인 결과
+
+- 앱 재실행 후 같은 사진을 등록해도 첫 클릭에 저장되는 것을 확인했다.
+- 필수 입력 누락과 공백 입력 시 저장 버튼이 비활성화되는 것을 확인했다.
+- 사진 선택 취소 시 기존 입력과 사진이 유지되는 것을 확인했다.
+- 분석 중 중복 저장과 사진 변경이 제한되는 것을 확인했다.
+- 수동 입력을 접었다 다시 열어도 작성 내용이 유지되는 것을 확인했다.
+- Mock 판독 불가 안내와 수동 입력 저장 흐름을 확인했다.
+
+작은 창에서의 화면 확인 결과: 제목·기록 ID·긴 문장이 줄바꿈되며, 스크롤하여 저장 및 처음 화면으로 버튼에 접근할 수 있음을 확인했다.
+이번 추가 변경 후 smoke_tests 재실행 결과:
+기존 임시 폴더에서는 남아 있던 사진과 경로가 충돌해 실패했다.
+새 임시 폴더를 지정하여 재실행한 결과 1개 통과, 실패 0개.
+기존 테스트의 임시 파일 재사용 문제는 별도 보완이 필요하다.
+
+### 통합 시 주의할 점과 남은 작업
+
+- 현재 Mock 표시 문구는 고정이다.
+  실제 AI 연결 시 사용 중인 분석기에 따라 표시하도록 변경해야 한다.
+- 현재 Mock의 정상 실행은 기존 통로 적치물 예시를 반환한다.
+  볼스크루 사진의 실제 손상 여부를 판단하지 않는다.
+- unreadable은 역할 1의 Mock 테스트용 상태다.
+  실제 서버 응답은 역할 3의 규격을 확인한 뒤 연결한다.
+- 기존 문서의 JSON 필드 표는 현재 역할 1 코드의 검사 기준이다.
+  최신 서버의 정상·손상 후보·판독 불가 응답 규격으로 확정한 것이 아니다.
+- 정상·손상 후보·판독 불가를 위험 등급이나 문장에서 추측하지 않는다.
+- "다른 사진으로 새 기록 시작"은 별도의 finding을 만든다.
+  같은 finding 안의 재촬영 이력 관리와 이전 기록과의 연결은 아직 구현하지 않았다.
+- 실제 HTTP 연결, SQLite 기록 복원, 후속 업무 화면 연결은 통합 시 진행한다.
+- PC 창 크기 확인과 Android 실기기 검증은 구분한다.

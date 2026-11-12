@@ -36,25 +36,57 @@ Page {
         onAccepted: page.photoUrl = selectedFile
     }
 
+    FileDialog {
+        id: replacementPhotoDialog
+        title: "새 기록에 사용할 사진 선택"
+        fileMode: FileDialog.OpenFile
+        nameFilters: ["사진 파일 (*.jpg *.jpeg *.png)"]
+
+        onAccepted: {
+            if (captureController.working
+                    || captureController.reviewSaving) {
+                return
+            }
+
+            captureController.resetDraft()
+
+            if (captureController.findingId.length > 0) {
+                return
+            }
+
+            page.photoUrl = selectedFile
+            page.manualMode = false
+            page.manualInitialized = false
+            manualDescriptionInput.text = ""
+            manualActionInput.text = ""
+        }
+    }
+
     ScrollView {
+        id: captureScroll
         anchors.fill: parent
         anchors.margins: 20
         contentWidth: availableWidth
         clip: true
 
         ColumnLayout {
-            width: parent.width
+            width: captureScroll.availableWidth
             spacing: 16
 
             Label {
+                Layout.fillWidth: true
                 text: "현장 사진 등록"
                 font.pixelSize: 26
                 font.bold: true
                 color: "#17212b"
+                wrapMode: Text.Wrap
             }
 
             Label {
-                text: "장소와 짧은 메모를 입력하고 사진을 선택하세요."
+                text: "장소와 짧은 메모를 입력하고 사진을 선택하세요.\n"
+                      + "볼스크루 시연에서는 표면이 선명하게 보이는 "
+                      + "정상 사진과 손상 의심 사진을 각각 준비해 "
+                      + "한 장씩 분석합니다."
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
                 color: "#526069"
@@ -70,7 +102,7 @@ Page {
                 readOnly: page.recordSaved
 
                 Layout.fillWidth: true
-                placeholderText: "예: 2층 가공라인 통로"
+                                placeholderText: "예: 2층 가공라인 1번 설비"
             }
 
             Label {
@@ -84,7 +116,7 @@ Page {
 
                 Layout.fillWidth: true
                 Layout.preferredHeight: 110
-                placeholderText: "예: 통로에 자재가 쌓여 있어 넘어질 위험이 있음"
+                                placeholderText: "예: 볼스크루 표면 상태 확인"
                 wrapMode: TextEdit.Wrap
             }
 
@@ -199,7 +231,7 @@ Page {
 
                 visible: page.recordSaved
                          && ["error", "jsonError", "connectionError",
-                             "timeout", "cancelled"]
+                             "timeout", "cancelled", "unreadable"]
                             .indexOf(captureController.analysisState) >= 0
 
                 Button {
@@ -209,6 +241,24 @@ Page {
                              && !captureController.reviewSaving
                     text: "AI 분석 다시 시도"
                     onClicked: captureController.startAnalysis()
+                }
+
+                Button {
+                    Layout.fillWidth: true
+                    visible: !page.manualMode
+                    enabled: !captureController.working
+                             && !captureController.reviewSaving
+                    text: "다른 사진으로 새 기록 시작"
+                    onClicked: replacementPhotoDialog.open()
+                }
+
+                Label {
+                    Layout.fillWidth: true
+                    visible: !page.manualMode
+                    text: "기존 기록과 사진은 유지됩니다. "
+                          + "새 사진은 별도의 기록으로 저장합니다."
+                    wrapMode: Text.Wrap
+                    color: "#526069"
                 }
 
                 Button {

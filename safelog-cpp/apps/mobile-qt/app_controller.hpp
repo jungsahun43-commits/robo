@@ -6,6 +6,7 @@
 #include "safelog/storage/system_services.hpp"
 #include "safelog/workflow/workflow_service.hpp"
 #include "controllers/capture/capture_mock_ai_analyzer.hpp"
+#include "controllers/capture/capture_id_generator.hpp"
 #include "safelog/ai/ai_safety_service.hpp"
 
 #include <QObject>
@@ -39,7 +40,7 @@ private:
   void setStatus(QString message);
   storage::InMemoryRepository repository_;
   storage::SystemClock clock_;
-  storage::SequentialIdGenerator ids_;
+  CaptureIdGenerator ids_;
   storage::LocalPhotoStore photoStore_;
   capture::CaptureService capture_;
   workflow::WorkflowService workflow_;

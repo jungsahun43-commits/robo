@@ -75,10 +75,12 @@ Page {
             spacing: 16
 
             Label {
+                Layout.fillWidth: true
                 text: "AI 위험 제안 검토"
                 font.pixelSize: 25
                 font.bold: true
                 color: "#17212b"
+                wrapMode: Text.Wrap
             }
 
             Label {
@@ -86,6 +88,15 @@ Page {
                 text: "AI 제안을 확인하고 채택, 수정 또는 거절해 주세요."
                 wrapMode: Text.Wrap
                 color: "#526069"
+            }
+
+            Label {
+                Layout.fillWidth: true
+                text: "Mock 모드 · 시연용 결과\n"
+                      + "실제 모델 서버의 사진 분석 결과가 아닙니다."
+                wrapMode: Text.Wrap
+                font.bold: true
+                color: "#9a6700"
             }
 
             Label {
