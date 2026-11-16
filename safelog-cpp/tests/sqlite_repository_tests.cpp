@@ -8,6 +8,7 @@
 #include "safelog/reporting/report_service.hpp"
 #include "safelog/storage/sqlite_repository.hpp"
 #include "safelog/storage/system_services.hpp"
+#include "safelog/storage/uuid_id_generator.hpp"
 #include "safelog/workflow/workflow_service.hpp"
 #include "sqlite_codec.hpp"
 
@@ -19,6 +20,7 @@
 #include <filesystem>
 #include <fstream>
 #include <functional>
+#include <set>
 #include <string>
 #include <vector>
 
@@ -422,6 +424,52 @@ void testServicesSurviveRestart() {
   CHECK(!report.findings.empty() && report.findings.front().aiAnalyses.size() == 2);
 }
 
+// seedDemoData creates the demo site and three users once and never overwrites them.
+void testSeedDemoData() {
+  const auto db = freshDir("seed") / "safelog.db";
+  {
+    SqliteRepository repo(db);
+    repo.seedDemoData();
+    repo.seedDemoData();
+    CHECK(same(repo.findSite("site-1"), kSite));
+    CHECK(same(repo.findProfile("inspector-1"), kInspector));
+    CHECK(same(repo.findProfile("assignee-1"), kAssignee));
+    CHECK(same(repo.findProfile("manager-1"), kManager));
+    repo.saveProfile({"manager-1", "박관리(변경)", UserRole::Manager});
+  }
+  SqliteRepository repo(db);
+  repo.seedDemoData();  // app restart
+  CHECK(repo.findProfile("manager-1")->displayName == "박관리(변경)");
+
+  sqlite3* raw = nullptr;
+  sqlite3_open(db.string().c_str(), &raw);
+  sqlite3_stmt* count = nullptr;
+  sqlite3_prepare_v2(raw, "SELECT (SELECT COUNT(*) FROM sites), (SELECT COUNT(*) FROM profiles)", -1, &count, nullptr);
+  CHECK(sqlite3_step(count) == SQLITE_ROW);
+  CHECK(sqlite3_column_int(count, 0) == 1 && sqlite3_column_int(count, 1) == 3);
+  sqlite3_finalize(count);
+  sqlite3_close(raw);
+}
+
+// UUID ids are well-formed and do not repeat, including across generator instances (app restarts).
+void testUuidIdGenerator() {
+  storage::UuidIdGenerator first;
+  storage::UuidIdGenerator second;
+  std::set<Id> seen;
+  for (int i = 0; i < 5000; ++i) {
+    seen.insert(first.next("finding"));
+    seen.insert(second.next("finding"));
+  }
+  CHECK(seen.size() == 10000);
+  const auto id = first.next("photo");
+  // "photo-" + 8-4-4-4-12
+  CHECK(id.size() == 6 + 36);
+  CHECK(id.rfind("photo-", 0) == 0);
+  CHECK(id[6 + 8] == '-' && id[6 + 13] == '-' && id[6 + 18] == '-' && id[6 + 23] == '-');
+  CHECK(id[6 + 14] == '4');
+  CHECK(std::string("89ab").find(id[6 + 19]) != std::string::npos);
+}
+
 } // namespace
 
 int main() {
@@ -436,6 +484,8 @@ int main() {
     {"migration from v0", testMigrationFromVersion0},
     {"rejects newer schema", testRejectsNewerSchema},
     {"services survive restart", testServicesSurviveRestart},
+    {"seed demo data", testSeedDemoData},
+    {"uuid id generator", testUuidIdGenerator},
   };
   for (const auto& [name, run] : tests) {
     const int before = failures;

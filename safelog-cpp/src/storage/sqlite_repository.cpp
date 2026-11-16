@@ -190,6 +190,38 @@ int SqliteRepository::schemaVersion() const {
   return readUserVersion(impl_->db);
 }
 
+void SqliteRepository::seedDemoData() {
+  const Site site{"site-1", "세이프 금속 가공공장", "서울시 가상구 산업로 10"};
+  const Profile profiles[] = {
+    {"inspector-1", "김안전", UserRole::Inspector},
+    {"assignee-1", "이조치", UserRole::Assignee},
+    {"manager-1", "박관리", UserRole::Manager},
+  };
+  std::scoped_lock lock(impl_->mutex);
+  sqlite3* db = impl_->db;
+  Statement(db, "BEGIN IMMEDIATE").run();
+  try {
+    Statement s(db, "INSERT INTO sites (id, name, address) VALUES (:id, :name, :address) "
+                    "ON CONFLICT(id) DO NOTHING");
+    s.bind(":id", site.id);
+    s.bind(":name", site.name);
+    s.bind(":address", site.address);
+    s.run();
+    for (const auto& p : profiles) {
+      Statement q(db, "INSERT INTO profiles (id, display_name, role) VALUES (:id, :display_name, :role) "
+                      "ON CONFLICT(id) DO NOTHING");
+      q.bind(":id", p.id);
+      q.bind(":display_name", p.displayName);
+      q.bind(":role", to_string(p.role));
+      q.run();
+    }
+    Statement(db, "COMMIT").run();
+  } catch (...) {
+    sqlite3_exec(db, "ROLLBACK", nullptr, nullptr, nullptr);
+    throw;
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Column lists and row mappers. Column order in each SELECT must match readX().
 

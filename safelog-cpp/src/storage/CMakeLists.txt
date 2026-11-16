@@ -4,6 +4,7 @@ add_library(safelog_storage
   sqlite_repository.cpp
   system_services.cpp
   types.cpp
+  uuid_id_generator.cpp
 )
 target_include_directories(safelog_storage PUBLIC
   ${PROJECT_SOURCE_DIR}/include

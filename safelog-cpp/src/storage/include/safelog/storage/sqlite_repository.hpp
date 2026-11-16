@@ -48,6 +48,11 @@ public:
   // PRAGMA user_version of the open database.
   int schemaVersion() const;
 
+  // Inserts the demo site "site-1" and profiles "inspector-1", "assignee-1",
+  // "manager-1" if missing. Safe to call on every start: existing rows,
+  // including ones the user edited, are left untouched.
+  void seedDemoData();
+
 private:
   struct Impl;
   std::unique_ptr<Impl> impl_;
