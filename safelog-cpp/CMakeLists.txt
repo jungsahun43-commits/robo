@@ -13,6 +13,7 @@ endif()
 option(SAFELOG_BUILD_TESTS "Build lightweight module tests" ON)
 option(SAFELOG_BUILD_QT "Build the Qt 6 mobile shell" OFF)
 
+add_subdirectory(third_party/sqlite)
 add_subdirectory(src/storage)
 add_subdirectory(src/capture)
 add_subdirectory(src/workflow)
