@@ -28,7 +28,9 @@ CREATE TABLE IF NOT EXISTS findings (
   assignee_id TEXT REFERENCES profiles(id),
   due_at TEXT,
   status TEXT NOT NULL CHECK (status IN ('open', 'in_progress', 'pending_review', 'verified')),
-  created_at TEXT NOT NULL
+  created_at TEXT NOT NULL,
+  hazard_category TEXT,
+  risk_level INTEGER CHECK (risk_level IS NULL OR risk_level BETWEEN 1 AND 5)
 );
 
 CREATE TABLE IF NOT EXISTS photos (
@@ -68,3 +70,7 @@ CREATE INDEX IF NOT EXISTS idx_findings_assignee_status ON findings(assignee_id,
 CREATE INDEX IF NOT EXISTS idx_photos_finding ON photos(finding_id);
 CREATE INDEX IF NOT EXISTS idx_logs_finding ON action_logs(finding_id, created_at);
 CREATE INDEX IF NOT EXISTS idx_ai_subject_type ON ai_analyses(subject_id, analysis_type);
+
+-- Schema version 1: findings.hazard_category / findings.risk_level.
+-- Databases created before version 1 are migrated in SqliteRepository before this script runs.
+PRAGMA user_version = 1;
