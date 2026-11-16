@@ -5,6 +5,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# Sources contain Korean string literals; MSVC otherwise reads them with the system code page.
+if(MSVC)
+  add_compile_options(/utf-8)
+endif()
+
 option(SAFELOG_BUILD_TESTS "Build lightweight module tests" ON)
 option(SAFELOG_BUILD_QT "Build the Qt 6 mobile shell" OFF)
 
