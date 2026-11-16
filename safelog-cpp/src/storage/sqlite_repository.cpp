@@ -2,6 +2,7 @@
 
 #include "safelog/contracts/errors.hpp"
 #include "safelog/storage/schema_sql.hpp"
+#include "sqlite_codec.hpp"
 
 #include <sqlite3.h>
 
@@ -48,9 +49,42 @@ public:
     check(sqlite3_bind_text(stmt_, index, value.data(), static_cast<int>(value.size()), SQLITE_TRANSIENT));
   }
 
+  // Named parameters (":id") keep SQL and C++ field lists easy to compare.
+  void bind(const char* name, std::string_view value) { bindText(parameter(name), value); }
+  void bind(const char* name, int value) { check(sqlite3_bind_int(stmt_, parameter(name), value)); }
+  void bind(const char* name, double value) { check(sqlite3_bind_double(stmt_, parameter(name), value)); }
+  void bind(const char* name, TimePoint value) { bind(name, detail::formatTime(value)); }
+  template <typename T>
+  void bind(const char* name, const std::optional<T>& value) {
+    if (value) bind(name, *value);
+    else check(sqlite3_bind_null(stmt_, parameter(name)));
+  }
+
   int columnInt(int index) const { return sqlite3_column_int(stmt_, index); }
+  double columnDouble(int index) const { return sqlite3_column_double(stmt_, index); }
+  bool isNull(int index) const { return sqlite3_column_type(stmt_, index) == SQLITE_NULL; }
+  std::string columnText(int index) const {
+    const auto* text = sqlite3_column_text(stmt_, index);  // must precede column_bytes
+    const int size = sqlite3_column_bytes(stmt_, index);
+    return text ? std::string(reinterpret_cast<const char*>(text), static_cast<std::size_t>(size)) : std::string();
+  }
+  TimePoint columnTime(int index) const { return detail::parseTime(columnText(index)); }
+  std::optional<std::string> optionalText(int index) const {
+    return isNull(index) ? std::nullopt : std::optional<std::string>{columnText(index)};
+  }
+  std::optional<int> optionalInt(int index) const {
+    return isNull(index) ? std::nullopt : std::optional<int>{columnInt(index)};
+  }
+  std::optional<TimePoint> optionalTime(int index) const {
+    return isNull(index) ? std::nullopt : std::optional<TimePoint>{columnTime(index)};
+  }
 
 private:
+  int parameter(const char* name) const {
+    const int index = sqlite3_bind_parameter_index(stmt_, name);
+    if (index == 0) throw std::logic_error(std::string("Unknown SQL parameter ") + name + " in: " + std::string(sql_));
+    return index;
+  }
   void check(int rc) { if (rc != SQLITE_OK) throwDbError(db_, rc, sql_); }
 
   sqlite3* db_;
@@ -156,29 +190,289 @@ int SqliteRepository::schemaVersion() const {
   return readUserVersion(impl_->db);
 }
 
+// ---------------------------------------------------------------------------
+// Column lists and row mappers. Column order in each SELECT must match readX().
+
 namespace {
-[[noreturn]] void notImplemented(const char* name) {
-  throw std::logic_error(std::string("SqliteRepository::") + name + " is not implemented yet");
+
+constexpr const char* kSiteColumns = "id, name, address";
+constexpr const char* kProfileColumns = "id, display_name, role";
+constexpr const char* kInspectionColumns = "id, site_id, inspector_id, inspected_at";
+constexpr const char* kFindingColumns =
+  "id, inspection_id, location, description, action_opinion, assignee_id, due_at, status, created_at, "
+  "hazard_category, risk_level";
+constexpr const char* kPhotoColumns = "id, finding_id, kind, storage_path, captured_at";
+constexpr const char* kActionLogColumns = "id, finding_id, actor_id, action, note, created_at";
+constexpr const char* kAiAnalysisColumns =
+  "id, subject_id, analysis_type, model_name, prompt_version, risk_level, category, confidence, result_json, "
+  "decision, reviewed_by, created_at";
+
+Site readSite(const Statement& q) { return {q.columnText(0), q.columnText(1), q.columnText(2)}; }
+
+Profile readProfile(const Statement& q) {
+  return {q.columnText(0), q.columnText(1), detail::parseUserRole(q.columnText(2))};
 }
+
+Inspection readInspection(const Statement& q) {
+  return {q.columnText(0), q.columnText(1), q.columnText(2), q.columnTime(3)};
+}
+
+Finding readFinding(const Statement& q) {
+  Finding f;
+  f.id = q.columnText(0);
+  f.inspectionId = q.columnText(1);
+  f.location = q.columnText(2);
+  f.description = q.columnText(3);
+  f.actionOpinion = q.columnText(4);
+  f.assigneeId = q.optionalText(5);
+  f.dueAt = q.optionalTime(6);
+  f.status = detail::parseFindingStatus(q.columnText(7));
+  f.createdAt = q.columnTime(8);
+  f.hazardCategory = q.optionalText(9);
+  f.riskLevel = q.optionalInt(10);
+  return f;
+}
+
+Photo readPhoto(const Statement& q) {
+  return {q.columnText(0), q.columnText(1), detail::parsePhotoKind(q.columnText(2)), q.columnText(3),
+          q.columnTime(4)};
+}
+
+ActionLog readActionLog(const Statement& q) {
+  return {q.columnText(0), q.columnText(1), q.columnText(2), q.columnText(3), q.columnText(4),
+          q.columnTime(5)};
+}
+
+AiAnalysis readAiAnalysis(const Statement& q) {
+  AiAnalysis a;
+  a.id = q.columnText(0);
+  a.subjectId = q.columnText(1);
+  a.type = detail::parseAiAnalysisType(q.columnText(2));
+  a.modelName = q.columnText(3);
+  a.promptVersion = q.columnText(4);
+  a.riskLevel = q.optionalInt(5);
+  a.category = q.columnText(6);
+  a.confidence = q.columnDouble(7);
+  a.resultJson = q.columnText(8);
+  a.decision = detail::parseAiReviewDecision(q.columnText(9));
+  a.reviewedBy = q.optionalText(10);
+  a.createdAt = q.columnTime(11);
+  return a;
+}
+
+std::string selectSql(const char* columns, const char* table, const char* where, const char* orderBy = nullptr) {
+  std::string sql = std::string("SELECT ") + columns + " FROM " + table + " WHERE " + where;
+  if (orderBy) sql += std::string(" ORDER BY ") + orderBy;
+  return sql;
+}
+
+template <typename T, typename Reader>
+std::optional<T> queryOne(sqlite3* db, const std::string& sql, const Id& id, Reader read) {
+  Statement q(db, sql);
+  q.bind(":id", id);
+  if (!q.step()) return std::nullopt;
+  return read(q);
+}
+
+template <typename T, typename Reader>
+std::vector<T> queryMany(sqlite3* db, const std::string& sql, const Id& key, Reader read) {
+  Statement q(db, sql);
+  q.bind(":key", key);
+  std::vector<T> out;
+  while (q.step()) out.push_back(read(q));
+  return out;
+}
+
 } // namespace
 
-void SqliteRepository::saveSite(const Site&) { notImplemented("saveSite"); }
-void SqliteRepository::saveProfile(const Profile&) { notImplemented("saveProfile"); }
-void SqliteRepository::saveInspection(const Inspection&) { notImplemented("saveInspection"); }
-void SqliteRepository::saveFinding(const Finding&) { notImplemented("saveFinding"); }
-void SqliteRepository::savePhoto(const Photo&) { notImplemented("savePhoto"); }
-void SqliteRepository::saveActionLog(const ActionLog&) { notImplemented("saveActionLog"); }
-void SqliteRepository::saveAiAnalysis(const AiAnalysis&) { notImplemented("saveAiAnalysis"); }
+// ---------------------------------------------------------------------------
+// Saves: INSERT ... ON CONFLICT(id) DO UPDATE. Never INSERT OR REPLACE, which
+// deletes the old row first and would cascade-delete a finding's photos/logs.
 
-std::optional<Site> SqliteRepository::findSite(const Id&) const { notImplemented("findSite"); }
-std::optional<Profile> SqliteRepository::findProfile(const Id&) const { notImplemented("findProfile"); }
-std::optional<Inspection> SqliteRepository::findInspection(const Id&) const { notImplemented("findInspection"); }
-std::optional<Finding> SqliteRepository::findFinding(const Id&) const { notImplemented("findFinding"); }
-std::optional<AiAnalysis> SqliteRepository::findAiAnalysis(const Id&) const { notImplemented("findAiAnalysis"); }
-std::vector<Photo> SqliteRepository::photosForFinding(const Id&) const { notImplemented("photosForFinding"); }
-std::vector<ActionLog> SqliteRepository::logsForFinding(const Id&) const { notImplemented("logsForFinding"); }
-std::vector<Finding> SqliteRepository::findingsForInspection(const Id&) const { notImplemented("findingsForInspection"); }
-std::vector<Finding> SqliteRepository::findingsAssignedTo(const Id&) const { notImplemented("findingsAssignedTo"); }
-std::vector<AiAnalysis> SqliteRepository::analysesForSubject(const Id&) const { notImplemented("analysesForSubject"); }
+void SqliteRepository::saveSite(const Site& v) {
+  std::scoped_lock lock(impl_->mutex);
+  Statement q(impl_->db,
+    "INSERT INTO sites (id, name, address) VALUES (:id, :name, :address) "
+    "ON CONFLICT(id) DO UPDATE SET name = excluded.name, address = excluded.address");
+  q.bind(":id", v.id);
+  q.bind(":name", v.name);
+  q.bind(":address", v.address);
+  q.run();
+}
+
+void SqliteRepository::saveProfile(const Profile& v) {
+  std::scoped_lock lock(impl_->mutex);
+  Statement q(impl_->db,
+    "INSERT INTO profiles (id, display_name, role) VALUES (:id, :display_name, :role) "
+    "ON CONFLICT(id) DO UPDATE SET display_name = excluded.display_name, role = excluded.role");
+  q.bind(":id", v.id);
+  q.bind(":display_name", v.displayName);
+  q.bind(":role", to_string(v.role));
+  q.run();
+}
+
+void SqliteRepository::saveInspection(const Inspection& v) {
+  std::scoped_lock lock(impl_->mutex);
+  Statement q(impl_->db,
+    "INSERT INTO inspections (id, site_id, inspector_id, inspected_at) "
+    "VALUES (:id, :site_id, :inspector_id, :inspected_at) "
+    "ON CONFLICT(id) DO UPDATE SET site_id = excluded.site_id, inspector_id = excluded.inspector_id, "
+    "inspected_at = excluded.inspected_at");
+  q.bind(":id", v.id);
+  q.bind(":site_id", v.siteId);
+  q.bind(":inspector_id", v.inspectorId);
+  q.bind(":inspected_at", v.inspectedAt);
+  q.run();
+}
+
+void SqliteRepository::saveFinding(const Finding& v) {
+  std::scoped_lock lock(impl_->mutex);
+  Statement q(impl_->db,
+    "INSERT INTO findings (id, inspection_id, location, description, action_opinion, assignee_id, due_at, "
+    "status, created_at, hazard_category, risk_level) "
+    "VALUES (:id, :inspection_id, :location, :description, :action_opinion, :assignee_id, :due_at, "
+    ":status, :created_at, :hazard_category, :risk_level) "
+    "ON CONFLICT(id) DO UPDATE SET inspection_id = excluded.inspection_id, location = excluded.location, "
+    "description = excluded.description, action_opinion = excluded.action_opinion, "
+    "assignee_id = excluded.assignee_id, due_at = excluded.due_at, status = excluded.status, "
+    "created_at = excluded.created_at, hazard_category = excluded.hazard_category, "
+    "risk_level = excluded.risk_level");
+  q.bind(":id", v.id);
+  q.bind(":inspection_id", v.inspectionId);
+  q.bind(":location", v.location);
+  q.bind(":description", v.description);
+  q.bind(":action_opinion", v.actionOpinion);
+  q.bind(":assignee_id", v.assigneeId);
+  q.bind(":due_at", v.dueAt);
+  q.bind(":status", to_string(v.status));
+  q.bind(":created_at", v.createdAt);
+  q.bind(":hazard_category", v.hazardCategory);
+  q.bind(":risk_level", v.riskLevel);
+  q.run();
+}
+
+void SqliteRepository::savePhoto(const Photo& v) {
+  std::scoped_lock lock(impl_->mutex);
+  Statement q(impl_->db,
+    "INSERT INTO photos (id, finding_id, kind, storage_path, captured_at) "
+    "VALUES (:id, :finding_id, :kind, :storage_path, :captured_at) "
+    "ON CONFLICT(id) DO UPDATE SET finding_id = excluded.finding_id, kind = excluded.kind, "
+    "storage_path = excluded.storage_path, captured_at = excluded.captured_at");
+  q.bind(":id", v.id);
+  q.bind(":finding_id", v.findingId);
+  q.bind(":kind", to_string(v.kind));
+  q.bind(":storage_path", v.storagePath);
+  q.bind(":captured_at", v.capturedAt);
+  q.run();
+}
+
+void SqliteRepository::saveActionLog(const ActionLog& v) {
+  std::scoped_lock lock(impl_->mutex);
+  Statement q(impl_->db,
+    "INSERT INTO action_logs (id, finding_id, actor_id, action, note, created_at) "
+    "VALUES (:id, :finding_id, :actor_id, :action, :note, :created_at) "
+    "ON CONFLICT(id) DO UPDATE SET finding_id = excluded.finding_id, actor_id = excluded.actor_id, "
+    "action = excluded.action, note = excluded.note, created_at = excluded.created_at");
+  q.bind(":id", v.id);
+  q.bind(":finding_id", v.findingId);
+  q.bind(":actor_id", v.actorId);
+  q.bind(":action", v.action);
+  q.bind(":note", v.note);
+  q.bind(":created_at", v.createdAt);
+  q.run();
+}
+
+void SqliteRepository::saveAiAnalysis(const AiAnalysis& v) {
+  std::scoped_lock lock(impl_->mutex);
+  Statement q(impl_->db,
+    "INSERT INTO ai_analyses (id, subject_id, analysis_type, model_name, prompt_version, risk_level, category, "
+    "confidence, result_json, decision, reviewed_by, created_at) "
+    "VALUES (:id, :subject_id, :analysis_type, :model_name, :prompt_version, :risk_level, :category, "
+    ":confidence, :result_json, :decision, :reviewed_by, :created_at) "
+    "ON CONFLICT(id) DO UPDATE SET subject_id = excluded.subject_id, analysis_type = excluded.analysis_type, "
+    "model_name = excluded.model_name, prompt_version = excluded.prompt_version, "
+    "risk_level = excluded.risk_level, category = excluded.category, confidence = excluded.confidence, "
+    "result_json = excluded.result_json, decision = excluded.decision, reviewed_by = excluded.reviewed_by, "
+    "created_at = excluded.created_at");
+  q.bind(":id", v.id);
+  q.bind(":subject_id", v.subjectId);
+  q.bind(":analysis_type", to_string(v.type));
+  q.bind(":model_name", v.modelName);
+  q.bind(":prompt_version", v.promptVersion);
+  q.bind(":risk_level", v.riskLevel);
+  q.bind(":category", v.category);
+  q.bind(":confidence", v.confidence);
+  q.bind(":result_json", v.resultJson);
+  q.bind(":decision", to_string(v.decision));
+  q.bind(":reviewed_by", v.reviewedBy);
+  q.bind(":created_at", v.createdAt);
+  q.run();
+}
+
+// ---------------------------------------------------------------------------
+// Lookups by id
+
+std::optional<Site> SqliteRepository::findSite(const Id& id) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryOne<Site>(impl_->db, selectSql(kSiteColumns, "sites", "id = :id"), id, readSite);
+}
+
+std::optional<Profile> SqliteRepository::findProfile(const Id& id) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryOne<Profile>(impl_->db, selectSql(kProfileColumns, "profiles", "id = :id"), id, readProfile);
+}
+
+std::optional<Inspection> SqliteRepository::findInspection(const Id& id) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryOne<Inspection>(impl_->db, selectSql(kInspectionColumns, "inspections", "id = :id"), id,
+                              readInspection);
+}
+
+std::optional<Finding> SqliteRepository::findFinding(const Id& id) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryOne<Finding>(impl_->db, selectSql(kFindingColumns, "findings", "id = :id"), id, readFinding);
+}
+
+std::optional<AiAnalysis> SqliteRepository::findAiAnalysis(const Id& id) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryOne<AiAnalysis>(impl_->db, selectSql(kAiAnalysisColumns, "ai_analyses", "id = :id"), id,
+                              readAiAnalysis);
+}
+
+// ---------------------------------------------------------------------------
+// Lists: ordered by time, then id (InMemoryRepository's order is unspecified).
+
+std::vector<Photo> SqliteRepository::photosForFinding(const Id& findingId) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryMany<Photo>(impl_->db,
+    selectSql(kPhotoColumns, "photos", "finding_id = :key", "captured_at, id"), findingId, readPhoto);
+}
+
+std::vector<ActionLog> SqliteRepository::logsForFinding(const Id& findingId) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryMany<ActionLog>(impl_->db,
+    selectSql(kActionLogColumns, "action_logs", "finding_id = :key", "created_at, id"), findingId,
+    readActionLog);
+}
+
+std::vector<Finding> SqliteRepository::findingsForInspection(const Id& inspectionId) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryMany<Finding>(impl_->db,
+    selectSql(kFindingColumns, "findings", "inspection_id = :key", "created_at, id"), inspectionId,
+    readFinding);
+}
+
+std::vector<Finding> SqliteRepository::findingsAssignedTo(const Id& assigneeId) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryMany<Finding>(impl_->db,
+    selectSql(kFindingColumns, "findings", "assignee_id = :key", "created_at, id"), assigneeId, readFinding);
+}
+
+std::vector<AiAnalysis> SqliteRepository::analysesForSubject(const Id& subjectId) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryMany<AiAnalysis>(impl_->db,
+    selectSql(kAiAnalysisColumns, "ai_analyses", "subject_id = :key", "created_at, id"), subjectId,
+    readAiAnalysis);
+}
 
 } // namespace safelog::storage
