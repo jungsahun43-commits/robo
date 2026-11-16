@@ -1,5 +1,6 @@
 add_library(safelog_storage
   in_memory_repository.cpp
+  sqlite_codec.cpp
   sqlite_repository.cpp
   system_services.cpp
   types.cpp
