@@ -1,5 +1,6 @@
 #include "safelog/storage/sqlite_repository.hpp"
 
+#include "safelog/auth/demo_accounts.hpp"
 #include "safelog/contracts/errors.hpp"
 #include "safelog/storage/schema_sql.hpp"
 #include "sqlite_codec.hpp"
@@ -215,11 +216,6 @@ int SqliteRepository::schemaVersion() const {
 
 void SqliteRepository::seedDemoData() {
   const Site site{"site-1", "세이프 금속 가공공장", "서울시 가상구 산업로 10"};
-  const Profile profiles[] = {
-    {"inspector-1", "김안전", UserRole::Inspector},
-    {"assignee-1", "이조치", UserRole::Assignee},
-    {"manager-1", "박관리", UserRole::Manager},
-  };
   std::scoped_lock lock(impl_->mutex);
   sqlite3* db = impl_->db;
   inTransaction(db, [&] {
@@ -229,12 +225,12 @@ void SqliteRepository::seedDemoData() {
     s.bind(":name", site.name);
     s.bind(":address", site.address);
     s.run();
-    for (const auto& p : profiles) {
+    for (const auto& person : auth::kDemoPeople) {  // shared with AuthService::seedDemoAccounts
       Statement q(db, "INSERT INTO profiles (id, display_name, role) VALUES (:id, :display_name, :role) "
                       "ON CONFLICT(id) DO NOTHING");
-      q.bind(":id", p.id);
-      q.bind(":display_name", p.displayName);
-      q.bind(":role", to_string(p.role));
+      q.bind(":id", person.profileId);
+      q.bind(":display_name", person.displayName);
+      q.bind(":role", to_string(person.role));
       q.run();
     }
   });

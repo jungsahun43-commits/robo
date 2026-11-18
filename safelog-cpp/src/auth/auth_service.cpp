@@ -1,26 +1,21 @@
 #include "safelog/auth/auth_service.hpp"
 
+#include "safelog/auth/demo_accounts.hpp"
 #include "safelog/contracts/errors.hpp"
 
-#include <array>
+#include <stdexcept>
 
 namespace safelog::auth {
 namespace {
 
-struct DemoAccount {
-  const char* profileId;
-  const char* displayName;
-  UserRole role;
-  const char* loginId;
-  const std::string DemoAccountPasswords::*password;
-};
-
-// Same profiles as storage::SqliteRepository::seedDemoData().
-const std::array<DemoAccount, 3> kDemoAccounts{{
-  {"inspector-1", "김안전", UserRole::Inspector, "inspector1", &DemoAccountPasswords::inspector},
-  {"manager-1", "박관리", UserRole::Manager, "manager1", &DemoAccountPasswords::manager},
-  {"assignee-1", "이조치", UserRole::Assignee, "assignee1", &DemoAccountPasswords::assignee},
-}};
+const std::string& passwordFor(const DemoAccountPasswords& passwords, UserRole role) {
+  switch (role) {
+    case UserRole::Inspector: return passwords.inspector;
+    case UserRole::Manager: return passwords.manager;
+    case UserRole::Assignee: return passwords.assignee;
+  }
+  throw std::logic_error("Unknown demo role");
+}
 
 std::size_t countUtf8Chars(std::string_view text) {
   std::size_t count = 0;
@@ -158,17 +153,17 @@ Profile AuthService::createAccount(const Id& managerId, const std::string& displ
 }
 
 void AuthService::seedDemoAccounts(const DemoAccountPasswords& passwords) {
-  for (const auto& account : kDemoAccounts) checkPasswordPolicy(passwords.*account.password);
+  for (const auto& person : kDemoPeople) checkPasswordPolicy(passwordFor(passwords, person.role));
   std::scoped_lock lock(mutex_);
-  for (const auto& account : kDemoAccounts) {
-    if (credentials_.findCredentialByProfileId(account.profileId)) continue;  // keep existing password
-    if (credentials_.findCredentialByLoginId(account.loginId))
-      throw ValidationError(std::string("시연 계정 아이디가 다른 사용자에게 연결되어 있습니다: ") + account.loginId);
-    auto credential = newCredential(account.profileId, account.loginId, passwords.*account.password, false);
-    if (repository_.findProfile(account.profileId)) {
+  for (const auto& person : kDemoPeople) {
+    if (credentials_.findCredentialByProfileId(person.profileId)) continue;  // keep existing password
+    if (credentials_.findCredentialByLoginId(person.loginId))
+      throw ValidationError(std::string("시연 계정 아이디가 다른 사용자에게 연결되어 있습니다: ") + person.loginId);
+    auto credential = newCredential(person.profileId, person.loginId, passwordFor(passwords, person.role), false);
+    if (repository_.findProfile(person.profileId)) {
       credentials_.addCredential(credential);  // link to the existing person
     } else {
-      credentials_.createAccount({account.profileId, account.displayName, account.role}, credential);
+      credentials_.createAccount({person.profileId, person.displayName, person.role}, credential);
     }
   }
 }
