@@ -11,3 +11,7 @@ target_link_libraries(safelog_sqlite_repository_tests PRIVATE
   safelog_storage safelog_capture safelog_workflow safelog_ai safelog_reporting safelog_sqlite3
 )
 add_test(NAME safelog_sqlite_repository_tests COMMAND safelog_sqlite_repository_tests)
+
+add_executable(safelog_auth_tests auth_tests.cpp)
+target_link_libraries(safelog_auth_tests PRIVATE safelog_auth safelog_storage safelog_sqlite3)
+add_test(NAME safelog_auth_tests COMMAND safelog_auth_tests)
