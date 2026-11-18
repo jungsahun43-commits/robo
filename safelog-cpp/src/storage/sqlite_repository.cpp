@@ -60,7 +60,16 @@ public:
     else check(sqlite3_bind_null(stmt_, parameter(name)));
   }
 
+  void bindBlob(const char* name, const std::vector<std::uint8_t>& value) {
+    check(sqlite3_bind_blob(stmt_, parameter(name), value.data(), static_cast<int>(value.size()), SQLITE_TRANSIENT));
+  }
+
   int columnInt(int index) const { return sqlite3_column_int(stmt_, index); }
+  std::vector<std::uint8_t> columnBlob(int index) const {
+    const auto* data = static_cast<const std::uint8_t*>(sqlite3_column_blob(stmt_, index));  // before column_bytes
+    const int size = sqlite3_column_bytes(stmt_, index);
+    return data ? std::vector<std::uint8_t>(data, data + size) : std::vector<std::uint8_t>{};
+  }
   double columnDouble(int index) const { return sqlite3_column_double(stmt_, index); }
   bool isNull(int index) const { return sqlite3_column_type(stmt_, index) == SQLITE_NULL; }
   std::string columnText(int index) const {
@@ -107,6 +116,19 @@ void runScript(sqlite3* db, std::string_view script) {
       if (rc != SQLITE_DONE) throwDbError(db, rc, "schema script");
     }
     cursor = tail;
+  }
+}
+
+// Runs body inside BEGIN IMMEDIATE ... COMMIT; rolls back and rethrows on any exception.
+template <typename Body>
+void inTransaction(sqlite3* db, Body&& body) {
+  Statement(db, "BEGIN IMMEDIATE").run();
+  try {
+    body();
+    Statement(db, "COMMIT").run();
+  } catch (...) {
+    sqlite3_exec(db, "ROLLBACK", nullptr, nullptr, nullptr);
+    throw;
   }
 }
 
@@ -200,8 +222,7 @@ void SqliteRepository::seedDemoData() {
   };
   std::scoped_lock lock(impl_->mutex);
   sqlite3* db = impl_->db;
-  Statement(db, "BEGIN IMMEDIATE").run();
-  try {
+  inTransaction(db, [&] {
     Statement s(db, "INSERT INTO sites (id, name, address) VALUES (:id, :name, :address) "
                     "ON CONFLICT(id) DO NOTHING");
     s.bind(":id", site.id);
@@ -216,11 +237,7 @@ void SqliteRepository::seedDemoData() {
       q.bind(":role", to_string(p.role));
       q.run();
     }
-    Statement(db, "COMMIT").run();
-  } catch (...) {
-    sqlite3_exec(db, "ROLLBACK", nullptr, nullptr, nullptr);
-    throw;
-  }
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -506,6 +523,102 @@ std::vector<AiAnalysis> SqliteRepository::analysesForSubject(const Id& subjectId
   return queryMany<AiAnalysis>(impl_->db,
     selectSql(kAiAnalysisColumns, "ai_analyses", "subject_id = :key", "created_at, id"), subjectId,
     readAiAnalysis);
+}
+
+// ---------------------------------------------------------------------------
+// Credentials (auth::ICredentialStore)
+
+namespace {
+
+constexpr const char* kCredentialColumns =
+  "profile_id, login_id, password_hash, salt, must_change, failed_count, locked_until, created_at, updated_at";
+
+auth::CredentialRecord readCredential(const Statement& q) {
+  auth::CredentialRecord c;
+  c.profileId = q.columnText(0);
+  c.loginId = q.columnText(1);
+  c.passwordHash = q.columnText(2);
+  c.salt = q.columnBlob(3);
+  c.mustChange = q.columnInt(4) != 0;
+  c.failedCount = q.columnInt(5);
+  c.lockedUntil = q.optionalTime(6);
+  c.createdAt = q.columnTime(7);
+  c.updatedAt = q.columnTime(8);
+  return c;
+}
+
+// Plain INSERT: a duplicate profile id or login id is a constraint error (ValidationError).
+void insertCredential(sqlite3* db, const auth::CredentialRecord& c) {
+  Statement q(db,
+    "INSERT INTO credentials (profile_id, login_id, password_hash, salt, must_change, failed_count, "
+    "locked_until, created_at, updated_at) "
+    "VALUES (:profile_id, :login_id, :password_hash, :salt, :must_change, :failed_count, "
+    ":locked_until, :created_at, :updated_at)");
+  q.bind(":profile_id", c.profileId);
+  q.bind(":login_id", c.loginId);
+  q.bind(":password_hash", c.passwordHash);
+  q.bindBlob(":salt", c.salt);
+  q.bind(":must_change", c.mustChange ? 1 : 0);
+  q.bind(":failed_count", c.failedCount);
+  q.bind(":locked_until", c.lockedUntil);
+  q.bind(":created_at", c.createdAt);
+  q.bind(":updated_at", c.updatedAt);
+  q.run();
+}
+
+} // namespace
+
+std::optional<auth::CredentialRecord> SqliteRepository::findCredentialByLoginId(const std::string& loginId) const {
+  std::scoped_lock lock(impl_->mutex);
+  // login_id is COLLATE NOCASE, so the lookup ignores ASCII case.
+  return queryOne<auth::CredentialRecord>(impl_->db,
+    std::string("SELECT ") + kCredentialColumns + " FROM credentials WHERE login_id = :id", loginId,
+    readCredential);
+}
+
+std::optional<auth::CredentialRecord> SqliteRepository::findCredentialByProfileId(const Id& profileId) const {
+  std::scoped_lock lock(impl_->mutex);
+  return queryOne<auth::CredentialRecord>(impl_->db,
+    std::string("SELECT ") + kCredentialColumns + " FROM credentials WHERE profile_id = :id", profileId,
+    readCredential);
+}
+
+void SqliteRepository::createAccount(const Profile& profile, const auth::CredentialRecord& credential) {
+  if (credential.profileId != profile.id) throw ValidationError("Credential does not belong to the new profile");
+  std::scoped_lock lock(impl_->mutex);
+  sqlite3* db = impl_->db;
+  inTransaction(db, [&] {
+    Statement q(db, "INSERT INTO profiles (id, display_name, role) VALUES (:id, :display_name, :role)");
+    q.bind(":id", profile.id);
+    q.bind(":display_name", profile.displayName);
+    q.bind(":role", to_string(profile.role));
+    q.run();
+    insertCredential(db, credential);
+  });
+}
+
+void SqliteRepository::addCredential(const auth::CredentialRecord& credential) {
+  std::scoped_lock lock(impl_->mutex);
+  insertCredential(impl_->db, credential);
+}
+
+void SqliteRepository::updateCredential(const auth::CredentialRecord& c) {
+  std::scoped_lock lock(impl_->mutex);
+  Statement q(impl_->db,
+    "UPDATE credentials SET login_id = :login_id, password_hash = :password_hash, salt = :salt, "
+    "must_change = :must_change, failed_count = :failed_count, locked_until = :locked_until, "
+    "created_at = :created_at, updated_at = :updated_at WHERE profile_id = :profile_id");
+  q.bind(":profile_id", c.profileId);
+  q.bind(":login_id", c.loginId);
+  q.bind(":password_hash", c.passwordHash);
+  q.bindBlob(":salt", c.salt);
+  q.bind(":must_change", c.mustChange ? 1 : 0);
+  q.bind(":failed_count", c.failedCount);
+  q.bind(":locked_until", c.lockedUntil);
+  q.bind(":created_at", c.createdAt);
+  q.bind(":updated_at", c.updatedAt);
+  q.run();
+  if (sqlite3_changes(impl_->db) == 0) throw NotFoundError("No credential for profile " + c.profileId);
 }
 
 } // namespace safelog::storage

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "safelog/auth/credential_store.hpp"
 #include "safelog/contracts/ports.hpp"
 
 #include <filesystem>
@@ -14,7 +15,8 @@ namespace safelog::storage {
 // - Foreign key, CHECK and NOT NULL violations throw ValidationError; other
 //   database failures throw std::runtime_error.
 // - List queries are ordered by time, then id.
-class SqliteRepository final : public IRepository {
+// - Also stores login credentials (auth::ICredentialStore) in the same database.
+class SqliteRepository final : public IRepository, public auth::ICredentialStore {
 public:
   static constexpr int kSchemaVersion = 2;
 
@@ -44,6 +46,13 @@ public:
   std::vector<Finding> findingsForInspection(const Id& inspectionId) const override;
   std::vector<Finding> findingsAssignedTo(const Id& assigneeId) const override;
   std::vector<AiAnalysis> analysesForSubject(const Id& subjectId) const override;
+
+  // auth::ICredentialStore
+  std::optional<auth::CredentialRecord> findCredentialByLoginId(const std::string& loginId) const override;
+  std::optional<auth::CredentialRecord> findCredentialByProfileId(const Id& profileId) const override;
+  void createAccount(const Profile& profile, const auth::CredentialRecord& credential) override;
+  void addCredential(const auth::CredentialRecord& credential) override;
+  void updateCredential(const auth::CredentialRecord& credential) override;
 
   // PRAGMA user_version of the open database.
   int schemaVersion() const;

@@ -1,4 +1,5 @@
 add_library(safelog_storage
+  in_memory_credential_store.cpp
   in_memory_repository.cpp
   sqlite_codec.cpp
   sqlite_repository.cpp
@@ -19,4 +20,7 @@ configure_file(schema_sql.hpp.in
   ${CMAKE_CURRENT_BINARY_DIR}/generated/safelog/storage/schema_sql.hpp @ONLY)
 target_include_directories(safelog_storage PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/generated)
 
-target_link_libraries(safelog_storage PRIVATE safelog_sqlite3)
+target_link_libraries(safelog_storage
+  PUBLIC safelog_auth_api
+  PRIVATE safelog_sqlite3
+)
