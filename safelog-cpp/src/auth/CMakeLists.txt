@@ -7,6 +7,7 @@ target_include_directories(safelog_auth_api INTERFACE
 )
 
 add_library(safelog_auth
+  auth_service.cpp
   password_hasher.cpp
   secure_random.cpp
 )
