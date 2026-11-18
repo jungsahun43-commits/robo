@@ -65,12 +65,27 @@ CREATE TABLE IF NOT EXISTS ai_analyses (
   created_at TEXT NOT NULL
 );
 
+-- Login credentials (schema v2). One row per profile; the password itself is never stored.
+-- password_hash is "$argon2id$v=19$m=<KiB>,t=<passes>,p=<lanes>$<base64 hash>"; salt is 16 random bytes.
+CREATE TABLE IF NOT EXISTS credentials (
+  profile_id TEXT PRIMARY KEY REFERENCES profiles(id) ON DELETE CASCADE,
+  login_id TEXT NOT NULL UNIQUE COLLATE NOCASE,
+  password_hash TEXT NOT NULL,
+  salt BLOB NOT NULL CHECK (length(salt) = 16),
+  must_change INTEGER NOT NULL CHECK (must_change IN (0, 1)),
+  failed_count INTEGER NOT NULL DEFAULT 0 CHECK (failed_count >= 0),
+  locked_until TEXT,
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+
 CREATE INDEX IF NOT EXISTS idx_findings_inspection ON findings(inspection_id);
 CREATE INDEX IF NOT EXISTS idx_findings_assignee_status ON findings(assignee_id, status);
 CREATE INDEX IF NOT EXISTS idx_photos_finding ON photos(finding_id);
 CREATE INDEX IF NOT EXISTS idx_logs_finding ON action_logs(finding_id, created_at);
 CREATE INDEX IF NOT EXISTS idx_ai_subject_type ON ai_analyses(subject_id, analysis_type);
 
--- Schema version 1: findings.hazard_category / findings.risk_level.
--- Databases created before version 1 are migrated in SqliteRepository before this script runs.
-PRAGMA user_version = 1;
+-- Schema versions (migrations run in SqliteRepository before this script):
+--   1: findings.hazard_category / findings.risk_level (v0 -> v1 adds the columns)
+--   2: credentials table (v1 -> v2 is the CREATE TABLE IF NOT EXISTS above)
+PRAGMA user_version = 2;

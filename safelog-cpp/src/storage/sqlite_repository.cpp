@@ -160,6 +160,7 @@ void SqliteRepository::Impl::applySchema() {
       Statement(db, "ALTER TABLE findings ADD COLUMN risk_level INTEGER "
                     "CHECK (risk_level IS NULL OR risk_level BETWEEN 1 AND 5)").run();
     }
+    // v1 -> v2 needs no ALTER: the script's CREATE TABLE IF NOT EXISTS adds credentials.
     runScript(db, detail::kSchemaSql);  // CREATE ... IF NOT EXISTS, then PRAGMA user_version
     Statement(db, "COMMIT").run();
   } catch (...) {

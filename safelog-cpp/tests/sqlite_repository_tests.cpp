@@ -348,7 +348,7 @@ void testMigrationFromVersion0() {
   }
   {
     SqliteRepository repo(db);
-    CHECK(repo.schemaVersion() == 1);
+    CHECK(repo.schemaVersion() == SqliteRepository::kSchemaVersion);
     auto old = repo.findFinding("finding-old");
     CHECK(old && !old->hazardCategory && !old->riskLevel);
     if (old) {

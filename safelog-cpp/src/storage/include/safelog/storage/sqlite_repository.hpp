@@ -16,7 +16,7 @@ namespace safelog::storage {
 // - List queries are ordered by time, then id.
 class SqliteRepository final : public IRepository {
 public:
-  static constexpr int kSchemaVersion = 1;
+  static constexpr int kSchemaVersion = 2;
 
   // Opens (or creates) the database file, enables foreign keys and applies
   // database/schema.sql, migrating older schema versions first.
