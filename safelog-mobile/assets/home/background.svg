@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 493 539" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="shade" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity=".19"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path fill="#e3f2fa" d="M0 0h218l56 55L0 340z"/>
+  <path fill="#e7f3dc" d="M493 417v122H377z"/>
+  <path fill="url(#shade)" d="M0 0h493v42H0z"/>
+</svg>
