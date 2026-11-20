@@ -25,11 +25,24 @@ export default function AnalysisQueuePage() {
     </Card>}
     {open.map(finding => {
       const latest = finding.analyses.filter(item => item.type === 'BeforeHazard').at(-1);
-      const wasReviewed = finding.logs.some(log => log.action === 'hazard_reviewed');
+      const lastReview = finding.logs
+        .filter(log => log.action === 'hazard_reviewed')
+        .at(-1);
+      const wasReviewed = Boolean(lastReview);
+      const manuallyReviewed = lastReview?.note === 'Manual'
+        && latest?.decision !== 'Pending';
       return <Card key={finding.id}>
         <Copy>{finding.location}</Copy>
         <StatusBadge status={finding.status} />
-        <Copy>{latest ? decisionLabels[latest.decision] : wasReviewed ? '수동 검토 완료' : 'AI 분석 전'}</Copy>
+        <Copy>
+          {manuallyReviewed
+            ? '수동 검토 완료'
+            : latest
+              ? decisionLabels[latest.decision]
+              : wasReviewed
+                ? '수동 검토 완료'
+                : 'AI 분석 전'}
+        </Copy>
         <Button title={latest?.decision === 'Pending' ? 'AI 제안 검토' : latest ? '분석 화면 열기' : 'AI 분석 시작'}
           onPress={() => router.push({
             pathname: '/hazard', params: { id: finding.id, ...(latest ? {} : { fresh: '1' }) },

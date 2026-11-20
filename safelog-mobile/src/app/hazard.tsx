@@ -53,6 +53,7 @@ export default function AiHazardReviewPage() {
         : description.trim() === result.assessment && action.trim() === result.action ? 'Accepted' : 'Edited';
       workflow.execute(user, finding.id, {
         kind: 'hazard', analysisId: result?.id, decision,
+        manual: manual || !result,
         description: reject ? finding.description : description, action: reject ? finding.action : action,
       });
       router.replace({ pathname: '/saved', params: { id: finding.id } });

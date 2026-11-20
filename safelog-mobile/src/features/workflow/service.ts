@@ -12,7 +12,7 @@ type Command =
   | { kind: 'verify'; note: string; confirmed: boolean; analysisId?: string; decision?: 'Accepted' | 'Rejected' }
   | { kind: 'changes'; note: string }
   | { kind: 'suggest'; type: Analysis['type']; suggestion: Suggestion }
-  | { kind: 'hazard'; analysisId?: string; decision: Exclude<Decision, 'Pending'>; description: string; action: string };
+  | { kind: 'hazard'; analysisId?: string; decision: Exclude<Decision, 'Pending'>; description: string; action: string; manual?: boolean };
 
 export const ownsFinding = (actor: Profile, finding: Finding) =>
   actor.role === 'Inspector' && actor.id === finding.inspectorId;
@@ -119,7 +119,7 @@ export class WorkflowService {
           description, action, analyses,
           category: accepted ? accepted.category : finding.category,
           risk: accepted ? accepted.risk : finding.risk,
-        }, 'hazard_reviewed', command.decision);
+        }, 'hazard_reviewed', command.manual === true ? 'Manual' : command.decision);
       }
     }
   }
