@@ -36,6 +36,7 @@ const roleHome: Record<Role, { guidance: string; summary: string; shortcuts: rea
     shortcuts: [
       { label: '개선 조치 관리', description: '담당자 배정과 진행 상태 확인', icon: taskIcon, tint: palette.tealSoft, route: '/tasks' },
       reports,
+      { label: '계정 만들기', description: '새 사용자 등록과 임시 비밀번호 발급', icon: require('../../../../assets/safelog/account.svg'), tint: palette.purpleSoft, route: '/accounts' },
     ],
   },
   Assignee: {
