@@ -1,5 +1,5 @@
 import { router, type Href } from 'expo-router';
-import { ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { Platform, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { palette, radius } from '@/constants/safelog-theme';
 import type { Role } from '@/contracts/types';
@@ -89,7 +89,9 @@ export default function HomeScreen() {
               {...shortcut} wide={compact} onPress={() => router.push(route)} />)}
           </View>
         </View>
-        <Text style={styles.notice}>시연 모드 · AI Mock · 앱 종료 시 기록 초기화</Text>
+        <Text style={styles.notice}>{Platform.OS === 'web'
+          ? '시연 모드 · AI Mock · 앱 종료 시 기록 초기화'
+          : '시연 모드 · AI Mock · 기록은 이 기기에 저장'}</Text>
       </View>
     </ScrollView>
   </SafeAreaView>;
