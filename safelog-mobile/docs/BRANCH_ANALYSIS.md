@@ -1,5 +1,9 @@
 # SafeLog 원격 브랜치 분석
 
+**2026-11-23 통합 기준:** 최신 `feature/mobile-storage-auth`의 `418024ee98b6f0ffe947098533506f777bff686c` 위에 실제 AI 연결을 통합한 별도 로컬 작업본은 `codex/mobile-db-ai`다. 현재 저장·계정·AI 연결과 검증 범위는 [README](../README.md), [DB·AI 통합 안내](DB_AI_INTEGRATION.md)를 따른다. 아래 표는 최초 모바일 이전 당시의 브랜치 이력이며 현재 원격 목록이 아니다. `feature/workflow-report`는 모든 커밋의 AI 브랜치 포함 여부와 복구 번들을 확인한 뒤 2026-11-23 원격에서 정리했다. 다른 역할의 고유 변경과 열린 PR 브랜치는 유지했다.
+
+이 문서는 모바일 최초 커밋의 입력이 된 기존 6개 브랜치 분석 기록이다. 이후 `feature/react-native-mobile`의 `c422eb5d7f0445a0e6d3bdf55b34b2e5916fc8e9`가 추가돼 원격 브랜치는 7개로 확인됐다. 해당 커밋의 부모는 아래 main SHA와 일치한다. 2026-11-19 고정 CPU 연결 추가 내용은 [앱 README](../README.md)와 [추가 검증 기록](TEST_REPORT.md)을 따른다.
+
 `git ls-remote --heads`와 별도 미러 `C:\dev\robo-source`를 대조했다. 원격 헤드는 아래 6개다. `C:\dev\SafeLog` 디렉터리는 존재하지만 Git 저장소로 인식되지 않았다. 모바일은 첫 커밋 전 Expo 템플릿이 스테이징되어 있었으며 별도 인덱스 변경 없이 작업했다.
 
 | 브랜치 | HEAD SHA | main 기준 뒤/앞 | main 트리 대비 A/M/D | 최신 커밋 및 구현 |

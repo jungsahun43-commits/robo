@@ -3,14 +3,16 @@ import { Platform } from 'react-native';
 import { Button, Card, Copy, message, Page, PhotoPreview } from '@/components/safelog-ui';
 import { exportReport, reportFor } from '@/features/reporting/report';
 import { useFinding } from '@/features/workflow/use-finding';
+import { useProfiles } from '@/features/auth/session';
 
 export default function ReportPreviewPage() {
   const { user, finding } = useFinding();
+  const people = useProfiles();
   const active = useRef(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   if (!finding || !user || user.role === 'Assignee') return <Page title="안전점검 보고서"><Copy>볼 수 있는 보고서가 없습니다.</Copy></Page>;
-  const report = reportFor(finding);
+  const report = reportFor(finding, people);
 
   async function share() {
     if (!finding || active.current) return;
@@ -18,7 +20,7 @@ export default function ReportPreviewPage() {
     setBusy(true);
     setError('');
     try {
-      await exportReport(finding);
+      await exportReport(finding, people);
     } catch (error) {
       setError(message(error));
     } finally {

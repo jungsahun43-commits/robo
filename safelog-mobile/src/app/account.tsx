@@ -18,10 +18,11 @@ export default function AccountPage() {
       <Button title="비밀번호 변경" secondary onPress={() => router.push('/password')} />
     </Card>
     <Card>
-      <Copy>시연 모드</Copy>
+      <Copy>AI 분석과 기록 보관</Copy>
       <Copy>{Platform.OS === 'web'
-        ? 'AI 응답은 시연용이며, 점검 기록은 앱을 종료하면 초기화됩니다.'
-        : 'AI 응답은 시연용이며, 점검 기록은 이 기기에 저장됩니다.'}</Copy>
+        ? '기존 고정 AI·모의 시연·직접 검토를 점검별로 선택합니다. 웹의 기록과 계정은 새로고침하면 초기화됩니다.'
+        : '기존 고정 AI·모의 시연·직접 검토를 점검별로 선택합니다. 점검 사진과 분석·검토 기록은 이 기기에 저장됩니다.'}</Copy>
+      <Copy>전체 AI 20항목을 지원하며, 발표는 볼스크루·균열·컨베이어 이물질·PCB·케이블로 구성합니다.</Copy>
     </Card>
     <Button title="로그아웃" secondary onPress={() => setUser(null)} />
   </Page>;

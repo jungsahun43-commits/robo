@@ -50,6 +50,12 @@ export class SqliteAccountStore implements AccountStore {
     return row && { id: row.id, name: row.display_name, role: roleMap.toApp(row.role) };
   }
 
+  listProfiles(): readonly Profile[] {
+    return this.db.all<{ id: string; display_name: string; role: string }>(
+      'SELECT id, display_name, role FROM profiles ORDER BY display_name, id')
+      .map(row => ({ id: row.id, name: row.display_name, role: roleMap.toApp(row.role) }));
+  }
+
   findCredentialByLoginId(loginId: string) {
     const row = this.db.get<CredentialRow>(`SELECT ${COLUMNS} FROM credentials WHERE login_id = ?`, [loginId]);
     return row && toRecord(row);  // login_id is COLLATE NOCASE

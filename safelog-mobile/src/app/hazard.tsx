@@ -10,10 +10,11 @@ import { useFinding } from '@/features/workflow/use-finding';
 export default function AiHazardReviewPage() {
   const { finding, user } = useFinding();
   const { fresh } = useLocalSearchParams<{ fresh?: string }>();
-  const analysis = useAnalysis();
+  const analysis = useAnalysis(`${user?.id}/${finding?.id}/${finding?.aiMode}/${finding?.inspectionTask}`,
+    finding?.aiMode, finding?.inspectionTask);
   const latest = finding?.analyses.filter(item => item.type === 'BeforeHazard').at(-1);
   const pending = latest?.decision === 'Pending' ? latest : undefined;
-  const [manual, setManual] = useState(false);
+  const [manual, setManual] = useState(finding?.aiMode === 'manual');
   const [description, setDescription] = useState(pending?.assessment ?? finding?.description ?? '');
   const [action, setAction] = useState(pending?.action ?? finding?.action ?? '');
   const [error, setError] = useState('');
@@ -23,7 +24,7 @@ export default function AiHazardReviewPage() {
     setManual(false);
     void analysis.run(async (analyzer, signal) => {
       const suggestion = await analyzer.hazard(finding.photo, signal);
-      if (signal.aborted) throw new Error('분석 취소');
+      if (!analysis.isCurrent(signal)) throw new Error('분석 취소');
       const result = workflow.execute(user, finding.id, { kind: 'suggest', type: 'BeforeHazard', suggestion });
       if (!('type' in result)) throw new Error('분석 기록을 저장할 수 없습니다.');
       setDescription(result.assessment);
@@ -33,7 +34,7 @@ export default function AiHazardReviewPage() {
   }
 
   useEffect(() => {
-    if (fresh !== '1') return;
+    if (fresh !== '1' || finding?.aiMode === 'manual') return;
     const timer = setTimeout(() => run('정상'), 0);
     return () => clearTimeout(timer);
     // Start once for a newly registered finding.
@@ -63,7 +64,8 @@ export default function AiHazardReviewPage() {
 
   return <Page title="AI 위험 검토">
     <PhotoPreview photo={finding.photo} label="조치 전 사진" />
-    <AnalysisPanel {...analysis} result={manual || !successful ? undefined : result} onRun={run} onManual={() => {
+    <AnalysisPanel {...analysis} aiMode={finding.aiMode} inspectionTask={finding.inspectionTask}
+      result={manual || !successful ? undefined : result} onRun={run} onManual={() => {
       analysis.cancel();
       setManual(true);
       setDescription(finding.description);

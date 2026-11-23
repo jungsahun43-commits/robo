@@ -21,7 +21,7 @@ export function mockAnalyzer(mode: MockResponse): AiAnalyzer {
     return value;
   }
 
-  const metadata = { model: 'safelog-mobile-mock', prompt: 'demo-v1', confidence: 0.82 };
+  const metadata = { model: 'safelog-mobile-mock', prompt: 'demo-v1', confidence: 0.82, source: 'mock' as const };
   return {
     hazard: (_before, signal) => respond({
       ...metadata, category: '통로 장애물', risk: 3,

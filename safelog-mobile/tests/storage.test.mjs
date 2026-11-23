@@ -150,7 +150,7 @@ test('foreign keys are enforced and orphan photo files are cleaned up', t => {
   db.close();
 });
 
-test('migrates v1 to v2 keeping data, creates v2 from scratch and rejects newer databases', t => {
+test('migrates v1 to the current version keeping data, creates fresh databases and rejects newer versions', t => {
   const path = tempDb(t);
   const legacy = openNodeDatabase(path);
   legacy.exec('PRAGMA foreign_keys = ON');
@@ -167,14 +167,14 @@ test('migrates v1 to v2 keeping data, creates v2 from scratch and rejects newer 
 
   const { db, repo } = open(path);
   assert.equal(userVersion(db), SCHEMA_VERSION);
-  assert.equal(SCHEMA_VERSION, 2);
+  assert.equal(SCHEMA_VERSION, 3);
   assert.equal(count(db, "SELECT COUNT(*) AS n FROM sqlite_master WHERE name = 'credentials'"), 1);
   assert.equal(repo.snapshot()[0].description, '적치');
   assert.equal(repo.snapshot()[0].photo.uri, 'app://photos/a.jpg');
   db.close();
 
   const fresh = open(tempDb(t));
-  assert.equal(userVersion(fresh.db), 2);
+  assert.equal(userVersion(fresh.db), 3);
   fresh.db.close();
 
   const newer = openNodeDatabase(tempDb(t));

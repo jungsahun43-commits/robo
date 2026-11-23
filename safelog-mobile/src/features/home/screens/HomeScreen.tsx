@@ -90,8 +90,8 @@ export default function HomeScreen() {
           </View>
         </View>
         <Text style={styles.notice}>{Platform.OS === 'web'
-          ? '시연 모드 · AI Mock · 앱 종료 시 기록 초기화'
-          : '시연 모드 · AI Mock · 기록은 이 기기에 저장'}</Text>
+          ? 'AI 방식은 점검별 선택 · 웹 기록은 새로고침 시 초기화'
+          : 'AI 방식은 점검별 선택 · 기록은 이 기기에 저장'}</Text>
       </View>
     </ScrollView>
   </SafeAreaView>;

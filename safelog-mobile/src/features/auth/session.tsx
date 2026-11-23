@@ -10,7 +10,19 @@ import { newProfileId, secureRandom } from './random';
 
 const stores = createAppStores(site);
 const repository = stores.findings;
-export const workflow = new WorkflowService(repository);
+export const workflow = new WorkflowService(repository, stores.accounts);
+
+const peopleListeners = new Set<() => void>();
+let peopleSnapshot = stores.accounts.listProfiles();
+const subscribePeople = (listener: () => void) => {
+  peopleListeners.add(listener);
+  return () => { peopleListeners.delete(listener); };
+};
+const getPeople = () => peopleSnapshot;
+const refreshPeople = () => {
+  peopleSnapshot = stores.accounts.listProfiles();
+  peopleListeners.forEach(listener => listener());
+};
 
 export const auth = new AuthService(stores.accounts, new PasswordHasher(secureRandom), {
   newProfileId,
@@ -19,7 +31,7 @@ export const auth = new AuthService(stores.accounts, new PasswordHasher(secureRa
 
 // Demo logins are created once (existing ones are kept). Hashing takes a moment on first start.
 const ready = DEMO_MODE ? auth.seedDemoAccounts(profiles, DEMO_PASSWORD) : Promise.resolve();
-ready.catch(error => console.warn('[SafeLog] demo account set-up failed', error));
+ready.then(refreshPeople).catch(error => console.warn('[SafeLog] demo account set-up failed', error));
 
 /**
  * The person who last signed in (set even when they still must change their
@@ -45,7 +57,9 @@ export async function changePassword(currentPassword: string, newPassword: strin
 /** Registers a new person as the signed-in user (AuthService allows managers only). */
 export async function createAccount(name: string, role: Role, loginId: string, temporaryPassword: string): Promise<Profile> {
   if (!signedIn || signedIn.mustChangePassword) throw new Error('로그인이 필요합니다.');
-  return auth.createAccount(signedIn.profile.id, name, role, loginId, temporaryPassword);
+  const profile = await auth.createAccount(signedIn.profile.id, name, role, loginId, temporaryPassword);
+  refreshPeople();
+  return profile;
 }
 
 // Device timing for choosing the scrypt cost: start with EXPO_PUBLIC_SAFELOG_BENCH=1 (dev only).
@@ -88,4 +102,12 @@ export function useFindings() {
   const { user } = useSession();
   const snapshot = useSyncExternalStore(repository.subscribe, repository.snapshot, repository.snapshot);
   return useMemo(() => user ? snapshot.filter(finding => visibleTo(user, finding)) : [], [snapshot, user]);
+}
+
+const noPeople: readonly Profile[] = [];
+/** Public profile names/roles only; credentials never enter the UI directory. */
+export function useProfiles() {
+  const { user } = useSession();
+  const people = useSyncExternalStore(subscribePeople, getPeople, getPeople);
+  return user ? people : noPeople;
 }

@@ -40,6 +40,15 @@ export const optional = <T>(value: T | null | undefined): T | undefined => (valu
 /** Converts an absent optional field to SQL NULL. */
 export const nullable = <T>(value: T | undefined): T | null => (value === undefined ? null : value);
 
+/** Preserve absent booleans separately from measured false. */
+export const booleanToDb = (value: boolean | undefined): number | null => value === undefined ? null : Number(value);
+
+export function booleanFromDb(value: number | null): boolean | undefined {
+  if (value === null) return undefined;
+  if (value !== 0 && value !== 1) throw new Error('Invalid boolean in database');
+  return value === 1;
+}
+
 /** Drops keys whose value is undefined, so restored objects have no `key: undefined` entries. */
 export function compact<T extends object>(value: T): T {
   return Object.fromEntries(Object.entries(value).filter(([, v]) => v !== undefined)) as T;

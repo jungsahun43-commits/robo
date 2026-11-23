@@ -28,8 +28,12 @@ export class AccountConflictError extends Error {
  * Storage for profiles and credentials used by AuthService.
  * Implemented by SqliteAccountStore (app) and MemoryAccountStore (web, tests).
  */
-export interface AccountStore {
+export interface ProfileDirectory {
   findProfile(id: string): Profile | undefined;
+  listProfiles(): readonly Profile[];
+}
+
+export interface AccountStore extends ProfileDirectory {
   /** Case-insensitive. */
   findCredentialByLoginId(loginId: string): CredentialRecord | undefined;
   findCredentialByProfileId(profileId: string): CredentialRecord | undefined;
@@ -52,6 +56,8 @@ export class MemoryAccountStore implements AccountStore {
     const profile = this.profiles.get(id);
     return profile && { ...profile };
   };
+
+  listProfiles = (): readonly Profile[] => [...this.profiles.values()].map(profile => ({ ...profile }));
 
   findCredentialByLoginId = (loginId: string) => {
     const wanted = loginId.toLowerCase();

@@ -48,7 +48,9 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "test": "tsx --test \"tests/*.test.mjs\""
+    "test": "tsx --test \"tests/*.test.mjs\"",
+    "typecheck": "tsc --noEmit",
+    "ai:gateway": "node scripts/fixed-cpu-gateway.mjs"
   },
   "private": true
 }
