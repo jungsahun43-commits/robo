@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Platform } from 'react-native';
 import { Button, Card, Copy, Field, message, Page } from '@/components/safelog-ui';
 import { signIn, useSession } from '@/features/auth/session';
 
@@ -22,7 +23,9 @@ export default function LoginPage() {
   }
 
   return <Page title="SafeLog AI 로그인">
-    <Copy>Mock 개발 모드 · 앱을 종료하면 기록이 초기화됩니다.</Copy>
+    <Copy>{Platform.OS === 'web'
+      ? 'Mock 개발 모드 · 앱을 종료하면 기록이 초기화됩니다.'
+      : '기록은 이 기기에 저장됩니다.'}</Copy>
     <Card>
       <Field label="사용자 ID" autoCapitalize="none" autoCorrect={false} value={id} onChangeText={setId} />
       <Field label="비밀번호" secureTextEntry value={password} onChangeText={setPassword} onSubmitEditing={login} />
