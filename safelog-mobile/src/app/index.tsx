@@ -14,7 +14,7 @@ export default function LoginPage() {
     if (busy) return;
     setBusy(true);
     try {
-      setUser(await signIn(id, password));
+      setUser((await signIn(id, password)).profile);
     } catch (error) {
       setError(message(error));
     } finally {
