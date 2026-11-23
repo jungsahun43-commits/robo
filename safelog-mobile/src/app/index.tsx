@@ -1,19 +1,23 @@
 import { useState } from 'react';
 import { Button, Card, Copy, Field, message, Page } from '@/components/safelog-ui';
-import { demoLogin } from '@/features/auth/demo';
-import { useSession } from '@/features/auth/session';
+import { signIn, useSession } from '@/features/auth/session';
 
 export default function LoginPage() {
   const { setUser } = useSession();
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
 
-  function login() {
+  async function login() {
+    if (busy) return;
+    setBusy(true);
     try {
-      setUser(demoLogin(id, password));
+      setUser(await signIn(id, password));
     } catch (error) {
       setError(message(error));
+    } finally {
+      setBusy(false);
     }
   }
 
@@ -23,7 +27,7 @@ export default function LoginPage() {
       <Field label="사용자 ID" autoCapitalize="none" autoCorrect={false} value={id} onChangeText={setId} />
       <Field label="비밀번호" secureTextEntry value={password} onChangeText={setPassword} onSubmitEditing={login} />
       {!!error && <Copy tone="error">{error}</Copy>}
-      <Button title="로그인" disabled={!id.trim() || !password} onPress={login} />
+      <Button title="로그인" disabled={busy || !id.trim() || !password} onPress={login} />
     </Card>
     <Card><Copy>{'김안전 · inspector-1\n박관리 · manager-1\n이조치 · assignee-1\n공통 비밀번호 · demo1234'}</Copy></Card>
   </Page>;
