@@ -41,7 +41,8 @@
           "cameraPermission": "안전점검과 조치 결과 사진을 촬영합니다.",
           "microphonePermission": false
         }
-      ]
+      ],
+      "expo-sqlite"
     ],
     "experiments": {
       "typedRoutes": true,
