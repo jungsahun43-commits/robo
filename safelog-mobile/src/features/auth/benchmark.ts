@@ -9,7 +9,7 @@ export interface ScryptTiming { logN: number; memoryMiB: number; averageMs: numb
  */
 export async function measureScrypt(
   random: RandomSource,
-  logNs: readonly number[] = [12, 13, 14, 15],
+  logNs: readonly number[] = [10, 11, 12, 13],
   rounds = 3,
 ): Promise<ScryptTiming[]> {
   const results: ScryptTiming[] = [];

@@ -206,6 +206,42 @@ for (const [name, makeBackend] of Object.entries(backends)) {
     }
   });
 
+  test(`[${name}] a successful login re-hashes credentials made with older scrypt settings`, async t => {
+    const backend = makeBackend(t);
+    t.after(() => backend.close());
+    const { store } = backend;
+    // logN 7 stands in for the logN 14 hashes created before the default was lowered.
+    const old = new AuthService(store, new PasswordHasher(random, { logN: 7, r: 8, p: 1 }),
+      { aliases: demoAliases, newProfileId: () => `profile-${++ids}` });
+    await old.seedDemoAccounts(profiles, DEMO_PASSWORD);
+    const person = await old.createAccount('manager-1', '재해시', 'Assignee', 'rehash', 'temp-pass-1');
+    const before = store.findCredentialByProfileId('inspector-1');
+    assert.match(before.passwordHash, /^\$scrypt\$ln=7,/);
+
+    const auth = service(store);  // current settings: logN 6
+    await failsWithGenericMessage(auth.login('inspector-1', 'wrong-pass'));  // failures never re-hash
+    assert.equal(store.findCredentialByProfileId('inspector-1').passwordHash, before.passwordHash);
+    assert.equal(store.findCredentialByProfileId('inspector-1').failedCount, 1);
+
+    assert.equal((await auth.login('inspector1', DEMO_PASSWORD)).profile.id, 'inspector-1');
+    const after = store.findCredentialByProfileId('inspector-1');
+    assert.match(after.passwordHash, /^\$scrypt\$ln=6,r=8,p=1\$/);
+    assert.notDeepEqual(after.salt, before.salt);
+    assert.equal(after.failedCount, 0);
+    assert.equal(after.mustChange, false);
+    assert.equal(after.createdAt, before.createdAt);
+
+    await auth.login('inspector-1', DEMO_PASSWORD);  // already current: no further change
+    assert.equal(store.findCredentialByProfileId('inspector-1').passwordHash, after.passwordHash);
+    await failsWithGenericMessage(auth.login('inspector-1', 'wrong-pass'));
+
+    const first = await auth.login('rehash', 'temp-pass-1');  // must-change flag survives the upgrade
+    assert.equal(first.mustChangePassword, true);
+    assert.match(store.findCredentialByProfileId(person.id).passwordHash, /^\$scrypt\$ln=6,/);
+    assert.equal(store.findCredentialByProfileId(person.id).mustChange, true);
+    assert.match(store.findCredentialByProfileId('manager-1').passwordHash, /^\$scrypt\$ln=7,/);  // not logged in yet
+  });
+
   test(`[${name}] each user gets a random salt; hashes record their parameters`, async t => {
     const backend = makeBackend(t);
     t.after(() => backend.close());
@@ -271,19 +307,22 @@ test('[sqlite] counters, locks and changed passwords survive a restart', async t
   db.close();
 });
 
-test('default scrypt cost (N=2^14, r=8) verifies and rejects corrupted hashes', async t => {
+test('default scrypt cost (N=2^11, r=8) verifies and rejects corrupted hashes', async t => {
   const hasher = new PasswordHasher(random);
   assert.deepEqual(hasher.params, DEFAULT_SCRYPT_PARAMS);
   const started = Date.now();
   const { encoded, salt } = await hasher.hash('correct horse battery');
   t.diagnostic(`one default hash on this machine (Node/V8): ${Date.now() - started} ms`);
-  assert.match(encoded, /^\$scrypt\$ln=14,r=8,p=1\$/);
+  assert.match(encoded, /^\$scrypt\$ln=11,r=8,p=1\$/);
+  assert.equal(hasher.needsRehash(encoded), false);
   assert.equal(await hasher.verify('correct horse battery', salt, encoded), true);
   assert.equal(await hasher.verify('correct horse batterY', salt, encoded), false);
 
   const fast = new PasswordHasher(random, FAST).hash('pw-12345678');
   const { encoded: fastEncoded, salt: fastSalt } = await fast;
   assert.equal(await hasher.verify('pw-12345678', fastSalt, fastEncoded), true);  // parameters come from the string
+  assert.equal(hasher.needsRehash(fastEncoded), true);
+  assert.equal(hasher.needsRehash('garbage'), true);
   assert.equal(await hasher.verify('pw-12345678', fastSalt, 'garbage'), false);
   assert.equal(await hasher.verify('pw-12345678', fastSalt, '$scrypt$ln=30,r=8,p=1$AAAA'), false);
   assert.equal(await hasher.verify('pw-12345678', new Uint8Array(8), fastEncoded), false);

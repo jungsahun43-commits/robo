@@ -4,12 +4,20 @@ import { scryptAsync } from '@noble/hashes/scrypt.js';
 export interface ScryptParams { logN: number; r: number; p: number }
 
 /**
- * Default cost: N = 2^14, r = 8 (16 MiB). Chosen to stay under ~1 s in Hermes;
- * confirm on a real phone with measureScrypt() (benchmark.ts) and lower logN to
- * 13 if it is slower. Stored hashes record their own parameters, so changing
- * this later does not break existing logins.
+ * Default cost: N = 2^11, r = 8 (2 MiB).
+ *
+ * Measured on an iPhone in Expo Go (pure-JS scrypt, measureScrypt()):
+ * logN 12 = 1823 ms, 13 = 3567 ms, 14 = 7514 ms, 15 = 13574 ms. Time doubles
+ * per step, so logN 11 is about 0.9 s, the largest cost under the 1 s target.
+ *
+ * This is far weaker than the OWASP minimum for scrypt (N = 2^17, r = 8) and is
+ * only acceptable for the local demo. A real service should hash with a native
+ * crypto module (or on a server) and raise the cost.
+ *
+ * Stored hashes record their own parameters: older hashes still verify, and
+ * AuthService re-hashes them with this default on the next successful login.
  */
-export const DEFAULT_SCRYPT_PARAMS: ScryptParams = { logN: 14, r: 8, p: 1 };
+export const DEFAULT_SCRYPT_PARAMS: ScryptParams = { logN: 11, r: 8, p: 1 };
 
 export type RandomSource = (size: number) => Uint8Array;
 
@@ -110,6 +118,14 @@ export class PasswordHasher {
     }
     const key = await this.derive(password, salt, stored.params);
     return constantTimeEqual(key, stored.key);
+  }
+
+  /** True when `encoded` was made with other parameters than this hasher's (or cannot be read). */
+  needsRehash(encoded: string): boolean {
+    const stored = parse(encoded);
+    if (!stored) return true;
+    const { logN, r, p } = stored.params;
+    return logN !== this.params.logN || r !== this.params.r || p !== this.params.p;
   }
 
   /** Same work as hash() without a result: keeps unknown-id and locked failures as slow as wrong passwords. */

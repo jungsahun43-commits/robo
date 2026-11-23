@@ -129,8 +129,16 @@ export class AuthService {
       const record = await this.authenticate(this.findByLogin(loginId), password);
       const profile = this.store.findProfile(record.profileId);
       if (!profile) throw new AuthenticationError();
-      if (record.failedCount !== 0 || record.lockedUntil) {
-        this.store.updateCredential({ ...record, failedCount: 0, lockedUntil: undefined, updatedAt: this.now().toISOString() });
+      // Hashes made with older cost settings are upgraded now, while the password is known.
+      const upgrade = this.hasher.needsRehash(record.passwordHash) ? await this.hasher.hash(password) : undefined;
+      if (upgrade || record.failedCount !== 0 || record.lockedUntil) {
+        this.store.updateCredential({
+          ...record,
+          ...(upgrade && { passwordHash: upgrade.encoded, salt: upgrade.salt }),
+          failedCount: 0,
+          lockedUntil: undefined,
+          updatedAt: this.now().toISOString(),
+        });
       }
       return { profile, mustChangePassword: record.mustChange };
     });
