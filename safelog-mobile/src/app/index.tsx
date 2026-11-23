@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { router } from 'expo-router';
 import { Platform } from 'react-native';
 import { Button, Card, Copy, Field, message, Page } from '@/components/safelog-ui';
 import { signIn, useSession } from '@/features/auth/session';
 
 export default function LoginPage() {
-  const { setUser } = useSession();
+  const { setUser, setPending } = useSession();
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -14,7 +15,13 @@ export default function LoginPage() {
     if (busy) return;
     setBusy(true);
     try {
-      setUser((await signIn(id, password)).profile);
+      const { profile, mustChangePassword } = await signIn(id, password);
+      if (mustChangePassword) {
+        setPending(profile);  // the rest of the app stays locked until the password is changed
+        router.replace('/password');
+      } else {
+        setUser(profile);
+      }
     } catch (error) {
       setError(message(error));
     } finally {

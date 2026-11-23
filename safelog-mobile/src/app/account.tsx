@@ -14,6 +14,7 @@ export default function AccountPage() {
       <Copy>{user.id}</Copy>
       <Copy>{site.name}</Copy>
       <Button title="현장 정보 보기" secondary onPress={() => router.push('/facilities')} />
+      <Button title="비밀번호 변경" secondary onPress={() => router.push('/password')} />
     </Card>
     <Card>
       <Copy>시연 모드</Copy>
