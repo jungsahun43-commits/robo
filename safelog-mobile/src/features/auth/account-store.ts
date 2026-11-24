@@ -45,6 +45,16 @@ export interface AccountStore extends ProfileDirectory {
   updateCredential(credential: CredentialRecord): void;
 }
 
+/**
+ * Wipes demo data in one step: every finding with its photos, logs, AI analyses
+ * and inspections, and every person not in `keep` with their login. The people
+ * in `keep` are restored and get exactly `credentials`. Afterwards the findings
+ * snapshot is empty (subscribers notified) and managed photo files are deleted.
+ */
+export interface DemoDataReset {
+  resetDemoData(keep: readonly Profile[], credentials: readonly CredentialRecord[]): void;
+}
+
 const copy = (record: CredentialRecord): CredentialRecord => ({ ...record, salt: Uint8Array.from(record.salt) });
 
 /** In-memory AccountStore with the same rules as the SQLite one. */
@@ -97,5 +107,13 @@ export class MemoryAccountStore implements AccountStore {
   /** Adds a profile without a login (as the SQLite profiles table can hold). */
   addProfile(profile: Profile) {
     this.profiles.set(profile.id, { ...profile });
+  }
+
+  /** Keeps only `keep` (restored as given) with exactly `credentials`. Used by the demo reset. */
+  replaceAccounts(keep: readonly Profile[], credentials: readonly CredentialRecord[]) {
+    this.profiles.clear();
+    this.credentials.clear();
+    keep.forEach(profile => this.profiles.set(profile.id, { ...profile }));
+    credentials.forEach(credential => this.credentials.set(credential.profileId, copy(credential)));
   }
 }

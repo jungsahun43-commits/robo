@@ -11,6 +11,12 @@ export class MemoryFindingRepository implements FindingRepository {
     return () => { this.listeners.delete(listener); };
   };
 
+  /** Removes every finding and notifies subscribers (demo reset). */
+  clear() {
+    this.findings = [];
+    this.listeners.forEach(listener => listener());
+  }
+
   save(finding: Finding) {
     const exists = this.findings.some(item => item.id === finding.id);
     this.findings = exists

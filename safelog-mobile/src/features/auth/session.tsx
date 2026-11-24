@@ -62,6 +62,21 @@ export async function createAccount(name: string, role: Role, loginId: string, t
   return profile;
 }
 
+/**
+ * Demo reset (DEMO_MODE, managers only): deletes all records, photos and
+ * non-demo accounts, and restores the three demo logins with DEMO_PASSWORD.
+ * Returns false when the signed-in person was removed (the caller logs out).
+ */
+export async function resetDemoData(): Promise<boolean> {
+  if (!DEMO_MODE) throw new Error('시연 모드에서만 초기화할 수 있습니다.');
+  if (!signedIn || signedIn.mustChangePassword) throw new Error('로그인이 필요합니다.');
+  await ready;
+  const actorId = signedIn.profile.id;
+  await auth.resetDemoData(actorId, profiles, DEMO_PASSWORD, stores.demo);
+  refreshPeople();
+  return profiles.some(person => person.id === actorId);
+}
+
 // Device timing for choosing the scrypt cost: start with EXPO_PUBLIC_SAFELOG_BENCH=1 (dev only).
 if (__DEV__ && process.env.EXPO_PUBLIC_SAFELOG_BENCH === '1') {
   ready.catch(() => undefined).then(() => measureScrypt(secureRandom))

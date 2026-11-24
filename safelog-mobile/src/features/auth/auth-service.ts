@@ -1,5 +1,5 @@
 import type { Profile, Role } from '@/contracts/types';
-import { AccountConflictError, type AccountStore, type CredentialRecord } from './account-store';
+import { AccountConflictError, type AccountStore, type CredentialRecord, type DemoDataReset } from './account-store';
 import { utf8ByteLength, type PasswordHasher } from './password';
 
 /** The one message for every login failure (unknown id, wrong password, locked account). */
@@ -178,6 +178,29 @@ export class AuthService {
         throw error;
       }
       return profile;
+    });
+  }
+
+  /**
+   * Demo reset (managers only): deletes all records and every non-demo person,
+   * restores the demo people with `password`, unlocked and with no forced change.
+   * The new hashes are computed first; `target` then applies everything at once.
+   */
+  resetDemoData(actorId: string, people: readonly Profile[], password: string, target: DemoDataReset): Promise<void> {
+    AuthService.checkPasswordPolicy(password);
+    return this.serialize(async () => {
+      if (this.store.findProfile(actorId)?.role !== 'Manager') {
+        throw new PermissionError('관리자만 시연 데이터를 초기화할 수 있습니다.');
+      }
+      const credentials: CredentialRecord[] = [];
+      for (const person of people) {
+        const loginId = AuthService.normalizeLoginId(person.id);
+        if (!loginId) throw new AccountValidationError(`시연 계정 아이디가 올바르지 않습니다: ${person.id}`);
+        const fresh = await this.newCredential(person.id, loginId, password, false);
+        const existing = this.store.findCredentialByProfileId(person.id);
+        credentials.push(existing ? { ...fresh, createdAt: existing.createdAt } : fresh);
+      }
+      target.resetDemoData(people, credentials);
     });
   }
 

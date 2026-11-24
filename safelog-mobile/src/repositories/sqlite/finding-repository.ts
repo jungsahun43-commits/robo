@@ -229,6 +229,12 @@ export class SqliteFindingRepository implements FindingRepository {
     this.listeners.forEach(listener => listener());
   }
 
+  /** Re-reads every finding from the database and notifies subscribers (after a bulk change such as the demo reset). */
+  reload() {
+    this.findings = loadFindings(this.db);
+    this.listeners.forEach(listener => listener());
+  }
+
   /** Deletes managed photo files that no finding references (e.g. after a crash). Returns how many. */
   removeOrphanPhotos(): number {
     const referenced = new Set(this.findings.flatMap(f => [f.photo.uri, ...f.after.map(p => p.uri)]));

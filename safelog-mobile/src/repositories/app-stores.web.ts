@@ -8,5 +8,16 @@ import { MemoryFindingRepository } from './memory';
  * The same AuthService runs on top of MemoryAccountStore.
  */
 export function createAppStores(): AppStores {
-  return { findings: new MemoryFindingRepository(), accounts: new MemoryAccountStore() };
+  const findings = new MemoryFindingRepository();
+  const accounts = new MemoryAccountStore();
+  return {
+    findings,
+    accounts,
+    demo: {
+      resetDemoData(keep, credentials) {
+        accounts.replaceAccounts(keep, credentials);
+        findings.clear();  // no photo files are copied on web
+      },
+    },
+  };
 }
