@@ -7,7 +7,7 @@ function Navigation() {
   const { user } = useSession();
   return <>
     <StatusBar style="dark" />
-    <Stack screenOptions={{ headerTintColor: palette.ink, headerBackButtonDisplayMode: 'minimal' }}>
+    <Stack screenOptions={{ headerTransparent: false, headerTintColor: palette.ink, headerBackButtonDisplayMode: 'minimal' }}>
       <Stack.Protected guard={!user}>
         <Stack.Screen name="index" options={{ title: 'SafeLog' }} />
       </Stack.Protected>
