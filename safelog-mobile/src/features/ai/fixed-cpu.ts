@@ -24,6 +24,11 @@ export interface FixedCpuOptions {
   readPhoto: (photo: Photo, signal: AbortSignal) => Promise<string>;
   fetchImpl?: typeof fetch;
   timeoutMs?: number;
+  demoToken?: string;
+}
+
+export interface FixedCpuAnalyzer extends AiAnalyzer {
+  checkConnection: (signal: AbortSignal) => Promise<void>;
 }
 
 type JsonObject = Record<string, unknown>;
@@ -209,11 +214,22 @@ function comparison(value: JsonObject, rawJson: string, task: InspectionTask): S
   };
 }
 
-export function createFixedCpuAnalyzer(options: FixedCpuOptions): AiAnalyzer {
+export function createFixedCpuAnalyzer(options: FixedCpuOptions): FixedCpuAnalyzer {
   if (!isFixedTask(options.task)) throw new Error('지원하지 않는 AI 점검 분야입니다. 직접 검토를 사용하세요.');
   const generalBase = normalizeAiBaseUrl(options.generalBaseUrl);
   const pcbBase = normalizeAiBaseUrl(options.pcbBaseUrl);
   const fetcher = options.fetchImpl ?? fetch;
+  const token = options.demoToken?.trim();
+  if (token && !/^[A-Za-z0-9_-]{43,256}$/.test(token)) {
+    throw new Error('시연 연결 토큰 형식을 확인하세요.');
+  }
+  if (token) {
+    const endpoints = [new URL(generalBase), new URL(pcbBase)];
+    if (endpoints[0].origin !== endpoints[1].origin || endpoints.some(url => url.protocol !== 'https:'
+      && !['127.0.0.1', 'localhost', '[::1]'].includes(url.hostname))) {
+      throw new Error('시연 토큰은 동일한 HTTPS 서버 또는 이 기기의 로컬 서버에만 전송할 수 있습니다.');
+    }
+  }
   const timeout = options.timeoutMs ?? 60_000;
   if (!Number.isInteger(timeout) || timeout < 1 || timeout > 300_000) {
     throw new Error('AI 제한 시간은 1~300000ms 범위여야 합니다.');
@@ -224,8 +240,9 @@ export function createFixedCpuAnalyzer(options: FixedCpuOptions): AiAnalyzer {
     let response: Response;
     try {
       response = await fetcher(base + path, {
-        method: body ? 'POST' : 'GET', signal,
-        headers: body ? { Accept: 'application/json', 'Content-Type': 'application/json' } : { Accept: 'application/json' },
+        method: body ? 'POST' : 'GET', signal, redirect: 'error',
+        headers: { Accept: 'application/json', ...(body ? { 'Content-Type': 'application/json' } : {}),
+          ...(token ? { Authorization: 'Bearer ' + token } : {}) },
         ...(body ? { body: JSON.stringify(body) } : {}),
       });
     } catch {
@@ -234,6 +251,9 @@ export function createFixedCpuAnalyzer(options: FixedCpuOptions): AiAnalyzer {
     }
     checkAbort(signal);
     if (!response.ok) {
+      if (response.status === 401 || response.status === 403) {
+        throw new Error('AI 서버 연결 인증에 실패했습니다. 내 계정에서 시연 주소와 토큰을 확인하세요.');
+      }
       if (response.status === 413) throw new Error('사진이 너무 큽니다. JPEG/PNG 8MiB 이하 사진을 선택하세요.');
       if (response.status === 422) throw new Error('AI가 입력 사진이나 점검 조건을 처리할 수 없습니다. 사진을 확인하고 직접 검토하세요.');
       if (response.status === 503) throw new Error('고정 AI 모델 서버가 준비되지 않았습니다. 직접 검토하거나 연결 후 다시 시도하세요.');
@@ -263,7 +283,7 @@ export function createFixedCpuAnalyzer(options: FixedCpuOptions): AiAnalyzer {
     }
   }
 
-  async function run(operation: (signal: AbortSignal) => Promise<Suggestion>, external: AbortSignal) {
+  async function run<T>(operation: (signal: AbortSignal) => Promise<T>, external: AbortSignal): Promise<T> {
     if (external.aborted) throw cancelled();
     const controller = new AbortController();
     let timedOut = false;
@@ -291,6 +311,7 @@ export function createFixedCpuAnalyzer(options: FixedCpuOptions): AiAnalyzer {
   }
 
   return {
+    checkConnection: signal => run(health, signal),
     hazard: (before, signal) => run(async active => {
       await health(active);
       const encoded = await image(before, active);

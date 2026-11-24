@@ -1,4 +1,6 @@
 import { createServer as createHttpServer } from 'node:http';
+import { createHash, timingSafeEqual } from 'node:crypto';
+import { closeSync, fstatSync, openSync, readSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -21,6 +23,55 @@ const ROUTES = new Map([
   ['/pcb/health', { method: 'GET', upstream: 'pcb', path: '/health' }],
   ['/pcb/v1/equipment/pcb/analyze', { method: 'POST', upstream: 'pcb', path: '/v1/equipment/pcb/analyze' }],
 ]);
+
+const TOKEN_PATTERN = /^[A-Za-z0-9_-]{43,256}$/;
+const MAX_DEMO_LIFETIME_MS = 24 * 60 * 60 * 1000;
+
+function demoAuthConfig(value) {
+  if (value === undefined) return undefined;
+  const expiresAt = typeof value?.expiresAt === 'string' ? Date.parse(value.expiresAt) : value?.expiresAt;
+  if (!value || typeof value.token !== 'string' || !TOKEN_PATTERN.test(value.token) ||
+      typeof expiresAt !== 'number' || !Number.isFinite(expiresAt)) {
+    throw new TypeError('Demo authentication configuration is invalid.');
+  }
+  return { digest: createHash('sha256').update(value.token).digest(), expiresAt };
+}
+
+/** Read a short-lived token from a bounded local file, never from a command argument or public app variable. */
+export function loadDemoAuthFromEnv(env = process.env, now = Date.now()) {
+  const file = env.SAFELOG_DEMO_TOKEN_FILE;
+  const expiry = env.SAFELOG_DEMO_TOKEN_EXPIRES_AT;
+  if (file === undefined && expiry === undefined) return undefined;
+  let descriptor;
+  try {
+    if (typeof file !== 'string' || !file || typeof expiry !== 'string' || !expiry) throw new Error();
+    const expiresAt = Date.parse(expiry);
+    if (!Number.isFinite(expiresAt) || expiresAt <= now || expiresAt > now + MAX_DEMO_LIFETIME_MS) throw new Error();
+    descriptor = openSync(file, 'r');
+    const stats = fstatSync(descriptor);
+    if (!stats.isFile() || stats.size < 43 || stats.size > 258) throw new Error();
+    const bytes = Buffer.alloc(259);
+    const count = readSync(descriptor, bytes, 0, bytes.length, 0);
+    if (count !== stats.size || count > 258) throw new Error();
+    const token = new TextDecoder('utf-8', { fatal: true }).decode(bytes.subarray(0, count)).replace(/\r?\n$/, '');
+    demoAuthConfig({ token, expiresAt });
+    return { token, expiresAt };
+  } catch {
+    throw new TypeError('Demo authentication configuration is invalid or unreadable.');
+  } finally {
+    if (descriptor !== undefined) closeSync(descriptor);
+  }
+}
+
+function authenticated(request, auth) {
+  if (!auth) return true;
+  const authorization = request.headers.authorization;
+  if (typeof authorization !== 'string' || Date.now() >= auth.expiresAt) return false;
+  const match = /^Bearer ([A-Za-z0-9_-]{43,256})$/i.exec(authorization);
+  if (!match) return false;
+  const digest = createHash('sha256').update(match[1]).digest();
+  return timingSafeEqual(digest, auth.digest);
+}
 
 class GatewayError extends Error {
   constructor(status, code, detail) {
@@ -158,6 +209,7 @@ export function createServer({
   timeoutMs = 60_000,
   maxBodyBytes = 24 * 1024 * 1024,
   maxResponseBytes = 8 * 1024 * 1024,
+  demoAuth,
 } = {}) {
   positiveInteger(timeoutMs, 'timeoutMs');
   positiveInteger(maxBodyBytes, 'maxBodyBytes');
@@ -165,6 +217,7 @@ export function createServer({
   const targets = Object.fromEntries(Object.entries(DEFAULT_UPSTREAMS).map(([name, fallback]) =>
     [name, loopbackUpstream(upstreams[name] ?? fallback)]));
   const origins = new Set(allowedOrigins.map(webOrigin));
+  const auth = demoAuthConfig(demoAuth);
 
   return createHttpServer({
     requestTimeout: timeoutMs + 1000,
@@ -204,16 +257,24 @@ export function createServer({
       const requestedHeaders = (request.headers['access-control-request-headers'] ?? '')
         .split(',').map(value => value.trim().toLowerCase()).filter(Boolean);
       if (!origin || request.headers['access-control-request-method'] !== route.method ||
-          requestedHeaders.some(value => value !== 'content-type')) {
+          requestedHeaders.some(value => value !== 'content-type' && !(auth && value === 'authorization'))) {
         sendError(403, 'preflight_not_allowed', 'This browser preflight is not allowed.');
         return;
       }
       response.writeHead(204, {
         ...headers,
         'Access-Control-Allow-Methods': route.method,
-        'Access-Control-Allow-Headers': 'content-type',
+        'Access-Control-Allow-Headers': auth ? 'content-type, authorization' : 'content-type',
       });
       response.end();
+      return;
+    }
+    // Authenticate before reading or validating uploads and before any upstream request.
+    // The bearer credential stays here: it is never forwarded to model servers or logged.
+    if (!authenticated(request, auth)) {
+      request.resume();
+      headers['WWW-Authenticate'] = 'Bearer realm="safelog-demo"';
+      sendError(401, 'demo_unauthorized', 'Demo access is missing, invalid or expired.');
       return;
     }
     if (request.method !== route.method) {
@@ -278,6 +339,7 @@ export function createServer({
 
 function main(args) {
   let port = 8780;
+  let requireDemoAuth = false;
   const origins = [...DEFAULT_ALLOWED_ORIGINS];
   for (let index = 0; index < args.length; index += 1) {
     const name = args[index];
@@ -288,11 +350,15 @@ function main(args) {
       if (port < 1 || port > 65535) throw new TypeError('--port must be between 1 and 65535.');
     } else if (name === '--web-origin') {
       origins.push(webOrigin(args[++index]));
+    } else if (name === '--require-demo-auth') {
+      requireDemoAuth = true;
     } else {
-      throw new TypeError('Supported options are --port and --web-origin. The bind address is always 127.0.0.1.');
+      throw new TypeError('Supported options are --port, --web-origin and --require-demo-auth. The bind address is always 127.0.0.1.');
     }
   }
-  const server = createServer({ allowedOrigins: origins });
+  const demoAuth = loadDemoAuthFromEnv();
+  if (requireDemoAuth && !demoAuth) throw new TypeError('Demo authentication must be configured before starting this gateway.');
+  const server = createServer({ allowedOrigins: origins, demoAuth });
   server.once('error', error => {
     console.error(`Fixed CPU gateway could not start (${error.code ?? 'error'}).`);
     process.exitCode = 1;
@@ -300,6 +366,7 @@ function main(args) {
   server.listen(port, '127.0.0.1', () => {
     console.log(`SafeLog fixed CPU gateway: http://127.0.0.1:${port}`);
     console.log('General: /general -> 127.0.0.1:8775; PCB: /pcb -> 127.0.0.1:8774');
+    if (demoAuth) console.log('Short-lived demo authentication is enabled.');
   });
   const close = () => {
     server.close();

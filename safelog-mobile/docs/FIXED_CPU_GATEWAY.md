@@ -2,6 +2,8 @@
 
 이 gateway는 기존 모델 서버를 같은 Windows PC의 Expo Web 또는 USB로 연결한 Android 개발 앱에 전달한다. 학습 가중치·모델 코드·사진을 GitHub나 모바일 번들에 넣지 않는다. 기존 서버의 고정 checkpoint와 판정 기준은 유지한다.
 
+2026-11-24 아이폰 Expo Go 시연용으로 파일 기반 단기 토큰 인증과 HTTPS 연결 설정을 추가했다. 기본 로컬 전용 동작은 유지하며, 공개 연결은 `--require-demo-auth`로 시작한 인증 gateway만 사용한다. [아이폰 시연 절차](IPHONE_DEMO_HTTPS.md)에 서버 설정·앱 입력·만료·실기기 검증 범위를 구분했다.
+
 ## 같은 PC의 Expo Web
 
 먼저 기존 전달본 안내에 따라 고정 CPU 서버를 실행한다.

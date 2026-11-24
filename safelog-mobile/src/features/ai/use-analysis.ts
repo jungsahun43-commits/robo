@@ -1,14 +1,16 @@
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
 import type { AiMode, Analysis, InspectionTask } from '@/contracts/types';
 import { message } from '@/components/safelog-ui';
 import type { AiAnalyzer } from '@/contracts/interfaces';
 import { mockAnalyzer, type MockResponse } from './mock';
 import { createFixedCpuAnalyzer } from './fixed-cpu';
 import { readPhotoDataUrl } from './photo-data';
-import { fixedCpuSettings } from './settings';
+import { aiConnection } from './connection-store';
 import { isFixedTask, isPcbTask } from '@/contracts/inspection';
 
-export function useAnalysis(scope: string, aiMode: AiMode = 'mock', inspectionTask?: InspectionTask) {
+export function useAnalysis(recordScope: string, aiMode: AiMode = 'mock', inspectionTask?: InspectionTask) {
+  const connection = useSyncExternalStore(aiConnection.subscribe, aiConnection.getSnapshot, aiConnection.getSnapshot);
+  const scope = recordScope + ':connection-' + connection.revision;
   const request = useRef<AbortController | null>(null);
   const latestScope = useRef(scope);
   const [state, setState] = useState<{ scope: string; busy: boolean; error: string; result?: Analysis }>({
@@ -38,7 +40,7 @@ export function useAnalysis(scope: string, aiMode: AiMode = 'mock', inspectionTa
       if (aiMode === 'manual') throw new Error('이 분야는 AI 없이 직접 검토합니다.');
       if (aiMode === 'fixed-cpu' && !isFixedTask(inspectionTask)) throw new Error('AI가 지원하는 점검 분야를 선택하세요.');
       const analyzer = aiMode === 'fixed-cpu' ? createFixedCpuAnalyzer({
-        ...fixedCpuSettings, task: inspectionTask!,
+        ...connection, task: inspectionTask!,
         readPhoto: (photo, signal) => readPhotoDataUrl(photo, signal, isPcbTask(inspectionTask) ? 40_000_000 : 12_000_000),
       }) : mockAnalyzer(mode);
       const value = await analyze(analyzer, controller.signal);

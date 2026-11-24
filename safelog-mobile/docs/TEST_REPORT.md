@@ -96,3 +96,17 @@ iOS 및 웹 실행, 별도 네이티브 빌드, 운영 인증, 영구 저장, �
 근거 폴더 `outputs/safelog-mobile-db-ai-2026-11-23/`: `tests-initial.log`, `db-tests-after-legacy-key-fix.log`, `tests-final.log`, `typecheck-final.log`, `lint-final.log`, `export-all.log`, `live/result.json`(최초 원형), `live-continuation/result.json`(후속 통과), `runtime-model-pins-budget.json`, `runtime-host-final.json`. 이 작업에서 시작한 모델 서버와 gateway는 종료했다.
 
 **남은 실제 기기 확인:** Android/iOS에서 사진 저장 → 앱 종료·재실행 → 로그인 → AI 원응답·검토 결정·사진 복원 → PDF 공유. 이번 Node 검사는 Expo 네이티브 SQLite·파일 드라이버나 실제 기기 화면을 검증하지 않는다. 웹은 계속 메모리 저장이며 새로고침하면 초기화된다. 실행·인계 범위는 [DB·AI 통합 안내](DB_AI_INTEGRATION.md)를 따른다.
+
+## 2026-11-24 · 아이폰 Expo Go용 인증 HTTPS 연결
+
+기준은 게시된 AI·SQLite 통합 커밋 `d7fb031dadb7b22cabb6f34fcef3e65b74c0a0f3`다. 내 계정의 런타임 HTTPS 주소·시연 토큰 입력, 모델 준비 확인과 gateway의 단기 토큰 인증을 추가했다. 의존성·고정 모델·판정 기준·기존 평가 집계는 변경하지 않았다.
+
+- **115개 자동 검사 통과**, 실패·건너뜀 0개. 기존 103개에 runtime 연결/토큰 전송/다른 origin·평문 LAN 전송 거절/401 시 사진 읽기 차단과 gateway 인증·만료·파일 설정·헤더 비전달 검사를 추가했다.
+- TypeScript와 Expo lint 통과. Android·iOS Hermes 및 웹 번들 생성 통과. 최초 lint 실행의 npx 경로 문제와 hook 인자 재할당 오류는 원형을 보존하고 환경·지역 변수 수정 뒤 별도로 통과했다.
+- 공식 고정 `cloudflared` 2026.11.2 standalone의 크기·공식 SHA256을 대조했다. 설치 프로그램·계정 생성·방화벽·전원 설정 변경 없이 기존 모델을 사용하는 별도 `127.0.0.1:8781` 인증 gateway에 임시 HTTPS 터널을 연결했다.
+- 실제 HTTPS에서 무토큰 요청은 `401`, 토큰 포함 `/general/health`와 `/pcb/health`는 `200`·ready·고정 모델 SHA 일치를 확인했다. **현재 앱 분석기 자체**로도 두 HTTPS health 검사를 통과했다. 이 단계에서 사진 읽기·POST·새 추론은 0이다.
+- 토큰은 제한된 로컬 파일에서 서버가 읽으며 앱에는 실행 중 메모리로만 입력한다. DB·보고서·소스·번들·로그에 실제 토큰을 기록하지 않는다. 공개 연결은 2시간 테스트 만료로 자동 종료하도록 준비했다. 재시작한 터널의 URL은 새로 입력해야 한다.
+
+로컬 근거: `outputs/safelog-iphone-demo-2026-11-24/`의 `tests-final.log`, `lint-after-scope-fix.log`, `typecheck-final.log`, `export-all.log`, `cloudflared-download.json`, `runtime/https-ready.json`, `adapter-https-health.json`. 최초 sandbox loopback 접근 제한·lint·tsx 경로 해석 실패는 각 도구 출력과 별도 원형 기록으로 보존하며 실모델 실패나 새 성능 결과로 합산하지 않는다.
+
+**아이폰에서 Expo Go로 사진 분석·SQLite 복원·PDF 공유를 끝까지 실행한 검증은 아직 남아 있다.** 이 HTTPS 준비 상태나 기존 PC 9장 기록을 아이폰 성공으로 바꾸지 않는다. 시연 담당자는 [아이폰 HTTPS 연결 안내](IPHONE_DEMO_HTTPS.md)에 따라 실제 기기 리허설을 진행한다.

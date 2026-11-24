@@ -1,10 +1,19 @@
 import assert from 'node:assert/strict';
 import { createServer as createHttpServer } from 'node:http';
 import { once } from 'node:events';
+import { mkdtempSync, rmdirSync, unlinkSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import test from 'node:test';
-import { createServer } from '../scripts/fixed-cpu-gateway.mjs';
+import { createServer, loadDemoAuthFromEnv } from '../scripts/fixed-cpu-gateway.mjs';
 
 const origin = 'http://localhost:8081';
+// Fixed fixtures only: real demo credentials are created locally and never enter source files.
+const demoToken = 'A'.repeat(43);
+const otherToken = 'B'.repeat(43);
+const activeAuth = () => ({ token: demoToken, expiresAt: Date.now() + 60_000 });
 
 async function listen(server, context) {
   server.listen(0, '127.0.0.1');
@@ -181,4 +190,114 @@ test('factory rejects remote upstreams, wildcard origins and invalid resource bu
   assert.throws(() => createServer({ timeoutMs: 0 }), /positive/);
   assert.throws(() => createServer({ maxBodyBytes: Infinity }), /positive/);
   assert.throws(() => createServer({ maxResponseBytes: -1 }), /positive/);
+});
+
+test('demo auth rejects missing, wrong and malformed credentials on every model route before uploads or upstream calls', async context => {
+  const { address, calls } = await fixture(context, (_request, response) => json(response, {}), { demoAuth: activeAuth() });
+  for (const [path, method] of [
+    ['/general/health', 'GET'], ['/pcb/health', 'GET'], ['/general/v1/equipment-categories', 'GET'],
+    ['/general/v1/analyze-hazard', 'POST'], ['/general/v1/compare-action', 'POST'],
+    ['/pcb/v1/equipment/pcb/analyze', 'POST'],
+  ]) {
+    for (const authorization of [undefined, `Bearer ${otherToken}`, `Bearer ${demoToken.slice(1)}`, `Basic ${demoToken}`]) {
+      const response = await fetch(address + path, {
+        method,
+        headers: authorization ? { Authorization: authorization } : {},
+        // A malformed, non-JSON upload must still receive the identical auth rejection.
+        ...(method === 'POST' ? { body: '{not-json' } : {}),
+      });
+      assert.equal(response.status, 401, `${method} ${path}`);
+      assert.equal(response.headers.get('www-authenticate'), 'Bearer realm="safelog-demo"');
+      assert.equal(response.headers.get('cache-control'), 'no-store');
+      const body = await response.text();
+      assert.deepEqual(JSON.parse(body), { code: 'demo_unauthorized', detail: 'Demo access is missing, invalid or expired.' });
+      assert.ok(!body.includes(demoToken) && !body.includes(otherToken));
+    }
+  }
+  assert.equal(calls.length, 0);
+});
+
+test('valid demo auth forwards health and JSON analysis without forwarding the credential or changing raw JSON', async context => {
+  const health = { ready: true, neuralModelCount: 1, modelSha256: 'fixed-test-model' };
+  const { address, calls } = await fixture(context, (_request, response) => json(response, health), { demoAuth: activeAuth() });
+  const headers = { Authorization: `Bearer ${demoToken}` };
+  const ready = await fetch(address + '/general/health', { headers });
+  assert.equal(ready.status, 200);
+  assert.deepEqual(await ready.json(), health);
+  const analysis = await fetch(address + '/pcb/v1/equipment/pcb/analyze', {
+    method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' }, body: '{"image":"test-only"}',
+  });
+  assert.equal(analysis.status, 200);
+  assert.equal(calls[1].body, '{"image":"test-only"}');
+  assert.equal(calls.length, 2);
+  assert.ok(calls.every(call => call.headers.authorization === undefined && call.headers.cookie === undefined));
+});
+
+test('expired demo auth returns the same generic 401 and never contacts a model', async context => {
+  const { address, calls } = await fixture(context, (_request, response) => json(response, {}), {
+    demoAuth: { token: demoToken, expiresAt: Date.now() - 1000 },
+  });
+  for (const authorization of [undefined, `Bearer ${demoToken}`]) {
+    const response = await fetch(address + '/general/health', { headers: authorization ? { Authorization: authorization } : {} });
+    assert.equal(response.status, 401);
+    assert.deepEqual(await response.json(), { code: 'demo_unauthorized', detail: 'Demo access is missing, invalid or expired.' });
+  }
+  assert.equal(calls.length, 0);
+});
+
+test('demo auth permits authorization in explicit local browser preflight without making preflight authenticated or weakening origins', async context => {
+  const { address, calls } = await fixture(context, (_request, response) => json(response, {}), { demoAuth: activeAuth() });
+  const headers = { Origin: origin, 'Access-Control-Request-Method': 'POST', 'Access-Control-Request-Headers': 'content-type, authorization' };
+  const preflight = await fetch(address + '/general/v1/analyze-hazard', { method: 'OPTIONS', headers });
+  assert.equal(preflight.status, 204);
+  assert.equal(preflight.headers.get('access-control-allow-headers'), 'content-type, authorization');
+  const remote = await fetch(address + '/general/v1/analyze-hazard', {
+    method: 'OPTIONS', headers: { ...headers, Origin: 'https://unlisted.example' },
+  });
+  assert.equal(remote.status, 403);
+  assert.equal(calls.length, 0);
+});
+
+test('demo auth configuration reads only a bounded token file and rejects incomplete, weak, unreadable and long-lived setup', context => {
+  const directory = mkdtempSync(join(tmpdir(), 'safelog-gateway-auth-'));
+  const file = join(directory, 'fixture-token.txt');
+  context.after(() => { unlinkSync(file); rmdirSync(directory); });
+  const now = Date.now();
+  const expiresAt = new Date(now + 60_000).toISOString();
+  const env = { SAFELOG_DEMO_TOKEN_FILE: file, SAFELOG_DEMO_TOKEN_EXPIRES_AT: expiresAt };
+  writeFileSync(file, demoToken + '\r\n');
+  assert.deepEqual(loadDemoAuthFromEnv(env, now), { token: demoToken, expiresAt: Date.parse(expiresAt) });
+  assert.equal(loadDemoAuthFromEnv({}, now), undefined);
+  for (const invalid of [
+    { SAFELOG_DEMO_TOKEN_FILE: file },
+    { SAFELOG_DEMO_TOKEN_EXPIRES_AT: expiresAt },
+    { ...env, SAFELOG_DEMO_TOKEN_FILE: file + '.missing' },
+    { ...env, SAFELOG_DEMO_TOKEN_EXPIRES_AT: 'invalid' },
+    { ...env, SAFELOG_DEMO_TOKEN_EXPIRES_AT: new Date(now - 1).toISOString() },
+    { ...env, SAFELOG_DEMO_TOKEN_EXPIRES_AT: new Date(now + 24 * 60 * 60 * 1000 + 1).toISOString() },
+  ]) assert.throws(() => loadDemoAuthFromEnv(invalid, now), /configuration is invalid or unreadable/);
+  for (const content of ['short', demoToken + '\n\n', 'x'.repeat(259), '?'.repeat(43)]) {
+    writeFileSync(file, content);
+    assert.throws(() => loadDemoAuthFromEnv(env, now), /configuration is invalid or unreadable/);
+  }
+  assert.throws(() => createServer({ demoAuth: { token: 'short', expiresAt: now + 60_000 } }), /configuration is invalid/);
+  assert.throws(() => createServer({ demoAuth: { token: demoToken, expiresAt: NaN } }), /configuration is invalid/);
+});
+
+test('public-demo CLI refuses to start without valid file-based authentication and does not print token input', () => {
+  const env = { ...process.env };
+  delete env.SAFELOG_DEMO_TOKEN_FILE;
+  delete env.SAFELOG_DEMO_TOKEN_EXPIRES_AT;
+  const script = fileURLToPath(new URL('../scripts/fixed-cpu-gateway.mjs', import.meta.url));
+  const missing = spawnSync(process.execPath, [script, '--require-demo-auth'], { env, encoding: 'utf8', timeout: 5000 });
+  assert.equal(missing.status, 1);
+  assert.match(missing.stderr, /Demo authentication must be configured/);
+  assert.ok(!missing.stdout.includes('gateway:'));
+  const invalid = spawnSync(process.execPath, [script, '--require-demo-auth'], {
+    env: { ...env, SAFELOG_DEMO_TOKEN_FILE: 'missing-file', SAFELOG_DEMO_TOKEN_EXPIRES_AT: new Date(Date.now() + 60_000).toISOString() },
+    encoding: 'utf8', timeout: 5000,
+  });
+  assert.equal(invalid.status, 1);
+  assert.equal(invalid.stderr.trim(), 'Demo authentication configuration is invalid or unreadable.');
+  assert.ok(!invalid.stdout.includes('gateway:'));
 });
