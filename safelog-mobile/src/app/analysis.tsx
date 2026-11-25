@@ -32,7 +32,7 @@ export default function AnalysisQueuePage() {
         <Copy>{latest ? decisionLabels[latest.decision] : wasReviewed ? '수동 검토 완료' : 'AI 분석 전'}</Copy>
         <Button title={latest?.decision === 'Pending' ? 'AI 제안 검토' : latest ? '분석 화면 열기' : 'AI 분석 시작'}
           onPress={() => router.push({
-            pathname: '/hazard', params: { id: finding.id, ...(latest ? {} : { fresh: '1' }) },
+            pathname: '/hazard', params: { id: finding.id },
           })} />
       </Card>;
     })}

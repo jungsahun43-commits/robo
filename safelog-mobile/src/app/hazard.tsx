@@ -1,15 +1,17 @@
-import { useEffect, useState } from 'react';
-import { router, useLocalSearchParams } from 'expo-router';
+import { useEffect, useEffectEvent, useState } from 'react';
+import { router } from 'expo-router';
 import { Button, Card, Copy, Field, message, Page, PhotoPreview } from '@/components/safelog-ui';
 import { AnalysisPanel } from '@/features/ai/analysis-panel';
 import type { MockResponse } from '@/features/ai/mock';
+import { inspectionCategories, inspectionCategoryIds, type InspectionCategory } from '@/features/ai/inspection-categories';
 import { useAnalysis } from '@/features/ai/use-analysis';
+import { classifyPhoto, photoClassifierConfigured } from '@/features/ai/photo-classifier';
 import { workflow } from '@/features/auth/session';
 import { useFinding } from '@/features/workflow/use-finding';
 
 export default function AiHazardReviewPage() {
   const { finding, user } = useFinding();
-  const { fresh } = useLocalSearchParams<{ fresh?: string }>();
+  const [category, setCategory] = useState<InspectionCategory>();
   const analysis = useAnalysis();
   const latest = finding?.analyses.filter(item => item.type === 'BeforeHazard').at(-1);
   const pending = latest?.decision === 'Pending' ? latest : undefined;
@@ -19,26 +21,29 @@ export default function AiHazardReviewPage() {
   const [error, setError] = useState('');
 
   function run(mode: MockResponse) {
-    if (!finding || !user) return;
+    if (!finding || user?.role !== 'Inspector' || finding.inspectorId !== user.id || finding.status !== 'Open' ||
+      (!photoClassifierConfigured && mode === '정상' && !category)) return;
     setManual(false);
     void analysis.run(async (analyzer, signal) => {
-      const suggestion = await analyzer.hazard(finding.photo, signal);
+      const suggestion = await (photoClassifierConfigured ? classifyPhoto(finding.photo, signal) : analyzer.hazard(finding.photo, signal));
       if (signal.aborted) throw new Error('분석 취소');
       const result = workflow.execute(user, finding.id, { kind: 'suggest', type: 'BeforeHazard', suggestion });
       if (!('type' in result)) throw new Error('분석 기록을 저장할 수 없습니다.');
       setDescription(result.assessment);
       setAction(result.action);
       return result;
-    }, mode);
+    }, mode, category);
   }
 
+  const analyzeOnOpen = useEffectEvent(() => {
+    if (photoClassifierConfigured && finding?.status === 'Open' && !latest) run('정상');
+  });
+  const findingId = finding?.id;
+  const userId = user?.id;
   useEffect(() => {
-    if (fresh !== '1') return;
-    const timer = setTimeout(() => run('정상'), 0);
+    const timer = setTimeout(() => analyzeOnOpen(), 0);
     return () => clearTimeout(timer);
-    // Start once for a newly registered finding.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [findingId, userId]);
 
   if (!finding || !user || finding.status !== 'Open') {
     return <Page title="AI 위험 검토"><Copy>검토 가능한 기록이 없습니다.</Copy></Page>;
@@ -63,7 +68,13 @@ export default function AiHazardReviewPage() {
 
   return <Page title="AI 위험 검토">
     <PhotoPreview photo={finding.photo} label="조치 전 사진" />
-    <AnalysisPanel {...analysis} result={manual || !successful ? undefined : result} onRun={run} onManual={() => {
+    {!photoClassifierConfigured && <Card>
+      <Copy>사진 자동 분류 서버 미설정 · Mock 분석 분야</Copy>
+      <Copy>시연할 사진 분야를 선택한 다음 Mock 분석을 실행하세요.</Copy>
+      {inspectionCategoryIds.map(id => <Button key={id} title={(category === id ? '선택됨 · ' : '') + inspectionCategories[id].label}
+        secondary={category !== id} disabled={analysis.busy} onPress={() => setCategory(id)} />)}
+    </Card>}
+    <AnalysisPanel {...analysis} live={photoClassifierConfigured} runDisabled={!category} result={manual || !successful ? undefined : result} onRun={run} onManual={() => {
       analysis.cancel();
       setManual(true);
       setDescription(finding.description);

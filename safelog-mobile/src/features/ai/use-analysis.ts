@@ -3,6 +3,7 @@ import type { Analysis } from '@/contracts/types';
 import { message } from '@/components/safelog-ui';
 import type { AiAnalyzer } from '@/contracts/interfaces';
 import { mockAnalyzer, type MockResponse } from './mock';
+import type { InspectionCategory } from './inspection-categories';
 
 export function useAnalysis() {
   const request = useRef<AbortController | null>(null);
@@ -18,14 +19,14 @@ export function useAnalysis() {
     setError('');
   }
 
-  async function run(analyze: (analyzer: AiAnalyzer, signal: AbortSignal) => Promise<Analysis>, mode: MockResponse) {
+  async function run(analyze: (analyzer: AiAnalyzer, signal: AbortSignal) => Promise<Analysis>, mode: MockResponse, category?: InspectionCategory) {
     request.current?.abort();
     const controller = new AbortController();
     request.current = controller;
     setBusy(true);
     setError('');
     try {
-      const value = await analyze(mockAnalyzer(mode), controller.signal);
+      const value = await analyze(mockAnalyzer(mode, category), controller.signal);
       if (!controller.signal.aborted) setResult(value);
     } catch (error) {
       if (!controller.signal.aborted) setError(message(error));

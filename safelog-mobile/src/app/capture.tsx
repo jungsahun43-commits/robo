@@ -21,7 +21,7 @@ export default function FindingCapturePage() {
     try {
       if (!user || !photo) throw new Error('점검 사진을 먼저 선택하세요.');
       const finding = workflow.create(user, { photo, location, description, action });
-      router.replace({ pathname: '/hazard', params: { id: finding.id, fresh: '1' } });
+      router.replace({ pathname: '/hazard', params: { id: finding.id } });
     } catch (error) {
       submitted.current = false;
       setError(message(error));

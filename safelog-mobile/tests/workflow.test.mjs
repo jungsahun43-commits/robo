@@ -1,6 +1,19 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { mockAnalyzer } from '../src/features/ai/mock.ts';
+import { checklistWithAi, latestInspectionCategory, preliminarySheetHtml } from '../src/features/reporting/checklist.ts';
+
+test('puts the detected photo category in the preliminary sheet and respects review', () => {
+  const analysis = { type: 'BeforeHazard', category: 'robustad_pcb', model: 'pcb-v1', decision: 'Pending' };
+  const category = latestInspectionCategory([analysis]);
+  assert.deepEqual(category, { id: 'robustad_pcb', label: 'RobustAD PCB', mock: false });
+  const checklist = checklistWithAi([analysis], {});
+  assert.deepEqual(checklist.robustad_pcb, { applicable: true, suggestedByAi: true });
+  const html = preliminarySheetHtml([['점검일자', '2026-11-25'], ['점검 대상 (Part)', category.label]], checklist);
+  assert.match(html, /점검 대상 \(Part\)<\/th><td[^>]*>RobustAD PCB/);
+  assert.deepEqual(checklistWithAi([analysis], { robustad_pcb: { applicable: false } }).robustad_pcb, { applicable: false });
+  assert.equal(latestInspectionCategory([{ ...analysis, decision: 'Rejected' }]), undefined);
+});
 import { demoLogin } from '../src/features/auth/demo.ts';
 import { WorkflowService, visibleTo } from '../src/features/workflow/service.ts';
 import { MemoryFindingRepository } from '../src/repositories/memory.ts';
