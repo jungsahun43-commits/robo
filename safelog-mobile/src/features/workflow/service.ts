@@ -87,7 +87,7 @@ export class WorkflowService {
     return current;
   }
 
-  create(actor: Profile, draft: Draft) {
+  create(actor: Profile, draft: Draft, initialSuggestion?: Suggestion) {
     actor = this.currentActor(actor);
     if (actor.role !== 'Inspector') throw new Error('점검자만 등록할 수 있습니다.');
     const aiMode = draft.aiMode ?? 'mock';
@@ -109,6 +109,13 @@ export class WorkflowService {
       siteId: site.id, createdAt: now(), status: 'Open', after: [], analyses: [],
       logs: [{ actor: actor.id, action: 'finding_created', note: description, at: now() }],
     };
+    if (initialSuggestion) {
+      validateSuggestion(initialSuggestion, 'BeforeHazard', finding);
+      finding.analyses.push({
+        ...initialSuggestion, source: initialSuggestion.source ?? 'mock',
+        id: nextId('analysis'), type: 'BeforeHazard', at: now(), decision: 'Pending',
+      });
+    }
     this.repository.save(finding);
     return finding;
   }

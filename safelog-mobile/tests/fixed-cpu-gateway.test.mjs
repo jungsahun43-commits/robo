@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { Buffer } from 'node:buffer';
 import { createServer as createHttpServer } from 'node:http';
 import { once } from 'node:events';
 import { mkdtempSync, rmdirSync, unlinkSync, writeFileSync } from 'node:fs';
@@ -46,6 +47,60 @@ function json(response, value, status = 200) {
   response.writeHead(status, { 'Content-Type': 'application/json' });
   response.end(JSON.stringify(value));
 }
+
+const photo = { mimeType: 'image/png', imageBase64: 'iVBORw0KGgo=' };
+const routerRequest = (body = JSON.stringify(photo), token = demoToken) => ({
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json', ...(token && { Authorization: `Bearer ${token}` }) },
+  body,
+});
+
+test('checks classifier authorization before parsing photos and returns only an allowed task or null', async context => {
+  const requests = [];
+  const photoRouter = async (input, signal) => {
+    assert.equal(signal.aborted, false);
+    requests.push(input);
+    return requests.length === 1 ? 'facility_surface' : null;
+  };
+  assert.throws(() => createServer({ photoRouter }), /authenticated gateway/);
+  const address = await listen(createServer({ demoAuth: activeAuth(), photoRouter }), context);
+  const unauthenticated = await fetch(address + '/classify', routerRequest('{invalid', null));
+  assert.equal(unauthenticated.status, 401);
+  const malformedPhoto = await fetch(address + '/classify', routerRequest(JSON.stringify({ ...photo, mimeType: 'image/webp' })));
+  assert.equal(malformedPhoto.status, 400);
+  assert.equal(requests.length, 0);
+
+  for (const task of ['facility_surface', null]) {
+    const result = await fetch(address + '/classify', routerRequest(JSON.stringify({ ...photo, extra: 'not forwarded' })));
+    assert.equal(result.status, 200);
+    assert.deepEqual(await result.json(), { task });
+  }
+  assert.deepEqual(requests, [photo, photo]);
+});
+
+test('disables classification by default and rejects a second concurrent upload when enabled', { timeout: 5000 }, async context => {
+  const disabled = await listen(createServer({ demoAuth: activeAuth() }), context);
+  const unavailable = await fetch(disabled + '/classify', routerRequest());
+  assert.equal(unavailable.status, 503);
+  assert.equal((await unavailable.json()).code, 'photo_classifier_disabled');
+
+  const entered = Promise.withResolvers();
+  const release = Promise.withResolvers();
+  const enabled = await listen(createServer({ demoAuth: activeAuth(), photoRouter: async () => {
+    entered.resolve();
+    return release.promise;
+  } }), context);
+  const first = fetch(enabled + '/classify', routerRequest());
+  await entered.promise;
+  try {
+    const second = await fetch(enabled + '/classify', routerRequest());
+    assert.equal(second.status, 429);
+    assert.equal((await second.json()).code, 'photo_classifier_busy');
+  } finally {
+    release.resolve(null);
+  }
+  assert.deepEqual(await (await first).json(), { task: null });
+});
 
 test('forwards only the fixed health and model paths, preserving raw model JSON and CORS', async context => {
   const health = { ready: true, neuralModelCount: 1, modelSha256: 'fixed-model-sha' };

@@ -1,8 +1,10 @@
 import { createServer as createHttpServer } from 'node:http';
+import { Buffer } from 'node:buffer';
 import { createHash, timingSafeEqual } from 'node:crypto';
 import { closeSync, fstatSync, openSync, readSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { MAX_ROUTER_BODY_BYTES, ROUTABLE_TASKS, routePhoto, validRouterPhoto } from './photo-router.mjs';
 
 const DEFAULT_UPSTREAMS = Object.freeze({
   general: 'http://127.0.0.1:8775',
@@ -16,6 +18,7 @@ export const DEFAULT_ALLOWED_ORIGINS = Object.freeze(
 );
 
 const ROUTES = new Map([
+  ['/classify', { method: 'POST', classify: true }],
   ['/general/health', { method: 'GET', upstream: 'general', path: '/health' }],
   ['/general/v1/equipment-categories', { method: 'GET', upstream: 'general', path: '/v1/equipment-categories' }],
   ['/general/v1/analyze-hazard', { method: 'POST', upstream: 'general', path: '/v1/analyze-hazard' }],
@@ -210,6 +213,7 @@ export function createServer({
   maxBodyBytes = 24 * 1024 * 1024,
   maxResponseBytes = 8 * 1024 * 1024,
   demoAuth,
+  photoRouter,
 } = {}) {
   positiveInteger(timeoutMs, 'timeoutMs');
   positiveInteger(maxBodyBytes, 'maxBodyBytes');
@@ -218,6 +222,10 @@ export function createServer({
     [name, loopbackUpstream(upstreams[name] ?? fallback)]));
   const origins = new Set(allowedOrigins.map(webOrigin));
   const auth = demoAuthConfig(demoAuth);
+  if (photoRouter !== undefined && (!auth || typeof photoRouter !== 'function')) {
+    throw new TypeError('Photo classification requires an authenticated gateway.');
+  }
+  let classifying = false;
 
   return createHttpServer({
     requestTimeout: timeoutMs + 1000,
@@ -294,9 +302,18 @@ export function createServer({
       sendError(415, 'json_required', 'Use application/json for model requests.');
       return;
     }
+    if (route.classify && (!photoRouter || classifying)) {
+      request.resume();
+      if (photoRouter) sendError(429, 'photo_classifier_busy', '사진 분류 중입니다. 잠시 후 다시 시도하세요.');
+      else sendError(503, 'photo_classifier_disabled', '자동 분야 분류 서버가 준비되지 않았습니다. 점검 분야를 선택하세요.');
+      return;
+    }
+    if (route.classify) classifying = true;
 
     const controller = new AbortController();
-    const timeoutError = new GatewayError(504, 'model_timeout', 'The fixed CPU model did not respond before the deadline.');
+    const timeoutError = route.classify
+      ? new GatewayError(504, 'photo_classifier_timeout', '사진 분류 응답 시간이 초과되었습니다.')
+      : new GatewayError(504, 'model_timeout', 'The fixed CPU model did not respond before the deadline.');
     const deadline = setTimeout(() => controller.abort(timeoutError), timeoutMs);
     deadline.unref();
     const cancel = () => controller.abort(new Error('The client disconnected.'));
@@ -307,8 +324,19 @@ export function createServer({
     try {
       let body;
       if (route.method === 'POST') {
-        body = await readRequest(request, maxBodyBytes, controller.signal);
-        jsonObject(body, 400, 'invalid_request_json', 'The request must contain a valid JSON object.');
+        const bodyLimit = route.classify ? Math.min(MAX_ROUTER_BODY_BYTES, maxBodyBytes) : maxBodyBytes;
+        body = await readRequest(request, bodyLimit, controller.signal);
+        const input = jsonObject(body, 400, 'invalid_request_json', 'The request must contain a valid JSON object.');
+        if (route.classify) {
+          if (!validRouterPhoto(input)) throw new GatewayError(400, 'invalid_classifier_photo', 'JPEG 또는 PNG 사진 8MiB 이하를 선택하세요.');
+          const task = await photoRouter({ imageBase64: input.imageBase64, mimeType: input.mimeType }, controller.signal);
+          if (controller.signal.aborted) throw controller.signal.reason;
+          if (task !== null && !ROUTABLE_TASKS.includes(task)) throw new Error('Unexpected classifier task.');
+          if (response.destroyed) return;
+          response.writeHead(200, { ...headers, 'Content-Type': 'application/json; charset=utf-8' });
+          response.end(JSON.stringify({ task }));
+          return;
+        }
       }
       const upstream = await fetch(targets[route.upstream] + route.path, {
         method: route.method,
@@ -328,8 +356,10 @@ export function createServer({
     } catch (error) {
       if (controller.signal.reason === timeoutError) error = timeoutError;
       if (error instanceof GatewayError) sendError(error.status, error.code, error.message);
+      else if (route.classify) sendError(502, 'photo_classifier_unavailable', '자동 분야 분류 서버 응답을 확인할 수 없습니다.');
       else sendError(502, 'model_unavailable', 'The fixed CPU model could not be reached or its response was interrupted.');
     } finally {
+      if (route.classify) classifying = false;
       clearTimeout(deadline);
       request.off('aborted', cancel);
       response.off('close', disconnect);
@@ -358,7 +388,8 @@ function main(args) {
   }
   const demoAuth = loadDemoAuthFromEnv();
   if (requireDemoAuth && !demoAuth) throw new TypeError('Demo authentication must be configured before starting this gateway.');
-  const server = createServer({ allowedOrigins: origins, demoAuth });
+  const photoRouter = process.env.SAFELOG_ENABLE_PHOTO_CLASSIFIER === '1' ? routePhoto : undefined;
+  const server = createServer({ allowedOrigins: origins, demoAuth, photoRouter });
   server.once('error', error => {
     console.error(`Fixed CPU gateway could not start (${error.code ?? 'error'}).`);
     process.exitCode = 1;
@@ -367,6 +398,7 @@ function main(args) {
     console.log(`SafeLog fixed CPU gateway: http://127.0.0.1:${port}`);
     console.log('General: /general -> 127.0.0.1:8775; PCB: /pcb -> 127.0.0.1:8774');
     if (demoAuth) console.log('Short-lived demo authentication is enabled.');
+    if (photoRouter) console.log('Local CPU photo classification is enabled.');
   });
   const close = () => {
     server.close();
