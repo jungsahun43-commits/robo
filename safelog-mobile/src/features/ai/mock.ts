@@ -1,10 +1,9 @@
 import type { AiAnalyzer } from '@/contracts/interfaces';
 import type { Suggestion } from '@/contracts/types';
-import { inspectionCategories, type InspectionCategory } from './inspection-categories';
 
 export type MockResponse = '정상' | '분석 실패' | '읽을 수 없는 결과';
 
-export function mockAnalyzer(mode: MockResponse, category?: InspectionCategory): AiAnalyzer {
+export function mockAnalyzer(mode: MockResponse): AiAnalyzer {
   async function respond(value: Suggestion, signal: AbortSignal) {
     await new Promise<void>((resolve, reject) => {
       const cancel = () => {
@@ -22,14 +21,9 @@ export function mockAnalyzer(mode: MockResponse, category?: InspectionCategory):
     return value;
   }
 
-  const metadata = { model: 'safelog-mobile-mock', prompt: 'demo-v1', confidence: 0.82 };
+  const metadata = { model: 'safelog-mobile-mock', prompt: 'demo-v1', confidence: 0.82, source: 'mock' as const };
   return {
-    hazard: (_before, signal) => respond(category ? {
-      ...metadata,
-      category: inspectionCategories[category].label,
-      assessment: 'Mock 검토 후보 · ' + inspectionCategories[category].check,
-      action: '원본 사진과 현장을 확인해 점검 결과를 기록하세요.',
-    } : {
+    hazard: (_before, signal) => respond({
       ...metadata, category: '통로 장애물', risk: 3,
       assessment: '통로에 적치물이 있어 이동을 방해할 가능성이 있습니다.',
       action: '적치물을 지정 보관구역으로 옮기고 통로 폭을 확인하세요.',

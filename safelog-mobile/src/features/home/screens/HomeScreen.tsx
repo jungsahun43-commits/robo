@@ -1,5 +1,5 @@
 import { router, type Href } from 'expo-router';
-import { ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { Platform, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { palette, radius } from '@/constants/safelog-theme';
 import type { Role } from '@/contracts/types';
@@ -36,6 +36,7 @@ const roleHome: Record<Role, { guidance: string; summary: string; shortcuts: rea
     shortcuts: [
       { label: '개선 조치 관리', description: '담당자 배정과 진행 상태 확인', icon: taskIcon, tint: palette.tealSoft, route: '/tasks' },
       reports,
+      { label: '계정 만들기', description: '새 사용자 등록과 임시 비밀번호 발급', icon: require('../../../../assets/safelog/account.svg'), tint: palette.purpleSoft, route: '/accounts' },
     ],
   },
   Assignee: {
@@ -88,7 +89,9 @@ export default function HomeScreen() {
               {...shortcut} wide={compact} onPress={() => router.push(route)} />)}
           </View>
         </View>
-        <Text style={styles.notice}>시연 모드 · AI Mock · 앱 종료 시 기록 초기화</Text>
+        <Text style={styles.notice}>{Platform.OS === 'web'
+          ? 'AI 방식은 점검별 선택 · 웹 기록은 새로고침 시 초기화'
+          : 'AI 방식은 점검별 선택 · 기록은 이 기기에 저장'}</Text>
       </View>
     </ScrollView>
   </SafeAreaView>;

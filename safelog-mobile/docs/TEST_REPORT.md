@@ -40,3 +40,73 @@ Expo lint, TypeScript, 기존 워크플로 테스트 3개가 통과했다. 이 �
 ## 검증 범위
 
 iOS 및 웹 실행, 별도 네이티브 빌드, 운영 인증, 영구 저장, 실제 AI 추론과 모델 성능은 미검증이다. 패키지 설치 도중 npm이 중간 등급 취약점 3건을 보고했다. 의존성 강제 갱신은 적용하지 않았다.
+# 2026-11-19 · 고정 CPU AI 연결 추가 검증
+
+기준 커밋은 `c422eb5d7f0445a0e6d3bdf55b34b2e5916fc8e9`이며, 별도 로컬 `codex/react-native-ai` 작업본에서 검증했다. 아래 기존 최초 검증 기록은 당시 결과로 보존한다.
+
+- 잠금 파일 기준 새 의존성 설치 성공. Expo lint, TypeScript 검사, 웹 export 성공.
+- 워크플로 7개, 고정 CPU HTTP 계약 23개, loopback gateway 9개로 총 39개 테스트 통과.
+- 기존 고정 CPU 서버 두 개와 새 모바일 HTTP 분석기·gateway를 연결해 승인된 시연 사진 6장(시설·컨베이어·PCB의 정상/이상 각 1장)의 기대 후보 판정과 입력 SHA가 모두 일치했다.
+- 같은 모바일 메모리 WorkflowService에서 컨베이어 등록·AI 검토·담당자 배정·조치 제출·실제 전후 비교·사람 최종 확인을 통과했다. 서로 다른 촬영 기록의 예시이므로 현장 조치 증명이나 새 성능 벤치마크가 아니다.
+- 고정 TEST 읽기, GPU 작업, 가중치 변경은 0이다. 이번에 시작한 모델 서버와 gateway는 검증 후 종료했다.
+- Expo 웹 번들은 생성됐으나 실제 브라우저 조작, Android/iOS 실기기, 발표 PC 리허설은 아직 검증하지 않았다. 금속판·나사의 별도 정상/손상 사진 리허설도 남아 있다.
+- 메모리 저장과 공개 시연 계정은 유지한다. 운영 인증·영속 저장 완료로 표시하지 않는다.
+
+작업 공간의 원형 기록: `outputs/safelog-rn-live-20261119/result.json`, `process-receipt.json`, `safelog-rn-tests-20261119-current-tsx.log`, `safelog-rn-lint-20261119-final-verified.log`, `safelog-rn-typecheck-20261119-final-verified.log`, `safelog-rn-web-export-20261119-verified.log`. 초기 실행기 호환 오류와 제한 환경의 출력 폴더 오류도 별도 로그로 보존했다.
+
+## 2026-11-19 · 전체 항목과 볼스크루 포함 시연 목록
+
+앞선 39개 검사·6장 실제 연결 기록을 보존하고 전체 항목 확장을 별도로 검증했다.
+
+- 고정 AI 20항목은 실제 서버의 일반 3개·장비 12개·PCB 5유형과 일치한다. 장비 12종의 사진 평가 집계를 선정된 전달본 `evaluation.json`과 대조해 차이가 없었다.
+- 워크플로 9개, 고정 CPU HTTP 계약 53개, gateway 9개로 **71개 모두 통과**했다. 모든 분야의 요청·응답 범위, PCB 유형별 SHA 확인·자동 비교 차단, 직접 검토 분야의 AI 요청 차단과 볼스크루 포함 시연 순위를 검사했다. 이 테스트는 모형 응답을 사용한다.
+- 전체 항목 최종 Expo lint는 경고·오류 없이 통과했고 TypeScript·Expo Web export도 통과했다. 실제 브라우저 화면 조작이나 Android/iOS 실행을 검증한 것은 아니다.
+- 최초 전체 테스트는 제한 환경에서 loopback 연결 `EACCES`로 실패했다. 해당 로그는 보존하고 로컬 loopback 통신을 허용한 별도 실행에서 71개 통과를 확인했다. 실패 원형을 통과로 수정하지 않았다.
+- 볼스크루·시설 균열·컨베이어 이물질·RobustAD PCB·PCB4는 기존 집계의 `max(오탐률, 미탐률)` 순서다. 정상·손상 각각 20장 이상인 항목만 비교했다. 시설 균열의 일부 출처 수치를 시설 전체에 대입하지 않는다.
+- 실제 사진 연결 검증은 앞선 시설·컨베이어·RobustAD PCB 6장 범위다. 볼스크루·PCB4의 별도 시연 사진 모바일 리허설은 남아 있다. 새 TEST 추론·학습·GPU·가중치 변경·추가 실모델 실행은 하지 않았다.
+
+새 로컬 근거: `outputs/safelog-rn-all-fields-tests-20261119-loopback.log`(71개 통과), `safelog-rn-all-fields-lint-20261119-final.log`, `safelog-rn-all-fields-typecheck-20261119-final.log`, `safelog-rn-all-fields-web-export-20261119.log`. 처음 제한 환경 실패는 `safelog-rn-all-fields-tests-20261119.log`에 보존한다. 전체 항목표와 입력 범위는 [INSPECTION_CATALOG.md](INSPECTION_CATALOG.md)에 있다.
+
+## 2026-11-20 · 발표 5번째를 케이블로 변경
+
+- 사용자의 선택에 따라 `demoTasks`를 볼스크루·시설 균열·컨베이어 이물질·RobustAD PCB·케이블로 고정했다. 숫자 기준 순위 `researchTopTasks`는 따로 보존하고 PCB4도 전체 항목에 유지했다. 화면은 “발표 선정 5개”로 표시한다.
+- 변경 후 71개 테스트, Expo lint(오류·경고 0), TypeScript, Expo Web export가 통과했다. 순위와 실제 발표 선택이 서로 다름을 검사한다.
+- 모델·판정 기준·기존 평가 집계는 바꾸지 않았다. 1·2·3번째 분야는 유지하고 [케이블 우선 개선 순서](ERROR_REDUCTION_PLAN.md)를 준비했다. 신규 학습·실모델 추론·TEST 열람은 0이며 실제 기기와 케이블 사진 리허설은 미검증이다.
+
+로컬 근거: `outputs/safelog-rn-cable-demo-tests-20261119.log`, `safelog-rn-cable-demo-lint-20261119.log`, `safelog-rn-cable-demo-typecheck-20261119.log`, `safelog-rn-cable-demo-web-export-20261120.log`. 앞선 날짜의 기록은 변경하지 않았다.
+
+## 2026-11-23 · 최신 로그인·SQLite와 실제 AI 통합
+
+기준은 `feature/mobile-storage-auth`의 `418024ee98b6f0ffe947098533506f777bff686c`이며 별도 로컬 `codex/mobile-db-ai`에서 통합했다. 위 날짜별 기록은 당시 검증 범위로 보존한다.
+
+| 검사 | 결과와 범위 |
+|---|---|
+| 잠금 파일 기준 설치 | `npm ci --ignore-scripts --no-audit --no-fund` 성공. 기존 잠금 파일과 의존성 버전 유지. |
+| 전체 자동 검사 | **103개 통과, 실패·건너뜀 0개**. HTTP 계약, 워크플로, 계정, SQLite 업그레이드·재시작·롤백 포함. |
+| TypeScript / Expo lint | 둘 다 통과. lint 오류·경고 0개. Expo 타입 선언을 포함해 별도 타입 우회 옵션 없이 검사. |
+| Expo export | Android·iOS Hermes 및 웹 번들 생성 통과. 네이티브 앱 설치·기기 실행 성공을 뜻하지 않는다. |
+| 기존 DB 보존 | v1·v2 문자열을 유지하고 v3 추가. 자격 증명, 기존 사진·로그 ID, AI JSON·검토 결정 보존과 중단 시 롤백 통과. |
+| 실제 CPU → SQLite | 아래 9장 원응답·SHA·점수 저장, 디스크 사진 사본과 DB 재개방 후 값 검증 통과. |
+| 배정 → 조치 → 최종 확인 | 새 SQLite 담당자 계정으로 배정 후 재개방, 조치 제출, 실제 전후 비교, 사람 Verified 확인, 보고서 이름·사진 복원 통과. |
+
+실제 모델 호출은 시설·컨베이어·RobustAD PCB의 기존 시연 6장과 볼스크루 FIT 2장, 케이블 정상 참조 FIT 1장이다. 고정 2개 모델의 SHA를 확인하고 현재 모바일 HTTP 분석기·gateway·WorkflowService·Node SQLite 드라이버 및 실제 디스크 복사를 연결했다. PCB의 없는 confidence는 SQL NULL로 보관하며, 원응답 문자열을 표시 값으로 재구성하지 않는다. 이 검증은 새로운 정확도 벤치마크나 모든 20항목의 실사진 통과를 뜻하지 않는다. 학습·GPU·고정 TEST 열람·모델 기준 변경은 0이다.
+
+최초 103개 검사 중 기존 임의 사진 ID의 재저장에서 충돌 1건을 발견했다. 사진·로그의 자연키로 갱신하도록 수정한 뒤 관련 13개와 전체 103개 검사가 통과했다. 최초 실패 로그는 그대로 보존했다. 실제 모델 리허설의 최초 실행은 복원 객체의 속성 순서를 JSON 문자열로 비교한 검사 코드 때문에 중단됐다. 최초 DB·원응답·실패 기록은 보존하고, 9장 추론을 반복하지 않은 DB 사본에서 값·원응답·사진을 검증한 뒤 아직 실행하지 않은 전후 비교를 이어갔다.
+
+근거 폴더 `outputs/safelog-mobile-db-ai-2026-11-23/`: `tests-initial.log`, `db-tests-after-legacy-key-fix.log`, `tests-final.log`, `typecheck-final.log`, `lint-final.log`, `export-all.log`, `live/result.json`(최초 원형), `live-continuation/result.json`(후속 통과), `runtime-model-pins-budget.json`, `runtime-host-final.json`. 이 작업에서 시작한 모델 서버와 gateway는 종료했다.
+
+**남은 실제 기기 확인:** Android/iOS에서 사진 저장 → 앱 종료·재실행 → 로그인 → AI 원응답·검토 결정·사진 복원 → PDF 공유. 이번 Node 검사는 Expo 네이티브 SQLite·파일 드라이버나 실제 기기 화면을 검증하지 않는다. 웹은 계속 메모리 저장이며 새로고침하면 초기화된다. 실행·인계 범위는 [DB·AI 통합 안내](DB_AI_INTEGRATION.md)를 따른다.
+
+## 2026-11-24 · 아이폰 Expo Go용 인증 HTTPS 연결
+
+기준은 게시된 AI·SQLite 통합 커밋 `d7fb031dadb7b22cabb6f34fcef3e65b74c0a0f3`다. 내 계정의 런타임 HTTPS 주소·시연 토큰 입력, 모델 준비 확인과 gateway의 단기 토큰 인증을 추가했다. 의존성·고정 모델·판정 기준·기존 평가 집계는 변경하지 않았다.
+
+- **115개 자동 검사 통과**, 실패·건너뜀 0개. 기존 103개에 runtime 연결/토큰 전송/다른 origin·평문 LAN 전송 거절/401 시 사진 읽기 차단과 gateway 인증·만료·파일 설정·헤더 비전달 검사를 추가했다.
+- TypeScript와 Expo lint 통과. Android·iOS Hermes 및 웹 번들 생성 통과. 최초 lint 실행의 npx 경로 문제와 hook 인자 재할당 오류는 원형을 보존하고 환경·지역 변수 수정 뒤 별도로 통과했다.
+- 공식 고정 `cloudflared` 2026.11.2 standalone의 크기·공식 SHA256을 대조했다. 설치 프로그램·계정 생성·방화벽·전원 설정 변경 없이 기존 모델을 사용하는 별도 `127.0.0.1:8781` 인증 gateway에 임시 HTTPS 터널을 연결했다.
+- 실제 HTTPS에서 무토큰 요청은 `401`, 토큰 포함 `/general/health`와 `/pcb/health`는 `200`·ready·고정 모델 SHA 일치를 확인했다. **현재 앱 분석기 자체**로도 두 HTTPS health 검사를 통과했다. 이 단계에서 사진 읽기·POST·새 추론은 0이다.
+- 토큰은 제한된 로컬 파일에서 서버가 읽으며 앱에는 실행 중 메모리로만 입력한다. DB·보고서·소스·번들·로그에 실제 토큰을 기록하지 않는다. 공개 연결은 2시간 테스트 만료로 자동 종료하도록 준비했다. 재시작한 터널의 URL은 새로 입력해야 한다.
+
+로컬 근거: `outputs/safelog-iphone-demo-2026-11-24/`의 `tests-final.log`, `lint-after-scope-fix.log`, `typecheck-final.log`, `export-all.log`, `cloudflared-download.json`, `runtime/https-ready.json`, `adapter-https-health.json`. 최초 sandbox loopback 접근 제한·lint·tsx 경로 해석 실패는 각 도구 출력과 별도 원형 기록으로 보존하며 실모델 실패나 새 성능 결과로 합산하지 않는다.
+
+**아이폰에서 Expo Go로 사진 분석·SQLite 복원·PDF 공유를 끝까지 실행한 검증은 아직 남아 있다.** 이 HTTPS 준비 상태나 기존 PC 9장 기록을 아이폰 성공으로 바꾸지 않는다. 시연 담당자는 [아이폰 HTTPS 연결 안내](IPHONE_DEMO_HTTPS.md)에 따라 실제 기기 리허설을 진행한다.

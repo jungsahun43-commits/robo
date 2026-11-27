@@ -1,29 +1,43 @@
 import { useState } from 'react';
+import { router } from 'expo-router';
+import { Platform } from 'react-native';
 import { Button, Card, Copy, Field, message, Page } from '@/components/safelog-ui';
-import { demoLogin } from '@/features/auth/demo';
-import { useSession } from '@/features/auth/session';
+import { signIn, useSession } from '@/features/auth/session';
 
 export default function LoginPage() {
-  const { setUser } = useSession();
+  const { setUser, setPending } = useSession();
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
 
-  function login() {
+  async function login() {
+    if (busy) return;
+    setBusy(true);
     try {
-      setUser(demoLogin(id, password));
+      const { profile, mustChangePassword } = await signIn(id, password);
+      if (mustChangePassword) {
+        setPending(profile);  // the rest of the app stays locked until the password is changed
+        router.replace('/password');
+      } else {
+        setUser(profile);
+      }
     } catch (error) {
       setError(message(error));
+    } finally {
+      setBusy(false);
     }
   }
 
   return <Page title="SafeLog AI 로그인">
-    <Copy>Mock 개발 모드 · 앱을 종료하면 기록이 초기화됩니다.</Copy>
+    <Copy>{Platform.OS === 'web'
+      ? 'Mock 개발 모드 · 앱을 종료하면 기록이 초기화됩니다.'
+      : '기록은 이 기기에 저장됩니다.'}</Copy>
     <Card>
       <Field label="사용자 ID" autoCapitalize="none" autoCorrect={false} value={id} onChangeText={setId} />
       <Field label="비밀번호" secureTextEntry value={password} onChangeText={setPassword} onSubmitEditing={login} />
       {!!error && <Copy tone="error">{error}</Copy>}
-      <Button title="로그인" disabled={!id.trim() || !password} onPress={login} />
+      <Button title="로그인" disabled={busy || !id.trim() || !password} onPress={login} />
     </Card>
   </Page>;
 }

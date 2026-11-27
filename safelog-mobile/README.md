@@ -1,40 +1,88 @@
 # SafeLog Mobile
 
-현장 발견사항을 사진으로 등록하고, 담당자 조치와 점검자 최종 확인을 기록하는 Expo SDK 58 앱입니다. Android와 iOS를 대상으로 하며, 웹에서는 보고서를 HTML로 내려받을 수 있습니다.
+현장 발견사항을 사진으로 등록하고, 담당자 조치와 점검자 최종 확인을 기록하는 Expo SDK 58 앱입니다. 기존 고정 CPU 모델을 HTTP로 호출하며, Android와 iOS를 대상으로 합니다. 웹에서는 보고서를 HTML로 내려받을 수 있습니다.
+
+2026-11-23 통합은 최신 DB·로그인 브랜치 `feature/mobile-storage-auth`의 `418024ee98b6f0ffe947098533506f777bff686c`를 기준으로 한 로컬 `codex/mobile-db-ai` 작업입니다. 기존 실제 AI 연결과 SQLite 저장·로컬 로그인을 함께 사용합니다. 원본 두 작업본과 기존 C++ 앱은 보존하며, 이 통합 변경의 GitHub 게시·병합 상태는 별도로 확인합니다. [AI·DB 통합 계약과 검증 범위](docs/DB_AI_INTEGRATION.md)를 참고하세요.
+
+## 현재 지원 범위
+
+| 분야 | 연결된 점검 항목 | 기존 CPU 서버 |
+|---|---|---|
+| 시설·컨베이어 | 시설 표면 손상, 벨트 손상, 컨베이어 이물질 · 3항목 | 통합 `v16-r1` · 8775 |
+| 전기·배선 | 케이블, 전선 연결부 · 2항목 | 통합 `v16-r1` · 8775 |
+| 금속·기계 부품 | 나사, 너트, 브래킷 3종, 연결부, 금속판, 튜브, KSDD2 표면, **볼스크루** · 10항목 | 통합 `v16-r1` · 8775 |
+| 회로기판 | VisA PCB1~4, RobustAD PCB · 5항목 | `pcb-multisource-v3` · 8774 |
+| 기타 분야 | 기어·모터·보호구 등 현재 AI 미연결 분야 | AI 없이 직접 검토 |
+
+사진 등록은 **전체 분야**를 기본으로 보여주며, 기존 두 고정 모델의 **20개 점검 항목**과 기타 분야 직접 검토를 선택할 수 있습니다. **발표 선정 5개만 보기**로 시연 목록을 좁힐 수 있고 볼스크루도 포함합니다. 분석 방식·분야는 해당 기록에 저장되며, **모의 시연(Mock)**은 명시적으로 선택합니다. 실제 모델 연결 실패 시 자동으로 Mock으로 전환되지 않습니다. [항목별 범위·평가와 연결 상태](docs/INSPECTION_CATALOG.md)를 확인하세요. 전체 항목 노출은 모든 항목의 실무 성능 검증 완료를 뜻하지 않습니다.
+
+사진 입력은 JPEG·PNG, 최대 8MiB입니다. 통합 모델은 최대 12MP, PCB는 최대 40MP입니다. HEIC는 지원되는 형식으로 준비하세요. 후보 미검출은 실제 안전·무결함 보증이 아니며, AI 참고 점수는 정확도나 고장 확률이 아닙니다. PCB는 사진별 외관 후보를 확인하고 정밀 결함 위치·내부 전기 고장은 판정하지 않습니다. **PCB 자동 전후 비교는 지원하지 않으므로 사진을 직접 검토합니다.**
+
+### 발표 선정 5개 · 볼스크루·케이블 포함
+
+> **AI 오탐·미탐 비교 수치는 연구 평가 기록입니다.** 앱 개발자는 이 수치를 현재 사진의 판정, 운영 성능 보장, 결함 위치 정확도 또는 개발 완료율로 사용하지 않습니다. 판정·점수·모델 식별값은 실제 응답에서 받고 최종 판단은 사람이 기록합니다.
+
+| 순서 | 시연 대상 | 사진 오탐 FP/정상 | 사진 미탐 FN/손상 | 입력 조건 |
+|---|---|---:|---:|---|
+| 1 | **볼스크루 표면 피팅** | **0.85% · 14/1,643** | **0.63% · 10/1,593** | 표면 크롭 사진. 물리적 스핀들·촬영 세션 독립성 미검증 |
+| 2 | 시설 표면 **균열** | 1.14% · 2/176 | 0.81% · 2/248 | DamSegment 균열 항목. 시설 손상 7종 전체의 성능이 아님 |
+| 3 | 컨베이어 이물질 | 3.13% · 8/256 | 1.56% · 3/192 | 철광석 벨트 근접 사진과 같은 범위 |
+| 4 | RobustAD PCB 외관 | 3.33% · 4/120 | 1.33% · 1/75 | 해당 PCB 유형. 실제 현장 독립성 미검증 |
+| 5 | **케이블 외관** | **10.34% · 6/58** | **7.61% · 7/92** | 등록된 케이블 유형의 근접 외관. 전기 작동 판정이 아님 |
+
+정상·손상 평가 사진이 각각 20장 이상이고 양쪽 수치가 있는 항목의 기존 집계를 비교했습니다. 숫자만 `max(오탐률, 미탐률)`로 정렬하면 5번째는 PCB4(오탐 8.91%, 미탐 0/100)이지만, **발표는 분야 구성을 고려해 사용자가 선택한 케이블로 교체**했습니다. PCB4는 전체 분야에서 계속 사용할 수 있습니다. 출처·촬영·크롭 조건이 달라 **동일 현장에서 측정한 통합 성능 순위가 아닙니다.** TEST 재추론·모델/기준 조정은 하지 않았습니다.
+
+성능 개선은 **케이블 우선 → RobustAD PCB 보완**, 1·2·3번은 현재 고정 전달본 유지 순서로 검토합니다. 케이블은 기존 평가에서 정상 58장 중 6장 오탐, 손상 92장 중 7장 미탐이 남아 있습니다. 먼저 별도 개발 자료의 촬영 조건·오류 유형·정답과 역할을 확인하고, 통과한 후보만 기존 평가·보존 절차로 비교합니다. 입력 안내나 시연 사진 준비만으로 오탐·미탐이 개선됐다고 표시하지 않습니다. [개선 작업 순서와 시작 조건](docs/ERROR_REDUCTION_PLAN.md)을 확인하세요.
 
 ## Windows에서 실행
 
-Android Studio에서 에뮬레이터를 실행한 뒤 PowerShell에서 다음 명령을 실행합니다.
+Node.js 24와 npm을 준비하고 `safelog-mobile` 폴더에서 의존성을 설치합니다.
 
 ```powershell
 npm.cmd ci
-$env:ANDROID_HOME = 'C:\Android\Sdk'
-npx.cmd expo start --android --go
 ```
 
-## 사진 자동 판정 연결
+### 기존 모델 서버와 같은 PC의 웹 앱
 
-Windows에서 Ollama가 실행 중이면 다음 명령으로 개발용 분류 서버를 띄울 수 있습니다. 처음 실행할 때 모델을 내려받습니다.
+별도로 전달받은 Windows CPU 모델 패키지에서 통합 서버를 `127.0.0.1:8775`, PCB 서버를 `127.0.0.1:8774`로 실행합니다. 모델 준비 상태와 고정 SHA는 앱 분석기가 확인합니다. 이 브랜치에는 학습 가중치가 포함되지 않습니다.
+
+- [통합 모델의 고정 전달 안내](https://github.com/jungsahun43-commits/robo/blob/3776729e08a7b11511adcae303457fbd312d9dcf/safelog-cpp/docs/REAL_MASK_TRANSFER_HANDOFF_KO.md)
+- [PCB 모델의 고정 전달 안내](https://github.com/jungsahun43-commits/robo/blob/3776729e08a7b11511adcae303457fbd312d9dcf/safelog-cpp/docs/PCB_MULTISOURCE_HANDOFF_KO.md)
+
+다른 터미널에서 gateway를 실행합니다.
 
 ```powershell
-ollama pull qwen3-vl:4b
-node scripts/photo-classifier.mjs
+npm.cmd run ai:gateway
 ```
 
-다른 터미널에서 Android 에뮬레이터용 주소를 지정해 Expo를 시작합니다.
+앱을 실행하는 터미널에서는 다음과 같이 시작합니다. 아래 두 환경변수는 기본값과 같으므로 다른 로컬 포트를 사용할 때만 바꾸면 됩니다. Expo가 앱을 만들 때 포함하는 공개 서버 주소이므로 비밀 키를 넣지 않습니다.
 
 ```powershell
-$env:EXPO_PUBLIC_SAFELOG_CLASSIFIER_URL = 'http://10.0.2.2:8780/classify'
-npx.cmd expo start --android --go
+$env:EXPO_PUBLIC_SAFELOG_AI_BASE_URL = 'http://127.0.0.1:8780/general'
+$env:EXPO_PUBLIC_SAFELOG_PCB_BASE_URL = 'http://127.0.0.1:8780/pcb'
+npm.cmd run web -- --localhost
 ```
 
-USB로 연결한 Android 기기에서는 `adb reverse tcp:8780 tcp:8780`을 실행하고 주소를 `http://127.0.0.1:8780/classify`로 바꿉니다. 이 서버는 범용 비전 모델로 사진의 주요 대상을 분류합니다. 출력 점수는 모델 자체 추정값이며 현장 정확도로 검증되지 않았습니다. 불분명한 사진은 미판정으로 처리합니다.
+gateway는 항상 `127.0.0.1`에 바인딩하고 기존 두 모델 서버로 허용된 경로만 전달합니다. 모델 서버 CLI도 기존 loopback 구성을 유지합니다. 기본 웹 origin은 localhost·127.0.0.1의 8081·8082·19006 포트이며, 다른 웹 포트는 [gateway 안내](docs/FIXED_CPU_GATEWAY.md)에 따라 명시합니다. LAN 공개·방화벽 변경·공개 터널은 이 실행 절차에 포함하지 않습니다.
 
-`.env.local`의 `EXPO_PUBLIC_SAFELOG_CLASSIFIER_URL`에 기기에서 접근할 수 있는 사진 분류 API 주소를 넣고 Expo 개발 서버를 다시 시작합니다. 설정값은 앱 번들에 포함되므로 주소에 비밀 키를 넣지 마세요.
+### Android 개발 연결
 
-앱은 사진 등록 후 AI 검토 화면에서 API에 `POST`로 JSON `{ imageBase64, mimeType }`을 보냅니다. 서버는 사진을 보고 `{ category, model, confidence, assessment, action }`을 반환해야 합니다. `category`는 `ball_screw_pitting`, `facility_crack`, `conveyor_foreign`, `robustad_pcb`, `cable_exterior` 중 하나이고, `confidence`는 0~1입니다. 판정할 수 없으면 서버는 카테고리를 비워 반환할 수 있습니다. 유형 지정이 필요한 기존 통합 추론 서버를 사용하려면 앞단에서 사진 유형을 판별하고 해당 모델에 라우팅하는 API가 필요합니다.
+Android SDK와 platform-tools, 에뮬레이터 또는 USB 디버깅 기기가 준비된 PC에서 진행합니다. `ANDROID_HOME`은 실제 설치 경로로 지정하고, `adb devices`에서 연결 대상을 확인합니다. USB/에뮬레이터에서 localhost를 사용할 때는 개발 서버와 모델 gateway 포트를 각각 연결합니다.
 
-판정된 분야는 예비보고서 상단의 점검 대상 및 점검표 해당 여부에 반영됩니다. 판정 실패·거절 시 점검 대상은 미판정입니다. 서버 주소가 비어 있으면 시연용 Mock을 사용할 수 있습니다.
+```powershell
+$env:ANDROID_HOME = 'C:\Android\Sdk' # 실제 SDK 설치 경로
+adb reverse tcp:8081 tcp:8081
+adb reverse tcp:8780 tcp:8780
+npm.cmd run android -- --localhost --go
+```
+
+Expo 개발 서버가 다른 포트를 사용하면 첫 번째 reverse의 포트도 맞춥니다. 이번 연결 작업 환경에는 Android SDK·실기기가 준비되지 않아 **Android 실행·실기기 연결은 검증 대기**입니다. LAN·iOS 연결도 별도 구성이 필요하며 통과를 주장하지 않습니다. 웹 코드 검증과 Windows CPU 서버 준비만으로 기기 실행 성공을 판단하지 않습니다.
+
+### 아이폰 Expo Go · 임시 HTTPS 시연
+
+**내 계정 → 아이폰·외부 기기 AI 시연 연결**에서 HTTPS 서버 주소와 짧은 수명의 시연 토큰을 입력합니다. **모델 연결 확인**은 사진을 보내지 않고 실제 고정 모델 2개의 준비 상태·SHA를 확인합니다. 토큰은 앱 실행 중 메모리에만 보관하며, 앱 종료·Reload 후 다시 입력합니다. 연결 정보를 바꾸면 진행 중인 이전 AI 요청은 취소합니다.
+
+서버 담당자는 인증 gateway를 `--require-demo-auth`로 실행하고 그 포트에만 HTTPS 터널을 연결합니다. 현재 코드는 iOS에서 실제 AI를 차단하거나 Mock으로 강제하지 않습니다. **실제 아이폰의 사진 분석·DB 복원·PDF 공유는 아직 리허설이 필요합니다.** [아이폰 시연 연결과 담당자 절차](docs/IPHONE_DEMO_HTTPS.md)를 따르세요. 앱 번들을 받는 Expo 연결과 AI API 터널은 별개입니다.
 
 ## 시연
 
@@ -44,16 +92,30 @@ USB로 연결한 Android 기기에서는 `adb reverse tcp:8780 tcp:8780`을 실�
 | Manager · 박관리 | `manager-1` |
 | Assignee · 이조치 | `assignee-1` |
 
-공통 비밀번호는 `demo1234`입니다. Inspector의 **안전점검 등록**에서 시연 현장의 사진과 발견사항을 입력하고 **AI 위험 분석**에서 위험 제안을 검토합니다. 오른쪽 위 **내 계정**에서 로그아웃하고, Manager로 로그인해 **개선 조치 관리**에서 담당자를 배정합니다. Assignee의 **배정된 작업**에서 조치를 시작하고 **진행 중 작업**에서 사진과 내용을 제출합니다. 원 Inspector가 전후 사진을 확인한 뒤 **점검 보고서**에서 미리보기와 공유를 열 수 있습니다. 기록은 앱의 메모리에 저장됩니다. 사진 분류 서버를 설정하지 않은 경우 사진 분석과 전후 비교에 시연용 Mock을 사용합니다.
+공통 비밀번호는 `demo1234`입니다. Inspector의 **안전점검 등록**에서 분석 방식·분야를 선택하고 사진과 발견사항을 입력합니다. **AI 위험 분석**에서 모델 이름·식별값과 후보 결과를 확인하고, 사람이 제안을 채택·수정·거절하거나 직접 검토합니다. 연결 오류·시간 초과·잘못된 응답은 오류로 표시하며 정상 판정으로 저장하지 않습니다.
+
+오른쪽 위 **내 계정**에서 로그아웃하고 Manager로 로그인해 **개선 조치 관리**에서 담당자를 배정합니다. Assignee의 **배정된 작업**에서 조치를 시작하고 **진행 중 작업**에서 사진과 내용을 제출합니다. 원 Inspector가 같은 점검의 전후 사진을 직접 확인하고 최종 판단을 기록한 뒤 **점검 보고서**에서 미리보기와 공유를 엽니다. PCB 점검은 자동 비교 대신 직접 검토를 사용합니다.
+
+**Android/iOS:** 계정·점검·AI 분석·검토 결정은 기기 내 SQLite에, 사진은 앱 문서 폴더에 저장합니다. 로그인 세션은 재시작하면 다시 로그인해야 합니다. 관리자가 만든 새 담당자도 배정 목록과 보고서 이름에 반영됩니다. **웹:** 계정과 점검은 메모리 저장이므로 새로고침하면 초기화됩니다. 서버 인증·다기기 공유 DB·협업 동기화는 제공하지 않습니다. 시연 사진은 사용이 확인되고 고정 TEST와 분리된 자료를 사용합니다.
+
+## 검증
 
 ```powershell
-npx.cmd expo lint
-npx.cmd tsc --noEmit
-npx.cmd --yes tsx --test tests/workflow.test.mjs
+npm.cmd run lint
+npm.cmd run typecheck
+npm.cmd test
 ```
+
+잠금 파일의 `tsx`로 **103개 테스트**를 실행합니다. 전체 20개 항목의 HTTP 계약, SQLite 저장·재시작, v1/v2→v3 업그레이드와 실패 시 롤백, 기존 사진·로그 ID 및 원응답 보존, 로컬 로그인과 신규 담당자 배정·보고서 이름, PCB의 없는 confidence를 SQL NULL로 보관하는 동작을 확인합니다. TypeScript·Expo lint와 Android·iOS·웹 번들 생성도 통과했습니다. 모형 응답을 사용하는 자동 테스트와 실제 CPU 네트워크 리허설·기기 실행 검증은 구분합니다.
+
+2026-11-23 개발 PC에서 **현재 앱의 HTTP 분석기 → gateway → 실제 고정 CPU 모델 → WorkflowService → SQLite**를 연결했습니다. 기존 시연 사진 6장과 볼스크루 FIT 2장·케이블 정상 참조 FIT 1장, 총 9장의 원응답·식별값·점수를 DB에 저장하고 복사한 사진 바이트와 재개방 후 값을 확인했습니다. 신규 담당자 배정 후 DB를 다시 열고 조치 제출·실제 전후 비교·사람의 Verified 확인·보고서 데이터 복원까지 통과했습니다. 없는 confidence는 생성하지 않았습니다. 근거는 작업공간의 `outputs/safelog-mobile-db-ai-2026-11-23/live-continuation/result.json`입니다. 이는 Node SQLite 드라이버와 실제 디스크 복사로 검사한 연결 리허설이며 새 정확도 평가·실제 현장 조치·Android/iOS 실기기 실행·네이티브 PDF 공유 검증은 아닙니다. 최초 리허설의 문자열 속성 순서 비교 실패 원형은 `live/`에 보존하고, 9장 추론을 반복하지 않고 저장 DB 사본에서 검증을 이어갔습니다.
 
 - [원본 브랜치 분석](docs/BRANCH_ANALYSIS.md)
 - [기능 대응표](docs/FEATURE_MAPPING.md)
 - [아키텍처](docs/ARCHITECTURE.md)
+- [고정 CPU gateway 실행과 연결](docs/FIXED_CPU_GATEWAY.md)
+- [전체 점검 항목과 시연 후보 선정 근거](docs/INSPECTION_CATALOG.md)
+- [케이블·PCB 오탐·미탐 개선 작업 순서](docs/ERROR_REDUCTION_PLAN.md)
+- [AI·SQLite 통합과 기존 DB 보존](docs/DB_AI_INTEGRATION.md)
 - [이전 계획](docs/MIGRATION_PLAN.md)
-- [테스트 결과](docs/TEST_REPORT.md)
+- [초기 이전 작업의 테스트 기록](docs/TEST_REPORT.md)

@@ -18,7 +18,7 @@ export default function AnalysisQueuePage() {
   const open = findings.filter(finding => finding.status === 'Open');
 
   return <Page title="AI 위험 분석">
-    <Copy tone="ai">시연용 AI 제안을 확인하고 점검자가 채택 여부를 결정합니다.</Copy>
+    <Copy tone="ai">등록할 때 선택한 실제 모델 또는 Mock의 참고 제안을 확인하고 점검자가 채택 여부를 결정합니다.</Copy>
     {open.length === 0 && <Card>
       <Copy>{findings.length ? '현재 분석하거나 검토할 미조치 기록이 없습니다.' : '분석할 사진이 아직 없습니다. 점검을 등록해 사진을 추가하세요.'}</Copy>
       <Button title="안전점검 등록" onPress={() => router.push('/capture')} />
@@ -32,7 +32,7 @@ export default function AnalysisQueuePage() {
         <Copy>{latest ? decisionLabels[latest.decision] : wasReviewed ? '수동 검토 완료' : 'AI 분석 전'}</Copy>
         <Button title={latest?.decision === 'Pending' ? 'AI 제안 검토' : latest ? '분석 화면 열기' : 'AI 분석 시작'}
           onPress={() => router.push({
-            pathname: '/hazard', params: { id: finding.id },
+            pathname: '/hazard', params: { id: finding.id, ...(latest ? {} : { fresh: '1' }) },
           })} />
       </Card>;
     })}

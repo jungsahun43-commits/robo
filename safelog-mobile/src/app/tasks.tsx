@@ -4,12 +4,12 @@ import { StyleSheet, View } from 'react-native';
 import { Button, Card, Copy, message, Page } from '@/components/safelog-ui';
 import { StatusBadge, workflowStatuses } from '@/features/workflow/status-badge';
 import { roleLabels } from '@/features/auth/role-labels';
-import { profiles } from '@/features/auth/demo';
-import { useFindings, useSession, workflow } from '@/features/auth/session';
+import { useFindings, useProfiles, useSession, workflow } from '@/features/auth/session';
 
 export default function AssignedTasksPage() {
   const { user } = useSession();
   const records = useFindings();
+  const profiles = useProfiles();
   const { filter } = useLocalSearchParams<{ filter?: string }>();
   const [error, setError] = useState('');
   if (!user) return null;
