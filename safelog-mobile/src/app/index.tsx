@@ -39,6 +39,5 @@ export default function LoginPage() {
       {!!error && <Copy tone="error">{error}</Copy>}
       <Button title="로그인" disabled={busy || !id.trim() || !password} onPress={login} />
     </Card>
-    <Card><Copy>{'김안전 · inspector-1\n박관리 · manager-1\n이조치 · assignee-1\n공통 비밀번호 · demo1234'}</Copy></Card>
   </Page>;
 }
