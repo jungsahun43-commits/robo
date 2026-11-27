@@ -24,7 +24,7 @@ export function PreliminarySheet({ info, checklist, onChange }: {
         <View style={styles.row}>{inspectionColumns.map((label, index) =>
           <View key={label} style={[styles.cell, styles.heading, { width: widths[index] }]}><Text style={styles.center}>{label}</Text></View>)}</View>
         {checklistGroups.map(({ label, items }) => <View key={label}>
-          <Text style={styles.group}>[{label}]</Text>
+          <Text style={styles.group}>{label}</Text>
           {items.map(([id, category, description]) => {
             const row = checklist[id];
             return <View key={id} style={styles.row}>

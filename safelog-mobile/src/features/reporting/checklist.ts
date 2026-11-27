@@ -2,10 +2,19 @@ import type { Analysis } from '@/contracts/types';
 
 import { inspectionCategories, inspectionCategoryIds } from '@/features/ai/inspection-categories';
 
-export const checklistGroups = [{
-  label: '사진 검사 분야',
-  items: inspectionCategoryIds.map(id => [id, inspectionCategories[id].label, inspectionCategories[id].check] as const),
-}];
+const groupDefinitions = [
+  { label: '시설·컨베이어 (3개)', ids: ['facility_crack', 'belt_damage', 'conveyor_foreign'] },
+  { label: '전기·배선 (2개)', ids: ['cable_exterior', 'loco_splicing_connectors'] },
+  { label: '금속·기계 부품 (10개)', ids: ['ad_screw', 'ad_metal_nut', 'mpdd_bracket_black', 'mpdd_bracket_brown',
+    'mpdd_bracket_white', 'mpdd_connector', 'mpdd_metal_plate', 'mpdd_tubes', 'ksdd2_surface', 'ball_screw_pitting'] },
+  { label: '회로기판 (5개)', ids: ['pcb1', 'pcb2', 'pcb3', 'pcb4', 'robustad_pcb'] },
+] as const;
+
+export const checklistGroups = groupDefinitions.map(({ label, ids }) => ({
+  label,
+  items: ids.map(id => [id, id === 'facility_crack' ? '시설 균열 등 표면 손상' : inspectionCategories[id].label,
+    inspectionCategories[id].check] as const),
+}));
 
 export const inspectionColumns = ['구분', '점검 항목', '해당 여부', '적정', '부적정', '조치사항', '조치 완료'] as const;
 
@@ -55,7 +64,7 @@ export function preliminarySheetHtml(
     return '<tr>' + (next ? cells(entry) + cells(next) : cells(entry, ' colspan="3"')) + '</tr>';
   }).join('') + (work ? '<tr>' + cells(work, ' colspan="3"') + '</tr>' : '');
   const groups = checklistGroups.map(({ label, items }) =>
-    '<tbody><tr class="group"><th colspan="7">[' + escapeHtml(label) + ']</th></tr>' +
+    '<tbody><tr class="group"><th colspan="7">' + escapeHtml(label) + '</th></tr>' +
     items.map(([id, category, description]) => {
       const row = checklist[id];
       const columns = [category, description, row?.applicable === false ? '해당 없음' : mark(row?.applicable) + (row?.suggestedByAi ? ' (AI 제안)' : ''),

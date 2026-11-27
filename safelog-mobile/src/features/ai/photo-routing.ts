@@ -1,9 +1,7 @@
+import { isFixedTask } from '@/contracts/inspection';
 import type { Photo } from '@/contracts/types';
 import type { AiConnection } from './connection-store';
 import { normalizeAiBaseUrl, validatePhotoDataUrl } from './fixed-cpu';
-
-const automaticTasks = ['facility_surface', 'ball_screw_pitting', 'conveyor_foreign', 'robustad_pcb', 'ad_cable'] as const;
-export type AutomaticTask = typeof automaticTasks[number];
 
 interface PhotoRouteOptions {
   connection: AiConnection;
@@ -57,8 +55,7 @@ export async function routePhoto(photo: Photo, { connection, readPhoto, fetchImp
     const value: unknown = JSON.parse(raw);
     if (typeof value === 'object' && value !== null && 'task' in value) {
       if (value.task === null) return null;
-      const task = automaticTasks.find(task => task === value.task);
-      if (task) return task;
+      if (isFixedTask(value.task)) return value.task;
     }
     throw new Error('사진 자동 판별 응답에 지원되는 점검 분야가 없습니다.');
   } catch (error) {
